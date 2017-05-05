@@ -1,0 +1,126 @@
+﻿/**
+ * Utilities
+ * ===================================
+ * Non-semantic helper classes
+ */
+
+//
+// Clearfix
+// http://www.cssmojo.com/latest_new_clearfix_so_far/
+// See mixins/_utility.scss for a mixin version of this
+// ==========================================================================
+.u-clearfix {
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+}
+
+//
+// Display Utilities
+// ==========================================================================
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.is-hidden,
+.no-js .is-hidden--noJS {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.is-shown,
+.no-js .is-shown--noJS {
+    display: block !important;
+    visibility: visible !important;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+.is-visuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    // Extends the .is-visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+    &.focusable:active,
+    &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+// Hide visually and from screenreaders, but maintain layout
+.is-invisible { visibility: hidden; }
+
+
+//
+// Typographic Helpers
+// ==========================================================================
+
+// ensures text inside helper never wraps
+.u-noWrap {
+    white-space : nowrap;
+}
+
+
+//
+// Image Replacement Techniques
+// ==========================================================================
+
+[data-lazy-image-src] {
+    display: block;
+
+    .no-js & {
+        display: none;
+    }
+}
+
+
+// For background image replacement
+%u-ir,
+.u-ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+
+    br {
+        display: none;
+    }
+}
+
+// Alternative image replacement technique
+.u-hideText,
+%u-hideText {
+    text-indent: 110%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+//
+// List Helper
+// ==========================================================================
+.u-unstyled,
+%u-unstyled {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+
+    & > li {
+        margin-bottom: 0;
+    }
+}

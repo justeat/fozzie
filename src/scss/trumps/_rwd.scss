@@ -1,0 +1,56 @@
+﻿/**
+ * Responsive Trumps
+ * ===================================
+ */
+
+//
+// Responsive helper classes to show/hide content based on our media-queries
+// =================================================================================
+.u-showBelowNarrow {
+    @include media('>=narrow') {
+        display: none;
+    }
+}
+
+.u-showBelowMid {
+    @include media('>=mid') {
+        display: none;
+    }
+}
+
+.u-showBelowWide {
+    @include media('>=wide') {
+        display: none;
+    }
+}
+
+.u-showBelowHuge {
+    @include media('>=huge') {
+        display: none;
+    }
+}
+
+.u-showAboveNarrow {
+    @include media('<narrow') {
+        display: none;
+    }
+}
+
+.u-showAboveMid,
+.no-js .u-showAboveMid--noJS {
+    @include media('<mid') {
+        display: none;
+    }
+}
+
+.u-showAboveWide {
+    @include media('<wide') {
+        display: none;
+    }
+}
+
+.u-showAboveHuge {
+    @include media('<huge') {
+        display: none;
+    }
+}

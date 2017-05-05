@@ -1,0 +1,29 @@
+﻿// ==========================================================================
+// _spacing.scss
+//
+// Contains all functions relating to spacing
+// ==========================================================================
+
+//
+// spacing()
+//
+// Allows developers to specify the amount of spacing they require via shortcut
+// Accesses the spacing map definition in _variables.scss
+//
+// Usage:
+// spacing(base) or
+// spacing(x2)
+//
+// Key can be passed in as = base, x2, x3, x4, x5, x6
+// ==========================================================================
+@function spacing($key: 'base') {
+
+    @if type-of($spacing) == 'map' {
+        @if map-has-key($spacing, $key) {
+            @return map-get($spacing, $key);
+        }
+    }
+
+    @warn 'Unknown `#{$key}` in $spacing.';
+    @return null;
+}

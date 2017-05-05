@@ -1,0 +1,16 @@
+﻿/**
+ * Just Eat Reset Styles
+ * =================================
+ * We use normalize.css for the bulk of our 'reset'
+ * but anything else 'reset-y' lives in here
+ */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}

@@ -1,0 +1,26 @@
+/**
+ * Objects > Links
+ * =================================
+ */
+
+a {
+	& {
+		color: $color-link-default;
+		text-decoration: none;
+	}
+
+	&:hover, &:focus {
+		color: $color-link-hover;
+		//text-decoration: underline;
+	}
+
+    // have left in in case we want to use eventually
+	// &:active {
+	// 	color: $color-link-active;
+	// 	text-decoration: underline;
+	// }
+    // &:visited {
+    //     color: $color-link-visited;
+    //     text-decoration: none;
+    // }
+}

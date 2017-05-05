@@ -1,0 +1,94 @@
+﻿/**
+ * Just Eat Styleguide
+ * =================================
+ */
+
+// =================================
+// Site dependencies
+// =================================
+
+// =================================
+// Mixins, helpers and functions
+// =================================
+// Most CSS3 vendor prefixed items have a mixin,
+// but we should not need them if autoprefixer is being used
+// See mixins/css3.scss for the full list
+
+@import 'tools/functions/index'; // TODO: this will be separated into a separate utilities module
+@import 'tools/mixins/index'; // TODO: this will be separated into a separate utilities module
+
+// Including helper modules
+@import 'kickoff-utils'; // imports a set of helper functions and mixins
+@import 'include-media'; // Cleaner media query declarations – http://include-media.com
+
+
+// =================================
+// Core variables
+// =================================
+// Edit your color palette and app vars before your begin
+
+@import 'settings/color-palette'; // TODO: this will be separated into a color-palette module
+@import 'settings/variables';
+
+
+
+// CSS Normalise and then Reset
+@import '../../../node_modules/normalize.css/normalize.css'; // https://github.com/necolas/normalize.css
+@import 'base/reset';
+
+// Global typography styles
+@import 'base/typography';
+
+/**
+ * Objects
+ * =================================
+ * Styles apply to an object if they are directly associated to a HTML element.
+ * If not, the styles should be defined as a component.
+ *
+ * For example, it would be expected to have:
+ * 	links.scss > styles relating to links (<a> tag)
+ * 	tables.scss > styles relating to tables
+ *
+ * Object styles should be prefixed with `.o-`
+ */
+// @import 'objects/…';
+
+/**
+ * Components:
+ * =================================
+ * Components are our resuable chunks of styling that aren’t directly associated to a base tag
+ *
+ * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with `.c-`
+ */
+// @import 'components/…';
+
+
+// Global layout definitions & helpers
+@import 'base/layout';
+
+
+/**
+ * Experiments
+ * =================================
+ *
+ * These styles relate to experiments running on the platform.
+ *
+ * The filename should _always include the JIRA number so that its status can be checked
+ */
+// @import 'experiments/INTPB-1451-quick-checkout';
+
+
+/**
+ * Utility classes
+ * =====================================
+ * These should always come last as they should 'trump' other properties
+ */
+@import 'trumps/utilities';
+@import 'trumps/rwd';
+
+
+
+/**
+ * Print styles
+ */
+@import 'base/print';

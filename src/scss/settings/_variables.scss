@@ -1,0 +1,134 @@
+// =================================
+// Variables
+// =================================
+
+// Typography
+// ==========================================================================
+// Base sizes:
+// Set this in pixels (but do not add px),
+// the font-size mixin will convert to REMS
+
+$font-size-base             : 14;
+$font-size-base-px          : $font-size-base * 1px;
+
+$leading-base               : 1.35;
+
+// Type map – these are our global font-sizes and line-heights across the site
+$type: (
+    small: ( // for things like legal copy (unimportant stuff)
+        default: (12, 16)
+    ),
+    base: (  // body copy
+        default: (14, 19)
+    ),
+    mid: (  // h3, h4, h5, h6 sizes (differentiated by font and weight not size)
+        default: (16, 21)
+    ),
+    large: ( // h2
+        default: (22, 27),
+        narrow: (18, 24)
+    ),
+    jumbo: ( // h1
+        default: (24, 32),
+        narrow: (20, 26)
+    ),
+    // scaleUp type for specific pages
+    // E.g. Home / Thematic Pages / City Pages
+    mid--scaleUp: (
+        default: (22, 28),
+        narrow: (16, 21)
+    ),
+    large--scaleUp: (
+        default: (28, 36),
+        narrow: (18, 24)
+    ),
+    jumbo--scaleUp: (
+        default: (64, 50),
+        narrow: (36, 42)
+    )
+);
+
+$font-weight-bold           : 700;
+$font-weight-headings       : 400; // instead of browser default, bold
+$line-height-headings       : 1.2;
+
+// Font stacks
+$font-family-base           : 'Hind Vadodara', 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-headings       : 'Ubuntu'; // we need to define some fallbacks here!
+$font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
+
+
+//  Global Breakpoints
+// ==========================================================================
+
+/* stylelint-disable */
+$breakpoints: ko-map-to-em((
+    narrow   : 414px,    // narrow devices
+    mid      : 768px,    // mid bp
+    wide     : 1025px,   // wide bp
+    huge     : 1280px    // huge bp
+), 16); // set to 16 as this is default browser size
+/* stylelint-enable */
+
+
+// Layout setup
+// ==========================================================================
+
+// Setup grid defaults
+$layout-margin                : 0 !default; // [in pixels] Space outside the grid
+$layout-max-width             : 1004 !default; // [in pixels]
+$layout-min-width             : 1004 !default; // [in pixels] Minimum width for layout in <IE9
+$layout-max-width--huge       : 1100 !default; // [in pixels]
+$layout-min-width--huge       : 1100 !default; // [in pixels] Minimum width for layout in <IE9
+
+
+$grid-column-count            : 12 !default; // Total column count
+$grid-gutter-width            : 16 !default; // [in pixels]
+
+$responsive-grid-sizes        : true !default; // Disable this if you don't want grid sizes for each breakpoint
+$use-legacy-grid              : true !default;
+
+
+// Spacing (Vertical / Horizontal)
+// ==========================================================================
+$spacing: 8px; // only for use in map below – not for in components
+
+// spacing map
+// Can access levels by using the spacing function > spacing() or spacing(x5) for example
+$spacing: (
+    base : $spacing,
+    x2   : $spacing * 2,
+    x3   : $spacing * 3,
+    x4   : $spacing * 4,
+    x5   : $spacing * 5,
+    x6   : $spacing * 6
+);
+
+$baseline: spacing(x2); // default spacing between blocks
+
+
+//  z-indexes
+// ==========================================================================
+// In an attempt to keep our z-indexes fairly clean, we have a number of
+// pre-defined vars declared to make maintenance easier
+
+$zIndex: (
+    low     : 10,
+    mid     : 100,
+    high    : 9000,
+);
+
+
+// Path vars
+// ==========================================================================
+$img-path                  : '/assets/dist/img'; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+$icon-path                 : '#{$img-path}/icons';
+$font-path                 : '/assets/dist/fonts';
+
+
+// App-specific variables
+// ==========================================================================
+// Add common vars below here
+
+$default-transition: all 150ms ease-in-out;
+

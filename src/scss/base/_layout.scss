@@ -1,0 +1,17 @@
+/**
+ * Global Layout Definitions & Helpers
+ * ===================================
+ */
+
+body {
+	background-color: $color-bg;
+}
+
+/**
+ * Default layout container
+ */
+.l-container {
+	width: 90%;
+	max-width: #{$layout-max-width}px;
+	margin: 0 auto;
+}
