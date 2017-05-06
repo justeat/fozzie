@@ -21,13 +21,13 @@ gulp.task('css:lint', function () {
 
     return gulp.src(`${config.css.srcDir}/**/*.scss`)
         .pipe(
-        postcss([
-            stylelint(),
-            reporter({
-                clearMessages: true,
-                throwError: true
-            })
-        ],
+            postcss([
+                stylelint(),
+                reporter({
+                    clearMessages: true,
+                    throwError: true
+                })
+            ],
             { syntax: scss })
         );
 
