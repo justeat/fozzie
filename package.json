@@ -43,7 +43,8 @@
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "gulp compile --prod",
     "info": "npm-scripts-info",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "test": "gulp scripts:test"
   },
   "scripts-info": {
     "start": "Start the default gulp task",
