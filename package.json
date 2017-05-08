@@ -44,7 +44,7 @@
     "deploy": "gulp compile --prod",
     "info": "npm-scripts-info",
     "commit": "git-cz",
-    "test": "jest"
+    "test": "gulp scripts:test"
   },
   "scripts-info": {
     "start": "Start the default gulp task",
