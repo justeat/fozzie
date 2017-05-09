@@ -23,4 +23,4 @@ Thumbs.db
 logs
 *.log
 
-dist/*
+dist/
