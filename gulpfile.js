@@ -22,5 +22,9 @@ requireDir('./_build/tasks', { recurse: true });
 build({
   js: {
     srcFile: 'fozzie.js'
+  },
+  docs: {
+    cssUrl: 'https://d2vkuayfhnkplp.cloudfront.net/assets/dist/css/je-18a9a16e08.min.css',
+    jsUrl: 'https://d2vkuayfhnkplp.cloudfront.net/assets/dist/js/script-42aee39277.min.js'
   }
 });
