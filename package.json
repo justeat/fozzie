@@ -2,7 +2,7 @@
   "name": "fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.je-labs.com/UI/fozzie",
   "authors": [
     {
@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@justeat/gulp-build-fozzie": "^1.1.0",
-    "@justeat/stylelint-config-fozzie": "^0.1.1",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.4.0",
@@ -31,10 +30,6 @@
     "stylelint": "^7.9.0"
   },
   "devDependencies": {
-    "@justeat/eslint-config-fozzie": "^0.1.1",
-    "eslint": "^3.19.0",
-    "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-jest": "^19.0.1"
   },
   "keywords": [],
   "scripts": {
