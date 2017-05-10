@@ -24,7 +24,8 @@ const gulp = require('gulp');
 
 
 // Require all tasks in gulp/tasks, including subfolders
-requireDir('./_build/tasks', { recurse: true });
+// Use if you want to include any local build tasks
+// requireDir('./_build/tasks', { recurse: true });
 
 gulp.tasks = build({
   js: {
