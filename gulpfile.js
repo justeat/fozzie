@@ -5,21 +5,29 @@
   ===========
   Rather than manage one giant configuration file responsible
   for creating multiple tasks, each task has been broken out into
-  its own file in _build/tasks. Any files in that directory get
-  automatically required below.
+  its own file.
 
-  To add a new task, simply add a new task file that directory.
-  _build/tasks/default.js specifies the default set of tasks to run
-  when you run `gulp`.
+  So we can share common gulp tasks across projects these are
+  pulled in as an NPM module:
+  'gulp-build-fozzie'
+  => https://github.com/justeat/gulp-build-fozzie
+
+  Any tasks created in that module get automatically required below.
+
+  To add a new task, update gulp-build-fozzie, create a PR, and
+  push a new release.
 */
 
 var requireDir = require('require-dir');
 const build = require('@justeat/gulp-build-fozzie');
+const gulp = require('gulp');
+
 
 // Require all tasks in gulp/tasks, including subfolders
-requireDir('./_build/tasks', { recurse: true });
+// Use if you want to include any local build tasks
+// requireDir('./_build/tasks', { recurse: true });
 
-build({
+build(gulp, {
   js: {
     srcFile: 'fozzie.js'
   },
