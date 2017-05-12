@@ -27,7 +27,7 @@ const gulp = require('gulp');
 // Use if you want to include any local build tasks
 // requireDir('./_build/tasks', { recurse: true });
 
-gulp.tasks = build({
+build(gulp, {
   js: {
     srcFile: 'fozzie.js'
   }

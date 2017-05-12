@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Just Eat Styleguide
  * =================================
  */
@@ -18,7 +18,7 @@
 @import 'tools/mixins/index'; // TODO: this will be separated into a separate utilities module
 
 // Including helper modules
-@import 'kickoff-utils'; // imports a set of helper functions and mixins
+@import 'kickoff-utils'; // imports a set of helper functions and mixins – https://github.com/TryKickoff/kickoff-utils.scss
 @import 'include-media'; // Cleaner media query declarations – http://include-media.com
 
 
@@ -33,11 +33,13 @@
 
 
 // CSS Normalise and then Reset
-@import '../../../node_modules/normalize.css/normalize.css'; // https://github.com/necolas/normalize.css
+@import 'normalize'; // https://www.npmjs.com/package/normalize-scss
 @import 'base/reset';
 
 // Global typography styles
 @import 'base/typography';
+
+@import 'kickoff-grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
 
 /**
  * Objects
