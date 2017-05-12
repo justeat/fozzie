@@ -1,5 +1,5 @@
 {
-  "name": "fozzie",
+  "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
   "version": "0.1.1",
@@ -34,14 +34,23 @@
     "stylelint": "^7.9.0"
   },
   "devDependencies": {},
-  "keywords": [],
+  "keywords": [
+    "fozzie",
+    "eyeglass-module"
+  ],
+  "eyeglass": {
+    "name": "fozzie",
+    "sassDir": "src/scss",
+    "needs": "^1.1.2",
+    "exports": false
+  },
   "scripts": {
     "prestart": "npm prune && npm install",
     "start": "gulp",
     "predeploy": "npm prune && npm install --no-optional",
     "deploy": "gulp compile --prod",
     "info": "npm-scripts-info",
-    "commit": "git-cz",
+    "commit": "git-cz","node_modules/**/*",
     "test": "gulp scripts:test"
   },
   "scripts-info": {
