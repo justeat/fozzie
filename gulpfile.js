@@ -22,13 +22,10 @@ var requireDir = require('require-dir');
 const build = require('@justeat/gulp-build-fozzie');
 const gulp = require('gulp');
 
+const config = require('./_build/config');
 
 // Require all tasks in gulp/tasks, including subfolders
 // Use if you want to include any local build tasks
 // requireDir('./_build/tasks', { recurse: true });
 
-build(gulp, {
-  js: {
-    srcFile: 'fozzie.js'
-  }
-});
+build(gulp, config);

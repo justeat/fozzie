@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.je-labs.com/UI/fozzie",
   "authors": [
     {
@@ -22,7 +22,7 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@justeat/gulp-build-fozzie": "^1.4.0",
+    "@justeat/gulp-build-fozzie": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.4.0",
@@ -33,7 +33,9 @@
     "require-dir": "^0.3.1",
     "stylelint": "^7.9.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "npm-scripts-info": "^0.3.6"
+  },
   "keywords": [
     "fozzie",
     "eyeglass-module"
@@ -45,18 +47,14 @@
     "exports": false
   },
   "scripts": {
-    "prestart": "npm prune && npm install",
+    "prestart": "yarn",
     "start": "gulp",
-    "predeploy": "npm prune && npm install --no-optional",
-    "deploy": "gulp compile --prod",
-    "info": "npm-scripts-info",
-    "commit": "git-cz","node_modules/**/*",
-    "test": "gulp scripts:test"
+    "test": "gulp scripts:test",
+    "info": "npm-scripts-info"
   },
   "scripts-info": {
     "start": "Start the default gulp task",
-    "deploy": "Compile all assets for production deployment",
-    "commit": "Commit using a standard git commit message format"
+    "test": "Run the JavaScript unit tests"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"
@@ -70,7 +68,6 @@
   "jest": {
     "roots": [
       "src/js"
-    ],
-    "testURL": "http://just.eat/"
+    ]
   }
 }
