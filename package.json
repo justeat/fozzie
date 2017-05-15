@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.je-labs.com/UI/fozzie",
   "authors": [
     {
@@ -45,18 +45,9 @@
     "exports": false
   },
   "scripts": {
-    "prestart": "npm prune && npm install",
+    "prestart": "yarn",
     "start": "gulp",
-    "predeploy": "npm prune && npm install --no-optional",
-    "deploy": "gulp compile --prod",
-    "info": "npm-scripts-info",
-    "commit": "git-cz",
     "test": "gulp scripts:test"
-  },
-  "scripts-info": {
-    "start": "Start the default gulp task",
-    "deploy": "Compile all assets for production deployment",
-    "commit": "Commit using a standard git commit message format"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"
@@ -70,7 +61,6 @@
   "jest": {
     "roots": [
       "src/js"
-    ],
-    "testURL": "http://just.eat/"
+    ]
   }
 }
