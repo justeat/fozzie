@@ -33,7 +33,9 @@
     "require-dir": "^0.3.1",
     "stylelint": "^7.9.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "npm-scripts-info": "^0.3.6"
+  },
   "keywords": [
     "fozzie",
     "eyeglass-module"
@@ -47,7 +49,12 @@
   "scripts": {
     "prestart": "yarn",
     "start": "gulp",
-    "test": "gulp scripts:test"
+    "test": "gulp scripts:test",
+    "info": "npm-scripts-info"
+  },
+  "scripts-info": {
+    "start": "Start the default gulp task",
+    "test": "Run the JavaScript unit tests"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"
