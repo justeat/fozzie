@@ -7,35 +7,54 @@ $white                        : #fff;
 $black                        : #000;
 
 $red                          : #d50525;
-$red--brand                   : #fa0029; // red used for logo – not accessible and shouldn’t be used indiscriminately
+$red--dark                    : #b40e27; // for hover of base $red
+$red--darkest                 : #900B1F; // for focus/active of base $red
+$red--offwhite                : #fee;
+
+$pink                         : #ff5959;
 
 $yellow                       : #ffd700;
-$yellow--light                : #fff7ec;
+$yellow--light                : #fff1df;
 
-$orange                       : #d63a0d;
-$orange--light                : #ffe0b4;
+$orange                       : #cd390c;
+$orange--light                : #ff9e16;
 
-$blue                         : #2771cd;
+$blue                         : #266abd;
+$blue--dark                   : #14509c; // for hover of base $blue
+$blue--darkest                : #14427d; // for focus/active of base $blue
 $blue--light                  : #2bace4;
-$blue--dark                   : #14509c;
-$blue--offwhite               : #f4f8fd;
+$blue--lighter                : #7dcaeb;
+$blue--offwhite               : #edf5ff;
 
 $green                        : #04822c;
-$green--light                 : #e6f6c5;
-
-$purple                       : #ead9f0;
-$purple--light                : #ead9f0;
+$green--dark                  : #ae3713; // for hover of base $green
+$green--darkest               : #02531c; // for focus/active of base $green
+$green--light                 : #00ac41;
+$green--offWhite              : #f2fae2;
 
 
 // Greys – listed from lightest to darkest - these are the full range of greys we can use
 $grey--offWhite               : #f5f5f5;
 $grey--lightest               : #eaeaea;
-$grey--lighter                : #ddd;
-$grey--light                  : #cacaca;
-$grey--mid                    : #777;
+$grey--lighter                : #cacaca;
+$grey--light                  : #bbb;
+$grey--mid                    : #757575;
 $grey--dark                   : #535353;
-$grey--darker                 : #4a4a4a;
 $grey--darkest                : #333;
+
+
+
+// Brand specific colours
+// NOT AA accessibility compliant but available if needed in very specific circumstances
+$brand--red                   : #fa0029; // red used for logo – not accessible and shouldn’t be used indiscriminately
+$brand--green                 : #95d600;
+$brand--lime                  : #e2e71f;
+$brand--orange                : #ff5000;
+$brand--blue                  : #2f7de1;
+
+$purple                       : #3b1249;
+$purple--light                : #ead9f0;
+
 
 // =================================
 // Color Scheme
@@ -49,8 +68,9 @@ $color-secondary              : $blue;
 $color-text                   : $grey--darkest;
 $color-bg                     : $grey--offWhite;
 $color-bg--component          : $grey--lightest;
-$color-border                 : $grey--light;
+$color-border                 : $grey--lighter;
 $color-disabled               : $grey--lighter;
+$color-shadow                 : $grey--lightest;
 
 $color-alert-bg               :  $yellow--light;
 $color-statusMsg              :  $orange--light;
@@ -62,7 +82,7 @@ $color-btas-bg                : $purple--light;
 // Links
 $color-link-default           : $blue;
 $color-link-hover             : $blue--dark;
-// $color-link-active            : darken($color-link-default, 20%);
+$color-link-active            : $blue--darkest;
 // $color-link-visited           : $color-link-default; // should we use this
 
 // Text Selection – do we want to customise this or leave as default?
@@ -70,4 +90,4 @@ $color-selection              : inherit;
 $color-selection-bg           : inherit;
 
 // <hr> border color
-$hr-color                     : $grey--light;
+$hr-color                     : $color-border;
