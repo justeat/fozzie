@@ -2,27 +2,33 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.2.0",
-  "homepage": "https://github.je-labs.com/UI/fozzie",
+  "version": "0.2.1",
+  "homepage": "https://github.com/justeat/fozzie",
+  "contributors": [
+    "Ashley Nolan <ashley.nolan@just-eat.com> (https://ashleynolan.co.uk)",
+    "Damian Mullins <damian.mullins@just-eat.com> (http://www.damianmullins.com)",
+    "Github contributors <https://github.com/justeat/fozzie/graphs/contributors>"
+  ],
   "authors": [
     {
       "name": "Contributors",
-      "url": "https://github.je-labs.com/UI/fozzie/graphs/contributors"
+      "url": "https://github.com/justeat/fozzie/graphs/contributors"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.je-labs.com:UI/fozzie.git"
+    "url": "git@github.com:justeat/fozzie.git"
   },
   "bugs": {
-    "url": "https://github.je-labs.com/UI/fozzie/issues"
+    "url": "https://github.com/justeat/fozzie/issues"
   },
   "license": "Apache-2.0",
   "engines": {
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@justeat/gulp-build-fozzie": "^1.6.0",
+    "@justeat/fozzie-colour-palette": "^0.1.0",
+    "@justeat/gulp-build-fozzie": "^1.10.1",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.4.0",
