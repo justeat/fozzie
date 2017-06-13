@@ -1,93 +1,11 @@
 // =================================
 // Color palette
 // =================================
-// Main brand colors – these should never be called directly, but assigned to more descriptive variables
-
-$white                        : #fff;
-$black                        : #000;
-
-$red                          : #d50525;
-$red--dark                    : #b40e27; // for hover of base $red
-$red--darkest                 : #900B1F; // for focus/active of base $red
-$red--offwhite                : #fee;
-
-$pink                         : #ff5959;
-
-$yellow                       : #ffd700;
-$yellow--light                : #fff1df;
-
-$orange                       : #cd390c;
-$orange--light                : #ff9e16;
-
-$blue                         : #266abd;
-$blue--dark                   : #14509c; // for hover of base $blue
-$blue--darkest                : #14427d; // for focus/active of base $blue
-$blue--light                  : #2bace4;
-$blue--lighter                : #7dcaeb;
-$blue--offwhite               : #edf5ff;
-
-$green                        : #04822c;
-$green--dark                  : #ae3713; // for hover of base $green
-$green--darkest               : #02531c; // for focus/active of base $green
-$green--light                 : #00ac41;
-$green--offWhite              : #f2fae2;
-
-
-// Greys – listed from lightest to darkest - these are the full range of greys we can use
-$grey--offWhite               : #f5f5f5;
-$grey--lightest               : #eaeaea;
-$grey--lighter                : #cacaca;
-$grey--light                  : #bbb;
-$grey--mid                    : #757575;
-$grey--dark                   : #535353;
-$grey--darkest                : #333;
-
-
-
-// Brand specific colours
-// NOT AA accessibility compliant but available if needed in very specific circumstances
-$brand--red                   : #fa0029; // red used for logo – not accessible and shouldn’t be used indiscriminately
-$brand--green                 : #95d600;
-$brand--lime                  : #e2e71f;
-$brand--orange                : #ff5000;
-$brand--blue                  : #2f7de1;
-
-$purple                       : #3b1249;
-$purple--light                : #ead9f0;
-
-
-// =================================
-// Color Scheme
-// =================================
-// These are the variables that should be used directly in our SCSS (globally)
-
-$color-primary                : $red;
-$color-secondary              : $blue;
-
-// Common colors
-$color-text                   : $grey--darkest;
-$color-bg                     : $grey--offWhite;
-$color-bg--component          : $grey--lightest;
-$color-border                 : $grey--lighter;
-$color-disabled               : $grey--lighter;
-$color-shadow                 : $grey--lightest;
-
-$color-alert-bg               :  $yellow--light;
-$color-statusMsg              :  $orange--light;
-$color-infoMsg                :  $blue--offwhite;
-
-$color-btas-primary           : $purple;
-$color-btas-bg                : $purple--light;
-
-// Links
-$color-link-default           : $blue;
-$color-link-hover             : $blue--dark;
-$color-link-active            : $blue--darkest;
-// $color-link-visited           : $color-link-default; // should we use this
-
-// Text Selection – do we want to customise this or leave as default?
-$color-selection              : inherit;
-$color-selection-bg           : inherit;
-
-// <hr> border color
-$hr-color                     : $color-border;
+// If you’re wondering where the base colour variables are, they’re actually imported
+// from the fozzie-colour-palette module.
+//
+// Repo: https://github.com/justeat/fozzie-colour-palette
+// NPM Module: https://www.npmjs.com/package/@justeat/fozzie-colour-palette
+//
+// List of available colour variables:
+// https://github.com/justeat/fozzie-colour-palette/blob/master/src/scss/index.scss
