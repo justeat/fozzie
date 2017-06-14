@@ -1,4 +1,4 @@
-﻿// ==========================================================================
+// ==========================================================================
 // Typography mixins
 // ==========================================================================
 // REM font size
@@ -10,16 +10,18 @@
 // REM
 // @include rem(margin, $font-size-base);
 @mixin rem($property, $sizeValue: $font-size-base) {
-    $remValue: (ko-strip-units($sizeValue) / $font-size-base);
-    #{$property}: ceil($sizeValue) + px;
+    $unitlessSizeValue: ko-strip-units($sizeValue);
+    $remValue: ($unitlessSizeValue / $font-size-base);
+    #{$property}: ceil($unitlessSizeValue) + px;
     #{$property}: $remValue + rem;
 }
 
-@mixin font-size($key: 'base', $line-height: 'true', $scale: 'default') {
+@mixin font-size($key: 'base', $line-height: true, $scale: 'default') {
     // if the $key passed in is actually just a font-size, then output it (may want to instead force a sass error saying to use the type map?)
     @if type-of($key) == 'number' {
-        @include ko-font-size($key);
-    } @else { // else try and find the value in our type map
+        @include font-size($key);
+    }
+    @elseif map-has-key($type, $key) { // else try and find the value in our type map
         $key-map: map-get($type, $key);
         $font-list: map-get($key-map, $scale);
 
@@ -27,15 +29,18 @@
         // both font-size and line-height
         @if type-of($font-list) == 'list' {
             $font-size: nth($font-list, 1);
-            $line-height: nth($font-list, 2);
-
             @include rem(font-size, $font-size);
-            @if (length($font-list) > 1 && $line-height == true) {
+
+            @if (length($font-list) > 1 and $line-height == true) {
+                $line-height: nth($font-list, 2);
                 line-height: line-height($font-size, $line-height);
             }
         }
         @else {
             @include rem(font-size, $font-list);
         }
+    }
+    @else {
+        @warn 'Unknown `#{$key}` in $type.';
     }
 }
