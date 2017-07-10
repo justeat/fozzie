@@ -75,12 +75,10 @@ $breakpoints: ko-map-to-em((
 // ==========================================================================
 
 // Setup grid defaults
-$layout-margin                : 0 !default; // [in pixels] Space outside the grid
-$layout-max-width             : 1004 !default; // [in pixels]
-$layout-min-width             : 1004 !default; // [in pixels] Minimum width for layout in <IE9
-$layout-max-width--huge       : 1100 !default; // [in pixels]
-$layout-min-width--huge       : 1100 !default; // [in pixels] Minimum width for layout in <IE9
-
+$layout-margin                : 32 !default; // [in pixels] Space outside the grid
+$layout-margin--mid           : 16 !default; // [in pixels] Space outside the grid
+$layout-margin--narrow        : 16 !default; // [in pixels] Space outside the grid
+$layout-max-width             : 1272 !default; // [in pixels]
 
 $grid-column-count            : 12 !default; // Total column count
 $grid-gutter-width            : 16 !default; // [in pixels]
