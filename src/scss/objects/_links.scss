@@ -4,13 +4,13 @@
  */
 
 a {
-	& {
-		color: $color-link-default;
-	}
+    & {
+        color: $color-link-default;
+    }
 
-	&:hover, &:focus {
-		color: $color-link-hover;
-	}
+    &:hover, &:focus {
+        color: $color-link-hover;
+    }
 
     &:active {
         color: $color-link-active;
