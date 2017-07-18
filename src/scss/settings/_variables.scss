@@ -1,3 +1,4 @@
+/* stylelint-disable indentation */
 // =================================
 // Variables
 // =================================
@@ -48,8 +49,8 @@ $type: (
     )
 );
 
-$font-weight-bold           : 700;
-$font-weight-headings       : 400; // instead of browser default, bold
+$font-weight-bold           : 500;
+$font-weight-headings       : 500; // instead of browser default, bold
 $line-height-headings       : 1.2;
 
 // Font stacks
@@ -60,15 +61,12 @@ $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 
 //  Global Breakpoints
 // ==========================================================================
-
-/* stylelint-disable */
 $breakpoints: ko-map-to-em((
     narrow   : 414px,    // narrow devices
     mid      : 768px,    // mid bp
     wide     : 1025px,   // wide bp
     huge     : 1280px    // huge bp
 ), 16); // set to 16 as this is default browser size
-/* stylelint-enable */
 
 
 // Layout setup
@@ -95,6 +93,7 @@ $spacing: 8px; // only for use in map below – not for in components
 // Can access levels by using the spacing function > spacing() or spacing(x5) for example
 $spacing: (
     base : $spacing,
+    x1.5 : $spacing * 1.5,
     x2   : $spacing * 2,
     x3   : $spacing * 3,
     x4   : $spacing * 4,
@@ -113,7 +112,7 @@ $baseline: spacing(x2); // default spacing between blocks
 $zIndex: (
     low     : 10,
     mid     : 100,
-    high    : 9000,
+    high    : 9000
 );
 
 
@@ -130,3 +129,4 @@ $font-path                 : '/assets/dist/fonts';
 
 $default-transition: all 150ms ease-in-out;
 
+/* stylelint-enable */

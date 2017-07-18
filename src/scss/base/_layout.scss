@@ -4,16 +4,16 @@
  */
 
 body {
-	background-color: $color-bg;
+    background-color: $color-bg;
 }
 
 /**
  * Default layout container
  */
 .l-container {
-	width: 100%;
-	max-width: #{$layout-max-width}px;
-	margin: 0 auto;
+    width: 100%;
+    max-width: #{$layout-max-width}px;
+    margin: 0 auto;
     padding-left: #{$layout-margin}px;
     padding-right: #{$layout-margin}px;
 

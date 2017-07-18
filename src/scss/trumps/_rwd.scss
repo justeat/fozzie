@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Responsive Trumps
  * ===================================
  */
@@ -8,49 +8,49 @@
 // =================================================================================
 .u-showBelowNarrow {
     @include media('>=narrow') {
-        display: none;
+        display: none !important;
     }
 }
 
 .u-showBelowMid {
     @include media('>=mid') {
-        display: none;
+        display: none !important;
     }
 }
 
 .u-showBelowWide {
     @include media('>=wide') {
-        display: none;
+        display: none !important;
     }
 }
 
 .u-showBelowHuge {
     @include media('>=huge') {
-        display: none;
+        display: none !important;
     }
 }
 
 .u-showAboveNarrow {
     @include media('<narrow') {
-        display: none;
+        display: none !important;
     }
 }
 
 .u-showAboveMid,
 .no-js .u-showAboveMid--noJS {
     @include media('<mid') {
-        display: none;
+        display: none !important;
     }
 }
 
 .u-showAboveWide {
     @include media('<wide') {
-        display: none;
+        display: none !important;
     }
 }
 
 .u-showAboveHuge {
     @include media('<huge') {
-        display: none;
+        display: none !important;
     }
 }
