@@ -1,12 +1,6 @@
 // ==========================================================================
 // Typography mixins
 // ==========================================================================
-// REM font size
-// @include font-size(16);
-@mixin font-size($sizeValue: $font-size-base) {
-    @include rem(font-size, $sizeValue);
-}
-
 // REM
 // @include rem(margin, $font-size-base);
 @mixin rem($property, $sizeValue: $font-size-base) {
@@ -19,7 +13,7 @@
 @mixin font-size($key: 'base', $line-height: true, $scale: 'default') {
     // if the $key passed in is actually just a font-size, then output it (may want to instead force a sass error saying to use the type map?)
     @if type-of($key) == 'number' {
-        @include font-size($key);
+        @include rem(font-size, $key);
     }
     @elseif map-has-key($type, $key) { // else try and find the value in our type map
         $key-map: map-get($type, $key);
