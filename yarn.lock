@@ -25,9 +25,9 @@
   dependencies:
     eslint-config-airbnb-base "^11.2.0"
 
-"@justeat/fozzie-colour-palette@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-0.1.1.tgz#3bffa3f1e86faba69b921c10d00d2e97bbf8cf37"
+"@justeat/fozzie-colour-palette@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-0.2.0.tgz#1f06bea8c7bb5ce82467fa690d2e93e2c933cc66"
   dependencies:
     "@justeat/gulp-build-fozzie" "^1.4.0"
 
