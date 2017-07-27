@@ -2,3 +2,9 @@
  * Objects > Lists
  * =================================
  */
+
+ul,
+ol {
+    padding: 0;
+    margin: spacing(x2) 0 0 spacing(x2);
+}

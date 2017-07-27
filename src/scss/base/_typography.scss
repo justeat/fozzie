@@ -28,6 +28,7 @@ body {
     @include font-size(base, false);
     line-height: $leading-base;
     color: $color-text;
+    font-weight: $font-weight-base;
 
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;

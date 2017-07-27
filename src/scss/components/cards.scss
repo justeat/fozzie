@@ -1,0 +1,37 @@
+/**
+ * Card Component
+ * =================================
+ * Used for content listing cards
+ *
+ * Documentation:
+ * TBC
+ */
+
+$card-bgColor--active           : $white !default;
+$card-tooltip-width             : 10px !default;
+$card-arrow-bottom-position     : 0 !default;
+$card-padding                   : spacing(x2) !default;
+$card-radius                    : 4px !default;
+
+@mixin card() {
+
+    .card {
+        background-color: $card-bgColor--active;
+        margin-bottom: spacing();
+        padding: $card-padding;
+
+        @include media('>=mid') {
+            margin-bottom: 0;
+        }
+    }
+
+        .card--noPad {
+            padding: 0;
+        }
+
+        .card--rounded {
+            border-radius: $card-radius;
+        }
+
+}
+
