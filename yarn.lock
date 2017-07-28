@@ -19,9 +19,9 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@justeat/eslint-config-fozzie@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@justeat/eslint-config-fozzie/-/eslint-config-fozzie-1.0.0.tgz#283ead03a1fbbc1f91a5737cf8168e2891493026"
+"@justeat/eslint-config-fozzie@^1.0.0", "@justeat/eslint-config-fozzie@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@justeat/eslint-config-fozzie/-/eslint-config-fozzie-1.1.0.tgz#d56dbb2505a79ee278dfc22830079636c08abcfd"
   dependencies:
     eslint-config-airbnb-base "^11.2.0"
 
@@ -86,11 +86,11 @@
     vinyl-buffer "^1.0.0"
     vinyl-source-stream "^1.1.0"
 
-"@justeat/gulp-build-fozzie@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@justeat/gulp-build-fozzie/-/gulp-build-fozzie-2.0.0.tgz#f7784380abb6c037a3672e57ae28e7714d6009ba"
+"@justeat/gulp-build-fozzie@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@justeat/gulp-build-fozzie/-/gulp-build-fozzie-3.1.0.tgz#7b37f2f2ee13b4270b939c242b3f7facf1868599"
   dependencies:
-    "@justeat/eslint-config-fozzie" "^1.0.0"
+    "@justeat/eslint-config-fozzie" "^1.1.0"
     "@justeat/stylelint-config-fozzie" "^1.0.0"
     assemble "^0.24.3"
     autoprefixer "^7.0.1"
@@ -122,6 +122,7 @@
     gulp-sass "^3.1.0"
     gulp-size "^2.1.0"
     gulp-sourcemaps "^2.6.0"
+    gulp-strip-debug "^1.1.0"
     gulp-svgmin "^1.2.4"
     gulp-svgstore "^6.1.0"
     gulp-tap "^1.0.1"
@@ -145,9 +146,9 @@
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@justeat/stylelint-config-fozzie/-/stylelint-config-fozzie-0.1.4.tgz#4f0fdef73890bef67fecbeb221614ea32734028f"
 
-"@justeat/stylelint-config-fozzie@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@justeat/stylelint-config-fozzie/-/stylelint-config-fozzie-1.0.0.tgz#8f8a449dcf6ed6310f773460362cc02228beeb0f"
+"@justeat/stylelint-config-fozzie@^1.0.0", "@justeat/stylelint-config-fozzie@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@justeat/stylelint-config-fozzie/-/stylelint-config-fozzie-1.1.0.tgz#be5f17a2336f0d42ff5f45de0bf6bf88c2d4b825"
 
 "@kickoff/utils.scss@^2.1.1":
   version "2.1.1"
@@ -3742,7 +3743,7 @@ espree@^3.4.3:
     acorn "^5.0.1"
     acorn-jsx "^3.0.0"
 
-esprima@^2.6.0, esprima@^2.7.1:
+esprima@^2.0, esprima@^2.6.0, esprima@^2.7.1:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
 
@@ -4961,6 +4962,14 @@ gulp-sourcemaps@^2.6.0:
     strip-bom-string "1.X"
     through2 "2.X"
     vinyl "1.X"
+
+gulp-strip-debug@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gulp-strip-debug/-/gulp-strip-debug-1.1.0.tgz#5d56b008452edf6823dadecb3e6254d06f3b5d3d"
+  dependencies:
+    gulp-util "^3.0.0"
+    strip-debug "^1.0.0"
+    through2 "^2.0.0"
 
 gulp-svgmin@^1.2.4:
   version "1.2.4"
@@ -9443,6 +9452,46 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
+rocambole-node-remove@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/rocambole-node-remove/-/rocambole-node-remove-1.0.0.tgz#bd49b13dbe6122758374ffd247d8a739e821486f"
+  dependencies:
+    rocambole-token "^1.1.0"
+
+rocambole-node-update@^1.0.0, rocambole-node-update@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/rocambole-node-update/-/rocambole-node-update-1.0.1.tgz#a3ffc968b0f3bcd9cf2a9336dc0db7e254c83c5a"
+  dependencies:
+    rocambole-token "^1.2.1"
+
+rocambole-strip-alert@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/rocambole-strip-alert/-/rocambole-strip-alert-1.0.0.tgz#3b255fe6f18d6301f805a14e570b1f1f2dba857f"
+  dependencies:
+    rocambole-node-update "^1.0.1"
+
+rocambole-strip-console@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/rocambole-strip-console/-/rocambole-strip-console-1.0.0.tgz#2b97e3dfa6e19d4528ebe81a94231dc9e8aaca0b"
+  dependencies:
+    rocambole-node-update "^1.0.0"
+
+rocambole-strip-debugger@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/rocambole-strip-debugger/-/rocambole-strip-debugger-1.0.0.tgz#1c5502420c3d6ef5e23a70b80547dfd1d4bbcb76"
+  dependencies:
+    rocambole-node-remove "^1.0.0"
+
+rocambole-token@^1.1.0, rocambole-token@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/rocambole-token/-/rocambole-token-1.2.1.tgz#c785df7428dc3cb27ad7897047bd5238cc070d35"
+
+rocambole@^0.5.0:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/rocambole/-/rocambole-0.5.1.tgz#3048f64b2388b8dd8e933f9ad443f0b389ab608f"
+  dependencies:
+    esprima "^2.0"
+
 run-async@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-0.1.0.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
@@ -10132,6 +10181,15 @@ strip-bom@^2.0.0:
 strip-color@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/strip-color/-/strip-color-0.1.0.tgz#106f65d3d3e6a2d9401cac0eb0ce8b8a702b4f7b"
+
+strip-debug@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/strip-debug/-/strip-debug-1.1.1.tgz#698241986769dcef513dc6c7ca629b06bc9f217b"
+  dependencies:
+    rocambole "^0.5.0"
+    rocambole-strip-alert "^1.0.0"
+    rocambole-strip-console "^1.0.0"
+    rocambole-strip-debugger "^1.0.0"
 
 strip-dirs@^1.0.0:
   version "1.1.1"
