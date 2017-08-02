@@ -25,8 +25,7 @@ html {
 
 body {
     font-family: $font-family-base;
-    @include font-size(base, false);
-    line-height: $leading-base;
+    @include font-size(base);
     color: $color-text;
     font-weight: $font-weight-base;
 
@@ -40,7 +39,7 @@ body {
  */
 p {
     font-family: $font-family-base;
-    @include font-size(base, false);
+    @include font-size(base);
     margin-top: $baseline;
     margin-bottom: 0;
 }
@@ -147,7 +146,7 @@ blockquote {
 
     p {
         margin-bottom: 0;
-        @include font-size(base, false);
+        @include font-size(base);
         font-weight: 300;
     }
 
