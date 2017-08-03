@@ -1,0 +1,82 @@
+/*
+   Icons
+   ========================================================================== */
+
+
+[class^='icon '],
+[class^='icon-'],
+[class*=' icon '],
+[class*=' icon-'] {
+    speak: none;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/**
+ * Base Icon Class
+ *
+ * Used when we have a standalone icon
+ */
+
+.icon {
+    display: block;
+}
+
+
+/**
+ * Modifiers for icon sizes
+ *
+ * 1. icon--large
+ * 2. icon--mid
+ * 3. icon--small
+ */
+
+.icon--large {
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+
+.icon--mid {
+    display: block;
+    width: 60px;
+    height: 50px;
+
+    @include media('>=mid') {
+        width: 70px;
+        height: 60px;
+    }
+}
+
+.icon--small {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: top;
+}
+
+.icon--floatLeft {
+    margin-right: spacing();
+    margin-top: 1px;
+    float: left;
+}
+
+.icon--tick {
+    background-image: inline('#{$icon-path}/general/tick.svg');
+    .no-svg & { background-image: url('#{$icon-path}/general/tick.png'); }
+}
+
+.icon--tick--rounded {
+    margin-right: spacing() / 2;
+    width: 13px;
+    height: 23px;
+    background-image: inline('#{$icon-path}/general/tick-rounded.svg');
+    .no-svg & { background-image: url('#{$icon-path}/general/tick.png'); }
+}
+
+.icon--tick--blue,
+%icon--tick--blue {
+    background-image: inline('#{$icon-path}/general/tick-blue.svg');
+    .no-svg & { background-image: url('#{$icon-path}/general/tick-blue.png'); }
+}
