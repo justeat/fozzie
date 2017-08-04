@@ -631,7 +631,7 @@ $btn-progress-height: 10% !default;
 
         &:before {
             content: '';
-            @extend %icon--tick--blue;
+            @extend %c-icon--tick--blue;
             width: 16px;
             height: 11px;
             background-size: 16px 11px;
