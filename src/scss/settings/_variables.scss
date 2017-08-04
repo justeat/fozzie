@@ -12,26 +12,24 @@
 $font-size-base             : 14;
 $font-size-base-px          : $font-size-base * 1px;
 
-$leading-base               : 1.35;
-
 // Type map – these are our global font-sizes and line-heights across the site
 $type: (
     small: ( // for things like legal copy (unimportant stuff)
         default: (12, 16)
     ),
     base: (  // body copy
-        default: (14, 19)
+        default: (14, 18)
     ),
     mid: (  // h3, h4, h5, h6 sizes (differentiated by font and weight not size)
-        default: (16, 21)
+        default: (16, 24)
     ),
     large: ( // h2
-        default: (22, 27),
+        default: (20, 28),
         narrow: (18, 24)
     ),
     jumbo: ( // h1
         default: (24, 32),
-        narrow: (20, 26)
+        narrow: (20, 24)
     ),
     // scaleUp type for specific pages
     // E.g. Home / Thematic Pages / City Pages
