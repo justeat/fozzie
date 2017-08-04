@@ -3,10 +3,10 @@
    ========================================================================== */
 
 
-[class^='icon '],
-[class^='icon-'],
-[class*=' icon '],
-[class*=' icon-'] {
+[class^='c-icon '],
+[class^='c-icon-'],
+[class*=' c-icon '],
+[class*=' c-icon-'] {
     speak: none;
     background-size: contain;
     background-position: center center;
@@ -19,7 +19,7 @@
  * Used when we have a standalone icon
  */
 
-.icon {
+.c-icon {
     display: block;
 }
 
@@ -27,18 +27,18 @@
 /**
  * Modifiers for icon sizes
  *
- * 1. icon--large
- * 2. icon--mid
- * 3. icon--small
+ * 1. c-icon--large
+ * 2. c-icon--mid
+ * 3. c-icon--small
  */
 
-.icon--large {
+.c-icon--large {
     display: block;
     width: 120px;
     height: 120px;
 }
 
-.icon--mid {
+.c-icon--mid {
     display: block;
     width: 60px;
     height: 50px;
@@ -49,25 +49,30 @@
     }
 }
 
-.icon--small {
+.c-icon--small {
     display: inline-block;
     width: 25px;
     height: 25px;
     vertical-align: top;
 }
 
-.icon--floatLeft {
+
+.c-icon--floatLeft {
     margin-right: spacing();
     margin-top: 1px;
     float: left;
 }
 
-.icon--tick {
+/**
+ * Tick icons
+ */
+
+.c-icon--tick {
     background-image: inline('#{$icon-path}/general/tick.svg');
     .no-svg & { background-image: url('#{$icon-path}/general/tick.png'); }
 }
 
-.icon--tick--rounded {
+.c-icon--tick--rounded {
     margin-right: spacing() / 2;
     width: 13px;
     height: 23px;
@@ -75,8 +80,8 @@
     .no-svg & { background-image: url('#{$icon-path}/general/tick.png'); }
 }
 
-.icon--tick--blue,
-%icon--tick--blue {
+.c-icon--tick--blue,
+%c-icon--tick--blue {
     background-image: inline('#{$icon-path}/general/tick-blue.svg');
     .no-svg & { background-image: url('#{$icon-path}/general/tick-blue.png'); }
 }
