@@ -9,8 +9,22 @@
 // Given a font-size and a line-height (in pixels)
 // Returns a unitless line-height value
 //
-@function line-height($font-size, $line-height) {
-    @return decimal-round(($line-height / $font-size));
+@function line-height($font-size: 'base', $line-height: '16', $scale: 'default') {
+    @if type-of($font-size) == 'number' {
+        @return decimal-round(($line-height / $font-size), 2);
+    }
+    @elseif map-has-key($type, $font-size) { // else try and find the value in our type map
+        @debug 'font-size #{ $font-size }';
+        $key-map: map-get($type, $font-size);
+        $font-list: map-get($key-map, $scale);
+
+        @if type-of($font-list) == 'list' {
+            @return line-height(nth($font-list, 1), nth($font-list, 2));
+        }
+        @else {
+            @warn 'No line-height found as part of the $type map for #{ $font-size }';
+        }
+    }
 }
 
 @function decimal-round ($number, $digits: 0, $mode: round) {
