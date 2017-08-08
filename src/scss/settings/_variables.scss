@@ -51,6 +51,7 @@ $font-weight-base           : 300;
 $font-weight-bold           : 500;
 $font-weight-headings       : 500; // instead of browser default, bold
 $line-height-headings       : 1.2;
+$line-height-base           : line-height();
 
 // Font stacks
 $font-family-base           : 'Hind Vadodara', 'Helvetica Neue', Helvetica, sans-serif;
