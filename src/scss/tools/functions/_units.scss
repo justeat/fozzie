@@ -14,7 +14,6 @@
         @return decimal-round(($line-height / $font-size), 2);
     }
     @elseif map-has-key($type, $font-size) { // else try and find the value in our type map
-        @debug 'font-size #{ $font-size }';
         $key-map: map-get($type, $font-size);
         $font-list: map-get($key-map, $scale);
 

@@ -18,14 +18,15 @@
   push a new release.
 */
 
-var requireDir = require('require-dir');
-const build = require('@justeat/gulp-build-fozzie');
 const gulp = require('gulp');
+var requireDir = require('require-dir');
+const { build, config } = require('@justeat/gulp-build-fozzie');
 
-const config = require('./_build/config');
+const moduleConfig = require('./_build/config');
+
+// Grab the Fozzie build tasks
+build(gulp, moduleConfig);
 
 // Require all tasks in gulp/tasks, including subfolders
 // Use if you want to include any local build tasks
 // requireDir('./_build/tasks', { recurse: true });
-
-build(gulp, config);
