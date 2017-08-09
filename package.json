@@ -27,8 +27,8 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@justeat/fozzie-colour-palette": "^0.2.0",
-    "@justeat/gulp-build-fozzie": "^3.1.0",
+    "@justeat/fozzie-colour-palette": "^0.4.0",
+    "@justeat/gulp-build-fozzie": "^4.2.0",
     "@kickoff/utils.scss": "^2.1.1",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
