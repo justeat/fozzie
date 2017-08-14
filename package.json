@@ -27,8 +27,8 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@justeat/fozzie-colour-palette": "^0.2.0",
-    "@justeat/gulp-build-fozzie": "^3.1.0",
+    "@justeat/fozzie-colour-palette": "^0.4.0",
+    "@justeat/gulp-build-fozzie": "^4.4.0",
     "@kickoff/utils.scss": "^2.1.1",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
@@ -50,6 +50,15 @@
     "needs": "^1.1.2",
     "exports": false
   },
+  "assets": [
+    "dist/img/sprite.svg",
+    "dist/img/icons/general/tick-blue.svg",
+    "dist/img/icons/general/tick-rounded.svg",
+    "dist/img/icons/general/tick.svg",
+    "dist/img/icons/operators/minus.svg",
+    "dist/img/icons/operators/plus--thin.svg",
+    "dist/img/icons/operators/plus.svg"
+  ],
   "scripts": {
     "prestart": "yarn",
     "start": "gulp",

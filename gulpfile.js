@@ -19,7 +19,7 @@
 */
 
 var requireDir = require('require-dir');
-const build = require('@justeat/gulp-build-fozzie');
+const { build } = require('@justeat/gulp-build-fozzie');
 const gulp = require('gulp');
 
 const config = require('./_build/config');
