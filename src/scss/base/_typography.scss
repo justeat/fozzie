@@ -222,8 +222,8 @@ samp { font-family: $font-family-mono; }
 hr {
     margin: ($baseline) 0;
     border: 0;
-    height: 1px;
-    background-color: $hr-color;
+    border-top: 1px solid $hr-color;
+    border-bottom: 1px solid $white;
 }
 
 // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
