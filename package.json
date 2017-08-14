@@ -50,15 +50,6 @@
     "needs": "^1.1.2",
     "exports": false
   },
-  "assets": [
-    "dist/img/sprite.svg",
-    "dist/img/icons/general/tick-blue.svg",
-    "dist/img/icons/general/tick-rounded.svg",
-    "dist/img/icons/general/tick.svg",
-    "dist/img/icons/operators/minus.svg",
-    "dist/img/icons/operators/plus--thin.svg",
-    "dist/img/icons/operators/plus.svg"
-  ],
   "scripts": {
     "prestart": "yarn",
     "start": "gulp",
@@ -82,5 +73,15 @@
     "roots": [
       "src/js"
     ]
-  }
+  },
+  "assets": [
+    "dist/img/sprite.svg",
+    "dist/img/icons/general/tick-blue.svg",
+    "dist/img/icons/general/tick-rounded.svg",
+    "dist/img/icons/general/tick.svg",
+    "dist/img/icons/operators/minus.svg",
+    "dist/img/icons/operators/minus--light.svg",
+    "dist/img/icons/operators/plus.svg",
+    "dist/img/icons/operators/plus--thin.svg"
+  ]
 }

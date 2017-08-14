@@ -103,6 +103,6 @@
 }
 
 .c-icon--minus--light {
-    background-size: 26px;
+    background-size: inherit;
     background-image: inline('#{$icon-path}/operators/minus--light.svg');
 }
