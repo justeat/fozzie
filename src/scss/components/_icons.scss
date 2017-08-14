@@ -60,13 +60,13 @@
     float: left;
 }
 
+
 /**
- * Tick icons
+ * General icons
  */
 
 .c-icon--tick {
     background-image: inline('#{$icon-path}/general/tick.svg');
-    .no-svg & { background-image: url('#{$icon-path}/general/tick.png'); }
 }
 
 .c-icon--tick--rounded {
@@ -74,11 +74,34 @@
     width: 13px;
     height: 23px;
     background-image: inline('#{$icon-path}/general/tick-rounded.svg');
-    .no-svg & { background-image: url('#{$icon-path}/general/tick.png'); }
 }
 
 .c-icon--tick--blue,
 %c-icon--tick--blue {
     background-image: inline('#{$icon-path}/general/tick-blue.svg');
-    .no-svg & { background-image: url('#{$icon-path}/general/tick-blue.png'); }
+}
+
+
+/**
+ * Operator icons
+ */
+
+.c-icon--plus {
+    min-width: 18px;
+    height: 18px;
+    background-size: 14px;
+    background-image: inline('#{$icon-path}/operators/plus.svg');
+}
+
+.c-icon--plus--thin {
+    background-image: inline('#{$icon-path}/operators/plus--thin.svg');
+}
+
+.c-icon--minus {
+    background-size: 26px;
+    background-image: inline('#{$icon-path}/operators/minus.svg');
+}
+
+.c-icon--minus--light {
+    
 }

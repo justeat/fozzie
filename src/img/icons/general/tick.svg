@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="collection" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="RW_07_320_SERP_Future_INT_Ireland_RefinePanel" transform="translate(-104.000000, -601.000000)" fill="#04822C">
-            <g id="tick" transform="translate(104.000000, 601.000000)">
-                <g id="Layer_1">
-                    <path d="M5.33333333,11.6148148 C4.88888889,11.6148148 4.41481481,11.437037 4.05925926,11.0814815 L0.0592592593,7.08148148 L1.62962963,5.54074074 L5.33333333,9.24444444 L14.3407407,0.207407407 L15.8814815,1.74814815 L6.54814815,11.0814815 C6.25185185,11.437037 5.77777778,11.6148148 5.33333333,11.6148148 Z" id="Shape"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><path d="M5.333 11.615c-.444 0-.918-.178-1.274-.534l-4-4 1.57-1.54 3.704 3.703L14.341.207l1.54 1.541-9.333 9.333c-.296.356-.77.534-1.215.534z" fill="#04822C" fill-rule="evenodd"/></svg>
