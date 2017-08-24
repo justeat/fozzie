@@ -27,3 +27,10 @@ body {
         padding-right: #{$layout-margin--narrow}px;
     }
 }
+
+/**
+ * Modifier for page containers that contain solely content (such as T&cs and Privacy pages)
+ */
+.l-container--content {
+    padding-top: spacing(x4);
+}

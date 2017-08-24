@@ -3,6 +3,19 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.9.0
+------------------------------
+*August 24, 2017*
+
+### Added
+- Table Styling
+- `$border-radius` variable added to standardise the radius of rounded components.
+- Utility class `u-lightenBg` added so that a lighter background colour can be applied to a page or section of a page.
+
+### Changed
+- Better list item spacing.  By default now adds spacing between `li`s (which can be removed by applying the `u-unstyled` class).
+- More sensible typographic spacing based on baseline spacing.
+
 
 v0.8.0
 ------------------------------
