@@ -27,7 +27,6 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@justeat/f-copy-assets": "^0.3.0",
     "@justeat/fozzie-colour-palette": "^0.4.0",
     "@justeat/gulp-build-fozzie": "^5.5.2",
     "@kickoff/utils.scss": "^2.1.1",
