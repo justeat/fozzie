@@ -12,3 +12,18 @@ ol {
         margin-bottom: spacing();
     }
 }
+
+ul {
+    margin-left: 0;
+    list-style: none;
+
+    // Adds a coloured circle before list-items
+    li:before {
+        color: $red;
+        content: "\2022"; /* Unicode for circle character */
+        font-size: 1.8em;
+        padding-right: spacing();
+        position: relative;
+        top: 0.15em;
+    }
+}

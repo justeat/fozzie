@@ -25,6 +25,13 @@
     background-color: $white;
 }
 
+.u-bordered,
+%u-bordered {
+    border: 1px solid $color-border;
+    padding: spacing(x3);
+    border-radius: $border-radius;
+}
+
 
 //
 // Display Utilities
@@ -131,5 +138,9 @@
 
     & > li {
         margin-bottom: 0;
+
+        &:before {
+            content: none;
+        }
     }
 }
