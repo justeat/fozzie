@@ -67,9 +67,13 @@ h6 {
 // For example: h3.h1 or h3.alpha
 h1,
 .alpha {
-    @include font-size(jumbo);
+    @include font-size(jumbo, true, narrow);
     margin-top: $baseline * 2;
     margin-bottom: $baseline;
+
+    @include media('>mid') {
+        @include font-size(jumbo);
+    }
 
     &:first-child {
         margin-top: 0;
@@ -78,7 +82,11 @@ h1,
 
 h2,
 .beta {
-    @include font-size(large);
+    @include font-size(large, true, narrow);
+
+    @include media('>mid') {
+        @include font-size(large);
+    }
 }
 
 h3,

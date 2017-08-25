@@ -3,6 +3,23 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v0.10.0
+------------------------------
+*August 25, 2017*
+
+### Added
+- Custom bullets on unordered lists.
+- `u-bordered` class for adding a border around a block.
+- Added narrow view type sizes for headings
+
+
+### Changed
+- Updated line-height for jumbo homepage text.
+- Updated the `l-content` class so that it can contain a `header` and `main` that are appropriately spaced for content pages.
+- Updated packages
+
+
 v0.9.0
 ------------------------------
 *August 24, 2017*
