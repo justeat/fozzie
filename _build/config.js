@@ -4,6 +4,10 @@ const distDir = 'dist';
 
 module.exports = {
     js: {
-        srcFile: 'fozzie.js'
+        files: {
+            main: {
+                srcPath: 'fozzie.js'
+            }
+        }
     }
 };
