@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "homepage": "https://github.com/justeat/fozzie",
   "contributors": [
     "Ashley Nolan <ashley.nolan@just-eat.com> (https://ashleynolan.co.uk)",
@@ -53,7 +53,7 @@
   "scripts": {
     "prestart": "yarn",
     "start": "gulp",
-    "lint": "gulp scss:lint",
+    "lint": "gulp scss:lint --prod",
     "test": "gulp scripts:test",
     "info": "npm-scripts-info"
   },
