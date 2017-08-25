@@ -56,7 +56,6 @@ h6 {
     margin: 0;
     font-family: $font-family-headings;
     font-weight: $font-weight-headings;
-    margin-top: $baseline;
     margin-bottom: 0;
 
     small {
@@ -70,6 +69,7 @@ h1,
 .alpha {
     @include font-size(jumbo);
     margin-top: $baseline * 2;
+    margin-bottom: $baseline;
 
     &:first-child {
         margin-top: 0;
@@ -96,17 +96,14 @@ h6,
 }
 
 // Only give these headings a margin-top if they are after other elements
-* + h1,
-* + .h1,
-* + .alpha,
 * + h2,
-* + .h2,
-* + .beta,
+* + .beta {
+    margin-top: $baseline * 2;
+}
+
 * + h3,
-* + .h3,
 * + .gamma,
 * + h4,
-* + .h4,
 * + .delta {
     margin-top: $baseline;
 }
