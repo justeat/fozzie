@@ -6,7 +6,7 @@ module.exports = {
     js: {
         files: {
             main: {
-                srcFile: 'fozzie.js'
+                srcPath: 'fozzie.js'
             }
         }
     }

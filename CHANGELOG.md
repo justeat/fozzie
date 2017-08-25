@@ -4,6 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.11.0
+------------------------------
+*August 25, 2017*
+
+### Added
+- Lint task to run on travis so we can see any failures before they get published
+
+### Changed
+- Couple of small updates in line with the linting errors
+- Path for local scripts changed in line with new build config
+
+
 v0.10.0
 ------------------------------
 *August 25, 2017*
