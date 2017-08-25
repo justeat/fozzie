@@ -1,4 +1,91 @@
 /**
  * Objects > Tables
  * =================================
+ * File Index:
+ * - Table specific variables
+ * - Default table styles
  */
+
+/**
+ * Define associated Table variables
+ */
+$table-bgColor                : $color-bg--component !default; // Default background color used for all tables.
+$table-bgColor--accent        : $blue--offWhite !default; // Background color used for `.table-striped`.
+$table-border--color          : $blue--offWhite !default; // Border color for table and cell borders.
+$table-border--width          : 2px !default; // Border width for table border.
+$table-innerBorder--color     : $color-border !default;
+$table-verticalBorder--color  : $color-border--interactive !default;
+
+
+/**
+ * Customizes the `.table` component with basic values, each used across all table variations.
+ */
+$table-cell-padding           : 14px !default; // Padding for `<th>`s and `<td>`s.
+
+
+// Baseline styles
+table,
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-top: spacing(x4);
+    margin-bottom: spacing(x4);
+    border-spacing: 0;
+    background-color: $table-bgColor;
+    border: $table-border--width solid $table-border--color;
+    border-radius: $border-radius;
+
+    // Cells
+    & > thead,
+    & > tbody,
+    & > tfoot {
+        th,
+        td {
+            padding: $table-cell-padding;
+            line-height: $line-height-base;
+            vertical-align: top;
+            border-left: 1px solid $table-verticalBorder--color;
+        }
+        th {
+            text-align: left;
+            border-top: 1px solid $table-innerBorder--color;
+
+            &:first-child {
+                border-left: 1px solid $table-innerBorder--color;
+                border-radius: 4px 0 0 0;
+            }
+            &:last-child {
+                border-right: 1px solid $table-innerBorder--color;
+                border-radius: 0 4px 0 0;
+            }
+        }
+        td {
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+
+    // Bottom align for column headings
+    & > thead th,
+    & > thead td {
+        vertical-align: bottom;
+        border-bottom: 1px solid $table-innerBorder--color;
+    }
+
+    // Account for multiple tbody instances
+    > tbody + tbody {
+        border-top: 1px solid $table-innerBorder--color;
+    }
+
+    // Nesting
+    & table,
+    & .table {
+        background-color: $color-bg;
+    }
+
+    tbody :nth-child(odd) th,
+    tbody :nth-child(odd) td {
+        background-color: $table-bgColor--accent !important;
+    }
+}
