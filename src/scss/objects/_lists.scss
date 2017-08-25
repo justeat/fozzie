@@ -20,7 +20,7 @@ ul {
     // Adds a coloured circle before list-items
     li:before {
         color: $red;
-        content: "\2022"; /* Unicode for circle character */
+        content: '\2022'; /* Unicode for circle character */
         font-size: 1.8em;
         padding-right: spacing();
         position: relative;
