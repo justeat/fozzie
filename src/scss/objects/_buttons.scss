@@ -74,7 +74,7 @@ $btn-rounded-width: 38px !default;
  * 7. Fixes odd inner spacing in IE7.
  */
 
-.c-btn {
+.o-btn {
     display: inline-block;                      /* [1] */
     vertical-align: middle;                     /* [2] */
     font-family: $btn-default-font-family;      /* [3] */
@@ -138,17 +138,19 @@ $btn-rounded-width: 38px !default;
     }
 }
 
-// ==========================================================================
-// Btn Background Colour modifiers
-// ==========================================================================
+/**
+ * ==========================================================================
+ * Btn Background Colour modifiers
+ * ==========================================================================
+ */
 
 /**
- * Modifier – .c-btn--primary
+ * Modifier – .o-btn--primary
  *
  * Sets the btn colour to site primary colour
  */
 
-.c-btn--primary {
+.o-btn--primary {
     background-color: $btn-primary-bgColor;
 
     &,
@@ -174,13 +176,13 @@ $btn-rounded-width: 38px !default;
 }
 
 /**
- * Modifier – .c-btn--secondary
+ * Modifier – .o-btn--secondary
  *
  * Sets the btn colour to positive colour (i.e. Green)
  */
 
-.c-btn--secondary,
-.c-btn--tertiary {
+.o-btn--secondary,
+.o-btn--tertiary {
     background-color: $btn-secondary-bgColor;
     color: $btn-secondary-textColor;
 
@@ -196,17 +198,17 @@ $btn-rounded-width: 38px !default;
     }
 }
 
-.c-btn--tertiary {
+.o-btn--tertiary {
     background-color: $white;
 }
 
 /**
- * Modifier – .c-btn--positive
+ * Modifier – .o-btn--positive
  *
  * Sets the btn colour to positive colour (i.e. Green)
  */
 
-.c-btn--positive {
+.o-btn--positive {
     background-color: $green--light;
     color: #fff;
 
@@ -219,12 +221,12 @@ $btn-rounded-width: 38px !default;
 }
 
 /**
- * Modifier – .c-btn--negative
+ * Modifier – .o-btn--negative
  *
  * Sets the btn colour to negative colour (i.e. Red)
  */
 
-.c-btn--negative {
+.o-btn--negative {
     background-color: $red;
     color: #fff;
 
@@ -236,9 +238,11 @@ $btn-rounded-width: 38px !default;
     }
 }
 
-// ==========================================================================
-// Btn Layout Modifiers
-// ==========================================================================
+/**
+ * ==========================================================================
+ * Btn Layout Modifiers
+ * ==========================================================================
+ */
 
 /**
  * Modifier – btn-block
@@ -246,29 +250,31 @@ $btn-rounded-width: 38px !default;
  * Makes the btn full width
  */
 
-.c-btn--block {
+.o-btn--block {
     display: block;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
 
     // Vertically space out multiple block buttons
-    // same as .c-btn--block + .c-btn--block
+    // same as .o-btn--block + .o-btn--block
     & + & {
         margin-top: 10px;
     }
 }
 
-.c-btn--wide {
+.o-btn--wide {
     padding-left: $btn-wide-hozPadding;
     padding-right: $btn-wide-hozPadding;
 }
 
-// Outline Button
-// -------------------------
-// Essentially, a button, with same color bg as container, but with an outline
+/**
+ * Outline Button
+ * -------------------------
+ * Essentially, a button, with same color bg as container, but with an outline
+ */
 
-.c-btn--outline {
+.o-btn--outline {
     background-color: transparent;
     border: 1px solid $btn-outline-borderColor;
     color: $btn-outline-borderColor;
@@ -291,10 +297,13 @@ $btn-rounded-width: 38px !default;
     }
 }
 
-// Transparent Button
-// -------------------------
-// Essentially, a button, with a transparent background
-.c-btn--transparent {
+/**
+ * Transparent Button
+ * 
+ * Essentially, a button, with a transparent background
+ */
+
+ .o-btn--transparent {
     background-color: transparent;
     color: $btn-transparent-color;
     font-weight: 400;
@@ -310,12 +319,12 @@ $btn-rounded-width: 38px !default;
 
 
 
-.c-btn--small {
+.o-btn--small {
     @include font-size(base);
 }
 
 //remove uneeded styles (like colours) from a button when only an icon is on it (like a close button)
-.c-btn--icon {
+.o-btn--icon {
     @extend %u-ir;
     background-color: transparent;
     padding: 0;
@@ -328,15 +337,17 @@ $btn-rounded-width: 38px !default;
 input[type='submit'],
 input[type='reset'],
 input[type='button'] {
-    &.c-btn--block {
+    &.o-btn--block {
         width: 100%;
     }
 }
 
 
-// Disabled button
-// -------------------------
-.c-btn--disabled {
+/**
+ * Disabled button
+ */
+
+.o-btn--disabled {
     cursor: default;
 
     &,
@@ -348,8 +359,11 @@ input[type='button'] {
     }
 }
 
+/**
+ * Button group
+ */
 
-.c-btn-group {
+.o-btn-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -363,7 +377,7 @@ input[type='button'] {
         max-width: 100%;
     }
 
-    & .c-btn {
+    & .o-btn {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -398,7 +412,7 @@ input[type='button'] {
 
 
     }
-    .c-btn--outline {
+    .o-btn--outline {
         color: $btnToggle-textColor;
         border: 1px solid $btnToggle-border;
 
@@ -423,7 +437,7 @@ input[type='button'] {
             color: $btnToggle-active-text-color;
             background-color: $btn-outline-bgColor--hover;
 
-            & + .c-btn--outline {
+            & + .o-btn--outline {
                 @include media('>=mid') {
                     border-left: none;
                 }
@@ -439,14 +453,14 @@ input[type='button'] {
             }
         }
     }
-    .c-btn--wide {
+    .o-btn--wide {
         @include media('<narrow') {
             padding-left: 1.5em;
             padding-right: 1.5em;
         }
     }
 }
-    .c-btn-group--inputs {
+    .o-btn-group--inputs {
         input {
             position: absolute;
             visibility: hidden;
@@ -455,13 +469,13 @@ input[type='button'] {
 
 
 /**
- * Modifier – .c-btn--rounded
+ * Modifier – .o-btn--rounded
  *
  * Makes a rounded button
  * Example – on remove ingredients toggle
  */
 
-.c-btn--rounded {
+.o-btn--rounded {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -473,7 +487,7 @@ input[type='button'] {
     color: $btn-rounded-fillColor;
     cursor: pointer;
 
-    & + .c-btn--rounded {
+    & + .o-btn--rounded {
         margin-left: 1px;
     }
 
@@ -486,11 +500,11 @@ input[type='button'] {
 }
 
 /**
- * Modifier – .c-btn--roundedIcon
+ * Modifier – .o-btn--roundedIcon
  *
  * Makes a button with equal height and width, with rounded corners (used for icons)
  */
-.c-btn--roundedIcon {
+.o-btn--roundedIcon {
     width: $btn-icon-dimension;
     height: $btn-icon-dimension;
     border-radius: 2px;
@@ -508,24 +522,24 @@ input[type='button'] {
     & path {
         fill: $btn-roundedIcon-fillColor;
     }
-    &.c-btn--outline,
-    &.c-btn--secondary,
-    &.c-btn--tertiary {
+    &.o-btn--outline,
+    &.o-btn--secondary,
+    &.o-btn--tertiary {
          path { fill: $btn-roundedOutline-fillColor; }
     }
-    &.c-btn--outline:active path {
+    &.o-btn--outline:active path {
         fill: $white;
     }
 }
 
-.c-btn--roundedIcon--small {
+.o-btn--roundedIcon--small {
     width: $btn-icon-dimension--small;
     height: $btn-icon-dimension--small;
 }
 
 
 /**
- * Component – btnLink
+ * btnLink
  *
  * Make a button visually look like a default link
  * Useful when we semantically want a button but don’t want all the default styling
@@ -533,7 +547,7 @@ input[type='button'] {
  * Should only be applied to buttons
  */
 
-.c-btnLink {
+.o-btnLink {
     border: 0;
     background-color: transparent;
     padding: 0;
@@ -558,11 +572,11 @@ input[type='button'] {
 
 $btn-progress-height: 10% !default;
 
-.c-btn--progress {
+.o-btn--progress {
     position: relative;
 }
 
-    .c-btn--progress-complete {
+    .o-btn--progress-complete {
         animation-name: pulse_animation;
 	    animation-duration: 0.2s;
 	    transform-origin: 70% 70%;
@@ -570,7 +584,7 @@ $btn-progress-height: 10% !default;
 	    animation-timing-function: linear;
     }
 
-    .c-btn--progress-bar {
+    .o-btn--progress-bar {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -585,11 +599,11 @@ $btn-progress-height: 10% !default;
 
 
 /**
- * Component - .c-btnToggle
+ * Component - .o-btnToggle
  */
 
-.c-btnToggle-item {
-    .c-btnToggle-input {
+.o-btnToggle-item {
+    .o-btnToggle-input {
         display: none;
 
         .no-checked & {
@@ -598,19 +612,19 @@ $btn-progress-height: 10% !default;
         }
     }
 
-    &:first-child .c-btnToggle-label {
+    &:first-child .o-btnToggle-label {
         border-top-left-radius: $btn-default-borderRadius;
         border-bottom-left-radius: $btn-default-borderRadius;
     }
 
-    &:last-child .c-btnToggle-label {
+    &:last-child .o-btnToggle-label {
         border-top-right-radius: $btn-default-borderRadius;
         border-bottom-right-radius: $btn-default-borderRadius;
     }
 }
 
 
-.c-btnToggle-label {
+.o-btnToggle-label {
     background-color: $btnToggle-bg;
     width: 100%;
     height: 100%;
@@ -648,12 +662,12 @@ $btn-progress-height: 10% !default;
     }
 }
 
-    .c-btnToggle-label-secondary {
+    .o-btnToggle-label-secondary {
         line-height: 1.2em;
         padding-left: $btnToggle-default-padding;
     }
 
-    .c-btnToggle-label-text {
+    .o-btnToggle-label-text {
         max-width: 65%;
         & span {
             flex-basis: auto;
@@ -662,13 +676,13 @@ $btn-progress-height: 10% !default;
     }
 
 
-.c-btnToggle-details {
+.o-btnToggle-details {
     padding-top: (spacing() * 0.5);
     @include font-size(small);
     text-align: center;
 }
 
-.c-btnToggle-details-additional {
+.o-btnToggle-details-additional {
     padding: 0 (spacing() * 0.5);
     line-height: 1rem;
     white-space: nowrap;
