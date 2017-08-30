@@ -53,6 +53,7 @@
  *
  * Object styles should be prefixed with `.o-`
  */
+@import 'objects/buttons';
 @import 'objects/images';
 @import 'objects/links';
 @import 'objects/lists';
@@ -65,7 +66,8 @@
  *
  * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with `.c-`
  */
-@import 'components/cards.scss';
+@import 'components/cards';
+@import 'components/icons';
 
 
 // Global layout definitions & helpers

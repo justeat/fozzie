@@ -119,9 +119,9 @@ $zIndex: (
 
 // Path vars
 // ==========================================================================
-$img-path                  : '/assets/dist/img'; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
-$icon-path                 : '#{$img-path}/icons';
-$font-path                 : '/assets/dist/fonts';
+$img-path                  : 'dist/img' !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+$icon-path                 : '#{$img-path}/icons' !default;
+//$font-path                 : 'assets/dist/fonts' !default;
 
 
 // App-specific variables

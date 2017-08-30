@@ -3,6 +3,25 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.12.0
+------------------------------
+*August 30, 2017*
+
+### Added
+- Base button class `o-btn` 
+- A range of button colour and design modifiers
+- Toggle button component
+- Base icon class `c-icon`
+- Icon size modifiers
+- Tick icon classes
+- Operator icon classes (plus & minus)
+- SVG files for tick and operator icons
+- Assets manifest in package.json, specifying the icons to be copied into 
+
+### Changed
+- Updated `gulp-build-fozzie`
+- Made the scss path variables overridable
+
 v0.11.1
 ------------------------------
 *August 25, 2017*

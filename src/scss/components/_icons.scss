@@ -1,0 +1,108 @@
+/*
+   Icons
+   ========================================================================== */
+
+
+[class*='c-icon'] {
+    speak: none;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/**
+ * Base Icon Class
+ *
+ * Used when we have a standalone icon
+ */
+
+.c-icon {
+    display: block;
+}
+
+
+/**
+ * Modifiers for icon sizes
+ *
+ * 1. c-icon--large
+ * 2. c-icon--mid
+ * 3. c-icon--small
+ */
+
+.c-icon--large {
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+
+.c-icon--mid {
+    display: block;
+    width: 60px;
+    height: 50px;
+
+    @include media('>=mid') {
+        width: 70px;
+        height: 60px;
+    }
+}
+
+.c-icon--small {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: top;
+}
+
+
+.c-icon--floatLeft {
+    margin-right: spacing();
+    margin-top: 1px;
+    float: left;
+}
+
+
+/**
+ * General icons
+ */
+
+.c-icon--tick {
+    background-image: inline('#{$icon-path}/general/tick.svg');
+}
+
+.c-icon--tick--rounded {
+    margin-right: spacing() / 2;
+    width: 13px;
+    height: 23px;
+    background-image: inline('#{$icon-path}/general/tick-rounded.svg');
+}
+
+.c-icon--tick--blue,
+%c-icon--tick--blue {
+    background-image: inline('#{$icon-path}/general/tick-blue.svg');
+}
+
+
+/**
+ * Operator icons
+ */
+
+.c-icon--plus {
+    min-width: 18px;
+    height: 18px;
+    background-size: 14px;
+    background-image: inline('#{$icon-path}/operators/plus.svg');
+}
+
+.c-icon--plus--thin {
+    background-image: inline('#{$icon-path}/operators/plus--thin.svg');
+}
+
+.c-icon--minus {
+    background-size: 26px;
+    background-image: inline('#{$icon-path}/operators/minus.svg');
+}
+
+.c-icon--minus--light {
+    background-size: inherit;
+    background-image: inline('#{$icon-path}/operators/minus--light.svg');
+}

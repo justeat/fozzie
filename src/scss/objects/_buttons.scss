@@ -1,0 +1,689 @@
+/**
+ * Objects > Buttons
+ * =================================
+ */
+
+
+/**
+ * Define associated Button variables
+ */
+
+$btn-default-bgColor             : $grey--lightest !default;
+$btn-default-weight              : 700 !default;
+$btn-default-height              : 2.6 !default;
+$btn-default-font-size           : mid !default;
+$btn-default-font-family         : inherit !default;
+$btn-default-bgColor--highlight  : $grey--lighter !default;
+$btn-default-borderRadius        : 2px !default;
+$btn-default-hozPadding          : 1em !default;
+$btn-default-vertPadding         : 15px !default;
+
+$btn-primary-bgColor             : $blue !default;
+$btn-primary-bgColor--highlight  : $blue--dark !default;
+$btn-primary-bgColor--focus      : $blue--darkest !default;
+$btn-primary-textColor           : $white !default;
+
+$btn-secondary-bgColor           : $grey--lightest !default;
+$btn-secondary-bgColor--highlight: $grey--lighter !default;
+$btn-secondary-bgColor--active   : $grey--light !default;
+$btn-secondary-textColor         : $blue !default;
+
+$btn-wide-hozPadding             : 2em !default;
+
+$btn-disabled-bgColor            : $grey--lighter !default;
+
+$btn-outline-borderColor         : $blue !default;
+$btn-outline-borderColor--hover  : $blue--dark !default;
+$btn-outline-borderColor--active : $blue--lighter !default;
+$btn-outline-bgColor--hover      : $blue--offWhite !default;
+$btn-outline-textColor--hover    : $blue--dark !default;
+
+
+$btn-transparent-color           : $red !default;
+$btn-transparent-color--hover    : $grey--mid !default;
+
+$btn-roundedIcon-fillColor       : $white !default;
+$btn-roundedOutline-fillColor    : $blue !default;
+$btn-rounded-fillColor           : $blue !default;
+
+$btnToggle-textColor             : $grey--dark !default;
+$btnToggle-bg                    : $grey--lightest !default;
+$btnToggle-border                : $grey--lighter !default;
+$btnToggle-active-bg             : $white !default;
+$btnToggle-active-border         : $color-secondary !default;
+$btnToggle-active-text-color     : $color-secondary !default;
+$btnToggle-default-padding       : 5px !default;
+
+
+$btn-icon-dimension: 36px !default;
+$btn-icon-dimension--small: 20px !default;
+$btn-rounded-width: 38px !default;
+
+
+/**
+ * Base button styles – Based on csswizardry.com/beautons
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles.
+ * 4. Force all elements using beautons to appear clickable.
+ * 5. Normalise box model styles.
+ * 6. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 7. Fixes odd inner spacing in IE7.
+ */
+
+.o-btn {
+    display: inline-block;                      /* [1] */
+    vertical-align: middle;                     /* [2] */
+    font-family: $btn-default-font-family;      /* [3] */
+    @include font-size($btn-default-font-size); /* [3] */
+    cursor: pointer;                            /* [4] */
+    margin: 0;                                  /* [5] */
+    padding: $btn-default-vertPadding $btn-default-hozPadding; /* [5, 6] */
+    overflow: visible;                          /* [7] */
+    text-align: center;
+    font-weight: $btn-default-weight;
+    line-height: 1;
+
+    // You may want to change this
+    background-color: $btn-default-bgColor;
+    border-radius: $btn-default-borderRadius;
+    border: 1px solid transparent;
+    user-select: none;
+
+    color: $grey--dark;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $btn-default-bgColor--highlight;
+        outline: none; // no need as already has a focus/active state
+    }
+
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        text-decoration: none;
+    }
+
+    // Disabled state
+    &.disabled,
+    &[disabled] {
+        cursor: default;
+
+        &,
+        &:hover {
+            background-color: $btn-disabled-bgColor;
+        }
+    }
+
+    p + & {
+        margin-top: spacing(x2);
+    }
+
+    & .note {
+        display: none;
+
+        @include media('>=mid') {
+            display: block;
+        }
+    }
+    &[type='submit'] {
+        margin-top: spacing(x2);
+    }
+}
+
+/**
+ * ==========================================================================
+ * Btn Background Colour modifiers
+ * ==========================================================================
+ */
+
+/**
+ * Modifier – .o-btn--primary
+ *
+ * Sets the btn colour to site primary colour
+ */
+
+.o-btn--primary {
+    background-color: $btn-primary-bgColor;
+
+    &,
+    &:link,
+    &:visited {
+        color: $btn-primary-textColor;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $btn-primary-textColor;
+    }
+
+    &:hover {
+        background-color: $btn-primary-bgColor--highlight;
+    }
+
+    &:active,
+    &:focus {
+        background-color: $btn-primary-bgColor--focus;
+    }
+}
+
+/**
+ * Modifier – .o-btn--secondary
+ *
+ * Sets the btn colour to positive colour (i.e. Green)
+ */
+
+.o-btn--secondary,
+.o-btn--tertiary {
+    background-color: $btn-secondary-bgColor;
+    color: $btn-secondary-textColor;
+
+    &:hover {
+        background-color: $btn-secondary-bgColor--highlight;
+        color: $btn-secondary-textColor;
+    }
+
+    &:active,
+    &:focus {
+        background-color: $btn-secondary-bgColor--active;
+        outline: none;
+    }
+}
+
+.o-btn--tertiary {
+    background-color: $white;
+}
+
+/**
+ * Modifier – .o-btn--positive
+ *
+ * Sets the btn colour to positive colour (i.e. Green)
+ */
+
+.o-btn--positive {
+    background-color: $green--light;
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $green;
+        color: #fff;
+    }
+}
+
+/**
+ * Modifier – .o-btn--negative
+ *
+ * Sets the btn colour to negative colour (i.e. Red)
+ */
+
+.o-btn--negative {
+    background-color: $red;
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken($red, 10);
+        color: #fff;
+    }
+}
+
+/**
+ * ==========================================================================
+ * Btn Layout Modifiers
+ * ==========================================================================
+ */
+
+/**
+ * Modifier – btn-block
+ *
+ * Makes the btn full width
+ */
+
+.o-btn--block {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+    // Vertically space out multiple block buttons
+    // same as .o-btn--block + .o-btn--block
+    & + & {
+        margin-top: 10px;
+    }
+}
+
+.o-btn--wide {
+    padding-left: $btn-wide-hozPadding;
+    padding-right: $btn-wide-hozPadding;
+}
+
+/**
+ * Outline Button
+ * -------------------------
+ * Essentially, a button, with same color bg as container, but with an outline
+ */
+
+.o-btn--outline {
+    background-color: transparent;
+    border: 1px solid $btn-outline-borderColor;
+    color: $btn-outline-borderColor;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.is-active {
+        outline: none; // no need as already has a focus state
+        background-color: $btn-outline-bgColor--hover;
+        color: $btn-outline-textColor--hover;
+    }
+
+    &:focus,
+    &:hover {
+        border: 1px solid $btn-outline-borderColor--hover;
+    }
+    &:active {
+        border: 1px solid $btn-outline-borderColor--active;
+    }
+}
+
+/**
+ * Transparent Button
+ *
+ * Essentially, a button, with a transparent background
+ */
+
+ .o-btn--transparent {
+    background-color: transparent;
+    color: $btn-transparent-color;
+    font-weight: 400;
+
+    &:hover {
+        color: $btn-transparent-color--hover;
+    }
+
+    &.is-active {
+        color: $black;
+    }
+}
+
+
+
+.o-btn--small {
+    @include font-size(base);
+}
+
+//remove uneeded styles (like colours) from a button when only an icon is on it (like a close button)
+.o-btn--icon {
+    @extend %u-ir;
+    background-color: transparent;
+    padding: 0;
+
+    &:hover { background-color: transparent; }
+}
+
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+    &.o-btn--block {
+        width: 100%;
+    }
+}
+
+
+/**
+ * Disabled button
+ */
+
+.o-btn--disabled {
+    cursor: default;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $btn-disabled-bgColor;
+        color: inherit;
+    }
+}
+
+/**
+ * Button group
+ */
+
+.o-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+
+    @include media('>=narrow') {
+        max-width: 80%;
+    }
+    @include media('>=mid') {
+        max-width: 100%;
+    }
+
+    & .o-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0;
+        @include font-size(base);
+
+        @include media('<mid') {
+            flex-grow: 1;
+            margin-bottom: spacing();
+            border-radius: 0;
+        }
+
+        &:first-child {
+            @include media('>=mid') {
+                border-top-left-radius: $btn-default-borderRadius;
+                border-bottom-left-radius: $btn-default-borderRadius;
+            }
+        }
+        &:last-child {
+            @include media('>=mid') {
+                border-top-right-radius: $btn-default-borderRadius;
+                border-bottom-right-radius: $btn-default-borderRadius;
+            }
+        }
+
+        &:first-child,
+        &:last-child {
+            @include media('<mid') {
+                flex-basis: 100%;
+            }
+        }
+
+
+    }
+    .o-btn--outline {
+        color: $btnToggle-textColor;
+        border: 1px solid $btnToggle-border;
+
+        @include media('>=mid') {
+            border-right: none;
+        }
+        // on mobile, only get rid of the borders between children 2, 3 & 4
+        @include media('<mid') {
+            &:nth-child(2),
+            &:nth-child(3) {
+                border-right: none;
+            }
+        }
+
+        &:hover {
+            color: $grey--darkest;
+        }
+
+        &:focus,
+        &.is-active {
+            border: 1px solid $btnToggle-active-border;
+            color: $btnToggle-active-text-color;
+            background-color: $btn-outline-bgColor--hover;
+
+            & + .o-btn--outline {
+                @include media('>=mid') {
+                    border-left: none;
+                }
+            }
+        }
+
+        &:last-child {
+            border-right: 1px solid $btnToggle-border;
+
+            &:focus,
+            &.is-active {
+                border-right: 1px solid $btnToggle-active-border;
+            }
+        }
+    }
+    .o-btn--wide {
+        @include media('<narrow') {
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+    }
+}
+    .o-btn-group--inputs {
+        input {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+
+/**
+ * Modifier – .o-btn--rounded
+ *
+ * Makes a rounded button
+ * Example – on remove ingredients toggle
+ */
+
+.o-btn--rounded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $btn-rounded-width;
+    height: 20px;
+    border-radius: 2px;
+    padding: 0;
+    text-align: center;
+    color: $btn-rounded-fillColor;
+    cursor: pointer;
+
+    & + .o-btn--rounded {
+        margin-left: 1px;
+    }
+
+    & svg {
+        width: 100%;
+    }
+        & path {
+            fill: $btn-rounded-fillColor;
+        }
+}
+
+/**
+ * Modifier – .o-btn--roundedIcon
+ *
+ * Makes a button with equal height and width, with rounded corners (used for icons)
+ */
+.o-btn--roundedIcon {
+    width: $btn-icon-dimension;
+    height: $btn-icon-dimension;
+    border-radius: 2px;
+    padding: 0;
+
+    text-align: center;
+    @include font-size(large);
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+
+    & > span {
+        display: inline-block;
+    }
+    & path {
+        fill: $btn-roundedIcon-fillColor;
+    }
+    &.o-btn--outline,
+    &.o-btn--secondary,
+    &.o-btn--tertiary {
+         path { fill: $btn-roundedOutline-fillColor; }
+    }
+    &.o-btn--outline:active path {
+        fill: $white;
+    }
+}
+
+.o-btn--roundedIcon--small {
+    width: $btn-icon-dimension--small;
+    height: $btn-icon-dimension--small;
+}
+
+
+/**
+ * btnLink
+ *
+ * Make a button visually look like a default link
+ * Useful when we semantically want a button but don’t want all the default styling
+ *
+ * Should only be applied to buttons
+ */
+
+.o-btnLink {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    color: $color-link-default;
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover {
+        color: $color-link-hover;
+    }
+    &:active,
+    &:focus {
+        color: $color-link-active;
+    }
+}
+
+
+/**
+ * Modifier – Progress button
+ */
+
+$btn-progress-height: 10% !default;
+
+.o-btn--progress {
+    position: relative;
+}
+
+    .o-btn--progress-complete {
+        animation-name: pulse_animation;
+	    animation-duration: 0.2s;
+	    transform-origin: 70% 70%;
+	    animation-iteration-count: 1;
+	    animation-timing-function: linear;
+    }
+
+    .o-btn--progress-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        background-color: $btn-primary-bgColor;
+        border-radius: $btn-default-borderRadius;
+        transition: width 0.5s, visibility 0s;
+        width: 0;
+        opacity: 0.65;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=65)'; /* IE 8 */
+    }
+
+
+/**
+ * Component - .o-btnToggle
+ */
+
+.o-btnToggle-item {
+    .o-btnToggle-input {
+        display: none;
+
+        .no-checked & {
+            display: block;
+            float: left;
+        }
+    }
+
+    &:first-child .o-btnToggle-label {
+        border-top-left-radius: $btn-default-borderRadius;
+        border-bottom-left-radius: $btn-default-borderRadius;
+    }
+
+    &:last-child .o-btnToggle-label {
+        border-top-right-radius: $btn-default-borderRadius;
+        border-bottom-right-radius: $btn-default-borderRadius;
+    }
+}
+
+
+.o-btnToggle-label {
+    background-color: $btnToggle-bg;
+    width: 100%;
+    height: 100%;
+    padding: $btn-default-vertPadding * 0.25 $btn-default-vertPadding * 0.25;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid $btnToggle-bg;
+    font-weight: 300;
+    color: $blue;
+
+    &:hover {
+        font-weight: 500;
+    }
+
+    input:checked + & {
+        background-color: $btnToggle-active-bg;
+        font-weight: 500;
+
+        &:before {
+            content: '';
+            @extend %c-icon--tick--blue;
+            width: 16px;
+            height: 11px;
+            background-size: 16px 11px;
+            margin-right: 4px;
+            display: inline-block; // needed for IE
+        }
+    }
+
+    .no-checked & {
+        background-color: inherit;
+        color: $black;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+    .o-btnToggle-label-secondary {
+        line-height: 1.2em;
+        padding-left: $btnToggle-default-padding;
+    }
+
+    .o-btnToggle-label-text {
+        max-width: 65%;
+        & span {
+            flex-basis: auto;
+            display: inline-flex;
+        }
+    }
+
+
+.o-btnToggle-details {
+    padding-top: (spacing() * 0.5);
+    @include font-size(small);
+    text-align: center;
+}
+
+.o-btnToggle-details-additional {
+    padding: 0 (spacing() * 0.5);
+    line-height: 1rem;
+    white-space: nowrap;
+}
