@@ -3,6 +3,42 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.11.1
+------------------------------
+*August 25, 2017*
+
+### Changed
+- Production flag added to lint task
+
+
+v0.11.0
+------------------------------
+*August 25, 2017*
+
+### Added
+- Lint task to run on travis so we can see any failures before they get published
+
+### Changed
+- Couple of small updates in line with the linting errors
+- Path for local scripts changed in line with new build config
+
+
+v0.10.0
+------------------------------
+*August 25, 2017*
+
+### Added
+- Custom bullets on unordered lists.
+- `u-bordered` class for adding a border around a block.
+- Added narrow view type sizes for headings
+
+
+### Changed
+- Updated line-height for jumbo homepage text.
+- Updated the `l-content` class so that it can contain a `header` and `main` that are appropriately spaced for content pages.
+- Updated packages
+
+
 v0.9.0
 ------------------------------
 *August 24, 2017*

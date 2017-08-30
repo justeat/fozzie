@@ -29,8 +29,38 @@ body {
 }
 
 /**
- * Modifier for page containers that contain solely content (such as T&cs and Privacy pages)
+ * Layout class for containers that contain content (such as T&cs and Privacy pages)
  */
-.l-container--content {
-    padding-top: spacing(x4);
+.l-content {
+    padding-top: spacing(x2);
+
+    @include media('>mid') {
+        padding-top: spacing(x4);
+    }
 }
+    .l-content-header {
+        margin: 0 0 spacing(x2);
+
+        @include media('>mid') {
+            margin: spacing(x2) 0 spacing(x4);
+        }
+
+        > h1 {
+            @include font-size(jumbo--scaleUp, true, narrow);
+
+            @include media('>mid') {
+                @include font-size(jumbo--scaleUp);
+            }
+        }
+    }
+        .l-content-header--centred {
+            text-align: center;
+        }
+        .l-content-header--highlight {
+            color: $color-headings--highlight;
+        }
+
+    .l-content-main {
+        @extend %u-bordered;
+    }
+
