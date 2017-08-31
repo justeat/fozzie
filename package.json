@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "homepage": "https://github.com/justeat/fozzie",
   "contributors": [
     "Ashley Nolan <ashley.nolan@just-eat.com> (https://ashleynolan.co.uk)",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@justeat/fozzie-colour-palette": "^0.6.0",
-    "@justeat/gulp-build-fozzie": "^5.5.2",
+    "@justeat/gulp-build-fozzie": "^5.5.3",
     "@kickoff/utils.scss": "^2.1.1",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
@@ -75,8 +75,11 @@
       "src/js"
     ]
   },
+  "files": [
+    "src"
+  ],
   "assets": {
-    "root": "dist/",
+    "root": "src/",
     "glob": "img/**/*.svg"
   }
 }
