@@ -1,6 +1,7 @@
 # Fozzie :bear:
 
-[![Build Status](https://travis-ci.com/justeat/fozzie.svg?token=dcwzUq7CHTHZqWbdRCbR&branch=master)](https://travis-ci.com/justeat/fozzie)
+[![npm version](https://badge.fury.io/js/%40justeat%2Ffozzie.svg)](https://badge.fury.io/js/%40justeat%2Ffozzie)
+[![Build Status](https://travis-ci.org/justeat/fozzie.svg)](https://travis-ci.org/justeat/fozzie)
 
 Base Front-End Library for Just Eat Global Platform.  Designed to be reusable across any site that want to share those base styles.
 
