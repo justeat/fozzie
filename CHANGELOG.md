@@ -8,8 +8,14 @@ v0.14.0
 ------------------------------
 *September 26, 2017*
 
+### Changed
+- Tidied up gulp setup and config.
+- Moved build packages in `devDependencies`.
+
 ### Removed
 - Removed icons — they now live in the [`f-icons`](https://github.com/justeat/f-icons) module.
+- Removed `require-dir` package.
+- Removed placeholder JavaScript.
 
 
 v0.13.0
