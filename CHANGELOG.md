@@ -3,6 +3,21 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v0.14.0
+------------------------------
+*September 26, 2017*
+
+### Changed
+- Tidied up gulp setup and config.
+- Moved build packages in `devDependencies`.
+
+### Removed
+- Removed icons — they now live in the [`f-icons`](https://github.com/justeat/f-icons) module.
+- Removed `require-dir` package.
+- Removed placeholder JavaScript.
+
+
 v0.13.0
 ------------------------------
 *August 31, 2017*
@@ -10,6 +25,7 @@ v0.13.0
 ### Changed
 - Publish only `src/` to npm.
 - Specify icons as contained in `src/` rather than `dist/`
+
 
 v0.12.0
 ------------------------------
@@ -29,6 +45,7 @@ v0.12.0
 ### Changed
 - Updated `gulp-build-fozzie`
 - Made the scss path variables overridable
+
 
 v0.11.1
 ------------------------------

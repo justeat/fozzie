@@ -158,9 +158,9 @@
     vinyl-buffer "^1.0.0"
     vinyl-source-stream "^1.1.0"
 
-"@justeat/gulp-build-fozzie@^5.5.3":
-  version "5.5.3"
-  resolved "https://registry.yarnpkg.com/@justeat/gulp-build-fozzie/-/gulp-build-fozzie-5.5.3.tgz#ba67932d9abb1179452de49ba504b2c24847d8f1"
+"@justeat/gulp-build-fozzie@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@justeat/gulp-build-fozzie/-/gulp-build-fozzie-6.1.1.tgz#e801618907e0c9b35f8a469a3c7853465a720741"
   dependencies:
     "@justeat/eslint-config-fozzie" "^1.2.0"
     "@justeat/f-copy-assets" "^0.3.0"
