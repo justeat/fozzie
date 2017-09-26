@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "homepage": "https://github.com/justeat/fozzie",
   "contributors": [
     "Ashley Nolan <ashley.nolan@just-eat.com> (https://ashleynolan.co.uk)",
@@ -79,7 +79,7 @@
     "src"
   ],
   "assets": {
-    "root": "src/",
-    "glob": "img/**/*.svg"
+    "root": "src/img",
+    "glob": "**/*"
   }
 }
