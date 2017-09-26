@@ -34,7 +34,7 @@
     "normalize-scss": "^7.0.0"
   },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "^5.5.3",
+    "@justeat/gulp-build-fozzie": "^6.1.1",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "npm-scripts-info": "^0.3.6"
