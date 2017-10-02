@@ -643,14 +643,8 @@ $btn-progress-height: 10% !default;
         background-color: $btnToggle-active-bg;
         font-weight: 500;
 
-        &:before {
-            content: '';
-            @extend %c-icon--tick--blue;
-            width: 16px;
-            height: 11px;
-            background-size: 16px 11px;
-            margin-right: 4px;
-            display: inline-block; // needed for IE
+        .c-icon {
+            display: block;
         }
     }
 
@@ -659,6 +653,10 @@ $btn-progress-height: 10% !default;
         color: $black;
         padding-top: 0;
         padding-bottom: 0;
+    }
+
+    .c-icon {
+        display: none;
     }
 }
 
