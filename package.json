@@ -53,14 +53,14 @@
     "exports": false
   },
   "scripts": {
-    "prestart": "yarn",
+    "prepare": "yarn run lint",
     "start": "gulp",
     "lint": "gulp scss:lint --prod",
-    "test": "gulp scripts:test",
     "info": "npm-scripts-info"
   },
   "scripts-info": {
     "start": "Start the default gulp task",
+    "lint": "Lint the SCSS files",
     "test": "Run the JavaScript unit tests"
   },
   "stylelint": {
