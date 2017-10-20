@@ -32,9 +32,9 @@
     glob "^7.1.2"
     mkdirp "^0.5.1"
 
-"@justeat/fozzie-colour-palette@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-0.7.0.tgz#c05d85f4bc9602db7f322191871ad52119652c53"
+"@justeat/fozzie-colour-palette@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-0.8.0.tgz#76471f1ea0357ac8515620433b0dd06c90815b26"
 
 "@justeat/gulp-build-fozzie@^6.3.0":
   version "6.3.0"
