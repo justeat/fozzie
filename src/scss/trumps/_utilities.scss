@@ -144,3 +144,13 @@
         }
     }
 }
+
+//
+// Helper classes for focus accessibility
+// =================================================================================
+
+/* Custom outline styling for elements that have a focus state */
+%u-elementFocus,
+.u-elementFocus {
+    outline: 3px auto $color-focus-outline;
+}

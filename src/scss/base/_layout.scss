@@ -7,6 +7,13 @@ body {
     background-color: $color-bg;
 }
 
+/*
+* By default we want to give focus styling to all elements that are focusable.
+*/
+:focus {
+    @extend %u-elementFocus;
+}
+
 /**
  * Default layout container
  */
