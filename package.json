@@ -30,7 +30,7 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@justeat/fozzie-colour-palette": "^0.8.0",
+    "@justeat/fozzie-colour-palette": "^0.9.0",
     "@kickoff/utils.scss": "^2.1.1",
     "include-media": "^1.4.9",
     "kickoff-grid.css": "^1.1.2",

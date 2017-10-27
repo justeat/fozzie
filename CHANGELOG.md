@@ -4,6 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.18.0
+------------------------------
+*October 24, 2017*
+
+### Added
+- `truncate` mixin is added.
+
+### Changed
+- `fozzie-colour-palette` version bumped to 0.9.0.
+- Changed `$btn-default-font-family` to 'Ubuntu'
+
+
 v0.17.1
 ------------------------------
 *October 24, 2017*
