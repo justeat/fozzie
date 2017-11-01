@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Utilities
  * ===================================
  * Non-semantic helper classes
@@ -86,6 +86,9 @@
     white-space : nowrap;
 }
 
+.u-uppercase {
+    text-transform: uppercase;
+}
 
 //
 // Image Replacement Techniques
