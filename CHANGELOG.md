@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.19.0
+  ------------------------------
+ *November 6, 2017*
+ 
+ ### Added
+ - `c-alert` component is added.
+ - `alert-variant` mixin is added.
+
+
 v0.18.3
   ------------------------------
  *November 3, 2017*
