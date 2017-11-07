@@ -1,8 +1,7 @@
 // ==========================================================================
 // Typography mixins
 // ==========================================================================
-// REM
-// @include rem(margin, $font-size-base);
+
 @mixin rem($property, $sizeValue: $font-size-base) {
     $unitlessSizeValue: ko-strip-units($sizeValue);
     $remValue: ($unitlessSizeValue / $font-size-base);
@@ -10,10 +9,14 @@
     #{$property}: $remValue + rem;
 }
 
-@mixin font-size($key: 'base', $line-height: true, $scale: 'default') {
+@mixin em($property, $sizeValue: $font-size-base) {
+    #{$property}: (ko-strip-units($sizeValue) / $font-size-base) + em;
+}
+
+@mixin font-size($key: 'base', $line-height: true, $scale: 'default', $rem: true) {
     // if the $key passed in is actually just a font-size, then output it (may want to instead force a sass error saying to use the type map?)
     @if type-of($key) == 'number' {
-        @include rem(font-size, $key);
+        @if $rem == true { rem(font-size, $key, $rem) } @else { em(font-size, $key, $rem) }
     }
     @elseif map-has-key($type, $key) { // else try and find the value in our type map
         $key-map: map-get($type, $key);
@@ -23,7 +26,7 @@
         // both font-size and line-height
         @if type-of($font-list) == 'list' {
             $font-size: nth($font-list, 1);
-            @include rem(font-size, $font-size);
+            @if $rem == true { rem(font-size, $font-size, $rem) } @else { em(font-size, $font-size, $rem) }
 
             @if (length($font-list) > 1 and $line-height == true) {
                 $line-height: nth($font-list, 2);
@@ -31,7 +34,7 @@
             }
         }
         @else {
-            @include rem(font-size, $font-list);
+            @if $rem == true { rem(font-size, $font-list, $rem) } @else { em(font-size, $font-list, $rem) }
         }
     }
     @else {
