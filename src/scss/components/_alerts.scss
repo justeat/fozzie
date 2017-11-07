@@ -1,0 +1,35 @@
+﻿/**
+ * Alerts
+ * =================================
+ * Messages that appear on the screen to highlight a state (usually with associated text)
+ * Example usage – Most form pages
+ *
+ */
+
+$alert-border-radius: 2px;
+
+// Base styles
+// -------------------------
+
+.c-alert {
+    padding: spacing();
+    margin-top: spacing(x2);
+    border: 1px solid transparent;
+    border-radius: $alert-border-radius;
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.c-alert--success {
+    @include alert-variant($color-bg--accept, $color-text--success);
+}
+
+.c-alert--warning {
+    @include alert-variant($color-bg--notification, $color-text--warning);
+}
+
+.c-alert--danger {
+    @include alert-variant($color-bg--error, $color-text--danger);
+}

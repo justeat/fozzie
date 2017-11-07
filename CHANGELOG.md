@@ -11,6 +11,15 @@ v0.18.4
  - `u-elementFocus--boxShadow` utility class is added.
 
 
+v0.19.0
+  ------------------------------
+ *November 6, 2017*
+ 
+ ### Added
+ - `c-alert` component is added.
+ - `alert-variant` mixin is added.
+
+
 v0.18.3
   ------------------------------
  *November 3, 2017*
