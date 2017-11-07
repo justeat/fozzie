@@ -160,3 +160,10 @@
 .u-elementFocus {
     outline: 2px solid $color-focus-outline;
 }
+
+/* Custom visual outline emulation for better appearance on elements with rounded corners */
+%u-elementFocus--boxShadow,
+.u-elementFocus--boxShadow {
+  outline: none;
+  box-shadow: 0 0 0 2px $color-focus-outline;
+}
