@@ -3,38 +3,43 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-v0.18.4
+v0.20.0
   ------------------------------
- *November 6, 2017*
- 
- ### Added
- - `u-elementFocus--boxShadow` utility class is added.
+ *November 8, 2017*
 
+ ### Added
+ - `relativeToParent` parameter to the `font-size` mixin to allow font sizes to use `em` rather than `rem`.
 
 v0.19.0
   ------------------------------
  *November 6, 2017*
- 
+
  ### Added
  - `c-alert` component is added.
  - `alert-variant` mixin is added.
 
+ v0.18.4
+   ------------------------------
+  *November 6, 2017*
+
+  ### Added
+  - `u-elementFocus--boxShadow` utility class is added.
 
 v0.18.3
   ------------------------------
  *November 3, 2017*
- 
+
  ### Added
  - `u-pointer` utility class is added.
- 
+
 
 v0.18.2
   ------------------------------
  *November 1, 2017*
- 
+
  ### Added
  - `u-uppercase` utility class is added.
- 
+
 
 v0.18.1
 ------------------------------
