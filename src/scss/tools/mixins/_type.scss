@@ -2,6 +2,8 @@
 // Typography mixins
 // ==========================================================================
 
+// REM
+// @include rem(margin, $font-size-base);
 @mixin rem($property, $sizeValue: $font-size-base) {
     $unitlessSizeValue: ko-strip-units($sizeValue);
     $remValue: ($unitlessSizeValue / $font-size-base);
@@ -9,6 +11,8 @@
     #{$property}: $remValue + rem;
 }
 
+// EM
+// @include em(margin, $font-size-base);
 @mixin em($property, $sizeValue: $font-size-base) {
     #{$property}: (ko-strip-units($sizeValue) / $font-size-base) + em;
 }
