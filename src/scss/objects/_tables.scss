@@ -84,7 +84,7 @@ table,
         background-color: $color-bg;
     }
 
-    &:not(.not-stripped) {
+    &:not(.not-striped) {
       tbody :nth-child(odd) th,
       tbody :nth-child(odd) td {
         background-color: $table-bgColor--accent;

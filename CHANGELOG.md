@@ -8,7 +8,7 @@ v0.21.0
  *November 13, 2017*
 
  ### Added
- - `.not-stripped` class to the table.
+ - `.not-striped` class to the table.
  - `.is-loading` class to the o-btn.
 
 v0.20.0
