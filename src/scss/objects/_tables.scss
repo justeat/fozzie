@@ -84,8 +84,10 @@ table,
         background-color: $color-bg;
     }
 
-    tbody :nth-child(odd) th,
-    tbody :nth-child(odd) td {
-        background-color: $table-bgColor--accent !important;
+    &:not(.not-striped) {
+      tbody :nth-child(odd) th,
+      tbody :nth-child(odd) td {
+        background-color: $table-bgColor--accent;
+      }
     }
 }
