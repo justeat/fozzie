@@ -13,7 +13,7 @@
     @if type-of($font-size) == 'number' {
         @return decimal-round(($line-height / $font-size), 2);
     }
-    @elseif map-has-key($type, $font-size) { // else try and find the value in our type map
+    @else if map-has-key($type, $font-size) { // else try and find the value in our type map
         $key-map: map-get($type, $font-size);
         $font-list: map-get($key-map, $scale);
 
@@ -26,7 +26,7 @@
     }
 }
 
-@function decimal-round ($number, $digits: 0, $mode: round) {
+@function decimal-round($number, $digits: 0, $mode: round) {
     $n: 1;
     // $number must be a number
     @if type-of($number) != number {

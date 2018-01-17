@@ -27,7 +27,7 @@
             @include rem(font-size, $key);
         }
     }
-    @elseif map-has-key($type, $key) { // else try and find the value in our type map
+    @else if map-has-key($type, $key) { // else try and find the value in our type map
         $key-map: map-get($type, $key);
         $font-list: map-get($key-map, $scale);
 

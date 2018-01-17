@@ -1,59 +1,77 @@
-﻿# Changelog
+# Changelog
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-v0.21.1
-  ------------------------------
- *November 13, 2017*
 
- ### Added
- - Missing default H1-H6 color according to palette.
+v0.22.0
+------------------------------
+*January 17, 2018*
+
+### Added
+- Danger added to fozzie to carry out PR checks via travis
+
+### Changed
+- Updated `gulp-build-fozzie` to latest version
+- Amended SCSS in-line with new Stylelint rules
+
+
+v0.21.1
+------------------------------
+*November 13, 2017*
+
+### Added
+- Missing default H1-H6 color according to palette.
+
 
 v0.21.0
-  ------------------------------
- *November 13, 2017*
+------------------------------
+*November 13, 2017*
 
- ### Added
- - `.not-striped` class to the table.
- - `.is-loading` class to the o-btn.
+### Added
+- `.not-striped` class to the table.
+- `.is-loading` class to the o-btn.
+
 
 v0.20.0
-  ------------------------------
- *November 8, 2017*
+------------------------------
+*November 8, 2017*
 
- ### Added
- - `relativeToParent` parameter to the `font-size` mixin to allow font sizes to use `em` rather than `rem`.
+### Added
+- `relativeToParent` parameter to the `font-size` mixin to allow font sizes to use `em` rather than `rem`.
+
 
 v0.19.0
-  ------------------------------
- *November 6, 2017*
+------------------------------
+*November 6, 2017*
 
- ### Added
- - `c-alert` component is added.
- - `alert-variant` mixin is added.
+### Added
+- `c-alert` component is added.
+- `alert-variant` mixin is added.
 
- v0.18.4
-   ------------------------------
-  *November 6, 2017*
 
-  ### Added
-  - `u-elementFocus--boxShadow` utility class is added.
+v0.18.4
+ ------------------------------
+*November 6, 2017*
+
+### Added
+- `u-elementFocus--boxShadow` utility class is added.
+
 
 v0.18.3
-  ------------------------------
- *November 3, 2017*
+------------------------------
+*November 3, 2017*
 
- ### Added
- - `u-pointer` utility class is added.
+### Added
+- `u-pointer` utility class is added.
 
 
 v0.18.2
-  ------------------------------
- *November 1, 2017*
+------------------------------
+*November 1, 2017*
 
- ### Added
- - `u-uppercase` utility class is added.
+### Added
+- `u-uppercase` utility class is added.
 
 
 v0.18.1
