@@ -1,4 +1,4 @@
-﻿# Include your project-specific ignores in this file
+# Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 # Find more examples at https://github.com/github/gitignore
 
@@ -22,5 +22,7 @@ nbproject
 Thumbs.db
 logs
 *.log
+.yalc
+yalc.lock
 
 dist/*

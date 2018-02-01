@@ -130,4 +130,26 @@ $icon-path                 : '#{$img-path}/icons' !default;
 
 $default-transition: all 150ms ease-in-out;
 
+
+// Environment variables
+// ==========================================================================
+// These are passed in through the gulp build task
+// If they don't exist – because we're running Fozzie through a build that hasn't defined them – this will fail silently
+
+@if global-variable-exists(env) {
+    @debug 'Build running in `#{$env}` mode';
+}
+@if global-variable-exists(isDev) {
+    @debug 'isDev is `#{$isDev}`';
+}
+@if global-variable-exists(isProd) {
+    @debug 'isProd is `#{$isProd}`';
+}
+@if global-variable-exists(server) {
+    @if $server == undefined {
+        $server: 'local';
+    }
+    @debug 'Server is set to `#{$server}`';
+}
+
 /* stylelint-enable */
