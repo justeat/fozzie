@@ -567,10 +567,12 @@ input[type='button'] {
 
     &:hover {
         color: $color-link-hover;
+        background-color: transparent;
     }
     &:active,
     &:focus {
         color: $color-link-active;
+        background-color: transparent;
     }
 }
 
