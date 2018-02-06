@@ -366,6 +366,7 @@ input[type='button'] {
 .o-btn.is-loading {
   background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon_loader_arrow.gif') 50% 50% / 20px 20px no-repeat border-box $btn-disabled-bgColor;
   color: transparent !important;
+  border-radius: 0; /* Fixes rendering bug in Chrome for Android */
 }
 
 /**
