@@ -21,10 +21,10 @@ $breadcrumb-chevron-point-right : -90deg;
 .c-breadcrumb-item {
     float: left;
     color: $grey--dark;
+}
 
-    &--home {
-        padding-left: 0;
-    }
+.c-breadcrumb-item--home {
+    padding-left: 0;
 }
 
 .c-breadcrumb-item-link {
