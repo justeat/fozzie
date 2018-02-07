@@ -11,10 +11,15 @@ ol {
     li {
         margin-bottom: spacing();
     }
+
+    ul,
+    ol {
+        margin-top: 0;
+    }
 }
 
 ul {
-    margin-left: 0;
+    margin-left: 1.5rem;
     list-style: none;
 
     // Adds a coloured circle before list-items
@@ -25,5 +30,6 @@ ul {
         padding-right: spacing();
         position: relative;
         top: 0.15em;
+        margin-left: -1.5rem;
     }
 }

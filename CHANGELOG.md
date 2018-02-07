@@ -3,6 +3,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v0.26.0
+------------------------------
+*February 7, 2018*
+
+### Fixed
+- List styling.  Indentation when text wrapped onto second line is now consistent and margin-top on nested lists removed (as not needed).
+
+
 v0.25.1
 ------------------------------
 *February 6, 2018*
@@ -10,12 +19,14 @@ v0.25.1
 ### Fixed
 - `.o-btn.is-loading` so the loading image renders correctly in Chrome for Android
 
+
 v0.25.0
 ------------------------------
 *February 6, 2018*
 
 ### Added
 - Breadcrumb site navigation component
+
 
 v0.24.0
 ------------------------------
