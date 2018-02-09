@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.27.0
+------------------------------
+*February 9, 2018*
+
+### Added
+- Layout classes - A class for inlining elements side by side and a divider class for vertically separating two elements with a border.
+
 
 v0.26.0
 ------------------------------
