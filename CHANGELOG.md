@@ -5,6 +5,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.27.0
 ------------------------------
+*February 14, 2018*
+
+### Fixed
+- Inline svg for breadcrumbs breaking build. Now uses separate svg icon.
+
+
+v0.27.0
+------------------------------
 *February 9, 2018*
 
 ### Added
