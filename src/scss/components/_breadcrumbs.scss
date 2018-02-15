@@ -7,11 +7,6 @@
 
 $breadcrumb-font-weight : $font-weight-bold !default;
 
-//pixel size of the breadcrumb chevron
-$breadcrumb-chevron-height : 6px;
-$breadcrumb-chevron-width : 10px;
-$breadcrumb-chevron-point-right : -90deg;
-
 .c-breadcrumb {
     width: 100%;
     @include font-size(mid, false);
@@ -32,23 +27,12 @@ $breadcrumb-chevron-point-right : -90deg;
     color: $grey--darkest;
     font-weight: $breadcrumb-font-weight;
 
-    //positioning for rotated chevron in :after
-    position: relative;
-    margin-right: $breadcrumb-chevron-height * 4;
-
-    &:after {
-        content: ' ';
-        position: absolute;
-        top: 50%;
-        right: -$breadcrumb-chevron-height * 3;
-        width: $breadcrumb-chevron-width;
-        height: $breadcrumb-chevron-height;
-        background: inline('#{$icon-path}/arrows/chevron.svg') no-repeat;
-        transform: translateY(-2px) rotate($breadcrumb-chevron-point-right); // -2px is an aesthetic alignment for the chevron icon  
-    }
-
     &:hover {
         text-decoration: underline;
         color: $grey--dark;
     }
+}
+
+.c-breadcrumb-item-icon {
+    margin: 0 spacing(base);
 }
