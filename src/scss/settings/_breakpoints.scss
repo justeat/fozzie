@@ -1,0 +1,16 @@
+@function populate-breakpoints() {
+
+    $breakpointString: '';
+    $breakpointsPx: ko-map-to-px($breakpoints, 16);
+
+    @each $name, $value in $breakpointsPx {
+        $breakpointString: $breakpointString + '#{$name}:#{$value},';
+    }
+
+    @return str-slice($breakpointString, 0, str-length($breakpointString)-1);
+}
+
+.c-screen-sizer {
+    display: none;
+    content: populate-breakpoints();
+}
