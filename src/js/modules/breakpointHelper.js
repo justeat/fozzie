@@ -1,17 +1,26 @@
 /**
  * @overview Breakpoint handler
- * 
+ *
  * @module breakpointHelper
  */
 
-export const getBreakpoints = function () {
-    $("body").append('<div class="c-screen-sizer"></div>');
-    var breakpoints = $(".c-screen-sizer").css("content").split(",");
-    var output = {}
+export const getBreakpoints = () => {
+    const output = {};
 
-    breakpoints.forEach(() => {
-        let bp = breakpoints[i].split(':');
-        output.append(`${bp[0]} : ${bp[1]}`);
+    const screenSizer = document.createElement('div');
+    screenSizer.classList.add('c-screen-sizer');
+
+    document.body.appendChild(screenSizer);
+
+    const breakpoints = window.getComputedStyle(document.querySelector('.c-screen-sizer'))
+        .getPropertyValue('content')
+        .replace(/"/g, '')
+        .replace(/'/g, '')
+        .split(',');
+
+    breakpoints.forEach(breakpoint => {
+        const [breakpointName, breakpointValue] = breakpoint.split(':');
+        output[breakpointName] = breakpointValue;
     });
 
     return output;

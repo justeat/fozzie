@@ -3,6 +3,21 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v0.29.0
+------------------------------
+*February 19, 2018*
+
+### Removed
+- `plugins`, `env` and most of the `rules` from `.eslintrc` to fix some errors encountered when running gulp.
+
+### Added
+- `breakpointHelper.js` to handle CSS breakpoints.
+- `index.js` as the module entrypoint.
+- JS unit tests.
+- Dependencies on `f-dom` and `js-test-buddy`.
+
+
 v0.28.0
 ------------------------------
 *February 14, 2018*
