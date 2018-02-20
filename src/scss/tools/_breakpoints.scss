@@ -1,7 +1,7 @@
 @function populate-breakpoints() {
 
     $breakpointString: '';
-    $breakpointsPx: ko-map-to-px($breakpoints, 16);
+    $breakpointsPx: map-to-px($breakpoints, 16);
 
     @each $name, $value in $breakpointsPx {
         $breakpointString: $breakpointString + '#{$name}:#{$value},';

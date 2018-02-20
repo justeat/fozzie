@@ -1,5 +1,5 @@
 import TestUtils from 'js-test-buddy';
-import { getBreakpoints, currentScreenWidth } from '../';
+import { getBreakpoints, getCurrentScreenWidth } from '../';
 
 describe('getBreakpoints', () => {
 
@@ -7,7 +7,6 @@ describe('getBreakpoints', () => {
         TestUtils.setBodyHtml(`
         <style>
             .c-screen-sizer {
-                display: none;
                 content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
             }
         </style>
@@ -22,12 +21,12 @@ describe('getBreakpoints', () => {
         expect(typeof breakpoints).toBe('object');
     });
 
-    it('should return multiple breakpoints', () => {
+    it('should return four breakpoints', () => {
         // Act
         const breakpoints = getBreakpoints();
 
         // Assert
-        expect(Object.entries(breakpoints).length > 1);
+        expect(Object.entries(breakpoints).length === 4);
     });
 
     it('should return breakpoints with expected names', () => {
@@ -41,26 +40,15 @@ describe('getBreakpoints', () => {
         expect(breakpoints.huge).not.toBeUndefined();
     });
 
-    it('should return breakpoints in pixels', () => {
+    it('should return breakpoints with expected values in pixels', () => {
         // Act
         const breakpoints = getBreakpoints();
 
         // Assert
-        expect(breakpoints.narrow.slice(-2)).toBe('px');
-        expect(breakpoints.mid.slice(-2)).toBe('px');
-        expect(breakpoints.wide.slice(-2)).toBe('px');
-        expect(breakpoints.huge.slice(-2)).toBe('px');
-    });
-
-    it('should return breakpoints with expected values', () => {
-        // Act
-        const breakpoints = getBreakpoints();
-
-        // Assert
-        expect(breakpoints.narrow.slice(0, -2)).toBe('414');
-        expect(breakpoints.mid.slice(0, -2)).toBe('768');
-        expect(breakpoints.wide.slice(0, -2)).toBe('1025');
-        expect(breakpoints.huge.slice(0, -2)).toBe('1280');
+        expect(breakpoints.narrow).toBe('414px');
+        expect(breakpoints.mid).toBe('768px');
+        expect(breakpoints.wide).toBe('1025px');
+        expect(breakpoints.huge).toBe('1280px');
     });
 
 });
@@ -72,14 +60,13 @@ describe('currentScreenWidth', () => {
         TestUtils.setBodyHtml(`
         <style>
             .c-screen-sizer {
-                display: none;
                 content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
             }
         </style>
         `);
 
         // Act
-        const width = currentScreenWidth();
+        const width = getCurrentScreenWidth();
 
         // Assert
         expect(typeof width).toBe('string');
@@ -90,13 +77,13 @@ describe('currentScreenWidth', () => {
         TestUtils.setBodyHtml(`
         <style>
             .c-screen-sizer {
-                display: none;
+                
             }
         </style>
         `);
 
         // Act
-        const width = currentScreenWidth();
+        const width = getCurrentScreenWidth();
 
         // Assert
         expect(width).toBe(false);
