@@ -8,7 +8,7 @@ describe('getBreakpoints', () => {
         <style>
             .c-screen-sizer {
                 display: none;
-                content: 'small:414px,medium:768px,large:1025px,xlarge:1280px';
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
             }
         </style>
         `);
@@ -35,10 +35,10 @@ describe('getBreakpoints', () => {
         const breakpoints = getBreakpoints();
 
         // Assert
-        expect(breakpoints.small).not.toBeUndefined();
-        expect(breakpoints.medium).not.toBeUndefined();
-        expect(breakpoints.large).not.toBeUndefined();
-        expect(breakpoints.xlarge).not.toBeUndefined();
+        expect(breakpoints.narrow).not.toBeUndefined();
+        expect(breakpoints.mid).not.toBeUndefined();
+        expect(breakpoints.wide).not.toBeUndefined();
+        expect(breakpoints.huge).not.toBeUndefined();
     });
 
     it('should return breakpoints in pixels', () => {
@@ -46,10 +46,10 @@ describe('getBreakpoints', () => {
         const breakpoints = getBreakpoints();
 
         // Assert
-        expect(breakpoints.small.slice(-2)).toBe('px');
-        expect(breakpoints.medium.slice(-2)).toBe('px');
-        expect(breakpoints.large.slice(-2)).toBe('px');
-        expect(breakpoints.xlarge.slice(-2)).toBe('px');
+        expect(breakpoints.narrow.slice(-2)).toBe('px');
+        expect(breakpoints.mid.slice(-2)).toBe('px');
+        expect(breakpoints.wide.slice(-2)).toBe('px');
+        expect(breakpoints.huge.slice(-2)).toBe('px');
     });
 
     it('should return breakpoints with expected values', () => {
@@ -57,10 +57,10 @@ describe('getBreakpoints', () => {
         const breakpoints = getBreakpoints();
 
         // Assert
-        expect(breakpoints.small.slice(0, -2)).toBe('414');
-        expect(breakpoints.medium.slice(0, -2)).toBe('768');
-        expect(breakpoints.large.slice(0, -2)).toBe('1025');
-        expect(breakpoints.xlarge.slice(0, -2)).toBe('1280');
+        expect(breakpoints.narrow.slice(0, -2)).toBe('414');
+        expect(breakpoints.mid.slice(0, -2)).toBe('768');
+        expect(breakpoints.wide.slice(0, -2)).toBe('1025');
+        expect(breakpoints.huge.slice(0, -2)).toBe('1280');
     });
 
 });
@@ -73,7 +73,7 @@ describe('currentScreenWidth', () => {
         <style>
             .c-screen-sizer {
                 display: none;
-                content: 'small:414px,medium:768px,large:1025px,xlarge:1280px';
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
             }
         </style>
         `);

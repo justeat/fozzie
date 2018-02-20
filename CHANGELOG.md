@@ -16,7 +16,7 @@ v0.29.0
 - `index.js` as the module entrypoint.
 - JS unit tests.
 - Dependencies on `f-dom` and `js-test-buddy`.
-- `currentScreenWidth()` which returns `'small'`, `'medium'`, `'large'`, `'xlarge'`, or `false` if no breakpoints are defined.
+- `currentScreenWidth()` which returns `'narrow'`, `'mid'`, `'wide'`, `'huge'`, or `false` if no breakpoints are defined.
 
 
 v0.28.0
