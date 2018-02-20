@@ -4,7 +4,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-v0.29.0
+v0.30.0
 ------------------------------
 *February 20, 2018*
 
@@ -17,6 +17,14 @@ v0.29.0
 - JS unit tests.
 - Dependencies on `f-dom` and `js-test-buddy`.
 - `currentScreenWidth()` which returns `'narrow'`, `'mid'`, `'wide'`, `'huge'`, or `false` if no breakpoints are defined.
+
+
+v0.29.0
+------------------------------
+*February 16, 2018*
+
+### Changed
+- Renamed base `scss` file to `fozzie.scss`
 
 
 v0.28.0
