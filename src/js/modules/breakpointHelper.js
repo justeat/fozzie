@@ -16,8 +16,7 @@ export const getBreakpoints = () => {
     // It should have a 'content' property containing the breakpoints
     const breakpoints = window.getComputedStyle(document.querySelector('.c-screen-sizer'))
         .getPropertyValue('content')
-        .replace(/"/g, '')
-        .replace(/'/g, '')
+        .replace(/["']/g, '')
         .split(',');
         // Gives a list of breakpoints in the form ['narrow:414px', ...etc]
 

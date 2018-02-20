@@ -26,7 +26,7 @@ describe('getBreakpoints', () => {
         const breakpoints = getBreakpoints();
 
         // Assert
-        expect(Object.entries(breakpoints).length === 4);
+        expect(Object.entries(breakpoints).length).toBe(4);
     });
 
     it('should return breakpoints with expected names', () => {
@@ -34,10 +34,10 @@ describe('getBreakpoints', () => {
         const breakpoints = getBreakpoints();
 
         // Assert
-        expect(breakpoints.narrow).not.toBeUndefined();
-        expect(breakpoints.mid).not.toBeUndefined();
-        expect(breakpoints.wide).not.toBeUndefined();
-        expect(breakpoints.huge).not.toBeUndefined();
+        expect(breakpoints.narrow).toBeDefined();
+        expect(breakpoints.mid).toBeDefined();
+        expect(breakpoints.wide).toBeDefined();
+        expect(breakpoints.huge).toBeDefined();
     });
 
     it('should return breakpoints with expected values in pixels', () => {
