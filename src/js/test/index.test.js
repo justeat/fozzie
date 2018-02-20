@@ -1,5 +1,5 @@
 import TestUtils from 'js-test-buddy';
-import { getBreakpoints } from '../';
+import { getBreakpoints, currentScreenWidth } from '../';
 
 describe('getBreakpoints', () => {
 
@@ -61,6 +61,45 @@ describe('getBreakpoints', () => {
         expect(breakpoints.medium.slice(0, -2)).toBe('768');
         expect(breakpoints.large.slice(0, -2)).toBe('1025');
         expect(breakpoints.xlarge.slice(0, -2)).toBe('1280');
+    });
+
+});
+
+describe('currentScreenWidth', () => {
+
+    it('returns a string if breakpoints are defined correctly', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                display: none;
+                content: 'small:414px,medium:768px,large:1025px,xlarge:1280px';
+            }
+        </style>
+        `);
+
+        // Act
+        const width = currentScreenWidth();
+
+        // Assert
+        expect(typeof width).toBe('string');
+    });
+
+    it('returns false if no breakpoints are defined', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                display: none;
+            }
+        </style>
+        `);
+
+        // Act
+        const width = currentScreenWidth();
+
+        // Assert
+        expect(width).toBe(false);
     });
 
 });

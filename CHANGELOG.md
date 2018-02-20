@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.29.0
 ------------------------------
-*February 19, 2018*
+*February 20, 2018*
 
 ### Removed
 - `plugins`, `env` and most of the `rules` from `.eslintrc` to fix some errors encountered when running gulp.
@@ -16,6 +16,7 @@ v0.29.0
 - `index.js` as the module entrypoint.
 - JS unit tests.
 - Dependencies on `f-dom` and `js-test-buddy`.
+- `currentScreenWidth()` which returns `'small'`, `'medium'`, `'large'`, `'xlarge'`, or `false` if no breakpoints are defined.
 
 
 v0.28.0
