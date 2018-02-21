@@ -12,5 +12,4 @@ notifications:
   email: false
 
 script:
-  - yarn lint
   - yarn danger ci

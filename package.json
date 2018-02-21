@@ -59,9 +59,6 @@
   },
   "scripts": {
     "prepare": "gulp --prod",
-    "lint": "yarn run lint:css && yarn run lint:js",
-    "lint:css": "gulp scss:lint --prod",
-    "lint:js": "gulp scripts:lint --prod",
     "info": "npm-scripts-info"
   },
   "scripts-info": {
