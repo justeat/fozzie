@@ -25,13 +25,13 @@ export const getBreakpoints = () => {
         return output;
     }
 
-    breakpoints.forEach(breakpoint => {
-        const [breakpointName, breakpointValue] = breakpoint.split(':');
-        // e.g., set 'narrow' to be the property name, and '414px' to be the value
-        output[breakpointName] = breakpointValue;
-    });
-
-    return output;
+    return breakpoints.reduce((prev, current) => {
+        // `current` is of the form 'narrow:414px'
+        const [breakpointName, breakpointValue] = current.split(':');
+        prev[breakpointName] = breakpointValue; // <- the initial value is used for the first iteration
+        // The object, e.g., { 'narrow': '414px' } is returned to be used as `prev` in the next iteration
+        return prev;
+    }, output); // <- initial value
 };
 
 export const getCurrentScreenWidth = () => {

@@ -10,6 +10,7 @@ v0.30.0
 
 ### Removed
 - `plugins`, `env` and most of the `rules` from `.eslintrc` to fix some errors encountered when running gulp.
+- `yarn start` and `yarn lint` scripts. These are now part of `yarn prepare`, which runs `gulp --prod`.
 
 ### Added
 - `breakpointHelper.js` to handle CSS breakpoints.
@@ -18,6 +19,10 @@ v0.30.0
 - Dependencies on `f-dom` and `js-test-buddy`.
 - `_breakpoints.scss` to `scss/tools/` directory.
 - `getCurrentScreenWidth()` which returns `'narrow'`, `'mid'`, `'wide'`, `'huge'`, or `false` if no breakpoints are defined.
+- JS files to `dist/js` folder.
+
+### Changed
+- `yarn prepare` now runs `gulp --prod`.
 
 
 v0.29.0

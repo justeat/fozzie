@@ -3,9 +3,10 @@
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
   "version": "0.30.0",
-  "main": "dist/index.js",
+  "main": "dist/js/fozzie.js",
   "files": [
-    "src"
+    "dist/js",
+    "src/scss"
   ],
   "homepage": "https://github.com/justeat/fozzie",
   "contributors": [
@@ -57,9 +58,10 @@
     "exports": false
   },
   "scripts": {
-    "prepare": "yarn run lint",
-    "start": "gulp",
-    "lint": "gulp scss:lint --prod",
+    "prepare": "gulp --prod",
+    "lint": "yarn run lint:css && yarn run lint:js",
+    "lint:css": "gulp scss:lint --prod",
+    "lint:js": "gulp scripts:lint --prod",
     "info": "npm-scripts-info"
   },
   "scripts-info": {
