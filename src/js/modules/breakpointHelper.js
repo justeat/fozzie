@@ -41,7 +41,10 @@ export const getCurrentScreenWidth = () => {
 
     // Order the breakpoints from widest to narrowest,
     // takes the form [['narrow', '414px'], [...etc]]
-    const bps = Object.entries(breakpoints).reverse();
+    const bps = [];
+    Object.keys(breakpoints).forEach(key => {
+        bps.unshift([key, breakpoints[key]]);
+    });
 
     for (let i = 0; i < bps.length; i++) {
         // Loops through the breakpoints (in descending order)

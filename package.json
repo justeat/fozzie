@@ -44,8 +44,7 @@
     "babel-preset-env": "^1.6.1",
     "danger": "^3.0.5",
     "gulp": "^3.9.1",
-    "js-test-buddy": "^0.0.7",
-    "npm-scripts-info": "^0.3.6"
+    "js-test-buddy": "^0.0.7"
   },
   "keywords": [
     "fozzie",
@@ -60,11 +59,6 @@
   "scripts": {
     "prepare": "gulp --prod",
     "info": "npm-scripts-info"
-  },
-  "scripts-info": {
-    "start": "Start the default gulp task",
-    "lint": "Lint the SCSS files",
-    "test": "Run the JavaScript unit tests"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"

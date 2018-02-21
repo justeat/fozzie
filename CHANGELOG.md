@@ -11,6 +11,7 @@ v0.30.0
 ### Removed
 - `plugins`, `env` and most of the `rules` from `.eslintrc` to fix some errors encountered when running gulp.
 - `yarn start` and `yarn lint` scripts. These are now part of `yarn prepare`, which runs `gulp --prod`.
+- `scripts-info` section from `package.json` and `npm-scripts-info` dependency.
 
 ### Added
 - `breakpointHelper.js` to handle CSS breakpoints.

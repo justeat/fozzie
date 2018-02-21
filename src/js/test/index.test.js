@@ -26,7 +26,7 @@ describe('getBreakpoints', () => {
         const breakpoints = getBreakpoints();
 
         // Assert
-        expect(Object.entries(breakpoints).length).toBe(4);
+        expect(Object.keys(breakpoints).length).toBe(4);
     });
 
     it('should return breakpoints with expected names', () => {
