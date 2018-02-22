@@ -3,7 +3,7 @@
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
   "version": "0.30.0",
-  "main": "dist/js/fozzie.js",
+  "main": "dist/js/index.js",
   "files": [
     "dist/js",
     "src/scss"
@@ -41,7 +41,9 @@
   },
   "devDependencies": {
     "@justeat/gulp-build-fozzie": "^7.8.0",
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
     "danger": "^3.0.5",
     "gulp": "^3.9.1",
     "js-test-buddy": "^0.0.7"
@@ -57,8 +59,13 @@
     "exports": false
   },
   "scripts": {
-    "prepare": "gulp --prod",
-    "info": "npm-scripts-info"
+    "compile": "babel -d dist src",
+    "lint": "yarn run lint:css && yarn run lint:js",
+    "lint:css": "gulp scss:lint --prod",
+    "lint:js": "gulp scripts:lint --prod",
+    "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test:cover\" --kill-others-on-fail",
+    "test:cover": "gulp scripts:test:coverage",
+    "test:cover:CI": "cat coverage/lcov.info | coveralls"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"

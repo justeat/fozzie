@@ -26,3 +26,4 @@ logs
 yalc.lock
 
 dist/*
+coverage/*

@@ -52,10 +52,8 @@ export const getCurrentScreenWidth = () => {
 
         const breakpointWidth = parseInt(bps[i][1], 10); // This also strips the 'px' from the string
 
-        if (i === bps.length - 1) {
+        if (i === bps.length - 1 || currentWidth > breakpointWidth) {
             // If we've reached the last breakpoint, and there still hasn't been a match, return the smallest breakpoint
-            return bps[i][0];
-        } else if (currentWidth > breakpointWidth) {
             return bps[i][0];
         }
     }
