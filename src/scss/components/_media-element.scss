@@ -7,19 +7,16 @@
  *
  */
 
-$mediaElement-img-width: 50px !default;
-$mediaElement-img-height: 50px !default;
+$mediaElement-img-width: 50px;
 
-$mediaElement-img-width--mid: 78px !default;
-$mediaElement-img-height--mid: 78px !default;
+$mediaElement-img-width--mid: 78px;
 
-$mediaElement-img-width--wide: 67px !default;
-$mediaElement-img-height--wide: 67px !default;
+$mediaElement-img-width--wide: 67px;
 
 
 // mediaElement module
 // Usual of having an image to the left and content to the right
-.mediaElement {
+.c-mediaElement {
     display: flex; //defaults to row
     align-items: flex-start;
     width: 100%;
@@ -32,21 +29,21 @@ $mediaElement-img-height--wide: 67px !default;
 }
 
 // stacks the elements (across all viewports)
-.mediaElement--fullstack {
+.c-mediaElement--fullstack {
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 // stacks the elements (only on narrow)
-.mediaElement--stack {
+.c-mediaElement--stack {
     @include media('<mid') {
         flex-direction: column;
         align-items: center;
     }
 }
 
-    .mediaElement-img {
+    .c-mediaElement-img {
         line-height: 0;
         margin-right: 5%;
 
@@ -70,12 +67,12 @@ $mediaElement-img-height--wide: 67px !default;
         }
 
         //center the img when stacked
-        .mediaElement--fullstack & {
+        .c-mediaElement--fullstack & {
             margin-right: 0;
             flex-basis: auto;
         }
 
-        .mediaElement--stack & {
+        .c-mediaElement--stack & {
             flex-basis: auto;
 
             @include media('<mid') {
@@ -94,20 +91,20 @@ $mediaElement-img-height--wide: 67px !default;
     }
 
     //apply an outline to the mediaElement img
-    .mediaElement-img--outlined {
+    .c-mediaElement-img--outlined {
         border: solid 1px $color-border;
     }
 
-    .mediaElement-img--small {
+    .c-mediaElement-img--small {
         max-width: 70px;
         max-height: 70px;
     }
 
-    .mediaElement-content {
+    .c-mediaElement-content {
         flex-basis: 0;
         flex-grow: 1;
 
-        .mediaElement--fullstack & {
+        .c-mediaElement--fullstack & {
             flex: auto;
             margin-top: spacing(base) / 2;
 
@@ -124,11 +121,12 @@ $mediaElement-img-height--wide: 67px !default;
         }
     }
 
-    .mediaElement-text {
+    .c-mediaElement-text {
         margin-top: 0;
         @include font-size(small, false);
     }
-    .mediaElement-text--large {
+
+    .c-mediaElement-text--large {
         @include font-size(large, false);
         line-height: 1.2;
     }
