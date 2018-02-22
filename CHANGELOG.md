@@ -9,7 +9,7 @@ v0.31.0
 *February 22, 2018*
 
 ### Changed
-- Publishes to npm on tagged commit to master
+- Publishes to npm on tagged commit to master (with regex matching tags like `v0.31.0`)
 
 
 v0.30.0
