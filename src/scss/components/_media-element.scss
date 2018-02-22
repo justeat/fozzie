@@ -8,14 +8,11 @@
  */
 
 $mediaElement-img-width: 50px;
-
 $mediaElement-img-width--mid: 78px;
-
 $mediaElement-img-width--wide: 67px;
 
-
 // mediaElement module
-// Usual of having an image to the left and content to the right
+// Usually consists of having an image to the left and content to the right
 .c-mediaElement {
     display: flex; //defaults to row
     align-items: flex-start;
