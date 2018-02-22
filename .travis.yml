@@ -1,8 +1,8 @@
 language: node_js
 
 node_js:
-  - "6"
-  - "8"
+- '6'
+- '8'
 
 cache: yarn
 
@@ -12,5 +12,14 @@ notifications:
   email: false
 
 script:
-  - yarn lint
-  - yarn danger ci
+- yarn lint
+- yarn danger ci
+
+deploy:
+  provider: npm
+  email: xander.marjoram@just-eat.com
+  api_key:
+    secure: bC6p1RKey2gad0nofbWEHr8BHpDeOjeeOQyRXvh01+CrrFWNT2RxferYApK0uwx9qy428X+k0k4LkAQMAMLvgEtgqzskJcWB2MqSS/sQond+0KOulovu26SHWYhfRQmTnWCdr3+7tRMbQ65jWGmozsBDn7dFVZKCefih7XOmDIJTVjweio1jNltckld9IctJB4rrmlrLoJipPkresl3lyRMv9hCP5vWwbZ/jBbLDdNFH7kYLYjbqVoSWJ6bdWQ8k2nT4wPXSMP94zWyjuM/L8P7DWMm7Vb7mDDQRa7gqOQ1aOLyQDn3ZNtz/kyYeh2VkOwqSgN2BoX31L3MHHqCl6mL/Wf80PSdg9mkiK54QSnaBVVHx84aEDYs9HJgSiwyLgHNH3gNS9zzxktccOeJwHFn5kcc4RcX+PXJYmnWZD+6BlYWG5A+j+Ev/WQy10/l4TXIWkNFVek5YEOGhMVt+NqNYzVf5brjCRZfTo3/Y8mOJip8WLzdiRMj7Q1QNQ/pc95/xYjERjkkLGa96W1ROUEAvWfvM6LnVpKJn7XfiDFrrk9h0cXPtIxnKBAunYTbp+z0K24fewR8Loq0DnfZ3hd20XYmDuztfZiNJolXYp0ajqJgF05wIskJnNTKUzAgtDjdE8zTcbjvVtPcrEDY/0ZLKlBFM5vxMMK3RCCQLj/I=
+  on:
+    repo: justeat/fozzie
+    condition: "$TRAVIS_TAG =~ ^v\d+\.\d+\.\d+$"
