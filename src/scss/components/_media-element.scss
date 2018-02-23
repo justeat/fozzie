@@ -1,0 +1,129 @@
+/**
+ * Media element
+ * ===================================
+ * Example – SERP – Restaurant logos
+ *
+ * A common pattern that sees an image followed by a block of information.
+ *
+ */
+
+$mediaElement-img-width: 50px;
+$mediaElement-img-width--mid: 78px;
+$mediaElement-img-width--wide: 67px;
+
+// mediaElement module
+// Usually consists of having an image to the left and content to the right
+.c-mediaElement {
+    display: flex; //defaults to row
+    align-items: flex-start;
+    width: 100%;
+
+    & > :not(:last-child) {
+        @include media('>=mid') {
+            margin-right: spacing(base);
+        }
+    }
+}
+
+// stacks the elements (across all viewports)
+.c-mediaElement--fullstack {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// stacks the elements (only on narrow)
+.c-mediaElement--stack {
+    @include media('<mid') {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    .c-mediaElement-img {
+        line-height: 0;
+        margin-right: 5%;
+
+        &,
+        & > img {
+            width: $mediaElement-img-width;
+
+            @include media('>narrow') {
+                width: $mediaElement-img-width--mid;
+            }
+
+            @include media('>=wide') {
+                width: $mediaElement-img-width--wide;
+            }
+        }
+
+        //make sure we cut off the corners of the image and the container
+        &,
+        & > img {
+            border-radius: 3px;
+        }
+
+        //center the img when stacked
+        .c-mediaElement--fullstack & {
+            margin-right: 0;
+            flex-basis: auto;
+        }
+
+        .c-mediaElement--stack & {
+            flex-basis: auto;
+
+            @include media('<mid') {
+                margin-right: 0;
+                flex-grow: 1;
+            }
+
+            @include media('>=mid') {
+                margin-top: spacing(base) / 4;
+            }
+
+            @include media('>=wide') {
+                margin-top: 0;
+            }
+        }
+    }
+
+    //apply an outline to the mediaElement img
+    .c-mediaElement-img--outlined {
+        border: solid 1px $color-border;
+    }
+
+    .c-mediaElement-img--small {
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    .c-mediaElement-content {
+        flex-basis: 0;
+        flex-grow: 1;
+
+        .c-mediaElement--fullstack & {
+            flex: auto;
+            margin-top: spacing(base) / 2;
+
+            @include media('<mid') {
+                max-width: 200px;
+            }
+        }
+
+        // some content uses br for content shaping – get rid of it on mobile devices
+        & br {
+            @include media('<mid') {
+                display: none;
+            }
+        }
+    }
+
+    .c-mediaElement-text {
+        margin-top: 0;
+        @include font-size(small, false);
+    }
+
+    .c-mediaElement-text--large {
+        @include font-size(large, false);
+        line-height: 1.2;
+    }

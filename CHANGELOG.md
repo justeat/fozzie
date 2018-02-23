@@ -4,9 +4,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-v0.30.0
+v0.32.0
 ------------------------------
-*February 20, 2018*
+*February 23, 2018*
 
 ### Removed
 - `plugins`, `env` and most of the `rules` from `.eslintrc` to fix some errors encountered when running gulp.
@@ -21,9 +21,27 @@ v0.30.0
 - `_breakpoints.scss` to `scss/tools/` directory.
 - `getCurrentScreenWidth()` which returns `'narrow'`, `'mid'`, `'wide'`, `'huge'`, or `false` if no breakpoints are defined.
 - JS files to `dist/js` folder.
+- `yarn compile` and `yarn test`.
 
 ### Changed
 - `yarn prepare` now runs `gulp --prod`.
+- `yarn lint` lints JS and SCSS.
+
+
+v0.31.0
+------------------------------
+*February 22, 2018*
+
+### Changed
+- *Nothing to see here...*
+
+
+v0.30.0
+------------------------------
+*February 22, 2018*
+
+### Added
+- Media Element - Image followed by a block of information.
 
 
 v0.29.0
