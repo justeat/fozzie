@@ -2,9 +2,11 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.30.0",
+  "version": "0.32.0",
+  "main": "dist/js/index.js",
   "files": [
-    "src"
+    "dist/js",
+    "src/scss"
   ],
   "homepage": "https://github.com/justeat/fozzie",
   "contributors": [
@@ -30,6 +32,7 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
+    "@justeat/f-dom": "^0.3.0",
     "@justeat/fozzie-colour-palette": "^0.9.1",
     "@kickoff/utils.scss": "^2.1.1",
     "include-media": "^1.4.9",
@@ -38,10 +41,12 @@
   },
   "devDependencies": {
     "@justeat/gulp-build-fozzie": "^7.8.0",
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
     "danger": "^3.0.5",
     "gulp": "^3.9.1",
-    "npm-scripts-info": "^0.3.6"
+    "js-test-buddy": "^0.0.7"
   },
   "keywords": [
     "fozzie",
@@ -54,15 +59,13 @@
     "exports": false
   },
   "scripts": {
-    "prepare": "yarn run lint",
-    "start": "gulp",
-    "lint": "gulp scss:lint --prod",
-    "info": "npm-scripts-info"
-  },
-  "scripts-info": {
-    "start": "Start the default gulp task",
-    "lint": "Lint the SCSS files",
-    "test": "Run the JavaScript unit tests"
+    "compile": "babel -d dist src",
+    "lint": "yarn run lint:css && yarn run lint:js",
+    "lint:css": "gulp scss:lint --prod",
+    "lint:js": "gulp scripts:lint --prod",
+    "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test:cover\" --kill-others-on-fail",
+    "test:cover": "gulp scripts:test:coverage",
+    "test:cover:CI": "cat coverage/lcov.info | coveralls"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"

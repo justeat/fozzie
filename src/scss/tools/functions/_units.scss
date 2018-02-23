@@ -57,3 +57,18 @@
         @return $number;
     }
 }
+
+@function em-to-px($emVal, $base: $font-size-base) {
+    @return ($emVal * $base) * 1px;
+  }
+
+@function map-to-px($breakpoints, $base: $font-size-base) {
+    $newBreakpoints: ();
+
+    @each $name, $emValue in $breakpoints {
+      $pxValue: em-to-px(ko-strip-units($emValue), $base);
+      $newBreakpoints: map-merge($newBreakpoints, ($name: $pxValue));
+    }
+
+    @return $newBreakpoints;
+}

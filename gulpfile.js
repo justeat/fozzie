@@ -6,7 +6,7 @@ build(gulp, {
     js: {
         files: {
             main: {
-                srcPath: 'fozzie.js'
+                distFile: 'fozzie.js'
             }
         }
     }

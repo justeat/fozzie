@@ -3,6 +3,39 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v0.32.0
+------------------------------
+*February 23, 2018*
+
+### Removed
+- `plugins`, `env` and most of the `rules` from `.eslintrc` to fix some errors encountered when running gulp.
+- `yarn start` and `yarn lint` scripts. These are now part of `yarn prepare`, which runs `gulp --prod`.
+- `scripts-info` section from `package.json` and `npm-scripts-info` dependency.
+
+### Added
+- `breakpointHelper.js` to handle CSS breakpoints.
+- `index.js` as the module entrypoint.
+- JS unit tests.
+- Dependencies on `f-dom` and `js-test-buddy`.
+- `_breakpoints.scss` to `scss/tools/` directory.
+- `getCurrentScreenWidth()` which returns `'narrow'`, `'mid'`, `'wide'`, `'huge'`, or `false` if no breakpoints are defined.
+- JS files to `dist/js` folder.
+- `yarn compile` and `yarn test`.
+
+### Changed
+- `yarn prepare` now runs `gulp --prod`.
+- `yarn lint` lints JS and SCSS.
+
+
+v0.31.0
+------------------------------
+*February 22, 2018*
+
+### Changed
+- *Nothing to see here...*
+
+
 v0.30.0
 ------------------------------
 *February 22, 2018*
@@ -17,6 +50,7 @@ v0.29.0
 
 ### Changed
 - Renamed base `scss` file to `fozzie.scss`
+
 
 v0.28.0
 ------------------------------
