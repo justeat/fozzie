@@ -15,7 +15,7 @@ $card-radius                    : 4px !default;
 
 @mixin card() {
 
-    .card {
+    .c-card {
         background-color: $card-bgColor--active;
         margin-bottom: spacing();
         padding: $card-padding;
@@ -25,11 +25,16 @@ $card-radius                    : 4px !default;
         }
     }
 
-        .card--noPad {
+        .c-card--noPad {
             padding: 0;
         }
 
-        .card--rounded {
+        .c-card--noPadVertical {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .c-card--rounded {
             border-radius: $card-radius;
         }
 
