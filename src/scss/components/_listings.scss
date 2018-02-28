@@ -59,8 +59,12 @@ $listing-borderColor: $color-border;
             margin-top: 0;
         }
 
-        .c-listing-item-divider {
-            border-left: 1px solid $listing-borderColor;
-            margin-right: spacing(x2);
-            padding-right: spacing(x2);
+        .c-listing-item-col {
+            border-right: 1px solid $listing-borderColor;
+            margin-left: spacing(x2);
+            padding-left: spacing(x2);  
+                        
+            .c-listing-item &:last-child {
+                border: 0;
+            }
         }
