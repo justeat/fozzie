@@ -8,58 +8,58 @@
 
 $listing-default-borderColor: $color-border;
 
-.c-listing{
+.c-listing {
     padding-top: 0;
     padding-bottom: 0;
 }
 
-.c-listing-item {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: spacing(x2) 0;
-    border-bottom: 1px solid $listing-default-borderColor;
+    .c-listing-item {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: spacing(x2) 0;
+        border-bottom: 1px solid $listing-default-borderColor;
 
-    .c-listing &:last-child{
-        border: 0;
-    }
-}
-
- //when the listing item has a wrapper link descendent, make sure it doesn’t underline everything (only the main title)
-.c-listing-item-link {
-    display: block;
-    text-decoration: none;
-
-    &:hover,
-    &:active,
-    &:focus {
-        color: currentColor;
-        text-decoration: none;
-    }
-
-    &:hover {
-        text-decoration: none;
-
-        & .c-listing-item-title {
-            text-decoration: underline;
-        }
-        & .o-btn--primary {
-            background-color: $btn-primary-bgColor--highlight;
+        .c-listing &:last-child {
+            border: 0;
         }
     }
-}
 
-.c-listing-item-info {
-    color: $color-text;
-    flex-wrap: nowrap;
-    margin-left: spacing(base);
-}
-.c-listing-item-text {
-    margin-top: 0;
-}
+        //when the listing item has a wrapper link descendent, make sure it doesn’t underline everything (only the main title)
+        .c-listing-item-link {
+            display: block;
+            text-decoration: none;
 
-.c-listing-item-divider {
-    border-right: 1px solid $listing-default-borderColor;
-    margin-right: spacing(x2);
-    padding-right: spacing(x2);    
-}
+            &:hover,
+            &:active,
+            &:focus {
+                color: currentColor;
+                text-decoration: none;
+            }
+
+            &:hover {
+                text-decoration: none;
+
+                & .c-listing-item-title {
+                    text-decoration: underline;
+                }
+                & .o-btn--primary {
+                    background-color: $btn-primary-bgColor--highlight;
+                }
+            }
+        }
+
+        .c-listing-item-info {
+            color: $color-text;
+            flex-wrap: nowrap;
+            margin-left: spacing(base);
+        }
+        .c-listing-item-text {
+            margin-top: 0;
+        }
+
+        .c-listing-item-divider {
+            border-left: 1px solid $listing-default-borderColor;
+            margin-right: spacing(x2);
+            padding-right: spacing(x2);
+        }
