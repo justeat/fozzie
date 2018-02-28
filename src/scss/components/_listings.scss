@@ -6,7 +6,7 @@
  *
  */
 
-$listing-default-borderColor: $color-border;
+$listing-borderColor: $color-border;
 
 .c-listing {
     padding-top: 0;
@@ -18,7 +18,7 @@ $listing-default-borderColor: $color-border;
         position: relative;
         margin: 0;
         padding: spacing(x2) 0;
-        border-bottom: 1px solid $listing-default-borderColor;
+        border-bottom: 1px solid $listing-borderColor;
 
         .c-listing &:last-child {
             border: 0;
@@ -43,7 +43,8 @@ $listing-default-borderColor: $color-border;
                 & .c-listing-item-title {
                     text-decoration: underline;
                 }
-                & .o-btn--primary {
+
+                & .c-listing-item-btn {
                     background-color: $btn-primary-bgColor--highlight;
                 }
             }
@@ -59,7 +60,7 @@ $listing-default-borderColor: $color-border;
         }
 
         .c-listing-item-divider {
-            border-left: 1px solid $listing-default-borderColor;
+            border-left: 1px solid $listing-borderColor;
             margin-right: spacing(x2);
             padding-right: spacing(x2);
         }
