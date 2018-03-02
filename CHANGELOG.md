@@ -3,6 +3,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.34.0
+------------------------------
+*March 8, 2018*
+
+### Added
+- Styling for radio buttons and checkboxes. Checkboxes having 2 styles
+-- Crosses
+-- Ticks
+
 v0.33.0
 ------------------------------
 *February 28, 2018*
