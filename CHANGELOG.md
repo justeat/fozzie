@@ -8,9 +8,7 @@ v0.34.0
 *March 8, 2018*
 
 ### Added
-- Styling for radio buttons and checkboxes. Checkboxes having 2 styles
--- Crosses
--- Ticks
+- Styling for radio buttons and checkboxes (crosses and ticks)
 
 v0.33.0
 ------------------------------
