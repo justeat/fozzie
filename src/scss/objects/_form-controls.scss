@@ -38,7 +38,7 @@
  $input-border-width      : 1px;
 
 
- .o-form-label {
+ .o-formControl-label {
      position: relative;
      display: block;
      cursor: pointer;
@@ -46,35 +46,35 @@
      padding: spacing();
      padding-left: $input-padding-left;
 
-     &:hover .o-form-indicator {
+     &:hover .o-formControl-indicator {
          border-color: $input-borderColor-hover;
      }
 
-     &:hover .o-form-input:disabled ~ .o-form-indicator {
+     &:hover .o-formControl-input:disabled ~ .o-formControl-indicator {
          border-color: $input-borderColor;
          cursor: not-allowed;
      }
 
-     .o-form-input:disabled ~ .o-form-indicator {
+     .o-formControl-input:disabled ~ .o-formControl-indicator {
         background-color: $input-bgColor-disabled;
      }
  }
 
  // Give inline elements some space to the right
- .o-form-label--inline {
+ .o-formControl-label--inline {
      display: inline-block;
      padding-right: 2em;
  }
 
      // The hidden input
-     .o-form-input {
+     .o-formControl-input {
          position: absolute;
          opacity: 0;
          z-index: -1; // Put the input behind the label so it doesn't overlay text
 
          &:focus {
-             & + .o-form-indicator { @extend %u-elementFocus; }
-             & ~ .o-form-text { @extend %u-elementFocus; }
+             & + .o-formControl-indicator { @extend %u-elementFocus; }
+             & ~ .o-formControl-text { @extend %u-elementFocus; }
          }
 
          .no-csstransforms & {
@@ -85,7 +85,7 @@
      }
 
      // The new checkbox/radio
-     .o-form-indicator {
+     .o-formControl-indicator {
          position: absolute;
          left: 0;
          display: inline-block;
@@ -109,8 +109,8 @@
      }
 
      // Checkbox modifiers
-     .o-form-indicator--checkbox,
-     .o-form-indicator--tickbox {
+     .o-formControl-indicator--checkbox,
+     .o-formControl-indicator--tickbox {
          border-radius: 0.2em; // Change to 50% to make them circular
 
          &:before,
@@ -126,7 +126,7 @@
          }
      }
 
-     .o-form-indicator--checkbox {
+     .o-formControl-indicator--checkbox {
          &:before,
          &:after {
              top: 50%;
@@ -144,14 +144,14 @@
          }
      }
 
-     .o-form-icon {
+     .o-formControl-icon {
          background-position: center 0;
          left: spacing();
          min-width: spacing(1.5);
          position: absolute;
      }
 
-     .o-form-indicator--tickbox {
+     .o-formControl-indicator--tickbox {
          &:before {
              top: 0;
              transform: translateX(-50%) rotate(45deg) scale(0);
@@ -168,9 +168,9 @@
          }
      }
 
-     .o-form-input:checked ~ .o-form-indicator--checkbox,
-     .o-form-input:checked ~ .o-form-indicator--tickbox,
-     .o-form-input:checked ~ .o-form-indicator--radio {
+     .o-formControl-input:checked ~ .o-formControl-indicator--checkbox,
+     .o-formControl-input:checked ~ .o-formControl-indicator--tickbox,
+     .o-formControl-input:checked ~ .o-formControl-indicator--radio {
 
          label:hover & {
              background-color: $input-hover-color;
@@ -178,8 +178,8 @@
          }
      }
 
-     .o-form-input:checked ~ .o-form-indicator--checkbox,
-     .o-form-input:checked ~ .o-form-indicator--tickbox {
+     .o-formControl-input:checked ~ .o-formControl-indicator--checkbox,
+     .o-formControl-input:checked ~ .o-formControl-indicator--tickbox {
          background-color: $input-color;
          border: 3px solid $input-color;
 
@@ -189,14 +189,14 @@
          }
      }
 
-     .o-form-input:checked ~ .o-form-indicator--tickbox {
+     .o-formControl-input:checked ~ .o-formControl-indicator--tickbox {
          &:before,
          &:after {
              transform: translateX(-50%) rotate(45deg) scale(1);
          }
      }
 
-     .o-form-input:checked ~ .o-form-indicator--checkbox {
+     .o-formControl-input:checked ~ .o-formControl-indicator--checkbox {
          &:before {
              transform: translate(-50%, -50%) rotate(45deg) scale(1);
          }
@@ -208,9 +208,8 @@
 
 
      // Radio modifiers
-     .o-form-indicator--radio {
+     .o-formControl-indicator--radio {
          border-radius: 50%;
-         background-color: $grey--lightest;
 
          // add a margin to align the radio where the line height is 1.6 as opposed to 1.2
          @include media('<wide') {
@@ -218,7 +217,7 @@
          }
      }
 
-     .o-form-input:checked ~ .o-form-indicator--radio {
+     .o-formControl-input:checked ~ .o-formControl-indicator--radio {
          background-color: $input-color;
          border: 6px solid $input-borderColor;
 
