@@ -217,14 +217,14 @@
              border: 3px solid $grey--lightest;
              border-radius: 50%;
              width: $formControl-width - 2;
-             height: $formControl-width - 2;
+             height: $formControl-height - 2;
              position: absolute;
              top: -5px;
              left: -5px;
 
              @include media('>=mid') {
                  width: $formControl-width--wide - 2;
-                 height: $formControl-width--wide - 2;
+                 height: $formControl-height--wide - 2;
              }
          }
      }
