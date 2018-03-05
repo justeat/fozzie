@@ -76,12 +76,6 @@
              & + .o-formControl-indicator { @extend %u-elementFocus; }
              & ~ .o-formControl-text { @extend %u-elementFocus; }
          }
-
-         .no-csstransforms & {
-             position: relative !important;
-             opacity: 1;
-             z-index: 1;
-         }
      }
 
      // The new checkbox/radio
@@ -97,10 +91,6 @@
          margin-left: $formControl-margin-left;
          margin-top: 0;
          box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; // Used to animate from when element is in :focus
-
-         .no-csstransforms & {
-             display: none;
-         }
 
          @include media('>=mid') {
              width: $formControl-width--wide;
