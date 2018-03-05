@@ -5,9 +5,9 @@
  *
  * Checkbox button example HTML
  *
- *    <label class="c-form-label" for="checkbox1">
- *        <input class="c-form-input" type="checkbox" id="checkbox1" name="myCheckbox" value="A value"/>
- *        <span class="c-form-indicator c-form-indicator--checkbox"></span>
+ *    <label class="o-formControl-label" for="checkbox1">
+ *        <input class="o-formControl-input" type="checkbox" id="checkbox1" name="myCheckbox" value="A value"/>
+ *        <span class="o-formControl-indicator o-formControl-indicator--checkbox"></span>
  *        My Checkbox Label Text
  *    </label>
  *
@@ -15,16 +15,16 @@
  *
  * Radio button example HTML
  *
- *    <label class="c-form-label" for="radio1">
- *        <input class="c-form-input" type="radio" id="radio1" name="myRadioBtn" value="A value"/>
- *        <span class="c-form-indicator c-form-indicator--radio"></span>
+ *    <label class="o-formControl-label" for="radio1">
+ *        <input class="o-formControl-input" type="radio" id="radio1" name="myRadioBtn" value="A value"/>
+ *        <span class="o-formControl-indicator o-formControl-indicator--radio"></span>
  *        My Radio Button Label Text
  *     </label>
  *
  * ================================= */
- $formControl-bgColor                  : $white !default;
- $formControl-bgColor-disabled         : $color-disabled;
- $formControl-borderColor              : $color-border;
+ $formControl-bgColor           : $white !default;
+ $formControl-bgColor-disabled  : $color-disabled !default;
+ $formControl-borderColor       : $color-border !default;
  $formControl-color             : $blue !default;
  $formControl-background-color  : $color-bg !default;
  $formControl-hover-color       : $blue--dark !default;
