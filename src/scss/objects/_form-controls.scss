@@ -22,20 +22,20 @@
  *     </label>
  *
  * ================================= */
- $input-bgColor                  : $white !default;
- $input-bgColor-disabled         : $color-disabled;
- $input-borderColor              : $color-border;
- $input-color             : $blue !default;
- $input-background-color  : $color-bg !default;
- $input-hover-color       : $blue--dark !default;
- $input-borderColor-hover : $blue !default;
- $input-margin-left       : 0 !default;
- $input-padding-left      : spacing(x4) !default;
- $input-width--wide       : 20px !default;
- $input-width             : 24px !default;
- $input-height--wide      : 20px !default;
- $input-height            : 24px !default;
- $input-border-width      : 1px;
+ $formControl-bgColor                  : $white !default;
+ $formControl-bgColor-disabled         : $color-disabled;
+ $formControl-borderColor              : $color-border;
+ $formControl-color             : $blue !default;
+ $formControl-background-color  : $color-bg !default;
+ $formControl-hover-color       : $blue--dark !default;
+ $formControl-borderColor-hover : $blue !default;
+ $formControl-margin-left       : 0 !default;
+ $formControl-padding-left      : spacing(x4) !default;
+ $formControl-width--wide       : 20px !default;
+ $formControl-width             : 24px !default;
+ $formControl-height--wide      : 20px !default;
+ $formControl-height            : 24px !default;
+ $formControl-border-width      : 1px;
 
 
  .o-formControl-label {
@@ -44,19 +44,19 @@
      cursor: pointer;
      user-select: none;
      padding: spacing();
-     padding-left: $input-padding-left;
+     padding-left: $formControl-padding-left;
 
      &:hover .o-formControl-indicator {
-         border-color: $input-borderColor-hover;
+         border-color: $formControl-borderColor-hover;
      }
 
      &:hover .o-formControl-input:disabled ~ .o-formControl-indicator {
-         border-color: $input-borderColor;
+         border-color: $formControl-borderColor;
          cursor: not-allowed;
      }
 
      .o-formControl-input:disabled ~ .o-formControl-indicator {
-        background-color: $input-bgColor-disabled;
+        background-color: $formControl-bgColor-disabled;
      }
  }
 
@@ -89,12 +89,12 @@
          position: absolute;
          left: 0;
          display: inline-block;
-         width: $input-width;
-         height: $input-height;
-         border: $input-border-width solid $grey--lightest;
-         background-color: $input-bgColor;
+         width: $formControl-width;
+         height: $formControl-height;
+         border: $formControl-border-width solid $grey--lightest;
+         background-color: $formControl-bgColor;
          vertical-align: middle;
-         margin-left: $input-margin-left;
+         margin-left: $formControl-margin-left;
          margin-top: 0;
          box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; // Used to animate from when element is in :focus
 
@@ -103,8 +103,8 @@
          }
 
          @include media('>=mid') {
-             width: $input-width--wide;
-             height: $input-height--wide;
+             width: $formControl-width--wide;
+             height: $formControl-height--wide;
          }
      }
 
@@ -132,7 +132,7 @@
              top: 50%;
              width: 90%;
              height: 0.1em;
-             background-color: $input-background-color;
+             background-color: $formControl-background-color;
          }
 
          &:before {
@@ -147,7 +147,7 @@
      .o-formControl-icon {
          background-position: center 0;
          left: spacing();
-         min-width: spacing(1.5);
+         min-width: spacing(x1.5);
          position: absolute;
      }
 
@@ -155,7 +155,7 @@
          &:before {
              top: 0;
              transform: translateX(-50%) rotate(45deg) scale(0);
-             border: 2px solid $input-background-color;
+             border: 2px solid $formControl-background-color;
              background-color: transparent;
              width: 40%;
              height: 80%;
@@ -173,15 +173,15 @@
      .o-formControl-input:checked ~ .o-formControl-indicator--radio {
 
          label:hover & {
-             background-color: $input-hover-color;
-             border-color: $input-hover-color;
+             background-color: $formControl-hover-color;
+             border-color: $formControl-hover-color;
          }
      }
 
      .o-formControl-input:checked ~ .o-formControl-indicator--checkbox,
      .o-formControl-input:checked ~ .o-formControl-indicator--tickbox {
-         background-color: $input-color;
-         border: 3px solid $input-color;
+         background-color: $formControl-color;
+         border: 3px solid $formControl-color;
 
          &:before,
          &:after {
@@ -218,23 +218,23 @@
      }
 
      .o-formControl-input:checked ~ .o-formControl-indicator--radio {
-         background-color: $input-color;
-         border: 6px solid $input-borderColor;
+         background-color: $formControl-color;
+         border: 6px solid $formControl-borderColor;
 
          &:before {
              content: '';
-             background-color: $input-color;
+             background-color: $formControl-color;
              border: 3px solid $grey--lightest;
              border-radius: 50%;
-             width: $input-width - 2;
-             height: $input-width - 2;
+             width: $formControl-width - 2;
+             height: $formControl-width - 2;
              position: absolute;
              top: -5px;
              left: -5px;
 
              @include media('>=mid') {
-                 width: $input-width--wide - 2;
-                 height: $input-width--wide - 2;
+                 width: $formControl-width--wide - 2;
+                 height: $formControl-width--wide - 2;
              }
          }
      }
