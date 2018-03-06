@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.34.0
 ------------------------------
-*March 5, 2018*
+*March 6, 2018*
 
 ### Added
 - Styling for radio buttons and checkboxes (crosses and ticks)
