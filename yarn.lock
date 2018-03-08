@@ -7301,6 +7301,7 @@ kickoff-grid.css@^1.1.2:
     include-media "^1.4.8"
     kickoff-utils.scss "^2.0.1"
   optionalDependencies:
+    npm-scripts-info "^0.3.6"
     release-it "2.4.0"
 
 kickoff-utils.scss@^2.0.1:
@@ -8666,6 +8667,14 @@ npm-run-path@^2.0.0:
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
   dependencies:
     path-key "^2.0.0"
+
+npm-scripts-info@^0.3.6:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/npm-scripts-info/-/npm-scripts-info-0.3.7.tgz#ed1cf262e799f10b27898f6989bf89e660a9ec7e"
+  dependencies:
+    chalk "^2.3.0"
+    meow "^4.0.0"
+    unquote "^1.1.0"
 
 "npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.2:
   version "4.1.2"

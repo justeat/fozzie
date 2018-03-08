@@ -13,9 +13,9 @@
 // Usage:
 // zIndex(low)
 //
-// Key can be passed in as = low, medium, high
+// Key can be passed in as = lowest, low, medium, high
 // ==========================================================================
-@function zIndex($key: 'low') {
+@function zIndex($key: 'lowest') {
 
     @if type-of($zIndex) == 'map' {
         @if map-has-key($zIndex, $key) {

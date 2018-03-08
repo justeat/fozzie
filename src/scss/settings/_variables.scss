@@ -111,6 +111,7 @@ $border-radius: 4px;
 // pre-defined vars declared to make maintenance easier
 
 $zIndex: (
+    lowest  : -1,
     low     : 10,
     mid     : 100,
     high    : 9000
