@@ -44,7 +44,7 @@ table,
             padding: $table-cell-padding;
             line-height: $line-height-base;
             vertical-align: top;
-            border-left: 1px solid $table-verticalBorder--color;
+            border-right: 1px solid $table-verticalBorder--color;
         }
         th {
             text-align: left;
@@ -60,8 +60,8 @@ table,
             }
         }
         td {
-            &:first-child {
-                border-left: none;
+            &:last-child {
+                border-right: none;
             }
         }
     }
