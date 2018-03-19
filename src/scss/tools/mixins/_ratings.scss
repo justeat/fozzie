@@ -1,0 +1,13 @@
+//
+// ==========================================================================
+// Ratings variant mixin
+// Used in rating modifier classes to create the multiple fill levels
+// ==========================================================================
+//
+@mixin rating-fill($map: $rating-levels, $maxStars: 6) {
+	@each $key, $value in $map {
+		&.c-ratings--fill-#{$key} {
+			width: $value / $maxStars * 100%;
+		}
+	}
+}

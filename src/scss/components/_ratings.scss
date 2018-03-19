@@ -1,0 +1,126 @@
+$star-filled: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 13 13'%3E%3Cpath fill='%23D50525' d='M6.5 10.8l-4 2.2.8-4.7L0 5l4.5-.7 2-4.3 2 4.3L13 5 9.8 8.3l.7 4.7z'/%3E%3C/svg%3E";
+$star-empty: "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 13 13' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' d='M6.5 10.8l-4 2.2.8-4.7L0 5l4.5-.7 2-4.3 2 4.3L13 5 9.8 8.3l.7 4.7z'/%3E%3Cmask id='b' width='13' height='13' x='0' y='0' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3C/defs%3E%3Cuse fill='%23fff' fill-rule='evenodd' stroke='%23A3A3A3' stroke-width='1' mask='url(%23b)' xlink:href='%23a'/%3E%3C/svg%3E";
+
+$star-count: 6;
+$star-size-small: 14px;
+$star-size-medium: 28px;
+$star-size-large: 42px;
+
+$rating-levels: (
+    02  : 0.2,
+    05  : 0.5,
+    06  : 0.6,
+    08  : 0.8,
+    10  : 1,
+    12  : 1.2,
+    15  : 1.5,
+    16  : 1.6,
+    18  : 1.8,
+    20  : 2,
+    22  : 2.2,
+    25  : 2.5,
+    26  : 2.6,
+    28  : 2.8,
+    30  : 3,
+    32  : 3.2,
+    35  : 3.5,
+    36  : 3.6,
+    38  : 3.8,
+    40  : 4,
+    42  : 4.2,
+    45  : 4.5,
+    46  : 4.6,
+    48  : 4.8,
+    50  : 5,
+    52  : 5.2,
+    55  : 5.5,
+    56  : 5.6,
+    58  : 5.8,
+    60  : 6
+);
+
+.c-ratings {
+    background: url($star-empty) repeat-x;
+    background-size: contain;
+    display: inline-block;
+    height: $star-size-small;
+    width: $star-size-small * $star-count;
+}
+
+.c-ratings--medium {
+   height: $star-size-medium;
+   width: $star-size-medium * $star-count;
+}
+
+.c-ratings--large {
+   height: $star-size-large;
+   width: $star-size-large * $star-count;
+}
+
+.c-ratings--fill {
+   background: url($star-filled) repeat-x;
+   background-size: contain;
+   display: inline-block;
+   height: 100%;
+   width: 100%;
+   @include rating-fill($rating-levels);
+}
+
+/*
+Selectable stars rating component
+*/
+.c-rating-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.c-ratings-input {
+    display: none;
+
+    & + label {
+        display: block;
+        width: $star-size-small;
+        height: $star-size-small;
+        cursor: pointer;
+        background: url($star-empty) no-repeat; //TODO: add to fozzie
+        background-size: contain;
+        text-indent: -9999px;
+
+        &:hover,
+        &:hover ~ label {
+            background-image: url($star-filled);
+        }
+
+    }
+
+    &:checked {
+         & + label,
+         & ~ input + label {
+            background-image: url($star-filled);
+         }
+    }
+
+}
+
+// .c-ratings-input:disabled,
+// .c-ratings-input[disabled] {
+//     & + label {
+//         cursor: default;
+//         pointer-events: none;
+//     }
+// }
+
+.c-ratings-input--medium {
+   & + label {
+      width: $star-size-medium;
+      height: $star-size-medium;
+   }
+}
+
+.c-ratings-input--large {
+   & + label {
+      width: $star-size-large;
+      height: $star-size-large;
+   }
+}

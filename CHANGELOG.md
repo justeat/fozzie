@@ -5,10 +5,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.38.0
 ------------------------------
+<<<<<<< HEAD
 *April 10, 2018*
 
 ### Changed
 - Font size variable map updated.
+=======
+*March 19, 2018*
+
+### Added
+- Selectable star ratings
+- Non selectable start ratings
+>>>>>>> Development of Selectable star ratings and non selectable star ratings
 
 v0.37.0
 ------------------------------
