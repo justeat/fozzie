@@ -8,26 +8,30 @@
 $rating-iterations: (0, 2, 5, 6, 8);
 
 @mixin rating-fill($maxStars: 6) {
-    @for $i from 0 to $maxStars + 1 {
-        @if $i < $maxStars {
-            @each $ratingIteration in $rating-iterations {
-                @if $i == 0 and $ratingIteration == 0 {
-                    &.c-ratings--fill-00 {
-                        width: 0;
+    @if $maxStars > 0 {
+        @for $i from 0 to $maxStars + 1 {
+            @if $i < $maxStars {
+                @each $ratingIteration in $rating-iterations {
+                    @if $i == 0 and $ratingIteration == 0 {
+                        &.c-ratings--fill-00 {
+                            width: 0;
+                        }
                     }
-                }
-                @else {
-                    &.c-ratings--fill-#{$i}#{$ratingIteration} {
-                        width: (($ratingIteration * 0.1) + $i) / $maxStars * 100%;
+                    @else {
+                        &.c-ratings--fill-#{$i}#{$ratingIteration} {
+                            width: (($ratingIteration * 0.1) + $i) / $maxStars * 100%;
+                        }
                     }
-                }
 
+                }
+            }
+            @else {
+                &.c-ratings--fill-#{$i}#{0} {
+                    width: $i / $maxStars * 100%;
+                }
             }
         }
-        @else {
-            &.c-ratings--fill-#{$i}#{0} {
-                width: $i / $maxStars * 100%;
-            }
-        }
+    } @else {
+        @warn 'Max star count must be greater than 0';
     }
 }

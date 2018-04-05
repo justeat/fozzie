@@ -12,22 +12,22 @@ $star-size-large: 42px;
 }
 
 .c-ratings--medium {
-   height: $star-size-medium;
-   width: $star-size-medium * $star-count;
+    height: $star-size-medium;
+    width: $star-size-medium * $star-count;
 }
 
 .c-ratings--large {
-   height: $star-size-large;
-   width: $star-size-large * $star-count;
+    height: $star-size-large;
+    width: $star-size-large * $star-count;
 }
 
 .c-ratings--fill {
-   background: inline('#{$icon-path}/stars/star--filled.svg') repeat-x;
-   background-size: contain;
-   display: inline-block;
-   height: 100%;
-   width: 100%;
-   @include rating-fill($star-count);
+    background: inline('#{$icon-path}/stars/star--filled.svg') repeat-x;
+    background-size: contain;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    @include rating-fill($star-count);
 }
 
 /*
@@ -54,7 +54,7 @@ Selectable stars rating component
     display: block;
     cursor: pointer;
     background-image: inline('#{$icon-path}/stars/star--empty.svg');
-    text-indent: -9999px;
+    @extend %u-hideText;
 
     &:hover,
     &:hover ~ label {
