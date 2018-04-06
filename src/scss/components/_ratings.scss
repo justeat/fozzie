@@ -4,7 +4,8 @@ $star-size-medium: 28px;
 $star-size-large: 42px;
 
 .c-ratings {
-    background: inline('#{$icon-path}/stars/star--empty.svg') repeat-x;
+    @extend %c-icon--star--empty;
+    background-repeat: repeat-x;
     background-size: contain;
     display: inline-block;
     height: $star-size-small;
@@ -22,7 +23,8 @@ $star-size-large: 42px;
 }
 
 .c-ratings--fill {
-    background: inline('#{$icon-path}/stars/star--filled.svg') repeat-x;
+    @extend %c-icon--star--fill;
+    background-repeat: repeat-x;
     background-size: contain;
     display: inline-block;
     height: 100%;
@@ -45,7 +47,7 @@ Selectable stars rating component
     &:checked {
         & + label,
         & ~ input + label {
-           background-image: inline('#{$icon-path}/stars/star--filled.svg');
+            @extend %c-icon--star--fill;
         }
    }
 }
@@ -53,11 +55,11 @@ Selectable stars rating component
 .c-icon--star {
     display: block;
     cursor: pointer;
-    background-image: inline('#{$icon-path}/stars/star--empty.svg');
+    @extend %c-icon--star--empty;
     @extend %u-hideText;
 
     &:hover,
     &:hover ~ label {
-        background-image: inline('#{$icon-path}/stars/star--filled.svg');
+        @extend %c-icon--star--fill;
     }
 }

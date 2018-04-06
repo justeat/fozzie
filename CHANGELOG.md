@@ -9,7 +9,7 @@ v0.39.0
 
 ### Added
 - Selectable star ratings
-- Non selectable start ratings
+- Non selectable star ratings
 - Mixin to generate fill classes for ratings
 
 v0.38.0
