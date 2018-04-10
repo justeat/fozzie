@@ -21,15 +21,15 @@ $type: (
         default: (14, 18)
     ),
     mid: (  // h3, h4, h5, h6 sizes (differentiated by font and weight not size)
-        default: (16, 24)
+        default: (20, 24)
     ),
     large: ( // h2
-        default: (20, 28),
-        narrow: (18, 24)
+        default: (24, 28),
+        narrow: (20, 24)
     ),
     jumbo: ( // h1
-        default: (24, 32),
-        narrow: (20, 24)
+        default: (30, 40),
+        narrow: (24, 24)
     ),
     // scaleUp type for specific pages
     // E.g. Home / Thematic Pages / City Pages
@@ -38,12 +38,16 @@ $type: (
         narrow: (16, 21)
     ),
     large--scaleUp: (
-        default: (28, 36),
+        default: (32, 32),
         narrow: (18, 24)
     ),
     jumbo--scaleUp: (
-        default: (64, 72),
+        default: (44, 48),
         narrow: (28, 32)
+    ),
+    mid--podTitle: (
+        default: (24, 32),
+        narrow: (20, 24)
     )
 );
 
