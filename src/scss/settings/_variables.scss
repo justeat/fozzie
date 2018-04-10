@@ -28,14 +28,14 @@ $type: (
         narrow: (20, 24)
     ),
     jumbo: ( // h1
-        default: (30, 40),
+        default: (32, 40),
         narrow: (24, 28)
     ),
     // scaleUp type for specific pages
     // E.g. Home / Thematic Pages / City Pages
     mid--scaleUp: (
         default: (22, 28),
-        narrow: (16, 21)
+        narrow: (16, 20)
     ),
     large--scaleUp: (
         default: (32, 40),
@@ -43,7 +43,7 @@ $type: (
     ),
     jumbo--scaleUp: (
         default: (44, 48),
-        narrow: (28, 32)
+        narrow: (32, 36)
     )
 );
 
