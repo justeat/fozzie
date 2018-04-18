@@ -1,0 +1,65 @@
+$star-count: 6;
+$star-size-small: 14px;
+$star-size-medium: 28px;
+$star-size-large: 42px;
+
+.c-rating {
+    @extend %c-icon--star--empty;
+    background-repeat: repeat-x;
+    background-size: contain;
+    display: inline-block;
+    height: $star-size-small;
+    width: $star-size-small * $star-count;
+}
+
+.c-rating--medium {
+    height: $star-size-medium;
+    width: $star-size-medium * $star-count;
+}
+
+.c-rating--large {
+    height: $star-size-large;
+    width: $star-size-large * $star-count;
+}
+
+.c-rating--fill {
+    @extend %c-icon--star--fill;
+    background-repeat: repeat-x;
+    background-size: contain;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    @include rating-fill($star-count);
+}
+
+/*
+Selectable stars rating component
+*/
+.c-ratingSelectable {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.c-ratingSelectable-input {
+    display: none;
+
+    &:checked {
+        & + label,
+        & ~ input + label {
+            @extend %c-icon--star--fill;
+        }
+   }
+}
+
+.c-icon--star {
+    display: block;
+    cursor: pointer;
+    @extend %c-icon--star--empty;
+    @extend %u-hideText;
+
+    &:hover,
+    &:hover ~ label {
+        @extend %c-icon--star--fill;
+    }
+}
