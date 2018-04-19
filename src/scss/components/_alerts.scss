@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Alerts
  * =================================
  * Messages that appear on the screen to highlight a state (usually with associated text)
@@ -16,6 +16,14 @@ $alert-border-radius: 2px;
     margin-top: spacing(x2);
     border: 1px solid transparent;
     border-radius: $alert-border-radius;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    & + * {
+        margin-top: spacing(x2);
+    }
 }
 
 // Alternate styles
