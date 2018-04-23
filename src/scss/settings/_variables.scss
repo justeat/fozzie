@@ -20,6 +20,9 @@ $type: (
     base: (  // body copy
         default: (14, 18)
     ),
+    base--scaleUp: (
+        default: (16, 24)
+    ),
     mid: (  // h3, h4, h5, h6 sizes (differentiated by font and weight not size)
         default: (20, 24)
     ),
