@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@justeat/f-dom": "^0.3.0",
-    "@justeat/fozzie-colour-palette": "^0.9.1",
+    "@justeat/fozzie-colour-palette": "^1.1.0",
     "@kickoff/utils.scss": "^2.1.1",
     "include-media": "^1.4.9",
     "kickoff-grid.css": "^1.1.2",

@@ -52,9 +52,9 @@
   dependencies:
     qwery "^4.0.0"
 
-"@justeat/fozzie-colour-palette@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-0.9.1.tgz#3c48988580c8ed803a38c04ce2eb1475dc34fc12"
+"@justeat/fozzie-colour-palette@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-1.1.0.tgz#05a49eaa55000fa1f0b916603d341eef8bfbf439"
 
 "@justeat/gulp-build-fozzie@^7.8.0":
   version "7.8.0"
