@@ -3,6 +3,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v0.41.1
+------------------------------
+*April 25, 2018*
+
+### Added
+- Focus outline to buttons with the class `o-btnLink`.
+
+
 v0.41.0
 ------------------------------
 *April 20, 2018*
@@ -10,12 +19,14 @@ v0.41.0
 ### Fixed
 - Button font size rendered larger due to v0.38.0 release so fix applied here.
 
+
 v0.40.0
 ------------------------------
 *April 19, 2018*
 
 ### Added
 - Enhanced `c-alert` component styling
+
 
 v0.39.0
 ------------------------------
@@ -26,12 +37,14 @@ v0.39.0
 - Non selectable star ratings
 - Mixin to generate fill classes for ratings
 
+
 v0.38.0
 ------------------------------
 *April 10, 2018*
 
 ### Changed
 - Font size variable map updated.
+
 
 v0.37.0
 ------------------------------
@@ -40,12 +53,14 @@ v0.37.0
 ### Fixed
 - Table border style flipped to fix rowspan columns.
 
+
 v0.36.0
 ------------------------------
 *March 12, 2018*
 
 ### Fixed
 - Removed unnecessary *$* infront of zIndex variable.
+
 
 v0.35.0
 ------------------------------
@@ -322,7 +337,6 @@ v0.15.0
 
 ### Removed
 - Removed icons SCSS partial — now using SCSS from `f-icons` module.
-
 
 
 v0.14.0
