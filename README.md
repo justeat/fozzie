@@ -1,5 +1,7 @@
 # Fozzie :bear:
 
+[![Join the chat at https://gitter.im/justeat/fozzie](https://badges.gitter.im/justeat/fozzie.svg)](https://gitter.im/justeat/fozzie?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm version](https://badge.fury.io/js/%40justeat%2Ffozzie.svg)](https://badge.fury.io/js/%40justeat%2Ffozzie)
 [![Build Status](https://travis-ci.org/justeat/fozzie.svg)](https://travis-ci.org/justeat/fozzie)
 
