@@ -99,8 +99,10 @@ $btn-rounded-width: 38px !default;
     &:hover,
     &:active,
     &:focus {
-        background-color: $btn-default-bgColor--highlight;
-        outline: none; // no need as already has a focus/active state
+        &:not(.o-btnLink) {
+            background-color: $btn-default-bgColor--highlight;
+            outline: none; // no need as already has a focus/active state
+        }
     }
 
     &,
