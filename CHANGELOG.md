@@ -8,7 +8,7 @@ v0.42.2
 *April 30, 2018*
 
 ### Fixed
-- Broken build is fixed
+- Broken build is fixed. It was depending on an icon that isn't always present in the ratings.
 
 v0.42.1
 ------------------------------
