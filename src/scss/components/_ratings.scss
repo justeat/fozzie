@@ -4,7 +4,7 @@ $star-size-medium: 28px;
 $star-size-large: 42px;
 
 .c-rating {
-    @extend %c-icon--star--empty;
+    @extend %c-icon--star--empty !optional;
     background-repeat: repeat-x;
     background-size: contain;
     display: inline-block;
@@ -23,7 +23,7 @@ $star-size-large: 42px;
 }
 
 .c-rating--fill {
-    @extend %c-icon--star--fill;
+    @extend %c-icon--star--fill !optional;
     background-repeat: repeat-x;
     background-size: contain;
     display: inline-block;
@@ -47,7 +47,7 @@ Selectable stars rating component
     &:checked {
         & + label,
         & ~ input + label {
-            @extend %c-icon--star--fill;
+            @extend %c-icon--star--fill !optional;
         }
    }
 }
@@ -55,11 +55,11 @@ Selectable stars rating component
 .c-icon--star {
     display: block;
     cursor: pointer;
-    @extend %c-icon--star--empty;
+    @extend %c-icon--star--empty !optional;
     @extend %u-hideText;
 
     &:hover,
     &:hover ~ label {
-        @extend %c-icon--star--fill;
+        @extend %c-icon--star--fill !optional;
     }
 }
