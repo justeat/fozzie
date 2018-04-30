@@ -3,12 +3,24 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.43.0
+------------------------------
+*May 1, 2018*
+
+### Added
+- Pull Request Template Added to repo
+
+### Removed
+- Removing a couple of buttons that are no longer in the brand guidelines
+
+
 v0.42.2
 ------------------------------
 *April 30, 2018*
 
 ### Fixed
 - Broken build is fixed. It was depending on an icon that isn't always present in the ratings.
+
 
 v0.42.1
 ------------------------------
