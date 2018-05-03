@@ -204,41 +204,6 @@ $btn-rounded-width: 38px !default;
     background-color: $white;
 }
 
-/**
- * Modifier – .o-btn--positive
- *
- * Sets the btn colour to positive colour (i.e. Green)
- */
-
-.o-btn--positive {
-    background-color: $brand--green;
-    color: #fff;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $green;
-        color: #fff;
-    }
-}
-
-/**
- * Modifier – .o-btn--negative
- *
- * Sets the btn colour to negative colour (i.e. Red)
- */
-
-.o-btn--negative {
-    background-color: $red;
-    color: #fff;
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: darken($red, 10);
-        color: #fff;
-    }
-}
 
 /**
  * ==========================================================================
