@@ -3,6 +3,18 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.44.0
+------------------------------
+*May 14, 2018*
+
+### Added
+- `u-textPad` utility class added for padding text
+
+### Changed
+- Updated ordered list styling
+- Updated typography utility classes so that `.alpha`, `.beta`, `.gamma`, `.gamma` and `.delta` all match header styles when applied
+
+
 v0.43.0
 ------------------------------
 *May 1, 2018*
