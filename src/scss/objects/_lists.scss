@@ -14,7 +14,7 @@ ol {
 
     ul,
     ol {
-        margin-top: 0;
+        margin-top: spacing();
     }
 }
 
@@ -23,7 +23,8 @@ ul {
     list-style: none;
 
     // Adds a coloured circle before list-items
-    li:before {
+    > li:before,
+    > li ul > li:before {
         color: $red;
         content: '\2022'; /* Unicode for circle character */
         font-size: 1.8em;
@@ -33,3 +34,25 @@ ul {
         margin-left: -1.5rem;
     }
 }
+
+ol {
+    > li {
+        padding-left: spacing();
+    }
+}
+
+.c-list-ordered {
+    > li {
+        font-weight: $font-weight-bold;
+        @include font-size(mid);
+        margin-bottom: spacing(x4);
+
+        > div {
+            font-weight: $font-weight-base;
+            @include font-size(base);
+        }
+    }
+}
+
+
+

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Utilities
  * ===================================
  * Non-semantic helper classes
@@ -91,6 +91,10 @@
 
 .u-uppercase {
     text-transform: uppercase;
+}
+
+.u-textPad {
+    padding-left: spacing(x4);
 }
 
 //
