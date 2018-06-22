@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.45.0
 ------------------------------
-*June 15, 2018*
+*June 22, 2018*
 
 ### Changed
 - Font size for default and narrow screens.
