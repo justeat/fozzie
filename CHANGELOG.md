@@ -8,7 +8,7 @@ v0.45.0
 *June 22, 2018*
 
 ### Changed
-- Font size for default and narrow screens.
+- Font size for default and narrow screens. `large-scaleUp` renamed to `large-scaleDown`
 
 
 v0.44.0
