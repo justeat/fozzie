@@ -6,28 +6,58 @@
  *
  */
 
-$listing-borderColor: $color-border;
+$listing-background         : $white;
+$listing-altText            : $blue;
+$listing-flagBackground     : $orange;
+$listing-borderColor        : $color-border;
+$listing-iconFill           : $grey--mid;
+$listing-labelBackground    : $grey--offWhite;
+$listing-offlineBorderColor : $grey--lighter;
+$listing-offlineBackground  : $grey--lightest;
+$listing-borderRadius             : 4px;
 
 .c-listing {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 spacing(x2);
+    background: $listing-background;
+    border-radius: $listing-borderRadius;
+    border: 1px solid $listing-borderColor;
+    
+    @include media('<mid') {
+        border: 0;
+        padding: 0;
+        margin-left: spacing(x4) * -1;
+        margin-right: spacing(x4) * -1;
+    }
+}
+
+.c-listing--offline {
+    background: $listing-offlineBackground;
 }
 
     .c-listing-item {
+        margin: 0;
         display: block;
         position: relative;
-        margin: 0;
-        padding: spacing(x2) 0;
+        padding: spacing(x2);
         border-bottom: 1px solid $listing-borderColor;
+
+        @include media('>mid') {
+            padding: spacing(x2) 0;
+        }
 
         .c-listing &:last-child {
             border: 0;
+        }
+
+        .c-listing--offline & {
+            border-color: $listing-offlineBorderColor;
         }
     }
 
         //when the listing item has a wrapper link descendent, make sure it doesn’t underline everything (only the main title)
         .c-listing-item-link {
             display: block;
+            color: $color-text;
             text-decoration: none;
 
             &:hover,
@@ -50,21 +80,146 @@ $listing-borderColor: $color-border;
             }
         }
 
-        .c-listing-item-info {
-            color: $color-text;
-            flex-wrap: nowrap;
-            margin-left: spacing(base);
+        .c-listing-item-img {
+            float: left;
+            width: 50px;
+
+            @include media('>wide') {
+                width: 65px;
+            }
         }
+
+        .c-listing-item-imgItem {
+            width: 100%;
+            height: auto;
+        }
+
+        .c-listing-item-info {
+            top: -4px;
+            position: relative;
+            color: $color-text;
+            padding-left: 66px;
+
+            @include media('>wide') {
+                position: relative;
+                padding-left: 80px;
+                padding-right: 260px;
+
+                &:after {
+                    content: '';
+                    top: 4px;
+                    width: 1px;
+                    right: 259px;
+                    height: 100%;
+                    display: block;
+                    position: absolute;
+                    background: $listing-borderColor;
+
+                    .c-listing--offline & {
+                        background: $listing-offlineBorderColor;
+                    }
+                }
+            }
+        }
+
+        .c-listing-item-title {
+            word-break: break-word;
+        }
+
+        .c-listing-item-meta {
+            float: right;
+
+            @include media('>wide') {
+                width: 260px;
+                padding-bottom: 50px;
+                padding-left: spacing(x2);
+                border-left: 1px solid $listing-borderColor;
+
+                .c-listing--offline & {
+                    border-color: $listing-offlineBorderColor;
+                }
+            }
+        }
+
+        .c-listing-item-rating {
+            padding: 2px 0 3px 0;
+
+            .c-rating,
+            .c-listing-item-ratingText {
+                vertical-align: middle;
+            }
+        }
+
+        .c-listing-item-details {
+            width: 100%;
+            padding-left: 66px;
+
+            @include media('>wide') {
+                right: 0;
+                width: 260px;
+                margin-top: 10px;
+                position: absolute;
+                bottom: spacing(x2);
+                padding-left: spacing(x2);
+            }
+        }
+
+        .c-listing-item-distance {
+            position: absolute;
+            right: spacing(x2);
+            bottom: spacing(x2);
+
+            @include media('>mid') {
+                right: 0;
+            }
+
+            @include media('>wide') {
+                position: static;
+                line-height: 0.8;
+                padding-left: 80px;
+                margin-bottom: spacing() / 2;
+            }
+        }
+
+        .c-listing-item-distanceIcon {
+            fill: $listing-iconFill;
+        }
+
         .c-listing-item-text {
             margin-top: 0;
         }
 
-        .c-listing-item-col {
-            border-right: 1px solid $listing-borderColor;
-            margin-left: spacing(x2);
-            padding-left: spacing(x2);
+        .c-listing-item-label,
+        .c-listing-item-flag {
+            padding: 2px 5px;
+            position: relative;
+            margin-bottom: 4px;
+            display: inline-block;
+            background: $listing-labelBackground;
 
-            .c-listing-item &:last-child {
-                border: 0;
+            & + & {
+                margin-left: spacing();
+            }
+        }
+
+        .c-listing-item-flag {
+            color: $white;
+            padding-right: 12px;
+            background: $listing-flagBackground;
+
+            &:after {
+                content: '';
+                top: 1px;
+                width: 0;
+                height: 0;
+                right: -1px;
+                position: absolute;
+                border-style: solid;
+                border-width: 10px 7px 10px 0;
+                border-color: transparent $white transparent transparent;
+
+                .c-listing--offline & {
+                    border-color: transparent $listing-offlineBackground transparent transparent;
+                }
             }
         }

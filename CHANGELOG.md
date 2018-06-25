@@ -1,7 +1,19 @@
 # Changelog
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
+
+v0.46.0
+------------------------------
+*June 25, 2018*
+
+### Changed
+- Addition of variation to c-card padding
+- Changed border utility to be a mixin so can be used within a breakpoint mixin. In this case it was to create a class that was only bordered after a certain width
+- Updated and extended listing styles to match current variation of visuals.
+- variation to c-card padding, changed border utlity to be a mixin so it can be included within a breakpoint without code duplication, updated listing component to current variations of design
+- Update to rating padding to allow for new SVG
+
 
 v0.45.0
 ------------------------------

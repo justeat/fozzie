@@ -8,6 +8,7 @@
  */
 
 $card-bgColor--active           : $white !default;
+$card-bgColor--disabled         : $grey--lightest !default;
 $card-tooltip-width             : 10px !default;
 $card-arrow-bottom-position     : 0 !default;
 $card-padding                   : spacing(x2) !default;
@@ -36,6 +37,10 @@ $card-radius                    : 4px !default;
 
         .c-card--rounded {
             border-radius: $card-radius;
+        }
+
+        .c-card--disabled {
+            background: $card-bgColor--disabled;
         }
 
 }
