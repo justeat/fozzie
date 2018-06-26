@@ -127,9 +127,12 @@ $listing-borderRadius             : 4px;
         }
 
         .c-listing-item-meta {
+            top: -3px;
             float: right;
+            position: relative;
 
             @include media('>wide') {
+                top: auto;
                 width: 260px;
                 padding-bottom: 50px;
                 padding-left: spacing(x2);

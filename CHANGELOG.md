@@ -12,8 +12,7 @@ v0.46.0
 - Changed border utility to be a mixin so can be used within a breakpoint mixin. In this case it was to create a class that was only bordered after a certain width
 - Updated and extended listing styles to match current variation of visuals.
 - variation to c-card padding, changed border utlity to be a mixin so it can be included within a breakpoint without code duplication, updated listing component to current variations of design
-- Update to rating padding to allow for new SVG
-
+- Updated rating widths to allow for spacing new (compressed) rating icons have 
 
 v0.45.0
 ------------------------------
