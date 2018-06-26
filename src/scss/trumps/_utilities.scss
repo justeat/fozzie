@@ -25,21 +25,14 @@
     background-color: $white;
 }
 
-//u-bordered mixin created for reuse within the .u-bordered--mid class
-@mixin u-bordered() {
-    border: 1px solid $color-border;
-    padding: spacing(x3);
-    border-radius: $border-radius;
-}
-
 .u-bordered,
 %u-bordered {
-    @include u-bordered();
+    @include bordered();
 }
 
 .u-bordered--mid {
     @include media('>mid') {
-        @include u-bordered();
+        @include bordered();
     }
 }
 

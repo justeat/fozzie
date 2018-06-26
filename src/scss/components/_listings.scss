@@ -21,7 +21,7 @@ $listing-borderRadius             : 4px;
     background: $listing-background;
     border-radius: $listing-borderRadius;
     border: 1px solid $listing-borderColor;
-    
+
     @include media('<mid') {
         border: 0;
         padding: 0;
@@ -145,7 +145,7 @@ $listing-borderRadius             : 4px;
         }
 
         .c-listing-item-rating {
-            padding: 2px 0 3px 0;
+            padding: 2px 0 3px;
 
             .c-rating,
             .c-listing-item-ratingText {

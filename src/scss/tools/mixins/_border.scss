@@ -1,0 +1,14 @@
+//
+// ==========================================================================
+// Border mixin
+// Used in bordered utility class to add padding, border and border
+// radius to element
+// ==========================================================================
+//
+// @include bordered();
+
+@mixin bordered() {
+    border: 1px solid $color-border;
+    padding: spacing(x3);
+    border-radius: $border-radius;
+}
