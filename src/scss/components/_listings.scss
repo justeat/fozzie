@@ -18,16 +18,17 @@ $listing-borderRadius       : 4px;
 .c-listing {
     padding: 0 spacing(x2);
     background: $listing-background;
-    border-radius: $listing-borderRadius;
     border: 1px solid $listing-borderColor;
+    border-radius: $listing-borderRadius;
 
     @include media('<mid') {
         border: 0;
         padding: 0;
-        // Negative margins used to bring the listing container outside of the the grid containers to 
+        border-radius: 0;
+        // Negative margins used to bring the listing container outside of the the grid containers to
         //  make 100% viewport width on mobile
-        margin-left: spacing(x4) * -1;
-        margin-right: spacing(x4) * -1;
+        margin-left: spacing(x2) * -1;
+        margin-right: spacing(x2) * -1;
     }
 }
 
