@@ -7,8 +7,7 @@
  */
 
 $listing-background         : $white;
-$listing-altText            : $blue;
-$listing-flagBackground     : $orange;
+$listing-promoBackground    : $orange;
 $listing-borderColor        : $color-border;
 $listing-iconFill           : $grey--mid;
 $listing-labelBackground    : $grey--offWhite;
@@ -25,6 +24,8 @@ $listing-borderRadius       : 4px;
     @include media('<mid') {
         border: 0;
         padding: 0;
+        // Negative margins used to bring the listing container outside of the the grid containers to 
+        //  make 100% viewport width on mobile
         margin-left: spacing(x4) * -1;
         margin-right: spacing(x4) * -1;
     }
@@ -126,6 +127,7 @@ $listing-borderRadius       : 4px;
             word-break: break-word;
         }
 
+        // .c-listing-item-meta should be used as a container for listing labels, logos or offers (e.g. local ledgend logo or 20% off label)
         .c-listing-item-meta {
             top: -3px;
             float: right;
@@ -147,7 +149,7 @@ $listing-borderRadius       : 4px;
         .c-listing-item-rating {
             padding: 2px 0 3px;
 
-            .c-rating,
+            .c-listing-item-ratingStars,
             .c-listing-item-ratingText {
                 vertical-align: middle;
             }
@@ -193,7 +195,7 @@ $listing-borderRadius       : 4px;
         }
 
         .c-listing-item-label,
-        .c-listing-item-flag {
+        .c-listing-item-promo {
             padding: 2px 5px;
             position: relative;
             margin-bottom: 4px;
@@ -205,10 +207,10 @@ $listing-borderRadius       : 4px;
             }
         }
 
-        .c-listing-item-flag {
+        .c-listing-item-promo {
             color: $white;
             padding-right: 12px;
-            background: $listing-flagBackground;
+            background: $listing-promoBackground;
 
             &:after {
                 content: '';
