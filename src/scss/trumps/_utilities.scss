@@ -27,9 +27,13 @@
 
 .u-bordered,
 %u-bordered {
-    border: 1px solid $color-border;
-    padding: spacing(x3);
-    border-radius: $border-radius;
+    @include bordered();
+}
+
+.u-bordered--mid {
+    @include media('>mid') {
+        @include bordered();
+    }
 }
 
 
