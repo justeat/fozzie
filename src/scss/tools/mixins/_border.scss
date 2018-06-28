@@ -5,13 +5,15 @@
 // radius to element
 // ==========================================================================
 //
+// Standard use
 // @include bordered();
+//
+// Override default values
+// @include bordered(10px, 30px, green);
 
-$bordered-radius    : $border-radius !default;
-$bordered-spacing   : spacing(x3) !default;
-$bordered-colour    : $color-border !default;
 
-@mixin bordered() {
+
+@mixin bordered($bordered-radius: $border-radius, $bordered-spacing : spacing(x3), $bordered-colour: $color-border ) {
     border: 1px solid $bordered-colour;
     padding: $bordered-spacing;
     border-radius: $bordered-radius;
