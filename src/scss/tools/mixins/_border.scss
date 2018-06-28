@@ -7,8 +7,12 @@
 //
 // @include bordered();
 
+$bordered-radius    : $border-radius !default;
+$bordered-spacing   : spacing(x3) !default;
+$bordered-colour    : $color-border !default;
+
 @mixin bordered() {
-    border: 1px solid $color-border;
-    padding: spacing(x3);
-    border-radius: $border-radius;
+    border: 1px solid $bordered-colour;
+    padding: $bordered-spacing;
+    border-radius: $bordered-radius;
 }
