@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.46.0
 ------------------------------
-*June 25, 2018*
+*June 28, 2018*
 
 ### Changed
 - Addition of variation to c-card padding
