@@ -196,6 +196,12 @@ mark {
     border-radius: 3px;
 }
 
+address {
+    font-style: normal;
+    margin-top: $baseline;
+    margin-bottom: 0;
+}
+
 // Prevents sub and sup affecting line-height in all browsers
 // gist.github.com/413930
 sub,
