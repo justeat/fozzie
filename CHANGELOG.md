@@ -10,12 +10,14 @@ v0.48.0
 ### Added
 - SERP header with alternative variations
 
+
 v0.47.0
 ------------------------------
 *June 29, 2018*
 
 ### Added
 - Styling for address elements
+
 
 v0.46.0
 ------------------------------
