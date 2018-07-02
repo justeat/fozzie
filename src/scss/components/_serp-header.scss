@@ -1,0 +1,31 @@
+/**
+ * SERP header Component
+ * =================================
+ * Used for restaurant count and location on search page
+ *
+ */
+
+.c-serp-header {
+    padding-top: spacing(x2);
+    padding-bottom: spacing(x2);
+}
+
+.c-serp-header-title {
+    padding: 0;
+    display: inline-block;
+    margin: 0 spacing(x2) 0 0;
+}
+
+.c-serp-header-link {
+    display: block;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include media('>mid') {
+        display: inline-block;
+    }
+}

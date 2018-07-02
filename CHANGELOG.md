@@ -5,11 +5,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.47.0
 ------------------------------
+*July 2, 2018*
+
+### Added
+- SERP header with alternative variations
+
+v0.47.0
+------------------------------
 *June 29, 2018*
 
 ### Added
 - Styling for address elements
-
 
 v0.46.0
 ------------------------------
