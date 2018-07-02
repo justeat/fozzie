@@ -21,7 +21,8 @@
     font-weight: 500;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
         text-decoration: underline;
     }
 
