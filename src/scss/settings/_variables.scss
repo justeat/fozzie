@@ -65,7 +65,7 @@ $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 //  Global Breakpoints
 // ==========================================================================
 $breakpoints: ko-map-to-em((
-    tiny     : 375px,    // older gen narrow devices
+    tiny     : 375px,
     narrow   : 414px,    // narrow devices
     mid      : 768px,    // mid bp
     wide     : 1025px,   // wide bp
