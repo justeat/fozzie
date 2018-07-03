@@ -1,0 +1,32 @@
+/**
+ * Content header Component
+ * =================================
+ * Used for restaurant count and location on search page
+ *
+ */
+
+.c-contentHeader {
+    padding-top: spacing(x2);
+    padding-bottom: spacing(x2);
+}
+
+.c-contentHeader-title {
+    padding: 0;
+    display: inline-block;
+    margin: 0 spacing(x2) 0 0;
+}
+
+.c-contentHeader-link {
+    display: block;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    @include media('>mid') {
+        display: inline-block;
+    }
+}
