@@ -10,7 +10,7 @@ v0.48.1
 ### Changed
 - Updated styling on listing component, improved layout on smallest variation of screens
 
-### Changed
+### Added
 - Addition of new breakpoint, tiny
 
 
