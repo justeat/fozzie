@@ -25,10 +25,6 @@ $listing-borderRadius       : 4px;
         border: 0;
         padding: 0;
         border-radius: 0;
-        // Negative margins used to bring the listing container outside of the the grid containers to
-        //  make 100% viewport width on mobile
-        margin-left: spacing(x2) * -1;
-        margin-right: spacing(x2) * -1;
     }
 }
 
@@ -43,7 +39,7 @@ $listing-borderRadius       : 4px;
         padding: spacing(x2);
         border-bottom: 1px solid $listing-borderColor;
 
-        @include media('>mid') {
+        @include media('>=mid') {
             padding: spacing(x2) 0;
         }
 
@@ -84,7 +80,11 @@ $listing-borderRadius       : 4px;
 
         .c-listing-item-img {
             float: left;
-            width: 50px;
+            width: 40px;
+
+            @include media('>=tiny') {
+                width: 50px;
+            }
 
             @include media('>wide') {
                 width: 65px;
@@ -100,7 +100,11 @@ $listing-borderRadius       : 4px;
             top: -4px;
             position: relative;
             color: $color-text;
-            padding-left: 66px;
+            padding-left: 56px;
+
+            @include media('>=tiny') {
+                padding-left: 66px;
+            }
 
             @include media('>wide') {
                 position: relative;
@@ -158,7 +162,11 @@ $listing-borderRadius       : 4px;
 
         .c-listing-item-details {
             width: 100%;
-            padding-left: 66px;
+            padding-left: 56px;
+
+            @include media('>=tiny') {
+                padding-left: 66px;
+            }
 
             @include media('>wide') {
                 right: 0;
@@ -197,11 +205,15 @@ $listing-borderRadius       : 4px;
 
         .c-listing-item-label,
         .c-listing-item-promo {
+            display: block;
             padding: 2px 5px;
             position: relative;
             margin-bottom: 4px;
-            display: inline-block;
             background: $listing-labelBackground;
+
+            @include media('>narrow') {
+                display: inline-block;
+            }
 
             & + & {
                 margin-left: spacing();
