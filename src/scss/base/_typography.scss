@@ -233,6 +233,18 @@ samp { font-family: $font-family-mono; }
     text-align: right;
 }
 
+.text-highlight {
+    color: $red;
+
+    @at-root em#{&} {
+        font-style: normal;
+    }
+}
+
+.text-indent {
+    margin-left: spacing(x2);
+}
+
 // @include ko-text-selection($color-selection, $color-selection-bg);
 
 // Horizontal rules
