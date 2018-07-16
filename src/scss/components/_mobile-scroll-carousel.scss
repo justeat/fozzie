@@ -1,0 +1,17 @@
+.c-mobileScrollCarousel {
+
+    @include media('<mid') {
+        overflow-x: scroll;
+        margin: 0 (spacing(x2) * -1);
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+    .c-mobileScrollCarousel-inner {
+
+        @include media('<mid') {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: spacing(x2);
+        }
+    }

@@ -1,0 +1,79 @@
+/**
+ * Mobile pop overs
+ * --------------------------------
+ * Used for mobile filters pop over
+ *
+ * ================================= */
+
+$mobilePopOver-background       : $white; 
+$mobilePopOver-padding          : spacing(x2);
+$mobilePopOver-border-color     : $grey--lightest;
+$mobilePopOver-shadow-color     : rgba($black, 0.12);
+
+.c-mobilePopOver {
+
+    @include media('<mid') {
+        left: 0;
+        top: 60px;
+        height: 0;
+        opacity: 0;
+        width: 100%;
+        position: fixed;
+        overflow: hidden;
+        z-index: zIndex(high);
+        background: $mobilePopOver-background;
+        transition: top 200ms ease, opacity 150ms ease;
+    
+    
+        &.active {
+            top: 0;
+            opacity: 1;
+            height: 100%;
+            overflow: visible;
+            padding: 72px $mobilePopOver-padding 96px $mobilePopOver-padding;
+        }
+    }
+}
+
+    .c-mobilePopOver-header,
+    .c-mobilePopOver-footer {
+        left: 0;
+        width: 100%;
+        position: absolute;
+        padding: $mobilePopOver-padding;
+
+        @include media('>=mid') {
+            display: none;
+        }
+    }
+    
+    .c-mobilePopOver-header {
+        top: 0;
+        box-shadow: 0 3px 4px 0 $grey--lighter;
+    }
+
+    .c-mobilePopOver-header-actionFirst,
+    .c-mobilePopOver-header-actionSecond {
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    .c-mobilePopOver-header-actionFirst {
+        left: $mobilePopOver-padding;
+    }
+
+    .c-mobilePopOver-header-actionSecond {
+        right: $mobilePopOver-padding;
+    }
+
+    .c-mobilePopOver-header-title {
+        margin-top: 0;
+        text-align: center;
+        font-weight: $font-weight-base;
+    }
+
+    .c-mobilePopOver-footer {
+        bottom: 0;
+        box-shadow: 0 -2px 2px 0 $grey--lighter;
+    }

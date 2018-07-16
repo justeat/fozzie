@@ -50,6 +50,13 @@ $listing-borderRadius       : 4px;
         .c-listing--offline & {
             border-color: $listing-offlineBorderColor;
         }
+
+        &.active {
+            display: block;
+        }
+        &.hidden {
+            display: none;
+        }
     }
 
         //when the listing item has a wrapper link descendent, make sure it doesn’t underline everything (only the main title)
