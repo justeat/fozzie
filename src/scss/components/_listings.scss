@@ -54,7 +54,7 @@ $listing-borderRadius       : 4px;
         &.active {
             display: block;
         }
-        &.hidden {
+        &.inactive {
             display: none;
         }
     }
