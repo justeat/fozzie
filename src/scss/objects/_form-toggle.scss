@@ -21,14 +21,14 @@ $formToggle-button-background       : $blue--offWhite;
     display: inline-block;
     margin-bottom: spacing(base);
     border-radius: $formToggle-border-radius;
-    padding:  ($formToggle-padding / 2)  $formToggle-padding;
+    padding: ($formToggle-padding / 2) $formToggle-padding;
     border: $formToggle-border-width solid $formToggle-border-color;
 
     &--button {
         padding-left: spacing(x4);
         color: $formToggle-button-color;
-        background: $formToggle-button-background ;
-        border-color: $formToggle-button-background ;
+        background: $formToggle-button-background;
+        border-color: $formToggle-button-background;
     }
 
     &--buttonIcon {
@@ -110,7 +110,7 @@ $formToggle-button-background       : $blue--offWhite;
             border-bottom: 1px solid $formToggle-tick-background;
             transition: transform 200ms ease, opacity 250ms ease;
         }
-        
+
         .o-formToggle-input:checked ~ & {
 
             padding-left: 20px;
@@ -150,7 +150,7 @@ $formToggle-button-background       : $blue--offWhite;
             }
         }
     }
-    
+
     .o-formToggle-count {
         top: 50%;
         position: absolute;

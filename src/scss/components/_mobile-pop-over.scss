@@ -5,7 +5,7 @@
  *
  * ================================= */
 
-$mobilePopOver-background       : $white; 
+$mobilePopOver-background       : $white;
 $mobilePopOver-padding          : spacing(x2);
 $mobilePopOver-border-color     : $grey--lightest;
 $mobilePopOver-shadow-color     : rgba($black, 0.12);
@@ -23,8 +23,7 @@ $mobilePopOver-shadow-color     : rgba($black, 0.12);
         z-index: zIndex(high);
         background: $mobilePopOver-background;
         transition: top 200ms ease, opacity 150ms ease;
-    
-    
+
         &.active {
             top: 0;
             opacity: 1;
@@ -46,7 +45,7 @@ $mobilePopOver-shadow-color     : rgba($black, 0.12);
             display: none;
         }
     }
-    
+
     .c-mobilePopOver-header {
         top: 0;
         box-shadow: 0 3px 4px 0 $grey--lighter;
