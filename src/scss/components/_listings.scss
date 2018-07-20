@@ -28,7 +28,7 @@ $listing-borderRadius       : 4px;
         padding: 0;
         border-radius: 0;
 
-        &.loading {
+        &.is-loading {
             opacity: 0;
             transform: translateY(20px);
         }
