@@ -37,7 +37,7 @@ $fullScreenPopOver-shadow-color     : rgba($black, 0.12);
     .c-fullScreenPopOver-header,
     .c-fullScreenPopOver-footer {
         left: 0;
-        width: 100%;
+        width: 100vw;
         position: absolute;
         padding: $fullScreenPopOver-padding;
 
