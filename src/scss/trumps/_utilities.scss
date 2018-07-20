@@ -80,22 +80,6 @@
 // Hide visually and from screenreaders, but maintain layout
 .is-invisible { visibility: hidden; }
 
-.is-hiddenBelowMid {
-
-    @include media('<mid') {
-        display: none;
-        visibility: hidden;
-    }
-}
-
-.is-hiddenAboveMid {
-
-    @include media('>=mid') {
-        display: none;
-        visibility: hidden;
-    }
-}
-
 .u-pointer {
     cursor: pointer;
 }
