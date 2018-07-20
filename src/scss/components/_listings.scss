@@ -59,11 +59,11 @@ $listing-borderRadius       : 4px;
             border-color: $listing-offlineBorderColor;
         }
 
-        &.active {
+        &.is-active {
             display: block;
         }
 
-        &.inactive {
+        &.is-inactive {
             display: none;
         }
     }

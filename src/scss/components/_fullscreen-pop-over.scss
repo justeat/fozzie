@@ -1,16 +1,16 @@
 /**
- * Mobile pop overs
+ * Fullscreen pop overs
  * --------------------------------
  * Used for mobile filters pop over
  *
  * ================================= */
 
-$mobilePopOver-background       : $white;
-$mobilePopOver-padding          : spacing(x2);
-$mobilePopOver-border-color     : $grey--lightest;
-$mobilePopOver-shadow-color     : rgba($black, 0.12);
+$fullScreenPopOver-background       : $white;
+$fullScreenPopOver-padding          : spacing(x2);
+$fullScreenPopOver-border-color     : $grey--lightest;
+$fullScreenPopOver-shadow-color     : rgba($black, 0.12);
 
-.c-mobilePopOver {
+.c-fullScreenPopOver {
 
     @include media('<mid') {
         left: 0;
@@ -21,7 +21,7 @@ $mobilePopOver-shadow-color     : rgba($black, 0.12);
         position: fixed;
         overflow: hidden;
         z-index: zIndex(high);
-        background: $mobilePopOver-background;
+        background: $fullScreenPopOver-background;
         transition: top 200ms ease, opacity 150ms ease;
 
         &.active {
@@ -29,50 +29,50 @@ $mobilePopOver-shadow-color     : rgba($black, 0.12);
             opacity: 1;
             height: 100%;
             overflow: visible;
-            padding: 72px $mobilePopOver-padding 96px $mobilePopOver-padding;
+            padding: 72px $fullScreenPopOver-padding 96px $fullScreenPopOver-padding;
         }
     }
 }
 
-    .c-mobilePopOver-header,
-    .c-mobilePopOver-footer {
+    .c-fullScreenPopOver-header,
+    .c-fullScreenPopOver-footer {
         left: 0;
         width: 100%;
         position: absolute;
-        padding: $mobilePopOver-padding;
+        padding: $fullScreenPopOver-padding;
 
         @include media('>=mid') {
             display: none;
         }
     }
 
-    .c-mobilePopOver-header {
+    .c-fullScreenPopOver-header {
         top: 0;
         box-shadow: 0 3px 4px 0 $grey--lighter;
     }
 
-    .c-mobilePopOver-header-actionFirst,
-    .c-mobilePopOver-header-actionSecond {
+    .c-fullScreenPopOver-header-actionFirst,
+    .c-fullScreenPopOver-header-actionSecond {
         top: 50%;
         position: absolute;
         transform: translateY(-50%);
     }
 
-    .c-mobilePopOver-header-actionFirst {
-        left: $mobilePopOver-padding;
+    .c-fullScreenPopOver-header-actionFirst {
+        left: $fullScreenPopOver-padding;
     }
 
-    .c-mobilePopOver-header-actionSecond {
-        right: $mobilePopOver-padding;
+    .c-fullScreenPopOver-header-actionSecond {
+        right: $fullScreenPopOver-padding;
     }
 
-    .c-mobilePopOver-header-title {
+    .c-fullScreenPopOver-header-title {
         margin-top: 0;
         text-align: center;
         font-weight: $font-weight-base;
     }
 
-    .c-mobilePopOver-footer {
+    .c-fullScreenPopOver-footer {
         bottom: 0;
         box-shadow: 0 -2px 2px 0 $grey--lighter;
     }
