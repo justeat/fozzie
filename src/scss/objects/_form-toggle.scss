@@ -120,6 +120,13 @@ $formToggle-button-background       : $blue--offWhite;
                 opacity: 1;
                 transform: rotate(-45deg) scale(1);
             }
+        }
+
+        .o-formToggle:hover &,
+        .o-formToggle:focus &,
+        .o-formToggle-input:hover ~ &,
+        .o-formToggle-input:focus ~ &,
+        .o-formToggle-input:checked ~ & {
 
             &:after {
                 top: -1px;
