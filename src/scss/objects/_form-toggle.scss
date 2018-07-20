@@ -5,12 +5,12 @@
  *
  * ================================= */
 
-$formToggle-padding                 : spacing(base) !default;
+$formToggle-padding                 : spacing() !default;
 $formToggle-border-color            : $grey--lightest;
 $formToggle-border-color-checked    : $grey--lighter;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
-$formToggle-tick-background         : #04822c;
+$formToggle-tick-background         : $green;
 $formToggle-background              : $white;
 $formToggle-large-size              : 48px;
 $formToggle-button-color            : $blue;
@@ -19,19 +19,24 @@ $formToggle-button-background       : $blue--offWhite;
 .o-formToggle {
     position: relative;
     display: inline-block;
-    margin-bottom: spacing(base);
+    margin-bottom: spacing();
     border-radius: $formToggle-border-radius;
     padding: ($formToggle-padding / 2) $formToggle-padding;
     border: $formToggle-border-width solid $formToggle-border-color;
 
-    &--button {
+    @include media('>=mid') {
+        background: $formToggle-background;
+    }
+}
+
+    .o-formToggle--button {
         padding-left: spacing(x4);
         color: $formToggle-button-color;
         background: $formToggle-button-background;
         border-color: $formToggle-button-background;
     }
 
-    &--buttonIcon {
+    .o-formToggle--buttonIcon {
         top: 50%;
         position: absolute;
         left: $formToggle-padding;
@@ -39,7 +44,7 @@ $formToggle-button-background       : $blue--offWhite;
         fill: $formToggle-button-color;
     }
 
-    &--fullWidth {
+    .o-formToggle--fullWidth {
         width: 100%;
         display: block;
 
@@ -48,28 +53,28 @@ $formToggle-button-background       : $blue--offWhite;
         }
     }
 
-    &--withCount {
+    .o-formToggle--withCount {
         padding-right: 15px;
     }
 
-    &--withBg {
+    .o-formToggle--withBg {
         background: $formToggle-background;
     }
 
-    &--mediumSized {
+    .o-formToggle--mediumSized {
         padding: $formToggle-padding ($formToggle-padding * 1.5);
     }
 
-    &--largeSized {
+    .o-formToggle--largeSized {
         height: $formToggle-large-size;
         width: calc(50% - 4px);
 
         &:nth-child(2n) {
-            margin-left: spacing(base);
+            margin-left: spacing();
         }
     }
 
-    &--largeAboveMid {
+    .o-formToggle--largeAboveMid {
 
         @include media('>=mid') {
             float: left;
@@ -77,15 +82,10 @@ $formToggle-button-background       : $blue--offWhite;
             height: $formToggle-large-size;
 
             &:nth-child(2n) {
-                margin-left: spacing(base);
+                margin-left: spacing();
             }
         }
     }
-
-    @include media('>=mid') {
-        background: $formToggle-background;
-    }
-}
 
     .o-formToggle-text {
         display: block;
@@ -103,7 +103,7 @@ $formToggle-button-background       : $blue--offWhite;
             height: 5px;
             position: absolute;
             margin-top: -4px;
-            left: spacing(base);
+            left: spacing();
             display: inline-block;
             transform: rotate(-45deg) scale(0.5);
             border-left: 1px solid $formToggle-tick-background;
@@ -161,6 +161,6 @@ $formToggle-button-background       : $blue--offWhite;
     .o-formToggle-count {
         top: 50%;
         position: absolute;
-        right: spacing(base);
+        right: spacing();
         transform: translateY(-50%);
     }
