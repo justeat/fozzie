@@ -17,7 +17,7 @@ $fullScreenPopOver-shadow-color     : rgba($black, 0.12);
         top: 60px;
         height: 0;
         opacity: 0;
-        width: 100%;
+        width: 100vw;
         position: fixed;
         overflow: hidden;
         z-index: zIndex(high);
@@ -27,7 +27,7 @@ $fullScreenPopOver-shadow-color     : rgba($black, 0.12);
         &.is-active {
             top: 0;
             opacity: 1;
-            height: 100%;
+            height: 100vh;
             overflow: visible;
             padding: 72px $fullScreenPopOver-padding 96px $fullScreenPopOver-padding;
         }
