@@ -9,7 +9,6 @@
 
     @include media('<mid') {
         margin: 0 (spacing(x2) * -1);
-        width: 100%;
     }
 }
 
