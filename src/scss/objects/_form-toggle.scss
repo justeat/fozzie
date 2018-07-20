@@ -65,8 +65,7 @@ $formToggle-button-background       : $blue--offWhite;
         padding: $formToggle-padding ($formToggle-padding * 1.5);
     }
 
-    .o-formToggle--largeSized {
-        height: $formToggle-large-size;
+    @mixin formToggleLarge() {
         width: calc(50% - 4px);
 
         &:nth-child(2n) {
@@ -74,16 +73,15 @@ $formToggle-button-background       : $blue--offWhite;
         }
     }
 
+    .o-formToggle--largeSized {
+        height: $formToggle-large-size;
+        @include formToggleLarge();
+    }
+
     .o-formToggle--largeAboveMid {
 
         @include media('>=mid') {
-            float: left;
-            width: calc(50% - 4px);
-            height: $formToggle-large-size;
-
-            &:nth-child(2n) {
-                margin-left: spacing();
-            }
+            @include formToggleLarge();
         }
     }
 
@@ -127,6 +125,8 @@ $formToggle-button-background       : $blue--offWhite;
         .o-formToggle-input:focus ~ &,
         .o-formToggle-input:checked ~ & {
 
+            //the &:after is to create a border that sits over the top of the parents,
+            // it creates a visual state on the parent without the need for a JS class toggle
             &:after {
                 top: -1px;
                 left: -1px;

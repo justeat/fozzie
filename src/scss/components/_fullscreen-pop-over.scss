@@ -24,7 +24,7 @@ $fullScreenPopOver-shadow-color     : rgba($black, 0.12);
         background: $fullScreenPopOver-background;
         transition: top 200ms ease, opacity 150ms ease;
 
-        &.active {
+        &.is-active {
             top: 0;
             opacity: 1;
             height: 100%;
