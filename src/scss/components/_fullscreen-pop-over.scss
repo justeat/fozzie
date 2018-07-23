@@ -1,0 +1,78 @@
+/**
+ * Fullscreen pop overs
+ * --------------------------------
+ * Used for mobile filters pop over
+ *
+ * ================================= */
+
+$fullScreenPopOver-background       : $white;
+$fullScreenPopOver-padding          : spacing(x2);
+$fullScreenPopOver-border-color     : $grey--lightest;
+$fullScreenPopOver-shadow-color     : rgba($black, 0.12);
+
+.c-fullScreenPopOver {
+
+    @include media('<mid') {
+        left: 0;
+        top: 60px;
+        height: 0;
+        opacity: 0;
+        width: 100vw;
+        position: fixed;
+        overflow: hidden;
+        z-index: zIndex(high);
+        background: $fullScreenPopOver-background;
+        transition: top 200ms ease, opacity 150ms ease;
+
+        &.is-active {
+            top: 0;
+            opacity: 1;
+            height: 100vh;
+            overflow: visible;
+            padding: 72px $fullScreenPopOver-padding 96px $fullScreenPopOver-padding;
+        }
+    }
+}
+
+    .c-fullScreenPopOver-header,
+    .c-fullScreenPopOver-footer {
+        left: 0;
+        width: 100vw;
+        position: absolute;
+        padding: $fullScreenPopOver-padding;
+
+        @include media('>=mid') {
+            display: none;
+        }
+    }
+
+    .c-fullScreenPopOver-header {
+        top: 0;
+        box-shadow: 0 3px 4px 0 $grey--lighter;
+    }
+
+    .c-fullScreenPopOver-header-actionFirst,
+    .c-fullScreenPopOver-header-actionSecond {
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    .c-fullScreenPopOver-header-actionFirst {
+        left: $fullScreenPopOver-padding;
+    }
+
+    .c-fullScreenPopOver-header-actionSecond {
+        right: $fullScreenPopOver-padding;
+    }
+
+    .c-fullScreenPopOver-header-title {
+        margin-top: 0;
+        text-align: center;
+        font-weight: $font-weight-base;
+    }
+
+    .c-fullScreenPopOver-footer {
+        bottom: 0;
+        box-shadow: 0 -2px 2px 0 $grey--lighter;
+    }

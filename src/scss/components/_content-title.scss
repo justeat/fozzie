@@ -1,0 +1,29 @@
+/**
+ * Content title Component
+ * =================================
+ * Used for a title with an text action to the right e.g. filter title
+ *
+ */
+
+.c-contentTitle {
+    display: flex;
+    align-items: center;
+    margin: spacing(x2) 0;
+}
+
+    .c-contentTitle-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: spacing();
+    }
+
+    .c-contentTitle-text {
+        margin: 0;
+        width: 100%;
+        font-weight: $font-weight-base;
+        @include font-size(base--scaleUp, false);
+    }
+
+    .c-contentTitle-action {
+        font-weight: $font-weight-bold;
+    }

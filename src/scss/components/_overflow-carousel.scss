@@ -1,0 +1,36 @@
+/**
+ * Overflow scroll carousel
+ * --------------------------------
+ * Used for mobile filter carousel
+ *
+ * ================================= */
+
+.c-overflowCarousel {
+
+    @include media('<mid') {
+        margin: 0 (spacing(x2) * -1);
+    }
+}
+
+    .c-overflowCarousel-inner {
+
+        @include media('<mid') {
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+
+            &.is-active {
+                overflow: visible;
+            }
+        }
+    }
+
+    .c-overflowCarousel-content {
+
+        @include media('<mid') {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: spacing(x2);
+            padding-right: spacing(x2);
+        }
+    }
