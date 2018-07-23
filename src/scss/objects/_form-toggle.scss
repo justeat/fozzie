@@ -81,6 +81,7 @@ $formToggle-button-background       : $blue--offWhite;
     .o-formToggle--largeAboveMid {
 
         @include media('>=mid') {
+            float: left;
             @include formToggleLarge();
         }
     }
