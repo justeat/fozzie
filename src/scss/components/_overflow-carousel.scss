@@ -13,7 +13,7 @@
 }
 
     .c-overflowCarousel-inner {
-    
+
         @include media('<mid') {
             overflow: scroll;
             -webkit-overflow-scrolling: touch;
