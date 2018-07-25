@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v0.51.2
+------------------------------
+*July 25, 2018*
+
+### Changed
+ - Remove of margin top on listing item meta block to change to a <p> for better screen reader experience
+
 v0.51.1
 ------------------------------
 *July 23, 2018*

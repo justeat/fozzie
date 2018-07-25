@@ -152,6 +152,7 @@ $listing-borderRadius       : 4px;
         .c-listing-item-meta {
             top: -3px;
             float: right;
+            margin-top: 0;
             position: relative;
 
             @include media('>wide') {
