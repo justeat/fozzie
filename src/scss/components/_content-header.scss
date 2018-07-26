@@ -7,19 +7,39 @@
 
 .c-contentHeader {
     padding-top: spacing(x2);
-    padding-bottom: spacing(x2);
+    padding-bottom: spacing();
 }
 
 .c-contentHeader-title {
     padding: 0;
     display: inline-block;
     margin: 0 spacing(x2) 0 0;
+    font-weight: $font-weight-base;
+    font-family: $font-family-headings;
+    @include font-size(base--scaleUp, false);
+}
+
+.c-contentHeader-subTitle {
+    display: block;
+    margin-top: 4px;
+    @include font-size(base, false);
+
+    @include media('>mid') {
+        display: inline-block;
+    }
+}
+
+.c-contentHeader-title,
+.c-contentHeader-subTitle {
+    @include media('>=mid') {
+        @include font-size(jumbo, false);
+    }
 }
 
 .c-contentHeader-link {
     display: block;
     text-decoration: none;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-base;
 
     &:hover,
     &:focus {
