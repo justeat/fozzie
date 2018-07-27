@@ -15,7 +15,6 @@
     display: inline-block;
     margin: 0 spacing(x2) 0 0;
     font-weight: $font-weight-base;
-    font-family: $font-family-headings;
     @include font-size(base--scaleUp, false);
 }
 
