@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.51.3
 ------------------------------
-*July 25, 2018*
+*July 27, 2018*
 
 ### Changed
  - Update of font styles to content header
