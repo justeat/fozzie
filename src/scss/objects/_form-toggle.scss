@@ -19,10 +19,14 @@ $formToggle-button-background       : $blue--offWhite;
 .o-formToggle {
     position: relative;
     display: inline-block;
-    margin-bottom: spacing();
+    margin: 0 0 spacing() (spacing() / 2);
     border-radius: $formToggle-border-radius;
     padding: ($formToggle-padding / 2) $formToggle-padding;
     border: $formToggle-border-width solid $formToggle-border-color;
+
+    &:first-child {
+        margin-left: 0;
+    }
 
     @include media('>=mid') {
         background: $formToggle-background;
