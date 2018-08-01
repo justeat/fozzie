@@ -9,6 +9,8 @@ v0.53.0
 
 ### Changed
  - height unit on fullScreenOverlay
+ - addition of .o-formToggle--disabled state styles
+ - addition of form toggle inline spacing to give 44px touch area
 
 
 v0.52.0

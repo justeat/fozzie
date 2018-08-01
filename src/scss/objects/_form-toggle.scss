@@ -11,25 +11,27 @@ $formToggle-border-color-checked    : $grey--lighter;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
 $formToggle-tick-background         : $green;
+$formToggle-tick-hover-background   : $grey--lighter;
 $formToggle-background              : $white;
 $formToggle-large-size              : 48px;
 $formToggle-button-color            : $blue;
 $formToggle-button-background       : $blue--offWhite;
+$formToggle-disabled-text           : $grey--lighter;
 
 .o-formToggle {
     position: relative;
     display: inline-block;
-    margin: 0 0 spacing() (spacing() / 2);
+    margin-bottom: spacing();
     border-radius: $formToggle-border-radius;
     padding: ($formToggle-padding / 2) $formToggle-padding;
     border: $formToggle-border-width solid $formToggle-border-color;
 
-    &:first-child {
-        margin-left: 0;
-    }
-
     @include media('>=mid') {
         background: $formToggle-background;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -46,6 +48,10 @@ $formToggle-button-background       : $blue--offWhite;
         left: $formToggle-padding;
         transform: translateY(-50%);
         fill: $formToggle-button-color;
+    }
+
+    .o-formToggle--inline {
+        margin: spacing() 0 spacing() (spacing() / 2) ;
     }
 
     .o-formToggle--fullWidth {
@@ -86,6 +92,7 @@ $formToggle-button-background       : $blue--offWhite;
 
         @include media('>=mid') {
             float: left;
+            margin: 0 0 spacing();
             @include formToggleLarge();
         }
     }
@@ -114,7 +121,15 @@ $formToggle-button-background       : $blue--offWhite;
             transition: transform 200ms ease, opacity 250ms ease;
         }
 
-        .o-formToggle-input:checked ~ & {
+        .o-formToggle-input:not([disabled]):not(:checked):hover ~ & {
+
+            &:before {
+                border-color: $formToggle-tick-hover-background;
+            }
+        }
+
+        .o-formToggle-input:checked ~ &,
+        .o-formToggle-input:not(:disabled):hover ~ & {
             padding-left: 20px;
             font-weight: $font-weight-bold;
 
@@ -124,11 +139,11 @@ $formToggle-button-background       : $blue--offWhite;
             }
         }
 
-        .o-formToggle:hover &,
-        .o-formToggle:focus &,
-        .o-formToggle-input:hover ~ &,
-        .o-formToggle-input:focus ~ &,
-        .o-formToggle-input:checked ~ & {
+        .o-formToggle:not(.o-formToggle--disabled):hover &,
+        .o-formToggle:not(.o-formToggle--disabled):focus &,
+        .o-formToggle-input:not([disabled]):hover ~ &,
+        .o-formToggle-input:not([disabled]):focus ~ &,
+        .o-formToggle-input:not([disabled]):checked ~ & {
 
             //the &:after is to create a border that sits over the top of the parents,
             // it creates a visual state on the parent without the need for a JS class toggle
@@ -167,4 +182,9 @@ $formToggle-button-background       : $blue--offWhite;
         position: absolute;
         right: spacing();
         transform: translateY(-50%);
+    }
+
+    .o-formToggle--disabled {
+        background: none;
+        color: $formToggle-disabled-text;
     }
