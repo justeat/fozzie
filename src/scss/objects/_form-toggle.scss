@@ -48,7 +48,7 @@ $formToggle-disabled-text           : $grey--lighter;
     }
 
     .o-formToggle--inline {
-        margin: spacing() 0 spacing() (spacing() / 2) ;
+        margin: spacing() 0 spacing() (spacing() / 2);
     }
 
     .o-formToggle--fullWidth {
@@ -118,7 +118,8 @@ $formToggle-disabled-text           : $grey--lighter;
             transition: transform 200ms ease, opacity 250ms ease;
         }
 
-        .o-formToggle-input:not([disabled]):not(:checked):hover ~ & {
+        .o-formToggle-input:not([disabled]):hover ~ &,
+        .o-formToggle-input:not(:checked):hover ~ & {
 
             &:before {
                 border-color: $formToggle-tick-hover-background;
