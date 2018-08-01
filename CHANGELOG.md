@@ -7,7 +7,7 @@ v0.53.0
 ------------------------------
 *August 1, 2018*
 
-### Changed
+### Added
  - addition of .o-formToggle--disabled state styles
  - addition of form toggle inline spacing to give 44px touch area
  - addition of cursor pointer of form toggle hover
