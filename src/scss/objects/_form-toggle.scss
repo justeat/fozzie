@@ -10,8 +10,8 @@ $formToggle-border-color            : $grey--lightest;
 $formToggle-border-color-checked    : $grey--lighter;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
-$formToggle-tick-background         : $green;
-$formToggle-tick-hover-background   : $grey--lighter;
+$formToggle-icon-background         : $green;
+$formToggle-icon-hover-background   : $grey--lighter;
 $formToggle-background              : $white;
 $formToggle-large-size              : 48px;
 $formToggle-button-color            : $blue;
@@ -47,7 +47,8 @@ $formToggle-disabled-text           : $grey--lighter;
         fill: $formToggle-button-color;
     }
 
-    .o-formToggle--inline {
+    //Used alongside the default styles but for a larger tap area (min 44px)
+    .o-formToggle--largeTouchArea {
         margin: spacing() 0 spacing() (spacing() / 2);
     }
 
@@ -113,8 +114,8 @@ $formToggle-disabled-text           : $grey--lighter;
             left: spacing();
             display: inline-block;
             transform: rotate(-45deg) scale(0.5);
-            border-left: 1px solid $formToggle-tick-background;
-            border-bottom: 1px solid $formToggle-tick-background;
+            border-left: 1px solid $formToggle-icon-background;
+            border-bottom: 1px solid $formToggle-icon-background;
             transition: transform 200ms ease, opacity 250ms ease;
         }
 
@@ -122,7 +123,7 @@ $formToggle-disabled-text           : $grey--lighter;
         .o-formToggle-input:not(:checked):hover ~ & {
 
             &:before {
-                border-color: $formToggle-tick-hover-background;
+                border-color: $formToggle-icon-hover-background;
             }
         }
 

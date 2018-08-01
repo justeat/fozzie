@@ -8,10 +8,12 @@ v0.53.0
 *August 1, 2018*
 
 ### Changed
- - height unit on fullScreenOverlay
  - addition of .o-formToggle--disabled state styles
  - addition of form toggle inline spacing to give 44px touch area
  - addition of cursor pointer of form toggle hover
+
+### Fixed
+ - height unit on fullScreenOverlay from vh to % as Android didnt take into account browser bars making 100vh larger than 100%
 
 
 v0.52.0
