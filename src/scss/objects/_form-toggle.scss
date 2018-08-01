@@ -30,9 +30,6 @@ $formToggle-disabled-text           : $grey--lighter;
         background: $formToggle-background;
     }
 
-    &:hover {
-        cursor: pointer;
-    }
 }
 
     .o-formToggle--button {
@@ -144,6 +141,7 @@ $formToggle-disabled-text           : $grey--lighter;
         .o-formToggle-input:not([disabled]):hover ~ &,
         .o-formToggle-input:not([disabled]):focus ~ &,
         .o-formToggle-input:not([disabled]):checked ~ & {
+            cursor: pointer;
 
             //the &:after is to create a border that sits over the top of the parents,
             // it creates a visual state on the parent without the need for a JS class toggle
