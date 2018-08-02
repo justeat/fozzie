@@ -27,7 +27,7 @@ $fullScreenPopOver-shadow-color     : rgba($black, 0.12);
         &.is-active {
             top: 0;
             opacity: 1;
-            height: 100vh;
+            height: 100%;
             overflow: visible;
             padding: 72px $fullScreenPopOver-padding 96px $fullScreenPopOver-padding;
         }
