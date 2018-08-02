@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.53.0
 ------------------------------
-*August 1, 2018*
+*August 2, 2018*
 
 ### Added
  - addition of .o-formToggle--disabled state styles
