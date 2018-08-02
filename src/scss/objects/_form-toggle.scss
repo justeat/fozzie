@@ -10,11 +10,13 @@ $formToggle-border-color            : $grey--lightest;
 $formToggle-border-color-checked    : $grey--lighter;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
-$formToggle-tick-background         : $green;
+$formToggle-icon-background         : $green;
+$formToggle-icon-hover-background   : $grey--lighter;
 $formToggle-background              : $white;
 $formToggle-large-size              : 48px;
 $formToggle-button-color            : $blue;
 $formToggle-button-background       : $blue--offWhite;
+$formToggle-disabled-text           : $grey--lighter;
 
 .o-formToggle {
     position: relative;
@@ -27,6 +29,7 @@ $formToggle-button-background       : $blue--offWhite;
     @include media('>=mid') {
         background: $formToggle-background;
     }
+
 }
 
     .o-formToggle--button {
@@ -42,6 +45,11 @@ $formToggle-button-background       : $blue--offWhite;
         left: $formToggle-padding;
         transform: translateY(-50%);
         fill: $formToggle-button-color;
+    }
+
+    //Used alongside the default styles but for a larger tap area (min 44px)
+    .o-formToggle--largeTouchArea {
+        margin: spacing() 0 spacing() (spacing() / 2);
     }
 
     .o-formToggle--fullWidth {
@@ -82,6 +90,7 @@ $formToggle-button-background       : $blue--offWhite;
 
         @include media('>=mid') {
             float: left;
+            margin: 0 0 spacing();
             @include formToggleLarge();
         }
     }
@@ -105,12 +114,21 @@ $formToggle-button-background       : $blue--offWhite;
             left: spacing();
             display: inline-block;
             transform: rotate(-45deg) scale(0.5);
-            border-left: 1px solid $formToggle-tick-background;
-            border-bottom: 1px solid $formToggle-tick-background;
+            border-left: 1px solid $formToggle-icon-background;
+            border-bottom: 1px solid $formToggle-icon-background;
             transition: transform 200ms ease, opacity 250ms ease;
         }
 
-        .o-formToggle-input:checked ~ & {
+        .o-formToggle-input:not([disabled]):hover ~ &,
+        .o-formToggle-input:not(:checked):hover ~ & {
+
+            &:before {
+                border-color: $formToggle-icon-hover-background;
+            }
+        }
+
+        .o-formToggle-input:checked ~ &,
+        .o-formToggle-input:not(:disabled):hover ~ & {
             padding-left: 20px;
             font-weight: $font-weight-bold;
 
@@ -120,11 +138,12 @@ $formToggle-button-background       : $blue--offWhite;
             }
         }
 
-        .o-formToggle:hover &,
-        .o-formToggle:focus &,
-        .o-formToggle-input:hover ~ &,
-        .o-formToggle-input:focus ~ &,
-        .o-formToggle-input:checked ~ & {
+        .o-formToggle:not(.o-formToggle--disabled):hover &,
+        .o-formToggle:not(.o-formToggle--disabled):focus &,
+        .o-formToggle-input:not([disabled]):hover ~ &,
+        .o-formToggle-input:not([disabled]):focus ~ &,
+        .o-formToggle-input:not([disabled]):checked ~ & {
+            cursor: pointer;
 
             //the &:after is to create a border that sits over the top of the parents,
             // it creates a visual state on the parent without the need for a JS class toggle
@@ -163,4 +182,9 @@ $formToggle-button-background       : $blue--offWhite;
         position: absolute;
         right: spacing();
         transform: translateY(-50%);
+    }
+
+    .o-formToggle--disabled {
+        background: none;
+        color: $formToggle-disabled-text;
     }

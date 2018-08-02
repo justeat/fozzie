@@ -3,6 +3,19 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v0.53.0
+------------------------------
+*August 2, 2018*
+
+### Added
+ - addition of .o-formToggle--disabled state styles
+ - addition of form toggle inline spacing to give 44px touch area
+ - addition of cursor pointer of form toggle hover
+
+### Fixed
+ - height unit on fullScreenOverlay from vh to % as Android didnt take into account browser bars making 100vh larger than 100%
+
+
 v0.52.0
 ------------------------------
 *July 27, 2018*
