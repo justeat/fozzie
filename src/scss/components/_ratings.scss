@@ -53,6 +53,14 @@ Selectable stars rating component
    }
 }
 
+.c-ratingSelectable-input:disabled,
+.c-ratingSelectable-input[disabled] {
+    & + label {
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
 .c-icon--star {
     display: block;
     cursor: pointer;
