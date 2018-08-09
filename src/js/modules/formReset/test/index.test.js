@@ -9,13 +9,13 @@ describe('module init', () => {
 
     it('will not error if no [data-js-reset] is available', () => {
         // Arrange
-        TestUtils.setBodyHtml(``);
+        TestUtils.setBodyHtml('');
 
         // Act
         init();
         const button = $('[data-js-reset]');
-        
-        //Assert
+
+        // Assert
         expect(button.length).toBe(0);
     });
 
