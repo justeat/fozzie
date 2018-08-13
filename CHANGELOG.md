@@ -5,10 +5,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.54.0
 ------------------------------
-*August 9, 2018*
+*August 13, 2018*
 
 ### Added
- - addition of form reset javascript module and associated unit tests
+ - Addition of form reset javascript module and associated unit tests
 
 v0.53.1
 ------------------------------

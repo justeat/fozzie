@@ -7,7 +7,7 @@ describe('module init', () => {
         expect(typeof init).toBe('function');
     });
 
-    it('will not error if no [data-js-reset] is available', () => {
+    it('will check if a [data-js-reset] is available', () => {
         // Arrange
         TestUtils.setBodyHtml('');
 
@@ -19,42 +19,57 @@ describe('module init', () => {
         expect(button.length).toBe(0);
     });
 
-    it('will uncheck a radio buttons from from button trigger bound on init()', () => {
-        // Arrange
-        TestUtils.setBodyHtml(`
-            <a data-js-reset="testGroup"></a>
-            <input type="radio" data-js-reset-input="testGroup" checked/>
-        `);
+    describe('When multiple form elements are cleared', () => {
+        it('should uncheck a radio form element from button trigger bound on init', () => {
+            // Arrange
+            TestUtils.setBodyHtml(`
+                <a data-js-reset="testGroup"></a>
+                <input type="radio" data-js-reset-input="testGroup" checked/>
+            `);
+    
+            // Act
+            init();
+            const [button] = document.querySelectorAll('[data-js-reset]');
+            TestUtils.click(button);
+    
+            // Assert
+            const [radio] = document.querySelectorAll('[data-js-reset-input]');
+            expect(radio.checked).toBe(false);
+        });
 
-        // Act
-        init();
-        const [button] = document.querySelectorAll('[data-js-reset]');
-        TestUtils.click(button);
+        it('should uncheck a checkbox form element from button trigger bound on init', () => {
+            // Arrange
+            TestUtils.setBodyHtml(`
+                <a data-js-reset="testGroup"></a>
+                <input type="checkbox" data-js-reset-input="testGroup" checked/>
+            `);
+    
+            // Act
+            init();
+            const [button] = document.querySelectorAll('[data-js-reset]');
+            TestUtils.click(button);
+    
+            // Assert
+            const [checkbox] = document.querySelectorAll('[data-js-reset-input]');
+            expect(checkbox.checked).toBe(false);
+        });
 
-        // Assert
-        const [radio] = document.querySelectorAll('[data-js-reset-input]');
-        expect(radio.checked).toBe(false);
-    });
-
-    it('will clear multiple form elements from button trigger bound on init()', () => {
-        // Arrange
-        TestUtils.setBodyHtml(`
-            <a data-js-reset="testGroup"></a>
-            <input type="radio" data-js-reset-input="testGroup" checked/>
-            <input type="checkbox" data-js-reset-input="testGroup" checked/>
-            <input type="text" data-js-reset-input="testGroup" value="testing is good for you" />
-        `);
-
-        // Act
-        init();
-        const [button] = document.querySelectorAll('[data-js-reset]');
-        TestUtils.click(button);
-
-        // Assert
-        const [radio, checkbox, input] = document.querySelectorAll('[data-js-reset-input]');
-        expect(radio.checked).toBe(false);
-        expect(checkbox.checked).toBe(false);
-        expect(input.value.length).toBe(0);
+        it('should uncheck a checkbox form element from button trigger bound on init', () => {
+            // Arrange
+            TestUtils.setBodyHtml(`
+                <a data-js-reset="testGroup"></a>
+                <input type="text" data-js-reset-input="testGroup" value="testing is good for you" />
+            `);
+    
+            // Act
+            init();
+            const [button] = document.querySelectorAll('[data-js-reset]');
+            TestUtils.click(button);
+    
+            // Assert
+            const [input] = document.querySelectorAll('[data-js-reset-input]');
+            expect(input.value.length).toBe(0);
+        });
     });
 });
 
@@ -123,27 +138,30 @@ describe('resetInputs', () => {
         expect(input.value.length).toBe(0);
     });
 
-    it('wont error if reset form button is clicked but no elements need resetting', () => {
-        // Arrange
-        TestUtils.setBodyHtml(`
-            <input type="text" data-js-reset-input="testGroup" value=""/>
-            <input type="radio" data-js-reset-input="testGroup" checked/>
-            <input type="checkbox" data-js-reset-input="testGroup" checked/>
-        `);
+    describe('When no form elements need to be reset and reset action is fired', () => {
 
-        const event = {
-            target: {
-                getAttribute:  () => 'testGroup'
-            }
-        };
+        it('should not adjust any form elements on the page', () => {
+            // Arrange
+            TestUtils.setBodyHtml(`
+                <input type="text" data-js-reset-input="testGroup" value=""/>
+                <input type="radio" data-js-reset-input="testGroup" checked/>
+                <input type="checkbox" data-js-reset-input="testGroup" checked/>
+            `);
 
-        // Act
-        resetInputs(event);
+            const event = {
+                target: {
+                    getAttribute:  () => 'testGroup'
+                }
+            };
 
-        // Assert
-        const [input, radio, checkbox] = document.querySelectorAll('[data-js-reset-input]');
-        expect(input.value.length).toBe(0);
-        expect(radio.checked).toBe(false);
-        expect(checkbox.checked).toBe(false);
+            // Act
+            resetInputs(event);
+
+            // Assert
+            const [input, radio, checkbox] = document.querySelectorAll('[data-js-reset-input]');
+            expect(input.value.length).toBe(0);
+            expect(radio.checked).toBe(false);
+            expect(checkbox.checked).toBe(false);
+        });
     });
 });
