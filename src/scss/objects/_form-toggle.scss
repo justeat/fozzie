@@ -122,13 +122,15 @@ $formToggle-disabled-text           : $grey--lighter;
         .o-formToggle-input:not([disabled]):hover ~ &,
         .o-formToggle-input:not(:checked):hover ~ & {
 
-            &:before {
-                border-color: $formToggle-icon-hover-background;
+            @include media('>=mid') {
+
+                &:before {
+                    border-color: $formToggle-icon-hover-background;
+                }
             }
         }
 
-        .o-formToggle-input:checked ~ &,
-        .o-formToggle-input:not(:disabled):hover ~ & {
+        @mixin formToggleCheckedSpacing() {
             padding-left: 20px;
             font-weight: $font-weight-bold;
 
@@ -138,13 +140,19 @@ $formToggle-disabled-text           : $grey--lighter;
             }
         }
 
-        .o-formToggle:not(.o-formToggle--disabled):hover &,
-        .o-formToggle:not(.o-formToggle--disabled):focus &,
-        .o-formToggle-input:not([disabled]):hover ~ &,
-        .o-formToggle-input:not([disabled]):focus ~ &,
-        .o-formToggle-input:not([disabled]):checked ~ & {
-            cursor: pointer;
+        .o-formToggle-input:checked ~ & {
+            @include formToggleCheckedSpacing();
+        }
 
+        .o-formToggle-input:not(:disabled):hover ~ & {
+            @include media('>=mid') {
+
+                @include formToggleCheckedSpacing();
+            }
+        }
+
+        @mixin formToggleCheckedBoder() {
+            cursor: pointer;
             //the &:after is to create a border that sits over the top of the parents,
             // it creates a visual state on the parent without the need for a JS class toggle
             &:after {
@@ -156,6 +164,19 @@ $formToggle-disabled-text           : $grey--lighter;
                 height: calc(100% + 2px);
                 border-radius: $formToggle-border-radius;
                 border: $formToggle-border-width solid $formToggle-border-color-checked;
+            }
+        }
+
+        .o-formToggle-input:not([disabled]):checked ~ & {
+            @include formToggleCheckedBoder();
+        }
+
+        .o-formToggle:not(.o-formToggle--disabled):hover &,
+        .o-formToggle:not(.o-formToggle--disabled):focus &,
+        .o-formToggle-input:not([disabled]):hover ~ &,
+        .o-formToggle-input:not([disabled]):focus ~ & {
+            @include media('>=mid') {
+                @include formToggleCheckedBoder();
             }
         }
 
