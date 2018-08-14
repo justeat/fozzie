@@ -1,0 +1,35 @@
+//
+// ==========================================================================
+// Placeholder styling mixin
+// Used in rating modify to placeholder styles of an input
+// ==========================================================================
+//
+// eg. example of useage
+//
+// .input {
+//    @include placeholder {
+//        color: red;
+//    }
+// }
+//
+
+
+@mixin placeholder {
+    /* stylelint-disable selector-no-vendor-prefix */
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+    /* stylelint-enable selector-no-vendor-prefix */
+}
