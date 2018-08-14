@@ -151,7 +151,7 @@ $formToggle-disabled-text           : $grey--lighter;
             }
         }
 
-        @mixin formToggleCheckedBoder() {
+        @mixin formToggleCheckedBorder() {
             cursor: pointer;
             //the &:after is to create a border that sits over the top of the parents,
             // it creates a visual state on the parent without the need for a JS class toggle
@@ -168,7 +168,7 @@ $formToggle-disabled-text           : $grey--lighter;
         }
 
         .o-formToggle-input:not([disabled]):checked ~ & {
-            @include formToggleCheckedBoder();
+            @include formToggleCheckedBorder();
         }
 
         .o-formToggle:not(.o-formToggle--disabled):hover &,
@@ -176,7 +176,7 @@ $formToggle-disabled-text           : $grey--lighter;
         .o-formToggle-input:not([disabled]):hover ~ &,
         .o-formToggle-input:not([disabled]):focus ~ & {
             @include media('>=mid') {
-                @include formToggleCheckedBoder();
+                @include formToggleCheckedBorder();
             }
         }
 
