@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v0.53.2
+------------------------------
+*August 14, 2018*
+
+### Fixed
+ - Fixed formToggle hover state - Only checked state is applied to < mid. >=mid has hover and checked states.
+
 v0.53.1
 ------------------------------
 *August 2, 2018*
