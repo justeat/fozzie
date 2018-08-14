@@ -5,10 +5,11 @@
  *
  * ================================= */
 
-$fullScreenPopOver-background       : $white;
-$fullScreenPopOver-padding          : spacing(x2);
-$fullScreenPopOver-border-color     : $grey--lightest;
-$fullScreenPopOver-shadow-color     : rgba($black, 0.12);
+$fullScreenPopOver-background        : $grey--offWhite;
+$fullScreenPopOver-action-background : $white;
+$fullScreenPopOver-padding           : spacing(x2);
+$fullScreenPopOver-border-color      : $grey--lightest;
+$fullScreenPopOver-shadow-color      : rgba($black, 0.12);
 
 .c-fullScreenPopOver {
 
@@ -40,6 +41,7 @@ $fullScreenPopOver-shadow-color     : rgba($black, 0.12);
         width: 100vw;
         position: absolute;
         padding: $fullScreenPopOver-padding;
+        background: $fullScreenPopOver-action-background;
 
         @include media('>=mid') {
             display: none;
