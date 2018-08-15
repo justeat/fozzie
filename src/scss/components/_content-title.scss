@@ -26,4 +26,9 @@
 
     .c-contentTitle-action {
         font-weight: $font-weight-bold;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
