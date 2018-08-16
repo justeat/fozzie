@@ -8,7 +8,7 @@ v0.54.0
 *August 16, 2018*
 
 ### Added
- - Addition of `has-no-match` class and styling to `.c-listing` item. (removes border).
+ - Addition of `has-noItems` class and styling to `.c-listing` item. (removes border).
 
 v0.53.4
 ------------------------------
