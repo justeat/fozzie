@@ -34,6 +34,9 @@ $listing-borderRadius       : 4px;
         }
     }
 
+    &.has-noItems {
+        border: 0;
+    }
 }
 
 .c-listing--offline {

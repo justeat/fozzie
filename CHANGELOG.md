@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v0.54.0
+------------------------------
+*August 16, 2018*
+
+### Added
+ - Addition of `has-noItems` class and styling to `.c-listing` item. (removes border).
+
 v0.53.4
 ------------------------------
 *August 15, 2018*
