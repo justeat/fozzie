@@ -3,12 +3,22 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v0.55.0
+------------------------------
+*August 20, 2018*
+
+### Added
+ - Added spacing utility classes.
+
+
 v0.54.0
 ------------------------------
 *August 16, 2018*
 
 ### Added
  - Addition of `has-noItems` class and styling to `.c-listing` item. (removes border).
+
 
 v0.53.4
 ------------------------------
@@ -17,6 +27,7 @@ v0.53.4
 ### Changed
  - Change formToggle from CSS based icon to SVG f-icon asset
 
+
 v0.53.3
 ------------------------------
 *August 15, 2018*
@@ -24,6 +35,7 @@ v0.53.3
 ### Fixed
  - Fullscreen popover background to grey--offWhite instead of white.
  - Fullscreen popover header/footer background colour set to white due to popover background colour change
+
 
 v0.53.2
 ------------------------------
@@ -39,6 +51,7 @@ v0.53.1
 
 ### Fixed
  - Fixed stars look like selectable when the input is disabled.
+
 
 v0.53.0
 ------------------------------

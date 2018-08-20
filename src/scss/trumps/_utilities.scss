@@ -102,6 +102,30 @@
 }
 
 //
+// Spacing Utilities
+// ==========================================================================
+
+.u-noSpacing {
+    margin: 0;
+}
+
+.u-spacingTop {
+    margin-top: spacing();
+}
+
+.u-spacingRight {
+    margin-right: spacing();
+}
+
+.u-spacingBottom {
+    margin-bottom: spacing();
+}
+
+.u-spacingLeft {
+    margin-left: spacing();
+}
+
+//
 // Image Replacement Techniques
 // ==========================================================================
 
@@ -142,6 +166,7 @@
 //
 // List Helper
 // ==========================================================================
+
 .u-unstyled,
 %u-unstyled {
     margin-top: 0;
