@@ -13,6 +13,8 @@ $card-tooltip-width             : 10px !default;
 $card-arrow-bottom-position     : 0 !default;
 $card-padding                   : spacing(x2) !default;
 $card-radius                    : 4px !default;
+$card-radius--large             : 8px !default;
+$card-borderColor               : $grey--lightest !default;
 
 @mixin card() {
 
@@ -20,6 +22,7 @@ $card-radius                    : 4px !default;
         background-color: $card-bgColor--active;
         margin-bottom: spacing();
         padding: $card-padding;
+        position: relative;
 
         @include media('>=mid') {
             margin-bottom: 0;
@@ -37,6 +40,14 @@ $card-radius                    : 4px !default;
 
         .c-card--rounded {
             border-radius: $card-radius;
+        }
+
+        .c-card--rounded--large {
+            border-radius: $card-radius--large;
+        }
+
+        .c-card--outline {
+            border: solid 1px $card-borderColor;
         }
 
         .c-card--disabled {

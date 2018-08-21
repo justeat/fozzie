@@ -1,0 +1,42 @@
+/**
+ * Badge Component
+ * =================================
+ * Example – Menu – Restaurant delivery information
+ *
+ * Used for styling small pieces of information.
+ *
+ * Documentation:
+ * https://fozzie.just-eat.com/styleguide/ui-components/custom/badges
+ */
+
+$badge-bgColor      : $grey--offWhite !default;
+$badge-infoColor    : $green !default;
+$badge-warningColor : $orange !default;
+$badge-alertColor   : $red !default;
+$badge-padding      : 4px spacing(x2) !default;
+$badge-radius       : 14px !default;
+
+@mixin badge() {
+
+    .badge {
+        background-color: $badge-bgColor;
+        padding: $badge-padding;
+    }
+
+        .badge--rounded {
+            border-radius: $badge-radius;
+        }
+
+        .badge--info {
+            color: $badge-infoColor;
+        }
+
+        .badge--warning {
+            color: $badge-warningColor;
+        }
+
+        .badge--alert {
+            color: $badge-alertColor;
+        }
+
+}
