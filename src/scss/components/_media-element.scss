@@ -7,9 +7,12 @@
  *
  */
 
-$mediaElement-img-width: 50px;
-$mediaElement-img-width--mid: 78px;
-$mediaElement-img-width--wide: 67px;
+$mediaElement-img-width         : 50px;
+$mediaElement-img-width--mid    : 78px;
+$mediaElement-img-width--wide   : 67px;
+$mediaElement-infoLinkColor     : $blue !default;
+$mediaElement-fontSize          : base--scaleUp !default;
+$mediaElement-spacing           : spacing(x2) !default;
 
 // mediaElement module
 // Usually consists of having an image to the left and content to the right
@@ -57,13 +60,13 @@ $mediaElement-img-width--wide: 67px;
             }
         }
 
-        //make sure we cut off the corners of the image and the container
+        // make sure we cut off the corners of the image and the container
         &,
         & > img {
             border-radius: 3px;
         }
 
-        //center the img when stacked
+        // center the img when stacked
         .c-mediaElement--fullstack & {
             margin-right: 0;
             flex-basis: auto;
@@ -87,7 +90,7 @@ $mediaElement-img-width--wide: 67px;
         }
     }
 
-    //apply an outline to the mediaElement img
+    // apply an outline to the mediaElement img
     .c-mediaElement-img--outlined {
         border: solid 1px $color-border;
     }
@@ -95,6 +98,19 @@ $mediaElement-img-width--wide: 67px;
     .c-mediaElement-img--small {
         max-width: 70px;
         max-height: 70px;
+    }
+
+    // positions the image over the top edge of the media element
+    .c-mediaElement-img--negativeTop {
+        margin-top: -40px;
+
+        @include media('>=narrow') {
+            margin-top: -55px;
+        }
+
+        @include media('>=wide') {
+            margin-top: -50px;
+        }
     }
 
     .c-mediaElement-content {
@@ -126,4 +142,19 @@ $mediaElement-img-width--wide: 67px;
     .c-mediaElement-text--large {
         @include font-size(large, false);
         line-height: 1.2;
+    }
+
+    .c-mediaElement-infoLink {
+        @include font-size($mediaElement-fontSize);
+        align-items: center;
+        color: $mediaElement-infoLinkColor;
+        display: flex;
+        position: absolute;
+        right: $mediaElement-spacing;
+        text-decoration: none;
+        top: $mediaElement-spacing;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
