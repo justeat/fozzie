@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.60.0",
+  "version": "0.60.1",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -44,6 +44,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "concurrently": "^3.5.1",
+    "coveralls": "3.0.2",
     "danger": "^3.4.7",
     "gulp": "^3.9.1",
     "js-test-buddy": "^0.1.0"

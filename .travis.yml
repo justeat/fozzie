@@ -1,8 +1,8 @@
 language: node_js
 
 node_js:
-  - "6"
   - "8"
+  - "6"
 
 cache: yarn
 
@@ -12,4 +12,8 @@ notifications:
   email: false
 
 script:
+  - yarn test:cover
   - yarn danger ci
+
+after_success:
+  - yarn run test:cover:CI
