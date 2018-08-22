@@ -2,6 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/%40justeat%2Ffozzie.svg)](https://badge.fury.io/js/%40justeat%2Ffozzie)
 [![Build Status](https://travis-ci.org/justeat/fozzie.svg)](https://travis-ci.org/justeat/fozzie)
+[![Coverage Status](https://coveralls.io/repos/github/justeat/fozzie/badge.svg)](https://coveralls.io/github/justeat/fozzie)
+[![install size](https://packagephobia.now.sh/badge?p=@justeat/fozzie)](https://packagephobia.now.sh/result?p=@justeat/fozzie)
 
 Base Front-End Library for Just Eat Global Platform.  Designed to be reusable across any site that want to share those base styles.
 
