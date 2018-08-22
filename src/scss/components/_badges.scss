@@ -10,6 +10,7 @@
  */
 
 $badge-bgColor      : $grey--offWhite !default;
+$badge-lightBgColor : $white !default;
 $badge-infoColor    : $green !default;
 $badge-warningColor : $orange !default;
 $badge-alertColor   : $red !default;
@@ -18,25 +19,37 @@ $badge-radius       : 14px !default;
 
 @mixin badge() {
 
-    .badge {
+    .c-badge {
         background-color: $badge-bgColor;
         padding: $badge-padding;
     }
 
-        .badge--rounded {
+        .c-badge--rounded {
             border-radius: $badge-radius;
         }
 
-        .badge--info {
+        .c-badge--light {
+            background-color: $badge-lightBgColor;
+
+            span {
+                color: $grey--light;
+            }
+        }
+
+        .c-badge--info {
             color: $badge-infoColor;
         }
 
-        .badge--warning {
+        .c-badge--warning {
             color: $badge-warningColor;
         }
 
-        .badge--alert {
+        .c-badge--alert {
             color: $badge-alertColor;
+        }
+
+        .c-badge--large {
+            @include font-size(base--scaleUp);
         }
 
 }
