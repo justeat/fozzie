@@ -25,5 +25,12 @@
     }
 
     .c-contentTitle-action {
+        text-decoration: none;
         font-weight: $font-weight-bold;
+        font-family: $font-family-base;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
