@@ -158,3 +158,10 @@ $mediaElement-spacing           : spacing(x2) !default;
             text-decoration: underline;
         }
     }
+
+    .c-mediaElement-centeredLink {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
