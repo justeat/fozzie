@@ -12,6 +12,14 @@ v0.60.0
 - Media element centered element.
 
 
+v0.59.1
+------------------------------
+*August 22, 2018*
+
+### Changed
+ - Change content header action hover state from no decoration normal and underline when hovered.
+
+
 v0.59.0
 ------------------------------
 *August 22, 2018*
