@@ -9,7 +9,7 @@ v0.61.0
 *August 23, 2018*
 
 ### Added
-- Centre align utility.
+- Centre align layout utility.
 - No underline utility.
 
 ### Removed
