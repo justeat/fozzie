@@ -95,6 +95,14 @@
     transition: top 0.2s ease;
 }
 
+// uses flexbox to centre align content both vertically and horizontally
+.u-centred, // British or US English spellings..
+.u-centered {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 //
 // Typographic Helpers
 // ==========================================================================
@@ -110,6 +118,16 @@
 
 .u-textPad {
     padding-left: spacing(x4);
+}
+
+.u-noUnderline {
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
 }
 
 //
