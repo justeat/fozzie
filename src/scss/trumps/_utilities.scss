@@ -112,6 +112,16 @@
     padding-left: spacing(x4);
 }
 
+.u-noUnderline {
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
 //
 // Spacing Utilities
 // ==========================================================================

@@ -120,10 +120,6 @@ $mediaElement-spacing           : spacing(x2) !default;
         .c-mediaElement--fullstack & {
             flex: auto;
             margin-top: spacing(base) / 2;
-
-            @include media('<mid') {
-                max-width: 200px;
-            }
         }
 
         // some content uses br for content shaping – get rid of it on mobile devices
@@ -157,11 +153,4 @@ $mediaElement-spacing           : spacing(x2) !default;
         &:hover {
             text-decoration: underline;
         }
-    }
-
-    .c-mediaElement-centeredLink {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        text-decoration: none;
     }

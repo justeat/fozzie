@@ -45,6 +45,7 @@ body {
         padding-top: spacing(x4);
     }
 }
+
     .l-content-header {
         margin: 0 0 spacing(x2);
 
@@ -84,4 +85,12 @@ body {
     .no-flexbox & {
        display: inline-block;
     }
+}
+
+// uses flexbox to centre align content both vertically and horizontally
+.l-centred, // British or US English spellings..
+.l-centered {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
