@@ -1,0 +1,16 @@
+/**
+ * Body styles
+ * ===================================
+ */
+
+.o-body--bgWhite {
+    background-color: $white;
+}
+
+    .o-body--bgWhite--belowMid {
+        background-color: $color-bg;
+
+        @include media('<mid') {
+            background-color: $white;
+        }
+    }

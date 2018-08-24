@@ -10,6 +10,7 @@
 $mediaElement-img-width         : 50px;
 $mediaElement-img-width--mid    : 78px;
 $mediaElement-img-width--wide   : 67px;
+$mediaElement-img-borderRadius  : spacing() !default;
 $mediaElement-infoLinkColor     : $blue !default;
 $mediaElement-fontSize          : base--scaleUp !default;
 $mediaElement-spacing           : spacing(x2) !default;
@@ -93,6 +94,7 @@ $mediaElement-spacing           : spacing(x2) !default;
     // apply an outline to the mediaElement img
     .c-mediaElement-img--outlined {
         border: solid 1px $color-border;
+        border-radius: $mediaElement-img-borderRadius;
     }
 
     .c-mediaElement-img--small {

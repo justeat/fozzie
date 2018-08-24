@@ -4,6 +4,26 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.62.0
+------------------------------
+*August 24, 2018*
+
+### Added
+- `o-body` object styles.
+- `c-card` modifier.
+- `c-pageBanner` component.
+- Rays images.
+
+### Changed
+- `c-mediaElement` image border radius.
+- Updated npm test script.
+
+### Fixed
+- Extra space in utilities styles.
+- Documentation links in components.
+
+
+
 v0.61.0
 ------------------------------
 *August 23, 2018*

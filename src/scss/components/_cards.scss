@@ -1,10 +1,10 @@
 /**
  * Card Component
  * =================================
- * Used for content listing cards
+ * Used for content listing cards.
  *
  * Documentation:
- * TBC
+ * https://fozzie.just-eat.com/styleguide/ui-components/cards
  */
 
 $card-bgColor--active           : $white !default;
@@ -49,6 +49,12 @@ $card-borderColor               : $grey--lightest !default;
         .c-card--outline {
             border: solid 1px $card-borderColor;
         }
+
+            .c-card--outline--aboveMid {
+                @include media('<mid') {
+                    border: none;
+                }
+            }
 
         .c-card--disabled {
             background: $card-bgColor--disabled;
