@@ -19,11 +19,11 @@
         overflow: hidden;
         position: relative;
 
-        @include media('>=wide') {
+        @include media('>wide') {
             max-height: 300px;
         }
 
-        @include media('>=huge') {
+        @include media('>huge') {
             max-height: 370px;
         }
 
@@ -47,8 +47,9 @@
         }
     }
 
+        // any elements below the banner will be moved up, over the bottom part of the banner
         .c-pageBanner--negativeBottom--aboveMid {
-            @include media('>=mid') {
+            @include media('>mid') {
                 margin-bottom: -125px;
             }
         }
@@ -56,7 +57,7 @@
         .c-pageBanner-img {
             width: 100%;
 
-            @include media('>=wide') {
+            @include media('>wide') {
                 margin-top: -15%;
             }
         }
