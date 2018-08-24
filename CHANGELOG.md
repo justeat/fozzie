@@ -11,7 +11,7 @@ v0.62.0
 ### Added
 - `o-body` object styles.
 - `c-card` modifier.
-- `c-pageBanner` component.
+- Optional `c-pageBanner` component.
 - Rays images.
 
 ### Changed

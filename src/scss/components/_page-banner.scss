@@ -9,52 +9,55 @@
  * https://fozzie.just-eat.com/styleguide/ui-components/page-banner
  */
 
-.c-pageBanner {
-    background-color: $white;
-    margin-bottom: -15px;
-    max-height: 250px;
-    min-height: 100px;
-    overflow: hidden;
-    position: relative;
+@mixin pageBanner() {
 
-    @include media('>=wide') {
-        max-height: 300px;
-    }
+    .c-pageBanner {
+        background-color: $white;
+        margin-bottom: -15px;
+        max-height: 250px;
+        min-height: 100px;
+        overflow: hidden;
+        position: relative;
 
-    @include media('>=huge') {
-        max-height: 370px;
-    }
+        @include media('>=wide') {
+            max-height: 300px;
+        }
 
-    // Prevent IE from applying these styles as it can't correctly position the rays
-    @supports (position: absolute) {
-        &:after {
-            background-image: inline('#{$img-path}/decoration/rays--small.svg');
-            background-position: bottom left;
-            background-repeat: no-repeat;
-            bottom: -1px;
-            content: '';
-            height: 100%;
-            left: 0;
-            position: absolute;
-            width: 100%;
+        @include media('>=huge') {
+            max-height: 370px;
+        }
 
-            @include media('>mid') {
-                background-image: inline('#{$img-path}/decoration/rays.svg');
+        // Prevent IE from applying these styles as it can't correctly position the rays
+        @supports (position: absolute) {
+            &:after {
+                background-image: inline('#{$img-path}/decoration/rays--white--small.svg');
+                background-position: bottom left;
+                background-repeat: no-repeat;
+                bottom: -1px;
+                content: '';
+                height: 100%;
+                left: 0;
+                position: absolute;
+                width: 100%;
+
+                @include media('>mid') {
+                    background-image: inline('#{$img-path}/decoration/rays--white.svg');
+                }
             }
         }
     }
+
+        .c-pageBanner--negativeBottom--aboveMid {
+            @include media('>=mid') {
+                margin-bottom: -125px;
+            }
+        }
+
+        .c-pageBanner-img {
+            width: 100%;
+
+            @include media('>=wide') {
+                margin-top: -15%;
+            }
+        }
 }
-
-    .c-pageBanner--negativeBottom--aboveMid {
-        @include media('>=mid') {
-            margin-bottom: -125px;
-        }
-    }
-
-    .c-pageBanner-img {
-        width: 100%;
-
-        @include media('>=wide') {
-            margin-top: -15%;
-        }
-    }
