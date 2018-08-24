@@ -53,6 +53,7 @@
  *
  * Object styles should be prefixed with `.o-`
  */
+@import 'objects/body';
 @import 'objects/buttons';
 @import 'objects/images';
 @import 'objects/links';
@@ -79,6 +80,7 @@
 @import 'components/content-title';
 @import 'components/overflow-carousel';
 @import 'components/fullscreen-pop-over';
+@import 'components/page-banner';
 
 
 
