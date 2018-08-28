@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "0.62.0",
+  "version": "0.63.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -78,10 +78,6 @@
     "Safari >= 8",
     "not ie 10"
   ],
-  "assets": {
-    "root": "src/",
-    "glob": "img/**/*"
-  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js"
