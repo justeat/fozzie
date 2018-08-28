@@ -22,6 +22,10 @@ $badge-radius       : 14px !default;
     .c-badge {
         background-color: $badge-bgColor;
         padding: $badge-padding;
+
+        span {
+            margin: 0 4px;
+        }
     }
 
         .c-badge--rounded {
