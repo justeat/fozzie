@@ -216,7 +216,11 @@ $listing-borderRadius       : 4px;
         }
 
         .c-listing-item-distanceIcon {
-            fill: $listing-iconFill;
+            svg {
+                width: 10px;
+                height: 10px;
+                fill: $listing-iconFill;
+            }
         }
 
         .c-listing-item-text {
