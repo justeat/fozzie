@@ -3,7 +3,9 @@
  * =================================
  * Example – Menu – Cuisine image at top of page.
  *
- * Used for content listing cards
+ * Page Banners stretch to the full width of their container and contain banner images which typically use a `picture` element. They also display a white version of the Just Eat rays at the bottom.
+ *
+ * *The `c-pageBanner` component is an optional mixin within Fozzie — if you'd like to use it in your project you can include it by adding `@include pageBanner();` into your SCSS dependencies file.*
  *
  * Documentation:
  * https://fozzie.just-eat.com/styleguide/ui-components/page-banner
@@ -57,7 +59,7 @@
         .c-pageBanner-img {
             width: 100%;
 
-            @include media('>wide') {
+            @include media('>mid') {
                 margin-top: -15%;
             }
         }
