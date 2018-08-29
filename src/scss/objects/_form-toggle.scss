@@ -167,6 +167,7 @@ $formToggle-disabled-text           : $grey--lighter;
     }
 
     .o-formToggle-icon {
+        //TODO - remove target / styling of SVG when inline-helper allows us to add class
         svg {
             top: 50%;
             opacity: 0;
