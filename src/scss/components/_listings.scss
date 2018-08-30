@@ -7,8 +7,8 @@
  */
 
 $listing-background             : $white;
-$listing-promoLabelTextColor    : $purple;
-$listing-promoLabelBackground   : $purple--light;
+$listing-awardLabelTextColor    : $purple;
+$listing-awardLabelBackground   : $purple--light;
 $listing-borderColor            : $color-border;
 $listing-iconFill               : $grey--mid;
 $listing-labelBackground        : $grey--offWhite;
@@ -177,14 +177,14 @@ $listing-promoIconColor         : $orange;
             margin-left: spacing();
         }
 
-        .c-listing-item-promotion {
+        .c-listing-item-promo {
 
             svg {
                 fill: $listing-promoIconColor;
             }
 
         }
-        .c-listing-item-promotion-text {
+        .c-listing-item-promo-text {
             color: $listing-promoIconColor;
         }
 
@@ -242,7 +242,7 @@ $listing-promoIconColor         : $orange;
         }
 
         .c-listing-item-label,
-        .c-listing-item-promo {
+        .c-listing-item-award {
             padding: 1px 4px;
             position: relative;
             display: inline-block;
@@ -260,7 +260,7 @@ $listing-promoIconColor         : $orange;
             }
         }
 
-        .c-listing-item-promo {
-            color: $listing-promoLabelTextColor;
-            background: $listing-promoLabelBackground;
+        .c-listing-item-award {
+            color: $listing-awardLabelTextColor;
+            background: $listing-awardLabelBackground;
         }
