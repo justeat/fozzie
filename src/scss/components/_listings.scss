@@ -173,9 +173,11 @@ $listing-promotionColor         : $orange;
         }
 
         .c-listing-item-promotion {
-            svg {                
+
+            svg {
                 fill: $listing-promotionColor;
             }
+
             .c-listing-item-promotionText {
                 color: $listing-promotionColor;
             }
