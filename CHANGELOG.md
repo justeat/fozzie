@@ -9,7 +9,7 @@ v0.68.0
 *August 30, 2018*
 
 ### Changed
-- Updated heading font size to match latest UI designs.
+- Updated heading font weight to match latest UI designs.
 
 
 v0.66.0
