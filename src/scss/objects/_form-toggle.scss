@@ -167,37 +167,40 @@ $formToggle-disabled-text           : $grey--lighter;
     }
 
     .o-formToggle-icon {
-        top: 50%;
-        opacity: 0;
-        width: 16px;
-        height: 10px;
-        position: absolute;
-        margin-top: -4px;
-        left: spacing();
-        display: inline-block;
-        transform: rotate(-45deg) scale(0.5);
-        transition: transform 200ms ease, opacity 250ms ease;
-        fill: $formToggle-icon-background;
+        //TODO - remove target / styling of SVG when inline-helper allows us to add class
+        svg {
+            top: 50%;
+            opacity: 0;
+            width: 16px;
+            height: 10px;
+            position: absolute;
+            margin-top: -4px;
+            left: spacing();
+            display: inline-block;
+            transform: rotate(-45deg) scale(0.5);
+            transition: transform 200ms ease, opacity 250ms ease;
+            fill: $formToggle-icon-background;
 
-        .o-formToggle-input:not([disabled]):hover ~ &,
-        .o-formToggle-input:not(:checked):hover ~ & {
-            @include media('>=mid') {
-                fill: $formToggle-icon-hover-background;
+            .o-formToggle-input:not([disabled]):hover ~ &,
+            .o-formToggle-input:not(:checked):hover ~ & {
+                @include media('>=mid') {
+                    fill: $formToggle-icon-hover-background;
+                }
             }
-        }
 
-        @mixin formToggleIconActive() {
-            opacity: 1;
-            transform: rotate(0) scale(1);
-        }
+            @mixin formToggleIconActive() {
+                opacity: 1;
+                transform: rotate(0) scale(1);
+            }
 
-        .o-formToggle-input:checked ~ & {
-            @include formToggleIconActive();
-        }
-
-        .o-formToggle-input:not(:disabled):hover ~ & {
-            @include media('>=mid') {
+            .o-formToggle-input:checked ~ & {
                 @include formToggleIconActive();
+            }
+
+            .o-formToggle-input:not(:disabled):hover ~ & {
+                @include media('>=mid') {
+                    @include formToggleIconActive();
+                }
             }
         }
     }

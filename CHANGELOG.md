@@ -3,6 +3,14 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v0.66.0
+------------------------------
+*August 29, 2018*
+
+### Changed
+- Update styles within listings component to target svg to work with inline-svg helper
+- Update styles within form toggle component to target svg to work with inline-svg helper
+
 
 v0.65.0
 ------------------------------

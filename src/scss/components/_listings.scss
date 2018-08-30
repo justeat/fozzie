@@ -216,7 +216,12 @@ $listing-borderRadius       : 4px;
         }
 
         .c-listing-item-distanceIcon {
-            fill: $listing-iconFill;
+            //TODO - remove target / styling of SVG when inline-helper allows us to add class
+            svg {
+                width: 10px;
+                height: 10px;
+                fill: $listing-iconFill;
+            }
         }
 
         .c-listing-item-text {
