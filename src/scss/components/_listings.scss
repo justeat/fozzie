@@ -6,20 +6,23 @@
  *
  */
 
-$listing-background         : $white;
-$listing-promoBackground    : $orange;
-$listing-borderColor        : $color-border;
-$listing-iconFill           : $grey--mid;
-$listing-labelBackground    : $grey--offWhite;
-$listing-offlineBorderColor : $grey--lighter;
-$listing-offlineBackground  : $grey--lightest;
-$listing-borderRadius       : 4px;
+$listing-background             : $white;
+$listing-promoLabelTextColor    : $purple;
+$listing-promoLabelBackground   : $purple--light;
+$listing-borderColor            : $color-border;
+$listing-iconFill               : $grey--mid;
+$listing-labelBackground        : $grey--offWhite;
+$listing-labelBorder            : 2px;
+$listing-offlineBorderColor     : $grey--lighter;
+$listing-offlineBackground      : $grey--lightest;
+$listing-borderRadius           : 4px;
+$listing-img-borderRadius       : 2px;
+$listing-textDividerBackground  : $grey--light;
+$listing-promotionColor         : $orange;
 
 .c-listing {
     opacity: 1;
-    padding: 0 spacing(x2);
     background: $listing-background;
-    border: 1px solid $listing-borderColor;
     border-radius: $listing-borderRadius;
     transition: opacity 200ms ease, transform 200ms ease;
 
@@ -50,10 +53,6 @@ $listing-borderRadius       : 4px;
         padding: spacing(x2);
         border-bottom: 1px solid $listing-borderColor;
 
-        @include media('>=mid') {
-            padding: spacing(x2) 0;
-        }
-
         .c-listing &:last-child {
             border: 0;
         }
@@ -77,6 +76,11 @@ $listing-borderRadius       : 4px;
             color: $color-text;
             text-decoration: none;
 
+            @include media('>wide') {
+                display: flex;
+                flex-direction: row;
+            }
+
             &:hover,
             &:active,
             &:focus {
@@ -90,51 +94,45 @@ $listing-borderRadius       : 4px;
                 & .c-listing-item-title {
                     text-decoration: underline;
                 }
-
-                & .c-listing-item-btn {
-                    background-color: $btn-primary-bgColor--highlight;
-                }
             }
         }
 
         .c-listing-item-img {
-            float: left;
-            width: 40px;
-
-            @include media('>=tiny') {
-                width: 50px;
-            }
+            width: 55px;
+            top: spacing(x2);
+            left: spacing(x2);
+            position: absolute;
 
             @include media('>wide') {
                 width: 65px;
+                top: auto;
+                left: auto;
+                position: relative;
             }
         }
 
         .c-listing-item-imgItem {
             width: 100%;
             height: auto;
+            border-radius: $listing-img-borderRadius;
         }
 
         .c-listing-item-info {
             top: -4px;
             position: relative;
             color: $color-text;
-            padding-left: 56px;
-
-            @include media('>=tiny') {
-                padding-left: 66px;
-            }
+            padding-left: 70px;
 
             @include media('>wide') {
+                flex-grow: 1;
                 position: relative;
-                padding-left: 80px;
-                padding-right: 260px;
+                padding-left: 15px;
 
                 &:after {
                     content: '';
                     top: 4px;
                     width: 1px;
-                    right: 259px;
+                    right: -1px;
                     height: 100%;
                     display: block;
                     position: absolute;
@@ -147,122 +145,119 @@ $listing-borderRadius       : 4px;
             }
         }
 
-        .c-listing-item-title {
-            word-break: break-word;
-        }
-
-        // .c-listing-item-meta should be used as a container for listing labels, logos or offers (e.g. local legend logo or 20% off label)
-        .c-listing-item-meta {
-            top: -3px;
-            float: right;
-            margin-top: 0;
-            position: relative;
+        .c-listing-item-details {
+            width: 100%;
 
             @include media('>wide') {
-                top: auto;
-                width: 260px;
-                padding-bottom: 50px;
+                width: 460px;
+                margin-top: auto;
                 padding-left: spacing(x2);
                 border-left: 1px solid $listing-borderColor;
-
-                .c-listing--offline & {
-                    border-color: $listing-offlineBorderColor;
-                }
             }
+        }
+
+        .c-listing-item-detailsRow {
+            display : flex;
+            align-items : center;
+            margin-bottom: spacing() / 2;
+        }
+
+        .c-listing-item-detailsRow-icon {
+            width: 20px;
+            height: 20px;
+            fill: $grey--dark;
+        }
+
+        .c-listing-item-detailsRow-text {
+            margin-left: spacing();
+        }
+
+        .c-listing-item-promotion {
+            svg {                
+                fill: $listing-promotionColor;
+            }
+            .c-listing-item-promotionText {
+                color: $listing-promotionColor;
+            }
+        }
+
+        .c-listing-item-title {
+            word-break: break-word;
+            padding-right: spacing();
+            font-weight: $font-weight-base;
+
+            @include media('>wide') {
+                margin: (spacing() / 2) 0;
+                padding-right: spacing(x2);
+            }
+        }
+
+        .c-listing-item-new {
+            color: $green;
+            top: -2px;
+            position: relative;
+            margin-right: spacing() / 2;
         }
 
         .c-listing-item-rating {
             padding: 2px 0 3px;
-
-            .c-listing-item-ratingStars,
-            .c-listing-item-ratingText {
-                vertical-align: middle;
-            }
         }
 
-        .c-listing-item-details {
-            width: 100%;
-            padding-left: 56px;
-
-            @include media('>=tiny') {
-                padding-left: 66px;
-            }
-
-            @include media('>wide') {
-                right: 0;
-                width: 260px;
-                margin-top: 10px;
-                position: absolute;
-                bottom: spacing(x2);
-                padding-left: spacing(x2);
-            }
-        }
-
-        .c-listing-item-distance {
-            position: absolute;
-            right: spacing(x2);
-            bottom: spacing(x2);
-
-            @include media('>mid') {
-                right: 0;
-            }
-
-            @include media('>wide') {
-                position: static;
-                line-height: 0.8;
-                padding-left: 80px;
-                margin-bottom: spacing() / 2;
-            }
-        }
-
-        .c-listing-item-distanceIcon {
-            //TODO - remove target / styling of SVG when inline-helper allows us to add class
-            svg {
-                width: 10px;
-                height: 10px;
-                fill: $listing-iconFill;
-            }
+        .c-listing-item-ratingText {
+            top: -3px;
+            position: relative;
+            margin-left: spacing() / 2;
+            @include font-size(small, true);
         }
 
         .c-listing-item-text {
             margin-top: 0;
         }
 
+        .c-listing-item-textInline {
+            display: inline-block;
+        }
+
+        .c-listing-item-textDivider {
+            width: 4px;
+            height: 4px;
+            margin: 3px 2px;
+            border-radius: 100%;
+            display: inline-block;
+            background: $listing-textDividerBackground;
+        }
+
+        // .c-listing-item-meta should be used as a container for listing labels and promos
+        .c-listing-item-meta {
+            bottom: 22px;
+            right: spacing(x2);
+            position: absolute;
+
+            @include media('>mid') {
+                bottom: 18px;
+            }
+        }
+
         .c-listing-item-label,
         .c-listing-item-promo {
-            display: block;
-            padding: 2px 5px;
+            padding: 1px 4px;
             position: relative;
-            margin-bottom: 4px;
+            display: inline-block;
+            @include font-size(small, false);
+            border-radius: $listing-labelBorder;
             background: $listing-labelBackground;
 
-            @include media('>narrow') {
-                display: inline-block;
+            & + & {
+                margin-left: spacing() / 2;
             }
 
-            & + & {
-                margin-left: spacing();
+            @include media('>mid') {
+                padding: 2px 5px;
+                @include font-size(base, false);
             }
         }
 
         .c-listing-item-promo {
-            color: $white;
-            padding-right: 12px;
-            background: $listing-promoBackground;
-
-            &:after {
-                content: '';
-                top: 1px;
-                width: 0;
-                height: 0;
-                right: -1px;
-                position: absolute;
-                border-style: solid;
-                border-width: 10px 7px 10px 0;
-                border-color: transparent $white transparent transparent;
-
-                .c-listing--offline & {
-                    border-color: transparent $listing-offlineBackground transparent transparent;
-                }
-            }
+            color: $listing-promoLabelTextColor;
+            background: $listing-promoLabelBackground;
         }
