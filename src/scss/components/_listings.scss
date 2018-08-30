@@ -13,7 +13,6 @@ $listing-borderColor            : $color-border;
 $listing-iconFill               : $grey--mid;
 $listing-labelBackground        : $grey--offWhite;
 $listing-labelBorder            : 2px;
-$listing-offlineBorderColor     : $grey--lighter;
 $listing-offlineBackground      : $grey--lightest;
 $listing-borderRadius           : 4px;
 $listing-img-borderRadius       : 2px;
@@ -22,7 +21,6 @@ $listing-promotionColor         : $orange;
 
 .c-listing {
     opacity: 1;
-    background: $listing-background;
     border-radius: $listing-borderRadius;
     transition: opacity 200ms ease, transform 200ms ease;
 
@@ -43,6 +41,7 @@ $listing-promotionColor         : $orange;
 }
 
 .c-listing--offline {
+    padding: spacing(x2);
     background: $listing-offlineBackground;
 }
 
@@ -51,6 +50,7 @@ $listing-promotionColor         : $orange;
         display: block;
         position: relative;
         padding: spacing(x2);
+        background: $listing-background;
         border-bottom: 1px solid $listing-borderColor;
 
         .c-listing &:last-child {
@@ -58,7 +58,16 @@ $listing-promotionColor         : $orange;
         }
 
         .c-listing--offline & {
-            border-color: $listing-offlineBorderColor;
+
+            &:first-child {
+                border-top-left-radius: $listing-borderRadius;
+                border-top-right-radius: $listing-borderRadius;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: $listing-borderRadius;
+                border-bottom-right-radius: $listing-borderRadius;
+            }
         }
 
         &.is-active {
@@ -137,10 +146,6 @@ $listing-promotionColor         : $orange;
                     display: block;
                     position: absolute;
                     background: $listing-borderColor;
-
-                    .c-listing--offline & {
-                        background: $listing-offlineBorderColor;
-                    }
                 }
             }
         }
