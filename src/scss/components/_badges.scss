@@ -11,19 +11,27 @@
  * https://fozzie.just-eat.com/styleguide/ui-components/badges
  */
 
-$badge-bgColor      : $grey--offWhite !default;
-$badge-lightBgColor : $white !default;
-$badge-infoColor    : $green !default;
-$badge-warningColor : $orange !default;
-$badge-alertColor   : $red !default;
-$badge-padding      : 4px spacing(x2) !default;
-$badge-radius       : 14px !default;
+$badge-bgColor              : $grey--offWhite !default;
+$badge-light-bgColor        : $white !default;
+$badge-info-color           : $green !default;
+$badge-success-color        : $green !default;
+$badge-success-bgColor      : $green--offWhite !default;
+$badge-warning-color        : $orange !default;
+$badge-alert-color          : $red !default;
+$badge-important-color      : $white !default;
+$badge-important-bgColor    : $orange !default;
+$badge-award-color          : $purple !default;
+$badge-award-bgColor        : $purple--light !default;
+$badge-padding              : 1px 5px !default;
+$badge-rounded-padding      : 4px spacing(x2) !default;
+$badge-rounded-radius       : 14px !default;
 
 @mixin badge() {
 
     .c-badge {
         background-color: $badge-bgColor;
         padding: $badge-padding;
+        position: relative;
 
         span {
             margin: 0 4px;
@@ -31,11 +39,12 @@ $badge-radius       : 14px !default;
     }
 
         .c-badge--rounded {
-            border-radius: $badge-radius;
+            border-radius: $badge-rounded-radius;
+            padding: $badge-rounded-padding;
         }
 
         .c-badge--light {
-            background-color: $badge-lightBgColor;
+            background-color: $badge-light-bgColor;
 
             span {
                 color: $grey--light;
@@ -43,19 +52,59 @@ $badge-radius       : 14px !default;
         }
 
         .c-badge--info {
-            color: $badge-infoColor;
+            color: $badge-info-color;
+        }
+
+        .c-badge--success {
+            background-color: $badge-success-bgColor;
+            color: $badge-success-color;
         }
 
         .c-badge--warning {
-            color: $badge-warningColor;
+            color: $badge-warning-color;
         }
 
         .c-badge--alert {
-            color: $badge-alertColor;
+            color: $badge-alert-color;
+        }
+
+        .c-badge--important {
+            background-color: $badge-important-bgColor;
+            color: $badge-important-color;
+        }
+
+        .c-badge--award {
+            background-color: $badge-award-bgColor;
+            color: $badge-award-color;
         }
 
         .c-badge--large {
             @include font-size(base--scaleUp);
+        }
+
+        .c-badge--angled {
+            display: inline-block;
+            margin: 0 5px;
+
+            &:before,
+            &:after {
+                background-color: inherit;
+                content: '';
+                height: 100%;
+                position: absolute;
+                top: 0;
+                transform-origin: 100% 0;
+                transform: skew(-15deg);
+                width: 8px;
+            }
+
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: -8px;
+            }
         }
 
 }
