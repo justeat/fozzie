@@ -84,28 +84,26 @@ $badge-rounded-radius       : 14px !default;
 
         .c-badge--angled {
             display: inline-block;
-            overflow: hidden;
-            padding-left: 15px;
-            padding-right: 15px;
+            margin: 0 5px;
 
             &:before,
             &:after {
-                background-color: $white;
+                background-color: inherit;
                 content: '';
                 height: 100%;
                 position: absolute;
                 top: 0;
-                transform-origin: 100% 0px;
+                transform-origin: 100% 0;
                 transform: skew(-15deg);
-                width: 12px;
+                width: 8px;
             }
 
             &:before {
-                left: -5px;
+                left: 0;
             }
 
             &:after {
-                right: -12px;
+                right: -8px;
             }
         }
 
