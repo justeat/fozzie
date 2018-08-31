@@ -141,6 +141,9 @@
 .u-spacingBottom {
     margin-bottom: spacing();
 }
+    .u-spacingBottom--large {
+        margin-bottom: spacing(x2);
+    }
 
 .u-spacingLeft {
     margin-left: spacing();
