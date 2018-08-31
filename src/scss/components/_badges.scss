@@ -88,23 +88,24 @@ $badge-rounded-radius       : 14px !default;
             padding-left: 15px;
             padding-right: 15px;
 
-            &:before {
+            &:before,
+            &:after {
+                background-color: $white;
                 content: '';
-                border: 25px solid $white;
-                border-right: 7px solid transparent;
+                height: 100%;
                 position: absolute;
-                left: -25px;
                 top: 0;
+                transform-origin: 100% 0px;
+                transform: skew(-15deg);
+                width: 12px;
+            }
+
+            &:before {
+                left: -5px;
             }
 
             &:after {
-                content: '';
-                border: 25px solid transparent;
-                border-right-width: 7px;
-                border-right-color: $white;
-                position: absolute;
-                right: 0;
-                top: 0;
+                right: -12px;
             }
         }
 
