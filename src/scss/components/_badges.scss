@@ -89,17 +89,18 @@ $badge-rounded-radius       : 14px !default;
             &:before,
             &:after {
                 background-color: inherit;
+                border-radius: 2px;
                 content: '';
                 height: 100%;
                 position: absolute;
                 top: 0;
                 transform-origin: 100% 0;
                 transform: skew(-15deg);
-                width: 8px;
+                width: 9px;
             }
 
             &:before {
-                left: 0;
+                left: -1px;
             }
 
             &:after {
