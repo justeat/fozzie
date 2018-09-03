@@ -83,7 +83,7 @@ $formToggle-disabled-text           : $grey--lighter;
 
         @include media('>=mid') {
             padding: $formToggle-padding ($formToggle-padding * 1.5);
-        }    
+        }
     }
 
     @mixin formToggleLarge() {
