@@ -4,6 +4,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.71.0
+------------------------------
+*September 3, 2018*
+
+### Added
+- Added additional modifiers to formToggle to help change style between mobile and desktop
+
+### Changed
+- Content title width
+- Changed listing content widths 
+- Changed positioning of listing meta block between mid and wide 
+
+
 v0.70.0
 ------------------------------
 *August 31, 2018*

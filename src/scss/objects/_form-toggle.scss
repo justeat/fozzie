@@ -61,6 +61,12 @@ $formToggle-disabled-text           : $grey--lighter;
         }
     }
 
+    .o-formToggle--fullWidthAboveMid {
+        @include media('>=mid') {
+            width: 100%;
+        }
+    }
+
     .o-formToggle--withCount {
         padding-right: 15px;
     }
@@ -71,6 +77,13 @@ $formToggle-disabled-text           : $grey--lighter;
 
     .o-formToggle--mediumSized {
         padding: $formToggle-padding ($formToggle-padding * 1.5);
+    }
+
+    .o-formToggle--mediumAboveMid {
+
+        @include media('>=mid') {
+            padding: $formToggle-padding ($formToggle-padding * 1.5);
+        }    
     }
 
     @mixin formToggleLarge() {

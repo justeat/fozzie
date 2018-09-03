@@ -85,11 +85,6 @@ $listing-promoIconColor         : $orange;
             color: $color-text;
             text-decoration: none;
 
-            @include media('>wide') {
-                display: flex;
-                flex-direction: row;
-            }
-
             &:hover,
             &:active,
             &:focus {
@@ -104,6 +99,11 @@ $listing-promoIconColor         : $orange;
                     text-decoration: underline;
                 }
             }
+
+            @include media('>mid') {
+                display: flex;
+                flex-direction: row;
+            }
         }
 
         .c-listing-item-img {
@@ -114,9 +114,6 @@ $listing-promoIconColor         : $orange;
 
             @include media('>wide') {
                 width: 65px;
-                top: auto;
-                left: auto;
-                position: relative;
             }
         }
 
@@ -132,10 +129,8 @@ $listing-promoIconColor         : $orange;
             color: $color-text;
             padding-left: 70px;
 
-            @include media('>wide') {
-                flex-grow: 1;
-                position: relative;
-                padding-left: 15px;
+            @include media('>mid') {
+                flex-basis: 57%;
 
                 &:after {
                     content: '';
@@ -148,13 +143,18 @@ $listing-promoIconColor         : $orange;
                     background: $listing-borderColor;
                 }
             }
+
+            @include media('>wide') {
+                position: relative;
+                padding-left: 80px;
+            }
         }
 
         .c-listing-item-details {
             width: 100%;
 
-            @include media('>wide') {
-                width: 460px;
+            @include media('>mid') {
+                flex-basis: 43%;
                 margin-top: auto;
                 padding-left: spacing(x2);
                 border-left: 1px solid $listing-borderColor;
@@ -193,7 +193,7 @@ $listing-promoIconColor         : $orange;
             padding-right: spacing();
             font-weight: $font-weight-base;
 
-            @include media('>wide') {
+            @include media('>mid') {
                 margin: (spacing() / 2) 0;
                 padding-right: spacing(x2);
             }
@@ -237,7 +237,15 @@ $listing-promoIconColor         : $orange;
             position: absolute;
 
             @include media('>mid') {
+                right: auto;
+                bottom: auto;
+                position: relative;
+            }
+
+            @include media('>wide') {
                 bottom: 18px;
+                right: spacing(x2);
+                position: absolute;
             }
         }
 
