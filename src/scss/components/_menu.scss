@@ -1,0 +1,69 @@
+/**
+ * Menu Component
+ * =================================
+ * Example – Menu – Categories list.
+ *
+ * Used for styling small pieces of information.
+ *
+ * *The `c-menu` component is an optional mixin within Fozzie — if you'd like to use it in your project you can include it by adding `@include menu();` into your SCSS dependencies file.*
+ *
+ * Documentation:
+ * https://fozzie.just-eat.com/styleguide/ui-components/menus
+ */
+
+$menu-fontSize              : base--scaleUp !default;
+$menu-border-color          : $grey--lightest !default;
+$menu-border-color--active  : $grey--dark !default;
+$menu-link-color            : $color-text !default;
+$menu-link-padding          : spacing() spacing(x2) !default;
+
+@mixin menu() {
+
+    .c-menu {
+        @extend %u-unstyled;
+        @include font-size($menu-fontSize);
+    }
+
+        .c-menu--spacingTop--aboveMid {
+            @include media('>mid') {
+                margin-top: 125px;
+            }
+        }
+
+        .c-menu-item {
+            box-shadow: -1px 0 0 0 $menu-border-color;
+
+            &.has-icon {
+                @extend %l-inlined;
+
+                .c-menu-link {
+                    padding-right: spacing() / 2;
+                }
+            }
+        }
+            .c-menu-item:active,
+            .c-menu-item:focus,
+            .c-menu-item:hover,
+            .c-menu-item--active {
+                box-shadow: -2px 0 0 0 $menu-border-color--active;
+                font-weight: $font-weight-bold;
+            }
+
+        .c-menu-link {
+            @include truncate();
+            display: block;
+            padding: $menu-link-padding;
+            text-decoration: none;
+
+            &,
+            &:hover,
+            &:active,
+            &:focus {
+                color: $menu-link-color;
+            }
+        }
+
+        .c-menu-icon {
+            flex-shrink: 0;
+        }
+}
