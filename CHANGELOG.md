@@ -9,6 +9,7 @@ v0.74.0
 
 ### Added
 - Added `--noPad` modifier to `c-badge`
+- Added `c-listing-item-premier` (Local legend badge) styling
 
 ### Changed
 - Updating listing component by removing text divider and badge styles to now use c-badge
