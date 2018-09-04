@@ -25,12 +25,12 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
         background: $fullScreenPopOver-background;
         transition: top 200ms ease, opacity 150ms ease;
 
-        &.is-active {
+        &.is-open {
             top: 0;
             opacity: 1;
             height: 100%;
             overflow: visible;
-            padding: 72px $fullScreenPopOver-padding 96px $fullScreenPopOver-padding;
+            padding: 56px $fullScreenPopOver-padding 80px $fullScreenPopOver-padding;
         }
     }
 }
@@ -50,6 +50,7 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
 
     .c-fullScreenPopOver-header {
         top: 0;
+        z-index: zIndex(high);
         box-shadow: 0 3px 4px 0 $grey--lighter;
     }
 
@@ -77,4 +78,12 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
     .c-fullScreenPopOver-footer {
         bottom: 0;
         box-shadow: 0 -2px 2px 0 $grey--lighter;
+    }
+
+    .c-fullScreenPopOver-content {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding: spacing(x2) 0;
+        -webkit-overflow-scrolling: touch;
     }

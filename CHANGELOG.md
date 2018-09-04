@@ -4,6 +4,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.72.0
+------------------------------
+*September 4, 2018*
+
+### Added
+- Added fullScreenPopOver content section to allow for large content within popOvers
+
+### Changed
+- Changed fullScreenPopOver JS to `is-open`
+
+
 v0.71.0
 ------------------------------
 *September 3, 2018*
