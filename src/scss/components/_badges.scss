@@ -83,6 +83,10 @@ $badge-angled-rounded-radius: 2px !default;
             @include font-size(base--scaleUp);
         }
 
+        .c-badge--noPad {
+            padding: 0;
+        }
+
         .c-badge--angled {
             display: inline-block;
             margin: 0 5px;
