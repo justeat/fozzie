@@ -5,7 +5,7 @@
 // ==========================================================================
 //
 // @include truncate(truncation-boundary);
-@mixin truncate($truncation-boundary) {
+@mixin truncate($truncation-boundary: null) {
   max-width: $truncation-boundary;
   white-space: nowrap;
   overflow: hidden;

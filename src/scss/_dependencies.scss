@@ -14,8 +14,8 @@
 // but we should not need them if autoprefixer is being used
 // See mixins/css3.scss for the full list
 
-@import 'tools/functions/index'; // TODO: this will be separated into a separate utilities module
-@import 'tools/mixins/index'; // TODO: this will be separated into a separate utilities module
+@import 'tools/functions'; // TODO: this will be separated into a separate utilities module
+@import 'tools/mixins'; // TODO: this will be separated into a separate utilities module
 
 // Including helper modules
 @import 'kickoff-utils'; // imports a set of helper functions and mixins – https://github.com/TryKickoff/kickoff-utils.scss
@@ -81,6 +81,7 @@
 @import 'components/overflow-carousel';
 @import 'components/fullscreen-pop-over';
 @import 'components/page-banner';
+@import 'components/menu';
 
 
 

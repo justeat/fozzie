@@ -4,6 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.73.0
+------------------------------
+*September 4, 2018*
+
+### Changed
+- Optional `c-menu` component.
+
+### Changed
+- `l-inlined` extended so that it can be referenced as a placeholder.
+- `$truncation-boundary` parameter is now optional on the `truncate` mixin.
+
+
 v0.72.0
 ------------------------------
 *September 4, 2018*
@@ -24,8 +36,8 @@ v0.71.0
 
 ### Changed
 - Content title width
-- Changed listing content widths 
-- Changed positioning of listing meta block between mid and wide 
+- Changed listing content widths
+- Changed positioning of listing meta block between mid and wide
 
 
 v0.70.0
