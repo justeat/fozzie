@@ -217,6 +217,28 @@ $listing-promoIconColor         : $orange;
             @include font-size(small, true);
         }
 
+        .c-listing-item-premier {
+            bottom: 0;
+            position: absolute;
+            right: spacing(x2);
+            display: inline-block;
+
+            @include media('<wide') {
+                right: auto;
+                position: relative;
+            }
+
+            @include media('<=mid') {
+                position: absolute;
+                right: spacing(x2);
+            }
+
+            @include media('<tiny') {
+                right: auto;
+                position: relative;
+            }
+        }
+
         .c-listing-item-text {
             margin-top: 0;
         }
