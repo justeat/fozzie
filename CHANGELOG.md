@@ -7,6 +7,9 @@ v0.74.0
 ------------------------------
 *September 4, 2018*
 
+### Added
+- Added `--noPad` modifier to `c-badge`
+
 ### Changed
 - Updating listing component by removing text divider and badge styles to now use c-badge
 
