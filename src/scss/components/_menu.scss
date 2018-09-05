@@ -35,6 +35,7 @@ $menu--condensed-link-padding   : spacing() / 2 !default;
             }
         }
 
+        // Displays the menu horizontally rather than the default of vertically.
         .c-menu--horizontal {
             display: flex;
 
