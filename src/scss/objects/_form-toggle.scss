@@ -47,9 +47,11 @@ $formToggle-disabled-text           : $grey--lighter;
         fill: $formToggle-button-color;
     }
 
-    //Used alongside the default styles but for a larger tap area (min 44px)
+    //Used alongside the default styles but for a larger tap area (min 44px) on mobile
     .o-formToggle--largeTouchArea {
-        margin: spacing() 0 spacing() (spacing() / 2);
+        @include media('<mid') {
+            margin: spacing() 0 spacing() (spacing() / 2);
+        }
     }
 
     .o-formToggle--fullWidth {
@@ -65,10 +67,6 @@ $formToggle-disabled-text           : $grey--lighter;
         @include media('>=mid') {
             width: 100%;
         }
-    }
-
-    .o-formToggle--withCount {
-        padding-right: 15px;
     }
 
     .o-formToggle--withBg {
@@ -218,11 +216,21 @@ $formToggle-disabled-text           : $grey--lighter;
         }
     }
 
+    .o-formToggle--withCount {
+        display: inline-flex;
+        vertical-align: middle;
+    }
+
     .o-formToggle-count {
-        top: 50%;
-        position: absolute;
-        right: spacing();
-        transform: translateY(-50%);
+        padding-left: spacing();
+
+        @include media('>mid') {
+            top: 50%;
+            padding-left: 0;
+            right: spacing();
+            position: absolute;
+            transform: translateY(-50%);
+        }
     }
 
     .o-formToggle--disabled {

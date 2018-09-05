@@ -4,6 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.76.0
+------------------------------
+*September 5 2018*
+
+### Changed
+- Updated formToggle count styling
+
+### Fixed
+- Changed formToggle large touch area class to target mobile only
+
 v0.75.0
 ------------------------------
 *September 5 2018*
