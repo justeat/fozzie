@@ -81,9 +81,11 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
     }
 
     .c-fullScreenPopOver-content {
-        height: 100%;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        padding: spacing(x2) 0;
-        -webkit-overflow-scrolling: touch;
+        @include media('<mid') {
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            padding: spacing(x2) 0;
+            -webkit-overflow-scrolling: touch;
+        }
     }
