@@ -16,6 +16,9 @@ v0.75.0
 ### Changed
 - Updated package dependencies.
 
+### Removed
+- Removed Node v6 Travis build until a fix for the object spread error has been completed.
+
 
 v0.74.1
 ------------------------------
