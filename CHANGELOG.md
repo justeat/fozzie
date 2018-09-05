@@ -10,6 +10,7 @@ v0.76.0
 
 ### Changed
 - Updated formToggle count styling
+- Changed formToggle class modifier `--withCount` to `--hasCount`
 
 ### Fixed
 - Fixed formToggle large touch area class to target narrow screens only
