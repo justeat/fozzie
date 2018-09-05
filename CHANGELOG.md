@@ -3,6 +3,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v0.74.1
+------------------------------
+*September 5, 2018*
+
+### Fixed
+ - Fullscreen popover content styles to be within media breakpoint
+
+
 v0.74.0
 ------------------------------
 *September 4, 2018*
