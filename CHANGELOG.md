@@ -12,7 +12,7 @@ v0.76.0
 - Updated formToggle count styling
 
 ### Fixed
-- Changed formToggle large touch area class to target mobile only
+- Fixed formToggle large touch area class to target narrow screens only
 
 v0.75.0
 ------------------------------

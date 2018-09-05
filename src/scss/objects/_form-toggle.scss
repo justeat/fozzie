@@ -47,7 +47,7 @@ $formToggle-disabled-text           : $grey--lighter;
         fill: $formToggle-button-color;
     }
 
-    //Used alongside the default styles but for a larger tap area (min 44px) on mobile
+    //Used alongside the default styles but for a larger tap area (min 44px) on narrow screens
     .o-formToggle--largeTouchArea {
         @include media('<mid') {
             margin: spacing() 0 spacing() (spacing() / 2);
@@ -216,7 +216,7 @@ $formToggle-disabled-text           : $grey--lighter;
         }
     }
 
-    .o-formToggle--withCount {
+    .o-formToggle--hasCount {
         display: inline-flex;
         vertical-align: middle;
     }
