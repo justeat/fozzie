@@ -25,6 +25,7 @@ $badge-award-bgColor        : $purple--light !default;
 $badge-padding              : 1px 5px !default;
 $badge-rounded-padding      : 4px spacing(x2) !default;
 $badge-rounded-radius       : 14px !default;
+$badge-angled-rounded-radius: 2px !default;
 
 @mixin badge() {
 
@@ -82,6 +83,10 @@ $badge-rounded-radius       : 14px !default;
             @include font-size(base--scaleUp);
         }
 
+        .c-badge--noPad {
+            padding: 0;
+        }
+
         .c-badge--angled {
             display: inline-block;
             margin: 0 5px;
@@ -105,6 +110,16 @@ $badge-rounded-radius       : 14px !default;
 
             &:after {
                 right: -8px;
+            }
+        }
+
+        .c-badge--angledEnd {
+            margin-right: 0;
+            border-top-right-radius: $badge-angled-rounded-radius;
+            border-bottom-right-radius: $badge-angled-rounded-radius;
+
+            &:after {
+                display: none;
             }
         }
 

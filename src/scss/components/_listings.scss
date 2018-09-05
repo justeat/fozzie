@@ -217,17 +217,30 @@ $listing-promoIconColor         : $orange;
             @include font-size(small, true);
         }
 
-        .c-listing-item-text {
-            margin-top: 0;
+        .c-listing-item-premier {
+            bottom: 0;
+            position: absolute;
+            right: spacing(x2);
+            display: inline-block;
+
+            @include media('<wide') {
+                right: auto;
+                position: relative;
+            }
+
+            @include media('<=mid') {
+                position: absolute;
+                right: spacing(x2);
+            }
+
+            @include media('<tiny') {
+                right: auto;
+                position: relative;
+            }
         }
 
-        .c-listing-item-textDivider {
-            width: 4px;
-            height: 4px;
-            margin: 3px 2px;
-            border-radius: 100%;
-            display: inline-block;
-            background: $listing-textDividerBackground;
+        .c-listing-item-text {
+            margin-top: 0;
         }
 
         // .c-listing-item-meta should be used as a container for listing labels and promos
@@ -249,26 +262,11 @@ $listing-promoIconColor         : $orange;
             }
         }
 
-        .c-listing-item-label,
-        .c-listing-item-award {
+        .c-listing-item-label {
             padding: 1px 4px;
-            position: relative;
-            display: inline-block;
             @include font-size(small, false);
-            border-radius: $listing-labelBorder;
-            background: $listing-labelBackground;
-
-            & + & {
-                margin-left: spacing() / 2;
-            }
 
             @include media('>mid') {
-                padding: 2px 5px;
                 @include font-size(base, false);
             }
-        }
-
-        .c-listing-item-award {
-            color: $listing-awardLabelTextColor;
-            background: $listing-awardLabelBackground;
         }

@@ -3,6 +3,17 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v0.74.0
+------------------------------
+*September 4, 2018*
+
+### Added
+- Added `--noPad` modifier to `c-badge`
+- Added `c-listing-item-premier` (Local legend badge) styling
+
+### Changed
+- Updating listing component by removing text divider and badge styles to now use c-badge
+
 
 v0.73.0
 ------------------------------
