@@ -4,6 +4,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.75.0
+------------------------------
+*September 5 2018*
+
+### Added
+- Menu component condensed modifier.
+- Menu component horizontal modifier.
+- Moved more CSS values into SCSS variables.
+
+### Changed
+- Updated package dependencies.
+
+### Removed
+- Removed Node v6 Travis build until a fix for the object spread error has been completed.
+
+
 v0.74.1
 ------------------------------
 *September 5, 2018*

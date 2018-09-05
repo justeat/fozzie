@@ -11,11 +11,14 @@
  * https://fozzie.just-eat.com/styleguide/ui-components/menus
  */
 
-$menu-fontSize              : base--scaleUp !default;
-$menu-border-color          : $grey--lightest !default;
-$menu-border-color--active  : $grey--dark !default;
-$menu-link-color            : $color-text !default;
-$menu-link-padding          : spacing() spacing(x2) !default;
+$menu-fontSize                  : base--scaleUp !default;
+$menu-border-color              : $grey--lightest !default;
+$menu-border-color--active      : $grey--dark !default;
+$menu-border-width              : 1px !default;
+$menu-border-width--active      : 2px !default;
+$menu-link-color                : $color-text !default;
+$menu-link-padding              : spacing() spacing(x2) !default;
+$menu--condensed-link-padding   : spacing() / 2 !default;
 
 @mixin menu() {
 
@@ -24,6 +27,36 @@ $menu-link-padding          : spacing() spacing(x2) !default;
         @include font-size($menu-fontSize);
     }
 
+        // Reduces the spacing between menu items
+        .c-menu--condensed {
+            .c-menu-link {
+                padding-bottom: $menu--condensed-link-padding;
+                padding-top: $menu--condensed-link-padding;
+            }
+        }
+
+        // Displays the menu horizontally rather than the default of vertically.
+        .c-menu--horizontal {
+            display: flex;
+
+            .c-menu-item {
+                box-shadow: none;
+                box-shadow: 0 $menu-border-width 0 0 $menu-border-color;
+            }
+
+            .c-menu-link {
+                padding: spacing();
+            }
+
+            .c-menu-item:active,
+            .c-menu-item:focus,
+            .c-menu-item:hover,
+            .c-menu-item--active {
+                box-shadow: 0 $menu-border-width--active 0 0 $menu-border-color--active;
+                font-weight: $font-weight-base;
+            }
+        }
+
         .c-menu--spacingTop--aboveMid {
             @include media('>mid') {
                 margin-top: 125px;
@@ -31,7 +64,7 @@ $menu-link-padding          : spacing() spacing(x2) !default;
         }
 
         .c-menu-item {
-            box-shadow: -1px 0 0 0 $menu-border-color;
+            box-shadow: -#{$menu-border-width} 0 0 0 $menu-border-color;
 
             &.has-icon {
                 @extend %l-inlined;
@@ -45,7 +78,7 @@ $menu-link-padding          : spacing() spacing(x2) !default;
             .c-menu-item:focus,
             .c-menu-item:hover,
             .c-menu-item--active {
-                box-shadow: -2px 0 0 0 $menu-border-color--active;
+                box-shadow: -#{$menu-border-width--active} 0 0 0 $menu-border-color--active;
                 font-weight: $font-weight-bold;
             }
 

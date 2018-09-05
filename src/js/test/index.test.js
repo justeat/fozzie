@@ -1,8 +1,7 @@
 import TestUtils from 'js-test-buddy';
-import { getBreakpoints, getCurrentScreenWidth } from '../';
+import { getBreakpoints, getCurrentScreenWidth } from '..';
 
 describe('getBreakpoints', () => {
-
     beforeEach(() => {
         TestUtils.setBodyHtml(`
         <style>
@@ -50,11 +49,9 @@ describe('getBreakpoints', () => {
         expect(breakpoints.wide).toBe('1025px');
         expect(breakpoints.huge).toBe('1280px');
     });
-
 });
 
 describe('currentScreenWidth', () => {
-
     it('returns a string if breakpoints are defined correctly', () => {
         // Arrange
         TestUtils.setBodyHtml(`
@@ -88,5 +85,4 @@ describe('currentScreenWidth', () => {
         // Assert
         expect(width).toBe(false);
     });
-
 });
