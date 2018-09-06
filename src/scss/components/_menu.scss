@@ -60,7 +60,7 @@ $menu--condensed-link-padding   : spacing() / 2 !default;
         }
 
         .c-menu--spacingTop--aboveMid {
-            @include media('>mid') {
+            @include media('>=mid') {
                 margin-top: 125px;
             }
         }
