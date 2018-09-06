@@ -40,8 +40,8 @@ $menu--condensed-link-padding   : spacing() / 2 !default;
             display: flex;
 
             .c-menu-item {
-                box-shadow: none;
-                box-shadow: 0 $menu-border-width 0 0 $menu-border-color;
+                border-left: none;
+                border-bottom: solid $menu-border-width $menu-border-color;
             }
 
             .c-menu-link {
@@ -52,8 +52,10 @@ $menu--condensed-link-padding   : spacing() / 2 !default;
             .c-menu-item:focus,
             .c-menu-item:hover,
             .c-menu-item--active {
-                box-shadow: 0 $menu-border-width--active 0 0 $menu-border-color--active;
+                border-left: none;
+                border-bottom: solid $menu-border-width--active $menu-border-color--active;
                 font-weight: $font-weight-base;
+                margin-left: 0;
             }
         }
 
@@ -64,7 +66,7 @@ $menu--condensed-link-padding   : spacing() / 2 !default;
         }
 
         .c-menu-item {
-            box-shadow: -#{$menu-border-width} 0 0 0 $menu-border-color;
+            border-left: solid $menu-border-width $menu-border-color;
 
             &.has-icon {
                 @extend %l-inlined;
@@ -78,8 +80,9 @@ $menu--condensed-link-padding   : spacing() / 2 !default;
             .c-menu-item:focus,
             .c-menu-item:hover,
             .c-menu-item--active {
-                box-shadow: -#{$menu-border-width--active} 0 0 0 $menu-border-color--active;
+                border-left: solid $menu-border-width--active $menu-border-color--active;
                 font-weight: $font-weight-bold;
+                margin-left: -1px;
             }
 
         .c-menu-link {

@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.77.0
+------------------------------
+*September 6 2018*
+
+### Changed
+- Menu component now using borders rather than box-shadow.
+
+
 v0.76.0
 ------------------------------
 *September 5 2018*
@@ -14,6 +22,7 @@ v0.76.0
 
 ### Fixed
 - Fixed formToggle large touch area class to target narrow screens only
+
 
 v0.75.0
 ------------------------------
