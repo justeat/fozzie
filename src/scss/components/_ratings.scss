@@ -1,3 +1,15 @@
+/**
+ * Components > Rating
+ * =================================
+ * Used for displaying restuarant rating stars
+ *
+ * The `c-rating` component is an optional mixin within Fozzie
+ * If you'd like to use it in your project you can include it by adding `@include rating();` into your SCSS dependencies file.
+ *
+ * Documentation:
+ * https://fozzie.just-eat.com/styleguide/ui-components/custom/star-ratings
+ */
+
 $star-count             : 6;
 $star-size--small       : 12px;
 $star-size--default     : 16px;
@@ -5,77 +17,81 @@ $star-size--medium      : 28px;
 $star-size--large       : 42px;
 $star-spacing           : $star-count;
 
-.c-rating {
-    @extend %c-icon--star--empty !optional;
-    background-repeat: repeat-x;
-    background-size: contain;
-    display: inline-block;
-    height: $star-size--default;
-    width: ($star-size--default * $star-count) + $star-spacing;
-}
+@mixin rating() {
 
-.c-rating--small {
-    height: $star-size--small;
-    width: ($star-size--small * $star-count) + $star-spacing;
-}
+    .c-rating {
+        @extend %c-icon--star--empty !optional;
+        background-repeat: repeat-x;
+        background-size: contain;
+        display: inline-block;
+        height: $star-size--default;
+        width: ($star-size--default * $star-count) + $star-spacing;
+    }
 
-.c-rating--medium {
-    height: $star-size--medium;
-    width: ($star-size--medium * $star-count) + ($star-spacing * 2);
-}
+    .c-rating--small {
+        height: $star-size--small;
+        width: ($star-size--small * $star-count) + $star-spacing;
+    }
 
-.c-rating--large {
-    height: $star-size--large;
-    width: ($star-size--large * $star-count) + ($star-spacing * 3);
-}
+    .c-rating--medium {
+        height: $star-size--medium;
+        width: ($star-size--medium * $star-count) + ($star-spacing * 2);
+    }
 
-.c-rating--fill {
-    @extend %c-icon--star--fill !optional;
-    vertical-align: top;
-    background-repeat: repeat-x;
-    background-size: contain;
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    @include rating-fill($star-count);
-}
+    .c-rating--large {
+        height: $star-size--large;
+        width: ($star-size--large * $star-count) + ($star-spacing * 3);
+    }
 
-/*
-Selectable stars rating component
-*/
-.c-ratingSelectable {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-}
+    .c-rating--fill {
+        @extend %c-icon--star--fill !optional;
+        vertical-align: top;
+        background-repeat: repeat-x;
+        background-size: contain;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        @include rating-fill($star-count);
+    }
 
-.c-ratingSelectable-input {
-    display: none;
+    /*
+    Selectable stars rating component
+    */
+    .c-ratingSelectable {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
 
-    &:checked {
-        & + label,
-        & ~ input + label {
+    .c-ratingSelectable-input {
+        display: none;
+
+        &:checked {
+            & + label,
+            & ~ input + label {
+                @extend %c-icon--star--fill !optional;
+            }
+       }
+    }
+
+    .c-ratingSelectable-input:disabled,
+    .c-ratingSelectable-input[disabled] {
+        & + label {
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+
+    .c-icon--star {
+        display: block;
+        cursor: pointer;
+        @extend %c-icon--star--empty !optional;
+        @extend %u-hideText;
+
+        &:hover,
+        &:hover ~ label {
             @extend %c-icon--star--fill !optional;
         }
-   }
-}
-
-.c-ratingSelectable-input:disabled,
-.c-ratingSelectable-input[disabled] {
-    & + label {
-        cursor: default;
-        pointer-events: none;
     }
-}
 
-.c-icon--star {
-    display: block;
-    cursor: pointer;
-    @extend %c-icon--star--empty !optional;
-    @extend %u-hideText;
-
-    &:hover,
-    &:hover ~ label {
-        @extend %c-icon--star--fill !optional;
-    }
 }

@@ -1,7 +1,19 @@
 /**
  * Objects > Lists
  * =================================
+ * Default list styles (for unordered and ordered lists)
+ *
+ * Documentation:
+ * TBC
  */
+
+$list-bullet-color: $red;
+
+// Menulog theme overrides
+@if ($theme == 'ml') {
+    $list-bullet-color: $green;
+}
+
 
 ul,
 ol {
@@ -25,7 +37,7 @@ ul {
     // Adds a coloured circle before list-items
     > li:before,
     > li ul > li:before {
-        color: $red;
+        color: $list-bullet-color;
         content: '\2022'; /* Unicode for circle character */
         font-size: 1.8em;
         padding-right: spacing();

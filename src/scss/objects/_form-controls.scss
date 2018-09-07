@@ -1,6 +1,11 @@
 /**
- * Custom Checkboxes and radios
+ * Objects > Checkboxes and radios
+ * =================================
+ * Custom Checkbox and Radio button styling
  *
+ * Documentation:
+ * https://fozzie.just-eat.com/styleguide/ui-components/forms/checkboxes
+ * https://fozzie.just-eat.com/styleguide/ui-components/forms/radio-buttons
  * --------------------------------
  *
  * Checkbox button example HTML
@@ -21,7 +26,8 @@
  *        My Radio Button Label Text
  *     </label>
  *
- * ================================= */
+ */
+
  $formControl-bgColor           : $white !default;
  $formControl-bgColor-disabled  : $color-disabled !default;
  $formControl-borderColor       : $color-border !default;
@@ -36,6 +42,14 @@
  $formControl-height--wide      : 20px !default;
  $formControl-height            : 24px !default;
  $formControl-border-width      : 1px;
+
+
+// Menulog theme overrides
+@if ($theme == 'ml') {
+    $formControl-color: $green;
+    $formControl-hover-color: $green--dark;
+    $formControl-borderColor-hover: $green;
+}
 
 
  .o-formControl-label {

@@ -1,341 +1,344 @@
 /**
- * Listing
+ * Components > Listing
  * ===================================
- * Example – SERP List – Restaurant Information
+ * Component that styles lists of content
  *
+ * Example: SERP Page – Restaurant Information Lists
  *
+ * The `c-listing` component is an optional mixin within Fozzie.
+ * If you'd like to use it in your project you can include it by adding `@include listing();` into your SCSS dependencies file.
+ *
+ * Documentation:
+ * https://fozzie.just-eat.com/styleguide/ui-components/listings
  */
 
-$listing-background             : $white;
+$listing-bg                     : $white;
 $listing-borderColor            : $color-border;
-$listing-iconFill               : $grey--mid;
-$listing-subsequentBackground   : $grey--lightest;
-$listing-inactiveBackground     : rgba($listing-background, 0.5);
-$listing-borderRadius           : 4px;
-$listing-img-borderRadius       : 2px;
-$listing-promoIconColor         : $orange;
+$listing-border-radius          : 4px;
+$listing-img-border-radius      : 2px;
+$listing-promoIcon-color        : $orange;
 
-.c-listing {
-    border-radius: $listing-borderRadius;
+$listing--subsequent-bg         : $grey--lightest;
+$listing--inactive-bg           : rgba($listing-bg, 0.5);
 
-    @include media('<mid') {
-        border: 0;
-        padding: 0;
-        border-radius: 0;
+/*
+    The mixins below are to help juggle the badge items between stacked and
+    inline and targets viewports inbetween mid and wide (landscape mobiles and very small desktops).
+
+    On narrow, mid and wide you will see:
+
+    item • item
+
+    between mid and wide you will see:
+
+    item
+    item
+
+    The mixins are used to stop code duplication as each chunk of
+    code needs to be within its own media mixin.
+*/
+@mixin inlineDivider() {
+    span {
+        display: block;
+        font-size: 0;
     }
+}
 
-    &.has-noItems {
-        border: 0;
+@mixin blockDivider() {
+    span {
+        display: inline-block;
+        font-size: 1em;
     }
 }
 
-// Subsequent listing is styling used for searchWeb pre-order
-// Inactive listing is styling used for searchWeb offline
-.c-listing--subsequent,
-.c-listing--inactive {
-    margin-top: spacing(x3);
-}
+@mixin listing() {
 
-.c-listing--subsequent {
-    overflow: hidden;
-    padding: 0 spacing(x2) spacing(x2);
-    background: $listing-subsequentBackground;
-}
-
-    .c-listing-loader {
-        opacity: 1;
-        transition: opacity 200ms ease, transform 200ms ease;
+    .c-listing {
+        border-radius: $listing-border-radius;
 
         @include media('<mid') {
-            &.is-loading {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+            border: 0;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        &.has-noItems {
+            border: 0;
         }
     }
 
-    .c-listing-item {
-        margin: 0;
-        display: block;
-        position: relative;
-        background: $listing-background;
-        border-bottom: 1px solid $listing-borderColor;
-
-        .c-listing--inactive & {
-            background: $listing-inactiveBackground;
-        }
-
-        .c-listing & {
-
-            &:first-child {
-                border-top-left-radius: $listing-borderRadius;
-                border-top-right-radius: $listing-borderRadius;
-            }
-
-            &:last-child {
-                border-bottom-left-radius: $listing-borderRadius;
-                border-bottom-right-radius: $listing-borderRadius;
-                border: 0;
-            }
-        }
-
-        &.is-active {
-            display: block;
-        }
-
-        &.is-inactive {
-            display: none;
-        }
+    // Subsequent listing is styling used for searchWeb pre-order
+    // Inactive listing is styling used for searchWeb offline
+    .c-listing--subsequent,
+    .c-listing--inactive {
+        margin-top: spacing(x3);
     }
 
-        //when the listing item has a wrapper link descendent, make sure it doesn’t underline everything (only the main title)
-        .c-listing-item-link {
-            display: block;
-            color: $color-text;
-            padding: spacing(x2);
-            text-decoration: none;
+    .c-listing--subsequent {
+        overflow: hidden;
+        padding: 0 spacing(x2) spacing(x2);
+        background: $listing--subsequent-bg;
+    }
 
-            &:hover,
-            &:active,
-            &:focus {
-                color: currentColor;
-                text-decoration: none;
-            }
+        .c-listing-loader {
+            opacity: 1;
+            transition: opacity 200ms ease, transform 200ms ease;
 
-            &:hover {
-                text-decoration: none;
-
-                & .c-listing-item-title {
-                    text-decoration: underline;
+            @include media('<mid') {
+                &.is-loading {
+                    opacity: 0;
+                    transform: translateY(20px);
                 }
             }
-
-            @include media('>mid') {
-                display: flex;
-                flex-direction: row;
-            }
         }
 
-        .c-listing-item-img {
-            width: 55px;
-            top: spacing(x2);
-            left: spacing(x2);
-            position: absolute;
-
-            @include media('>wide') {
-                width: 65px;
-            }
+        .c-listing-item {
+            margin: 0;
+            display: block;
+            position: relative;
+            background: $listing-bg;
+            border-bottom: 1px solid $listing-borderColor;
 
             .c-listing--inactive & {
-                opacity: 0.5;
+                background: $listing--inactive-bg;
+            }
+
+            .c-listing & {
+                &:first-child {
+                    border-top-left-radius: $listing-border-radius;
+                    border-top-right-radius: $listing-border-radius;
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: $listing-border-radius;
+                    border-bottom-right-radius: $listing-border-radius;
+                    border: 0;
+                }
+            }
+
+            &.is-active {
+                display: block;
+            }
+
+            &.is-inactive {
+                display: none;
             }
         }
 
-        .c-listing-item-imgItem {
-            width: 100%;
-            height: auto;
-            border-radius: $listing-img-borderRadius;
-        }
+            //when the listing item has a wrapper link descendent, make sure it doesn’t underline everything (only the main title)
+            .c-listing-item-link {
+                display: block;
+                color: $color-text;
+                text-decoration: none;
 
-        .c-listing-item-info {
-            top: -4px;
-            position: relative;
-            color: $color-text;
-            padding-left: 70px;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: currentColor;
+                    text-decoration: none;
+                }
 
-            @include media('>mid') {
-                flex-basis: 57%;
+                &:hover {
+                    text-decoration: none;
 
-                &:after {
-                    content: '';
-                    top: 4px;
-                    width: 1px;
-                    right: -1px;
-                    height: 100%;
-                    display: block;
+                    & .c-listing-item-title {
+                        text-decoration: underline;
+                    }
+                }
+
+                @include media('>mid') {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+
+            .c-listing-item-img {
+                width: 55px;
+                top: spacing(x2);
+                left: spacing(x2);
+                position: absolute;
+
+                @include media('>wide') {
+                    width: 65px;
+                }
+
+                .c-listing--inactive & {
+                    opacity: 0.5;
+                }
+            }
+
+            .c-listing-item-imgItem {
+                width: 100%;
+                height: auto;
+                border-radius: $listing-img-border-radius;
+            }
+
+            .c-listing-item-info {
+                top: -4px;
+                position: relative;
+                color: $color-text;
+                padding-left: 70px;
+
+                @include media('>mid') {
+                    flex-basis: 57%;
+
+                    &:after {
+                        content: '';
+                        top: 4px;
+                        width: 1px;
+                        right: -1px;
+                        height: 100%;
+                        display: block;
+                        position: absolute;
+                        background: $listing-borderColor;
+                    }
+                }
+
+                @include media('>wide') {
+                    position: relative;
+                    padding-left: 80px;
+                }
+            }
+
+            .c-listing-item-badge {
+                @include media('>mid') {
+                    @include inlineDivider();
+                }
+
+                @include media('<wide') {
+                    @include inlineDivider();
+                }
+
+                @include media('<=mid') {
+                    @include blockDivider();
+                }
+
+                @include media('>=wide') {
+                    @include blockDivider();
+                }
+            }
+
+            .c-listing-item-details {
+                width: 100%;
+
+                @include media('>mid') {
+                    flex-basis: 43%;
+                    margin-top: auto;
+                    padding-left: spacing(x2);
+                    border-left: 1px solid $listing-borderColor;
+                }
+            }
+
+            .c-listing-item-detailsRow {
+                display : flex;
+                align-items : center;
+                margin-bottom: spacing(x0.5);
+            }
+
+            .c-listing-item-detailsRow-icon {
+                width: 20px;
+                height: 20px;
+                fill: $grey--dark;
+            }
+
+            .c-listing-item-detailsRow-text {
+                margin-left: spacing();
+            }
+
+            .c-listing-item-promo,
+            .c-listing-item-alert {
+                svg {
+                    fill: $listing-promoIcon-color;
+                }
+            }
+            .c-listing-item-promo-text {
+                color: $listing-promoIcon-color;
+            }
+
+            .c-listing-item-title {
+                word-break: break-word;
+                padding-right: spacing();
+
+                @include media('>mid') {
+                    margin: spacing(x0.5) 0;
+                    padding-right: spacing(x2);
+                }
+            }
+
+            .c-listing-item-new {
+                color: $green;
+                top: -2px;
+                position: relative;
+                margin-right: spacing(x0.5);
+            }
+
+            .c-listing-item-rating {
+                padding: 2px 0 3px;
+            }
+
+            .c-listing-item-ratingText {
+                top: -4px;
+                position: relative;
+                @include font-size(small, true);
+            }
+
+            .c-listing-item-premier {
+                bottom: 0;
+                position: absolute;
+                right: spacing(x2);
+                display: inline-block;
+
+                @include media('<wide') {
+                    right: auto;
+                    position: relative;
+                }
+
+                @include media('<=mid') {
                     position: absolute;
-                    background: $listing-borderColor;
+                    right: spacing(x2);
+                }
+
+                @include media('<tiny') {
+                    right: auto;
+                    position: relative;
                 }
             }
 
-            @include media('>wide') {
-                position: relative;
-                padding-left: 80px;
-            }
-        }
-
-        .c-listing-item-badge {
-
-            /*
-            The below styles are in place to juggle the badge items between stacked and
-            inline and targets viewports inbetween mid and wide (landscape mobiles and very small desktops).
-
-            On narrow, mid and wide you will see:
-
-            item • item
-
-            between mid and wide you will see:
-
-            item
-            item
-
-            The mixins are used to stop code duplication as each chunk of
-            code needs to be within its own media mixin.
-            */
-
-            @mixin inlineDivider() {
-                span {
-                    display: block;
-                    font-size: 0;
+            .c-listing-item-premierImage {
+                svg {
+                    height: 32px;
                 }
             }
 
-            @mixin blockDivider() {
-                span {
-                    display: inline-block;
-                    font-size: 1em;
-                }
+            .c-listing-item-text {
+                margin-top: 0;
             }
 
-            @include media('>mid') {
-                @include inlineDivider();
-            }
-
-            @include media('<wide') {
-                @include inlineDivider();
-            }
-
-            @include media('<=mid') {
-                @include blockDivider();
-            }
-
-            @include media('>=wide') {
-                @include blockDivider();
-            }
-        }
-
-        .c-listing-item-details {
-            width: 100%;
-
-            @include media('>mid') {
-                flex-basis: 43%;
-                margin-top: auto;
-                padding-left: spacing(x2);
-                border-left: 1px solid $listing-borderColor;
-            }
-        }
-
-        .c-listing-item-detailsRow {
-            display : flex;
-            align-items : center;
-            margin-bottom: spacing(x0.5);
-        }
-
-        .c-listing-item-detailsRow-icon {
-            width: 20px;
-            height: 20px;
-            fill: $grey--dark;
-        }
-
-        .c-listing-item-detailsRow-text {
-            margin-left: spacing();
-        }
-
-        .c-listing-item-promo,
-        .c-listing-item-alert {
-
-            svg {
-                fill: $listing-promoIconColor;
-            }
-
-        }
-        .c-listing-item-promo-text {
-            color: $listing-promoIconColor;
-        }
-
-        .c-listing-item-title {
-            word-break: break-word;
-            padding-right: spacing();
-
-            @include media('>mid') {
-                margin: spacing(x0.5) 0;
-                padding-right: spacing(x2);
-            }
-        }
-
-        .c-listing-item-new {
-            color: $green;
-            top: -2px;
-            position: relative;
-            margin-right: spacing(x0.5);
-        }
-
-        .c-listing-item-rating {
-            padding: 2px 0 3px;
-        }
-
-        .c-listing-item-ratingText {
-            top: -4px;
-            position: relative;
-            @include font-size(small, true);
-        }
-
-        .c-listing-item-premier {
-            bottom: 0;
-            position: absolute;
-            right: spacing(x2);
-            display: inline-block;
-
-            @include media('<wide') {
-                right: auto;
-                position: relative;
-            }
-
-            @include media('<=mid') {
-                position: absolute;
-                right: spacing(x2);
-            }
-
-            @include media('<tiny') {
-                right: auto;
-                position: relative;
-            }
-        }
-
-        .c-listing-item-premierImage {
-            svg {
-                height: 32px;
-            }
-        }
-
-        .c-listing-item-text {
-            margin-top: 0;
-        }
-
-        // .c-listing-item-meta should be used as a container for listing labels and promos
-        .c-listing-item-meta {
-            bottom: 22px;
-            right: spacing(x2);
-            position: absolute;
-
-            @include media('>mid') {
-                right: auto;
-                bottom: auto;
-                position: relative;
-            }
-
-            @include media('>wide') {
-                bottom: 18px;
+            // .c-listing-item-meta should be used as a container for listing labels and promos
+            .c-listing-item-meta {
+                bottom: 22px;
                 right: spacing(x2);
                 position: absolute;
-            }
-        }
 
-        .c-listing-item-label {
-            padding: 1px 4px;
-            @include font-size(small, false);
+                @include media('>mid') {
+                    right: auto;
+                    bottom: auto;
+                    position: relative;
+                }
 
-            @include media('>mid') {
-                @include font-size(base, false);
+                @include media('>wide') {
+                    bottom: 18px;
+                    right: spacing(x2);
+                    position: absolute;
+                }
             }
-        }
+
+            .c-listing-item-label {
+                padding: 1px 4px;
+                @include font-size(small, false);
+
+                @include media('>mid') {
+                    @include font-size(base, false);
+                }
+            }
+}

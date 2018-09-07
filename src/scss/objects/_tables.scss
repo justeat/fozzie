@@ -1,9 +1,14 @@
 /**
  * Objects > Tables
  * =================================
+ * Default Table styles
+ *
  * File Index:
  * - Table specific variables
  * - Default table styles
+ *
+ * Documentation:
+ * TBC
  */
 
 /**
@@ -22,6 +27,11 @@ $table-verticalBorder--color  : $color-border--interactive !default;
  */
 $table-cell-padding           : 14px !default; // Padding for `<th>`s and `<td>`s.
 
+// Menulog theme overrides
+@if ($theme == 'ml') {
+    $table-bgColor--accent: $grey--offWhite;
+    $table-border--color: $grey--offWhite;
+}
 
 // Baseline styles
 table,

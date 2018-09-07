@@ -1,0 +1,14 @@
+// =================================
+// Theme
+// =================================
+//
+// $theme variable let's you specify the theme to be generated for fozzie components
+//
+// This allows control over colour and component overrides that are theme specific
+//
+// Currently accepted themes this value can be set to:
+// 'je' = Just Eat (default)
+// 'ml' = Menulog (AU/NZ theme)
+$theme: 'je' !default;
+
+@debug 'Fozzie Theme is set to `#{$theme}`';

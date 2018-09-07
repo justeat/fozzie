@@ -1,11 +1,13 @@
 /**
- * Breadcrumbs Component
+ * Components > Breadcrumb
  * =================================
- * Used for website navigation
+ * Used for website navigation breadcrumbs
  *
+ * Documentation:
+ * https://fozzie.just-eat.com/styleguide/ui-components/breadcrumbs
  */
 
-$breadcrumb-font-weight : $font-weight-bold !default;
+$breadcrumb-font-weight: $font-weight-bold;
 
 .c-breadcrumb {
     width: 100%;

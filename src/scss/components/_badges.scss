@@ -1,31 +1,32 @@
 /**
- * Badge Component
+ * Components > Badge
  * =================================
- * Example – Menu – Restaurant delivery information.
- *
  * Used for styling small pieces of information.
  *
- * *The `c-badge` component is an optional mixin within Fozzie — if you'd like to use it in your project you can include it by adding `@include badge();` into your SCSS dependencies file.*
+ * Examples: Menu – Restaurant delivery information and Search – listing labels
+ *
+ * The `c-badge` component is an optional mixin within Fozzie.
+ * If you'd like to use it in your project you can include it by adding `@include badge();` into your SCSS dependencies file.
  *
  * Documentation:
  * https://fozzie.just-eat.com/styleguide/ui-components/badges
  */
 
-$badge-bgColor              : $grey--offWhite !default;
-$badge-light-bgColor        : $white !default;
-$badge-info-color           : $green !default;
-$badge-success-color        : $green !default;
-$badge-success-bgColor      : $green--offWhite !default;
-$badge-warning-color        : $orange !default;
-$badge-alert-color          : $red !default;
-$badge-important-color      : $white !default;
-$badge-important-bgColor    : $orange !default;
-$badge-award-color          : $purple !default;
-$badge-award-bgColor        : $purple--light !default;
-$badge-padding              : 1px 5px !default;
-$badge-rounded-padding      : 4px spacing(x2) !default;
-$badge-rounded-radius       : 14px !default;
-$badge-angled-rounded-radius: 2px !default;
+$badge-bgColor              : $grey--offWhite;
+$badge-light-bgColor        : $white;
+$badge-info-color           : $green;
+$badge-success-color        : $green;
+$badge-success-bgColor      : $green--offWhite;
+$badge-warning-color        : $orange;
+$badge-alert-color          : $red;
+$badge-important-color      : $white;
+$badge-important-bgColor    : $orange;
+$badge-award-color          : $purple;
+$badge-award-bgColor        : $purple--light;
+$badge-padding              : 1px 5px;
+$badge-rounded-padding      : 4px spacing(x2);
+$badge-rounded-radius       : 14px;
+$badge-angled-radius        : 2px;
 
 @mixin badge() {
 
@@ -47,20 +48,6 @@ $badge-angled-rounded-radius: 2px !default;
 
         .c-badge--transparent {
             background: none;
-        }
-
-        //Both c-badge--light and c-badge--transparent share the same divider styles,
-        //The content '\2022' will output a bullet: •
-        .c-badge--light,
-        .c-badge--transparent {
-
-            span {
-                &:after {
-                    content: $bullet;
-                    display: inline-block;
-                    color: $grey--light;
-                }
-            }
         }
 
         .c-badge--info {
@@ -127,12 +114,21 @@ $badge-angled-rounded-radius: 2px !default;
 
         .c-badge--angledEnd {
             margin-right: 0;
-            border-top-right-radius: $badge-angled-rounded-radius;
-            border-bottom-right-radius: $badge-angled-rounded-radius;
+            border-top-right-radius: $badge-angled-radius;
+            border-bottom-right-radius: $badge-angled-radius;
 
             &:after {
                 display: none;
             }
         }
 
+        // Default c-badge-icon will display a bullet between `c-badge` items
+        //The content '\2022' will output a bullet: •
+        .c-badge-icon {
+            &:after {
+                content: $bullet;
+                display: inline-block;
+                color: $grey--light;
+            }
+        }
 }

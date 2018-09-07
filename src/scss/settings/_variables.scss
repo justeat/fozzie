@@ -71,7 +71,7 @@ $font-weight-headings-preload: 400;
 
 //  Global Breakpoints
 // ==========================================================================
-$breakpoints: ko-map-to-em((
+$breakpoints: map-to-em((
     tiny     : 375px,
     narrow   : 414px,    // narrow devices
     mid      : 768px,    // mid bp
