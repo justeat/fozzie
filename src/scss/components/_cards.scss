@@ -17,8 +17,8 @@ $card-padding                                   : spacing(x2) !default;
 $card-radius                                    : 4px !default;
 $card-radius--large                             : 8px !default;
 $card-borderColor                               : $grey--lightest !default;
-$card-section-margin                            : spacing(x4) * 2 !default;
-$card-section-margin--aboveMid                  : spacing(x4) !default;
+$card-section-margin                            : spacing(x4) !default;
+$card-section-margin--large                     : spacing(x8) !default;
 $card-section-collapsible-paddingRight          : 42px;
 $card-section-collapsible-paddingRight--aboveMid: 60px;
 
@@ -68,22 +68,23 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
 
         // creates a section which is separated off by a border on larger screens
         .c-card-section {
+            margin-left: -#{spacing(x2)};
             padding: 0 spacing(x3);
             width: calc(100% + #{$card-section-margin});
 
             @include media('>=mid') {
                 border-top: solid 1px $card-borderColor;
-                width: calc(100% + #{$card-section-margin--aboveMid});
+                margin-left: -#{spacing(x2)};
             }
         }
 
             .c-card-section--collapsible {
-                padding: 0 $card-section-collapsible-paddingRight 0 spacing(x2);
+                overflow: hidden;
+                padding-right: $card-section-collapsible-paddingRight;
                 position: relative;
                 user-select: none;
 
                 @include media('>=mid') {
-                    padding-left: spacing(x3);
                     padding-right: $card-section-collapsible-paddingRight--aboveMid;
                 }
 
@@ -92,9 +93,20 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
                 }
             }
 
+                .c-card-section--collapsible--noPad {
+                    margin-left: -#{spacing(x4)};
+                    padding: 0 $card-section-collapsible-paddingRight 0 spacing(x2);
+                    width: calc(100% + #{$card-section-margin--large});
+
+                    @include media('>=mid') {
+                        margin-left: -#{spacing(x2)};
+                        padding: 0 $card-section-collapsible-paddingRight--aboveMid 0 spacing(x3);
+                        width: calc(100% + #{$card-section-margin});
+                    }
+            }
+
             .c-card-section--collapsed {
                 height: 50px;
-                overflow: hidden;
 
                 &.c-card-section {
                     margin-bottom: -#{spacing(x2)};
@@ -126,6 +138,14 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
 
                 .c-card-section--collapsed & {
                     transform: rotate(0);
+                }
+
+                .c-card-section--collapsible--noPad & {
+                    right: 21px;
+
+                    @include media('>=mid') {
+                        right: spacing(x3);
+                    }
                 }
             }
 
