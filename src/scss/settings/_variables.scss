@@ -102,7 +102,9 @@ $spacing: (
     x3   : $spacing * 3,
     x4   : $spacing * 4,
     x5   : $spacing * 5,
-    x6   : $spacing * 6
+    x6   : $spacing * 6,
+    x7   : $spacing * 7,
+    x8   : $spacing * 8
 );
 
 $baseline: spacing(x2); // default spacing between blocks
