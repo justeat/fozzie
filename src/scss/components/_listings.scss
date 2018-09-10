@@ -13,7 +13,8 @@ $listing-borderColor            : $color-border;
 $listing-iconFill               : $grey--mid;
 $listing-labelBackground        : $grey--offWhite;
 $listing-labelBorder            : 2px;
-$listing-offlineBackground      : $grey--lightest;
+$listing-preorderBackground     : $grey--lightest;
+$lighting-offlineBackground     : rgba($listing-background, 0.5);
 $listing-borderRadius           : 4px;
 $listing-img-borderRadius       : 2px;
 $listing-textDividerBackground  : $grey--light;
@@ -40,9 +41,19 @@ $listing-promoIconColor         : $orange;
     }
 }
 
+.c-listing--preorder,
 .c-listing--offline {
-    padding: spacing(x2);
-    background: $listing-offlineBackground;
+    margin-top: spacing(x3);
+}
+
+.c-listing--preorder {
+    overflow: hidden;
+    padding: 0 spacing(x2) spacing(x2);
+    background: $listing-preorderBackground;
+
+    &:first-child {
+        background: red !important;;
+    }
 }
 
     .c-listing-item {
@@ -53,11 +64,11 @@ $listing-promoIconColor         : $orange;
         background: $listing-background;
         border-bottom: 1px solid $listing-borderColor;
 
-        .c-listing &:last-child {
-            border: 0;
+        .c-listing--offline & {
+            background: $lighting-offlineBackground;
         }
 
-        .c-listing--offline & {
+        .c-listing & {
 
             &:first-child {
                 border-top-left-radius: $listing-borderRadius;
@@ -67,6 +78,7 @@ $listing-promoIconColor         : $orange;
             &:last-child {
                 border-bottom-left-radius: $listing-borderRadius;
                 border-bottom-right-radius: $listing-borderRadius;
+                border: 0;
             }
         }
 
@@ -114,6 +126,10 @@ $listing-promoIconColor         : $orange;
 
             @include media('>wide') {
                 width: 65px;
+            }
+
+            .c-listing--offline & {
+                opacity: 0.5;
             }
         }
 
