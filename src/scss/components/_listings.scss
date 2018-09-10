@@ -211,9 +211,8 @@ $listing-promoIconColor         : $orange;
         }
 
         .c-listing-item-ratingText {
-            top: -3px;
+            top: -4px;
             position: relative;
-            margin-left: spacing(x0.5);
             @include font-size(small, true);
         }
 

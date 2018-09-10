@@ -1,8 +1,9 @@
-$star-count: 6;
-$star-size-small: 16px;
-$star-size-medium: 28px;
-$star-size-large: 42px;
-$star-spacing: $star-count;
+$star-count             : 6;
+$star-size-extraSmall   : 12px;
+$star-size-small        : 16px;
+$star-size-medium       : 28px;
+$star-size-large        : 42px;
+$star-spacing           : $star-count;
 
 .c-rating {
     @extend %c-icon--star--empty !optional;
@@ -11,6 +12,11 @@ $star-spacing: $star-count;
     display: inline-block;
     height: $star-size-small;
     width: $star-size-small * $star-count + $star-spacing;
+}
+
+.c-rating--extraSmall {
+    height: $star-size-extraSmall;
+    width: $star-size-extraSmall * $star-count + ($star-spacing * 1);
 }
 
 .c-rating--medium {
@@ -25,6 +31,7 @@ $star-spacing: $star-count;
 
 .c-rating--fill {
     @extend %c-icon--star--fill !optional;
+    vertical-align: top;
     background-repeat: repeat-x;
     background-size: contain;
     display: inline-block;
