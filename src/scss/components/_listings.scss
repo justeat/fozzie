@@ -164,7 +164,7 @@ $listing-promoIconColor         : $orange;
         .c-listing-item-detailsRow {
             display : flex;
             align-items : center;
-            margin-bottom: spacing() / 2;
+            margin-bottom: spacing(x0.5);
         }
 
         .c-listing-item-detailsRow-icon {
@@ -194,7 +194,7 @@ $listing-promoIconColor         : $orange;
             font-weight: $font-weight-base;
 
             @include media('>mid') {
-                margin: (spacing() / 2) 0;
+                margin: spacing(x0.5) 0;
                 padding-right: spacing(x2);
             }
         }
@@ -203,7 +203,7 @@ $listing-promoIconColor         : $orange;
             color: $green;
             top: -2px;
             position: relative;
-            margin-right: spacing() / 2;
+            margin-right: spacing(x0.5);
         }
 
         .c-listing-item-rating {
@@ -213,7 +213,7 @@ $listing-promoIconColor         : $orange;
         .c-listing-item-ratingText {
             top: -3px;
             position: relative;
-            margin-left: spacing() / 2;
+            margin-left: spacing(x0.5);
             @include font-size(small, true);
         }
 

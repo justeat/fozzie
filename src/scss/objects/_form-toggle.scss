@@ -50,7 +50,7 @@ $formToggle-disabled-text           : $grey--lighter;
     //Used alongside the default styles but for a larger tap area (min 44px) on narrow screens
     .o-formToggle--largeTouchArea {
         @include media('<mid') {
-            margin: spacing() 0 spacing() (spacing() / 2);
+            margin: spacing() 0 spacing() spacing(x0.5);
         }
     }
 
