@@ -96,6 +96,7 @@ $spacing: 8px; // only for use in map below – not for in components
 // spacing map
 // Can access levels by using the spacing function > spacing() or spacing(x5) for example
 $spacing: (
+    x0.5 : $spacing / 2,
     base : $spacing,
     x1.5 : $spacing * 1.5,
     x2   : $spacing * 2,

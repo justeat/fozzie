@@ -4,6 +4,24 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.80.0
+------------------------------
+*September 10 2018*
+
+### Added
+- Card no padding modifier.
+- Card highlight modifier.
+- Card bottom section modifier.
+- Animation to card section chevron.
+- 0.5 spacing value.
+
+### Changed
+- Updated modules to use new 0.5 spacing value.
+
+### Fixed
+- Card section margin only applied on larger screens.
+
+
 v0.79.0
 ------------------------------
 *September 7 2018*

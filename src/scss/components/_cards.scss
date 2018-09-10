@@ -19,6 +19,8 @@ $card-radius--large                             : 8px !default;
 $card-borderColor                               : $grey--lightest !default;
 $card-section-margin                            : spacing(x4) !default;
 $card-section-margin--large                     : spacing(x8) !default;
+$card-section-highlight-backgroundColor         : $orange;
+$card-section-highlight-color                   : $white;
 $card-section-collapsible-paddingRight          : 42px;
 $card-section-collapsible-paddingRight--aboveMid: 60px;
 
@@ -38,6 +40,10 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
         .c-card--noPad {
             padding: 0;
         }
+
+            .c-card--noPad--bottom {
+                padding-bottom: 0;
+            }
 
         .c-card--noPadVertical {
             padding-top: 0;
@@ -78,6 +84,26 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
             }
         }
 
+        // used to create a section at the end of a card which has a background colour applied
+        .c-card-section--bottom {
+            border-bottom-right-radius: $card-radius;
+            border-bottom-left-radius: $card-radius;
+
+            .c-card--rounded--large & {
+                border-bottom-right-radius: $card-radius--large;
+                border-bottom-left-radius: $card-radius--large;
+            }
+        }
+
+        // used to create a section at the end of a card which has a background colour applied
+        .c-card-section--highlight {
+            background-color: $card-section-highlight-backgroundColor;
+            border-top: none;
+            color: $card-section-highlight-color;
+            margin-top: spacing(x2);
+            padding: spacing(x0.5) spacing();
+        }
+
             .c-card-section--collapsible {
                 overflow: hidden;
                 padding-right: $card-section-collapsible-paddingRight;
@@ -109,7 +135,9 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
                 height: 50px;
 
                 &.c-card-section {
-                    margin-bottom: -#{spacing(x2)};
+                    @include media('>=mid') {
+                        margin-bottom: -#{spacing(x2)};
+                    }
                 }
 
                 p {
@@ -124,6 +152,7 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
                 right: spacing(x2);
                 top: 22px;
                 transform: rotate(180deg);
+                transition: transform 0.4s;
                 width: 10px;
 
                 @include media('>=mid') {

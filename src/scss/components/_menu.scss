@@ -18,7 +18,7 @@ $menu-border-width              : 1px !default;
 $menu-border-width--active      : 2px !default;
 $menu-link-color                : $color-text !default;
 $menu-link-padding              : spacing() spacing(x2) !default;
-$menu--condensed-link-padding   : spacing() / 2 !default;
+$menu--condensed-link-padding   : spacing(x0.5) !default;
 
 @mixin menu() {
 
@@ -72,7 +72,7 @@ $menu--condensed-link-padding   : spacing() / 2 !default;
                 @extend %l-inlined;
 
                 .c-menu-link {
-                    padding-right: spacing() / 2;
+                    padding-right: spacing(x0.5);
                 }
             }
         }
