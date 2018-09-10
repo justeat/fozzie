@@ -11,6 +11,7 @@ v0.81.0
 ### Changed
 - Updated listing state styles.
 - Updated listing state class names
+- Updated listing first and last childred to have border radius
 
 v0.80.0
 ------------------------------
