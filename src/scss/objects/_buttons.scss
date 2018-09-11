@@ -534,6 +534,7 @@ input[type='button'] {
     text-decoration: underline;
 
     &:hover {
+        cursor: pointer;
         color: $color-link-hover;
         background-color: transparent;
     }
