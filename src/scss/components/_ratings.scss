@@ -11,22 +11,22 @@ $star-spacing           : $star-count;
     background-size: contain;
     display: inline-block;
     height: $star-size-small;
-    width: $star-size-small * $star-count + $star-spacing;
+    width: ($star-size-small * $star-count) + $star-spacing;
 }
 
 .c-rating--extraSmall {
     height: $star-size-extraSmall;
-    width: $star-size-extraSmall * $star-count + $star-spacing;
+    width: ($star-size-extraSmall * $star-count) + $star-spacing;
 }
 
 .c-rating--medium {
     height: $star-size-medium;
-    width: $star-size-medium * $star-count + ($star-spacing * 2);
+    width: ($star-size-medium * $star-count) + ($star-spacing * 2);
 }
 
 .c-rating--large {
     height: $star-size-large;
-    width: $star-size-large * $star-count + ($star-spacing * 3);
+    width: ($star-size-large * $star-count) + ($star-spacing * 3);
 }
 
 .c-rating--fill {
