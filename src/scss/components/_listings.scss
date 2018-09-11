@@ -7,17 +7,12 @@
  */
 
 $listing-background             : $white;
-$listing-awardLabelTextColor    : $purple;
-$listing-awardLabelBackground   : $purple--light;
 $listing-borderColor            : $color-border;
 $listing-iconFill               : $grey--mid;
-$listing-labelBackground        : $grey--offWhite;
-$listing-labelBorder            : 2px;
 $listing-subsequentBackground   : $grey--lightest;
 $listing-inactiveBackground     : rgba($listing-background, 0.5);
 $listing-borderRadius           : 4px;
 $listing-img-borderRadius       : 2px;
-$listing-textDividerBackground  : $grey--light;
 $listing-promoIconColor         : $orange;
 
 .c-listing {
@@ -191,7 +186,8 @@ $listing-promoIconColor         : $orange;
             margin-left: spacing();
         }
 
-        .c-listing-item-promo {
+        .c-listing-item-promo,
+        .c-listing-item-alert {
 
             svg {
                 fill: $listing-promoIconColor;
