@@ -4,6 +4,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.84.0
+------------------------------
+*September 11 2018*
+
+### Added
+- Added new class for alert status on listings.
+
+### Changed
+- Removed unused variable names within listings.
+
+
 v0.83.0
 ------------------------------
 *September 11 2018*
