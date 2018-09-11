@@ -4,6 +4,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.82.0
+------------------------------
+*September 11 2018*
+
+### Added
+- Added `--extraSmall` modifier to ratings.
+
+### Changed
+- Updated listing rating styles to work with new rating size.
+
+
 v0.81.0
 ------------------------------
 *September 10 2018*
@@ -12,6 +23,7 @@ v0.81.0
 - Updated listing state styles.
 - Updated listing state class names
 - Updated listing first and last childred to have border radius
+
 
 v0.80.0
 ------------------------------
