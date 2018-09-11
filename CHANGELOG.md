@@ -15,6 +15,16 @@ v0.82.0
 - Updated listing rating styles to work with new rating size.
 
 
+v0.81.0
+------------------------------
+*September 10 2018*
+
+### Changed
+- Updated listing state styles.
+- Updated listing state class names
+- Updated listing first and last childred to have border radius
+
+
 v0.80.0
 ------------------------------
 *September 10 2018*
