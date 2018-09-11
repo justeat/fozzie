@@ -4,6 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.85.0
+------------------------------
+*September 11 2018*
+
+### Changed
+- Updated formToggle click area.
+- Removed formToggle count pointer events.
+- Updated overflowCarousel display to `inline-flex`.
+
+
 v0.84.0
 ------------------------------
 *September 11 2018*
