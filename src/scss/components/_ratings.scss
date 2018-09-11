@@ -1,8 +1,8 @@
 $star-count             : 6;
-$star-size-extraSmall   : 12px;
-$star-size-small        : 16px;
-$star-size-medium       : 28px;
-$star-size-large        : 42px;
+$star-size--small       : 12px;
+$star-size--default     : 16px;
+$star-size--medium      : 28px;
+$star-size--large       : 42px;
 $star-spacing           : $star-count;
 
 .c-rating {
@@ -10,23 +10,23 @@ $star-spacing           : $star-count;
     background-repeat: repeat-x;
     background-size: contain;
     display: inline-block;
-    height: $star-size-small;
-    width: ($star-size-small * $star-count) + $star-spacing;
+    height: $star-size--default;
+    width: ($star-size--default * $star-count) + $star-spacing;
 }
 
-.c-rating--extraSmall {
-    height: $star-size-extraSmall;
-    width: ($star-size-extraSmall * $star-count) + $star-spacing;
+.c-rating--small {
+    height: $star-size--small;
+    width: ($star-size--small * $star-count) + $star-spacing;
 }
 
 .c-rating--medium {
-    height: $star-size-medium;
-    width: ($star-size-medium * $star-count) + ($star-spacing * 2);
+    height: $star-size--medium;
+    width: ($star-size--medium * $star-count) + ($star-spacing * 2);
 }
 
 .c-rating--large {
-    height: $star-size-large;
-    width: ($star-size-large * $star-count) + ($star-spacing * 3);
+    height: $star-size--large;
+    width: ($star-size--large * $star-count) + ($star-spacing * 3);
 }
 
 .c-rating--fill {
