@@ -123,6 +123,30 @@
 }
 
 //
+// Typographic Colour Helpers
+// ==========================================================================
+
+.u-color-text {
+    color: $color-text;
+}
+
+.u-color-text--hint {
+    color: $color-text--hint;
+}
+
+.u-color-text--success {
+    color: $color-text--success;
+}
+
+.u-color-text--danger {
+    color: $color-text--danger;
+}
+
+.u-color-text--warning {
+    color: $color-text--warning;
+}
+
+//
 // Spacing Utilities
 // ==========================================================================
 
