@@ -16,7 +16,7 @@ $star-spacing           : $star-count;
 
 .c-rating--extraSmall {
     height: $star-size-extraSmall;
-    width: $star-size-extraSmall * $star-count + ($star-spacing * 1);
+    width: $star-size-extraSmall * $star-count + $star-spacing;
 }
 
 .c-rating--medium {
