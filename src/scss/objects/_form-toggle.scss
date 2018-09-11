@@ -107,11 +107,18 @@ $formToggle-disabled-text           : $grey--lighter;
     }
 
     .o-formToggle-text {
+        width: 100%;
         display: block;
         transition: padding 200ms ease-in-out;
 
         &:after {
             content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         @mixin formToggleCheckedSpacing() {
@@ -151,9 +158,7 @@ $formToggle-disabled-text           : $grey--lighter;
         }
 
         .o-formToggle:not(.o-formToggle--disabled):hover &,
-        .o-formToggle:not(.o-formToggle--disabled):focus &,
-        .o-formToggle-input:not([disabled]):hover ~ &,
-        .o-formToggle-input:not([disabled]):focus ~ & {
+        .o-formToggle:not(.o-formToggle--disabled):focus & {
             @include media('>=mid') {
                 @include formToggleCheckedBorder();
             }
@@ -217,11 +222,12 @@ $formToggle-disabled-text           : $grey--lighter;
     }
 
     .o-formToggle--hasCount {
-        display: inline-flex;
+        display: flex;
         vertical-align: middle;
     }
 
     .o-formToggle-count {
+        pointer-events: none;
         padding-left: spacing();
 
         @include media('>mid') {
