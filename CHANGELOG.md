@@ -6,10 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.86.0
 ------------------------------
-*September 11 2018*
+*September 12 2018*
 
 ### Added
-- Added `curor: pointer` to the hover of `o-btnLink`.
+- Added `cursor: pointer` to the hover of `o-btnLink`.
 
 
 v0.85.0
