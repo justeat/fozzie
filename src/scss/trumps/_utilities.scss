@@ -95,6 +95,11 @@
     transition: top 0.2s ease;
 }
 
+.u-sticky {
+    position: sticky;
+    top: spacing(x2);
+}
+
 //
 // Typographic Helpers
 // ==========================================================================
@@ -109,7 +114,7 @@
 }
 
 .u-textPad {
-    padding-left: spacing(x4);
+    padding-left: spacing(x4) !important;
 }
 
 .u-noUnderline {
@@ -122,12 +127,16 @@
     }
 }
 
-//
+//±
 // Typographic Colour Helpers
 // ==========================================================================
 
 .u-color-text {
     color: $color-text;
+}
+
+.u-color-link {
+    color: $color-link-default;
 }
 
 .u-color-text--hint {
@@ -151,30 +160,45 @@
 // ==========================================================================
 
 .u-noSpacing {
-    margin: 0;
+    margin: 0 !important;
 }
 
 .u-spacingTop {
-    margin-top: spacing();
+    margin-top: spacing() !important;
 }
     .u-spacingTop--large {
-        margin-top: spacing(x2);
+        margin-top: spacing(x2) !important;
     }
 
 .u-spacingRight {
-    margin-right: spacing();
+    margin-right: spacing() !important;
 }
 
 .u-spacingBottom {
-    margin-bottom: spacing();
+    margin-bottom: spacing() !important;
 }
     .u-spacingBottom--large {
-        margin-bottom: spacing(x2);
+        margin-bottom: spacing(x2) !important;
     }
 
 .u-spacingLeft {
-    margin-left: spacing();
+    margin-left: spacing() !important;
 }
+
+//
+// Padding Utilities
+// ==========================================================================
+
+.u-noPad {
+    padding: 0 !important;
+}
+
+.u-padTop {
+    padding-top: spacing() !important;
+}
+    .u-padTop--large {
+        padding-top: spacing(x2) !important;
+    }
 
 //
 // Image Replacement Techniques

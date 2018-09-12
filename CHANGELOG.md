@@ -4,6 +4,26 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.87.0
+------------------------------
+*September 12 2018*
+
+### Added
+- Card component normalise links modifier.
+- Position sticky utility helper.
+- Padding utility helpers.
+
+### Changed
+- Applied `!important` declaration to spacing utilities to ensure that they always trump other styles.
+- Badge component text never wraps.
+- Increased spacing between badges.
+- Card components display as blocks.
+- Card component comments updated.
+
+### Fixed
+- Overlap of angled badge section over text.
+
+
 v0.86.0
 ------------------------------
 *September 12 2018*
