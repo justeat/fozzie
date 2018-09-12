@@ -33,6 +33,7 @@ $badge-angled-rounded-radius: 2px !default;
         background-color: $badge-bgColor;
         padding: $badge-padding;
         position: relative;
+        white-space: nowrap;
 
         span {
             margin: 0 4px;
@@ -89,7 +90,7 @@ $badge-angled-rounded-radius: 2px !default;
 
         .c-badge--angled {
             display: inline-block;
-            margin: 0 5px;
+            margin: 0 spacing();
 
             &:before,
             &:after {
@@ -101,15 +102,16 @@ $badge-angled-rounded-radius: 2px !default;
                 top: 0;
                 transform-origin: 100% 0;
                 transform: skew(-15deg);
-                width: 9px;
             }
 
             &:before {
                 left: -1px;
+                width: 8px;
             }
 
             &:after {
                 right: -8px;
+                width: 9px;
             }
         }
 

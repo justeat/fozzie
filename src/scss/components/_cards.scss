@@ -28,6 +28,7 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
 
     .c-card {
         background-color: $card-bgColor--active;
+        display: block;
         margin-bottom: spacing();
         padding: $card-padding;
         position: relative;
@@ -72,6 +73,17 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
             background: $card-bgColor--disabled;
         }
 
+        // sets all link styles to behave as if they were standard text
+        .c-card--normaliseLinks {
+            text-decoration: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: inherit;
+            }
+        }
+
         // creates a section which is separated off by a border on larger screens
         .c-card-section {
             margin-left: -#{spacing(x2)};
@@ -84,7 +96,7 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
             }
         }
 
-        // used to create a section at the end of a card which has a background colour applied
+        // used to create rounded corners at the end of a card
         .c-card-section--bottom {
             border-bottom-right-radius: $card-radius;
             border-bottom-left-radius: $card-radius;
@@ -95,7 +107,7 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
             }
         }
 
-        // used to create a section at the end of a card which has a background colour applied
+        // used to create a section which has a highlighted background colour applied
         .c-card-section--highlight {
             background-color: $card-section-highlight-backgroundColor;
             border-top: none;
