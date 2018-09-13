@@ -38,18 +38,36 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
         }
     }
 
+
+        //
+        // Spacing Modifiers
+        // ==========================================================================
+
         .c-card--noPad {
             padding: 0;
         }
-
-            .c-card--noPad--bottom {
-                padding-bottom: 0;
-            }
 
         .c-card--noPadVertical {
             padding-top: 0;
             padding-bottom: 0;
         }
+
+        .c-card--noPadBottom {
+            padding-bottom: 0;
+        }
+
+        // stretches the card contents outside of their container
+        .c-card--negativeSpacing {
+            margin-left: -#{spacing(x2)};
+            margin-right: -#{spacing(x2)};
+            padding-left: spacing(x2);
+            padding-right: spacing(x2);
+        }
+
+
+        //
+        // Outline Modifiers
+        // ==========================================================================
 
         .c-card--rounded {
             border-radius: $card-radius;
@@ -69,8 +87,23 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
                 }
             }
 
+            .c-card--outlineTop--belowMid {
+                @include media('<mid') {
+                    border-top: solid 1px $card-borderColor;
+                }
+            }
+
+
+        //
+        // Other Modifiers
+        // ==========================================================================
+
         .c-card--disabled {
             background: $card-bgColor--disabled;
+        }
+
+        .c-card--noBgColor {
+            background-color: transparent;
         }
 
         // sets all link styles to behave as if they were standard text
@@ -83,6 +116,11 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
                 color: inherit;
             }
         }
+
+
+        //
+        // Child Elements
+        // ==========================================================================
 
         // creates a section which is separated off by a border on larger screens
         .c-card-section {

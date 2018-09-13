@@ -4,6 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.92.0
+------------------------------
+*September 14, 2018*
+
+### Added
+- `l-inlined--top` layout helper.
+- New card modifiers for spacing, borders, and background colours.
+- Utility helper for text truncation.
+
+
 v0.91.0
 ------------------------------
 *September 13 2018*

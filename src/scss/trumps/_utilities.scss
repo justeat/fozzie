@@ -117,6 +117,10 @@
     padding-left: spacing(x4) !important;
 }
 
+.u-text-truncate {
+    @include truncate();
+}
+
 .u-noUnderline {
     text-decoration: none;
 
@@ -166,6 +170,9 @@
 .u-spacingTop {
     margin-top: spacing() !important;
 }
+    .u-spacingTop--small {
+        margin-top: spacing(x0.5) !important;
+    }
     .u-spacingTop--large {
         margin-top: spacing(x2) !important;
     }
@@ -198,6 +205,11 @@
 }
     .u-padTop--large {
         padding-top: spacing(x2) !important;
+    }
+    .u-padTop--large--aboveMid {
+        @include media('>=mid') {
+            padding-top: spacing(x2) !important;
+        }
     }
 
 //
