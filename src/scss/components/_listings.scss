@@ -16,19 +16,12 @@ $listing-img-borderRadius       : 2px;
 $listing-promoIconColor         : $orange;
 
 .c-listing {
-    opacity: 1;
     border-radius: $listing-borderRadius;
-    transition: opacity 200ms ease, transform 200ms ease;
 
     @include media('<mid') {
         border: 0;
         padding: 0;
         border-radius: 0;
-
-        &.is-loading {
-            opacity: 0;
-            transform: translateY(20px);
-        }
     }
 
     &.has-noItems {
@@ -48,6 +41,18 @@ $listing-promoIconColor         : $orange;
     padding: 0 spacing(x2) spacing(x2);
     background: $listing-subsequentBackground;
 }
+
+    .c-listing-loader {
+        opacity: 1;
+        transition: opacity 200ms ease, transform 200ms ease;
+
+        @include media('<mid') {
+            &.is-loading {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+    }
 
     .c-listing-item {
         margin: 0;

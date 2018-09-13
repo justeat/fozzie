@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.89.0
+------------------------------
+*September 13 2018*
+
+### Added
+- Addition of `c-listing-loader` class to seperate the loading animation from the `c-listing` container.
+
+
 v0.88.0
 ------------------------------
 *September 12 2018*
