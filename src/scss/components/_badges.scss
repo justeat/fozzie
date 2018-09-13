@@ -53,6 +53,14 @@ $badge-angled-rounded-radius: 2px !default;
             }
         }
 
+        .c-badge--transparent {
+            background: none;
+
+            span {
+                color: $grey--light;
+            }
+        }
+
         .c-badge--info {
             color: $badge-info-color;
         }
