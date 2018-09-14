@@ -28,6 +28,7 @@ v0.94.0
 - Made responsive breakpoints more consistent on `c-contentHeader`.
 
 
+<<<<<<< HEAD
 v0.93.0
 ------------------------------
 *September 17 2018*
@@ -37,6 +38,14 @@ v0.93.0
 
 ### Changed
 - Moved the padding from c-listing-item to c-listing-item-link for a nicer focus border look.
+=======
+v0.95.0
+------------------------------
+*September 17, 2018*
+
+### Added
+- Added `c-listing-item-badge` to the listing component to handle badge responsiveness 
+>>>>>>> v0.95.0 - addition of c-listing-item-badge to handle badge responsiveness
 
 
 v0.92.0
