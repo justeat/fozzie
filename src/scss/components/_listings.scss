@@ -167,6 +167,7 @@ $listing-promoIconColor         : $orange;
         .c-listing-item-badge {
 
             /*
+<<<<<<< HEAD
             The below styles are in place to juggle the badge items between stacked and
             inline and targets viewports inbetween mid and wide (landscape mobiles and very small desktops).
 
@@ -174,23 +175,44 @@ $listing-promoIconColor         : $orange;
 
             item • item
 
+=======
+            The below styles are in place to juggle the badge items between stacked and 
+            inline and targets viewports inbetween mid and wide (landscape mobiles and very small desktops).
+
+            On narrow, mid and wide you will see:
+            
+            item • item
+            
+>>>>>>> v0.95.0 - addition of c-listing-item-badge to handle badge responsiveness
             between mid and wide you will see:
 
             item
             item
 
+<<<<<<< HEAD
             The mixins are used to stop code duplication as each chunk of
             code needs to be within its own media mixin.
             */
 
             @mixin inlineDivider() {
+=======
+            The mixins are used to stop code duplication as each chunk of 
+            code needs to be within its own media mixin.
+            */
+
+            @mixin inlineSpan() {
+>>>>>>> v0.95.0 - addition of c-listing-item-badge to handle badge responsiveness
                 span {
                     display: block;
                     font-size: 0;
                 }
             }
 
+<<<<<<< HEAD
             @mixin blockDivider() {
+=======
+            @mixin blockSpan() {
+>>>>>>> v0.95.0 - addition of c-listing-item-badge to handle badge responsiveness
                 span {
                     display: inline-block;
                     font-size: 1em;
@@ -198,6 +220,7 @@ $listing-promoIconColor         : $orange;
             }
 
             @include media('>mid') {
+<<<<<<< HEAD
                 @include inlineDivider();
             }
 
@@ -211,6 +234,21 @@ $listing-promoIconColor         : $orange;
 
             @include media('>=wide') {
                 @include blockDivider();
+=======
+                @include inlineSpan();
+            }
+
+            @include media('<wide') {
+                @include inlineSpan();
+            }
+
+            @include media('<=mid') {
+                @include blockSpan();
+            }
+
+            @include media('>=wide') {
+                @include blockSpan();
+>>>>>>> v0.95.0 - addition of c-listing-item-badge to handle badge responsiveness
             }
         }
 
