@@ -88,6 +88,11 @@ body {
     }
 }
 
+    .l-inlined--top {
+        display: flex;
+        align-items: flex-start;
+    }
+
 // uses flexbox to centre align content both vertically and horizontally
 .l-centred, // British or US English spellings..
 .l-centered {
