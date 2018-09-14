@@ -7,8 +7,10 @@ v0.93.0
 ------------------------------
 *September 14 2018*
 
+### Added
+- Added additional focus states to improves accessibility of formToggles.
+
 ### Changed
-- Added addition focus states to improves accessibility of formToggles.
 - Moved the padding from c-listing-item to c-listing-item-link for a nicer focus border look.
 
 
