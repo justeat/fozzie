@@ -22,6 +22,14 @@ v0.94.0
 - Made responsive breakpoints more consistent on `c-contentHeader`.
 
 
+v0.95.0
+------------------------------
+*September 17, 2018*
+
+### Added
+- Added `c-listing-item-badge` to the listing component to handle badge responsiveness 
+
+
 v0.92.0
 ------------------------------
 *September 14, 2018*

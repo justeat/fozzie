@@ -164,6 +164,56 @@ $listing-promoIconColor         : $orange;
             }
         }
 
+        .c-listing-item-badge {
+
+            /*
+            The below styles are in place to juggle the badge items between stacked and 
+            inline and targets viewports inbetween mid and wide (landscape mobiles and very small desktops).
+
+            On narrow, mid and wide you will see:
+            
+            item • item
+            
+            between mid and wide you will see:
+
+            item
+            item
+
+            The mixins are used to stop code duplication as each chunk of 
+            code needs to be within its own media mixin.
+            */
+
+            @mixin inlineSpan() {
+                span {
+                    display: block;
+                    font-size: 0;
+                }
+            }
+
+            @mixin blockSpan() {
+                span {
+                    display: inline-block;
+                    font-size: 1em;
+                }
+            }
+
+            @include media('>mid') {
+                @include inlineSpan();
+            }
+
+            @include media('<wide') {
+                @include inlineSpan();
+            }
+
+            @include media('<=mid') {
+                @include blockSpan();
+            }
+
+            @include media('>=wide') {
+                @include blockSpan();
+            }
+        }
+
         .c-listing-item-details {
             width: 100%;
 
