@@ -9,7 +9,7 @@ v0.96.0
 *September 17, 2018*
 
 ### Fixed
-- Fixed `.o-formControl-indicator--radio` position on narrow devices.
+- Fixed `.o-formControl-indicator--radio` position on <= mid devices.
 
 
 v0.95.0
