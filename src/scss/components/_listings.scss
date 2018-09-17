@@ -183,14 +183,14 @@ $listing-promoIconColor         : $orange;
             code needs to be within its own media mixin.
             */
 
-            @mixin inlineSpan() {
+            @mixin inlineDivider() {
                 span {
                     display: block;
                     font-size: 0;
                 }
             }
 
-            @mixin blockSpan() {
+            @mixin blockDivider() {
                 span {
                     display: inline-block;
                     font-size: 1em;
@@ -198,19 +198,19 @@ $listing-promoIconColor         : $orange;
             }
 
             @include media('>mid') {
-                @include inlineSpan();
+                @include inlineDivider();
             }
 
             @include media('<wide') {
-                @include inlineSpan();
+                @include inlineDivider();
             }
 
             @include media('<=mid') {
-                @include blockSpan();
+                @include blockDivider();
             }
 
             @include media('>=wide') {
-                @include blockSpan();
+                @include blockDivider();
             }
         }
 
