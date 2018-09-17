@@ -23,7 +23,7 @@
     margin-top: 4px;
     @include font-size(base, false);
 
-    @include media('>mid') {
+    @include media('>=mid') {
         display: inline-block;
     }
 }
@@ -45,7 +45,7 @@
         text-decoration: underline;
     }
 
-    @include media('>mid') {
+    @include media('>=mid') {
         display: inline-block;
     }
 }

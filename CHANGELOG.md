@@ -14,6 +14,14 @@ v0.93.0
 - Moved the padding from c-listing-item to c-listing-item-link for a nicer focus border look.
 
 
+v0.94.0
+------------------------------
+*September 17 2018*
+
+### Changed
+- Made responsive breakpoints more consistent on `c-contentHeader`.
+
+
 v0.92.0
 ------------------------------
 *September 14, 2018*
