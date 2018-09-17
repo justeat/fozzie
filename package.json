@@ -3,10 +3,14 @@
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.96.0",
 =======
   "version": "0.95.0",
 >>>>>>> v0.95.0 - addition of c-listing-item-badge to handle badge responsiveness
+=======
+  "version": "0.96.0",
+>>>>>>> v0.96.0 - fix position of radio button on <=mid
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
