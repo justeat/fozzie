@@ -111,8 +111,8 @@ $formToggle-disabled-text           : $grey--lighter;
         display: block;
         transition: padding 200ms ease-in-out;
 
-        // This after is to increase the click area to the formToggle parent.
-        &:after {
+        // This :before is to increase the click area to the formToggle parent.
+        &:before {
             content: '';
             position: absolute;
             top: 0;
@@ -131,7 +131,8 @@ $formToggle-disabled-text           : $grey--lighter;
             @include formToggleCheckedSpacing();
         }
 
-        .o-formToggle-input:not(:disabled):hover ~ & {
+        .o-formToggle-input:not(:disabled):hover ~ &,
+        .o-formToggle-input:not(:disabled):focus ~ & {
             @include media('>=mid') {
 
                 @include formToggleCheckedSpacing();
@@ -143,6 +144,7 @@ $formToggle-disabled-text           : $grey--lighter;
             //the &:after is to create a border that sits over the top of the parents,
             // it creates a visual state on the parent without the need for a JS class toggle
             &:after {
+                content: '';
                 top: -1px;
                 left: -1px;
                 display: block;
@@ -154,7 +156,8 @@ $formToggle-disabled-text           : $grey--lighter;
             }
         }
 
-        .o-formToggle-input:not([disabled]):checked ~ & {
+        .o-formToggle-input:not([disabled]):checked ~ &,
+        .o-formToggle-input:not([disabled]):focus ~ & {
             @include formToggleCheckedBorder();
         }
 
@@ -199,7 +202,9 @@ $formToggle-disabled-text           : $grey--lighter;
             fill: $formToggle-icon-background;
 
             .o-formToggle-input:not([disabled]):hover ~ &,
-            .o-formToggle-input:not(:checked):hover ~ & {
+            .o-formToggle-input:not(:checked):hover ~ &,
+            .o-formToggle-input:not([disabled]):focus ~ &,
+            .o-formToggle-input:not(:checked):focus ~ & {
                 @include media('>=mid') {
                     fill: $formToggle-icon-hover-background;
                 }
@@ -214,6 +219,7 @@ $formToggle-disabled-text           : $grey--lighter;
                 @include formToggleIconActive();
             }
 
+            .o-formToggle-input:not(:disabled):focus ~ &,
             .o-formToggle-input:not(:disabled):hover ~ & {
                 @include media('>=mid') {
                     @include formToggleIconActive();
