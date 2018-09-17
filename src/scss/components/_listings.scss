@@ -58,7 +58,6 @@ $listing-promoIconColor         : $orange;
         margin: 0;
         display: block;
         position: relative;
-        padding: spacing(x2);
         background: $listing-background;
         border-bottom: 1px solid $listing-borderColor;
 
@@ -93,6 +92,7 @@ $listing-promoIconColor         : $orange;
         .c-listing-item-link {
             display: block;
             color: $color-text;
+            padding: spacing(x2);
             text-decoration: none;
 
             &:hover,
