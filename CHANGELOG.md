@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.96.0
+------------------------------
+*September 17, 2018*
+
+### Fixed
+- Fixed `.o-formControl-indicator--radio` position on narrow devices.
+
+
 v0.95.0
 ------------------------------
 *September 18, 2018*
