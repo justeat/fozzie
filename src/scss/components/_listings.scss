@@ -167,19 +167,19 @@ $listing-promoIconColor         : $orange;
         .c-listing-item-badge {
 
             /*
-            The below styles are in place to juggle the badge items between stacked and 
+            The below styles are in place to juggle the badge items between stacked and
             inline and targets viewports inbetween mid and wide (landscape mobiles and very small desktops).
 
             On narrow, mid and wide you will see:
-            
+
             item • item
-            
+
             between mid and wide you will see:
 
             item
             item
 
-            The mixins are used to stop code duplication as each chunk of 
+            The mixins are used to stop code duplication as each chunk of
             code needs to be within its own media mixin.
             */
 
