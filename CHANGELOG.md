@@ -3,15 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
-v0.93.0
+
+v0.95.0
 ------------------------------
-*September 17 2018*
+*September 17, 2018*
 
 ### Added
-- Added additional focus states to improves accessibility of formToggles.
-
-### Changed
-- Moved the padding from c-listing-item to c-listing-item-link for a nicer focus border look.
+- Added `c-listing-item-badge` to the listing component to handle badge responsiveness 
 
 
 v0.94.0
@@ -22,12 +20,15 @@ v0.94.0
 - Made responsive breakpoints more consistent on `c-contentHeader`.
 
 
-v0.95.0
+v0.93.0
 ------------------------------
-*September 17, 2018*
+*September 17 2018*
 
 ### Added
-- Added `c-listing-item-badge` to the listing component to handle badge responsiveness 
+- Added additional focus states to improves accessibility of formToggles.
+
+### Changed
+- Moved the padding from c-listing-item to c-listing-item-link for a nicer focus border look.
 
 
 v0.92.0
