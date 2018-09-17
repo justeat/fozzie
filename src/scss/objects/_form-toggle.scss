@@ -111,7 +111,7 @@ $formToggle-disabled-text           : $grey--lighter;
         display: block;
         transition: padding 200ms ease-in-out;
 
-        // This after is to increase the click area to the formToggle parent.
+        // This :before is to increase the click area to the formToggle parent.
         &:before {
             content: '';
             position: absolute;

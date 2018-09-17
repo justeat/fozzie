@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.93.0
 ------------------------------
-*September 14 2018*
+*September 17 2018*
 
 ### Added
 - Added additional focus states to improves accessibility of formToggles.
