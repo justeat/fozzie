@@ -131,17 +131,26 @@
     }
 }
 
-//±
+//
 // Typographic Colour Helpers
+//
+// Each colour util class is relative to a Fozzie colour within the
+// Fozzie colour pallette.
+//
+// Our current colour pallete can be found here:
+// https://fozzie.just-eat.com/styleguide/design-elements/colours
 // ==========================================================================
 
 .u-color-text {
     color: $color-text;
 }
 
-.u-color-link,
-.u-color-secondary {
+.u-color-link {
     color: $color-link-default;
+}
+
+.u-color-secondary {
+    color: $color-secondary
 }
 
 .u-color-text--hint {
