@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.96.0
 ------------------------------
-*September 17, 2018*
+*September 18, 2018*
 
 ### Fixed
 - Fixed `.o-formControl-indicator--radio` position on <= mid devices.
