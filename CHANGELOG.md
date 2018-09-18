@@ -3,6 +3,23 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v0.95.0
+------------------------------
+*September 18, 2018*
+
+### Added
+- Added `c-listing-item-badge` to the listing component to handle badge responsiveness 
+
+
+v0.94.0
+------------------------------
+*September 17 2018*
+
+### Changed
+- Made responsive breakpoints more consistent on `c-contentHeader`.
+
+
 v0.93.0
 ------------------------------
 *September 17 2018*
@@ -12,14 +29,6 @@ v0.93.0
 
 ### Changed
 - Moved the padding from c-listing-item to c-listing-item-link for a nicer focus border look.
-
-
-v0.94.0
-------------------------------
-*September 17 2018*
-
-### Changed
-- Made responsive breakpoints more consistent on `c-contentHeader`.
 
 
 v0.92.0
