@@ -205,6 +205,10 @@
          @include media('<wide') {
              margin-top: 2px;
          }
+
+         @include media('<=mid') {
+            margin-top: -2px;
+         }
      }
 
      .o-formControl-input:checked ~ .o-formControl-indicator--radio {
