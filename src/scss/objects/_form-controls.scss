@@ -205,7 +205,7 @@
          @include media('<wide') {
              margin-top: 2px;
          }
-         
+
          @include media('<=mid') {
             margin-top: -2px;
          }
