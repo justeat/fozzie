@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.97.0
+------------------------------
+*September 18, 2018*
+
+### Added
+- Added `.u-color-secondary` class to color utils.
+
+
 v0.96.0
 ------------------------------
 *September 18, 2018*
