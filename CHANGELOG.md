@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.95.0
 ------------------------------
-*September 17, 2018*
+*September 18, 2018*
 
 ### Added
 - Added `c-listing-item-badge` to the listing component to handle badge responsiveness 
