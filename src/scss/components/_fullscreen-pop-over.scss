@@ -58,7 +58,13 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
     .c-fullScreenPopOver-header-actionSecond {
         top: 50%;
         position: absolute;
+        text-decoration: none;
         transform: translateY(-50%);
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 
     .c-fullScreenPopOver-header-actionFirst {
