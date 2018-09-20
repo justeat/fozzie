@@ -30,10 +30,24 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
             opacity: 1;
             height: 100%;
             overflow: visible;
+            transition: top 200ms ease, opacity 150ms ease;
             padding: 56px $fullScreenPopOver-padding 80px $fullScreenPopOver-padding;
         }
     }
 }
+
+    // This style block is for accessibility - it's so the user can't get caught tabbing
+    // within a modal if it's not visible
+    .c-fullScreenPopOver-header,
+    .c-fullScreenPopOver-footer,
+    .c-fullScreenPopOver-content {
+        display: none;
+
+        .is-open & {
+            display: block;
+        }
+    }
+
 
     .c-fullScreenPopOver-header,
     .c-fullScreenPopOver-footer {
