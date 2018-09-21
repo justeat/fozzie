@@ -6,10 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.99.0
 ------------------------------
-*September 20, 2018*
+*September 21, 2018*
 
 ### Changed
-- Changed target of listin component is-premier image.
+- Changed target of listing component is-premier image.
 
 ### Added
 - Added styles to `display: none` popover component content when not visible for accessible tabbing.
