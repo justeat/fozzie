@@ -256,7 +256,6 @@ $listing-promoIconColor         : $orange;
         .c-listing-item-title {
             word-break: break-word;
             padding-right: spacing();
-            font-weight: $font-weight-base;
 
             @include media('>mid') {
                 margin: spacing(x0.5) 0;

@@ -10,6 +10,7 @@ v0.99.0
 
 ### Changed
 - Changed target of listing component is-premier image.
+- Removed redundant font weight from listing title.
 
 ### Added
 - Added styles to `display: none` popover component content when not visible for accessible tabbing.
