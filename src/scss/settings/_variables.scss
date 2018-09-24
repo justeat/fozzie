@@ -61,6 +61,12 @@ $font-family-base           : 'Hind Vadodara', 'Helvetica Neue', Helvetica, sans
 $font-family-headings       : 'Ubuntu'; // we need to define some fallbacks here!
 $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 
+// Fonts for preload
+// ==========================================================================
+// base fonts and headings have a preload system font, when the webfonts are loaded we style with JustEat fonts.
+
+$font-family-preload: Helvetica, sans-serif;
+
 
 //  Global Breakpoints
 // ==========================================================================

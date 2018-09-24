@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    font-family: $font-family-base;
+    font-family: $font-family-preload;
     @include font-size(base);
     color: $color-text;
     font-weight: $font-weight-base;
@@ -32,16 +32,24 @@ body {
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
+
+    .has-fontsLoaded--base & {
+        font-family: $font-family-base;
+    }
 }
 
 /**
  * Paragraphs
  */
 p {
-    font-family: $font-family-base;
+    font-family: $font-family-preload;
     @include font-size(base);
     margin-top: $baseline;
     margin-bottom: 0;
+
+    .has-fontsLoaded--base & {
+        font-family: $font-family-base;
+    }
 }
 
 /**
@@ -60,12 +68,17 @@ h6,
 .epsilon {
     color: $color-headings;
     margin: 0;
-    font-family: $font-family-headings;
-    font-weight: $font-weight-headings;
     margin-bottom: 0;
+    font-family: $font-family-preload;
+    font-weight: $font-weight-bold;
 
     small {
         font-weight: normal;
+    }
+
+    .has-fontsLoaded--headings & {
+        font-family: $font-family-headings;
+        font-weight: $font-weight-base;
     }
 }
 

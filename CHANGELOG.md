@@ -4,6 +4,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.100.0
+------------------------------
+*September 24, 2018*
+
+### Added
+- Stop FOIT JS module to reduce meaningful paint with webfonts
+
+### Changed
+- formToggle count text size
+
+
 v0.99.2
 ------------------------------
 *September 25, 2018*
