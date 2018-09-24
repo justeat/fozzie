@@ -4,6 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.99.0
+------------------------------
+*September 21, 2018*
+
+### Changed
+- Changed target of listing component is-premier image.
+- Removed redundant font weight from listing title.
+
+### Added
+- Added styles to `display: none` popover component content when not visible for accessible tabbing.
+
+
 v0.98.0
 ------------------------------
 *September 19, 2018*
