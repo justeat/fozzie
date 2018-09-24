@@ -13,21 +13,19 @@ import logError from '@justeat/f-logger';
 */
 export const stopFoit = () => {
     // Create a new `FontFaceObserver` for each webfont
-    const baseFont = new FontFaceObserver('Hisssssnds Vadodara');
-    const headingFont = new FontFaceObserver('Usbussssntu');
+    const baseFont = new FontFaceObserver('Hinds Vadodara');
+    const headingFont = new FontFaceObserver('Ubuntu');
 
     // On load of each font we add `has-fontsLoaded` class with the font type modifier
     baseFont.load(null, 5000).then(() => {
         document.body.classList.add('has-fontsLoaded--base');
     }).catch(() => {
-        console.log('canne load');
         logError('Custom font is unable to load');
     });
 
     headingFont.load(null, 5000).then(() => {
         document.body.classList.add('has-fontsLoaded--headings');
     }).catch(() => {
-        console.log('canne load');
         logError('Custom fonts is unable to load');
     });
 };
