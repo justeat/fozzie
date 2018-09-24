@@ -39,7 +39,6 @@
     "fontfaceobserver": "^2.0.13",
     "include-media": "1.4.9",
     "kickoff-grid.css": "1.1.2",
-    "lite-ready": "^1.0.4",
     "normalize-scss": "7.0.1"
   },
   "devDependencies": {
