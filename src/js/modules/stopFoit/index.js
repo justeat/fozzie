@@ -1,5 +1,5 @@
 import FontFaceObserver from 'fontfaceobserver';
-import logError from '@justeat/f-logger';
+import { logError } from '@justeat/f-logger';
 
 /**
  * @overview stopFOIT reduces the amount of time a user has invisible text when using webfonts.
@@ -11,22 +11,23 @@ import logError from '@justeat/f-logger';
 * Init method initialises the FontFaceObserver events
 *
 */
+
 export const stopFoit = () => {
     // Create a new `FontFaceObserver` for each webfont
     const baseFont = new FontFaceObserver('Hinds Vadodara');
     const headingFont = new FontFaceObserver('Ubuntu');
 
     // On load of each font we add `has-fontsLoaded` class with the font type modifier
-    baseFont.load(null, 5000).then(() => {
+    baseFont.load(null, 3000).then(() => {
         document.body.classList.add('has-fontsLoaded--base');
     }).catch(() => {
         logError('Custom font is unable to load');
     });
 
-    headingFont.load(null, 5000).then(() => {
+    headingFont.load(null, 3000).then(() => {
         document.body.classList.add('has-fontsLoaded--headings');
     }).catch(() => {
-        logError('Custom fonts is unable to load');
+        logError('Custom font is unable to load');
     });
 };
 
