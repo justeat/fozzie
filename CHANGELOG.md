@@ -9,7 +9,7 @@ v0.99.2
 *September 25, 2018*
 
 ### Fixed
-- Addition of modifier to display block on `c-fullScreenPopOver` to stop non tabable functionality affecting other devices >mid
+- Addition of modifier on `c-fullScreenPopOver` to stop non tabable functionality affecting other devices >mid
 
 
 v0.99.1
