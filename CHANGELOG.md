@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.99.1
+------------------------------
+*September 25, 2018*
+
+### Fixed
+- Content header link mobile display property
+
+
 v0.99.0
 ------------------------------
 *September 21, 2018*
