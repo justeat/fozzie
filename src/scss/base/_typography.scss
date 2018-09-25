@@ -18,13 +18,43 @@
 //
 // ******
 
+/**
+ * Typography preloading styles
+ */
+
+.is-fontsLoading--base {
+
+    body,
+    p {
+        font-family: $font-family-preload !important;
+    }
+}
+
+.is-fontsLoading--heading {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .alpha,
+    .beta,
+    .gamma,
+    .delta,
+    .epsilon {
+        font-family: $font-family-preload !important;
+        font-weight: $font-weight-bold;
+    }
+}
+
 html {
     font-size: $font-size-base-px;
     text-size-adjust: 100%;
 }
 
 body {
-    font-family: $font-family-preload;
+    font-family: $font-family-base;
     @include font-size(base);
     color: $color-text;
     font-weight: $font-weight-base;
@@ -32,24 +62,16 @@ body {
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-
-    .has-fontsLoaded--base & {
-        font-family: $font-family-base;
-    }
 }
 
 /**
  * Paragraphs
  */
 p {
-    font-family: $font-family-preload;
+    font-family: $font-family-base;
     @include font-size(base);
     margin-top: $baseline;
     margin-bottom: 0;
-
-    .has-fontsLoaded--base & {
-        font-family: $font-family-base;
-    }
 }
 
 /**
@@ -69,16 +91,11 @@ h6,
     color: $color-headings;
     margin: 0;
     margin-bottom: 0;
-    font-family: $font-family-preload;
-    font-weight: $font-weight-bold;
+    font-family: $font-family-headings;
+    font-weight: $font-weight-base;
 
     small {
         font-weight: normal;
-    }
-
-    .has-fontsLoaded--headings & {
-        font-family: $font-family-headings;
-        font-weight: $font-weight-base;
     }
 }
 
