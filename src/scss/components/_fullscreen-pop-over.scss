@@ -47,8 +47,9 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
 
         &.is-open {
             & > * {
-                display: block;
-
+                @include media('<=mid') {
+                    display: block;
+                }
             }
         }
     }
