@@ -74,7 +74,7 @@ h6,
     margin: 0;
     margin-bottom: 0;
     font-family: $font-family-headings;
-    font-weight: $font-weight-base;
+    font-weight: $font-weight-headings;
 
     small {
         font-weight: normal;
@@ -82,7 +82,7 @@ h6,
 
     .is-fontsLoading--heading & {
         font-family: $font-family-preload !important;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-headings-preload;
     }
 }
 
