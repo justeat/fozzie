@@ -11,6 +11,8 @@ v0.101.0
 ### Changed
 - Changed `c-badge--transparent` and `c-badge--light` divider to be a pseudo element to improve accessibility 
 
+### Added
+- Added glyphs file within settings to house CSS glyoh variables
 
 v0.100.1
 ------------------------------
