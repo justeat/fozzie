@@ -43,17 +43,23 @@ $badge-angled-rounded-radius: 2px !default;
 
         .c-badge--light {
             background-color: $badge-light-bgColor;
-
-            span {
-                color: $grey--light;
-            }
         }
 
         .c-badge--transparent {
             background: none;
+        }
+
+        //Both c-badge--light and c-badge--transparent share the same divider styles,
+        //The content '\2022' will output a bullet: •
+        .c-badge--light,
+        .c-badge--transparent {
 
             span {
-                color: $grey--light;
+                &:after {
+                    content: '\2022';
+                    display: block;
+                    color: $grey--light;
+                }
             }
         }
 
