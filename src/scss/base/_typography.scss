@@ -18,6 +18,10 @@
 //
 // ******
 
+/**
+ * Typography preloading styles
+ */
+
 html {
     font-size: $font-size-base-px;
     text-size-adjust: 100%;
@@ -32,6 +36,10 @@ body {
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
+
+    .is-fontsLoading--base & {
+        font-family: $font-family-preload !important;
+    }
 }
 
 /**
@@ -42,6 +50,10 @@ p {
     @include font-size(base);
     margin-top: $baseline;
     margin-bottom: 0;
+
+    .is-fontsLoading--base & {
+        font-family: $font-family-preload !important;
+    }
 }
 
 /**
@@ -60,12 +72,17 @@ h6,
 .epsilon {
     color: $color-headings;
     margin: 0;
-    font-family: $font-family-headings;
-    font-weight: $font-weight-headings;
     margin-bottom: 0;
+    font-family: $font-family-headings;
+    font-weight: $font-weight-base;
 
     small {
         font-weight: normal;
+    }
+
+    .is-fontsLoading--heading & {
+        font-family: $font-family-preload !important;
+        font-weight: $font-weight-bold;
     }
 }
 
