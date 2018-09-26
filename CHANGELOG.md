@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.100.0
 ------------------------------
-*September 24, 2018*
+*September 26, 2018*
 
 ### Added
 - Stop FOIT JS module to reduce meaningful paint with webfonts
