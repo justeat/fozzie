@@ -56,7 +56,7 @@ $badge-angled-rounded-radius: 2px !default;
 
             span {
                 &:after {
-                    content: '\2022';
+                    content: $bullet;
                     display: block;
                     color: $grey--light;
                 }
