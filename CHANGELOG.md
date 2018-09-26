@@ -4,6 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.101.0
+------------------------------
+*September 26, 2018*
+
+### Changed
+- Changed `c-badge--transparent` and `c-badge--light` divider to be a pseudo element to improve accessibility 
+
+### Added
+- Added glyphs file within settings to house CSS glyoh variables
+
 v0.100.1
 ------------------------------
 *September 26, 2018*
