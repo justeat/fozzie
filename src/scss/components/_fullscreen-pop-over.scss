@@ -37,16 +37,19 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
 }
 
     // This style block is for accessibility - it's so the user can't get caught tabbing
-    // within a modal if it's not visible
-    .c-fullScreenPopOver {
+    // within a modal if it's not visible on mid and below
+    .c-fullScreenPopOver--noTab--mid {
         & > * {
-          display: none;
+            @include media('<=mid') {
+                display: none;
+            }
         }
 
         &.is-open {
             & > * {
-                display: block;
-
+                @include media('<=mid') {
+                    display: block;
+                }
             }
         }
     }
