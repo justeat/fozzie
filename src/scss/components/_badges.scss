@@ -57,7 +57,7 @@ $badge-angled-rounded-radius: 2px !default;
             span {
                 &:after {
                     content: $bullet;
-                    display: block;
+                    display: inline-block;
                     color: $grey--light;
                 }
             }
