@@ -4,12 +4,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v0.102.0
+------------------------------
+*September 27, 2018*
+
+### Changed
+- Media element negative image position.
+- Top menu spacing.
+- Page banner positions.
+
+### Fixed
+- Badge separator display fix.
+
+
 v0.101.0
 ------------------------------
 *September 26, 2018*
 
 ### Changed
-- Changed `c-badge--transparent` and `c-badge--light` divider to be a pseudo element to improve accessibility 
+- Changed `c-badge--transparent` and `c-badge--light` divider to be a pseudo element to improve accessibility
 
 ### Added
 - Added glyphs file within settings to house CSS glyoh variables
@@ -99,7 +112,7 @@ v0.95.0
 *September 18, 2018*
 
 ### Added
-- Added `c-listing-item-badge` to the listing component to handle badge responsiveness 
+- Added `c-listing-item-badge` to the listing component to handle badge responsiveness
 
 
 v0.94.0

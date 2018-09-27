@@ -16,17 +16,13 @@
     .c-pageBanner {
         background-color: $white;
         margin-bottom: -15px;
-        max-height: 250px;
+        max-height: 300px;
         min-height: 100px;
         overflow: hidden;
         position: relative;
 
         @include media('>=wide') {
-            max-height: 300px;
-        }
-
-        @include media('>=huge') {
-            max-height: 370px;
+            max-height: 400px;
         }
 
         // Prevent IE from applying these styles as it can't correctly position the rays
@@ -52,7 +48,11 @@
         // any elements below the banner will be moved up, over the bottom part of the banner
         .c-pageBanner--negativeBottom--aboveMid {
             @include media('>=mid') {
-                margin-bottom: -125px;
+                margin-bottom: -115px;
+            }
+
+            @include media('>=wide') {
+                margin-bottom: -150px;
             }
         }
 
@@ -60,7 +60,7 @@
             width: 100%;
 
             @include media('>=mid') {
-                margin-top: -15%;
+                margin-top: -8%;
             }
         }
 }
