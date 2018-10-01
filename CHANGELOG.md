@@ -4,12 +4,30 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.4.0
+------------------------------
+*October 5, 2018*
+
+### Added
+- Optional `c-toast` component.
+
+### Changed
+- `l-centred` exposed as placeholder.
+- `c-menu` active styles applied to link rather than list-item.
+- `c-pagebanner` styles updated.
+- `zIndex` map value for `low` changed.
+- Sticky utility classes updated.
+
+### Fixed
+- Border radius reset on the `c-card--outline--aboveMid` class.
+
+
 v1.3.0
 ------------------------------
 *October 5, 2018*
 
 - Added `isWithinBreakpoint` method to breakpoint helper for breakpoint queries that match our SCSS style
-- Added associated unit tests for `isWithinBreakpoint` method 
+- Added associated unit tests for `isWithinBreakpoint` method
 
 
 v1.2.0

@@ -90,13 +90,13 @@
 
 .is-sticky {
     width: 100%;
-    z-index: 100;
+    z-index: zIndex(mid);
     position: fixed;
     transition: top 0.2s ease;
 }
 
 .u-sticky {
-    position: sticky;
+    position: sticky !important;
     top: spacing(x2);
 }
 
