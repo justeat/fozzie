@@ -48,7 +48,7 @@ $type: (
         default: (44, 48),
         narrow: (32, 36)
     )
-);
+) !default;
 
 $font-weight-base           : 300;
 $font-weight-bold           : 500;
@@ -77,7 +77,7 @@ $breakpoints: map-to-em((
     mid      : 768px,    // mid bp
     wide     : 1025px,   // wide bp
     huge     : 1280px    // huge bp
-), 16); // set to 16 as this is default browser size
+), 16) !default; // set to 16 as this is default browser size
 
 
 // Layout setup
@@ -113,7 +113,7 @@ $spacing: (
     x6   : $spacing * 6,
     x7   : $spacing * 7,
     x8   : $spacing * 8
-);
+) !default;
 
 $baseline: spacing(x2); // default spacing between blocks
 
@@ -129,7 +129,7 @@ $zIndex: (
     low     : 10,
     mid     : 100,
     high    : 9000
-);
+) !default;
 
 // Path vars
 // ==========================================================================

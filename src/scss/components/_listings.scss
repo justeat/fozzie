@@ -125,7 +125,8 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             }
         }
 
-            //when the listing item has a wrapper link descendent, make sure it doesn’t underline everything (only the main title)
+            // when the listing item has a wrapper link descendent
+            // make sure it doesn’t underline everything (only the main title)
             .c-listing-item-link {
                 display: block;
                 color: $color-text;

@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.0.0
 ------------------------------
-*September 12, 2018*
+*October 2, 2018*
 
 ### Added
 - `$theme` variable (via `_theme.scss` file) added to allow for theme overrides (such as for Menulog)
