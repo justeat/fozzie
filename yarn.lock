@@ -157,7 +157,7 @@
 
 "@justeat/f-utils@0.1.0":
   version "0.1.0"
-  resolved "https://registry.npmjs.org/@justeat/f-utils/-/f-utils-0.1.0.tgz#38ac810d87ae356dc1dd06444ddce4797d726b3e"
+  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-0.1.0.tgz#38ac810d87ae356dc1dd06444ddce4797d726b3e"
 
 "@justeat/fozzie-colour-palette@2.1.0":
   version "2.1.0"
