@@ -4,6 +4,8 @@
  * @module breakpointHelper
  */
 
+let bps;
+
 export const getBreakpoints = () => {
     const output = {};
 
@@ -41,7 +43,7 @@ export const getCurrentScreenWidth = () => {
 
     // Order the breakpoints from widest to narrowest,
     // takes the form [['narrow', '414px'], [...etc]]
-    const bps = [];
+    bps = [];
     Object.keys(breakpoints).forEach(key => {
         bps.unshift([key, breakpoints[key]]);
     });
@@ -60,3 +62,57 @@ export const getCurrentScreenWidth = () => {
     // If no breakpoints have been set
     return false;
 };
+
+export const withinBreakpoint = breakpointString => {
+    const operatorMatch = breakpointString.match(/[<>=]+/);
+    const operator = operatorMatch ? operatorMatch[0] : '';
+    const [, breakpoint] = breakpointString.split(/[<>=]+/);
+    const currentScreenWidth = window.innerWidth;
+    let match;
+
+    // We fire getCurrentScreenWidth to set the bp array we loop through to get the PX values
+    getCurrentScreenWidth();
+
+    // We loop through the breakpoint array until we get a match.
+    // If we match we return the px value as an int. If we do not match we return false
+    const breakpointToPX = bp => {
+        for (let i = 0; i < bps.length; i++) {
+            if (bps[i][0] === bp) {
+                return parseInt(bps[i][1], 10);
+            }
+        }
+        return false;
+    };
+
+    const breakpointInPX = breakpointToPX(breakpoint);
+
+    // If the breakpoint passed in does not match any we return false;
+    if (breakpointInPX === false) {
+        return false;
+    }
+
+    // We match our passed in operator and execute a sum: current screen width [Passed operator] [Passed breakpoint in PX]
+    switch (operator) {
+        case '>':
+            match = currentScreenWidth > breakpointInPX;
+            break;
+        case '<':
+            match = currentScreenWidth < breakpointInPX;
+            break;
+        case '=':
+            match = currentScreenWidth === breakpointInPX;
+            break;
+        case '>=':
+            match = currentScreenWidth >= breakpointInPX;
+            break;
+        case '<=':
+            match = currentScreenWidth <= breakpointInPX;
+            break;
+        default:
+            return false;
+    }
+
+    // Return a bool on the breakpoint statement match
+    return match;
+};
+

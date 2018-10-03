@@ -1,5 +1,5 @@
 import TestUtils from 'js-test-buddy';
-import { getBreakpoints, getCurrentScreenWidth } from '..';
+import { getBreakpoints, getCurrentScreenWidth, withinBreakpoint } from '..';
 
 describe('getBreakpoints', () => {
     beforeEach(() => {
@@ -84,5 +84,146 @@ describe('currentScreenWidth', () => {
 
         // Assert
         expect(width).toBe(false);
+    });
+});
+
+describe('withinBreakpoint', () => {
+    it('should return true if I pass in `>narrow` when my screen width is larger than 414', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
+            }
+        </style>
+        `);
+        window.innerWidth = 415;
+
+        // Act
+        const breakpointMatch = withinBreakpoint('>narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+    });
+
+    it('should return true if I pass in `>=narrow` when my screen width is larger or equal to 414', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
+            }
+        </style>
+        `);
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = withinBreakpoint('>=narrow');
+
+        window.innerWidth = 415;
+        const breakpointMatchTwo = withinBreakpoint('>=narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+        expect(breakpointMatchTwo).toBe(true);
+    });
+
+    it('should return true if I pass in `<=narrow` when my screen width is smaller or equal to 414', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
+            }
+        </style>
+        `);
+        window.innerWidth = 413;
+
+        // Act
+        const breakpointMatch = withinBreakpoint('<=narrow');
+
+        window.innerWidth = 414;
+        const breakpointMatchTwo = withinBreakpoint('<=narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+        expect(breakpointMatchTwo).toBe(true);
+    });
+
+    it('should return true if I pass in `<narrow` when my screen width is smaller than 414', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
+            }
+        </style>
+        `);
+        window.innerWidth = 413;
+
+
+        // Act
+        const breakpointMatch = withinBreakpoint('<narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+    });
+
+    it('should return true if I pass in `=narrow` when my screen width is 414', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
+            }
+        </style>
+        `);
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = withinBreakpoint('=narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+    });
+
+    it('should return false if the passed operator is not accepted', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
+            }
+        </style>
+        `);
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = withinBreakpoint('==>narrow');
+        const breakpointMatchTwo = withinBreakpoint('+narrow');
+
+
+        // Assert
+        expect(breakpointMatch).toBe(false);
+        expect(breakpointMatchTwo).toBe(false);
+    });
+
+    it('should return false if the passed breakpoint is not accepted', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
+            }
+        </style>
+        `);
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = withinBreakpoint('>blah');
+
+
+        // Assert
+        expect(breakpointMatch).toBe(false);
     });
 });
