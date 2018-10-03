@@ -80,18 +80,18 @@
 @import 'components/alerts';
 @import 'components/breadcrumbs';
 @import 'components/cards';
+@import 'components/media-element';
 
 // Optional components – need to be included with the associated mixin in your project dependencies
-@import 'components/badges';
-@import 'components/content-header';
-@import 'components/content-title';
-@import 'components/fullscreen-pop-over';
-@import 'components/listings';
-@import 'components/media-element';
-@import 'components/menu';
-@import 'components/overflow-carousel';
-@import 'components/page-banner';
-@import 'components/ratings';
+@import 'components/optional/badges';
+@import 'components/optional/content-header';
+@import 'components/optional/content-title';
+@import 'components/optional/fullscreen-pop-over';
+@import 'components/optional/listings';
+@import 'components/optional/menu';
+@import 'components/optional/overflow-carousel';
+@import 'components/optional/page-banner';
+@import 'components/optional/ratings';
 
 
 

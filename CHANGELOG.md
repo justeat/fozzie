@@ -3,6 +3,20 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.1.0
+------------------------------
+*October 3, 2018*
+
+### Fixed
+- Issue with `!default` causing spacing and breakpoint maps to not be set correctly (as already set previously, so not overriding properly).
+- CHANGELOG typo fix
+- Adding `resolutions` entry for `espree` to resolve errors when running `scripts:lint`
+
+### Changed
+- Moved optionally included components (via mixin) into `/optional` subfolder within `/components` directory
+- Minor package updates
+
+
 v1.0.0
 ------------------------------
 *October 2, 2018*
@@ -18,12 +32,13 @@ v1.0.0
   - `text-right` -> `u-text-right`
   - `text-highlight` -> `u-text-highlight`
   - `text-indent` -> `u-text-indent`
+- **Breaking change**: The following components have now been made optional, and are included by referencing the appropriate mixin: `badge`, `contentHeader`, `contentTitle`, `fullScreenPopOver`, `listing`, `overflowCarousel`, `pageBanner`, `rating`.
 - Updated variable names across component files to be a bit more consistent with one another.
 - Updated comments across SCSS files for better consistency.
 
 ### Removed
 - **Breaking change**: Mixins, Functions and helpers (such as breakpoints and code-highlighting) all moved to `@justeat/f-utils` module.
-- **Breaking change**: A number of button types have been removed that aren't needed as yet in global.  These include `o-btnToggle`, `o-btn--progress`, `o-btn--roundedIcon`, `o-btn--rounded`, `o-btn--transparent`, o-btn--small` and `o-btn-group`.
+- **Breaking change**: A number of button types have been removed that aren't needed as yet in global.  These include `o-btnToggle`, `o-btn--progress`, `o-btn--roundedIcon`, `o-btn--rounded`, `o-btn--transparent`, `o-btn--small` and `o-btn-group`.
 
 
 v0.102.0
