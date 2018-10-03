@@ -130,6 +130,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             .c-listing-item-link {
                 display: block;
                 color: $color-text;
+                padding: spacing(x2);
                 text-decoration: none;
 
                 &:hover,
