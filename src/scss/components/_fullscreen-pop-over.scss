@@ -1,9 +1,16 @@
 /**
- * Fullscreen pop overs
- * --------------------------------
- * Used for mobile filters pop over
+ * Components > Fullscreen Popovers
+ * =================================
+ * Component that styles a full-page popover/takeover on top of the current content
  *
- * ================================= */
+ * Example: Used for the mobile filters fullscreen popover on the Search Page
+ *
+ * The `c-fullScreenPopOver` component is an optional mixin within Fozzie.
+ * If you'd like to use it in your project you can include it by adding `@include fullScreenPopOver();` into your SCSS dependencies file.
+ *
+ * Documentation:
+ * TBC
+ */
 
 $fullScreenPopOver-background        : $grey--offWhite;
 $fullScreenPopOver-action-background : $white;
@@ -11,106 +18,108 @@ $fullScreenPopOver-padding           : spacing(x2);
 $fullScreenPopOver-border-color      : $grey--lightest;
 $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
 
-.c-fullScreenPopOver {
+@mixin fullScreenPopOver() {
 
-    @include media('<mid') {
-        left: 0;
-        top: 60px;
-        height: 0;
-        opacity: 0;
-        width: 100vw;
-        position: fixed;
-        overflow: hidden;
-        z-index: zIndex(high);
-        background: $fullScreenPopOver-background;
-        transition: top 200ms ease, opacity 150ms ease;
-
-        &.is-open {
-            top: 0;
-            opacity: 1;
-            height: 100%;
-            overflow: visible;
+    .c-fullScreenPopOver {
+        @include media('<mid') {
+            left: 0;
+            top: 60px;
+            height: 0;
+            opacity: 0;
+            width: 100vw;
+            position: fixed;
+            overflow: hidden;
+            z-index: zIndex(high);
+            background: $fullScreenPopOver-background;
             transition: top 200ms ease, opacity 150ms ease;
-            padding: 56px $fullScreenPopOver-padding 80px $fullScreenPopOver-padding;
+
+            &.is-open {
+                top: 0;
+                opacity: 1;
+                height: 100%;
+                overflow: visible;
+                transition: top 200ms ease, opacity 150ms ease;
+                padding: 56px $fullScreenPopOver-padding 80px $fullScreenPopOver-padding;
+            }
         }
     }
-}
 
-    // This style block is for accessibility - it's so the user can't get caught tabbing
-    // within a modal if it's not visible on mid and below
-    .c-fullScreenPopOver--noTab--mid {
-        & > * {
-            @include media('<=mid') {
+        // This style block is for accessibility - it's so the user can't get caught tabbing
+        // within a modal if it's not visible on mid and below
+        .c-fullScreenPopOver--noTab--mid {
+            & > * {
+                @include media('<=mid') {
+                    display: none;
+                }
+            }
+
+            &.is-open {
+                & > * {
+                    @include media('<=mid') {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .c-fullScreenPopOver-header,
+        .c-fullScreenPopOver-footer {
+            left: 0;
+            width: 100vw;
+            position: absolute;
+            padding: $fullScreenPopOver-padding;
+            background: $fullScreenPopOver-action-background;
+
+            @include media('>=mid') {
                 display: none;
             }
         }
 
-        &.is-open {
-            & > * {
-                @include media('<=mid') {
-                    display: block;
-                }
+        .c-fullScreenPopOver-header {
+            top: 0;
+            z-index: zIndex(high);
+            box-shadow: 0 3px 4px 0 $grey--lighter;
+        }
+
+        .c-fullScreenPopOver-header-actionFirst,
+        .c-fullScreenPopOver-header-actionSecond {
+            top: 50%;
+            position: absolute;
+            text-decoration: none;
+            transform: translateY(-50%);
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
             }
         }
-    }
 
-    .c-fullScreenPopOver-header,
-    .c-fullScreenPopOver-footer {
-        left: 0;
-        width: 100vw;
-        position: absolute;
-        padding: $fullScreenPopOver-padding;
-        background: $fullScreenPopOver-action-background;
-
-        @include media('>=mid') {
-            display: none;
+        .c-fullScreenPopOver-header-actionFirst {
+            left: $fullScreenPopOver-padding;
         }
-    }
 
-    .c-fullScreenPopOver-header {
-        top: 0;
-        z-index: zIndex(high);
-        box-shadow: 0 3px 4px 0 $grey--lighter;
-    }
-
-    .c-fullScreenPopOver-header-actionFirst,
-    .c-fullScreenPopOver-header-actionSecond {
-        top: 50%;
-        position: absolute;
-        text-decoration: none;
-        transform: translateY(-50%);
-
-        &:hover,
-        &:focus {
-            text-decoration: underline;
+        .c-fullScreenPopOver-header-actionSecond {
+            right: $fullScreenPopOver-padding;
         }
-    }
 
-    .c-fullScreenPopOver-header-actionFirst {
-        left: $fullScreenPopOver-padding;
-    }
-
-    .c-fullScreenPopOver-header-actionSecond {
-        right: $fullScreenPopOver-padding;
-    }
-
-    .c-fullScreenPopOver-header-title {
-        margin-top: 0;
-        text-align: center;
-        font-weight: $font-weight-base;
-    }
-
-    .c-fullScreenPopOver-footer {
-        bottom: 0;
-        box-shadow: 0 -2px 2px 0 $grey--lighter;
-    }
-
-    .c-fullScreenPopOver-content {
-        @include media('<mid') {
-            height: 100%;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            padding: spacing(x2) 0;
-            -webkit-overflow-scrolling: touch;
+        .c-fullScreenPopOver-header-title {
+            margin-top: 0;
+            text-align: center;
+            font-weight: $font-weight-base;
         }
-    }
+
+        .c-fullScreenPopOver-footer {
+            bottom: 0;
+            box-shadow: 0 -2px 2px 0 $grey--lighter;
+        }
+
+        .c-fullScreenPopOver-content {
+            @include media('<mid') {
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                padding: spacing(x2) 0;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+}

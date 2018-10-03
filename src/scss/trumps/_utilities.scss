@@ -131,6 +131,31 @@
     }
 }
 
+.u-text-centre, // British or US English spellings..
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-left {
+    text-align: left;
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+.u-text-highlight {
+    color: $red;
+
+    @at-root em#{&} {
+        font-style: normal;
+    }
+}
+
+.u-text-indent {
+    margin-left: spacing(x2);
+}
+
 //
 // Typographic Colour Helpers
 //

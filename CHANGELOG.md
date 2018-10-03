@@ -3,6 +3,28 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.0.0
+------------------------------
+*October 2, 2018*
+
+### Added
+- `$theme` variable (via `_theme.scss` file) added to allow for theme overrides (such as for Menulog)
+- Ability to switch to Menulog theme by setting `$theme: 'ml'`.
+
+### Changed
+- **Breaking change**: Using new `@justeat/f-utils` package for utility functions/mixins instead of `kickoff/utils.scss`.
+- **Breaking change**: Moved and renamed text utility classes.
+  - `text-left` -> `u-text-left`
+  - `text-right` -> `u-text-right`
+  - `text-highlight` -> `u-text-highlight`
+  - `text-indent` -> `u-text-indent`
+- Updated variable names across component files to be a bit more consistent with one another.
+- Updated comments across SCSS files for better consistency.
+
+### Removed
+- **Breaking change**: Mixins, Functions and helpers (such as breakpoints and code-highlighting) all moved to `@justeat/f-utils` module.
+- **Breaking change**: A number of button types have been removed that aren't needed as yet in global.  These include `o-btnToggle`, `o-btn--progress`, `o-btn--roundedIcon`, `o-btn--rounded`, `o-btn--transparent`, o-btn--small` and `o-btn-group`.
+
 
 v0.102.0
 ------------------------------
@@ -197,7 +219,7 @@ v0.87.0
 
 v0.86.0
 ------------------------------
-*September 12 2018*
+*September 12, 2018*
 
 ### Added
 - Added `cursor: pointer` to the hover of `o-btnLink`.
@@ -205,7 +227,7 @@ v0.86.0
 
 v0.85.0
 ------------------------------
-*September 11 2018*
+*September 11, 2018*
 
 ### Changed
 - Updated formToggle click area.
@@ -215,7 +237,7 @@ v0.85.0
 
 v0.84.0
 ------------------------------
-*September 11 2018*
+*September 11, 2018*
 
 ### Added
 - Added new class for alert status on listings.
@@ -226,7 +248,7 @@ v0.84.0
 
 v0.83.0
 ------------------------------
-*September 11 2018*
+*September 11, 2018*
 
 ### Added
 - Added text colour utility classes.
@@ -234,7 +256,7 @@ v0.83.0
 
 v0.82.0
 ------------------------------
-*September 11 2018*
+*September 11, 2018*
 
 ### Added
 - Added `--extraSmall` modifier to ratings.
@@ -245,7 +267,7 @@ v0.82.0
 
 v0.81.0
 ------------------------------
-*September 10 2018*
+*September 10, 2018*
 
 ### Changed
 - Updated listing state styles.
@@ -255,7 +277,7 @@ v0.81.0
 
 v0.80.0
 ------------------------------
-*September 10 2018*
+*September 10, 2018*
 
 ### Added
 - Card no padding modifier.
@@ -273,7 +295,7 @@ v0.80.0
 
 v0.79.0
 ------------------------------
-*September 7 2018*
+*September 7, 2018*
 
 ### Added
 - No padding collapsible card section styles.
@@ -284,7 +306,7 @@ v0.79.0
 
 v0.78.0
 ------------------------------
-*September 7 2018*
+*September 7, 2018*
 
 ### Added
 - Card component section child styles.
@@ -295,7 +317,7 @@ v0.78.0
 
 v0.77.0
 ------------------------------
-*September 6 2018*
+*September 6, 2018*
 
 ### Changed
 - Menu component now using borders rather than box-shadow.
@@ -303,7 +325,7 @@ v0.77.0
 
 v0.76.0
 ------------------------------
-*September 5 2018*
+*September 5, 2018*
 
 ### Changed
 - Updated formToggle count styling
@@ -315,7 +337,7 @@ v0.76.0
 
 v0.75.0
 ------------------------------
-*September 5 2018*
+*September 5, 2018*
 
 ### Added
 - Menu component condensed modifier.

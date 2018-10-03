@@ -10,6 +10,8 @@
  *
  * Body font size, leadings etc have been set in _variables.scss
  *
+ * Documentation:
+ * TBC
  */
 
 // *******
@@ -233,35 +235,7 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 samp { font-family: $font-family-mono; }
 
-
-/**
- * Utilities
- */
-.text-centre, // British or US English spellings..
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-highlight {
-    color: $red;
-
-    @at-root em#{&} {
-        font-style: normal;
-    }
-}
-
-.text-indent {
-    margin-left: spacing(x2);
-}
-
+//
 // @include ko-text-selection($color-selection, $color-selection-bg);
 
 // Horizontal rules

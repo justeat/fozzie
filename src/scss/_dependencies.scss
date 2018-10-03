@@ -8,29 +8,36 @@
 // =================================
 
 // =================================
+// Fozzie Theme declaration
+// =================================
+@import 'settings/theme';
+
+
+// =================================
 // Mixins, helpers and functions
 // =================================
 // Most CSS3 vendor prefixed items have a mixin,
 // but we should not need them if autoprefixer is being used
 // See mixins/css3.scss for the full list
 
-@import 'tools/functions'; // TODO: this will be separated into a separate utilities module
-@import 'tools/mixins'; // TODO: this will be separated into a separate utilities module
-
 // Including helper modules
-@import 'kickoff-utils'; // imports a set of helper functions and mixins – https://github.com/TryKickoff/kickoff-utils.scss
+@import 'f-utils'; // imports Fozzie SCSS helper functions and mixins – https://github.com/justeat/f-utils
 @import 'include-media'; // Cleaner media query declarations – http://include-media.com
 
 
 // =================================
 // Core variables
 // =================================
-// Edit your color palette and app vars before your begin
+// The colour variables are imported from https://www.npmjs.com/package/@justeat/fozzie-colour-palette
+// If a custom theme is specified, it applies a set of colour overides to the base theme depending on the $theme
+@import 'fozzie-colour-palette';
+@if ($theme == 'ml') {
+    @include applyScheme-menulog;
+}
 
-@import 'fozzie-colour-palette'; // imported from https://www.npmjs.com/package/@justeat/fozzie-colour-palette
 @import 'settings/variables';
 @import 'settings/glyphs';
-@import 'tools/breakpoints';
+@import 'f-utils/helpers/breakpoints'; // breakpoint helper – https://github.com/justeat/f-utils/blob/96508ae19809c4b8b83cebb55b9d74728d01c1a5/src/scss/helpers/_breakpoints.scss
 
 
 // CSS Normalise and then Reset
@@ -70,19 +77,21 @@
  *
  * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with `.c-`
  */
-@import 'components/cards';
 @import 'components/alerts';
 @import 'components/breadcrumbs';
-@import 'components/listings';
-@import 'components/media-element';
-@import 'components/ratings';
+@import 'components/cards';
+
+// Optional components – need to be included with the associated mixin in your project dependencies
 @import 'components/badges';
 @import 'components/content-header';
 @import 'components/content-title';
-@import 'components/overflow-carousel';
 @import 'components/fullscreen-pop-over';
-@import 'components/page-banner';
+@import 'components/listings';
+@import 'components/media-element';
 @import 'components/menu';
+@import 'components/overflow-carousel';
+@import 'components/page-banner';
+@import 'components/ratings';
 
 
 

@@ -1,36 +1,44 @@
 /**
- * Overflow scroll carousel
+ * Components > Overflow Carousel
  * --------------------------------
- * Used for mobile filter carousel
+ * Allows a list of content to be scrolled horizontally
  *
- * ================================= */
+ * Example: Used for mobile filter carousel on the Search Page
+ *
+ * The `c-overflowCarousel` component is an optional mixin within Fozzie.
+ * If you'd like to use it in your project you can include it by adding `@include overflowCarousel();` into your SCSS dependencies file.
+ *
+ * Documentation:
+ * TBC
+ */
 
-.c-overflowCarousel {
+@mixin overflowCarousel() {
 
-    @include media('<mid') {
-        margin: 0 (spacing(x2) * -1);
-    }
-}
-
-    .c-overflowCarousel-inner {
-
+    .c-overflowCarousel {
         @include media('<mid') {
-            overflow: scroll;
-            -webkit-overflow-scrolling: touch;
-            width: 100%;
+            margin: 0 (spacing(x2) * -1);
+        }
+    }
 
-            &.is-active {
-                overflow: visible;
+        .c-overflowCarousel-inner {
+            @include media('<mid') {
+                overflow: scroll;
+                -webkit-overflow-scrolling: touch;
+                width: 100%;
+                &.is-active {
+
+                    overflow: visible;
+                }
             }
         }
-    }
 
-    .c-overflowCarousel-content {
-
-        @include media('<mid') {
-            display: inline-flex;
-            white-space: nowrap;
-            padding-left: spacing(x2);
-            padding-right: spacing(x2);
+        .c-overflowCarousel-content {
+            @include media('<mid') {
+                display: inline-block;
+                white-space: nowrap;
+                padding-left: spacing(x2);
+                padding-right: spacing(x2);
+            }
         }
-    }
+
+}
