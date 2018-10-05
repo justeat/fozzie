@@ -12,7 +12,6 @@ v1.4.0
 - Optional `c-toast` component.
 
 ### Changed
-- `l-centred` exposed as placeholder.
 - `c-menu` active styles applied to link rather than list-item.
 - `c-pagebanner` styles updated.
 - `zIndex` map value for `low` changed.
