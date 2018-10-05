@@ -88,6 +88,10 @@ describe('currentScreenWidth', () => {
 });
 
 describe('withinBreakpoint', () => {
+    it('should exist', () => {
+        expect(withinBreakpoint).toBeDefined();
+    });
+
     beforeEach(() => {
         TestUtils.setBodyHtml(`
         <style>
