@@ -67,7 +67,7 @@ export const getCurrentScreenWidth = () => {
     return false;
 };
 
-export const withinBreakpoint = breakpointString => {
+export const isWithinBreakpoint = breakpointString => {
     const operatorRegex = /[<>=]+/;
     const operatorMatch = breakpointString.match(operatorRegex);
     const operator = operatorMatch ? operatorMatch[0] : '';

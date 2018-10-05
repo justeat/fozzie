@@ -1,5 +1,5 @@
 import TestUtils from 'js-test-buddy';
-import { getBreakpoints, getCurrentScreenWidth, withinBreakpoint } from '..';
+import { getBreakpoints, getCurrentScreenWidth, isWithinBreakpoint } from '..';
 
 describe('getBreakpoints', () => {
     beforeEach(() => {
@@ -87,9 +87,9 @@ describe('currentScreenWidth', () => {
     });
 });
 
-describe('withinBreakpoint', () => {
+describe('isWithinBreakpoint', () => {
     it('should exist', () => {
-        expect(withinBreakpoint).toBeDefined();
+        expect(isWithinBreakpoint).toBeDefined();
     });
 
     beforeEach(() => {
@@ -107,7 +107,7 @@ describe('withinBreakpoint', () => {
         window.innerWidth = 415;
 
         // Act
-        const breakpointMatch = withinBreakpoint('>narrow');
+        const breakpointMatch = isWithinBreakpoint('>narrow');
 
         // Assert
         expect(breakpointMatch).toBe(true);
@@ -118,10 +118,10 @@ describe('withinBreakpoint', () => {
         window.innerWidth = 414;
 
         // Act
-        const breakpointMatch = withinBreakpoint('>=narrow');
+        const breakpointMatch = isWithinBreakpoint('>=narrow');
 
         window.innerWidth = 415;
-        const breakpointMatchTwo = withinBreakpoint('>=narrow');
+        const breakpointMatchTwo = isWithinBreakpoint('>=narrow');
 
         // Assert
         expect(breakpointMatch).toBe(true);
@@ -133,10 +133,10 @@ describe('withinBreakpoint', () => {
         window.innerWidth = 413;
 
         // Act
-        const breakpointMatch = withinBreakpoint('<=narrow');
+        const breakpointMatch = isWithinBreakpoint('<=narrow');
 
         window.innerWidth = 414;
-        const breakpointMatchTwo = withinBreakpoint('<=narrow');
+        const breakpointMatchTwo = isWithinBreakpoint('<=narrow');
 
         // Assert
         expect(breakpointMatch).toBe(true);
@@ -149,7 +149,7 @@ describe('withinBreakpoint', () => {
 
 
         // Act
-        const breakpointMatch = withinBreakpoint('<narrow');
+        const breakpointMatch = isWithinBreakpoint('<narrow');
 
         // Assert
         expect(breakpointMatch).toBe(true);
@@ -160,7 +160,7 @@ describe('withinBreakpoint', () => {
         window.innerWidth = 414;
 
         // Act
-        const breakpointMatch = withinBreakpoint('=narrow');
+        const breakpointMatch = isWithinBreakpoint('=narrow');
 
         // Assert
         expect(breakpointMatch).toBe(true);
@@ -171,8 +171,8 @@ describe('withinBreakpoint', () => {
         window.innerWidth = 414;
 
         // Act
-        const breakpointMatch = withinBreakpoint('==>narrow');
-        const breakpointMatchTwo = withinBreakpoint('+narrow');
+        const breakpointMatch = isWithinBreakpoint('==>narrow');
+        const breakpointMatchTwo = isWithinBreakpoint('+narrow');
 
 
         // Assert
@@ -185,7 +185,7 @@ describe('withinBreakpoint', () => {
         window.innerWidth = 414;
 
         // Act
-        const breakpointMatch = withinBreakpoint('>blah');
+        const breakpointMatch = isWithinBreakpoint('>blah');
 
 
         // Assert
@@ -197,7 +197,7 @@ describe('withinBreakpoint', () => {
         window.innerWidth = 414;
 
         // Act
-        const breakpointMatch = withinBreakpoint('narrow');
+        const breakpointMatch = isWithinBreakpoint('narrow');
 
 
         // Assert
