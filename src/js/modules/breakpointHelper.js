@@ -64,11 +64,11 @@ export const getCurrentScreenWidth = () => {
 };
 
 export const withinBreakpoint = breakpointString => {
-    const operatorMatch = breakpointString.match(/[<>=]+/);
+    const operatorRegex = /[<>=]+/;
+    const operatorMatch = breakpointString.match(operatorRegex);
     const operator = operatorMatch ? operatorMatch[0] : '';
-    const [, breakpoint] = breakpointString.split(/[<>=]+/);
+    const [, breakpoint] = breakpointString.split(operatorRegex);
     const currentScreenWidth = window.innerWidth;
-    let match;
 
     // We fire getCurrentScreenWidth to set the bp array we loop through to get the PX values
     getCurrentScreenWidth();
@@ -94,25 +94,17 @@ export const withinBreakpoint = breakpointString => {
     // We match our passed in operator and execute a sum: current screen width [Passed operator] [Passed breakpoint in PX]
     switch (operator) {
         case '>':
-            match = currentScreenWidth > breakpointInPX;
-            break;
+            return currentScreenWidth > breakpointInPX;
         case '<':
-            match = currentScreenWidth < breakpointInPX;
-            break;
+            return currentScreenWidth < breakpointInPX;
         case '=':
-            match = currentScreenWidth === breakpointInPX;
-            break;
+            return currentScreenWidth === breakpointInPX;
         case '>=':
-            match = currentScreenWidth >= breakpointInPX;
-            break;
+            return currentScreenWidth >= breakpointInPX;
         case '<=':
-            match = currentScreenWidth <= breakpointInPX;
-            break;
+            return currentScreenWidth <= breakpointInPX;
         default:
             return false;
     }
-
-    // Return a bool on the breakpoint statement match
-    return match;
 };
 

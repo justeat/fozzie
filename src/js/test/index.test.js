@@ -88,8 +88,7 @@ describe('currentScreenWidth', () => {
 });
 
 describe('withinBreakpoint', () => {
-    it('should return true if I pass in `>narrow` when my screen width is larger than 414', () => {
-        // Arrange
+    beforeEach(() => {
         TestUtils.setBodyHtml(`
         <style>
             .c-screen-sizer {
@@ -97,6 +96,10 @@ describe('withinBreakpoint', () => {
             }
         </style>
         `);
+    });
+
+    it('should return true if I pass in `>narrow` when my screen width is larger than 414', () => {
+        // Arrange
         window.innerWidth = 415;
 
         // Act
@@ -108,13 +111,6 @@ describe('withinBreakpoint', () => {
 
     it('should return true if I pass in `>=narrow` when my screen width is larger or equal to 414', () => {
         // Arrange
-        TestUtils.setBodyHtml(`
-        <style>
-            .c-screen-sizer {
-                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
-            }
-        </style>
-        `);
         window.innerWidth = 414;
 
         // Act
@@ -130,13 +126,6 @@ describe('withinBreakpoint', () => {
 
     it('should return true if I pass in `<=narrow` when my screen width is smaller or equal to 414', () => {
         // Arrange
-        TestUtils.setBodyHtml(`
-        <style>
-            .c-screen-sizer {
-                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
-            }
-        </style>
-        `);
         window.innerWidth = 413;
 
         // Act
@@ -152,13 +141,6 @@ describe('withinBreakpoint', () => {
 
     it('should return true if I pass in `<narrow` when my screen width is smaller than 414', () => {
         // Arrange
-        TestUtils.setBodyHtml(`
-        <style>
-            .c-screen-sizer {
-                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
-            }
-        </style>
-        `);
         window.innerWidth = 413;
 
 
@@ -171,13 +153,6 @@ describe('withinBreakpoint', () => {
 
     it('should return true if I pass in `=narrow` when my screen width is 414', () => {
         // Arrange
-        TestUtils.setBodyHtml(`
-        <style>
-            .c-screen-sizer {
-                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
-            }
-        </style>
-        `);
         window.innerWidth = 414;
 
         // Act
@@ -189,13 +164,6 @@ describe('withinBreakpoint', () => {
 
     it('should return false if the passed operator is not accepted', () => {
         // Arrange
-        TestUtils.setBodyHtml(`
-        <style>
-            .c-screen-sizer {
-                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
-            }
-        </style>
-        `);
         window.innerWidth = 414;
 
         // Act
@@ -210,13 +178,6 @@ describe('withinBreakpoint', () => {
 
     it('should return false if the passed breakpoint is not accepted', () => {
         // Arrange
-        TestUtils.setBodyHtml(`
-        <style>
-            .c-screen-sizer {
-                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
-            }
-        </style>
-        `);
         window.innerWidth = 414;
 
         // Act
