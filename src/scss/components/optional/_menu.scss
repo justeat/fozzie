@@ -66,8 +66,6 @@ $menu--condensed-link-padding   : spacing(x0.5);
         }
 
         .c-menu-item {
-            border-left: solid $menu-border-width $menu-border-color;
-
             &.has-icon {
                 @extend %l-inlined;
 
@@ -76,17 +74,10 @@ $menu--condensed-link-padding   : spacing(x0.5);
                 }
             }
         }
-            .c-menu-item:active,
-            .c-menu-item:focus,
-            .c-menu-item:hover,
-            .c-menu-item--active {
-                border-left: solid $menu-border-width--active $menu-border-color--active;
-                font-weight: $font-weight-bold;
-                margin-left: -1px;
-            }
 
         .c-menu-link {
             @include truncate();
+            border-left: solid $menu-border-width $menu-border-color;
             display: block;
             padding: $menu-link-padding;
             text-decoration: none;
@@ -98,6 +89,14 @@ $menu--condensed-link-padding   : spacing(x0.5);
                 color: $menu-link-color;
             }
         }
+            .c-menu-link:active,
+            .c-menu-link:focus,
+            .c-menu-link:hover,
+            .c-menu-link--active {
+                border-left: solid $menu-border-width--active $menu-border-color--active;
+                font-weight: $font-weight-bold;
+                margin-left: -1px;
+            }
 
         .c-menu-icon {
             flex-shrink: 0;

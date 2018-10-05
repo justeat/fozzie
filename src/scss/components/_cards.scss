@@ -81,6 +81,7 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
         .c-card--outline--aboveMid {
             @include media('<mid') {
                 border: none;
+                border-radius: 0;
             }
         }
 
@@ -129,41 +130,40 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
         }
     }
 
+        // used to create rounded corners at the end of a card
+        .c-card-section--bottom {
+            border-bottom-right-radius: $card-radius;
+            border-bottom-left-radius: $card-radius;
 
-    // used to create rounded corners at the end of a card
-    .c-card-section--bottom {
-        border-bottom-right-radius: $card-radius;
-        border-bottom-left-radius: $card-radius;
-
-        .c-card--rounded--large & {
-            border-bottom-right-radius: $card-radius--large;
-            border-bottom-left-radius: $card-radius--large;
-        }
-    }
-
-    // used to create a section which has a highlighted background colour applied
-    .c-card-section--highlight {
-        background-color: $card-section-highlight-backgroundColor;
-        border-top: none;
-        color: $card-section-highlight-color;
-        margin-top: spacing(x2);
-        padding: spacing(x0.5) spacing();
-    }
-
-    .c-card-section--collapsible {
-        overflow: hidden;
-        padding-right: $card-section-collapsible-paddingRight;
-        position: relative;
-        user-select: none;
-
-        @include media('>=mid') {
-            padding-right: $card-section-collapsible-paddingRight--aboveMid;
+            .c-card--rounded--large & {
+                border-bottom-right-radius: $card-radius--large;
+                border-bottom-left-radius: $card-radius--large;
+            }
         }
 
-        &:hover {
-            cursor: pointer;
+        // used to create a section which has a highlighted background colour applied
+        .c-card-section--highlight {
+            background-color: $card-section-highlight-backgroundColor;
+            border-top: none;
+            color: $card-section-highlight-color;
+            margin-top: spacing(x2);
+            padding: spacing(x0.5) spacing();
         }
-    }
+
+        .c-card-section--collapsible {
+            overflow: hidden;
+            padding-right: $card-section-collapsible-paddingRight;
+            position: relative;
+            user-select: none;
+
+            @include media('>=mid') {
+                padding-right: $card-section-collapsible-paddingRight--aboveMid;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
 
         .c-card-section--collapsible--noPad {
             margin-left: -#{spacing(x4)};
@@ -223,4 +223,3 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
                 }
             }
         }
-

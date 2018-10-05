@@ -17,7 +17,7 @@
 
     .c-pageBanner {
         background-color: $white;
-        margin-bottom: -15px;
+        margin-bottom: -#{spacing(x2)};
         max-height: 300px;
         min-height: 100px;
         overflow: hidden;
@@ -39,6 +39,7 @@
                 left: 0;
                 position: absolute;
                 width: 100%;
+                z-index: zIndex(low);
 
                 @include media('>=mid') {
                     background-image: inline('#{$img-path}/decoration/rays--white.svg');
