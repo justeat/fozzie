@@ -8,8 +8,8 @@ v1.3.0
 ------------------------------
 *October 5, 2018*
 
-- Added `withinBreakpoint` method to breakpoint helper for breakpoint queries that match our SCSS style
-- Added associated unit tests for `withinBreakpoint` method 
+- Added `isWithinBreakpoint` method to breakpoint helper for breakpoint queries that match our SCSS style
+- Added associated unit tests for `isWithinBreakpoint` method 
 
 
 v1.2.0
