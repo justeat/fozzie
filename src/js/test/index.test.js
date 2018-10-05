@@ -1,5 +1,5 @@
 import TestUtils from 'js-test-buddy';
-import { getBreakpoints, getCurrentScreenWidth } from '..';
+import { getBreakpoints, getCurrentScreenWidth, isWithinBreakpoint } from '..';
 
 describe('getBreakpoints', () => {
     beforeEach(() => {
@@ -84,5 +84,123 @@ describe('currentScreenWidth', () => {
 
         // Assert
         expect(width).toBe(false);
+    });
+});
+
+describe('isWithinBreakpoint', () => {
+    it('should exist', () => {
+        expect(isWithinBreakpoint).toBeDefined();
+    });
+
+    beforeEach(() => {
+        TestUtils.setBodyHtml(`
+        <style>
+            .c-screen-sizer {
+                content: 'narrow:414px,mid:768px,wide:1025px,huge:1280px';
+            }
+        </style>
+        `);
+    });
+
+    it('should return true if I pass in `>narrow` when my screen width is larger than 414', () => {
+        // Arrange
+        window.innerWidth = 415;
+
+        // Act
+        const breakpointMatch = isWithinBreakpoint('>narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+    });
+
+    it('should return true if I pass in `>=narrow` when my screen width is larger or equal to 414', () => {
+        // Arrange
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = isWithinBreakpoint('>=narrow');
+
+        window.innerWidth = 415;
+        const breakpointMatchTwo = isWithinBreakpoint('>=narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+        expect(breakpointMatchTwo).toBe(true);
+    });
+
+    it('should return true if I pass in `<=narrow` when my screen width is smaller or equal to 414', () => {
+        // Arrange
+        window.innerWidth = 413;
+
+        // Act
+        const breakpointMatch = isWithinBreakpoint('<=narrow');
+
+        window.innerWidth = 414;
+        const breakpointMatchTwo = isWithinBreakpoint('<=narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+        expect(breakpointMatchTwo).toBe(true);
+    });
+
+    it('should return true if I pass in `<narrow` when my screen width is smaller than 414', () => {
+        // Arrange
+        window.innerWidth = 413;
+
+
+        // Act
+        const breakpointMatch = isWithinBreakpoint('<narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+    });
+
+    it('should return true if I pass in `=narrow` when my screen width is 414', () => {
+        // Arrange
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = isWithinBreakpoint('=narrow');
+
+        // Assert
+        expect(breakpointMatch).toBe(true);
+    });
+
+    it('should return false if the passed operator is not accepted', () => {
+        // Arrange
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = isWithinBreakpoint('==>narrow');
+        const breakpointMatchTwo = isWithinBreakpoint('+narrow');
+
+
+        // Assert
+        expect(breakpointMatch).toBe(false);
+        expect(breakpointMatchTwo).toBe(false);
+    });
+
+    it('should return false if the passed breakpoint is not accepted', () => {
+        // Arrange
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = isWithinBreakpoint('>blah');
+
+
+        // Assert
+        expect(breakpointMatch).toBe(false);
+    });
+
+    it('should return false if the passed breakpoint has no operator', () => {
+        // Arrange
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = isWithinBreakpoint('narrow');
+
+
+        // Assert
+        expect(breakpointMatch).toBe(false);
     });
 });

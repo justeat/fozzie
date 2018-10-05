@@ -34,17 +34,23 @@ export const getBreakpoints = () => {
     }, output); // <- initial value
 };
 
-export const getCurrentScreenWidth = () => {
-    const currentWidth = window.innerWidth;
-
-    const breakpoints = getBreakpoints();
-
+export const createBreakpointArray = breakpoints => {
     // Order the breakpoints from widest to narrowest,
     // takes the form [['narrow', '414px'], [...etc]]
     const bps = [];
     Object.keys(breakpoints).forEach(key => {
         bps.unshift([key, breakpoints[key]]);
     });
+
+    return bps;
+};
+
+export const getCurrentScreenWidth = () => {
+    const currentWidth = window.innerWidth;
+
+    const breakpoints = getBreakpoints();
+
+    const bps = createBreakpointArray(breakpoints);
 
     for (let i = 0; i < bps.length; i++) {
         // Loops through the breakpoints (in descending order)
@@ -60,3 +66,51 @@ export const getCurrentScreenWidth = () => {
     // If no breakpoints have been set
     return false;
 };
+
+export const isWithinBreakpoint = breakpointString => {
+    const operatorRegex = /[<>=]+/;
+    const operatorMatch = breakpointString.match(operatorRegex);
+    const operator = operatorMatch ? operatorMatch[0] : '';
+    const [, breakpoint] = breakpointString.split(operatorRegex);
+    const currentScreenWidth = window.innerWidth;
+
+    const breakpoints = getBreakpoints();
+    const bps = createBreakpointArray(breakpoints);
+
+    // We loop through the breakpoint array until we get a match.
+    // If we match we return the px value as an int. If we do not match we return false
+    const breakpointToPX = breakpointName => {
+        let match = false;
+
+        bps.forEach(bp => {
+            if (bp[0] === breakpointName) {
+                match = parseInt(bp[1], 10);
+            }
+        });
+        return match;
+    };
+
+    const breakpointInPX = breakpointToPX(breakpoint);
+
+    // If the breakpoint passed in does not match any we;
+    if (!breakpointInPX) {
+        return false;
+    }
+
+    // We match our passed in operator and execute a sum: current screen width [Passed operator] [Passed breakpoint in PX]
+    switch (operator) {
+        case '>':
+            return currentScreenWidth > breakpointInPX;
+        case '<':
+            return currentScreenWidth < breakpointInPX;
+        case '=':
+            return currentScreenWidth === breakpointInPX;
+        case '>=':
+            return currentScreenWidth >= breakpointInPX;
+        case '<=':
+            return currentScreenWidth <= breakpointInPX;
+        default:
+            return false;
+    }
+};
+

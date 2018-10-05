@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.3.0
+------------------------------
+*October 5, 2018*
+
+- Added `isWithinBreakpoint` method to breakpoint helper for breakpoint queries that match our SCSS style
+- Added associated unit tests for `isWithinBreakpoint` method 
+
+
 v1.2.0
 ------------------------------
 *October 3, 2018*
@@ -11,6 +19,7 @@ v1.2.0
 ### Fixed
 - Fixed spacing on `c-listing` component
 - Fixed display on `c-overflowCarousel` component
+
 
 v1.1.0
 ------------------------------
