@@ -187,4 +187,16 @@ describe('withinBreakpoint', () => {
         // Assert
         expect(breakpointMatch).toBe(false);
     });
+
+    it('should return false if the passed breakpoint has no operator', () => {
+        // Arrange
+        window.innerWidth = 414;
+
+        // Act
+        const breakpointMatch = withinBreakpoint('narrow');
+
+
+        // Assert
+        expect(breakpointMatch).toBe(false);
+    });
 });
