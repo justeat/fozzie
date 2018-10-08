@@ -2,11 +2,13 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
-    "src/scss"
+    "src/scss",
+    "src/fonts"
+
   ],
   "homepage": "https://github.com/justeat/fozzie",
   "contributors": [
@@ -87,5 +89,11 @@
     "collectCoverageFrom": [
       "src/**/*.js"
     ]
-  }
+  },
+  "assets": [
+    {
+      "root": "src/",
+      "glob": "fonts/**/*"
+    }
+  ]
 }

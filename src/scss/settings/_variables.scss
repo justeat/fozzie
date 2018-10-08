@@ -68,6 +68,14 @@ $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 $font-family-preload: 'Helvetica Neue', Helvetica, sans-serif;
 $font-weight-headings-preload: 400;
 
+// Menulog font overrides
+// ==========================================================================
+@if ($theme == 'ml') {
+    $font-family-headings   : 'Aspira', 'Times New Roman', Times, serif;
+    $font-weight-headings   : 800; // Heading style is Aspira Heavy, which is 800 font-weight
+}
+
+
 
 //  Global Breakpoints
 // ==========================================================================
@@ -134,7 +142,7 @@ $zIndex: (
 // ==========================================================================
 $img-path                  : 'dist/img' !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 $icon-path                 : '#{$img-path}/icons' !default;
-//$font-path                 : 'assets/dist/fonts' !default;
+$font-path                 : 'dist/fonts' !default;
 
 
 // App-specific variables
