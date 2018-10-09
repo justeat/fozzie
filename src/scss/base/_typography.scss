@@ -16,9 +16,24 @@
 
 // *******
 //
-// @font-face rules should go here
+// @font-face rules (if any)
+//
+// JE fonts are loaded through Google fonts.  Menulog is a custom font.
 //
 // ******
+
+@if ($theme == 'ml') {
+    // Aspira Heavy
+    @font-face {
+        font-family: Aspira;
+        font-style: normal;
+        font-weight: 800;
+        src: url('#{$font-path}/menulog/aspira-heavy.woff2') format('woff2'),
+             url('#{$font-path}/menulog/aspira-heavy.woff') format('woff'),
+             url('#{$font-path}/menulog/aspira-heavy.ttf') format('truetype');
+    }
+}
+
 
 /**
  * Typography preloading styles

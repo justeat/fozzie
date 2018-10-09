@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.5.0
+------------------------------
+*October 8, 2018*
+
+### Added
+- Menulog custom Header typeface `Aspira Heavy` added and included to assets copied to project when module is installed and run (via `f-copy-assets`).
+- `@font-face` rules for Asipra Heavy in Menulog theme
+
+
 v1.4.0
 ------------------------------
 *October 5, 2018*
@@ -63,6 +72,8 @@ v1.0.0
 ### Changed
 - **Breaking change**: Using new `@justeat/f-utils` package for utility functions/mixins instead of `kickoff/utils.scss`.
 - **Breaking change**: Moved and renamed text utility classes.
+  - `text-center` -> `u-text-center`
+  - `text-centre` -> `u-text-centre`
   - `text-left` -> `u-text-left`
   - `text-right` -> `u-text-right`
   - `text-highlight` -> `u-text-highlight`
