@@ -22,7 +22,8 @@
 
         .c-overflowCarousel-inner {
             @include media('<mid') {
-                overflow: scroll;
+                overflow-x: scroll;
+                overflow-y: hidden;
                 -webkit-overflow-scrolling: touch;
                 width: 100%;
                 &.is-active {
