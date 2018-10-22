@@ -132,10 +132,11 @@ $border-radius: 4px;
 // pre-defined vars declared to make maintenance easier
 
 $zIndex: (
-    lowest  : -1,
-    low     : 1,
-    mid     : 100,
-    high    : 9000
+    lowest      : -1,
+    low         : 1,
+    mid         : 100,
+    belowHighest: 8999,
+    high        : 9000
 ) !default;
 
 // Path vars
