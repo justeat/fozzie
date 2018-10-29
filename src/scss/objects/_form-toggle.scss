@@ -52,7 +52,6 @@ $formToggle-checked-text            : $green;
     cursor: pointer;
     //the &:after is to create a border that sits over the top of the parents,
     // it creates a visual state on the parent without the need for a JS class toggle
-    // 
     &:after {
         content: '';
         top: -1px;
