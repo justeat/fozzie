@@ -62,7 +62,7 @@ $formToggle-checked-text            : $green;
     }
 }
 
-// `formToggle-hoverState` is used only when a formToggle has a user interaction: :hover
+// `formToggle-hoverState` is used only when a formToggle has a user interaction :hover
 @mixin formToggle-hoverState() {
     @include formToggle-border();
     &:after {
@@ -73,16 +73,7 @@ $formToggle-checked-text            : $green;
     }
 }
 
-@mixin formToggle-hoverState() {
-    @include formToggle-border();
-    &:after {
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        border-radius: $formToggle-border-radius;
-        border: $formToggle-border-width solid $formToggle-border-color-interact;
-    }
-}
-
+// `formToggle-hoverState` is used only when a formToggle has a user interaction: :focus
 @mixin formToggle-focusState() {
     @include formToggle-border();
     &:after {
@@ -210,7 +201,7 @@ $formToggle-checked-text            : $green;
             }
 
             .o-formToggle-input:checked ~ & {
-                font-weight: 500;
+                font-weight: $font-weight-bold;
                 color: $formToggle-checked-text;
                 @include formToggle-checkedSpacing();
             }
@@ -290,8 +281,7 @@ $formToggle-checked-text            : $green;
 
                     &:hover,
                     &:focus {
-                    fill: $formToggle-icon-background;
-                        
+                        fill: $formToggle-icon-background;
                     }
                 }
 
