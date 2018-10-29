@@ -10,10 +10,14 @@ v1.8.0
 *October 29, 2018*
 
 ### Added
-- Improved a11y focus states on `.o-formToggle`
+- Improved a11y focus states on `.o-formToggle`.
 
 ### Changed
-- Updated `.o-formToggle` checked state to reflect new design
+- Updated `.o-formToggle` checked state to reflect new design.
+
+### Fixed
+- Fixed icon showing on hover.
+- Fixed border updating when checked (missing content in pseudo).
 
 
 v1.7.0
