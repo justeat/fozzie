@@ -17,6 +17,11 @@ $star-size--medium      : 28px;
 $star-size--large       : 42px;
 $star-spacing           : $star-count;
 
+@mixin smallStarSizing() {
+    height: $star-size--small;
+    width: ($star-size--small * $star-count) + $star-spacing;
+}
+
 @mixin rating() {
 
     .c-rating {
@@ -29,8 +34,14 @@ $star-spacing           : $star-count;
     }
 
     .c-rating--small {
-        height: $star-size--small;
-        width: ($star-size--small * $star-count) + $star-spacing;
+
+        @include smallStarSizing();
+
+        @media only screen and (-webkit-device-pixel-ratio : 3) {
+            $star-spacing: 4;
+            
+            @include smallStarSizing();
+        }
     }
 
     .c-rating--medium {
