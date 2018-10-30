@@ -14,7 +14,8 @@
 
 $formToggle-padding                 : spacing() !default;
 $formToggle-border-color            : $grey--lightest;
-$formToggle-border-color-checked    : $grey--lighter;
+$formToggle-border-color-interact   : $grey--lighter;
+$formToggle-border-color-checked    : $green;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
 $formToggle-icon-background         : $green;
@@ -24,6 +25,7 @@ $formToggle-large-size              : 48px;
 $formToggle-button-color            : $blue;
 $formToggle-button-background       : $blue--offWhite;
 $formToggle-disabled-text           : $grey--lighter;
+$formToggle-checked-text            : $green;
 
 // associated form toggle mixins
 @mixin formToggle-large() {
@@ -46,19 +48,54 @@ $formToggle-disabled-text           : $grey--lighter;
     font-weight: $font-weight-bold;
 }
 
-@mixin formToggle-checkedBorder() {
+@mixin formToggle-border() {
     cursor: pointer;
     //the &:after is to create a border that sits over the top of the parents,
     // it creates a visual state on the parent without the need for a JS class toggle
     &:after {
+        content: '';
         top: -1px;
         left: -1px;
         display: block;
         position: absolute;
+    }
+}
+
+// `formToggle-hoverState` is used only when a formToggle has a user interaction :hover
+@mixin formToggle-hoverState() {
+    @include formToggle-border();
+    &:after {
         width: calc(100% + 2px);
         height: calc(100% + 2px);
         border-radius: $formToggle-border-radius;
+        border: $formToggle-border-width solid $formToggle-border-color-interact;
+    }
+}
+
+// `formToggle-hoverState` is used only when a formToggle has a user interaction: :focus
+@mixin formToggle-focusState() {
+    @include formToggle-border();
+    &:after {
+        @extend %u-elementFocus;
+        left: 1px;
+        top: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: $formToggle-border-radius;
+        border: $formToggle-border-width solid $formToggle-border-color-interact;
+    }
+}
+
+@mixin formToggle-checkedState() {
+    @include formToggle-border();
+    // for `formToggle-checkedState` we double the size of the element and scale by
+    // 0.5 to make a 0.5px border render for the checked state
+    &:after {
+        width: calc(200% + 4px);
+        height: calc(200% + 4px);
+        border-radius: ($formToggle-border-radius * 2);
         border: $formToggle-border-width solid $formToggle-border-color-checked;
+        transform: scale(0.5) translate(-50%, -50%);
     }
 }
 
@@ -163,6 +200,8 @@ $formToggle-disabled-text           : $grey--lighter;
             }
 
             .o-formToggle-input:checked ~ & {
+                font-weight: $font-weight-bold;
+                color: $formToggle-checked-text;
                 @include formToggle-checkedSpacing();
             }
 
@@ -173,25 +212,32 @@ $formToggle-disabled-text           : $grey--lighter;
                 }
             }
 
-            .o-formToggle-input:not([disabled]):checked ~ & {
-                @include formToggle-checkedBorder();
-            }
-
-            .o-formToggle:not(.o-formToggle--disabled):hover &,
-            .o-formToggle:not(.o-formToggle--disabled):focus & {
+            .o-formToggle:not(.o-formToggle--disabled):hover & {
                 @include media('>=mid') {
-                    @include formToggle-checkedBorder();
+                    @include formToggle-hoverState();
                 }
             }
 
-            .o-formToggle-input:not([disabled]):checked ~ &,
-            .o-formToggle-input:not([disabled]):focus ~ & {
-                @include formToggle-checkedBorder();
+            .o-formToggle:not(.o-formToggle--disabled):focus & {
+                @include media('>=mid') {
+                    @include formToggle-focusState();
+                }
             }
 
-            .o-formToggle-input:not(:disabled):focus ~ &,
+            .o-formToggle-input:not([disabled]):hover ~ &,
             .o-formToggle-input:not(:disabled):hover ~ & {
-                @include formToggle-checkedBorder();
+                @include formToggle-hoverState();
+            }
+            
+            .o-formToggle-input:not([disabled]):focus ~ &,
+            .o-formToggle-input:not(:disabled):focus ~ & {
+                @include formToggle-focusState();
+            }
+
+
+            .o-formToggle-input:not([disabled]):checked ~ &,
+            .o-formToggle-input:not(:disabled):checked ~ & {
+                @include formToggle-checkedState();
             }
 
             .o-formToggle--largeSized & {
@@ -221,9 +267,9 @@ $formToggle-disabled-text           : $grey--lighter;
                 fill: $formToggle-icon-background;
 
                 .o-formToggle-input:not([disabled]):hover ~ &,
-                .o-formToggle-input:not(:checked):hover ~ &,
+                .o-formToggle-input:not([checked]):hover ~ &,
                 .o-formToggle-input:not([disabled]):focus ~ &,
-                .o-formToggle-input:not(:checked):focus ~ & {
+                .o-formToggle-input:not([checked]):focus ~ & {
                     @include media('>=mid') {
                         fill: $formToggle-icon-hover-background;
                     }
@@ -231,8 +277,14 @@ $formToggle-disabled-text           : $grey--lighter;
 
                 .o-formToggle-input:checked ~ & {
                     @include formToggle-iconActive();
+
+                    &:hover,
+                    &:focus {
+                        fill: $formToggle-icon-background;
+                    }
                 }
 
+                .o-formToggle-input:not(:disabled):focus ~ &,
                 .o-formToggle-input:not(:disabled):hover ~ & {
                     @include media('>=mid') {
                         @include formToggle-iconActive();

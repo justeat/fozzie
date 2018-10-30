@@ -17,7 +17,7 @@ $toast-animation-duration               : 0.5s;
 $toast-height                           : 95px;
 $toast-translateY                       : -#{$toast-height - 5px};
 $toast-height--aboveNarrow              : 125px;
-$toast-translateY--aboveNarrow          : -#{$toast-height--aboveNarrow - 5px};;
+$toast-translateY--aboveNarrow          : -#{$toast-height--aboveNarrow - 5px};
 $toast-height--aboveMid                 : $toast-height;
 $toast-translateY--aboveMid             : $toast-translateY;
 
