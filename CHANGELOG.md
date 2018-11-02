@@ -17,6 +17,13 @@ v1.9.0
 ### Fixed
 - Fixed small star rating widths on devices with pixel density ratio of +3.
 
+v1.9.0
+------------------------------
+*November 2, 2018*
+
+### Fixed
+- Fixed small star rating widths on devices with pixel density ratio of +3.
+
 
 v1.8.0
 ------------------------------

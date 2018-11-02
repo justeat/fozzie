@@ -17,6 +17,7 @@ $star-size--medium      : 28px;
 $star-size--large       : 42px;
 $star-spacing           : $star-count;
 
+
 @mixin rating() {
 
     .c-rating {
@@ -29,8 +30,14 @@ $star-spacing           : $star-count;
     }
 
     .c-rating--small {
+
         height: $star-size--small;
         width: ($star-size--small * $star-count) + $star-spacing;
+
+        @include media('retina3x') {
+            $star-spacing: 4;
+            width: ($star-size--small * $star-count) + $star-spacing;
+        }
     }
 
     .c-rating--medium {
