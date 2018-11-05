@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.10.0
 ------------------------------
-*October 30, 2018*
+*November 5, 2018*
 
 ### Added
 - Added `.c-breadcrumb--transparent` class to use breadcrumbs with the transparent header.
