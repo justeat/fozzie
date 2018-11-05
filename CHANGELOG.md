@@ -3,6 +3,19 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.10.0
+------------------------------
+*November 5, 2018*
+
+### Added
+- Added `.c-breadcrumb--transparent` class to use breadcrumbs with the transparent header.
+
+v1.9.0
+------------------------------
+*October 30, 2018*
+
+### Fixed
+- Fixed small star rating widths on devices with pixel density ratio of +3.
 
 v1.9.0
 ------------------------------

@@ -18,6 +18,9 @@ $breadcrumb-font-weight: $font-weight-bold;
 .c-breadcrumb-item {
     float: left;
     color: $grey--dark;
+    svg {
+        fill: $black;
+    }
 }
 
 .c-breadcrumb-item--home {
@@ -37,4 +40,19 @@ $breadcrumb-font-weight: $font-weight-bold;
 
 .c-breadcrumb-item-icon {
     margin: 0 spacing(base);
+}
+
+.c-breadcrumb--transparent {
+    background-color: transparent;
+
+    .c-breadcrumb-item {
+        color: $white;
+        svg {
+            fill: $white;
+        }
+    }
+
+    .c-breadcrumb-item-link {
+        color: $white;
+    }
 }
