@@ -10,6 +10,7 @@ v1.11.0
 ### Added
 - Added `display: none` to `has-noItems` within the listing component.
 
+
 v1.10.0
 ------------------------------
 *November 5, 2018*
@@ -17,12 +18,14 @@ v1.10.0
 ### Added
 - Added `.c-breadcrumb--transparent` class to use breadcrumbs with the transparent header.
 
+
 v1.9.0
 ------------------------------
 *October 30, 2018*
 
 ### Fixed
 - Fixed small star rating widths on devices with pixel density ratio of +3.
+
 
 v1.9.0
 ------------------------------
