@@ -228,7 +228,7 @@ $formToggle-checked-text            : $green;
             .o-formToggle-input:not(:disabled):hover ~ & {
                 @include formToggle-hoverState();
             }
-            
+
             .o-formToggle-input:not([disabled]):focus ~ &,
             .o-formToggle-input:not(:disabled):focus ~ & {
                 @include formToggle-focusState();
