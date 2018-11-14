@@ -189,7 +189,7 @@ $formToggle-checked-text            : $green;
             transition: padding 100ms ease-in-out;
 
             @include media('>=mid') {
-                transition: padding 200ms ease-in-out;
+                transition-duration: 200ms;
             }
 
             // This before is to increase the click area to the formToggle parent.
