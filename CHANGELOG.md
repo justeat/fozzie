@@ -5,10 +5,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.13.0
 ------------------------------
-*November 12, 2018*
+*November 14, 2018*
 
 ### Change
 - Change `o-formToggle` animation timing to be quicker on `<mid`.
+
+
+v1.12.0
+------------------------------
+*November 9, 2018*
+
+### Changed
+- Moved menulog fonts into their own sub-folder.
 
 
 v1.11.0
