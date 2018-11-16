@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.14.0
 ------------------------------
+*November 16, 2018*
+
 ### Fixed
 - Fixed star rating SVG rendering on IE11 by setting the background size to the set size of the SVG.
 
