@@ -3,6 +3,11 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.14.0
+------------------------------
+### Fixed
+- Fixed star rating SVG rendering on IE11 by setting the background size to the set size of the SVG.
+
 v1.13.0
 ------------------------------
 *November 14, 2018*
