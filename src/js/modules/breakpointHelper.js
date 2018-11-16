@@ -97,20 +97,20 @@ export const isWithinBreakpoint = breakpointString => {
         return false;
     }
 
-    // We match our passed in operator and execute a sum: current screen width [Passed operator] [Passed breakpoint in PX]
-    switch (operator) {
-        case '>':
-            return currentScreenWidth > breakpointInPX;
-        case '<':
-            return currentScreenWidth < breakpointInPX;
-        case '=':
-            return currentScreenWidth === breakpointInPX;
-        case '>=':
-            return currentScreenWidth >= breakpointInPX;
-        case '<=':
-            return currentScreenWidth <= breakpointInPX;
-        default:
-            return false;
+    const mediaQuery = {
+        '>' : currentScreenWidth > breakpointInPX,
+        '<' : currentScreenWidth < breakpointInPX,
+        '=' : currentScreenWidth === breakpointInPX,
+        '>=': currentScreenWidth >= breakpointInPX,
+        '<=': currentScreenWidth <= breakpointInPX
+    };
+
+    const result = mediaQuery[operator];
+
+    if (result == null) {
+        return false;
     }
+
+    return result;
 };
 
