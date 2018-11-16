@@ -41,10 +41,6 @@ $star-size--large       : 42px;
         .c-rating--fill {
             background-size: $star-size--small $star-size--small;
         }
-
-        @include media('retina3x') {
-            width: ($star-size--small * $star-count);
-        }
     }
 
     .c-rating--medium {
