@@ -15,7 +15,6 @@ $star-size--small       : 12px;
 $star-size--default     : 16px;
 $star-size--medium      : 28px;
 $star-size--large       : 42px;
-$star-spacing           : $star-count;
 
 
 @mixin rating() {
@@ -23,38 +22,51 @@ $star-spacing           : $star-count;
     .c-rating {
         @extend %c-icon--star--empty !optional;
         background-repeat: repeat-x;
-        background-size: contain;
         display: inline-block;
         height: $star-size--default;
-        width: ($star-size--default * $star-count) + $star-spacing;
+        width: ($star-size--default * $star-count);
+
+        &,
+        .c-rating--fill {
+            background-size: $star-size--default $star-size--default;
+        }
     }
 
     .c-rating--small {
 
         height: $star-size--small;
-        width: ($star-size--small * $star-count) + $star-spacing;
+        width: ($star-size--small * $star-count);
 
-        @include media('retina3x') {
-            $star-spacing: 4;
-            width: ($star-size--small * $star-count) + $star-spacing;
+        &,
+        .c-rating--fill {
+            background-size: $star-size--small $star-size--small;
         }
     }
 
     .c-rating--medium {
         height: $star-size--medium;
-        width: ($star-size--medium * $star-count) + ($star-spacing * 2);
+        width: ($star-size--medium * $star-count);
+
+        &,
+        .c-rating--fill {
+            background-size: $star-size--medium $star-size--medium;
+        }
     }
 
     .c-rating--large {
         height: $star-size--large;
-        width: ($star-size--large * $star-count) + ($star-spacing * 3);
+        width: ($star-size--large * $star-count);
+
+        &,
+        .c-rating--fill {
+            background-size: $star-size--large $star-size--large;
+        }
     }
 
     .c-rating--fill {
         @extend %c-icon--star--fill !optional;
         vertical-align: top;
         background-repeat: repeat-x;
-        background-size: contain;
         display: inline-block;
         height: 100%;
         width: 100%;
