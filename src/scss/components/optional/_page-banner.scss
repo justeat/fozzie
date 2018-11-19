@@ -14,10 +14,10 @@
 */
 
 //Vars to use for IE homepage banner rays positioning fix
-$spaceForColouredRays: 20px;
-$spaceForColouredRays-tiny: 60px;
-$spaceForColouredRays-mid: 164px;
-$spaceForColouredRays-wide: 148px;
+$rays--coloured-spacing: 20px;
+$rays--coloured-spacing--tiny: 60px;
+$rays--coloured-spacing--mid: 164px;
+$rays--coloured-spacing--wide: 148px;
 
 
 @mixin pageBanner() {
@@ -39,18 +39,18 @@ $spaceForColouredRays-wide: 148px;
 
        &.c-pageBanner--withRays--coloured {
            .c-pageBanner-img {
-               margin-bottom: $spaceForColouredRays;
+               margin-bottom: $rays--coloured-spacing;
 
                @include media('>=tiny') {
-                   margin-bottom: $spaceForColouredRays-tiny;
+                   margin-bottom: $rays--coloured-spacing--tiny;
                }
 
                @include media('>=mid') {
-                   margin-bottom: $spaceForColouredRays-mid;
+                   margin-bottom: $rays--coloured-spacing--mid;
                }
 
                @include media('>=wide') {
-                   margin-bottom: $spaceForColouredRays-wide;
+                   margin-bottom: $rays--coloured-spacing--wide;
                }
            }
        }
@@ -100,20 +100,20 @@ $spaceForColouredRays-wide: 148px;
            width: 100.1%;
            z-index: zIndex(low);
 
-           bottom: -$spaceForColouredRays;
+           bottom: -$rays--coloured-spacing;
 
            @include media('>=tiny') {
-               bottom: -$spaceForColouredRays-tiny;
+               bottom: -$rays--coloured-spacing--tiny;
            }
 
            @include media('>=mid') {
                background: inline('#{$img-path}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
-               bottom: -$spaceForColouredRays-mid;
+               bottom: -$rays--coloured-spacing--mid;
            }
 
            @include media('>=wide') {
                background: inline('#{$img-path}/decoration/rays--coloured--wide.svg') no-repeat bottom left;
-               bottom: -$spaceForColouredRays-wide;
+               bottom: -$rays--coloured-spacing--wide;
            }
 
            @supports (position: absolute) {
