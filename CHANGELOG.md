@@ -3,6 +3,17 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v1.15.0
+------------------------------
+*November 19, 2018*
+
+### Added
+- Added `c-breadcrumbs--compact` rule.
+
+### Fixed
+- Fixed breadcrumbs font size and line height.
+
 v1.14.1
 ------------------------------
 *November 19, 2018*

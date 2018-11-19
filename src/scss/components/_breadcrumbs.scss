@@ -8,11 +8,14 @@
  */
 
 $breadcrumb-font-weight: $font-weight-bold;
+$breadcrumb--compact-background: rgba($black, 0.2);
 
 .c-breadcrumb {
     width: 100%;
-    @include font-size(mid, false);
-    line-height: 3;
+    line-height: 2.5;
+    @include media('>=mid') {
+        @include font-size(base--scaleUp, false);
+    }
 }
 
 .c-breadcrumb-item {
@@ -54,5 +57,29 @@ $breadcrumb-font-weight: $font-weight-bold;
 
     .c-breadcrumb-item-link {
         color: $white;
+    }
+}
+
+.c-breadcrumb--compact {
+    @include media('<mid') {
+        .c-breadcrumb-item {
+            display: none;
+        }
+        // only show previous page's link
+        .c-breadcrumb-item:nth-last-child(2) {
+            display: list-item;
+            background-color: $breadcrumb--compact-background;
+            border-radius: $baseline;
+            line-height: 2;
+            padding-right: $baseline;
+
+            .c-breadcrumb-item-icon {
+                float: left;
+
+                svg {
+                    transform: translateY(-2px) rotate(90deg);
+                }
+            }
+        }
     }
 }
