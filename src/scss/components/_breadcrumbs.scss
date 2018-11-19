@@ -8,6 +8,7 @@
  */
 
 $breadcrumb-font-weight: $font-weight-bold;
+$breadcrumb--compact-background: rgba($black, 0.2);
 
 .c-breadcrumb {
     width: 100%;
@@ -67,7 +68,7 @@ $breadcrumb-font-weight: $font-weight-bold;
         // only show previous page's link
         .c-breadcrumb-item:nth-last-child(2) {
             display: list-item;
-            background-color: rgba($black, 0.2);
+            background-color: $breadcrumb--compact-background;
             border-radius: $baseline;
             line-height: 2;
             padding-right: $baseline;

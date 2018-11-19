@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.15.0
 ------------------------------
-*November 16, 2018*
+*November 19, 2018*
 
 ### Added
 - Added `c-breadcrumbs--compact` rule.
