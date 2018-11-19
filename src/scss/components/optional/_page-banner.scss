@@ -71,7 +71,7 @@ $rays--coloured-spacing--wide: 148px;
    }
 
    .c-pageBanner--withRays--white {
-       // @supports prevent IE from applying these styles as it can't correctly position the rays
+       // Prevents IE from applying these styles as IE11 doesn't support the @supports rule
        @supports (position: absolute) {
            &:after {
                background: url('#{$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
