@@ -13,6 +13,7 @@
 * https://fozzie.just-eat.com/styleguide/ui-components/page-banner
 */
 
+$pageBanner-bg: $white;
 //Vars to use for IE homepage banner rays positioning fix
 $rays--coloured-spacing: 20px;
 $rays--coloured-spacing--tiny: 60px;
@@ -23,7 +24,7 @@ $rays--coloured-spacing--wide: 148px;
 @mixin pageBanner() {
 
    .c-pageBanner {
-       background-color: $white;
+       background-color: $pageBanner-bg;
        max-height: 300px;
        min-height: 100px;
        overflow: hidden;
@@ -34,7 +35,7 @@ $rays--coloured-spacing--wide: 148px;
        }
    }
 
-   .c-pageBanner--wide {
+   .c-pageBanner--tall {
        max-height: 600px;
 
        &.c-pageBanner--withRays--coloured {
@@ -73,7 +74,7 @@ $rays--coloured-spacing--wide: 148px;
        // Prevent IE from applying these styles as it can't correctly position the rays
        @supports (position: absolute) {
            &:after {
-               background: inline('#{$img-path}/decoration/rays--white--narrow.svg') no-repeat bottom left;
+               background: url('#{$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
                content: '';
                height: 100%;
                position: absolute;
@@ -83,7 +84,7 @@ $rays--coloured-spacing--wide: 148px;
                z-index: zIndex(low);
 
                @include media('>=mid') {
-                   background: inline('#{$img-path}/decoration/rays--white--wide.svg') no-repeat bottom left;
+                   background: url('#{$img-path-url}/decoration/rays--white--wide.svg') no-repeat bottom left;
                }
            }
        }
@@ -91,7 +92,7 @@ $rays--coloured-spacing--wide: 148px;
 
    .c-pageBanner--withRays--coloured {
        &:after {
-           background: inline('#{$img-path}/decoration/rays--coloured--narrow.svg') no-repeat bottom left;
+           background: url('#{$img-path-url}/decoration/rays--coloured--narrow.svg') no-repeat bottom left;
            content: '';
            height: 100%;
            position: absolute;
@@ -107,12 +108,12 @@ $rays--coloured-spacing--wide: 148px;
            }
 
            @include media('>=mid') {
-               background: inline('#{$img-path}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
+               background: url('#{$img-path-url}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
                bottom: -$rays--coloured-spacing--mid;
            }
 
            @include media('>=wide') {
-               background: inline('#{$img-path}/decoration/rays--coloured--wide.svg') no-repeat bottom left;
+               background: url('#{$img-path-url}/decoration/rays--coloured--wide.svg') no-repeat bottom left;
                bottom: -$rays--coloured-spacing--wide;
            }
 

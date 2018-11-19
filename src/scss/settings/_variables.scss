@@ -141,7 +141,8 @@ $zIndex: (
 
 // Path vars
 // ==========================================================================
-$img-path                  : 'dist/img' !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+$img-path                  : 'dist/img' !default; // Usage: background: inline('#{$img-path}/img.jpg') 0 0 no-repeat;
+$img-path-url              : '/assets/img' !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 $icon-path                 : '#{$img-path}/icons' !default;
 $font-path                 : 'dist/fonts' !default;
 
