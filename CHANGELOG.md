@@ -3,6 +3,7 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
 v1.15.0
 ------------------------------
 *November 19, 2018*
@@ -12,6 +13,22 @@ v1.15.0
 
 ### Fixed
 - Fixed breadcrumbs font size and line height.
+
+v1.14.1
+------------------------------
+*November 19, 2018*
+
+### Change
+- Change switch to object literal in `isWithinBreakpoint` for better performance and readability.
+
+
+v1.14.0
+------------------------------
+*November 16, 2018*
+
+### Fixed
+- Fixed star rating SVG rendering on IE11 by setting the background size to the set size of the SVG.
+
 
 v1.13.0
 ------------------------------
