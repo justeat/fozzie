@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.17.0
+------------------------------
+*November 26, 2018*
+
+### Added
+- Styles for `c-cuisinesWidget`.
+
+
 v1.16.0
 ------------------------------
 *November 19, 2018*

@@ -1,0 +1,149 @@
+/**
+* Components > Cuisines Widget
+* =================================
+*
+* Example: Homepage – Popular cuisines.
+*
+* The `c-cuisinesWidget` component is an optional mixin within Fozzie.
+* If you'd like to use it in your project you can include it by adding `@include cuisinesWidget();` into your SCSS dependencies file.
+*
+* Documentation:
+* https://fozzie.just-eat.com/styleguide/ui-components/cuisines-widget
+*/
+
+$cuisinesWidget-titleColour: $white;
+$cuisinesWidgetGrid-breakpoint-narrow: 570px;
+$cuisinesWidgetGrid-breakpoint-wide: 1241px;
+$cuisinesWidget-boxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04);
+
+@mixin cuisinesWidget() {
+
+   .c-cuisinesWidget {
+       display: block;
+       border-radius: 8px;
+       overflow: hidden;
+       min-height: 96px;
+       width: 100%;
+       max-width: 360px;
+       margin: auto;
+       flex: 0 0 auto;
+       margin-bottom: spacing(x2);
+       position: relative;
+
+       &:last-child {
+           margin-bottom: 0;
+       }
+
+       &:hover {
+           box-shadow: $cuisinesWidget-boxShadow;
+       }
+
+       @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-narrow) {
+           width: calc(50% - 8px);
+           margin-right: spacing(x2);
+           margin-left: 0;
+           margin-top: 0;
+
+           &:nth-child(even) {
+               margin-right: 0;
+           }
+
+           &:nth-last-child(2),
+           &:last-child {
+               margin-bottom: 0;
+           }
+       }
+
+       @include media('>=mid') {
+           min-height: 133px;
+           max-width: none;
+       }
+
+       @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
+           min-height: 145px;
+           width: calc((100% - 32px)/3);
+
+           &:nth-child(even) {
+               margin-right: spacing(x2);
+           }
+
+           &:nth-child(3n+3),
+           &:last-child {
+               margin-right: 0;
+           }
+
+           &:nth-last-child(3),
+           &:nth-last-child(2),
+           &:last-child {
+               margin-bottom: 0;
+           }
+       }
+
+       .c-cuisinesWidget-name {
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           padding: spacing(x2);
+           color: $cuisinesWidget-titleColour;
+           text-align: center;
+
+           @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
+               font-size: 24px;
+           }
+       }
+
+       .c-cuisinesWidget-img {
+           vertical-align: bottom;
+           width: 100%;
+       }
+   }
+
+   .c-cuisinesWidget-grid {
+       width: calc(100% - 32px);
+       margin-left: auto;
+       margin-right: auto;
+       display: flex;
+       flex-flow: row wrap;
+       justify-content: flex-start;
+       align-items: flex-start;
+
+       @include media('>=mid') {
+           max-width: 800px;
+       }
+
+       @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
+           max-width: 1208px;
+       }
+   }
+}
+
+
+//Styles to fix appearance of this block on fozzie docs site
+.c-cuisinesWidget--docsStylesFix {
+    &.c-cuisinesWidget-grid {
+        max-width: 736px;
+        margin: auto;
+    }
+
+    .c-cuisinesWidget {
+        @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
+            min-height: 133px;
+            min-width: 360px;
+            margin-right: spacing(x2);
+
+            &:nth-child(3n+3) {
+                margin-right: spacing(x2);
+            }
+
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+
+            &:nth-last-child(2),
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
