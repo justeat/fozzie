@@ -12,6 +12,7 @@
 */
 
 $cuisinesWidget-titleColour: $white;
+$cuisinesWidget-defaultBackground: $brand--red;
 $cuisinesWidgetGrid-breakpoint-narrow: 570px;
 $cuisinesWidgetGrid-breakpoint-wide: 1241px;
 $cuisinesWidget-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -26,6 +27,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
        overflow: hidden;
        flex: 0 0 auto;
        position: relative;
+       background-color: $cuisinesWidget-defaultBackground;
        box-shadow: $cuisinesWidget-boxShadow;
 
        &:hover {
@@ -87,7 +89,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
 
            @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
                min-height: 145px;
-               width: calc((100% - 32px)/3);
+               width: calc((100% - 32px) / 3);
 
                &:nth-child(even) {
                    margin-right: spacing(x2);
