@@ -24,60 +24,12 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
        display: block;
        border-radius: 8px;
        overflow: hidden;
-       min-height: 96px;
-       width: 100%;
-       max-width: 360px;
-       margin: auto;
        flex: 0 0 auto;
-       margin-bottom: spacing(x2);
        position: relative;
        box-shadow: $cuisinesWidget-boxShadow;
 
-
-       &:last-child {
-           margin-bottom: 0;
-       }
-
        &:hover {
            box-shadow: $cuisinesWidget-hoverBoxShadow;
-       }
-
-       @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-narrow) {
-           width: calc(50% - 8px);
-           margin-right: spacing(x2);
-           margin-left: 0;
-           margin-top: 0;
-
-           &:nth-child(even) {
-               margin-right: 0;
-           }
-
-           &:nth-last-child(2) {
-               margin-bottom: 0;
-           }
-       }
-
-       @include media('>=mid') {
-           min-height: 133px;
-           max-width: none;
-       }
-
-       @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
-           min-height: 145px;
-           width: calc((100% - 32px)/3);
-
-           &:nth-child(even) {
-               margin-right: spacing(x2);
-           }
-
-           &:nth-child(3n+3),
-           &:last-child {
-               margin-right: 0;
-           }
-
-           &:nth-last-child(3) {
-               margin-bottom: 0;
-           }
        }
 
        .c-cuisinesWidget-name {
@@ -99,6 +51,57 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
        .c-cuisinesWidget-img {
            vertical-align: bottom;
            width: 100%;
+       }
+
+       // grid of three elements for desktop, two for tablets and one for mobile
+       &.c-cuisinesWidget--gridOfThree {
+           min-height: 96px;
+           width: 100%;
+           max-width: 360px;
+           margin: auto;
+           margin-bottom: spacing(x2);
+
+           &:last-child {
+               margin-bottom: 0;
+           }
+
+           @include media('>=mid') {
+               min-height: 133px;
+               max-width: none;
+           }
+
+           @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-narrow) {
+               width: calc(50% - 8px);
+               margin-right: spacing(x2);
+               margin-left: 0;
+               margin-top: 0;
+
+               &:nth-child(even) {
+                   margin-right: 0;
+               }
+
+               &:nth-last-child(2) {
+                   margin-bottom: 0;
+               }
+           }
+
+           @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
+               min-height: 145px;
+               width: calc((100% - 32px)/3);
+
+               &:nth-child(even) {
+                   margin-right: spacing(x2);
+               }
+
+               &:nth-child(3n+3),
+               &:last-child {
+                   margin-right: 0;
+               }
+
+               &:nth-last-child(3) {
+                   margin-bottom: 0;
+               }
+           }
        }
    }
 
