@@ -13,25 +13,25 @@
 
 $cuisinesWidget-titleColour: $white;
 $cuisinesWidget-defaultBackground: $brand--red;
-$cuisinesWidgetGrid-breakpoint-narrow: 570px;
-$cuisinesWidgetGrid-breakpoint-wide: 1241px;
 $cuisinesWidget-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 $cuisinesWidget-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04);
 $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 
 @mixin cuisinesWidget() {
+    @include media-context(('narrow-mid': 570px, 'mid-wide': 1240px)) {
 
-   .c-cuisinesWidget {
-       display: block;
-       border-radius: 8px;
-       overflow: hidden;
-       flex: 0 0 auto;
-       position: relative;
-       background-color: $cuisinesWidget-defaultBackground;
-       box-shadow: $cuisinesWidget-boxShadow;
+       .c-cuisinesWidget {
+           display: block;
+           border-radius: 8px;
+           overflow: hidden;
+           flex: 0 0 auto;
+           position: relative;
+           background-color: $cuisinesWidget-defaultBackground;
+           box-shadow: $cuisinesWidget-boxShadow;
 
-       &:hover {
-           box-shadow: $cuisinesWidget-hoverBoxShadow;
+           &:hover {
+               box-shadow: $cuisinesWidget-hoverBoxShadow;
+           }
        }
 
        .c-cuisinesWidget-name {
@@ -44,7 +44,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
            text-align: center;
            background-image: $cuisinesWidget-gradient;
 
-           @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
+           @include media('>=mid-wide') {
                @include font-size(large, false);
                padding: spacing(x3);
            }
@@ -56,7 +56,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
        }
 
        // grid of three elements for desktop, two for tablets and one for mobile
-       &.c-cuisinesWidget--gridOfThree {
+       .c-cuisinesWidget--gridOfThree {
            min-height: 96px;
            width: 100%;
            max-width: 360px;
@@ -72,22 +72,26 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
                max-width: none;
            }
 
-           @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-narrow) {
+           @include media('>=narrow-mid') {
                width: calc(50% - 8px);
                margin-right: spacing(x2);
                margin-left: 0;
                margin-top: 0;
 
+               //for the grid of 2 elements for every second element not to have right margin
                &:nth-child(even) {
                    margin-right: 0;
                }
 
+               //for the grid of 2 elements last row of elements not to have bottom margin
+               //(last child 0 margin is in initial styles above)
                &:nth-last-child(2) {
                    margin-bottom: 0;
                }
            }
 
-           @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
+
+           @include media('>=mid-wide') {
                min-height: 145px;
                width: calc((100% - 32px) / 3);
 
@@ -95,33 +99,37 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
                    margin-right: spacing(x2);
                }
 
+               //Every third element will not have right margin + the last one
+               //(if the amount of items is not divisible by 3)
                &:nth-child(3n+3),
                &:last-child {
                    margin-right: 0;
                }
 
+               //for the grid of 3 elements last row of elements not to have bottom margin
+               //(last and second to last childs 0 margin are in styles above)
                &:nth-last-child(3) {
                    margin-bottom: 0;
                }
            }
        }
-   }
 
-   .c-cuisinesWidget-grid {
-       width: calc(100% - 32px);
-       margin-left: auto;
-       margin-right: auto;
-       display: flex;
-       flex-flow: row wrap;
-       justify-content: flex-start;
-       align-items: flex-start;
+       .c-cuisinesWidget-grid {
+           width: calc(100% - 32px);
+           margin-left: auto;
+           margin-right: auto;
+           display: flex;
+           flex-flow: row wrap;
+           justify-content: flex-start;
+           align-items: flex-start;
 
-       @include media('>=mid') {
-           max-width: 800px;
-       }
+           @include media('>=mid') {
+               max-width: 800px;
+           }
 
-       @media screen and (min-width: $cuisinesWidgetGrid-breakpoint-wide) {
-           max-width: 1208px;
+           @include media('>=mid-wide') {
+               max-width: 1208px;
+           }
        }
    }
 }
