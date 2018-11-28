@@ -1,0 +1,102 @@
+/**
+ * Apps Banner Component
+ * =================================
+ * Used to display app promo banner on the page.
+ *
+ * *The `c-appBaner` component is an optional mixin within Fozzie — if you'd like to use it in your project you can include it by adding `@include appsBanner();` into your SCSS dependencies file.*
+ *
+ * Documentation:
+ * https://fozzie.just-eat.com/styleguide/ui-components/apps-banner
+ */
+
+@mixin appsBanner() {
+    @include media-context(('narrow-mid': 600px)) {
+        .c-appsBanner {
+            margin: spacing(x4) auto;
+            text-align: left;
+            position: relative;
+            padding-top: 40px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: flex-start;
+
+            @include media('>=mid') {
+                padding-top: 0;
+                margin: spacing(x5) auto spacing(x6);
+                text-align: center;
+                align-items: center;
+            }
+
+            @include media('>=wide') {
+                margin: spacing(x8) auto;
+                justify-content: flex-start;
+            }
+        }
+
+        .c-appsBanner-heading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+
+
+            @include media('>=mid') {
+                position: relative;
+                @include font-size('jumbo', false);
+            }
+        }
+
+        .c-appsBanner-image {
+            overflow: hidden;
+            flex: 0 1 84px;
+
+            @include media('>=narrow-mid') {
+                flex: 0 1 324px;
+            }
+
+            @include media('>=wide') {
+                flex: 0 1 492px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .c-appsBanner-content {
+            margin-left: spacing(x2);
+            flex: 0 1 300px;
+
+            @include media('>=mid') {
+                text-align: center;
+                flex: 1 1 auto;
+            }
+
+            p {
+                margin-top: 0;
+
+                @include media('>=mid') {
+                    margin-top: spacing();
+                }
+            }
+        }
+
+        .c-appsBanner-buttons {
+            margin-top: spacing(x3);
+        }
+
+        .c-appsBanner-appBtn {
+            display: block;
+
+            &:first-child {
+                margin-right: spacing(x1.5);
+            }
+
+            @include media('>=mid') {
+                display: inline-block;
+            }
+        }
+    }
+}
