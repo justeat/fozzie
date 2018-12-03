@@ -26,7 +26,6 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
            display: block;
            border-radius: 8px;
            overflow: hidden;
-           flex: none;
            position: relative;
            background-color: $cuisinesWidget-defaultBackground;
            box-shadow: $cuisinesWidget-boxShadow;
@@ -57,7 +56,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
            width: 100%;
        }
 
-       // grid of three elements for desktop, two for tablets and one for mobile
+      // grid of three elements for wide viewports, two for mid and one for narrow
        .c-cuisinesWidget--gridOfThree {
            min-height: 96px;
            width: 100%;

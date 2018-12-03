@@ -6,10 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.17.0
 ------------------------------
-*December 3, 2018*
+*December 4, 2018*
 
 ### Added
 - Styles for `c-cuisinesWidget`.
+- Babel resolution set to fix Travis build
+- Minor package updates
+
+### Removed
+- Babel 7 dependencies removed from package.json (as now installed as part of gulp-build-fozzie).
 
 
 v1.16.0
