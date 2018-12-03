@@ -11,7 +11,7 @@
 * https://fozzie.just-eat.com/styleguide/ui-components/cuisines-widget
 */
 
-//TODO: Improvement of this solution: https://jira.just-eat.net/browse/WH-682 as suggested in https://github.com/justeat/fozzie/pull/188#issuecomment-442138750
+//TODO: Improvement of this solution: WH-682 as suggested in https://github.com/justeat/fozzie/pull/188#issuecomment-442138750
 
 $cuisinesWidget-titleColour: $white;
 $cuisinesWidget-defaultBackground: $brand--red;
@@ -26,7 +26,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
            display: block;
            border-radius: 8px;
            overflow: hidden;
-           flex: 0 0 auto;
+           flex: none;
            position: relative;
            background-color: $cuisinesWidget-defaultBackground;
            box-shadow: $cuisinesWidget-boxShadow;

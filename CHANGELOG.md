@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.17.0
 ------------------------------
-*November 29, 2018*
+*December 3, 2018*
 
 ### Added
 - Styles for `c-cuisinesWidget`.
