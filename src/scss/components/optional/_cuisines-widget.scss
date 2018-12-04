@@ -1,0 +1,135 @@
+/**
+* Components > Cuisines Widget
+* =================================
+*
+* Example: Homepage – Popular cuisines.
+*
+* The `c-cuisinesWidget` component is an optional mixin within Fozzie.
+* If you'd like to use it in your project you can include it by adding `@include cuisinesWidget();` into your SCSS dependencies file.
+*
+* Documentation:
+* https://fozzie.just-eat.com/styleguide/ui-components/cuisines-widget
+*/
+
+//TODO: Improvement of this solution: WH-682 as suggested in https://github.com/justeat/fozzie/pull/188#issuecomment-442138750
+
+$cuisinesWidget-titleColour: $white;
+$cuisinesWidget-defaultBackground: $brand--red;
+$cuisinesWidget-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+$cuisinesWidget-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04);
+$cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+
+@mixin cuisinesWidget() {
+    @include media-context(('narrow-mid': 570px, 'mid-wide': 1240px)) {
+
+       .c-cuisinesWidget {
+           display: block;
+           border-radius: 8px;
+           overflow: hidden;
+           position: relative;
+           background-color: $cuisinesWidget-defaultBackground;
+           box-shadow: $cuisinesWidget-boxShadow;
+
+           &:hover {
+               box-shadow: $cuisinesWidget-hoverBoxShadow;
+           }
+       }
+
+       .c-cuisinesWidget-name {
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           padding: spacing(x2);
+           color: $cuisinesWidget-titleColour;
+           text-align: center;
+           background-image: $cuisinesWidget-gradient;
+
+           @include media('>=mid-wide') {
+               @include font-size(large, false);
+               padding: spacing(x3);
+           }
+       }
+
+       .c-cuisinesWidget-img {
+           vertical-align: bottom;
+           width: 100%;
+       }
+
+      // grid of three elements for wide viewports, two for mid and one for narrow
+       .c-cuisinesWidget--gridOfThree {
+           min-height: 96px;
+           width: 100%;
+           max-width: 360px;
+           margin: auto;
+           margin-bottom: spacing(x2);
+
+           &:last-child {
+               margin-bottom: 0;
+           }
+
+           @include media('>=mid') {
+               min-height: 133px;
+               max-width: none;
+           }
+
+           @include media('>=narrow-mid') {
+               width: calc(50% - 8px);
+               margin-right: spacing(x2);
+               margin-left: 0;
+               margin-top: 0;
+
+               //for the grid of 2 elements for every second element not to have right margin
+               &:nth-child(even) {
+                   margin-right: 0;
+               }
+
+               //for the grid of 2 elements last row of elements not to have bottom margin
+               //(last child 0 margin is in initial styles above)
+               &:nth-last-child(2) {
+                   margin-bottom: 0;
+               }
+           }
+
+
+           @include media('>=mid-wide') {
+               min-height: 145px;
+               width: calc((100% - 32px) / 3);
+
+               &:nth-child(even) {
+                   margin-right: spacing(x2);
+               }
+
+               //Every third element will not have right margin + the last one
+               //(if the amount of items is not divisible by 3)
+               &:nth-child(3n+3),
+               &:last-child {
+                   margin-right: 0;
+               }
+
+               //for the grid of 3 elements last row of elements not to have bottom margin
+               //(last and second to last childs 0 margin are in styles above)
+               &:nth-last-child(3) {
+                   margin-bottom: 0;
+               }
+           }
+       }
+
+       .c-cuisinesWidget-grid {
+           display: flex;
+           flex-flow: row wrap;
+           justify-content: flex-start;
+           align-items: flex-start;
+
+           @include media('>=mid') {
+               max-width: 800px;
+               margin-left: auto;
+               margin-right: auto;
+           }
+
+           @include media('>=mid-wide') {
+               max-width: 1208px;
+           }
+       }
+   }
+}

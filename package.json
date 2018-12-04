@@ -2,13 +2,12 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
     "src/scss",
     "src/fonts"
-
   ],
   "homepage": "https://github.com/justeat/fozzie",
   "contributors": [
@@ -34,26 +33,25 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@justeat/f-dom": "1.0.0",
+    "@justeat/f-dom": "1.1.0",
     "@justeat/f-logger": "0.7.1",
     "@justeat/f-utils": "0.1.0",
     "@justeat/fozzie-colour-palette": "2.1.0",
     "fontfaceobserver": "^2.0.13",
     "include-media": "1.4.9",
-    "kickoff-grid.css": "1.1.2",
+    "kickoff-grid.css": "1.2.0",
     "normalize-scss": "7.0.1"
   },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "7.26.0",
-    "babel-cli": "6.26.0",
-    "babel-preset-env": "1.7.0",
-    "concurrently": "4.0.1",
+    "@justeat/gulp-build-fozzie": "^8.3.0",
+    "concurrently": "4.1.0",
     "coveralls": "3.0.2",
     "danger": "3.9.0",
     "gulp": "3.9.1",
     "js-test-buddy": "0.1.0"
   },
   "resolutions": {
+    "babel-core": "7.0.0-bridge.0",
     "espree": "3.5.4"
   },
   "keywords": [
