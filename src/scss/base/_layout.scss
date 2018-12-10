@@ -36,6 +36,15 @@ body {
 }
 
 /**
+ * Layout container for blocks that don't need padding on the sides
+ */
+.l-innerContainer {
+    width: 100%;
+    max-width: #{$layout-max-width}px;
+    margin: 0 auto;
+}
+
+/**
  * Layout class for containers that contain content (such as T&cs and Privacy pages)
  */
 .l-content {
