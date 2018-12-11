@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.19.0
 ------------------------------
-*December 10, 2018*
+*December 11, 2018*
 
 ### Added
 - Styles for `c-previousOrderCard`.
