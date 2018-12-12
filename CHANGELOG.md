@@ -9,7 +9,7 @@ v1.19.0
 *December 12, 2018*
 
 ### Added
-- Styles for `c-previousOrderCard`.
+- Styles for `c-orderCard`.
 
 
 v1.18.0

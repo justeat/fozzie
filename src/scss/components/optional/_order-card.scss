@@ -4,18 +4,18 @@
 *
 * Example: Homepage – "Order it Again" block.
 *
-* The `c-previousOrderCard` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding `@include previousOrderCard();` into your SCSS dependencies file.
+* The `c-orderCard` component is an optional mixin within Fozzie.
+* If you'd like to use it in your project you can include it by adding `@include orderCard();` into your SCSS dependencies file.
 *
 * Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/previous-order-card
+* https://fozzie.just-eat.com/styleguide/ui-components/order-card
 */
 
 $previousOrder-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 
-@mixin previousOrderCard() {
-    .c-previousOrderCard {
+@mixin orderCard() {
+    .c-orderCard {
         display: block;
         border-radius: 8px;
         box-shadow: $previousOrder-boxShadow;
@@ -39,7 +39,7 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         }
     }
 
-    .c-previousOrderCard-image {
+    .c-orderCard-image {
         width: 100%;
         height: auto;
         position: relative;
@@ -61,7 +61,7 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         }
     }
 
-    .c-previousOrderCard-order {
+    .c-orderCard-order {
         text-align: center;
         padding: spacing();
         color: $blue;
@@ -70,39 +70,39 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         line-height: line-height(16px, 24px);
     }
 
-    .c-previousOrderCard-title {
+    .c-orderCard-title {
         font-family: $font-family-base;
         @include font-size(base--scaleUp, false);
         line-height: line-height(16px, 24px);
         color: $grey--darkest;
     }
 
-    .c-previousOrderCard-showMore {
+    .c-orderCard-showMore {
         font-weight: $font-weight-bold;
     }
 
-    .c-previousOrderCard-date {
+    .c-orderCard-date {
         margin-top: 0;
         margin-bottom: spacing();
     }
 
-    .c-previousOrderCard-summary-grid {
+    .c-orderCard-summary-grid {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: flex-end;
     }
 
-    .c-previousOrderCard-summary {
+    .c-orderCard-summary {
         line-height: line-height(16px, 23px);
     }
 
-    .c-previousOrderCard-orderTotal {
+    .c-orderCard-orderTotal {
         margin-right: spacing();
         margin-left: spacing(x3);
     }
 
-    .c-previousOrderCard-content {
+    .c-orderCard-content {
         padding: spacing() spacing(x2) spacing(x0.5);
     }
 }
