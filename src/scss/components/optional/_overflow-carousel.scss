@@ -26,8 +26,8 @@
             overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
             width: 100%;
-            &.is-active {
 
+            &.is-active {
                 overflow: visible;
             }
         }

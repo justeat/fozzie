@@ -31,7 +31,8 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
             min-height: 302px;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             box-shadow: $previousOrder-hoverBoxShadow;
             text-decoration: none;
             color: $grey--mid;
@@ -102,6 +103,6 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
     }
 
     .c-previousOrderCard-content {
-        padding: spacing() spacing(x2) spacing(x0.5) spacing(x2);
+        padding: spacing() spacing(x2) spacing(x0.5);
     }
 }
