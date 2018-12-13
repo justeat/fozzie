@@ -20,26 +20,61 @@
         }
     }
 
-        .c-overflowCarousel-inner {
-            @include media('<mid') {
-                overflow-x: scroll;
-                overflow-y: hidden;
-                -webkit-overflow-scrolling: touch;
-                width: 100%;
-                &.is-active {
+    .c-overflowCarousel-inner {
+        @include media('<mid') {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
 
-                    overflow: visible;
-                }
+            &.is-active {
+                overflow: visible;
             }
         }
+    }
 
-        .c-overflowCarousel-content {
-            @include media('<mid') {
-                display: inline-flex;
-                white-space: nowrap;
-                padding-left: spacing(x2);
-                padding-right: spacing(x2);
-            }
+    .c-overflowCarousel-content {
+        @include media('<mid') {
+            display: inline-flex;
+            white-space: nowrap;
+            padding-left: spacing(x2);
+            padding-right: spacing(x2);
+        }
+    }
+
+    //solution for block children elements
+    .c-overflowCarousel--withBlockElements {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: spacing() 0;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+
+        //add spacing after the last element
+        &:after {
+            content: '';
+            flex: 0 0 spacing(x2);
         }
 
+        .c-overflowCarousel-item {
+            flex: 1 0 auto;
+            margin-right: spacing();
+
+            @include media('>=mid') {
+                margin-right: spacing(x2);
+            }
+
+            &:first-child {
+                margin-left: spacing(x2);
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
 }
+
+
+
