@@ -1,0 +1,78 @@
+/**
+ * infoBar Component
+ * ===================================
+ * A full page bar that can contain information relevant to the page
+ *
+ * Examples of it’s use include the Cookie Banner and the Langauge Switcher Banner
+ *
+ */
+
+@mixin infoBar() {
+    .infoBar {
+        width: 100%;
+        background-color: $grey--offWhite;
+        z-index: 99;
+        &,
+        & p,
+        & .btn {
+            @include font-size(base);
+        }
+        p {
+            margin-top: 0;
+        }
+        a {
+            color: $black;
+        }
+        & p > a {
+            text-decoration: underline;
+        }
+    }
+    .infoBar-row {
+        padding-top: (spacing(x2) * 0.25);
+        padding-bottom: (spacing(x2) * 0.25);
+        @include media('>=mid') {
+            padding-top: (spacing(x2) * 0.5);
+            padding-bottom: (spacing(x2) * 0.5);
+        }
+    }
+    .infoBar-btn {
+        float: right;
+        margin-left: $spacing(x2);
+    }
+    // Modifiers
+    // -------------------------
+    // .infoBar--hideByDefault
+    // -------------------------
+    // useful for infobars that are initially hidden (such as cookie policy)
+    //
+    .infoBar--hideByDefault {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1000ms ease-in-out;
+        &.is-active {
+            max-height: 200px;
+            transition: 1s all ease-out 1.5s;
+        }
+    }
+    // .infoBar--dark
+    // -------------------------
+    // makes the infoBar a darker theme
+    //
+    .infoBar--dark {
+        background-color: $grey--darkest;
+        &,
+        a {
+            color: #fff;
+        }
+        .btn {
+            color: initial;
+        }
+    }
+    .infoBar--fixed {
+        position: fixed;
+        top: $header-height;
+        .is-multiTenant & {
+            top: 109px;
+        }
+    }
+}
