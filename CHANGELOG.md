@@ -3,6 +3,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.25.0
+------------------------------
+*January 17, 2019*
+
+### Added
+- `.o-formToggle--withImage` styles.
+
+### Removed
+- styles for large touch area on smallest formToggle - has now been removed.
 
 v1.24.0
 ------------------------------

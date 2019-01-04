@@ -3,7 +3,7 @@
  * =================================
  * Styles a button on top of a checkbox, to toggle inputs to a form
  *
- * Example: Search page filters (sidebat)
+ * Example: Search page filters (sidebar)
  *
  * The `o-formToggle` object is an optional mixin within Fozzie.
  * If you'd like to use it in your project you can include it by adding `@include formToggle();` into your SCSS dependencies file.
@@ -28,20 +28,6 @@ $formToggle-disabled-text           : $grey--lighter;
 $formToggle-checked-text            : $green;
 
 // associated form toggle mixins
-@mixin formToggle-large() {
-    width: calc(50% - 4px);
-
-    &:nth-child(2n) {
-        margin-left: spacing();
-    }
-}
-
-@mixin formToggle-largeInputSize() {
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 @mixin formToggle-checkedSpacing() {
     padding-left: 20px;
@@ -120,25 +106,18 @@ $formToggle-checked-text            : $green;
     }
 
         .o-formToggle--button {
-            padding-left: spacing(x4);
+            margin: 0;
+            padding: 0 spacing(x4);
             color: $formToggle-button-color;
             background: $formToggle-button-background;
             border-color: $formToggle-button-background;
         }
 
         .o-formToggle--buttonIcon {
-            top: 50%;
-            position: absolute;
-            left: $formToggle-padding;
-            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            display: inline-block;
             fill: $formToggle-button-color;
-        }
-
-        //Used alongside the default styles but for a larger tap area (min 44px) on narrow screens
-        .o-formToggle--largeTouchArea {
-            @include media('<mid') {
-                margin: spacing() 0 spacing() spacing(x0.5);
-            }
         }
 
         .o-formToggle--fullWidth {
@@ -160,27 +139,40 @@ $formToggle-checked-text            : $green;
             background: $formToggle-background;
         }
 
+        .o-formToggle--withImage {
+            float: left;
+            overflow: hidden;
+            margin-bottom: spacing(x2);
+            width: calc(50% - #{spacing()});
+            padding: 63px $formToggle-padding ($formToggle-padding * 0.5);
+
+            &:nth-of-type(even) {
+                margin-left: spacing(x2);
+            }
+
+        }
+
+        .o-formToggle--midInline {
+            @include media('<=mid') {
+                min-width: 150px;
+                margin: 0 spacing() 0 0;
+
+                &:nth-child(even) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+            .o-formToggle--withImage-container {
+                position: absolute;
+                top: -($formToggle-padding / 2);
+                left: -$formToggle-padding;
+                max-height: 64px;
+                overflow: hidden;
+            }
+
         .o-formToggle--mediumSized {
             padding: $formToggle-padding ($formToggle-padding * 1.5);
-        }
-
-        .o-formToggle--mediumAboveMid {
-            @include media('>=mid') {
-                padding: $formToggle-padding ($formToggle-padding * 1.5);
-            }
-        }
-
-        .o-formToggle--largeSized {
-            height: $formToggle-large-size;
-            @include formToggle-large();
-        }
-
-        .o-formToggle--largeAboveMid {
-            @include media('>=mid') {
-                float: left;
-                margin: 0 0 spacing();
-                @include formToggle-large();
-            }
         }
 
         .o-formToggle-text {
@@ -243,16 +235,6 @@ $formToggle-checked-text            : $green;
             .o-formToggle-input:not(:disabled):checked ~ & {
                 @include formToggle-checkedState();
             }
-
-            .o-formToggle--largeSized & {
-                @include formToggle-largeInputSize();
-            }
-
-            .o-formToggle--largeAboveMid & {
-                @include media('>=mid') {
-                    @include formToggle-largeInputSize();
-                }
-            }
         }
 
         .o-formToggle-icon {
@@ -269,6 +251,11 @@ $formToggle-checked-text            : $green;
                 transform: rotate(-45deg) scale(0.5);
                 transition: transform 200ms ease, opacity 250ms ease;
                 fill: $formToggle-icon-background;
+
+                .o-formToggle--withImage & {
+                    top: auto;
+                    margin-top: 4px;
+                }
 
                 .o-formToggle-input:not([disabled]):hover ~ &,
                 .o-formToggle-input:not([checked]):hover ~ &,
@@ -294,24 +281,6 @@ $formToggle-checked-text            : $green;
                         @include formToggle-iconActive();
                     }
                 }
-            }
-        }
-
-        .o-formToggle--hasCount {
-            display: flex;
-            vertical-align: middle;
-        }
-
-        .o-formToggle-count {
-            pointer-events: none;
-            padding-left: spacing();
-
-            @include media('>mid') {
-                top: 50%;
-                padding-left: 0;
-                right: spacing();
-                position: absolute;
-                transform: translateY(-50%);
             }
         }
 
