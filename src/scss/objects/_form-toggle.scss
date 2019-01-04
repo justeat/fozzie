@@ -151,11 +151,11 @@ $formToggle-checked-text            : $green;
             }
 
             .o-formToggle-container {
+                height: 64px;
                 position: absolute;
+                width: calc(100% + #{$formToggle-padding * 2});
                 top: -($formToggle-padding / 2);
                 left: -$formToggle-padding;
-                max-height: 64px;
-                height: 64px;
                 overflow: hidden;
             }
         }
