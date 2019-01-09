@@ -188,6 +188,10 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
 
             p {
                 @include truncate();
+
+                &:not(:first-child) {
+                    display: none;
+                }
             }
         }
 
