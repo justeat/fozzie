@@ -19,8 +19,9 @@ $card-section-margin                            : spacing(x4);
 $card-section-margin--large                     : spacing(x8);
 $card-section-highlight-backgroundColor         : $orange;
 $card-section-highlight-color                   : $white;
-$card-section-collapsible-paddingRight          : 42px;
-$card-section-collapsible-paddingRight--aboveMid: 60px;
+$card-section-collapsible-paddingRight          : 60px;
+$card-section-collapsed-height                  : 34px;
+$card-section-collapsed-height--aboveMid        : 50px;
 
 
 
@@ -157,7 +158,7 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
             user-select: none;
 
             @include media('>=mid') {
-                padding-right: $card-section-collapsible-paddingRight--aboveMid;
+                padding-right: $card-section-collapsible-paddingRight;
             }
 
             &:hover {
@@ -172,13 +173,17 @@ $card-section-collapsible-paddingRight--aboveMid: 60px;
 
             @include media('>=mid') {
                 margin-left: -#{spacing(x2)};
-                padding: 0 $card-section-collapsible-paddingRight--aboveMid 0 spacing(x3);
+                padding: 0 $card-section-collapsible-paddingRight 0 spacing(x3);
                 width: calc(100% + #{$card-section-margin});
             }
         }
 
         .c-card-section--collapsed {
-            height: 50px;
+            height: $card-section-collapsed-height;
+
+            @include media('>=mid') {
+                height: $card-section-collapsed-height--aboveMid;
+            }
 
             &.c-card-section {
                 @include media('>=mid') {
