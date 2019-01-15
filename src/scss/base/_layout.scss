@@ -44,6 +44,18 @@ body {
     margin: 0 auto;
 }
 
+.l-innerContainer--verticalSpacing {
+    margin: spacing(x4) 0;
+
+    @include media('>=mid') {
+        margin: spacing(x5) auto spacing(x6);
+    }
+
+    @include media('>=wide') {
+        margin: spacing(x8) auto;
+    }
+}
+
 /**
  * Layout class for containers that contain content (such as T&cs and Privacy pages)
  */
