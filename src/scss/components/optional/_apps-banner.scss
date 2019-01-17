@@ -12,7 +12,6 @@
 @mixin appsBanner() {
     @include media-context(('narrow-mid': 600px)) {
         .c-appsBanner {
-            margin: spacing(x4) auto;
             text-align: left;
             position: relative;
             padding-top: 40px;
@@ -23,13 +22,11 @@
 
             @include media('>=mid') {
                 padding-top: 0;
-                margin: spacing(x5) auto spacing(x6);
                 text-align: center;
                 align-items: center;
             }
 
             @include media('>=wide') {
-                margin: spacing(x8) auto;
                 justify-content: flex-start;
             }
         }
