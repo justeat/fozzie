@@ -244,6 +244,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             }
 
             .c-listing-item-detailsRow-text {
+                white-space: initial;
                 margin-left: spacing();
             }
 
