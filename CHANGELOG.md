@@ -4,9 +4,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.24.1
+------------------------------
+*January 23, 2019*
+
+### Fixed
+- Adjusted dates in changelog.
+- Removed height on `c-contentTitle-icon` to fix icon alignment.
+
+### Added
+- `white-space: initial` to `.c-listing-item-detailsRow-text` to adjust line wrapping.
+
+
 v1.24.0
 ------------------------------
-*January 15, 2018*
+*January 15, 2019*
 
 ### Added
 - `l-innerContainer--verticalSpacing` for base spacing between sections.
@@ -14,7 +26,7 @@ v1.24.0
 
 v1.23.0
 ------------------------------
-*January 11, 2018*
+*January 11, 2019*
 
 ### Changed
 - Adjusted collapsible card padding and heights for different device widths.
@@ -22,7 +34,7 @@ v1.23.0
 
 v1.22.0
 ------------------------------
-*January 10, 2018*
+*January 10, 2019*
 
 ### Added
 - LGTM badge on readme.
@@ -36,7 +48,7 @@ v1.22.0
 
 v1.21.0
 ------------------------------
-*January 9, 2018*
+*January 9, 2019*
 
 ### Changed
 - Hide all but the paragraph element in a collapsed card section.
