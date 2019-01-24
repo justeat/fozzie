@@ -1,0 +1,76 @@
+@mixin cookieWarning() {
+	#cookieWarning {
+	    background-color: $black;
+	    position: fixed;
+	    bottom: 0;
+	    width: 100%;
+	    z-index: 999;
+	}
+
+	#cookieWarningInner {
+	    width: 940px;
+	    margin: 0 auto;
+	    padding-top: 8px;
+	    padding-bottom: 8px;
+	    overflow: hidden;
+	}
+
+	#cookieWarningInner .message {
+	    width: 940px;
+	}
+
+	@media screen and (max-width: 960px) {
+	    #cookieWarningInner {
+	        width: 620px;
+	    }
+	    #cookieWarningInner .message {
+	        width: 620px;
+	    }
+	}
+
+	@media screen and (max-width: 640px) {
+	    #cookieWarningInner {
+	        width: 300px;
+	    }
+	    #cookieWarningInner .message {
+	        width: 280px;
+	    }
+	}
+
+	#cookieWarning .message {
+	    float: left;
+	}
+
+	#cookieWarning p {
+	    color: $white;
+	    font-size: 11px;
+	    text-align: center;
+	}
+
+	#cookieWarning p a {
+	    color: $white;
+	}
+
+	#cookieWarning .hideButton {
+	    display: block;
+	    position: absolute;
+	    top: 8px;
+	    right: 8px;
+	    width: 10px;
+	    height: 10px;
+	    background-image: url('//dy3erx8o0a6nh.cloudfront.net/images/icon-close-banner.png');
+	    background-repeat: no-repeat;
+	    background-size: 10px 10px;
+	    background-position: center center;
+	}
+
+	#cookieWarning p {
+		margin-top: 2px;
+	}
+
+	#cookieWarning .hideButton:hover,
+	#cookieWarning .hideButton:active,
+	#cookieWarning .hideButton:focus {
+	    background-color: $grey--mid;
+	}
+}
