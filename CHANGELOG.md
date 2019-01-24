@@ -3,6 +3,45 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v1.24.0
+------------------------------
+*January 15, 2018*
+
+### Added
+- `l-innerContainer--verticalSpacing` for base spacing between sections.
+
+
+v1.23.0
+------------------------------
+*January 11, 2018*
+
+### Changed
+- Adjusted collapsible card padding and heights for different device widths.
+
+
+v1.22.0
+------------------------------
+*January 10, 2018*
+
+### Added
+- LGTM badge on readme.
+
+### Changed
+- Updated readme layout.
+
+### Fixed
+- Hide first of type paragraph in a collapsed card section.
+
+
+v1.21.0
+------------------------------
+*January 9, 2018*
+
+### Changed
+- Hide all but the paragraph element in a collapsed card section.
+
+
 v1.20.0
 ------------------------------
 *December 17, 2018*
