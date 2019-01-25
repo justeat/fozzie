@@ -1,76 +1,73 @@
 @mixin cookieWarning() {
-	#cookieWarning {
+	.c-cookieWarning {
 	    background-color: $black;
 	    position: fixed;
 	    bottom: 0;
-	    width: 100%;
-	    z-index: 999;
+		width: 100%;
+		$zIndex: high;
 	}
 
-	#cookieWarningInner {
+	.c-cookieWarning-inner {
 	    width: 940px;
 	    margin: 0 auto;
-	    padding-top: 8px;
-	    padding-bottom: 8px;
+	    padding: spacing() 0;
 	    overflow: hidden;
 	}
 
-	#cookieWarningInner .message {
+	.c-cookieWarning-inner .message {
 	    width: 940px;
 	}
 
-	@media screen and (max-width: 960px) {
-	    #cookieWarningInner {
+	@include media('<960px') {
+	    .c-cookieWarning-inner {
 	        width: 620px;
 	    }
-	    #cookieWarningInner .message {
+	    .message {
 	        width: 620px;
 	    }
 	}
 
-	@media screen and (max-width: 640px) {
-	    #cookieWarningInner {
+	@include media('<640px') {
+	    .c-cookieWarning-inner {
 	        width: 300px;
 	    }
-	    #cookieWarningInner .message {
+	    .message {
 	        width: 280px;
 	    }
 	}
 
-	#cookieWarning .message {
+	.c-cookieWarning .message {
 	    float: left;
 	}
 
-	#cookieWarning p {
-	    color: $white;
-	    font-size: 11px;
+	.c-cookieWarning p {
+		color: $white;
+		font-size: $font-size-base;
 	    text-align: center;
+		margin-top: 2px;
 	}
 
-	#cookieWarning p a {
+	.c-cookieWarning p a {
 	    color: $white;
 	}
 
-	#cookieWarning .hideButton {
+	.c-cookieWarning-btn {
 	    display: block;
 	    position: absolute;
 	    top: 8px;
 	    right: 8px;
 	    width: 10px;
 	    height: 10px;
-	    background-image: url('//dy3erx8o0a6nh.cloudfront.net/images/icon-close-banner.png');
-	    background-repeat: no-repeat;
-	    background-size: 10px 10px;
-	    background-position: center center;
+		background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon-close-banner.png') no-repeat center center;
+		background-size: 10px 10px;
+		border: none;
 	}
 
-	#cookieWarning p {
-		margin-top: 2px;
-	}
-
-	#cookieWarning .hideButton:hover,
-	#cookieWarning .hideButton:active,
-	#cookieWarning .hideButton:focus {
-	    background-color: $grey--mid;
+	.c-cookieWarning-btn {
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $grey--mid;
+		}
 	}
 }
