@@ -14,10 +14,6 @@
 	    overflow: hidden;
 	}
 
-	.c-cookieWarning-inner {
-	    width: 940px;
-	}
-
 	@include media('<960px') {
 	    .c-cookieWarning-inner {
 	        width: 620px;
@@ -30,19 +26,11 @@
 	    }
 	}
 
-	.c-cookieWarning .message {
-	    float: left;
-	}
-
 	.c-cookieWarning p {
 		color: $white;
 		font-size: $font-size-base;
 	    text-align: center;
 		margin-top: 2px;
-	}
-
-	.c-cookieWarning p {
-	    color: $white;
 	}
 
 	.c-cookieWarning-btn {
