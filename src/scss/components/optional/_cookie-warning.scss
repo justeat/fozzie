@@ -4,7 +4,7 @@
 	    position: fixed;
 	    bottom: 0;
 		width: 100%;
-		$zIndex: high;
+		$zIndex: (high);
 	}
 
 	.c-cookieWarning-inner {
@@ -14,7 +14,7 @@
 	    overflow: hidden;
 	}
 
-	.c-cookieWarning-inner .message {
+	.c-cookieWarning-inner {
 	    width: 940px;
 	}
 
@@ -22,17 +22,11 @@
 	    .c-cookieWarning-inner {
 	        width: 620px;
 	    }
-	    .message {
-	        width: 620px;
-	    }
 	}
 
 	@include media('<640px') {
 	    .c-cookieWarning-inner {
 	        width: 300px;
-	    }
-	    .message {
-	        width: 280px;
 	    }
 	}
 
@@ -47,7 +41,7 @@
 		margin-top: 2px;
 	}
 
-	.c-cookieWarning p a {
+	.c-cookieWarning p {
 	    color: $white;
 	}
 
@@ -61,13 +55,12 @@
 		background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon-close-banner.png') no-repeat center center;
 		background-size: 10px 10px;
 		border: none;
-	}
 
-	.c-cookieWarning-btn {
 		&:hover,
 		&:active,
 		&:focus {
 			background-color: $grey--mid;
 		}
+
 	}
 }
