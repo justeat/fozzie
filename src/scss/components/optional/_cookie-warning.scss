@@ -4,7 +4,7 @@
 	    position: fixed;
 	    bottom: 0;
 		width: 100%;
-		$zIndex: (high);
+		$zIndex: zIndex(high);
 	}
 
 	.c-cookieWarning-inner {
@@ -12,19 +12,18 @@
 	    margin: 0 auto;
 	    padding: spacing() 0;
 	    overflow: hidden;
-	}
 
-	@include media('<960px') {
-	    .c-cookieWarning-inner {
+    	@include media('<960px') {
 	        width: 620px;
-	    }
+		}
+		@include media('<640px') {
+	        width: 300px;
+		}
 	}
 
-	@include media('<640px') {
-	    .c-cookieWarning-inner {
-	        width: 300px;
-	    }
-	}
+
+
+
 
 	.c-cookieWarning p {
 		color: $white;
