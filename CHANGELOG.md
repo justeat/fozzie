@@ -11,6 +11,15 @@ v1.25.0
 - cookie warning styles
 
 
+v1.25.0
+------------------------------
+*January 29, 2019*
+
+### Changed
+- Updated card component styles.
+- Updated page banner component styles.
+
+
 v1.24.1
 ------------------------------
 *January 24, 2019*
