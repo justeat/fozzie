@@ -125,11 +125,11 @@ $rays--coloured-spacing--wide: 148px;
     // any elements below the banner will be moved up, over the bottom part of the banner
     .c-pageBanner--negativeBottom--aboveMid {
         @include media('>=mid') {
-            margin-bottom: -115px;
+            margin-bottom: -100px;
         }
 
         @include media('>=wide') {
-            margin-bottom: -150px;
+            margin-bottom: -132px;
         }
     }
 

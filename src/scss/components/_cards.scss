@@ -62,6 +62,20 @@ $card-section-collapsed-height--aboveMid        : 50px;
         padding-right: spacing(x2);
     }
 
+        .c-card--negativeSpacing--belowMid {
+            @include media('<mid') {
+                margin-left: -#{spacing(x2)};
+                margin-right: -#{spacing(x2)};
+            }
+        }
+
+        .c-card--negativeSpacing--belowMid--small {
+            @include media('<mid') {
+                margin-left: -#{spacing()};
+                margin-right: -#{spacing()};
+            }
+        }
+
 
     //
     // Outline Modifiers
@@ -122,12 +136,13 @@ $card-section-collapsed-height--aboveMid        : 50px;
     // creates a section which is separated off by a border on larger screens
     .c-card-section {
         margin-left: -#{spacing(x2)};
-        padding: 0 spacing(x3);
+        padding-left: spacing(x2);
         width: calc(100% + #{$card-section-margin});
 
         @include media('>=mid') {
             border-top: solid 1px $card-borderColor;
             margin-left: -#{spacing(x2)};
+            padding-left: spacing(x3);
         }
     }
 
