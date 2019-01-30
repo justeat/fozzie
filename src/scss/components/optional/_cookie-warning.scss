@@ -1,0 +1,55 @@
+@mixin cookieWarning() {
+	.c-cookieWarning {
+	    background-color: $black;
+	    position: fixed;
+	    bottom: 0;
+		width: 100%;
+		z-index: zIndex(high);
+	}
+
+	.c-cookieWarning-inner {
+	    width: 940px;
+	    margin: 0 auto;
+	    padding: spacing() 0;
+	    overflow: hidden;
+
+	    @include media('<wide') {
+	    	width: 830px;
+	    }
+    	@include media('<mid') {
+	        width: 414px;
+		}
+		@include media('<narrow') {
+	        width: 375px;
+		}
+		@include media('<tiny') {
+			margin-top: 12px;
+			width: 100%;
+		}
+	}
+
+	.c-cookieWarning p {
+		color: $white;
+	    text-align: center;
+		margin-top: 2px;
+	}
+
+	.c-cookieWarning-btn {
+	    display: block;
+	    position: absolute;
+	    top: 8px;
+	    right: 8px;
+	    width: 10px;
+	    height: 10px;
+		background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon-close-banner.png') no-repeat center center;
+		background-size: 10px 10px;
+		border: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $grey--mid;
+		}
+
+	}
+}
