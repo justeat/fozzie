@@ -14,9 +14,6 @@ $font-size-base-px          : $font-size-base * 1px;
 
 // Type map – these are our global font-sizes and line-heights across the site
 $type: (
-    tiny: ( // for the cookie banner
-        default: (11, 16)
-    ),
     small: ( // for things like legal copy (unimportant stuff)
         default: (12, 16)
     ),
