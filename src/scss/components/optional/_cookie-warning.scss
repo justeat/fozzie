@@ -1,6 +1,6 @@
 @mixin cookieWarning() {
 	.c-cookieWarning {
-	    background-color: $black;
+	    background-color: $grey--darkest;
 	    position: fixed;
 	    bottom: 0;
 		width: 100%;
@@ -29,10 +29,10 @@
 	}
 
 	.c-cookieWarning p {
-		@include font-size(small, false);
+		@include font-size(tiny, false);
 		color: $white;
 		text-align: center;
-		margin-top: 2px;
+		margin: 0 auto;
 	}
 
 	.c-cookieWarning-btn {
