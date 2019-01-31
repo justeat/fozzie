@@ -29,9 +29,9 @@
 	}
 
 	.c-cookieWarning p {
-	    @include font-size(small, false);
+		@include font-size(small, false);
 		color: $white;
-	    text-align: center;
+		text-align: center;
 		margin-top: 2px;
 	}
 
