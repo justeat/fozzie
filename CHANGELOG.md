@@ -10,12 +10,14 @@ v1.28.0
 ### Added
 - more cookie warning tweaks
 
+
 v1.27.0
 ------------------------------
 *January 31 2018*
 
 ### Added
 - cookie warning text style tweaks
+
 
 v1.26.0
 ------------------------------
