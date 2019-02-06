@@ -57,6 +57,10 @@
             flex: 0 0 spacing(x2);
         }
 
+        @include media('>mid') {
+            padding: spacing() spacing(x2);
+        }
+
         .c-overflowCarousel-item {
             flex: 1 0 auto;
             margin-right: spacing();

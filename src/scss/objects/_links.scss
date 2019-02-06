@@ -25,3 +25,16 @@ a {
     //     text-decoration: none;
     // }
 }
+
+.o-link--full {
+    width: 100%;
+    display: block;
+}
+
+.o-link--noDecoration {
+    text-decoration: none;
+}
+
+.o-link--bold {
+    font-weight: $font-weight-bold;
+}
