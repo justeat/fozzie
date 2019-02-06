@@ -3,9 +3,21 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v1.29.0
+------------------------------
+*February 6 2019*
+
+### Changed
+- Fix some styles for `c-orderCard` and `c-overflowCarousel` components
+
+### Added
+- `.o-tile-link` class
+
+
 v1.28.0
 ------------------------------
-*January 31 2018*
+*January 31 2019*
 
 ### Added
 - more cookie warning tweaks
@@ -13,7 +25,7 @@ v1.28.0
 
 v1.27.0
 ------------------------------
-*January 31 2018*
+*January 31 2019*
 
 ### Added
 - cookie warning text style tweaks
@@ -21,7 +33,7 @@ v1.27.0
 
 v1.26.0
 ------------------------------
-*January 29, 2018*
+*January 29, 2019*
 
 ### Added
 - cookie warning styles

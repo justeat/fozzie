@@ -24,10 +24,12 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         text-decoration: none;
         color: $grey--mid;
         width: 280px;
+        max-width: 280px;
         min-height: 259px;
 
         @include media('>=mid') {
             width: 392px;
+            max-width: 392px;
             min-height: 302px;
         }
 
@@ -41,8 +43,13 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
 
     .c-orderCard-image {
         width: 100%;
-        height: auto;
+        height: 103px;
+        overflow: hidden;
         position: relative;
+
+        @include media('>=mid') {
+            height: 145px;
+        }
 
         img {
             vertical-align: bottom;
