@@ -6,18 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.29.0
 ------------------------------
-*February 6 2019*
+*February 6, 2019*
 
 ### Changed
 - Fix some styles for `c-orderCard` and `c-overflowCarousel` components
 
 ### Added
-- `.o-tile-link` class
+- `.o-link` classes
 
 
 v1.28.0
 ------------------------------
-*January 31 2019*
+*January 31, 2019*
 
 ### Added
 - more cookie warning tweaks
@@ -25,7 +25,7 @@ v1.28.0
 
 v1.27.0
 ------------------------------
-*January 31 2019*
+*January 31, 2019*
 
 ### Added
 - cookie warning text style tweaks
