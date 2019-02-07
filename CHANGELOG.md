@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.29.1
+------------------------------
+*February 6, 2019*
+
+### Fixed
+- Centre align child elements in `c-overflowCarousel` component
+- Adjust spacing around the `c-overflowCarousel` component
+
+
 v1.29.0
 ------------------------------
 *February 6, 2019*
