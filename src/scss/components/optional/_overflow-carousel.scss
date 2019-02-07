@@ -47,7 +47,7 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: spacing() 0;
+        padding: spacing() spacing(x2);
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
 
@@ -58,7 +58,7 @@
         }
 
         @include media('>mid') {
-            padding: spacing() spacing(x2);
+            padding: spacing() spacing(x4);
         }
 
         .c-overflowCarousel-item {
@@ -70,11 +70,11 @@
             }
 
             &:first-child {
-                margin-left: spacing(x2);
+                margin-left: auto;
             }
 
             &:last-child {
-                margin-right: 0;
+                margin-right: auto;
             }
         }
     }
