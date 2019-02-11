@@ -11,6 +11,8 @@ v1.30.0
 ### Changed
 - Rewrite `c-cuisinesWidget` to use css grid instead of flex
 
+Now the component has grid modifier class `c-cuisinesWidget-grid--gridOfThree` instead of widget modifier class `c-cuisinesWidget--gridOfThree`
+
 
 v1.29.1
 ------------------------------
