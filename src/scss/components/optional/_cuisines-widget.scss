@@ -67,7 +67,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
         }
 
         /* autoprefixer grid: autoplace */
-        .c-cuisinesWidget-grid {
+        .c-cuisinesGrid {
             max-width: 360px;
             margin: auto;
             display: grid;
@@ -82,7 +82,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
         }
 
         //for IE it should be explicit grid
-        .c-cuisinesWidget-grid--gridOfThree {
+        .c-cuisinesGrid--gridOfThree {
             grid-template-columns: auto;
             grid-template-rows: auto auto auto auto auto auto;
             grid-gap: spacing(x2);
