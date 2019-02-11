@@ -4,6 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.30.0
+------------------------------
+*February 11, 2019*
+
+### Changed
+- Rewrite `c-cuisinesWidget` to use css grid instead of flex
+
+Now the component has grid modifier class `c-cuisinesWidget-grid--gridOfThree` instead of widget modifier class `c-cuisinesWidget--gridOfThree`
+
+
 v1.29.1
 ------------------------------
 *February 6, 2019*
