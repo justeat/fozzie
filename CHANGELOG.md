@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.31.0
+------------------------------
+*February 12, 2019*
+
+### Changed
+- Change class names from `c-cuisinesWidget-grid` and `c-cuisinesWidget-grid--gridOfThree` to `c-cuisinesGrid` and `c-cuisinesGrid--gridOfThree`
+
+
 v1.30.1
 ------------------------------
 *February 11, 2019*
