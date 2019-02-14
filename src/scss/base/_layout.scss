@@ -24,12 +24,12 @@ body {
     padding-left: #{$layout-margin}px;
     padding-right: #{$layout-margin}px;
 
-    @include media('<=mid') {
+    @include media('<mid') {
         padding-left: #{$layout-margin--mid}px;
         padding-right: #{$layout-margin--mid}px;
     }
 
-    @include media('<=narrow') {
+    @include media('<narrow') {
         padding-left: #{$layout-margin--narrow}px;
         padding-right: #{$layout-margin--narrow}px;
     }
