@@ -15,111 +15,109 @@
 
 $pageBanner-bg: $white;
 //Vars to use for IE homepage banner rays positioning fix
-$rays--coloured-spacing: 20px;
-$rays--coloured-spacing--tiny: 60px;
+$rays--coloured-spacing: 60px;
 $rays--coloured-spacing--mid: 164px;
 $rays--coloured-spacing--wide: 148px;
 
 
 @mixin pageBanner() {
+    .c-pageBanner {
+        background-color: $pageBanner-bg;
+        max-height: 300px;
+        min-height: 100px;
+        overflow: hidden;
+        position: relative;
 
-   .c-pageBanner {
-       background-color: $pageBanner-bg;
-       max-height: 300px;
-       min-height: 100px;
-       overflow: hidden;
-       position: relative;
+        @include media('>=wide') {
+            max-height: 400px;
+        }
+    }
 
-       @include media('>=wide') {
-           max-height: 400px;
-       }
-   }
+    .c-pageBanner--tall {
+        max-height: 221px;
 
-   .c-pageBanner--tall {
-       max-height: 600px;
+        @include media('>=narrow') {
+            max-height: 460px;
+        }
 
-       &.c-pageBanner--withRays--coloured {
-           .c-pageBanner-img {
-               margin-bottom: $rays--coloured-spacing;
+        @include media('>=wide') {
+            max-height: 600px;
+        }
 
-               @include media('>=tiny') {
-                   margin-bottom: $rays--coloured-spacing--tiny;
-               }
+        &.c-pageBanner--withRays--coloured {
+            .c-pageBanner-img {
+                margin-bottom: $rays--coloured-spacing;
 
-               @include media('>=mid') {
-                   margin-bottom: $rays--coloured-spacing--mid;
-               }
+                @include media('>=mid') {
+                    margin-bottom: $rays--coloured-spacing--mid;
+                }
 
-               @include media('>=wide') {
-                   margin-bottom: $rays--coloured-spacing--wide;
-               }
-           }
-       }
-   }
+                @include media('>=wide') {
+                    margin-bottom: $rays--coloured-spacing--wide;
+                }
+            }
+        }
+    }
 
-   .c-pageBanner--narrow {
-       max-height: 300px;
+    .c-pageBanner--narrow {
+        max-height: 300px;
 
-       @include media('>=huge') {
-           max-height: 370px;
-       }
-       .c-pageBanner-img {
-           @include media('>=mid') {
-               margin-top: -8%;
-           }
-       }
-   }
+        @include media('>=huge') {
+            max-height: 370px;
+        }
+        .c-pageBanner-img {
+            @include media('>=mid') {
+                margin-top: -8%;
+            }
+        }
+    }
 
-   .c-pageBanner--withRays--white {
-       // Prevents IE from applying these styles as IE11 doesn't support the @supports rule
-       @supports (position: absolute) {
-           &:after {
-               background: url('#{$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
-               content: '';
-               height: 100%;
-               position: absolute;
-               bottom: -1px;
-               left: 0;
-               width: 100%;
-               z-index: zIndex(low);
+    .c-pageBanner--withRays--white {
+        // Prevents IE from applying these styles as IE11 doesn't support the @supports rule
+        @supports (position: absolute) {
+            &:after {
+                background: url('#{$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
+                content: '';
+                height: 100%;
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                z-index: zIndex(low);
 
-               @include media('>=mid') {
-                   background: url('#{$img-path-url}/decoration/rays--white--wide.svg') no-repeat bottom left;
-               }
-           }
-       }
-   }
+                @include media('>=mid') {
+                    background: url('#{$img-path-url}/decoration/rays--white--wide.svg') no-repeat bottom left;
+                }
+            }
+        }
+    }
 
-   .c-pageBanner--withRays--coloured {
-       &:after {
-           background: url('#{$img-path-url}/decoration/rays--coloured--narrow.svg') no-repeat bottom left;
-           content: '';
-           height: 100%;
-           position: absolute;
-           left: 0;
-           right: 0;
-           width: 100.1%;
-           z-index: zIndex(low);
-           bottom: -$rays--coloured-spacing;
+    .c-pageBanner--withRays--coloured {
+        &:after {
+            background: url('#{$img-path-url}/decoration/rays--coloured--narrow.svg') no-repeat bottom left;
+            content: '';
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100.1%;
+            z-index: zIndex(low);
+            bottom: -$rays--coloured-spacing;
 
-           @include media('>=tiny') {
-               bottom: -$rays--coloured-spacing--tiny;
-           }
+            @include media('>=mid') {
+                background: url('#{$img-path-url}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
+                bottom: -$rays--coloured-spacing--mid;
+            }
 
-           @include media('>=mid') {
-               background: url('#{$img-path-url}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
-               bottom: -$rays--coloured-spacing--mid;
-           }
+            @include media('>=wide') {
+                background: url('#{$img-path-url}/decoration/rays--coloured--wide.svg') no-repeat bottom left;
+                bottom: -$rays--coloured-spacing--wide;
+            }
 
-           @include media('>=wide') {
-               background: url('#{$img-path-url}/decoration/rays--coloured--wide.svg') no-repeat bottom left;
-               bottom: -$rays--coloured-spacing--wide;
-           }
-
-           @supports (position: absolute) {
-               bottom: 0;
-           }
-       }
+            @supports (position: absolute) {
+                bottom: 0;
+            }
+        }
     }
 
     // any elements below the banner will be moved up, over the bottom part of the banner
