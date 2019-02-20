@@ -18,6 +18,7 @@ $pageBanner-bg: $white;
 $rays--coloured-spacing: 60px;
 $rays--coloured-spacing--mid: 164px;
 $rays--coloured-spacing--wide: 148px;
+$rays--coloured-spacing--huge: 230px;
 
 
 @mixin pageBanner() {
@@ -36,12 +37,24 @@ $rays--coloured-spacing--wide: 148px;
     .c-pageBanner--tall {
         max-height: 221px;
 
+        @include media('>=tiny') {
+            max-height: 318px;
+        }
+
         @include media('>=narrow') {
-            max-height: 460px;
+            max-height: 370px;
+        }
+
+        @include media('>=mid') {
+            max-height: 626px;
         }
 
         @include media('>=wide') {
-            max-height: 600px;
+            max-height: 703px;
+        }
+
+        @include media('>=huge') {
+            max-height: 780px;
         }
 
         &.c-pageBanner--withRays--coloured {
@@ -105,7 +118,6 @@ $rays--coloured-spacing--wide: 148px;
             bottom: -$rays--coloured-spacing;
 
             @include media('>=mid') {
-                background: url('#{$img-path-url}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
                 bottom: -$rays--coloured-spacing--mid;
             }
 
@@ -114,8 +126,18 @@ $rays--coloured-spacing--wide: 148px;
                 bottom: -$rays--coloured-spacing--wide;
             }
 
+            @include media('>=huge') {
+                bottom: -$rays--coloured-spacing--huge;
+            }
+
+            // Prevents IE from applying these styles as IE11 doesn't support the @supports rule
             @supports (position: absolute) {
                 bottom: 0;
+
+                @include media('>=mid', '<wide') {
+                    // removed this image call from IE because of the svg wrong scaling bug. SVG for smaller screens looks much better in IE
+                    background: url('#{$img-path-url}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
+                }
             }
         }
     }
