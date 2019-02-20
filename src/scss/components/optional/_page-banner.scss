@@ -134,7 +134,7 @@ $rays--coloured-spacing--huge: 230px;
             @supports (position: absolute) {
                 bottom: 0;
 
-                @include media('>=mid') {
+                @include media('>=mid', '<wide') {
                     // removed this image call from IE because of the svg wrong scaling bug. SVG for smaller screens looks much better in IE
                     background: url('#{$img-path-url}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
                 }
