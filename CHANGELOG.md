@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.33.0
 ------------------------------
-*February 19, 2019*
+*February 20, 2019*
 
 ### Changed
 - Add more media breakpoints to `c-pageBanner--tall`
