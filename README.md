@@ -12,6 +12,7 @@
 [![Build Status](https://travis-ci.org/justeat/fozzie.svg)](https://travis-ci.org/justeat/fozzie)
 [![Coverage Status](https://coveralls.io/repos/github/justeat/fozzie/badge.svg)](https://coveralls.io/github/justeat/fozzie)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/justeat/fozzie.svg)](https://lgtm.com/projects/g/justeat/fozzie/alerts/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjusteat%2Ffozzie.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjusteat%2Ffozzie?ref=badge_shield)
 
 ## Usage
 
@@ -35,3 +36,7 @@ If you are using the [fozzie gulp build tasks](https://www.npmjs.com/package/@ju
     ```
 
 You can then use the base styles that `fozzie` has available in this module (and that will be documented shortly).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjusteat%2Ffozzie.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjusteat%2Ffozzie?ref=badge_large)
