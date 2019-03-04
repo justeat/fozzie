@@ -25,15 +25,28 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
 
        .c-cuisinesWidget {
             min-height: 96px;
+            max-width: 392px;
             display: block;
             border-radius: 8px;
             overflow: hidden;
             position: relative;
             background-color: $cuisinesWidget-defaultBackground;
             box-shadow: $cuisinesWidget-boxShadow;
+            margin-bottom: spacing(x2);
 
-           &:hover {
+            &:hover {
                 box-shadow: $cuisinesWidget-hoverBoxShadow;
+            }
+
+            @include media('>=narrow-mid') {
+                &:nth-child(odd) {
+                    margin-right: spacing(x2);
+                }
+
+                &:nth-child(even),
+                &:last-child:first-child {
+                    margin-right: 0;
+                }
             }
 
            @include media('>=mid') {
@@ -42,6 +55,17 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
 
             @include media('>=mid-wide') {
                 min-height: 145px;
+
+                // added :nth-child(1n) to save specificity
+                &:nth-child(1n),
+                &:nth-child(4) {
+                    margin-right: spacing(x2);
+                }
+
+                &:nth-child(3n),
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
 
@@ -71,6 +95,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
             max-width: 360px;
             margin: auto;
             display: grid;
+            margin-bottom: -(spacing(x2));
 
             @include media('>=narrow-mid') {
                 max-width: 800px;
@@ -85,7 +110,10 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
         .c-cuisinesGrid--gridOfThree {
             grid-template-columns: auto;
             grid-template-rows: auto auto auto auto auto auto;
-            grid-gap: spacing(x2);
+            justify-content: center;
+            // justify-content for grid will not work in IE,
+            // but for now we leave it as it is because the use case for this style is pretty rare
+            // (only if there are 2 or 1 recomended cuisine for your area)
 
             @include media('>=narrow-mid') {
                 grid-template-columns: auto auto;
