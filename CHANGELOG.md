@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.34.0
 ------------------------------
-*March 05, 2019*
+*March 5, 2019*
 
 ### Changed
 - Small styles amends to `c-cuisinesGrid--gridOfThree`
