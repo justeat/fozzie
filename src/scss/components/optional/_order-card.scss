@@ -41,7 +41,7 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         }
     }
 
-    .c-orderCard--noOpenRestaurants {
+    .c-orderCard--inactive {
         min-height: 220px;
         margin: auto;
 
@@ -52,6 +52,10 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         &:hover,
         &:focus {
             box-shadow: $previousOrder-boxShadow;
+        }
+
+        .c-orderCard-image {
+            background-color: $grey--lightest;
         }
     }
 
@@ -82,27 +86,15 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         }
     }
 
-    .c-orderCard-image--noOpenRestaurants {
-        background-color: $grey--lightest;
-    }
-
     .c-orderCard-iconContainer {
         width: 64px;
         height: 64px;
         border-radius: 50%;
-        background-color: white;
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
+        background-color: $white;
 
         svg {
             width: 40px;
             height: 40px;
-            position: absolute;
-            top: 50%;
-            right: 50%;
-            transform: translate(50%, -50%);
             fill: $brand--orange;
         }
     }

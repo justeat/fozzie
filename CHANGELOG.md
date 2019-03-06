@@ -9,7 +9,10 @@ v1.35.0
 *March 6, 2019*
 
 ### Changed
-- Styles for `c-orderCard--noOpenRestaurants` 
+- Styles for `c-orderCard--inactive`
+
+### Added
+- `u-absolutelyCentered` styles
 
 
 v1.34.0
