@@ -41,6 +41,24 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         }
     }
 
+    .c-orderCard--inactive {
+        min-height: 220px;
+        margin: auto;
+
+        @include media('>=mid') {
+            min-height: 254px;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: $previousOrder-boxShadow;
+        }
+
+        .c-orderCard-image {
+            background-color: $grey--lightest;
+        }
+    }
+
     .c-orderCard-image {
         width: 100%;
         height: 103px;
@@ -65,6 +83,19 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
             bottom: -1px;
             left: 0;
             z-index: zIndex(low);
+        }
+    }
+
+    .c-orderCard-iconContainer {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: $white;
+
+        svg {
+            width: 40px;
+            height: 40px;
+            fill: $brand--orange;
         }
     }
 
@@ -111,5 +142,10 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
 
     .c-orderCard-content {
         padding: spacing() spacing(x2) spacing(x0.5);
+    }
+
+    .c-orderCard-content--defaultMessage {
+        padding: 0 spacing(x2);
+        @include font-size(base--scaleUp, false);
     }
 }
