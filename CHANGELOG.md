@@ -4,6 +4,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.36.0
+------------------------------
+*March 12, 2019*
+
+### Added
+- Modal optional component.
+- Expandable menu modifier.
+- Overlay & prevent scroll utility helpers.
+
+### Fixed
+- Menu component `has-icon` class only applied to small device widths.
+
+
 v1.35.0
 ------------------------------
 *March 6, 2019*
