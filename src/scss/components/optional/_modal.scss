@@ -1,0 +1,91 @@
+/**
+ * Components > Item Selector
+ * =================================
+ * Used on menu pages to display a modal to the user.
+ *
+ * Example: Menu – When selecting an item.
+ *
+ * The `c-modal` component is an optional mixin within Fozzie.
+ * If you'd like to use it in your project you can include it by adding `@include modal();` into your SCSS dependencies file.
+ *
+ * Documentation:
+ * TBC
+ */
+
+$modal-titleFontSize     : base--scaleUp !default;
+$modal-transitionTime    : 150ms !default;
+
+@mixin modal() {
+
+    .c-modal {
+        z-index: zIndex(high);
+    }
+
+        .c-modal-title {
+            @include font-size($modal-titleFontSize);
+            padding: 0 spacing(x3);
+
+            @include media('>=mid') {
+                @include font-size(large);
+            }
+        }
+
+        .c-modal-content {
+            background-color: $white;
+            border-radius: 8px;
+            box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
+            padding: spacing(x3);
+            position: fixed;
+            right: 50%;
+            text-align: center;
+            top: 50%;
+            transform: translate(50%, -50%);
+            transition: $modal-transitionTime bottom ease-in-out;
+            width: 75%;
+
+            @include media('>=mid') {
+                display: none;
+                max-width: 600px;
+                padding: spacing(x5);
+            }
+        }
+
+            .c-modal-content--visible {
+                @include media('>=mid') {
+                    display: block;
+                }
+            }
+
+        .c-modal--rays--belowMid {
+            @include media('<mid') {
+                .c-modal-content {
+                    border-radius: 0;
+                    bottom: -100vh;
+                    box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, 0.22), 0 16px 16px 0 rgba(0, 0, 0, 0.24);
+                    left: 0;
+                    top: auto;
+                    transform: none;
+                    width: 100%;
+
+                    // Prevents IE from applying these styles as IE11 doesn't support the @supports rule
+                    @supports (position: absolute) {
+                        &:before {
+                            background: url('#{$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
+                            bottom: 99%;
+                            content: '';
+                            height: 100%;
+                            left: 0;
+                            pointer-events: none; // Allow user to click the overlay behind to close the selector
+                            position: absolute;
+                            width: 110%;
+                        }
+                    }
+                }
+
+                .c-modal-content--visible {
+                    bottom: 0;
+                }
+            }
+        }
+
+}
