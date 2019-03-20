@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.37.0
+------------------------------
+*March 20, 2019*
+
+### Fixed
+- Styling for `c-cookieWarning-inner` to prevent text flowing under the close button.
+
+
 v1.36.0
 ------------------------------
 *March 12, 2019*
