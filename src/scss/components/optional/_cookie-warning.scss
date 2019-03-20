@@ -5,34 +5,20 @@
 	    bottom: 0;
 		width: 100%;
 		z-index: zIndex(high);
+
+		& p {
+			@include font-size(small, false);
+			color: $white;
+			text-align: center;
+			margin: 0 auto;
+		}
 	}
 
 	.c-cookieWarning-inner {
-	    width: 940px;
 	    margin: 0 auto;
-	    padding: spacing() 0;
+		padding: spacing();
+		padding-right: spacing(x3);
 	    overflow: hidden;
-
-	    @include media('<wide') {
-	    	width: 830px;
-	    }
-    	@include media('<mid') {
-	        width: 414px;
-		}
-		@include media('<narrow') {
-	        width: 375px;
-		}
-		@include media('<tiny') {
-			margin-top: 12px;
-			width: 100%;
-		}
-	}
-
-	.c-cookieWarning p {
-		@include font-size(small, false);
-		color: $white;
-		text-align: center;
-		margin: 0 auto;
 	}
 
 	.c-cookieWarning-btn {
