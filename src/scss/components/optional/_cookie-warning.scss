@@ -1,51 +1,51 @@
 @mixin cookieWarning() {
-	.c-cookieWarning {
-	    background-color: $grey--darkest;
-	    position: fixed;
-	    bottom: 0;
-		width: 100%;
-		z-index: zIndex(high);
+    .c-cookieWarning {
+        background-color: $grey--darkest;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: zIndex(high);
 
-		& p {
-			@include font-size(small, false);
-			color: $white;
-			text-align: center;
-			margin: 0 auto;
-		}
-	}
+        & p {
+            @include font-size(small, false);
+            color: $white;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
 
-	.c-cookieWarning-inner {
-	    margin: 0 auto;
-		padding: spacing();
-		padding-right: spacing(x3);
-	    overflow: hidden;
-	}
+    .c-cookieWarning-inner {
+        margin: 0 auto;
+        padding: spacing();
+        padding-right: spacing(x3);
+        overflow: hidden;
+    }
 
-	.c-cookieWarning-btn {
-	    display: block;
-	    position: absolute;
-	    top: 8px;
-	    right: 8px;
-	    width: 10px;
-	    height: 10px;
-		background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon-close-banner.png') no-repeat center center;
-		background-size: 10px 10px;
-		border: none;
+    .c-cookieWarning-btn {
+        display: block;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 10px;
+        height: 10px;
+        background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon-close-banner.png') no-repeat center center;
+        background-size: 10px 10px;
+        border: none;
 
-		&:hover,
-		&:active,
-		&:focus {
-			background-color: $grey--mid;
-			cursor: pointer;
-		}
-	}
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $grey--mid;
+            cursor: pointer;
+        }
+    }
 
-	.c-cookieWarning-link {
-		color: $white;
-		&:hover,
-		&:active,
-		&:focus {
-			color: $white;
-		}
-	}
+    .c-cookieWarning-link {
+        color: $white;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $white;
+        }
+    }
 }
