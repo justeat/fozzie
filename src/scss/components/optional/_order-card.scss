@@ -16,13 +16,13 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
 
 @mixin orderCard() {
     .c-orderCard {
-        display: block;
+        display: flex;
+        flex-direction: column;
         border-radius: 8px;
         box-shadow: $previousOrder-boxShadow;
         background-color: $white;
         overflow: hidden;
         text-decoration: none;
-        color: $grey--mid;
         width: 280px;
         max-width: 280px;
         min-height: 259px;
@@ -101,18 +101,20 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
 
     .c-orderCard-order {
         text-align: center;
-        padding: spacing();
+        padding: spacing(x1.5);
         color: $blue;
         font-weight: $font-weight-bold;
         border-top: 1px solid $grey--offWhite;
         line-height: line-height(16px, 24px);
+        @include font-size(base--scaleUp, false);
+        margin-top: spacing();
     }
 
     .c-orderCard-title {
         font-family: $font-family-base;
+        font-weight: 500;
         @include font-size(base--scaleUp, false);
         line-height: line-height(16px, 24px);
-        color: $grey--darkest;
     }
 
     .c-orderCard-showMore {
@@ -122,26 +124,34 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
     .c-orderCard-date {
         margin-top: 0;
         margin-bottom: spacing();
+        color: $grey--mid;
+        display: block;
     }
 
     .c-orderCard-summary-grid {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         justify-content: space-between;
-        align-items: flex-end;
+        flex: 1 0 auto;
     }
 
     .c-orderCard-summary {
         line-height: line-height(16px, 23px);
+        width: 78%;
     }
 
     .c-orderCard-orderTotal {
         margin-right: spacing();
         margin-left: spacing(x3);
+        align-self: flex-end;
     }
 
     .c-orderCard-content {
-        padding: spacing() spacing(x2) spacing(x0.5);
+        padding: spacing() spacing(x2) 0;
+        color: $grey--darkest;
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .c-orderCard-content--defaultMessage {
