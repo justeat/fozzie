@@ -112,7 +112,7 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
 
     .c-orderCard-title {
         font-family: $font-family-base;
-        font-weight: 500;
+        font-weight: $font-weight-bold;
         @include font-size(base--scaleUp, false);
         line-height: line-height(16px, 24px);
     }
