@@ -10,6 +10,7 @@ v1.39.0
 
 ### Changed
 - `c-order-card` style amends.
+- `c-cuisinesWidget` underline text on hover state.
 
 
 v1.38.0
