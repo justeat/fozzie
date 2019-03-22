@@ -34,8 +34,13 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
             box-shadow: $cuisinesWidget-boxShadow;
             margin-bottom: spacing(x2);
 
-            &:hover {
+            &:hover,
+            &:focus {
                 box-shadow: $cuisinesWidget-hoverBoxShadow;
+
+                .c-cuisinesWidget-name {
+                    text-decoration: underline;
+                }
             }
 
             @include media('>=narrow-mid') {

@@ -58,7 +58,7 @@
         }
 
         @include media('>mid') {
-            padding: spacing() spacing(x4);
+            padding: spacing(x2) spacing(x4) spacing();
         }
 
         .c-overflowCarousel-item {
