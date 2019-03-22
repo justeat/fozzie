@@ -9,7 +9,7 @@ v1.39.0
 *March 21, 2019*
 
 ### Changed
-- `c-order-card` style amends.
+- `c-order-card` style amendments.
 - `c-cuisinesWidget` underline text on hover state.
 
 
