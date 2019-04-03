@@ -4,6 +4,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.40.0
+------------------------------
+*April 3, 2019*
+
+### Changed
+- Updated npm dependencies.
+
+### Fixed
+- Modal styles which caused the modal to be hidden on large screens.
+
+
 v1.39.0
 ------------------------------
 *March 21, 2019*

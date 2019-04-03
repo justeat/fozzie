@@ -34,6 +34,7 @@ $modal-transitionTime    : 150ms !default;
             background-color: $white;
             border-radius: 8px;
             box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
+            display: none;
             padding: spacing(x3);
             position: fixed;
             right: 50%;
@@ -44,16 +45,13 @@ $modal-transitionTime    : 150ms !default;
             width: 75%;
 
             @include media('>=mid') {
-                display: none;
                 max-width: 600px;
                 padding: spacing(x5);
             }
         }
 
             .c-modal-content--visible {
-                @include media('>=mid') {
-                    display: block;
-                }
+                display: block;
             }
 
         .c-modal--rays--belowMid {
@@ -62,6 +60,7 @@ $modal-transitionTime    : 150ms !default;
                     border-radius: 0;
                     bottom: -100vh;
                     box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, 0.22), 0 16px 16px 0 rgba(0, 0, 0, 0.24);
+                    display: block;
                     left: 0;
                     top: auto;
                     transform: none;
