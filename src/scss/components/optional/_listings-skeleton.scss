@@ -18,7 +18,7 @@
 
 @mixin listingSkeleton() {
 
-    .c-listing-skeleton {
+    .c-listingSkeleton {
         position: relative;
         background: $white;
         border-radius: spacing();
@@ -30,7 +30,7 @@
         }
     }
 
-    .c-listing-skeleton-info {
+    .c-listingSkeleton-info {
         &:before,
         &:after {
             content: '';
@@ -58,7 +58,7 @@
         }
     }
 
-    .c-listing-skeleton-review {
+    .c-listingSkeleton-review {
         position: absolute;
         top: 57px;
         left: 87px;
@@ -91,7 +91,7 @@
         }
     }
 
-    .c-listing-skeleton-cuisines {
+    .c-listingSkeleton-cuisines {
         top: 38px;
         left: 87px;
         position: absolute;
@@ -122,7 +122,7 @@
         }
     }
 
-    .c-listing-skeleton-meta {
+    .c-listingSkeleton-meta {
         width: 100%;
         position: relative;
         margin-bottom: 40px;

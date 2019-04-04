@@ -6,10 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.41.0
 ------------------------------
-*April 3, 2019*
+*April 4, 2019*
 
 ### Added
-- Added `c-listing-skeleton` component, a `c-listing` loading skeleton.
+- Added `c-listingSkeleton` component, a `c-listing` loading skeleton.
 
 
 v1.40.0
