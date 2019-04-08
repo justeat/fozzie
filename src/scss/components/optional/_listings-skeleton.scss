@@ -1,0 +1,166 @@
+
+@keyframes skeletonGradient {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@mixin anim() {
+    border-radius: 2px;
+    background: linear-gradient(-45deg, $grey--offWhite, $grey--offWhite, $grey--lightest, $grey--offWhite, $grey--offWhite);
+    background-size: 2000px 600%;
+    animation: skeletonGradient 2s ease infinite;
+    animation-fill-mode: forwards;
+}
+
+@mixin listingSkeleton() {
+
+    .c-listingSkeleton {
+        position: relative;
+        background: $white;
+        border-radius: spacing();
+        padding: 85px spacing(x2) spacing(x2);
+        margin-bottom: spacing(x2);
+
+        @include media('>mid') {
+            padding-top: 73px;
+        }
+    }
+
+    .c-listingSkeleton-info {
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: spacing(x2);
+            @include anim();
+        }
+
+        //Skeleton image
+        &:before {
+            left: spacing(x2);
+            height: 55px;
+            width: 55px;
+        }
+
+        //Skeleton title
+        &:after {
+            left: 87px;
+            height: 16px;
+            width: 180px;
+
+            @include media('>mid') {
+                width: 300px;
+            }
+        }
+    }
+
+    .c-listingSkeleton-review {
+        position: absolute;
+        top: 57px;
+        left: 87px;
+
+        &:before,
+        &:after {
+            content: '';
+            height: 12px;
+            @include anim();
+            display: inline-block;
+        }
+
+        //Review stars
+        &:before {
+            width: 70px;
+            margin-right: spacing();
+
+            @include media('>mid') {
+                width: 80px;
+            }
+        }
+
+        //Review count
+        &:after {
+            width: 25px;
+
+            @include media('>mid') {
+                width: 30px;
+            }
+        }
+    }
+
+    .c-listingSkeleton-cuisines {
+        top: 38px;
+        left: 87px;
+        position: absolute;
+
+        &:before,
+        &:after {
+            content: '';
+            height: 12px;
+            @include anim();
+            display: inline-block;
+        }
+
+        &:before {
+            width: 50px;
+            margin-right: spacing();
+
+            @include media('>mid') {
+                width: 70px;
+            }
+        }
+
+        &:after {
+            width: 35px;
+
+            @include media('>mid') {
+                width: 60px;
+            }
+        }
+    }
+
+    .c-listingSkeleton-meta {
+        width: 100%;
+        position: relative;
+        margin-bottom: 40px;
+
+        &,
+        &:before,
+        &:after {
+            height: 15px;
+            display: block;
+            @include anim();
+
+            @include media('>mid') {
+                height: 13px;
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            margin-bottom: spacing();
+        }
+
+        &:before {
+            width: 60%;
+            top: calc(100% + 8px);
+        }
+
+        &:after {
+            width: 25%;
+            top: calc(200% + 16px);
+        }
+
+        @include media('>mid') {
+            width: 360px;
+            position: absolute;
+            top: spacing(x2);
+            right: spacing(x2);
+        }
+    }
+}
