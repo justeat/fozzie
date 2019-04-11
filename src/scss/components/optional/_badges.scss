@@ -23,9 +23,15 @@ $badge-important-color      : $white;
 $badge-important-bgColor    : $orange;
 $badge-award-color          : $purple;
 $badge-award-bgColor        : $purple--light;
+$badge-ok-color             : $white;
+$badge-ok-bgColor           : $green;
+$badge-dark-color           : $white;
+$badge-dark-bgColor         : $grey--darkest;
+$badge-indicator-color      : $blue;
+$badge-indicator-bgColor    : $white;
 $badge-padding              : 1px 5px;
-$badge-rounded-padding      : 4px spacing(x2);
 $badge-rounded-radius       : 14px;
+$badge-rounded-padding      : spacing(x0.5) spacing(x2);
 $badge-angled-radius        : 2px;
 
 @mixin badge() {
@@ -75,6 +81,21 @@ $badge-angled-radius        : 2px;
         .c-badge--award {
             background-color: $badge-award-bgColor;
             color: $badge-award-color;
+        }
+
+        .c-badge--ok {
+            background-color: $badge-ok-bgColor;
+            color: $badge-ok-color;
+        }
+
+        .c-badge--dark {
+            background-color: $badge-dark-bgColor;
+            color: $badge-dark-color;
+        }
+
+        .c-badge--indicator {
+            background-color: $badge-indicator-bgColor;
+            color: $badge-indicator-color;
         }
 
         .c-badge--large {
