@@ -17,15 +17,21 @@ $badge-light-bgColor        : $white;
 $badge-info-color           : $green;
 $badge-success-color        : $green;
 $badge-success-bgColor      : $green--offWhite;
+$badge-successAlt-color     : $white;
+$badge-successAlt-bgColor   : $green;
 $badge-warning-color        : $orange;
 $badge-alert-color          : $red;
 $badge-important-color      : $white;
 $badge-important-bgColor    : $orange;
 $badge-award-color          : $purple;
 $badge-award-bgColor        : $purple--light;
+$badge-dark-color           : $white;
+$badge-dark-bgColor         : $grey--darkest;
+$badge-indicator-color      : $blue;
+$badge-indicator-bgColor    : $white;
 $badge-padding              : 1px 5px;
-$badge-rounded-padding      : 4px spacing(x2);
 $badge-rounded-radius       : 14px;
+$badge-rounded-padding      : spacing(x0.5) spacing(x2);
 $badge-angled-radius        : 2px;
 
 @mixin badge() {
@@ -59,6 +65,12 @@ $badge-angled-radius        : 2px;
             color: $badge-success-color;
         }
 
+            // An alternative colour scheme for the success badge
+            .c-badge--success--alt {
+                background-color: $badge-successAlt-bgColor;
+                color: $badge-successAlt-color;
+            }
+
         .c-badge--warning {
             color: $badge-warning-color;
         }
@@ -75,6 +87,16 @@ $badge-angled-radius        : 2px;
         .c-badge--award {
             background-color: $badge-award-bgColor;
             color: $badge-award-color;
+        }
+
+        .c-badge--dark {
+            background-color: $badge-dark-bgColor;
+            color: $badge-dark-color;
+        }
+
+        .c-badge--indicator {
+            background-color: $badge-indicator-bgColor;
+            color: $badge-indicator-color;
         }
 
         .c-badge--large {
