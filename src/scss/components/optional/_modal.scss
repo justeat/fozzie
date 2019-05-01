@@ -50,6 +50,14 @@ $modal-transitionTime    : 250ms !default;
             }
         }
 
+            .c-modal-content--wide {
+                max-width: 1005px;
+            }
+
+            .c-modal-content--narrow {
+                max-width: 500px;
+            }
+
             .c-modal-content--visible {
                 display: block;
             }
