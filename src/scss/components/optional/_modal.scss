@@ -50,6 +50,18 @@ $modal-transitionTime    : 250ms !default;
             }
         }
 
+            .c-modal-content--wide {
+                max-width: 1005px;
+                text-align: left;
+
+                @include media('<=mid') {
+                    border-radius: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: scroll;
+                }
+            }
+
             .c-modal-content--visible {
                 display: block;
             }
