@@ -9,7 +9,7 @@ v1.45.0
 
 ### Added
 - `c-modal-content--wide` modal setting to allow the modal to be larger in size.
-
+- `c-modal-content--narrow` modal setting to allow the modal to be narrow in size.
 
 v1.44.0
 ------------------------------
