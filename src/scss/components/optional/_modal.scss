@@ -95,4 +95,27 @@ $modal-transitionTime    : 250ms !default;
             }
         }
 
+        .c-modal--fullpage--belowMid {
+            @include media('<mid') {
+                .c-modal-content {
+                    border-radius: 0;
+                    bottom: -100vh;
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    transform: none;
+                    width: 100%;
+                    overflow-y: scroll;
+                }
+
+                .c-modal-closeBtn {
+                    z-index: zIndex(high);
+                    position: fixed;
+                }
+
+                .c-modal-content--visible {
+                    bottom: 0;
+                }
+            }
+        }
 }

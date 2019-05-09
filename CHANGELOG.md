@@ -4,12 +4,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
-v1.46.0
+v1.47.0
 ------------------------------
 *May 9, 2019*
 
 ### Added
 - User message component
+
+
+v1.46.0
+------------------------------
+*May 8, 2019*
+
+### Added
+- `c-modal--fullpage--belowMid` modal setting to enable fullscreen modals for small screens.
 
 
 v1.45.0
