@@ -3,6 +3,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v1.46.0
+------------------------------
+*May 9, 2019*
+
+### Added
+- User message component
+
+
 v1.45.0
 ------------------------------
 *May 1, 2019*
@@ -10,6 +19,7 @@ v1.45.0
 ### Added
 - `c-modal-content--wide` modal setting to allow the modal to be larger in size.
 - `c-modal-content--narrow` modal setting to allow the modal to be narrow in size.
+
 
 v1.44.0
 ------------------------------
