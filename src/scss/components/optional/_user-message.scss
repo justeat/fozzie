@@ -1,0 +1,50 @@
+/**
+ * User Message Component
+ * =================================
+ * Used to display the user message banner on the page.
+ *
+ * *The `c-userMessage` component is an optional mixin within Fozzie — if you'd like to use it in your project you can include it by adding `@include userMessage();` into your SCSS dependencies file.*
+ */
+
+@mixin userMessage() {
+    .c-userMessage {
+        color: $white;
+        background-color: $orange;
+        max-width: 100%;
+        margin-top: spacing(x2);
+    }
+
+    .c-userMessageContainer {
+        max-width: 350px;
+        margin: 0 auto;
+        padding: spacing(x2) 0;
+        display: grid;
+        grid-template-columns: 40px auto;
+
+        @include media('>=narrow') {
+            max-width: 540px;
+        }
+
+        @include media('>=mid') {
+            max-width: 636px;
+            margin: 0 auto;
+        }
+
+        svg {
+            fill: white;
+            width: 28px;
+            height: 28px;
+            display: block;
+            align-self: center;
+        }
+    }
+
+    .c-userMessageText {
+        padding-left: spacing(x2);
+        margin-top: 0;
+
+        @include media('>=mid') {
+            padding-left: 0;
+        }
+    }
+}

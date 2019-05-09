@@ -83,22 +83,23 @@
 @import 'components/media-element';
 
 // Optional components – need to be included with the associated mixin in your project dependencies
+@import 'components/optional/apps-banner';
 @import 'components/optional/badges';
 @import 'components/optional/content-header';
 @import 'components/optional/content-title';
+@import 'components/optional/cookie-warning';
+@import 'components/optional/cuisines-widget';
 @import 'components/optional/fullscreen-pop-over';
 @import 'components/optional/listings';
 @import 'components/optional/listings-skeleton';
 @import 'components/optional/menu';
+@import 'components/optional/modal';
+@import 'components/optional/order-card';
 @import 'components/optional/overflow-carousel';
 @import 'components/optional/page-banner';
 @import 'components/optional/ratings';
 @import 'components/optional/toast';
-@import 'components/optional/cuisines-widget';
-@import 'components/optional/apps-banner';
-@import 'components/optional/order-card';
-@import 'components/optional/cookie-warning';
-@import 'components/optional/modal';
+@import 'components/optional/user-message';
 
 // Global layout definitions & helpers
 @import 'base/layout';
