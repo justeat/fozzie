@@ -18,8 +18,7 @@
         max-width: 350px;
         margin: 0 auto;
         padding: spacing(x2) 0;
-        display: grid;
-        grid-template-columns: 40px auto;
+        display: flex;
 
         @include media('>=narrow') {
             max-width: 540px;
@@ -32,6 +31,8 @@
 
         svg {
             fill: white;
+            min-width: 28px;
+            max-width: 28px;
             width: 28px;
             height: 28px;
             display: block;
@@ -40,7 +41,7 @@
     }
 
     .c-userMessageText {
-        padding-left: spacing(x2);
+        margin-left: spacing(x2);
         margin-top: 0;
 
         @include media('>=mid') {
