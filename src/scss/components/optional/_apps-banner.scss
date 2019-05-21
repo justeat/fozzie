@@ -15,7 +15,6 @@
             text-align: left;
             position: relative;
             padding-top: spacing(x5);
-            padding-left: spacing(x3);
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
@@ -35,10 +34,10 @@
         .c-appsBanner-heading {
             position: absolute;
             top: 0;
-            left: 0;
+            right: 50%;
+            transform: translate(50%, 0);
             width: 100%;
             text-align: center;
-            padding-left: spacing(x3);
 
 
             @include media('>=mid') {
@@ -50,6 +49,7 @@
         .c-appsBanner-image {
             overflow: hidden;
             flex: 0 1 120px;
+            margin-top: spacing(x2);
 
             @include media('>=narrow') {
                 flex: 0 1 104px;
@@ -57,6 +57,7 @@
 
             @include media('>=narrow-mid') {
                 flex: 0 1 324px;
+                margin-top: 0;
             }
 
             @include media('>=wide') {
@@ -78,7 +79,7 @@
             }
 
             p {
-                margin-top: 0;
+                margin-top: spacing(x2);
 
                 @include media('>=mid') {
                     margin-top: spacing();
