@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.49.0
+------------------------------
+*May 22, 2019*
+
+### Fixed
+- Hero banner max height reduction
+
+
 v1.48.0
 ------------------------------
 *May 21, 2019*

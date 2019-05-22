@@ -35,26 +35,14 @@ $rays--coloured-spacing--huge: 230px;
     }
 
     .c-pageBanner--tall {
-        max-height: 221px;
-
-        @include media('>=tiny') {
-            max-height: 318px;
-        }
+        max-height: 220px;
 
         @include media('>=narrow') {
-            max-height: 370px;
-        }
-
-        @include media('>=mid') {
-            max-height: 626px;
+            max-height: 450px;
         }
 
         @include media('>=wide') {
-            max-height: 703px;
-        }
-
-        @include media('>=huge') {
-            max-height: 780px;
+            max-height: 600px;
         }
 
         &.c-pageBanner--withRays--coloured {
