@@ -34,6 +34,22 @@
     }
 }
 
+@if ($theme == 'gl') {
+    // Open Sans
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        src: url('#{$font-path}/glaze/opensans-regular.ttf') format('truetype');
+    }
+	
+	// Nunito
+    @font-face {
+        font-family: Nunito;
+        font-style: normal;
+        src: url('#{$font-path}/glaze/nunito-regular.ttf') format('truetype');
+    }
+}
+
 
 /**
  * Typography preloading styles
