@@ -78,8 +78,8 @@ $font-weight-headings-preload: 400;
 // Glaze font overrides
 // ==========================================================================
 @if ($theme == 'gl') {
-    $font-family-base       : 'Open Sans'
-    $font-family-headings   : 'Nunito'
+    $font-family-base       : 'Open Sans';
+    $font-family-headings   : 'Nunito';
 }
 
 
