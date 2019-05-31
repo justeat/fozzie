@@ -31,6 +31,7 @@ $btn-secondary-bgColor--hover       : $grey--lighter;
 $btn-secondary-bgColor--active      : $grey--light;
 $btn-secondary-textColor            : $blue;
 $btn-secondary-textColor--hover     : $blue;
+$btn-secondary-textColor--active    : $blue;
 
 $btn-wide-hozPadding                : 2em;
 
@@ -91,15 +92,16 @@ $btn-rounded-width                  : 38px;
 @if ($theme == 'gl') {
     $btn-default-font-size                : mid;
 
-    $btn-primary-bgColor                  : $coral--light;
-    $btn-primary-bgColor--hover           : $coral--mid;
-    $btn-primary-bgColor--focus           : $coral--mid; /* TODO */
+    $btn-primary-bgColor                  : $coral--mid;
+    $btn-primary-bgColor--hover           : $coral--dark;
+    $btn-primary-bgColor--focus           : $coral--darkest;
 
     $btn-secondary-bgColor                : $coral--lightest;
     $btn-secondary-bgColor--hover         : $coral--lighter;
-    $btn-secondary-bgColor--active        : $coral--lighter; /* TODO */
-    $btn-secondary-textColor              : $coral--light;
-	$btn-secondary-textColor--hover       : $coral--mid;    
+    $btn-secondary-bgColor--active        : $coral--light;
+    $btn-secondary-textColor              : $coral--mid;
+	$btn-secondary-textColor--hover       : $coral--dark;
+	$btn-secondary-textColor--active      : $coral--darker;
 }
 
 
@@ -240,6 +242,7 @@ $btn-rounded-width                  : 38px;
     &:active,
     &:focus {
         background-color: $btn-secondary-bgColor--active;
+		color: $btn-secondary-textColor--active;
         outline: none;
     }
 }
@@ -384,4 +387,3 @@ input[type='button'] {
         background-color: transparent;
     }
 }
-
