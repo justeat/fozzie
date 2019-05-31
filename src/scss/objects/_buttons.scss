@@ -100,8 +100,8 @@ $btn-rounded-width                  : 38px;
     $btn-secondary-bgColor--hover         : $coral--lighter;
     $btn-secondary-bgColor--active        : $coral--light;
     $btn-secondary-textColor              : $coral--mid;
-	$btn-secondary-textColor--hover       : $coral--dark;
-	$btn-secondary-textColor--active      : $coral--darker;
+    $btn-secondary-textColor--hover       : $coral--dark;
+    $btn-secondary-textColor--active      : $coral--darker;
 }
 
 
@@ -242,7 +242,7 @@ $btn-rounded-width                  : 38px;
     &:active,
     &:focus {
         background-color: $btn-secondary-bgColor--active;
-		color: $btn-secondary-textColor--active;
+        color: $btn-secondary-textColor--active;
         outline: none;
     }
 }
