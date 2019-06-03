@@ -30,6 +30,8 @@ $btn-secondary-bgColor              : $grey--lightest;
 $btn-secondary-bgColor--hover       : $grey--lighter;
 $btn-secondary-bgColor--active      : $grey--light;
 $btn-secondary-textColor            : $blue;
+$btn-secondary-textColor--hover     : $blue;
+$btn-secondary-textColor--active    : $blue;
 
 $btn-wide-hozPadding                : 2em;
 
@@ -84,6 +86,23 @@ $btn-rounded-width                  : 38px;
     $btn-roundedOutline-fillColor         : $green;
     $btn-roundedOutline-fillColor--active : $green--dark;
     $btn-rounded-fillColor                : $green;
+}
+
+// Glaze theme overrides
+@if ($theme == 'gl') {
+    $btn-default-font-size                : mid;
+    $btn-default-font-family              : 'Nunito';
+
+    $btn-primary-bgColor                  : $coral--mid;
+    $btn-primary-bgColor--hover           : $coral--dark;
+    $btn-primary-bgColor--focus           : $coral--darkest;
+
+    $btn-secondary-bgColor                : $coral--lightest;
+    $btn-secondary-bgColor--hover         : $coral--lighter;
+    $btn-secondary-bgColor--active        : $coral--light;
+    $btn-secondary-textColor              : $coral--mid;
+    $btn-secondary-textColor--hover       : $coral--dark;
+    $btn-secondary-textColor--active      : $coral--darker;
 }
 
 
@@ -218,12 +237,13 @@ $btn-rounded-width                  : 38px;
 
     &:hover {
         background-color: $btn-secondary-bgColor--hover;
-        color: $btn-secondary-textColor;
+        color: $btn-secondary-textColor--hover;
     }
 
     &:active,
     &:focus {
         background-color: $btn-secondary-bgColor--active;
+        color: $btn-secondary-textColor--active;
         outline: none;
     }
 }
@@ -368,4 +388,3 @@ input[type='button'] {
         background-color: transparent;
     }
 }
-

@@ -75,6 +75,12 @@ $font-weight-headings-preload: 400;
     $font-weight-headings   : 800; // Heading style is Aspira Heavy, which is 800 font-weight
 }
 
+// Glaze font overrides
+// ==========================================================================
+@if ($theme == 'gl') {
+    $font-family-base       : 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    $font-family-headings   : 'Nunito';
+}
 
 
 //  Global Breakpoints

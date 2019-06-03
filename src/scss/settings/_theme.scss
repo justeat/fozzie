@@ -9,6 +9,7 @@
 // Currently accepted themes this value can be set to:
 // 'je' = Just Eat (default)
 // 'ml' = Menulog (AU/NZ theme)
+// 'gl' = Glaze
 $theme: 'je' !default;
 
 @debug 'Fozzie Theme is set to `#{$theme}`';
