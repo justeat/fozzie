@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.50.0
 ------------------------------
-*May 31, 2019*
+*June 03, 2019*
 
 ### Fixed
 - Usage of the Glaze theme

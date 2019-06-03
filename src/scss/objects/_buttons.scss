@@ -91,6 +91,7 @@ $btn-rounded-width                  : 38px;
 // Glaze theme overrides
 @if ($theme == 'gl') {
     $btn-default-font-size                : mid;
+    $btn-default-font-family              : 'Nunito';
 
     $btn-primary-bgColor                  : $coral--mid;
     $btn-primary-bgColor--hover           : $coral--dark;
