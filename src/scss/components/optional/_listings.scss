@@ -258,6 +258,10 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 color: $listing-promoIcon-color;
             }
 
+            .c-listing-item-promo-text--earned {
+                color: $green--dark;
+            }
+
             .c-listing-item-title {
                 word-break: break-word;
                 padding-right: spacing();
