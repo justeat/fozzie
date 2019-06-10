@@ -12,6 +12,20 @@
  * TBC
  */
 
+@mixin overflowCarouselInner() {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+@mixin overflowCarouselContent() {
+    display: inline-flex;
+    white-space: nowrap;
+    padding-left: spacing(x2);
+    padding-right: spacing(x2);
+}
+
 @mixin overflowCarousel() {
 
     .c-overflowCarousel {
@@ -22,23 +36,33 @@
 
     .c-overflowCarousel-inner {
         @include media('<mid') {
-            overflow-x: scroll;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
-            width: 100%;
+            @include overflowCarouselInner();
 
             &.is-active {
                 overflow: visible;
+            }
+        }
+
+        .c-overflowCarousel--fromMid & {
+            @include media('<=mid') {
+                @include overflowCarouselInner();
+
+                &.is-active {
+                    overflow: visible;
+                }
             }
         }
     }
 
     .c-overflowCarousel-content {
         @include media('<mid') {
-            display: inline-flex;
-            white-space: nowrap;
-            padding-left: spacing(x2);
-            padding-right: spacing(x2);
+            @include overflowCarouselContent();
+        }
+
+        .c-overflowCarousel--fromMid & {
+            @include media('<=mid') {
+                @include overflowCarouselContent();
+            }
         }
     }
 

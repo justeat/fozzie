@@ -3,6 +3,18 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v1.53.0
+------------------------------
+*June 03, 2019*
+
+### Added
+- Added modifier to  `c-overflowCarousel` to also include mid version
+
+### Fixed
+- Updated media queries on full screen pop over to not exclude breakpoint
+
+
 v1.52.0
 ------------------------------
 *June 06, 2019*

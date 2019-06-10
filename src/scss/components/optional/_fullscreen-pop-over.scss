@@ -48,14 +48,14 @@ $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
         // within a modal if it's not visible on mid and below
         .c-fullScreenPopOver--noTab--mid {
             & > * {
-                @include media('<=mid') {
+                @include media('<mid') {
                     display: none;
                 }
             }
 
             &.is-open {
                 & > * {
-                    @include media('<=mid') {
+                    @include media('<mid') {
                         display: block;
                     }
                 }
