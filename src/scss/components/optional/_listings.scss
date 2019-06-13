@@ -193,15 +193,15 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                     color: currentColor;
                     text-decoration: none;
                 }
-        
+
                 &:hover {
                     text-decoration: none;
-        
+
                     & .c-listing-item-title {
                         text-decoration: underline;
                     }
                 }
-        
+
                 @include media('>mid') {
                     display: flex;
                     min-height: 80px;
@@ -253,11 +253,10 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 min-height: 60px;
         
                 @include media('>mid') {
-                    width: 47%;
+                    width: 55%;
                     padding-top: spacing();
                 }
                 @include media('>=wide') {
-                    width: 55%;
                     padding-left: 92px;
                 }
 
@@ -300,7 +299,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 position: relative;
         
                 @include media('>mid') {
-                    width: 53%;
+                    width: 45%;
                     margin-top: auto;
                     padding: spacing() spacing() 0 spacing(x2);
                 }
