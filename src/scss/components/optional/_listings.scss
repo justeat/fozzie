@@ -93,46 +93,100 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
         }
 
         .c-listing-item {
-            margin: 0;
-            display: block;
-            position: relative;
-            background: $listing-bg;
-            border-bottom: 1px solid $listing-borderColor;
-
-            .c-listing--inactive & {
-                background: $listing--inactive-bg;
+            margin-bottom: spacing(x2);
+            box-shadow: 0 2px 4px 0 rgba($black, 0.1);
+            padding-bottom: spacing();
+    
+            @include media('>mid') {
+                min-height: 96px;
+                padding: spacing(x0.5);
             }
-
-            .c-listing & {
-                &:first-child {
-                    border-top-left-radius: $listing-border-radius;
-                    border-top-right-radius: $listing-border-radius;
-                }
-
-                &:last-child {
-                    border-bottom-left-radius: $listing-border-radius;
-                    border-bottom-right-radius: $listing-border-radius;
-                    border: 0;
-                }
-            }
-
+    
             &.is-active {
                 display: block;
             }
-
             &.is-inactive {
                 display: none;
             }
+    
+            .c-listing--inactive & {
+                opacity: 0.6;
+            }
         }
+
+        .c-listing-item--withHeader {
+            overflow: hidden;
+            // Specific padding top % is based on an image size of 288x104 and maintaining an aspect ratio of 36 : 13
+            padding-top: calc(37.69% + #{spacing(x0.5)});
+    
+            @include media('>mid') {
+                padding-top: spacing();
+            }
+        }
+
+            .c-listing-item-header {
+                top: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                position: absolute;
+                padding-top: 37.69%;
+        
+                @include media('>mid') {
+                    width: 87px;
+                    height: 87px;
+                    padding-top: 0;
+                    top: spacing(x0.5);
+                    left: spacing(x0.5);
+                    border-radius: spacing(x0.5);
+                }
+        
+                @include media('>=wide') {
+                    width: 17.5%;
+                }
+        
+                &:not(.c-listing-item-header--noImage) {
+                    @include anim();
+                }
+            }
+        
+            .c-listing-item-header-img {
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                transform: translate(-50%, -50%);
+        
+                @include media('>mid') {
+                    width: auto;
+                    height: 100%;
+                    max-width: none !important;
+                }
+            }
+        
+            .c-listing-item-header-frame {
+                left: 0;
+                bottom: 0;
+                position: absolute;
+        
+                svg {
+                    height: 45px;
+                    vertical-align: bottom;
+                }
+        
+                @include media('>mid') {
+                    display: none;
+                }
+            }
 
             // when the listing item has a wrapper link descendent
             // make sure it doesn’t underline everything (only the main title)
             .c-listing-item-link {
                 display: block;
                 color: $color-text;
-                padding: spacing(x2);
                 text-decoration: none;
-
+        
                 &:hover,
                 &:active,
                 &:focus {
@@ -150,22 +204,39 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
 
                 @include media('>mid') {
                     display: flex;
-                    flex-direction: row;
+                    min-height: 80px;
+                    flex-flow: row wrap;
                 }
             }
 
             .c-listing-item-img {
                 width: 55px;
+                height: 55px;
                 top: spacing(x2);
                 left: spacing(x2);
                 position: absolute;
-
-                @include media('>wide') {
+                border: 1px solid $grey--lightest;
+                border-radius: $listing-img-border-radius;
+        
+                @include media('>=wide') {
                     width: 65px;
+                    height: 65px;
                 }
 
-                .c-listing--inactive & {
-                    opacity: 0.5;
+                //If we have a header (a cuisine image)
+                .c-listing-item--withHeader & {
+                    top: auto;
+                    transform: translateY(-4px);
+            
+                    @include media('>mid') {
+                        top: 20px;
+                        left: 60px;
+                        transform: none;
+                    }
+                    @include media('>=wide') {
+                        top: spacing(x2);
+                        left: calc(17.5% - 33px);
+                    }
                 }
             }
 
@@ -176,58 +247,65 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             }
 
             .c-listing-item-info {
-                top: -4px;
                 position: relative;
                 color: $color-text;
                 padding-left: 70px;
-
+                min-height: 60px;
+        
                 @include media('>mid') {
-                    flex-basis: 57%;
-
-                    &:after {
-                        content: '';
-                        top: 4px;
-                        width: 1px;
-                        right: -1px;
-                        height: 100%;
-                        display: block;
-                        position: absolute;
-                        background: $listing-borderColor;
-                    }
+                    width: 55%;
+                    padding-top: spacing();
+                }
+                @include media('>=wide') {
+                    padding-left: 92px;
                 }
 
-                @include media('>wide') {
-                    position: relative;
-                    padding-left: 80px;
+                //If we have a header (a cuisine image)
+                .c-listing-item--withHeader & {
+                    top: -4px;
+                }
+                @include media('>mid') {
+                    .c-listing-item--withHeader & {
+                        padding-left: 126px;
+                    }
+                }
+                @include media('>=wide') {
+                    .c-listing-item--withHeader & {
+                        padding-left: calc(17.5% + 46px);
+                    }
                 }
             }
 
-            .c-listing-item-badge {
+            .c-listing-item-title {
+                word-break: break-word;
+                padding-right: spacing();
+                @include font-size(base--scaleUp, false);
+        
                 @include media('>mid') {
-                    @include inlineDivider();
+                    margin: spacing(x0.5) 0;
+                    padding-right: spacing(x2);
                 }
+            }
 
-                @include media('<wide') {
-                    @include inlineDivider();
-                }
-
-                @include media('<=mid') {
-                    @include blockDivider();
-                }
-
-                @include media('>=wide') {
-                    @include blockDivider();
-                }
+            .c-listing-item-new {
+                top: -4px;
+                color: $green;
+                position: relative;
+                margin-right: spacing(x0.5);
             }
 
             .c-listing-item-details {
                 width: 100%;
-
+                position: relative;
+        
                 @include media('>mid') {
-                    flex-basis: 43%;
+                    width: 45%;
                     margin-top: auto;
-                    padding-left: spacing(x2);
-                    border-left: 1px solid $listing-borderColor;
+                    padding: spacing() spacing() 0 spacing(x2);
+                }
+        
+                @include media('>=wide') {
+                    width: 45%;
                 }
             }
 
@@ -248,6 +326,24 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 margin-left: spacing();
             }
 
+            .c-listing-item-badge {
+                @include media('>mid') {
+                    @include inlineDivider();
+                }
+
+                @include media('<wide') {
+                    @include inlineDivider();
+                }
+
+                @include media('<=mid') {
+                    @include blockDivider();
+                }
+
+                @include media('>=wide') {
+                    @include blockDivider();
+                }
+            }
+
             .c-listing-item-promo,
             .c-listing-item-alert {
                 svg {
@@ -262,23 +358,6 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 color: $green--dark;
             }
 
-            .c-listing-item-title {
-                word-break: break-word;
-                padding-right: spacing();
-
-                @include media('>mid') {
-                    margin: spacing(x0.5) 0;
-                    padding-right: spacing(x2);
-                }
-            }
-
-            .c-listing-item-new {
-                color: $green;
-                top: -2px;
-                position: relative;
-                margin-right: spacing(x0.5);
-            }
-
             .c-listing-item-rating {
                 padding: 2px 0 3px;
             }
@@ -289,63 +368,51 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 @include font-size(small, true);
             }
 
+            .c-listing-item-text {
+                margin-top: 0;
+            }
+
+            .c-listing-item-meta {
+                text-align: left;
+        
+                @include media('>mid') {
+                    padding-left: 27px;
+                }
+        
+                @include media('>=wide') {
+                    padding-left: 0;
+                    text-align: right;
+                }
+            }
+
+            .c-listing-item-label {
+                padding: 1px 4px;
+                margin-bottom: spacing();
+                @include font-size(small, false);
+        
+                @include media('>mid') {
+                    @include font-size(base, false);
+                }
+            }
+
             .c-listing-item-premier {
-                bottom: 0;
-                position: absolute;
-                right: spacing(x2);
-                display: inline-block;
+                display: block;
+                text-align: center;
 
-                @include media('<wide') {
-                    right: auto;
-                    position: relative;
-                }
-
-                @include media('<=mid') {
+                @include media('>=mid') {
+                    top: 0;
+                    right: spacing();
                     position: absolute;
-                    right: spacing(x2);
                 }
 
-                @include media('<tiny') {
-                    right: auto;
-                    position: relative;
+                .c-listing--inactive & {
+                    display: none;
                 }
             }
 
             .c-listing-item-premierImage {
                 svg {
                     height: 32px;
-                }
-            }
-
-            .c-listing-item-text {
-                margin-top: 0;
-            }
-
-            // .c-listing-item-meta should be used as a container for listing labels and promos
-            .c-listing-item-meta {
-                bottom: 22px;
-                right: spacing(x2);
-                position: absolute;
-
-                @include media('>mid') {
-                    right: auto;
-                    bottom: auto;
-                    position: relative;
-                }
-
-                @include media('>wide') {
-                    bottom: 18px;
-                    right: spacing(x2);
-                    position: absolute;
-                }
-            }
-
-            .c-listing-item-label {
-                padding: 1px 4px;
-                @include font-size(small, false);
-
-                @include media('>mid') {
-                    @include font-size(base, false);
                 }
             }
 }
