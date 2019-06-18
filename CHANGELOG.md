@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.55.0
+------------------------------
+*June 18, 2019*
+
+### Added
+- Tweakpoint for `narrowMid: 600px` added to breakpoints
+
+
 v1.54.0
 ------------------------------
 *June 13, 2019*
