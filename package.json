@@ -40,7 +40,8 @@
     "fontfaceobserver": "^2.0.13",
     "include-media": "1.4.9",
     "kickoff-grid.css": "1.2.0",
-    "normalize-scss": "7.0.1"
+    "normalize-scss": "7.0.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@justeat/gulp-build-fozzie": "^8.4.0",
@@ -72,7 +73,9 @@
     "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
     "test": "gulp scripts:test",
     "test:cover": "gulp scripts:test:coverage",
-    "test:cover:CI": "cat coverage/lcov.info | coveralls"
+    "test:cover:CI": "cat coverage/lcov.info | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"
@@ -93,5 +96,6 @@
       "root": "src/",
       "glob": "fonts/**/*"
     }
-  ]
+  ],
+  "snyk": true
 }
