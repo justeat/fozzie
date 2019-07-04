@@ -83,3 +83,50 @@ $breadcrumb--compact-background: rgba($black, 0.2);
         }
     }
 }
+
+/**
+ * c-breadcrumb--pill
+ * =================================
+ * Adds a black transparent background with rounded corners to the breadcrumb list.
+ * On smaller screens the icon and text are re-ordered.
+ */
+
+.c-breadcrumb--pill {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    line-height: normal;
+    display: inline-block;
+    width: auto;
+    padding-right: 12px;
+
+    a {
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+
+    @include media('>=mid') {
+        padding: 0 12px;
+    }
+
+    .c-breadcrumb-item {
+        @include media('<=mid') {
+            display: flex;
+            align-items: center;
+
+            a {
+                order: 2;
+            }
+
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .c-breadcrumb-item,
+    .c-breadcrumb-item-link {
+        color: $white;
+    }
+}
