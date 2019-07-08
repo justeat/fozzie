@@ -96,19 +96,19 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             margin-bottom: spacing(x2);
             box-shadow: 0 2px 4px 0 rgba($black, 0.1);
             padding-bottom: spacing();
-    
+
             @include media('>mid') {
                 min-height: 96px;
                 padding: spacing(x0.5);
             }
-    
+
             &.is-active {
                 display: block;
             }
             &.is-inactive {
                 display: none;
             }
-    
+
             .c-listing--inactive & {
                 opacity: 0.6;
             }
@@ -118,7 +118,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             overflow: hidden;
             // Specific padding top % is based on an image size of 288x104 and maintaining an aspect ratio of 36 : 13
             padding-top: calc(37.69% + #{spacing(x0.5)});
-    
+
             @include media('>mid') {
                 padding-top: spacing();
             }
@@ -131,7 +131,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 overflow: hidden;
                 position: absolute;
                 padding-top: 37.69%;
-        
+
                 @include media('>mid') {
                     width: 87px;
                     height: 87px;
@@ -140,16 +140,16 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                     left: spacing(x0.5);
                     border-radius: spacing(x0.5);
                 }
-        
+
                 @include media('>=wide') {
                     width: 17.5%;
                 }
-        
+
                 &:not(.c-listing-item-header--noImage) {
                     @include anim();
                 }
             }
-        
+
             .c-listing-item-header-img {
                 top: 50%;
                 left: 50%;
@@ -157,24 +157,24 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 height: auto;
                 position: absolute;
                 transform: translate(-50%, -50%);
-        
+
                 @include media('>mid') {
                     width: auto;
                     height: 100%;
                     max-width: none !important;
                 }
             }
-        
+
             .c-listing-item-header-frame {
                 left: 0;
                 bottom: 0;
                 position: absolute;
-        
+
                 svg {
                     height: 45px;
                     vertical-align: bottom;
                 }
-        
+
                 @include media('>mid') {
                     display: none;
                 }
@@ -186,7 +186,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 display: block;
                 color: $color-text;
                 text-decoration: none;
-        
+
                 &:hover,
                 &:active,
                 &:focus {
@@ -217,7 +217,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 position: absolute;
                 border: 1px solid $grey--lightest;
                 border-radius: $listing-img-border-radius;
-        
+
                 @include media('>=wide') {
                     width: 65px;
                     height: 65px;
@@ -227,7 +227,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 .c-listing-item--withHeader & {
                     top: auto;
                     transform: translateY(-4px);
-            
+
                     @include media('>mid') {
                         top: 20px;
                         left: 60px;
@@ -251,7 +251,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 color: $color-text;
                 padding-left: 70px;
                 min-height: 60px;
-        
+
                 @include media('>mid') {
                     width: 55%;
                     padding-top: spacing();
@@ -280,7 +280,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 word-break: break-word;
                 padding-right: spacing();
                 @include font-size(base--scaleUp, false);
-        
+
                 @include media('>mid') {
                     margin: spacing(x0.5) 0;
                     padding-right: spacing(x2);
@@ -297,13 +297,13 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             .c-listing-item-details {
                 width: 100%;
                 position: relative;
-        
+
                 @include media('>mid') {
                     width: 45%;
                     margin-top: auto;
                     padding: spacing() spacing() 0 spacing(x2);
                 }
-        
+
                 @include media('>=wide') {
                     width: 45%;
                 }
@@ -374,11 +374,11 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
 
             .c-listing-item-meta {
                 text-align: left;
-        
+
                 @include media('>mid') {
                     padding-left: 27px;
                 }
-        
+
                 @include media('>=wide') {
                     padding-left: 0;
                     text-align: right;
@@ -389,7 +389,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 padding: 1px 4px;
                 margin-bottom: spacing();
                 @include font-size(small, false);
-        
+
                 @include media('>mid') {
                     @include font-size(base, false);
                 }
