@@ -58,6 +58,22 @@ $modal-transitionTime    : 250ms !default;
                 max-width: 500px;
             }
 
+            .c-modal-content--flush {
+                padding: 0;
+                overflow: hidden;
+
+                .c-modal-title {
+                    padding: 0;
+                }
+            }
+
+            .c-modal-content--scrollable {
+                @include media('>=mid') {
+                    overflow: scroll;
+                    max-height: 550px;
+                }
+            }
+
             .c-modal-content--visible {
                 display: block;
             }
