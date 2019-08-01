@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.60.0
 ------------------------------
-*August, 2019*
+*August 1, 2019*
 
 ### Added
 - `c-modal-content--flush` styles.
