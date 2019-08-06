@@ -66,10 +66,25 @@ $rays--coloured-spacing--huge: 230px;
         @include media('>=huge') {
             max-height: 370px;
         }
+
+        @include media('>=mid') {
+            min-height: 370px;
+        }
+
         .c-pageBanner-img {
             @include media('>=mid') {
                 margin-top: -8%;
             }
+
+            @include media('>=wide') {
+                margin-top: -20%;
+            }
+        }
+    }
+
+    .c-pageBanner--loading {
+        .c-pageBanner-img {
+            margin-top: 0;
         }
     }
 
