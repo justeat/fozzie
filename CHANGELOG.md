@@ -3,6 +3,17 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.61.0
+------------------------------
+*August 6, 2019*
+
+### Added
+- `c-pageBanner--loading` modifier to remove margin whilst images are loading.
+
+### Changed
+- Increased `margin-top` for images on wide screens for `c-pageBanner--narrow`.
+
+
 v1.60.0
 ------------------------------
 *August 1, 2019*
@@ -11,6 +22,7 @@ v1.60.0
 - `c-modal-content--flush` styles.
 - `c-modal-content--scrollable` styles.
 
+
 v1.59.0
 ------------------------------
 *July 8, 2019*
@@ -18,12 +30,14 @@ v1.59.0
 ### Changed
 - Updated collapsible card styles.
 
+
 v1.58.0
 ------------------------------
 *July 3, 2019*
 
 ### Added
 - Styles for `c-breadcrumb--pill`.
+
 
 v1.57.0
 ------------------------------
