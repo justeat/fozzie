@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.62.0
+------------------------------
+*August 20, 2019*
+
+### Changed
+- Added `will-change` to `c-listing` loading animation to stop a larger redraw
+
 v1.61.0
 ------------------------------
 *August 6, 2019*
