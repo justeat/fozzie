@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.62.1
+------------------------------
+*August 23, 2019*
+
+### Removed
+- Removed animation from the `c-listing-item-header` for performance increase
+
 v1.62.0
 ------------------------------
 *August 20, 2019*
