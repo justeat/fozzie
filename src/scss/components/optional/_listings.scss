@@ -146,8 +146,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 }
 
                 &:not(.c-listing-item-header--noImage) {
-                    @include anim();
-                    will-change: transform, background-color;
+                    background: $grey--lightest;
                 }
             }
 
