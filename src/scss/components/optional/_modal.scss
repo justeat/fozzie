@@ -30,6 +30,14 @@ $modal-transitionTime    : 250ms !default;
             }
         }
 
+            .c-modal-title--spacing {
+                padding: spacing(x3) spacing(x3) 0;
+
+                @include media('>=mid') {
+                    padding: spacing(x5) spacing(x5) 0;
+                }
+            }
+
         .c-modal-content {
             background-color: $white;
             border-radius: 8px;
@@ -60,23 +68,28 @@ $modal-transitionTime    : 250ms !default;
 
             .c-modal-content--flush {
                 padding: 0;
-                overflow: hidden;
-
-                .c-modal-title {
-                    padding: 0;
-                }
-            }
-
-            .c-modal-content--scrollable {
-                @include media('>=mid') {
-                    overflow: scroll;
-                    max-height: 550px;
-                }
             }
 
             .c-modal-content--visible {
                 display: block;
             }
+
+        .c-modal-content-scrollable {
+            max-height: 100vh;
+            overflow-y: auto;
+
+            @include media('>=mid') {
+                max-height: 550px;
+            }
+
+            @include media('height<=narrowMid', '>=mid') {
+                max-height: 90vh;
+            }
+
+            &.is-stuck {
+                padding-top: spacing(x5);
+            }
+        }
 
         .c-modal--rays--belowMid {
             @include media('<mid') {
@@ -111,7 +124,7 @@ $modal-transitionTime    : 250ms !default;
             }
         }
 
-        .c-modal--fullpage--belowMid {
+        .c-modal--fullPage--belowMid {
             @include media('<mid') {
                 .c-modal-content {
                     border-radius: 0;
