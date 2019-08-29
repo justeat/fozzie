@@ -3,6 +3,19 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.63.0
+------------------------------
+*August 29, 2019*
+
+### Added
+- `c-modal-title--spacing` modifier.
+
+### Changed
+- `c-modal-content--flush` now only removes padding.
+- `c-modal-content--scrollable` renamed to `c-modal-content-scrollable` as it is applied to a child of `c-modal-content`.
+- Casing on `c-modal--fullPage--belowMid` updated.
+
+
 v1.62.1
 ------------------------------
 *August 23, 2019*
@@ -10,12 +23,14 @@ v1.62.1
 ### Removed
 - Removed animation from the `c-listing-item-header` for performance increase
 
+
 v1.62.0
 ------------------------------
 *August 20, 2019*
 
 ### Changed
 - Added `will-change` to `c-listing` loading animation to stop a larger redraw
+
 
 v1.61.0
 ------------------------------
