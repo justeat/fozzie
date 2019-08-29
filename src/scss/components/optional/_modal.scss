@@ -54,6 +54,7 @@ $modal-transitionTime    : 250ms !default;
 
             @include media('>=mid') {
                 max-width: 600px;
+                overflow: hidden;
                 padding: spacing(x5);
             }
         }
