@@ -28,6 +28,7 @@
         font-family: Aspira;
         font-style: normal;
         font-weight: 800;
+        font-display: swap;
         src: url('#{$font-path}/menulog/aspira-heavy.woff2') format('woff2'),
              url('#{$font-path}/menulog/aspira-heavy.woff') format('woff'),
              url('#{$font-path}/menulog/aspira-heavy.ttf') format('truetype');
