@@ -92,14 +92,6 @@
             @include media('>=mid') {
                 margin-right: spacing(x2);
             }
-
-            &:first-child {
-                margin-left: auto;
-            }
-
-            &:last-child {
-                margin-right: auto;
-            }
         }
     }
 }

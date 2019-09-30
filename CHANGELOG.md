@@ -3,6 +3,14 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.65.0
+------------------------------
+*September 30, 2019*
+
+### Changed
+- Order card updated for Recent Orders and Favourites component
+
+
 v1.64.0
 ------------------------------
 *August 29, 2019*
