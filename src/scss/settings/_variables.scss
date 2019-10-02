@@ -57,29 +57,29 @@ $line-height-headings       : 1.2;
 $line-height-base           : line-height();
 
 // Font stacks
-$font-family-base           : 'Hind Vadodara', 'Helvetica Neue', Helvetica, sans-serif;
-$font-family-headings       : 'Ubuntu'; // we need to define some fallbacks here!
+$font-family-base           : 'Hind Vadodara', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-headings       : 'Ubuntu', Arial, sans-serif; // we need to define some fallbacks here!
 $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 
 // Fonts for preload
 // ==========================================================================
 // base fonts and headings have a preload system font, when the webfonts are loaded we style with JustEat fonts.
 
-$font-family-preload: 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-preload: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-weight-headings-preload: 400;
 
 // Menulog font overrides
 // ==========================================================================
 @if ($theme == 'ml') {
-    $font-family-headings   : 'Aspira', 'Times New Roman', Times, serif;
+    $font-family-headings   : 'Aspira', Arial, sans-serif;
     $font-weight-headings   : 800; // Heading style is Aspira Heavy, which is 800 font-weight
 }
 
 // Glaze font overrides
 // ==========================================================================
 @if ($theme == 'gl') {
-    $font-family-base       : 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-    $font-family-headings   : 'Nunito';
+    $font-family-base       : 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    $font-family-headings   : 'Nunito', 'Arial Round', Arial, sans-serif;
 }
 
 
