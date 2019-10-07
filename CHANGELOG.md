@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v1.67.0
+------------------------------
+*October 7, 2019*
+
+### Changed
+- Updated breakpoint unit intervals to fix Safari rounding issue.
+
 v1.66.0
 ------------------------------
 *October 1, 2019*
