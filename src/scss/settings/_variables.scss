@@ -83,8 +83,16 @@ $font-weight-headings-preload: 400;
 }
 
 
-//  Global Breakpoints
+//  Global Breakpoints and unit intervals
 // ==========================================================================
+
+$unit-intervals: (
+  'px': 1,
+  'em': 0.063, //0.063ems converts to 1px (1 / 16 = 0.0625). We need this as some browsers are very specific with breakpoints
+  'rem': 0.1,
+  '': 0
+);
+
 $breakpoints: map-to-em((
     tiny       : 375px,
     narrow     : 414px,    // narrow devices
