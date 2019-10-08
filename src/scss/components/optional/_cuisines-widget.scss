@@ -15,7 +15,7 @@
 
 
 $cuisinesWidget-titleColour: $white;
-$cuisinesWidget-defaultBackground: $brand--red;
+$cuisinesWidget-defaultBackground: $grey--lightest;
 $cuisinesWidget-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 $cuisinesWidget-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04);
 $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
@@ -24,15 +24,14 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
     @include media-context(('narrow-mid': 570px, 'mid-wide': 1240px)) {
 
        .c-cuisinesWidget {
-            min-height: 96px;
-            max-width: 392px;
             display: block;
-            border-radius: 8px;
+            border-radius: 1px;
             overflow: hidden;
             position: relative;
             background-color: $cuisinesWidget-defaultBackground;
             box-shadow: $cuisinesWidget-boxShadow;
-            margin-bottom: spacing(x2);
+            margin-top: spacing();
+            margin-bottom: spacing();
 
             &:hover,
             &:focus {
@@ -42,36 +41,6 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
                     text-decoration: underline;
                 }
             }
-
-            @include media('>=narrow-mid') {
-                &:nth-child(odd) {
-                    margin-right: spacing(x2);
-                }
-
-                &:nth-child(even),
-                &:last-child:first-child {
-                    margin-right: 0;
-                }
-            }
-
-           @include media('>=mid') {
-                min-height: 133px;
-            }
-
-            @include media('>=mid-wide') {
-                min-height: 145px;
-
-                // added :nth-child(1n) to save specificity
-                &:nth-child(1n),
-                &:nth-child(4) {
-                    margin-right: spacing(x2);
-                }
-
-                &:nth-child(3n),
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
         }
 
         .c-cuisinesWidget-name {
@@ -79,56 +48,20 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: spacing(x2);
+            padding: spacing(x2) spacing(x2) spacing();
             color: $cuisinesWidget-titleColour;
             text-align: center;
             background-image: $cuisinesWidget-gradient;
 
             @include media('>=mid-wide') {
                 @include font-size(large, false);
-                padding: spacing(x3);
+                padding: spacing(x2);
             }
         }
 
         .c-cuisinesWidget-img {
             vertical-align: bottom;
             width: 100%;
-        }
-
-        /* autoprefixer grid: autoplace */
-        .c-cuisinesGrid {
-            max-width: 360px;
-            margin: auto;
-            display: grid;
-            margin-bottom: -(spacing(x2));
-
-            @include media('>=narrow-mid') {
-                max-width: 800px;
-            }
-
-            @include media('>=mid-wide') {
-                max-width: none;
-            }
-        }
-
-        //for IE it should be explicit grid
-        .c-cuisinesGrid--gridOfThree {
-            grid-template-columns: auto;
-            grid-template-rows: auto auto auto auto auto auto;
-            justify-content: center;
-            // justify-content for grid will not work in IE,
-            // but for now we leave it as it is because the use case for this style is pretty rare
-            // (only if there are 2 or 1 recomended cuisine for your area)
-
-            @include media('>=narrow-mid') {
-                grid-template-columns: auto auto;
-                grid-template-rows: auto auto auto;
-            }
-
-            @include media('>=mid-wide') {
-                grid-template-columns: auto auto auto;
-                grid-template-rows: auto auto;
-            }
         }
     }
 }

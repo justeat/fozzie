@@ -3,6 +3,15 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v1.68.0
+------------------------------
+*October 9, 2019*
+
+### Changed
+- Updated popular cuisines component styling
+
+
 v1.67.0
 ------------------------------
 *October 7, 2019*
@@ -10,12 +19,14 @@ v1.67.0
 ### Changed
 - Updated breakpoint unit intervals to fix Safari rounding issue.
 
+
 v1.66.0
 ------------------------------
 *October 1, 2019*
 
 ### Changed
 - Updated CSS fallback fonts cascade to be more design-sympathetic.
+
 
 v1.65.0
 ------------------------------
