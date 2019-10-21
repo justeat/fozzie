@@ -9,7 +9,7 @@ v1.70.0
 *October 21, 2019*
 
 ### Added
-- New `z-index` size
+- New `z-index` size.
 
 
 v1.69.0
