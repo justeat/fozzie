@@ -21,6 +21,54 @@ $modal-transitionTime    : 250ms !default;
         z-index: zIndex(high);
     }
 
+        .c-modal--popUp--belowMid {
+            @include media('<mid') {
+                .c-modal-content {
+                    border-radius: 0;
+                    bottom: -100vh;
+                    box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, 0.22), 0 16px 16px 0 rgba(0, 0, 0, 0.24);
+                    left: 0;
+                    top: auto;
+                    transform: none;
+                    width: 100%;
+                }
+
+                .c-modal-content--visible {
+                    bottom: 0;
+                }
+            }
+        }
+
+        .c-modal--fullPage--belowMid {
+            @include media('<mid') {
+                .c-modal-content {
+                    border-radius: 0;
+                    bottom: -100vh;
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    transform: none;
+                    width: 100%;
+                    overflow-y: scroll;
+                }
+
+                .c-modal-closeBtn {
+                    z-index: zIndex(high);
+                    position: fixed;
+                }
+
+                .c-modal-content--visible {
+                    bottom: 0;
+                }
+            }
+        }
+
+        .c-modal--hasImageHeader {
+            .c-modal-titleContainer {
+                position: relative;
+            }
+        }
+
         .c-modal-title {
             @include font-size($modal-titleFontSize);
             padding: 0 spacing(x3);
@@ -53,6 +101,7 @@ $modal-transitionTime    : 250ms !default;
             width: 75%;
 
             @include media('>=mid') {
+                max-height: 90vh;
                 max-width: 600px;
                 overflow: hidden;
                 padding: spacing(x5);
@@ -77,7 +126,9 @@ $modal-transitionTime    : 250ms !default;
 
         .c-modal-content-scrollable {
             max-height: 100vh;
+            overflow-x: hidden;
             overflow-y: auto;
+            position: relative;
 
             @include media('>=mid') {
                 max-height: 550px;
@@ -92,60 +143,20 @@ $modal-transitionTime    : 250ms !default;
             }
         }
 
-        .c-modal--rays--belowMid {
-            @include media('<mid') {
-                .c-modal-content {
-                    border-radius: 0;
-                    bottom: -100vh;
-                    box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, 0.22), 0 16px 16px 0 rgba(0, 0, 0, 0.24);
-                    display: block;
-                    left: 0;
-                    top: auto;
-                    transform: none;
-                    width: 100%;
+        .c-modal-actions {
+            background-color: $white;
+            box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.12);
+            bottom: 0;
+            padding: spacing(x3);
+            position: sticky;
+            width: 100%;
+        }
 
-                    // Prevents IE from applying these styles as IE11 doesn't support the @supports rule
-                    @supports (position: absolute) {
-                        &:before {
-                            background: url('#{$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
-                            bottom: 99%;
-                            content: '';
-                            height: 100%;
-                            left: 0;
-                            pointer-events: none; // Allow user to click the overlay behind to close the selector
-                            position: absolute;
-                            width: 110%;
-                        }
-                    }
-                }
+            .c-modal-actions--raised {
+                bottom: 60px;
 
-                .c-modal-content--visible {
+                @include media('>=mid') {
                     bottom: 0;
                 }
             }
-        }
-
-        .c-modal--fullPage--belowMid {
-            @include media('<mid') {
-                .c-modal-content {
-                    border-radius: 0;
-                    bottom: -100vh;
-                    display: block;
-                    left: 0;
-                    top: 0;
-                    transform: none;
-                    width: 100%;
-                    overflow-y: scroll;
-                }
-
-                .c-modal-closeBtn {
-                    z-index: zIndex(high);
-                    position: fixed;
-                }
-
-                .c-modal-content--visible {
-                    bottom: 0;
-                }
-            }
-        }
 }
