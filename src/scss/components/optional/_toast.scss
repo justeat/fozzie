@@ -64,6 +64,7 @@ $toast-translateY--aboveMid             : $toast-translateY;
             text-align: center;
             transform: translateY($toast-translateY);
             width: calc(100% - 16px);
+            z-index: zIndex(low);
 
             @include media('>=narrow') {
                 animation: toastSlideUp--aboveNarrow $toast-animation-duration;
