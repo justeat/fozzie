@@ -9,7 +9,10 @@ v1.71.0
 *October 30, 2019*
 
 ### Changed
-- Styles for `.c-mediaElement-infoLink`, `$mediaElement-img-borderRadius` and `.c-mediaElement--fullstack` for menuweb designs
+- Styles for `.c-mediaElement-infoLink` and `$mediaElement-img-borderRadius` for menuweb designs
+
+## Added
+- `c-mediaElement--fullstack--negativeTop`
 
 
 v1.70.0
