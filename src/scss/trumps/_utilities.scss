@@ -212,6 +212,9 @@
 .u-spacingTop {
     margin-top: spacing() !important;
 }
+    .u-spacingTop--minus {
+        margin-top: -#{spacing(x2)} !important;
+    }
     .u-spacingTop--small {
         margin-top: spacing(x0.5) !important;
     }
