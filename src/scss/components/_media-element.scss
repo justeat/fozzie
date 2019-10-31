@@ -126,6 +126,11 @@ $mediaElement-spacing           : spacing(x2);
             margin-top: spacing(x0.5);
         }
 
+        .c-mediaElement--fullstack--negativeTop & {
+            flex: auto;
+            margin-top: -#{spacing(x2)} !important;
+        }
+
         // some content uses br for content shaping – get rid of it on mobile devices
         & br {
             @include media('<mid') {
