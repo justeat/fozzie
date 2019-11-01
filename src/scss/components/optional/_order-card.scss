@@ -105,7 +105,7 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         line-height: line-height(16px, 24px);
         font-family: $font-family-headings;
         font-weight: $font-weight-base;
-        @include font-size(font-size: 22px);
+        @include font-size(22px);
         padding-top: 2px;
         color: $blue;
         text-align: center;
