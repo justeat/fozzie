@@ -159,7 +159,7 @@ $mediaElement-spacing           : spacing(x2);
         text-decoration: none;
         top: $mediaElement-spacing;
 
-        @include media('>=narrow') {
+        @include media('<mid') {
             right: $mediaElement-spacing / 2;
             top: $mediaElement-spacing / 2;
         }
