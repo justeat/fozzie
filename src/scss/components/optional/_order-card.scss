@@ -42,7 +42,7 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
     }
 
     .c-orderCard--inactive {
-        min-height: 220px;
+        min-height: 222px;
         margin: auto;
 
         @include media('>=mid') {
