@@ -7,10 +7,8 @@ v1.72.0
 ------------------------------
 *November 1, 2019*
 
-### Updated
+### Changed
 - OrderCard for Your Favourites rollout.
-
-### Updated
 - Media Element Breakpoint issue
 
 
