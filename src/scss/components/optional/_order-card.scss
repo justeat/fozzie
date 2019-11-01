@@ -162,7 +162,7 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         color: $grey--mid;
         margin-top: 0;
         text-transform: capitalize;
-        font-size: spacing(x2);
+        font-size: $font-size-base;
         font-family: $font-family-base;
     }
 
