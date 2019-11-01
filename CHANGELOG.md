@@ -4,6 +4,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.71.0
+------------------------------
+*October 30, 2019*
+
+### Changed
+- Styles for `.c-mediaElement-infoLink` and `$mediaElement-img-borderRadius` for menuweb designs
+
+## Added
+- `c-mediaElement--fullstack--negativeTop`
+
+
 v1.70.0
 ------------------------------
 *October 21, 2019*
