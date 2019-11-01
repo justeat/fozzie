@@ -101,16 +101,14 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
 
     .c-orderCard-order {
         @include font-size(base--scaleUp, false);
-        font-weight: $font-weight-bold;
         line-height: line-height(16px, 24px);
         font-family: $font-family-headings;
         font-weight: $font-weight-base;
         @include font-size(22px);
-        padding-top: 2px;
         color: $blue;
         text-align: center;
         margin-top: spacing();
-        padding: spacing(x1.5);
+        padding: 2px spacing(x1.5) spacing(x1.5);
         border-top: 1px solid $grey--offWhite;
     }
 
