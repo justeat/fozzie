@@ -42,7 +42,7 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
     }
 
     .c-orderCard--inactive {
-        min-height: 220px;
+        min-height: 222px;
         margin: auto;
 
         @include media('>=mid') {
@@ -101,12 +101,14 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
 
     .c-orderCard-order {
         @include font-size(base--scaleUp, false);
-        font-weight: $font-weight-bold;
         line-height: line-height(16px, 24px);
+        font-family: $font-family-headings;
+        font-weight: $font-weight-base;
+        @include font-size(22px);
         color: $blue;
         text-align: center;
         margin-top: spacing();
-        padding: spacing(x1.5);
+        padding: 2px spacing(x1.5) spacing(x1.5);
         border-top: 1px solid $grey--offWhite;
     }
 
@@ -154,5 +156,37 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
     .c-orderCard-content--defaultMessage {
         padding: 0 spacing(x2);
         @include font-size(base--scaleUp, false);
+    }
+
+    .c-orderCard-cuisines {
+        color: $grey--mid;
+        margin-top: 0;
+        text-transform: capitalize;
+        @include font-size(base--scaleUp, false);
+        font-family: $font-family-base;
+    }
+
+    .c-orderCard-image:after {
+        content: none;
+    }
+
+    .c-orderCard--inactive {
+        margin-left: spacing(x4);
+    }
+
+    .c-orderCard-header {
+        flex-direction: row;
+        align-items: baseline;
+        display: flex;
+        margin-left: spacing(x2);
+
+        @include media('>mid') {
+            margin-left: spacing(x4);
+        }
+    }
+
+    .c-orderCard-seeAllText {
+        width: fit-content;
+        margin-left: spacing(x2);
     }
 }
