@@ -148,7 +148,7 @@ $modal-transitionTime    : 250ms !default;
             box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.12);
             bottom: 0;
             padding: spacing(x3);
-            position: fixed;
+            position: sticky;
             width: 100%;
         }
 
@@ -158,5 +158,9 @@ $modal-transitionTime    : 250ms !default;
                 @include media('>=mid') {
                     bottom: 0;
                 }
+            }
+
+            .c-modal-actions--fixed {
+                position: fixed;
             }
 }
