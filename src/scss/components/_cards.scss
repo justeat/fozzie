@@ -54,6 +54,18 @@ $card-section-collapsed-height--aboveMid        : 50px;
         padding-bottom: 0;
     }
 
+        .c-card--noPadBottom--aboveMid {
+            @include media('>=mid') {
+                padding-bottom: 0;
+            }
+        }
+
+        .c-card--padBottom--belowMid {
+            @include media('<mid') {
+                padding-bottom: spacing(x4);
+            }
+        }
+
     // stretches the card contents outside of their container
     .c-card--negativeSpacing {
         margin-left: -#{spacing(x2)};
