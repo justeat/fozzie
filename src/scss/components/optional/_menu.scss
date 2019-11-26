@@ -126,7 +126,7 @@ $menu--expandable-linkActiveFontSize    : base--scaleUp !default;
             &:hover,
             &:active,
             &:focus,
-            .c-menu-link--active {
+            &.c-menu-link--active {
                 border-left: solid $menu-border-width--active $menu-border-color--active;
                 font-weight: $font-weight-bold;
                 margin-left: -1px;
@@ -168,15 +168,15 @@ $menu--expandable-linkActiveFontSize    : base--scaleUp !default;
             }
         }
 
-        .c-menu--expandable--expanded {
-            @include media('<mid') {
-                max-height: 70vh;
-                overflow: scroll;
-                padding-top: spacing(x2);
+            .c-menu--expandable--expanded {
+                @include media('<mid') {
+                    max-height: 70vh;
+                    overflow: scroll;
+                    padding-top: spacing(x2);
 
-                .c-menu-link {
-                    display: block;
+                    .c-menu-link {
+                        display: block;
+                    }
                 }
             }
-        }
 }
