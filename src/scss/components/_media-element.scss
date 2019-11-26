@@ -106,15 +106,17 @@ $mediaElement-spacing           : spacing(x2);
 
     // positions the image over the top edge of the media element
     .c-mediaElement-img--negativeTop {
-        margin-top: -56px;
+        margin-top: 0;
+        position: absolute;
+        top: -24px;
 
         @include media('>=narrow') {
-            margin-top: -80px;
+            top: -40px;
         }
+    }
 
-        @include media('>=mid') {
-            margin-top: -50px;
-        }
+    .c-mediaElement-heading {
+        margin: spacing(x6) 0 spacing(x2);
     }
 
     .c-mediaElement-content {
@@ -160,8 +162,8 @@ $mediaElement-spacing           : spacing(x2);
         top: $mediaElement-spacing;
 
         @include media('<mid') {
-            right: $mediaElement-spacing / 2;
-            top: $mediaElement-spacing / 2;
+            right: spacing(x2);
+            top: spacing(x2);
         }
 
         &:hover {

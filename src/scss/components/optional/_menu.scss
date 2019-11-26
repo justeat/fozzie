@@ -18,6 +18,7 @@ $menu-border-width                      : 1px;
 $menu-border-width--active              : 2px;
 $menu-link-color                        : $color-text;
 $menu-link-padding                      : spacing() spacing(x2);
+$menu-positionTop                       : $stickyHeader-height + spacing(x2);
 $menu--condensed-link-padding           : spacing(x0.5);
 $menu--expandable-bgColor               : $white !default;
 $menu--expandable-borderBottom          : $grey--lightest !default;
@@ -63,78 +64,31 @@ $menu--expandable-linkActiveFontSize    : base--scaleUp !default;
             }
         }
 
-
-        .c-menu--expandable {
-            @include media('<mid') {
-                background-color: $menu--expandable-bgColor;
-                border-bottom: solid 1px $menu--expandable-borderBottom;
-                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
-                height: auto;
-
-                .c-menu-link {
-                    display: none;
-                    font-family: $font-family-headings;
-                    @include font-size($menu--expandable-linkFontSize);
-                    text-align: center;
-
-                    &,
-                    &:active,
-                    &:focus,
-                    &:hover {
-                        border: 0;
-                        font-weight: $font-weight-base;
-                    }
-                }
-
-                .c-menu-link--active {
-                    display: block;
-                    @include font-size($menu--expandable-linkActiveFontSize);
-                    text-decoration: none;
-                    width: 100vw;
-                }
-            }
+        .c-menu-openBtnWrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: spacing(x4);
+            margin-top: -#{spacing(x3)};
+            position: sticky;
+            top: $menu-positionTop;
+            transition: 100ms top ease-in-out;
+            z-index: zIndex(low);
         }
 
-        .c-menu--expandable--expanded {
-            @include media('<mid') {
-                max-height: 70vh;
-                overflow: scroll;
-
-                &:after {
-                    content: '';
-                }
-
-                .c-menu-link {
-                    display: block;
-                }
-
-                .c-menu-link--active {
-                    text-decoration: underline;
-                }
-            }
+        .c-menu-openBtn {
+            @include font-size(base);
+            align-items: center;
+            border-radius: spacing(x3);
+            display: flex;
+            padding: spacing() spacing(x2);
         }
 
-        .c-menu-toggleBtn {
-            background-color: transparent;
-            border: 0;
+        .c-menu-closeBtn {
             padding: spacing(x2);
             position: absolute;
             right: 0;
             top: 0;
-            z-index: zIndex(mid);
-
-            &:hover {
-                cursor: pointer;
-            }
         }
-
-            .c-menu-toggleBtn--fullWidth {
-                width: 100%;
-            }
-
-            .c-menu-toggleIcon {
-                float: right;
-            }
 
         .c-menu--spacingTop--aboveMid {
             @include media('>=mid') {
@@ -168,17 +122,61 @@ $menu--expandable-linkActiveFontSize    : base--scaleUp !default;
             &:focus {
                 color: $menu-link-color;
             }
-        }
-            .c-menu-link:active,
-            .c-menu-link:focus,
-            .c-menu-link:hover,
+
+            &:hover,
+            &:active,
+            &:focus,
             .c-menu-link--active {
                 border-left: solid $menu-border-width--active $menu-border-color--active;
                 font-weight: $font-weight-bold;
                 margin-left: -1px;
             }
+        }
 
         .c-menu-icon {
             flex-shrink: 0;
+        }
+
+        .c-menu--expandable {
+            @include media('<mid') {
+                background-color: $menu--expandable-bgColor;
+                border-bottom: solid 1px $menu--expandable-borderBottom;
+                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
+                height: auto;
+
+                .c-menu-link {
+                    display: none;
+                    font-family: $font-family-headings;
+                    @include font-size($menu--expandable-linkFontSize);
+                    margin-left: 0;
+                    text-align: center;
+
+                    &,
+                    &:active,
+                    &:focus,
+                    &:hover {
+                        border: 0;
+                        font-weight: $font-weight-base;
+                    }
+                }
+
+                .c-menu-link--active {
+                    @include font-size($menu--expandable-linkActiveFontSize);
+                    text-decoration: underline;
+                    width: 100vw;
+                }
+            }
+        }
+
+        .c-menu--expandable--expanded {
+            @include media('<mid') {
+                max-height: 70vh;
+                overflow: scroll;
+                padding-top: spacing(x2);
+
+                .c-menu-link {
+                    display: block;
+                }
+            }
         }
 }

@@ -79,10 +79,10 @@ $modal-transitionTime    : 250ms !default;
         }
 
             .c-modal-title--spacing {
-                padding: spacing(x3) spacing(x3) 0;
+                padding: spacing(x3) spacing(x7);
 
                 @include media('>=mid') {
-                    padding: spacing(x5) spacing(x5) 0;
+                    padding: spacing(x5) spacing(x7) spacing(x2);
                 }
             }
 
@@ -99,6 +99,27 @@ $modal-transitionTime    : 250ms !default;
             transform: translate(50%, -50%);
             transition: $modal-transitionTime bottom ease-in-out;
             width: 75%;
+
+            @include media('<mid') {
+                min-width: em(22);
+
+                &.is-fixed {
+                    position: fixed;
+                    height: 100%;
+
+                    .c-modal-document {
+                        padding-bottom: 100px;
+                    }
+
+                    .c-modal-actions {
+                        position: fixed;
+                    }
+                }
+
+                &.is-resetHeight {
+                    height: auto;
+                }
+            }
 
             @include media('>=mid') {
                 max-height: 90vh;
@@ -139,7 +160,11 @@ $modal-transitionTime    : 250ms !default;
             }
 
             &.is-stuck {
-                padding-top: spacing(x5);
+                padding-top: 0;
+
+                @include media('<mid') {
+                    padding-bottom: 100px;
+                }
             }
         }
 
@@ -162,5 +187,21 @@ $modal-transitionTime    : 250ms !default;
 
             .c-modal-actions--fixed {
                 position: fixed;
+            }
+
+
+        .c-modal-textSeparator {
+            font-family: $font-family-headings;
+            font-weight: $font-weight-bold;
+            @include font-size(base--scaleUp);
+            margin: spacing(x3) 0 0;
+
+            @include media('>=narrow') {
+                margin: 0;
+            }
+        }
+
+            .c-modal-textSeparator--spaceAround {
+                margin: spacing(x3) 0 spacing(x2);
             }
 }

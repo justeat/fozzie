@@ -4,6 +4,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.74.0
+------------------------------
+*November 25, 2019*
+
+### Added
+- Modifiers for `c-card` component.
+
+### Changed
+- Updated styles for `c-mediaElement` component.
+- Updated styles for `c-menu` component.
+- Updated styles for `c-modal` component.
+
+
 v1.73.0
 ------------------------------
 *November 4, 2019*
