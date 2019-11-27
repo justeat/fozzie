@@ -171,7 +171,7 @@ $menu--expandable-linkActiveFontSize    : base--scaleUp !default;
             .c-menu--expandable--expanded {
                 @include media('<mid') {
                     max-height: 70vh;
-                    overflow: scroll;
+                    overflow-y: scroll;
                     padding-top: spacing(x2);
 
                     .c-menu-link {

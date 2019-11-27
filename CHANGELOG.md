@@ -6,10 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.76.0
 ------------------------------
-*November 26, 2019*
+*November 27, 2019*
 
 ### Changed
 - `fozzie-colour-palette` version.
+
+
+v1.75.1
+------------------------------
+*November 27, 2019*
+
+### Fixed
+- Vertical menu overflow x scroll axis
 
 
 v1.75.0

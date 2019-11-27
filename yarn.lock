@@ -695,7 +695,7 @@
   resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-0.2.0.tgz#b2333b5ddf20b4157af25091e6bc54706358100c"
   integrity sha512-lmnjGTAburU/rNsylj4ScWqApL/VifiwTce+hfujOJBZHHMUnJ/tmuVy3lxFtxtZIzCMTb502sB6ZjZbH82SOA==
 
-"@justeat/fozzie-colour-palette@2.5.0":
+"@justeat/fozzie-colour-palette@^2.5.0":
   version "2.5.0"
   resolved "http://packages.je-labs.com/npm/private-npm/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-2.5.0.tgz#a26555e476c6103cdcd9fdf233238af6b0321cee"
   integrity sha1-omVV5HbGEDzc2f3yMyOK9rAyHO4=
