@@ -697,8 +697,8 @@
 
 "@justeat/fozzie-colour-palette@2.5.0":
   version "2.5.0"
-  resolved "http://packages.je-labs.com/npm/private-npm/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-2.5.0.tgz#a26555e476c6103cdcd9fdf233238af6b0321cee"
-  integrity sha1-omVV5HbGEDzc2f3yMyOK9rAyHO4=
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-2.5.0.tgz#a26555e476c6103cdcd9fdf233238af6b0321cee"
+  integrity sha512-qMWN2jSOhV/d0t6lmDnN4ae8n5pKNgXvq/BNM3q/t2RZz4Zckzxdy/g+H/tVsqYP6o8Liu1e05VXbpwAqTKeWQ==
 
 "@justeat/gulp-build-fozzie@^8.4.0":
   version "8.4.0"
