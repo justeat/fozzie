@@ -17,6 +17,10 @@ $mediaElement-infoLinkColor     : $blue;
 $mediaElement-fontSize          : base--scaleUp;
 $mediaElement-spacing           : spacing(x2);
 
+@if ($theme == 'ml') {
+    $mediaElement-infoLinkColor : $green;
+}
+
 // mediaElement module
 // Usually consists of having an image to the left and content to the right
 .c-mediaElement {

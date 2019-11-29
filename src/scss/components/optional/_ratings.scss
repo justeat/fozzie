@@ -127,6 +127,10 @@ $star-size--large           : 42px;
         height: 100%;
         width: 100%;
         @include rating-fill($star-count);
+
+        @if ($theme == 'ml') {
+            @extend %c-icon--star--fill--yellow !optional;
+        }
     }
 
     /*
@@ -145,6 +149,10 @@ $star-size--large           : 42px;
             & + label,
             & ~ input + label {
                 @extend %c-icon--star--fill !optional;
+
+                @if ($theme == 'ml') {
+                    @extend %c-icon--star--fill--yellow !optional;
+                }
             }
        }
     }
@@ -166,6 +174,10 @@ $star-size--large           : 42px;
         &:hover,
         &:hover ~ label {
             @extend %c-icon--star--fill !optional;
+
+            @if ($theme == 'ml') {
+                @extend %c-icon--star--fill--yellow !optional;
+            }
         }
     }
 
