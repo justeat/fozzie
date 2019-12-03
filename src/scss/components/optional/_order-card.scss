@@ -39,6 +39,14 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
             text-decoration: none;
             color: $grey--mid;
         }
+
+        .c-orderCard-yourFavourites {
+            min-height: 200px;
+
+            @include media('>=mid') {
+                min-height: 240px;
+            }
+        }
     }
 
     .c-orderCard--inactive {
@@ -72,6 +80,10 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         img {
             vertical-align: bottom;
             width: 100%;
+        }
+
+        .c-orderCard-yourFavourites {
+            height: auto;
         }
 
         &:after {
@@ -151,6 +163,10 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         flex: 1 0 auto;
         display: flex;
         flex-direction: column;
+
+        .c-orderCard-yourFavourites {
+            padding: spacing() spacing(x2);
+        }
     }
 
     .c-orderCard-content--defaultMessage {
