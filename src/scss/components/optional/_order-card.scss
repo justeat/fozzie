@@ -39,13 +39,13 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
             text-decoration: none;
             color: $grey--mid;
         }
+    }
 
-        .c-orderCard-yourFavourites {
-            min-height: 200px;
+    .c-orderCard-yourFavourites {
+        min-height: 200px;
 
-            @include media('>=mid') {
-                min-height: 240px;
-            }
+        @include media('>=mid') {
+            min-height: 240px;
         }
     }
 
@@ -82,10 +82,6 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
             width: 100%;
         }
 
-        .c-orderCard-yourFavourites {
-            height: auto;
-        }
-
         &:after {
             content: '';
             width: 100%;
@@ -96,6 +92,10 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
             left: 0;
             z-index: zIndex(low);
         }
+    }
+
+    .c-orderCard-yourFavourites-cuisineBanner {
+        height: auto;
     }
 
     .c-orderCard-iconContainer {
@@ -163,10 +163,10 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
         flex: 1 0 auto;
         display: flex;
         flex-direction: column;
+    }
 
-        .c-orderCard-yourFavourites {
-            padding: spacing() spacing(x2);
-        }
+    .c-orderCard-yourFavourites-content {
+        padding: spacing() spacing(x2);
     }
 
     .c-orderCard-content--defaultMessage {
