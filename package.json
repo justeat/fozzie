@@ -43,7 +43,7 @@
     "normalize-scss": "7.0.1"
   },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "^8.4.0",
+    "@justeat/gulp-build-fozzie": "^9.0.1",
     "concurrently": "4.1.0",
     "coveralls": "3.0.3",
     "danger": "3.9.0",
