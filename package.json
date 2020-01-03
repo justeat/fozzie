@@ -45,7 +45,7 @@
   "devDependencies": {
     "@justeat/gulp-build-fozzie": "^8.4.0",
     "concurrently": "4.1.0",
-    "coveralls": "3.0.3",
+    "coveralls": "3.0.9",
     "danger": "3.9.0",
     "gulp": "3.9.1",
     "js-test-buddy": "0.2.0"
