@@ -690,10 +690,10 @@
     handlebars-helper-i18n "^0.1.0"
     handlebars-helper-inlinesvg "^1.0.4"
 
-"@justeat/f-utils@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-0.2.0.tgz#b2333b5ddf20b4157af25091e6bc54706358100c"
-  integrity sha512-lmnjGTAburU/rNsylj4ScWqApL/VifiwTce+hfujOJBZHHMUnJ/tmuVy3lxFtxtZIzCMTb502sB6ZjZbH82SOA==
+"@justeat/f-utils@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-0.3.0.tgz#1f18ba13ad7061e21c2112387234a77ba45fb5d3"
+  integrity sha512-hqRiGA2lP++Z1oqawsv1V2Duf3YShaAbJ3S5JEPTpTMP5RjH36Xpc8nRbIVFBmwnZCu7L9iF7AebYTUX8XhiZA==
 
 "@justeat/fozzie-colour-palette@2.5.0":
   version "2.5.0"
