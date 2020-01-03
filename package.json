@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@justeat/f-dom": "1.1.0",
-    "@justeat/f-logger": "0.7.1",
+    "@justeat/f-logger": "0.8.1",
     "@justeat/f-utils": "0.2.0",
     "@justeat/fozzie-colour-palette": "2.5.0",
     "fontfaceobserver": "^2.0.13",

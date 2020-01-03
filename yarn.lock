@@ -676,10 +676,12 @@
   dependencies:
     qwery "4.0.0"
 
-"@justeat/f-logger@0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@justeat/f-logger/-/f-logger-0.7.1.tgz#06e728d3c65733cab7c9bbfc813b401fa68ba82b"
-  integrity sha512-qi1wDK5ijmQ6nE+2bIv68AuWVxCvogzVoXvHd4D0oZCw4PQmVfw9i25m/fw6AiipL6yxkiIGM4LfBlnm+FncDA==
+"@justeat/f-logger@0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@justeat/f-logger/-/f-logger-0.8.1.tgz#10aef6a3d97b75e1ded2367fa0b69972661f76e6"
+  integrity sha512-owV/JWeve1Bc4HrSu2zFIgXjuAqAD5PYflw2iAMFk7SVbl2gGvewUgKszf61ZOg9qjADdxmCkW5sZPQkRzHmbQ==
+  dependencies:
+    window-or-global "^1.0.1"
 
 "@justeat/f-templates-loader@0.1.1":
   version "0.1.1"
@@ -15197,6 +15199,11 @@ widest-line@^2.0.0:
   integrity sha512-Ba5m9/Fa4Xt9eb2ELXt77JxVDV8w7qQrH0zS/TWSJdLyAwQjWoOzpzj5lwVftDz6n/EOu3tNACS84v509qwnJA==
   dependencies:
     string-width "^2.1.1"
+
+window-or-global@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/window-or-global/-/window-or-global-1.0.1.tgz#dbe45ba2a291aabc56d62cf66c45b7fa322946de"
+  integrity sha1-2+RboqKRqrxW1iz2bEW3+jIpRt4=
 
 window-size@^0.2.0:
   version "0.2.0"
