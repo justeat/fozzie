@@ -11,6 +11,7 @@
  * https://fozzie.just-eat.com/styleguide/ui-components/menus
  */
 
+$menu-headerHeight                      : 57px;
 $menu-fontSize                          : base--scaleUp;
 $menu-border-color                      : $grey--lightest;
 $menu-border-color--active              : $grey--dark;
@@ -18,7 +19,7 @@ $menu-border-width                      : 1px;
 $menu-border-width--active              : 2px;
 $menu-link-color                        : $color-text;
 $menu-link-padding                      : spacing() spacing(x2);
-$menu-positionTop                       : $stickyHeader-height + spacing(x2);
+$menu-positionTop                       : $menu-headerHeight + spacing(x2);
 $menu--condensed-link-padding           : spacing(x0.5);
 $menu--expandable-bgColor               : $white !default;
 $menu--expandable-borderBottom          : $grey--lightest !default;
