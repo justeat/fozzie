@@ -16,10 +16,10 @@ $toast-bgColor--alert                   : $red--dark;
 $toast-animation-duration               : 0.5s;
 $toast-height                           : 95px;
 $toast-translateY                       : -#{$toast-height - 5px};
-$toast-height--aboveNarrow              : 125px;
+$toast-height--aboveNarrow              : 115px;
 $toast-translateY--aboveNarrow          : -#{$toast-height--aboveNarrow - 5px};
-$toast-height--aboveMid                 : $toast-height;
-$toast-translateY--aboveMid             : $toast-translateY;
+$toast-height--aboveMid                 : 115px;
+$toast-translateY--aboveMid             : -#{$toast-height--aboveMid - 5px};
 
 @mixin toast() {
 

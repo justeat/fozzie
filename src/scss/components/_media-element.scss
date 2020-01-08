@@ -111,7 +111,7 @@ $mediaElement-spacing           : spacing(x2);
     // positions the image over the top edge of the media element
     .c-mediaElement-img--negativeTop {
         margin-top: 0;
-        position: relative;
+        position: absolute;
         top: -24px;
 
         @include media('>=narrow') {
@@ -120,7 +120,7 @@ $mediaElement-spacing           : spacing(x2);
     }
 
     .c-mediaElement-heading {
-        margin: 0 0 spacing(x2);
+        margin: spacing(x6) 0 spacing(x2);
     }
 
     .c-mediaElement-content {
