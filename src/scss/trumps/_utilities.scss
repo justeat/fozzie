@@ -212,9 +212,11 @@
 .u-spacingTop {
     margin-top: spacing() !important;
 }
+
     .u-spacingTop--small {
         margin-top: spacing(x0.5) !important;
     }
+
     .u-spacingTop--large {
         margin-top: spacing(x2) !important;
     }
@@ -226,8 +228,15 @@
 .u-spacingBottom {
     margin-bottom: spacing() !important;
 }
+
     .u-spacingBottom--large {
         margin-bottom: spacing(x2) !important;
+    }
+
+    .u-spacingBottom--large--aboveMid {
+        @include media('>=mid') {
+            margin-bottom: spacing(x2);
+        }
     }
 
 .u-spacingLeft {
@@ -245,9 +254,11 @@
 .u-padTop {
     padding-top: spacing() !important;
 }
+
     .u-padTop--large {
         padding-top: spacing(x2) !important;
     }
+
     .u-padTop--large--aboveMid {
         @include media('>=mid') {
             padding-top: spacing(x2) !important;
@@ -359,4 +370,26 @@
 .u-elementFocus--boxShadow {
   outline: none;
   box-shadow: 0 0 0 2px $color-focus-outline;
+}
+
+
+//
+// Misc classes
+// ==========================================================================
+.u-shadowBottom--belowMid {
+    padding-bottom: spacing(x7);
+
+    @include media('<mid') {
+        &:after {
+            background-color: $grey--lightest;
+            border: 0;
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            content: '';
+            display: block;
+            height: spacing(x7);
+            left: -#{spacing()};
+            position: absolute;
+            width: 100vw;
+        }
+    }
 }

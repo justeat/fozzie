@@ -12,27 +12,29 @@
  * https://fozzie.just-eat.com/styleguide/ui-components/badges
  */
 
-$badge-bgColor              : $grey--offWhite;
-$badge-light-bgColor        : $white;
-$badge-info-color           : $green;
-$badge-success-color        : $green;
-$badge-success-bgColor      : $green--offWhite;
-$badge-successAlt-color     : $white;
-$badge-successAlt-bgColor   : $green;
-$badge-warning-color        : $orange;
-$badge-alert-color          : $red;
-$badge-important-color      : $white;
-$badge-important-bgColor    : $orange;
-$badge-award-color          : $purple;
-$badge-award-bgColor        : $purple--light;
-$badge-dark-color           : $white;
-$badge-dark-bgColor         : $grey--darkest;
-$badge-indicator-color      : $blue;
-$badge-indicator-bgColor    : $white;
-$badge-padding              : 1px 5px;
-$badge-rounded-radius       : 14px;
-$badge-rounded-padding      : spacing(x0.5) spacing(x2);
-$badge-angled-radius        : 2px;
+$badge-bgColor                  : $grey--offWhite;
+$badge-light-bgColor            : $white;
+$badge-info-color               : $green;
+$badge-success-color            : $green;
+$badge-success-bgColor          : $green--offWhite;
+$badge-successAlt-color         : $white;
+$badge-successAlt-bgColor       : $green;
+$badge-warning-color            : $orange;
+$badge-alert-color              : $red;
+$badge-important-color          : $white;
+$badge-important-bgColor        : $orange;
+$badge-award-color              : $purple;
+$badge-award-bgColor            : $purple--light;
+$badge-dark-color               : $white;
+$badge-dark-bgColor             : $grey--darkest;
+$badge-indicator-color          : $blue;
+$badge-indicator-bgColor        : $white;
+$badge-padding                  : 1px 5px;
+$badge-rounded-radius           : 14px;
+$badge-rounded-padding          : spacing(x0.5) spacing(x2);
+$badge-rounded-small-radius     : 2px;
+$badge-rounded-small-padding    : 2px spacing(x0.5);
+$badge-angled-radius            : 2px;
 
 @mixin badge() {
 
@@ -47,6 +49,11 @@ $badge-angled-radius        : 2px;
             border-radius: $badge-rounded-radius;
             padding: $badge-rounded-padding;
         }
+
+            .c-badge--rounded--small {
+                border-radius: $badge-rounded-small-radius;
+                padding: $badge-rounded-small-padding;
+            }
 
         .c-badge--light {
             background-color: $badge-light-bgColor;

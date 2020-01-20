@@ -12,8 +12,7 @@ $card-bgColor--disabled                         : $grey--lightest;
 $card-tooltip-width                             : 10px;
 $card-arrow-bottom-position                     : 0;
 $card-padding                                   : spacing(x2);
-$card-radius                                    : 4px;
-$card-radius--large                             : 8px;
+$card-radius                                    : spacing(x0.5);
 $card-borderColor                               : $grey--lightest;
 $card-section-margin                            : spacing(x4);
 $card-section-margin--large                     : spacing(x8);
@@ -97,10 +96,6 @@ $card-section-collapsed-height--aboveMid        : 50px;
         border-radius: $card-radius;
     }
 
-    .c-card--rounded--large {
-        border-radius: $card-radius--large;
-    }
-
     .c-card--outline {
         border: solid 1px $card-borderColor;
     }
@@ -158,17 +153,6 @@ $card-section-collapsed-height--aboveMid        : 50px;
         }
     }
 
-        // used to create rounded corners at the end of a card
-        .c-card-section--bottom {
-            border-bottom-right-radius: $card-radius;
-            border-bottom-left-radius: $card-radius;
-
-            .c-card--rounded--large & {
-                border-bottom-right-radius: $card-radius--large;
-                border-bottom-left-radius: $card-radius--large;
-            }
-        }
-
         // used to create a section which has a highlighted background colour applied
         .c-card-section--highlight {
             background-color: $card-section-highlight-backgroundColor;
@@ -176,6 +160,20 @@ $card-section-collapsed-height--aboveMid        : 50px;
             color: $card-section-highlight-color;
             margin-top: spacing(x2);
             padding: spacing(x0.5) spacing();
+
+            + .c-card-section--highlight {
+                margin-top: 1px;
+
+                &:last-of-type {
+                    border-bottom-right-radius: $card-radius;
+                    border-bottom-left-radius: $card-radius;
+                }
+            }
+
+            &.is-last {
+                border-bottom-right-radius: $card-radius;
+                border-bottom-left-radius: $card-radius;
+            }
         }
 
         .c-card-section--collapsible {

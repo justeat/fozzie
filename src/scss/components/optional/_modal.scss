@@ -12,8 +12,9 @@
  * TBC
  */
 
-$modal-titleFontSize     : base--scaleUp !default;
-$modal-transitionTime    : 250ms !default;
+$modal-titleFontSize    : base--scaleUp !default;
+$modal-transitionTime   : 250ms !default;
+$modal-borderRadius     : 4px;
 
 @mixin modal() {
 
@@ -88,7 +89,7 @@ $modal-transitionTime    : 250ms !default;
 
         .c-modal-content {
             background-color: $white;
-            border-radius: 8px;
+            border-radius: $modal-borderRadius;
             box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
             display: none;
             padding: spacing(x3);
@@ -106,14 +107,6 @@ $modal-transitionTime    : 250ms !default;
                 &.is-fixed {
                     position: fixed;
                     height: 100%;
-
-                    .c-modal-document {
-                        padding-bottom: 100px;
-                    }
-
-                    .c-modal-actions {
-                        position: fixed;
-                    }
                 }
 
                 &.is-resetHeight {
@@ -160,10 +153,6 @@ $modal-transitionTime    : 250ms !default;
 
             &.is-stuck {
                 padding-top: 0;
-
-                @include media('<mid') {
-                    padding-bottom: 100px;
-                }
             }
         }
 

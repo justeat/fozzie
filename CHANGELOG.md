@@ -4,6 +4,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.82.0
+------------------------------
+*January 20, 2020*
+
+### Added
+- `c-badge` component small rounded modifier styles.
+- `u-spacingBottom--large--aboveMid` & `u-shadowBottom--belowMid` helper to the utilities.
+
+### Changed
+- Updated `c-card` component highlight modifier styles.
+- Updated `c-modal` component styles.
+- Consistent spacing between rules in the utilities module.
+
+### Removed
+- `c-card` component large rounded modifier styles.
+
+
 v1.81.0
 ------------------------------
 *January 20, 2020*
