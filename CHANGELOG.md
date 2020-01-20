@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.81.0
+------------------------------
+*January 20, 2020*
+
+### Removed
+- `max-height` on `.c-modal-content-scrollable` to prevent locking on iOS
+
+
 v1.80.0
 ------------------------------
 *January 7, 2020*
