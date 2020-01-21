@@ -139,6 +139,7 @@ $modal-borderRadius     : 4px;
             }
 
         .c-modal-content-scrollable {
+            max-height: 100vh;
             overflow-x: hidden;
             overflow-y: auto;
             position: relative;
