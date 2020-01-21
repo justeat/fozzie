@@ -11,6 +11,9 @@ v1.83.0
 ### Fixed
 - Reverted `max-height` change to `.c-modal-content-scrollable` as it prevents scrolling on small screen devices.
 
+### Changed
+- Use explicit value for rounded badge border radius.
+
 
 v1.82.0
 ------------------------------
