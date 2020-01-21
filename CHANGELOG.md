@@ -4,9 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.83.1
+------------------------------
+*January 21, 2020*
+
+### Changed
+- Reverted previous change to badge style.
+- Use explicit value for card rounded variable.
+
+
 v1.83.0
 ------------------------------
-*January 20, 2020*
+*January 21, 2020*
 
 ### Fixed
 - Reverted `max-height` change to `.c-modal-content-scrollable` as it prevents scrolling on small screen devices.

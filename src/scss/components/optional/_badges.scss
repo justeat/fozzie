@@ -33,7 +33,7 @@ $badge-padding                  : 1px 5px;
 $badge-rounded-radius           : 14px;
 $badge-rounded-padding          : spacing(x0.5) spacing(x2);
 $badge-rounded-small-radius     : 2px;
-$badge-rounded-small-padding    : 2px 4px;
+$badge-rounded-small-padding    : 2px spacing(x0.5);
 $badge-angled-radius            : 2px;
 
 @mixin badge() {
