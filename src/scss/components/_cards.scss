@@ -19,9 +19,7 @@ $card-section-margin--large                     : spacing(x8);
 $card-section-highlight-backgroundColor         : $orange;
 $card-section-highlight-color                   : $white;
 $card-section-collapsible-paddingRight          : 60px;
-$card-section-collapsed-height                  : 48px;
-$card-section-collapsed-height--aboveMid        : 50px;
-
+$card-section-collapsed-height                  : 40px;
 
 
 .c-card {
@@ -186,6 +184,14 @@ $card-section-collapsed-height--aboveMid        : 50px;
             @include media('>=mid') {
                 padding-bottom: 0;
                 padding-right: $card-section-collapsible-paddingRight;
+
+                &.c-card-section {
+                    margin-bottom: spacing(x2);
+
+                    &.has-noSpacing {
+                        margin-bottom: 0;
+                    }
+                }
             }
 
             &:hover {
@@ -206,16 +212,8 @@ $card-section-collapsed-height--aboveMid        : 50px;
         }
 
         .c-card-section--collapsed {
-            height: $card-section-collapsed-height;
-
-            @include media('>=mid') {
-                height: $card-section-collapsed-height--aboveMid;
-            }
-
-            &.c-card-section {
-                @include media('>=mid') {
-                    margin-bottom: -#{spacing(x2)};
-                }
+            @include media('<mid') {
+                height: $card-section-collapsed-height;
             }
 
             p {
