@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.85.0
+------------------------------
+*January 23, 2020*
+
+### Changed
+- Updated overflow carousel to hide scrollbar on YourFavourites component
+
+
 v1.84.0
 ------------------------------
 *January 22, 2020*

@@ -94,6 +94,17 @@
             }
         }
     }
+
+    .c-overflowCarousel--hideScroll {
+        @include media('>=wide') {
+            scrollbar-width: none;
+        }
+    }
+
+    .c-overflowCarousel--hideScroll::-webkit-scrollbar {
+        width: 0px;
+        display: none;
+    }
 }
 
 
