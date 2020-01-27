@@ -160,4 +160,25 @@ $rays--coloured-spacing--huge: 230px;
         vertical-align: bottom;
         width: 100%;
     }
+
+    .c-pageBanner-noDisplay-belowTiny {
+        @include media('<=tiny'){
+            display: none;
+        }
+    }
+
+    .l-boxWrapper--openingHome {
+        @include media('<=tiny'){
+            width: 90%;
+            background-color: white;
+        }
+    }
+
+    .l-container-relative--openingHome {
+        @include media('<=tiny'){
+            background-color: red;
+            padding-bottom: 90px;
+            position: relative;
+        }
+    }
 }
