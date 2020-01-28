@@ -9,7 +9,7 @@ v1.87.0
 *January 28, 2020*
 
 ### Added
-- Separate class for the height of the scroll page
+- Separate class for the height of the scroll page - `c-modal-content-scrollHeight`
 
 
 v1.85.0
