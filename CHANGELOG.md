@@ -4,6 +4,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.87.0
+------------------------------
+*January 30, 2020*
+
+### Added
+- Height to `is-fixed` class again
+
+
+v1.86.0
+------------------------------
+*January 28, 2020*
+
+### Added
+- Separate class for the height of the scroll page - `c-modal-content-scrollHeight`
+
+### Removed
+- Height from `is-fixed` class
+
+
 v1.85.0
 ------------------------------
 *January 23, 2020*
