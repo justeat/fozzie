@@ -106,6 +106,7 @@ $modal-borderRadius     : 4px;
 
                 &.is-fixed {
                     position: fixed;
+                    height: 100%;
                 }
 
                 &.is-resetHeight {
@@ -137,8 +138,11 @@ $modal-borderRadius     : 4px;
                 display: block;
             }
 
-        .c-modal-content-scrollHeight {
+        .c-modal-content-scrollable {
             max-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
 
             @include media('>=mid') {
                 max-height: 550px;
@@ -151,12 +155,6 @@ $modal-borderRadius     : 4px;
             &.is-stuck {
                 padding-top: 0;
             }
-        }
-
-        .c-modal-content-scrollable {
-            overflow-x: hidden;
-            overflow-y: auto;
-            position: relative;
         }
 
         .c-modal-actions {
