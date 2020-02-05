@@ -11,6 +11,9 @@ v1.88.0
 ### Added
 - New helper to _rwd.scss for hiding items on tiny devices
 
+### Added
+- Stylelint disable rule for Firefox only element as it was throwing error when running Homeweb
+
 v1.87.0
 ------------------------------
 *January 30, 2020*
