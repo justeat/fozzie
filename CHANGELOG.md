@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.88.0
+------------------------------
+*February 05, 2020*
+
+### Added
+- New helper to rwd.scss for hiding items on tiny devices
+- Stylelint disable rule for Firefox only element as it was throwing error when running Homeweb
+
 v1.87.0
 ------------------------------
 *January 30, 2020*
