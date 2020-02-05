@@ -97,7 +97,7 @@
 
     .c-overflowCarousel--hideScroll {
         @include media('>=wide') {
-         /* stylelint-disable-next-line property-no-unknown */
+            /* stylelint-disable-next-line property-no-unknown */
             scrollbar-width: none;
         }
     }
