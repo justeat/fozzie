@@ -1,4 +1,4 @@
-import TestUtils from 'js-test-buddy';
+import TestUtils from '@justeat/js-test-buddy';
 import { getBreakpoints, getCurrentScreenWidth, isWithinBreakpoint } from '..';
 
 describe('getBreakpoints', () => {
@@ -74,7 +74,7 @@ describe('currentScreenWidth', () => {
         TestUtils.setBodyHtml(`
         <style>
             .c-screen-sizer {
-                
+
             }
         </style>
         `);

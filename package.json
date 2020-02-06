@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "1.88.0",
+  "version": "1.89.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -34,21 +34,21 @@
   },
   "dependencies": {
     "@justeat/f-dom": "1.1.0",
-    "@justeat/f-logger": "0.7.1",
-    "@justeat/f-utils": "0.2.0",
+    "@justeat/f-logger": "0.8.1",
+    "@justeat/f-utils": "0.3.0",
     "@justeat/fozzie-colour-palette": "2.5.0",
-    "fontfaceobserver": "^2.0.13",
+    "fontfaceobserver": "2.0.13",
     "include-media": "1.4.9",
     "kickoff-grid.css": "1.2.0",
     "normalize-scss": "7.0.1"
   },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "^8.4.0",
-    "concurrently": "4.1.0",
-    "coveralls": "3.0.3",
+    "@justeat/gulp-build-fozzie": "9.0.1",
+    "@justeat/js-test-buddy": "0.4.1",
+    "concurrently": "5.1.0",
+    "coveralls": "3.0.9",
     "danger": "3.9.0",
-    "gulp": "3.9.1",
-    "js-test-buddy": "0.2.0"
+    "gulp": "3.9.1"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0",
@@ -65,7 +65,7 @@
     "exports": false
   },
   "scripts": {
-    "compile": "babel -d dist src",
+    "compile": "babel -d dist src --ignore \"src/**/*.test.js\"",
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "gulp scss:lint --prod",
     "lint:js": "gulp scripts:lint --prod",

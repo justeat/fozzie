@@ -4,6 +4,27 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.89.0
+------------------------------
+*February 06, 2020*
+
+### Added
+- Reduce motion query to `c-modal--popUp` which disables transition if user has setting enabled.
+- Modal close button styles.
+
+### Changed
+- `c-modal--popUp--belowMid` modifier changed to `c-modal--popUp`.
+- Switch `js-test-budy` for `@justeat/js-test-buddy`.
+- Updated npm dependencies.
+
+### Removed
+- Unused `c-modal-actions--raised` & `c-modal-actions--fixed` classes.
+
+### Fixed
+- `c-modal--popUp` now applies transition correctly.
+- Ignore test files when transpiling with Babel.
+
+
 v1.88.0
 ------------------------------
 *February 05, 2020*
