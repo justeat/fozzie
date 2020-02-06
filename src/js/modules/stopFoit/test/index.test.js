@@ -1,5 +1,5 @@
 import FontFaceObserver from 'fontfaceobserver';
-import TestUtils from 'js-test-buddy';
+import TestUtils from '@justeat/js-test-buddy';
 import { stopFoit } from '../index';
 
 jest.mock('fontfaceobserver');
