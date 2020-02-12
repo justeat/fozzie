@@ -4,9 +4,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v1.91.0
+------------------------------
+*February 12, 2020*
+
+### Changed
+- Moved modal close button to the left slightly.
+
+### Removed
+- Transitions from modal.
+
+
 v1.90.0
 ------------------------------
-*February 06, 2020*
+*February 6, 2020*
 
 ### Added
 - Menulog colour for `$btn-secondary-textColor--active` and `$btn-secondary-textColor--hover`
@@ -14,7 +25,7 @@ v1.90.0
 
 v1.89.0
 ------------------------------
-*February 06, 2020*
+*February 6, 2020*
 
 ### Added
 - Reduce motion query to `c-modal--popUp` which disables transition if user has setting enabled.
@@ -35,7 +46,7 @@ v1.89.0
 
 v1.88.0
 ------------------------------
-*February 05, 2020*
+*February 5, 2020*
 
 ### Added
 - New helper to rwd.scss for hiding items on tiny devices

@@ -13,7 +13,6 @@
  */
 
 $modal-titleFontSize    : base--scaleUp !default;
-$modal-transitionTime   : 250ms !default;
 $modal-borderRadius     : 4px;
 
 @mixin modal() {
@@ -88,7 +87,7 @@ $modal-borderRadius     : 4px;
     .c-modal-closeBtn {
         padding: spacing();
         position: absolute;
-        right: spacing(x1.5);
+        right: spacing(x2);
         top: spacing(x1.5);
         z-index: zIndex(high);
 
@@ -144,12 +143,7 @@ $modal-borderRadius     : 4px;
         text-align: center;
         top: 50%;
         transform: translate(50%, -50%);
-        transition: $modal-transitionTime bottom ease-in;
         width: 75%;
-
-        @media (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
 
         @include media('<mid') {
             min-width: em(22);
