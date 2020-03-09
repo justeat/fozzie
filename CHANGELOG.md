@@ -4,6 +4,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v2.0.0
+------------------------------
+*March 9, 2020*
+
+### Removed
+- **Breaking** Support for Node 8 has been removed. Now only tested in Node v10 and v12.
+- `espree` resolution removed as no longer needed.
+- `gulp` removed from dependency list – not needed as it comes down as a dependency of `gulp-build-fozzie`.
+
+### Changed
+- Updated to use `gulp-build-fozzie` v10 (which uses `gulp` v4).
+- Babel and ESLint configs updated in line with current recommendations.
+- Browserslist updated to use shared configuration.
+
+
 v1.91.1
 ------------------------------
 *February 12, 2020*
