@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v2.1.0
+------------------------------
+*March 10, 2020*
+
+### Fixed
+- Updated `c-modal` max width to an even number as odd numbered widths cause text to become blurry in some browsers.
+
+
 v2.0.0
 ------------------------------
 *March 9, 2020*
