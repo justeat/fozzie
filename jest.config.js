@@ -11,7 +11,8 @@ module.exports = {
         '^.+\\.js$': 'babel-jest'
     },
     testMatch: [
-        '** /*.{spec|test}.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
+        '**/*.{spec,test}.(js|jsx|ts|tsx)',
+        '**/__tests__/*.(js|jsx|ts|tsx)'
     ],
     testURL: 'http://localhost/'
 };
