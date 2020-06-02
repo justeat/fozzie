@@ -46,9 +46,9 @@
 
 // Menulog theme overrides
 @if ($theme == 'ml') {
-    $formControl-color: $green;
-    $formControl-hover-color: $green--dark;
-    $formControl-borderColor-hover: $green;
+    $formControl-color: $orange-largeText;
+    $formControl-hover-color: $orange-largeText--dark;
+    $formControl-borderColor-hover: $orange-largeText;
 }
 
 

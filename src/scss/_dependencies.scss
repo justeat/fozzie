@@ -34,9 +34,6 @@
 @if ($theme == 'ml') {
     @include applyScheme-menulog;
 }
-@if ($theme == 'gl') {
-    @include applyScheme-glaze;
-}
 
 @import 'settings/variables';
 @import 'settings/glyphs';

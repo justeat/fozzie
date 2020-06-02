@@ -11,7 +11,7 @@ $list-bullet-color: $red;
 
 // Menulog theme overrides
 @if ($theme == 'ml') {
-    $list-bullet-color: $green;
+    $list-bullet-color: $orange-largeText;
 }
 
 
