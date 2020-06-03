@@ -66,45 +66,26 @@ $btn-rounded-width                  : 38px;
 
 // Menulog theme overrides
 @if ($theme == 'ml') {
-    // TODO: these need to be checked with Menulog global designs in Zeplin
-    $btn-primary-bgColor                  : $green;
-    $btn-primary-bgColor--hover           : $green--dark;
-    $btn-primary-bgColor--focus           : $green--darkest;
+    // default font-size on buttons is updated so that the buttons are AA accessible
+    // (as otherwise white on brand orange isn't accessible)
+    $btn-default-font-size              : 18;
 
-    $btn-secondary-textColor              : $green;
-    $btn-secondary-textColor--active      : $green;
-    $btn-secondary-textColor--hover       : $green;
+    // TODO: these have been updated to new JET theme. Should be deleted once default theme is JET too
+    // TODO: these colour variable names will change once updated into new PIE design tokens
+    $btn-primary-bgColor                  : $orange-largeText;
+    $btn-primary-bgColor--hover           : $orange-largeText--dark;
+    $btn-primary-bgColor--focus           : $orange-largeText--darkest;
 
-    $btn-outline-borderColor              : $green;
-    $btn-outline-borderColor--hover       : $green--darkest;
-    $btn-outline-borderColor--active      : $green;
-    $btn-outline-bgColor--highlight       : $green--offWhite;
-    $btn-outline-textColor                : $green;
-    $btn-outline-textColor--highlight     : $green--dark;
+    $btn-secondary-bgColor                : $violet--offWhite;
+    $btn-secondary-bgColor--hover         : $violet--offWhite--dark;
+    $btn-secondary-bgColor--active        : $violet--offWhite--darkest;
+    $btn-secondary-textColor              : $violet;
+    $btn-secondary-textColor--active      : $violet;
+    $btn-secondary-textColor--hover       : $violet;
 
-    $btnGroup-outline-textColor           : $grey--dark;
-    $btnGroup-outline-border--active      : $green;
-
-    $btn-roundedOutline-fillColor         : $green;
-    $btn-roundedOutline-fillColor--active : $green--dark;
-    $btn-rounded-fillColor                : $green;
-}
-
-// Glaze theme overrides
-@if ($theme == 'gl') {
-    $btn-default-font-size                : mid;
-    $btn-default-font-family              : 'Nunito';
-
-    $btn-primary-bgColor                  : $coral--mid;
-    $btn-primary-bgColor--hover           : $coral--dark;
-    $btn-primary-bgColor--focus           : $coral--darkest;
-
-    $btn-secondary-bgColor                : $coral--lightest;
-    $btn-secondary-bgColor--hover         : $coral--lighter;
-    $btn-secondary-bgColor--active        : $coral--light;
-    $btn-secondary-textColor              : $coral--mid;
-    $btn-secondary-textColor--hover       : $coral--dark;
-    $btn-secondary-textColor--active      : $coral--darker;
+    $btn-roundedOutline-fillColor         : $orange-largeText;
+    $btn-roundedOutline-fillColor--active : $orange-largeText--dark;
+    $btn-rounded-fillColor                : $orange-largeText;
 }
 
 

@@ -31,7 +31,7 @@ describe('module stopFoit', () => {
             }, 100);
         });
 
-        it('removes `is-fontsLoading--base` from the body when Hind Vadodara webfont has loaded', async () => {
+        it('removes `is-fontsLoading--base` from the body when Hind Vadodara webfont has loaded', () => {
             // Arrange
             TestUtils.setBodyHtml(`
                 <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara" rel="stylesheet">

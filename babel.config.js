@@ -5,10 +5,11 @@ module.exports = api => {
 
     if (!isTest) {
         api.cache(true);
+        presets.push('@babel/env');
+    } else {
+        // use current node version for transpiling test files
+        presets.push(['@babel/env', { targets: { node: 'current' } }]);
     }
-
-    // use for both test and dev/live
-    presets.push('@babel/env');
 
     return {
         presets,
