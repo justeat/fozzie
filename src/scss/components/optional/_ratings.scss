@@ -129,7 +129,7 @@ $star-size--large           : 42px;
         @include rating-fill($star-count);
 
         @if ($theme == 'ml') {
-            @extend %c-icon--star--fill--yellow !optional;
+            @extend %c-icon--star--fill--brandOrange !optional;
         }
     }
 
@@ -151,7 +151,7 @@ $star-size--large           : 42px;
                 @extend %c-icon--star--fill !optional;
 
                 @if ($theme == 'ml') {
-                    @extend %c-icon--star--fill--yellow !optional;
+                    @extend %c-icon--star--fill--brandOrange !optional;
                 }
             }
        }
@@ -176,7 +176,7 @@ $star-size--large           : 42px;
             @extend %c-icon--star--fill !optional;
 
             @if ($theme == 'ml') {
-                @extend %c-icon--star--fill--yellow !optional;
+                @extend %c-icon--star--fill--brandOrange !optional;
             }
         }
     }
