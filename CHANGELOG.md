@@ -4,12 +4,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
-v3.0.0-beta.1
+v3.0.0-beta.2
 ------------------------------
 *June 4, 2020*
 
 ### Changed
 - Updated Menulog review stars to be brand orange (uses `@justeat/f-icons` v1.34.0)
+
+
+v3.0.0-beta.1
+------------------------------
+*June 4, 2020*
+
+### Changed
+- Bump to `fozzie-colour-palette` version.
 
 
 v3.0.0-beta.0
