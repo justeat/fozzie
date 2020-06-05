@@ -88,6 +88,22 @@ $btn-rounded-width                  : 38px;
     $btn-rounded-fillColor                : $orange-largeText;
 }
 
+// Glaze theme overrides
+@if ($theme == 'gl') {
+    $btn-default-font-size                : mid;
+    $btn-default-font-family              : 'Nunito';
+
+    $btn-primary-bgColor                  : $coral--mid;
+    $btn-primary-bgColor--hover           : $coral--dark;
+    $btn-primary-bgColor--focus           : $coral--darkest;
+
+    $btn-secondary-bgColor                : $coral--lightest;
+    $btn-secondary-bgColor--hover         : $coral--lighter;
+    $btn-secondary-bgColor--active        : $coral--light;
+    $btn-secondary-textColor              : $coral--mid;
+    $btn-secondary-textColor--hover       : $coral--dark;
+    $btn-secondary-textColor--active      : $coral--darker;
+}
 
 /**
  * Base button styles – Based on csswizardry.com/beautons
