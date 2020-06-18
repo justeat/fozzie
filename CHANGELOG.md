@@ -4,6 +4,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v3.0.0-beta.5
+------------------------------
+*June 18, 2020*
+
+### Changed
+- All references to `grey--lightest` changed to `grey--lighter` (to match new colour palette).
+- All references to `grey--lighter` changed to `grey--light` (to match new colour palette).
+- All references to old colours that are no longer part of the new palette updated to new colour variables.
+
+### Removed
+- Glaze and Menulog colour overrides removed.
+
+
 v3.0.0-beta.4
 ------------------------------
 *June 5, 2020*

@@ -13,18 +13,18 @@
  */
 
 $formToggle-padding                 : spacing() !default;
-$formToggle-border-color            : $grey--lightest;
-$formToggle-border-color-interact   : $grey--lighter;
+$formToggle-border-color            : $grey--lighter;
+$formToggle-border-color-interact   : $grey--light;
 $formToggle-border-color-checked    : $green;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
 $formToggle-icon-background         : $green;
-$formToggle-icon-hover-background   : $grey--lighter;
+$formToggle-icon-hover-background   : $grey--light;
 $formToggle-background              : $white;
 $formToggle-large-size              : 48px;
 $formToggle-button-color            : $blue;
 $formToggle-button-background       : $blue--offWhite;
-$formToggle-disabled-text           : $grey--lighter;
+$formToggle-disabled-text           : $grey--light;
 $formToggle-checked-text            : $green;
 
 // associated form toggle mixins

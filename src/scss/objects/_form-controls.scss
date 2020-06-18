@@ -31,10 +31,10 @@
  $formControl-bgColor           : $white !default;
  $formControl-bgColor-disabled  : $color-disabled !default;
  $formControl-borderColor       : $color-border !default;
- $formControl-color             : $blue !default;
+ $formControl-color             : $orange !default;
+ $formControl-color--hover       : $orange--dark !default;
  $formControl-background-color  : $color-bg !default;
- $formControl-hover-color       : $blue--dark !default;
- $formControl-borderColor-hover : $blue !default;
+ $formControl-borderColor-hover : $orange !default;
  $formControl-margin-left       : 0 !default;
  $formControl-padding-left      : spacing(x4) !default;
  $formControl-width--wide       : 20px !default;
@@ -42,14 +42,6 @@
  $formControl-height--wide      : 20px !default;
  $formControl-height            : 24px !default;
  $formControl-border-width      : 1px;
-
-
-// Menulog theme overrides
-@if ($theme == 'ml') {
-    $formControl-color: $orange-largeText;
-    $formControl-hover-color: $orange-largeText--dark;
-    $formControl-borderColor-hover: $orange-largeText;
-}
 
 
  .o-formControl-label {
@@ -99,7 +91,7 @@
          display: inline-block;
          width: $formControl-width;
          height: $formControl-height;
-         border: $formControl-border-width solid $grey--lightest;
+         border: $formControl-border-width solid $grey--lighter;
          background-color: $formControl-bgColor;
          vertical-align: middle;
          margin-left: $formControl-margin-left;
@@ -177,8 +169,8 @@
      .o-formControl-input:checked ~ .o-formControl-indicator--radio {
 
          label:hover & {
-             background-color: $formControl-hover-color;
-             border-color: $formControl-hover-color;
+             background-color: $formControl-color--hover;
+             border-color: $formControl-color--hover;
          }
      }
 
@@ -232,7 +224,7 @@
          &:before {
              content: '';
              background-color: $formControl-color;
-             border: 3px solid $grey--lightest;
+             border: 3px solid $grey--lighter;
              border-radius: 50%;
              width: $formControl-width - 2;
              height: $formControl-height - 2;

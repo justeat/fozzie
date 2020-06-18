@@ -7,12 +7,7 @@
  * TBC
  */
 
-$list-bullet-color: $red;
-
-// Menulog theme overrides
-@if ($theme == 'ml') {
-    $list-bullet-color: $orange-largeText;
-}
+$list-bullet-color: $orange;
 
 
 ul,
