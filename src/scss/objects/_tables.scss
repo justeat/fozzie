@@ -15,8 +15,8 @@
  * Define associated Table variables
  */
 $table-bgColor                : $color-bg--component !default; // Default background color used for all tables.
-$table-bgColor--accent        : $blue--offWhite !default; // Background color used for `.table-striped`.
-$table-border--color          : $blue--offWhite !default; // Border color for table and cell borders.
+$table-bgColor--accent        : $grey--offWhite !default; // Background color used for `.table-striped`.
+$table-border--color          : $grey--offWhite !default; // Border color for table and cell borders.
 $table-border--width          : 2px !default; // Border width for table border.
 $table-innerBorder--color     : $color-border !default;
 $table-verticalBorder--color  : $color-border--interactive !default;
@@ -26,12 +26,6 @@ $table-verticalBorder--color  : $color-border--interactive !default;
  * Customizes the `.table` component with basic values, each used across all table variations.
  */
 $table-cell-padding           : 14px !default; // Padding for `<th>`s and `<td>`s.
-
-// Menulog theme overrides
-@if ($theme == 'ml') {
-    $table-bgColor--accent: $grey--offWhite;
-    $table-border--color: $grey--offWhite;
-}
 
 // Baseline styles
 table,

@@ -11,51 +11,48 @@
  * Define associated Button variables
  */
 
-$btn-default-bgColor                : $grey--lightest;
+$btn-default-bgColor                : $grey--lighter;
 $btn-default-weight                 : 500;
 $btn-default-height                 : 2.6;
-$btn-default-font-size              : base--scaleUp;
-$btn-default-font-family            : 'Ubuntu';
-$btn-default-bgColor--hover         : $grey--lighter;
+$btn-default-font-size              : 18;
+$btn-default-font-family            : $font-family-headings;
+$btn-default-bgColor--hover         : $grey--light;
 $btn-default-borderRadius           : 2px;
 $btn-default-hozPadding             : 1em;
 $btn-default-vertPadding            : 11px;
 
-$btn-primary-bgColor                : $blue;
-$btn-primary-bgColor--hover         : $blue--dark;
-$btn-primary-bgColor--focus         : $blue--darkest;
+$btn-primary-bgColor                : $orange;
+$btn-primary-bgColor--hover         : $orange--dark;
+$btn-primary-bgColor--focus         : $orange--darkest;
 $btn-primary-textColor              : $white;
 
-$btn-secondary-bgColor              : $grey--lightest;
-$btn-secondary-bgColor--hover       : $grey--lighter;
-$btn-secondary-bgColor--active      : $grey--light;
+$btn-secondary-bgColor              : $blue--offWhite;
+$btn-secondary-bgColor--hover       : $blue--offWhite--dark;
+$btn-secondary-bgColor--active      : $blue--offWhite--darkest;
 $btn-secondary-textColor            : $blue;
 $btn-secondary-textColor--hover     : $blue;
 $btn-secondary-textColor--active    : $blue;
 
+$btn-tertiary-bgColor              : $white;
+$btn-tertiary-bgColor--hover       : $grey--light;
+$btn-tertiary-bgColor--active      : $grey--mid;
+$btn-tertiary-textColor            : $orange;
+$btn-tertiary-textColor--hover     : $orange;
+$btn-tertiary-textColor--active    : $orange;
+
 $btn-wide-hozPadding                : 2em;
 
-$btn-disabled-bgColor               : $grey--lighter;
-
-$btn-outline-borderColor            : $blue;
-$btn-outline-borderColor--hover     : $blue--dark;
-$btn-outline-borderColor--active    : $blue--lighter;
-$btn-outline-bgColor--highlight     : $blue--offWhite;
-$btn-outline-textColor--highlight   : $blue--dark;
+$btn-disabled-bgColor               : $grey--light;
 
 $btn-transparent-color              : $red;
 $btn-transparent-color--hover       : $grey--mid;
 
-$btn-roundedIcon-fillColor          : $white;
-$btn-roundedOutline-fillColor       : $blue;
-$btn-rounded-fillColor              : $blue;
-
 $btnGroup-outline-textColor         : $grey--dark;
-$btnGroup-outline-border            : $grey--lighter;
+$btnGroup-outline-border            : $grey--light;
 $btnGroup-outline-active-border     : $color-secondary;
 $btnGroup-outline-active-text-color : $color-secondary;
 
-$btnToggle-bg                       : $grey--lightest;
+$btnToggle-bg                       : $grey--lighter;
 $btnToggle-bg--active               : $white;
 $btnToggle-padding                  : 5px;
 
@@ -63,47 +60,6 @@ $btn-icon-dimension                 : 36px;
 $btn-icon-dimension--small          : 20px;
 $btn-rounded-width                  : 38px;
 
-
-// Menulog theme overrides
-@if ($theme == 'ml') {
-    // default font-size on buttons is updated so that the buttons are AA accessible
-    // (as otherwise white on brand orange isn't accessible)
-    $btn-default-font-size              : 18;
-
-    // TODO: these have been updated to new JET theme. Should be deleted once default theme is JET too
-    // TODO: these colour variable names will change once updated into new PIE design tokens
-    $btn-primary-bgColor                  : $orange-largeText;
-    $btn-primary-bgColor--hover           : $orange-largeText--dark;
-    $btn-primary-bgColor--focus           : $orange-largeText--darkest;
-
-    $btn-secondary-bgColor                : $violet--offWhite;
-    $btn-secondary-bgColor--hover         : $violet--offWhite--dark;
-    $btn-secondary-bgColor--active        : $violet--offWhite--darkest;
-    $btn-secondary-textColor              : $violet;
-    $btn-secondary-textColor--active      : $violet;
-    $btn-secondary-textColor--hover       : $violet;
-
-    $btn-roundedOutline-fillColor         : $orange-largeText;
-    $btn-roundedOutline-fillColor--active : $orange-largeText--dark;
-    $btn-rounded-fillColor                : $orange-largeText;
-}
-
-// Glaze theme overrides
-@if ($theme == 'gl') {
-    $btn-default-font-size                : mid;
-    $btn-default-font-family              : 'Nunito';
-
-    $btn-primary-bgColor                  : $coral--mid;
-    $btn-primary-bgColor--hover           : $coral--dark;
-    $btn-primary-bgColor--focus           : $coral--darkest;
-
-    $btn-secondary-bgColor                : $coral--lightest;
-    $btn-secondary-bgColor--hover         : $coral--lighter;
-    $btn-secondary-bgColor--active        : $coral--light;
-    $btn-secondary-textColor              : $coral--mid;
-    $btn-secondary-textColor--hover       : $coral--dark;
-    $btn-secondary-textColor--active      : $coral--darker;
-}
 
 /**
  * Base button styles – Based on csswizardry.com/beautons
@@ -226,11 +182,10 @@ $btn-rounded-width                  : 38px;
 /**
  * Modifier – .o-btn--secondary
  *
- * Sets the btn colour to positive colour (i.e. Green)
+ * Accompanying secondary style button (knocked back slightly from the primary button)
  */
 
-.o-btn--secondary,
-.o-btn--tertiary {
+.o-btn--secondary {
     background-color: $btn-secondary-bgColor;
     color: $btn-secondary-textColor;
 
@@ -247,8 +202,27 @@ $btn-rounded-width                  : 38px;
     }
 }
 
+/**
+ * Modifier – .o-btn--tertiary
+ *
+ * Accompanying button that can be used on solid background colours (such as grey)
+ */
+
 .o-btn--tertiary {
-    background-color: $white;
+    background-color: $btn-tertiary-bgColor;
+    color: $btn-tertiary-textColor;
+
+    &:hover {
+        background-color: $btn-tertiary-bgColor--hover;
+        color: $btn-tertiary-textColor--hover;
+    }
+
+    &:active,
+    &:focus {
+        background-color: $btn-tertiary-bgColor--active;
+        color: $btn-tertiary-textColor--active;
+        outline: none;
+    }
 }
 
 
@@ -280,35 +254,6 @@ $btn-rounded-width                  : 38px;
 .o-btn--wide {
     padding-left: $btn-wide-hozPadding;
     padding-right: $btn-wide-hozPadding;
-}
-
-/**
- * Outline Button
- * -------------------------
- * Essentially, a button, with same color bg as container, but with an outline
- */
-
-.o-btn--outline {
-    background-color: transparent;
-    border: 1px solid $btn-outline-borderColor;
-    color: $btn-outline-borderColor;
-
-    &:focus,
-    &:hover,
-    &:active,
-    &.is-active {
-        outline: none; // no need as already has a focus state
-        background-color: $btn-outline-bgColor--highlight;
-        color: $btn-outline-textColor--highlight;
-    }
-
-    &:hover,
-    &:focus {
-        border: 1px solid $btn-outline-borderColor--hover;
-    }
-    &:active {
-        border: 1px solid $btn-outline-borderColor--active;
-    }
 }
 
 //remove uneeded styles (like colours) from a button when only an icon is on it (like a close button)

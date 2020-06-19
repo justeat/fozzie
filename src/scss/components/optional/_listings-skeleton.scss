@@ -10,7 +10,7 @@
 
 @mixin anim() {
     border-radius: 2px;
-    background: linear-gradient(-45deg, $grey--offWhite, $grey--offWhite, $grey--lightest, $grey--offWhite, $grey--offWhite);
+    background: linear-gradient(-45deg, $grey--offWhite, $grey--offWhite, $grey--lighter, $grey--offWhite, $grey--offWhite);
     background-size: 2000px 600%;
     animation: skeletonGradient 2s ease infinite;
     animation-fill-mode: forwards;

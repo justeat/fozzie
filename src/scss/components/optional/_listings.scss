@@ -18,7 +18,7 @@ $listing-border-radius          : 4px;
 $listing-img-border-radius      : 2px;
 $listing-promoIcon-color        : $orange;
 
-$listing--subsequent-bg         : $grey--lightest;
+$listing--subsequent-bg         : $grey--lighter;
 $listing--inactive-bg           : rgba($listing-bg, 0.5);
 
 /*
@@ -146,7 +146,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 }
 
                 &:not(.c-listing-item-header--noImage) {
-                    background: $grey--lightest;
+                    background: $grey--lighter;
                 }
             }
 
@@ -215,7 +215,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 top: spacing(x2);
                 left: spacing(x2);
                 position: absolute;
-                border: 1px solid $grey--lightest;
+                border: 1px solid $grey--lighter;
                 border-radius: $listing-img-border-radius;
 
                 @include media('>=wide') {
@@ -355,7 +355,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             }
 
             .c-listing-item-promo-text--earned {
-                color: $green--dark;
+                color: $green;
             }
 
             .c-listing-item-rating {

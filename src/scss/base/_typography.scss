@@ -18,7 +18,7 @@
 //
 // @font-face rules (if any)
 //
-// JE fonts are loaded through Google fonts.  Menulog is a custom font.
+// JET fonts are loaded through Google fonts.  Menulog is a custom font.
 //
 // ******
 
@@ -224,9 +224,8 @@ dfn {
     font-style: italic;
 }
 
-// Addresses styling not present in IE6/7/8/9
 mark {
-    background: $yellow;
+    background: $yellow--offWhite;
     padding: 2px 4px;
     border-radius: 3px;
 }
