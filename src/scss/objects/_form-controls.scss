@@ -28,20 +28,20 @@
  *
  */
 
- $formControl-bgColor           : $white !default;
- $formControl-bgColor-disabled  : $color-disabled !default;
- $formControl-borderColor       : $color-border !default;
- $formControl-color             : $orange !default;
+ $formControl-bgColor            : $white !default;
+ $formControl-bgColor--disabled  : $color-disabled !default;
+ $formControl-borderColor        : $color-border !default;
+ $formControl-borderColor--hover : $orange !default;
+ $formControl-color              : $orange !default;
  $formControl-color--hover       : $orange--dark !default;
- $formControl-background-color  : $color-bg !default;
- $formControl-borderColor-hover : $orange !default;
- $formControl-margin-left       : 0 !default;
- $formControl-padding-left      : spacing(x4) !default;
- $formControl-width--wide       : 20px !default;
- $formControl-width             : 24px !default;
- $formControl-height--wide      : 20px !default;
- $formControl-height            : 24px !default;
- $formControl-border-width      : 1px;
+ $formControl-background-color   : $color-bg !default;
+ $formControl-margin-left        : 0 !default;
+ $formControl-padding-left       : spacing(x4) !default;
+ $formControl-width              : 24px !default;
+ $formControl-width--wide        : 20px !default;
+ $formControl-height             : 24px !default;
+ $formControl-height--wide       : 20px !default;
+ $formControl-border-width       : 1px;
 
 
  .o-formControl-label {
@@ -53,7 +53,7 @@
      padding-left: $formControl-padding-left;
 
      &:hover .o-formControl-indicator {
-         border-color: $formControl-borderColor-hover;
+         border-color: $formControl-borderColor--hover;
      }
 
      &:hover .o-formControl-input:disabled ~ .o-formControl-indicator {
@@ -62,7 +62,7 @@
      }
 
      .o-formControl-input:disabled ~ .o-formControl-indicator {
-        background-color: $formControl-bgColor-disabled;
+        background-color: $formControl-bgColor--disabled;
      }
  }
 

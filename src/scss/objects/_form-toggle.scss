@@ -14,18 +14,18 @@
 
 $formToggle-padding                 : spacing() !default;
 $formToggle-border-color            : $grey--lighter;
-$formToggle-border-color-interact   : $grey--light;
-$formToggle-border-color-checked    : $green;
+$formToggle-border-color--interact  : $grey--light;
+$formToggle-border-color--checked   : $green;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
 $formToggle-icon-background         : $green;
-$formToggle-icon-hover-background   : $grey--light;
+$formToggle-icon-background--hover  : $grey--light;
 $formToggle-background              : $white;
 $formToggle-large-size              : 48px;
 $formToggle-button-color            : $blue;
 $formToggle-button-background       : $blue--offWhite;
-$formToggle-disabled-text           : $grey--light;
-$formToggle-checked-text            : $green;
+$formToggle-text--disabled          : $grey--light;
+$formToggle-text--checked           : $green;
 
 // associated form toggle mixins
 @mixin formToggle-large() {
@@ -68,7 +68,7 @@ $formToggle-checked-text            : $green;
         width: calc(100% + 2px);
         height: calc(100% + 2px);
         border-radius: $formToggle-border-radius;
-        border: $formToggle-border-width solid $formToggle-border-color-interact;
+        border: $formToggle-border-width solid $formToggle-border-color--interact;
     }
 }
 
@@ -82,7 +82,7 @@ $formToggle-checked-text            : $green;
         width: calc(100% - 2px);
         height: calc(100% - 2px);
         border-radius: $formToggle-border-radius;
-        border: $formToggle-border-width solid $formToggle-border-color-interact;
+        border: $formToggle-border-width solid $formToggle-border-color--interact;
     }
 }
 
@@ -94,7 +94,7 @@ $formToggle-checked-text            : $green;
         width: calc(200% + 4px);
         height: calc(200% + 4px);
         border-radius: ($formToggle-border-radius * 2);
-        border: $formToggle-border-width solid $formToggle-border-color-checked;
+        border: $formToggle-border-width solid $formToggle-border-color--checked;
         transform: scale(0.5) translate(-50%, -50%);
     }
 }
@@ -205,7 +205,7 @@ $formToggle-checked-text            : $green;
 
             .o-formToggle-input:checked ~ & {
                 font-weight: $font-weight-bold;
-                color: $formToggle-checked-text;
+                color: $formToggle-text--checked;
                 @include formToggle-checkedSpacing();
             }
 
@@ -275,7 +275,7 @@ $formToggle-checked-text            : $green;
                 .o-formToggle-input:not([disabled]):focus ~ &,
                 .o-formToggle-input:not([checked]):focus ~ & {
                     @include media('>=mid') {
-                        fill: $formToggle-icon-hover-background;
+                        fill: $formToggle-icon-background--hover;
                     }
                 }
 
@@ -317,6 +317,6 @@ $formToggle-checked-text            : $green;
 
         .o-formToggle--disabled {
             background: none;
-            color: $formToggle-disabled-text;
+            color: $formToggle-text--disabled;
         }
 }
