@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v3.0.0-beta.6
+------------------------------
+*June 26, 2020*
+
+### Changed
+- Update card and badge to match rebrand designs for menu
+
+
 v3.0.0-beta.5
 ------------------------------
 *June 18, 2020*
