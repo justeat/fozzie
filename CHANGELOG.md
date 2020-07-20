@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v3.0.0-beta.7
+------------------------------
+*July 20, 2020*
+
+### Changed
+- Update `fozzie-colour-palette` to latest version.
+- `Danger.js` update so that the plugin still works on CI.
+
+
 v3.0.0-beta.6
 ------------------------------
 *June 26, 2020*
