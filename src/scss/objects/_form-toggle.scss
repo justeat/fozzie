@@ -13,8 +13,8 @@
  */
 
 $formToggle-padding                 : spacing() !default;
-$formToggle-border-color            : $grey--lighter;
-$formToggle-border-color--interact  : $grey--light;
+$formToggle-border-color            : $grey--light;
+$formToggle-border-color--interact  : $grey--mid;
 $formToggle-border-color--checked   : $green;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
