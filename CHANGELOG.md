@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v3.0.0-beta.9
 ------------------------------
+*July 30, 2020*
+
+### Changed
+- Updating `fozzie-colour-palette` version with new alias colours for background colours.
+- Updated Danger npm package.
+
+
+v3.0.0-beta.9
+------------------------------
 *July 23, 2020*
 
 ### Changed
