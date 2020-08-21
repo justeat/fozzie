@@ -4,6 +4,30 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v4.0.0-beta.0
+------------------------------
+*August 19, 2020*
+
+### Changed
+- **Breaking** Type map has all been updated to match new design-token names.
+- Updating typography set to `JustEatBasis` and updating all typography definitions to new sizes/weights.
+- Pre-loading font classes no longer needed, as the webfonts should be loaded in immediately (as part of `head` of document).
+
+### Removed
+- `Aspira` font-face declaration no longer needed.
+
+## Typography Naming Migration Guide
+- `base` > `body-s`
+- `base--scaleUp` > `body-l`
+- `small` > `caption`
+- `mid` > `heading-s`
+- `large` > `heading-m`
+- `jumbo` > `heading-xl`
+- `jumbo--scaleUp` > `heading-xxl`
+- `large--scaleDown` > `heading-s`
+- `mid--scaleUp` > No longer exists in type map. Should change to `heading-s` or `heading-m`
+
+
 v3.0.0
 ------------------------------
 *August 3, 2020*

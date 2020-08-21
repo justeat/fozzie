@@ -51,12 +51,12 @@ ol {
 .c-list-ordered {
     > li {
         font-weight: $font-weight-bold;
-        @include font-size(mid);
+        @include font-size(heading-s);
         margin-bottom: spacing(x4);
 
         > div {
             font-weight: $font-weight-base;
-            @include font-size(base);
+            @include font-size(body-s);
         }
     }
 }

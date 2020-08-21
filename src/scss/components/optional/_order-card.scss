@@ -112,9 +112,8 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
     }
 
     .c-orderCard-order {
-        @include font-size(base--scaleUp, false);
+        @include font-size(body-l, false);
         line-height: line-height(16px, 24px);
-        font-family: $font-family-headings;
         font-weight: $font-weight-base;
         @include font-size(22px);
         color: $blue;
@@ -171,14 +170,14 @@ $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 
 
     .c-orderCard-content--defaultMessage {
         padding: 0 spacing(x2);
-        @include font-size(base--scaleUp, false);
+        @include font-size(body-l, false);
     }
 
     .c-orderCard-cuisines {
         color: $grey--mid;
         margin-top: 0;
         text-transform: capitalize;
-        @include font-size(base--scaleUp, false);
+        @include font-size(body-l, false);
         font-family: $font-family-base;
     }
 

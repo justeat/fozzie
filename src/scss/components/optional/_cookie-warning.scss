@@ -7,7 +7,7 @@
         z-index: zIndex(high);
 
         & p {
-            @include font-size(small, false);
+            @include font-size(caption, false);
             color: $white;
             text-align: center;
             margin: 0 auto;

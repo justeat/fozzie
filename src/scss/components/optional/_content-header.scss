@@ -24,13 +24,13 @@
             display: inline-block;
             margin: 0 spacing(x2) 0 0;
             font-weight: $font-weight-base;
-            @include font-size(base--scaleUp, false);
+            @include font-size(body-l, false);
         }
 
         .c-contentHeader-subTitle {
             display: block;
             margin-top: 4px;
-            @include font-size(base, false);
+            @include font-size(body-s, false);
 
             @include media('>mid') {
                 display: inline-block;
@@ -40,7 +40,7 @@
         .c-contentHeader-title,
         .c-contentHeader-subTitle {
             @include media('>=mid') {
-                @include font-size(jumbo, false);
+                @include font-size(heading-xl, false);
             }
         }
 

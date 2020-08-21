@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "3.0.0",
+  "version": "4.0.0-beta.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -35,7 +35,7 @@
   "dependencies": {
     "@justeat/f-dom": "1.1.0",
     "@justeat/f-logger": "0.8.1",
-    "@justeat/f-utils": "0.3.0",
+    "@justeat/f-utils": "1.0.0-beta.0",
     "@justeat/fozzie-colour-palette": "3.0.0-beta.6",
     "fontfaceobserver": "2.1.0",
     "include-media": "1.4.9",
@@ -46,9 +46,9 @@
     "@justeat/browserslist-config-fozzie": "1.1.1",
     "@justeat/gulp-build-fozzie": "10.2.1",
     "@justeat/js-test-buddy": "0.4.1",
-    "concurrently": "5.2.0",
+    "concurrently": "5.3.0",
     "coveralls": "3.1.0",
-    "danger": "10.3.0"
+    "danger": "10.3.1"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"

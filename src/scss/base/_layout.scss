@@ -75,10 +75,10 @@ body {
         }
 
         > h1 {
-            @include font-size(jumbo--scaleUp, true, narrow);
+            @include font-size(heading-xxl, true, narrow);
 
             @include media('>mid') {
-                @include font-size(jumbo--scaleUp);
+                @include font-size(heading-xxl);
             }
         }
     }

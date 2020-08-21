@@ -37,7 +37,7 @@
 
                 @include media('>=mid') {
                     max-width: 570px;
-                    @include font-size('jumbo', false);
+                    @include font-size(heading-xl, false);
                 }
             }
 
