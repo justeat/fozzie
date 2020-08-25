@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v4.0.0-beta.0
 ------------------------------
-*August 19, 2020*
+*August 25, 2020*
 
 ### Changed
 - **Breaking** Type map has all been updated to match new design-token names.
@@ -15,13 +15,14 @@ v4.0.0-beta.0
 
 ### Removed
 - `Aspira` font-face declaration no longer needed.
+- `stopFoit` function as not needed due to the way we now import the font.
 
 ## Typography Naming Migration Guide
 - `base` > `body-s`
 - `base--scaleUp` > `body-l`
 - `small` > `caption`
-- `mid` > `heading-s`
-- `large` > `heading-m`
+- `mid` > `heading-s` or `subheading-s`
+- `large` > `heading-m` or `subheading-l`
 - `jumbo` > `heading-xl`
 - `jumbo--scaleUp` > `heading-xxl`
 - `large--scaleDown` > `heading-s`

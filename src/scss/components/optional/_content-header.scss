@@ -24,13 +24,13 @@
             display: inline-block;
             margin: 0 spacing(x2) 0 0;
             font-weight: $font-weight-base;
-            @include font-size(body-l, false);
+            @include font-size(body-l, false); // TODO – this should be updated with a more semantic font alias when it's ported to fozzie-components repo
         }
 
         .c-contentHeader-subTitle {
             display: block;
             margin-top: 4px;
-            @include font-size(body-s, false);
+            @include font-size(body-s, false); // TODO – this should be updated with a more semantic font alias when it's ported to fozzie-components repo
 
             @include media('>mid') {
                 display: inline-block;
