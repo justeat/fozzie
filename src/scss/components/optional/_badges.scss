@@ -107,7 +107,7 @@ $badge-angled-radius            : 2px;
         }
 
         .c-badge--large {
-            @include font-size(base--scaleUp);
+            @include font-size(body-l);
         }
 
         .c-badge--noPad {

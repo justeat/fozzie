@@ -279,7 +279,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             .c-listing-item-title {
                 word-break: break-word;
                 padding-right: spacing();
-                @include font-size(base--scaleUp, false);
+                @include font-size(body-l, false);
 
                 @include media('>mid') {
                     margin: spacing(x0.5) 0;
@@ -365,7 +365,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             .c-listing-item-ratingText {
                 top: -4px;
                 position: relative;
-                @include font-size(small, true);
+                @include font-size(caption, true);
             }
 
             .c-listing-item-text {
@@ -388,10 +388,10 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             .c-listing-item-label {
                 padding: 1px 4px;
                 margin-bottom: spacing();
-                @include font-size(small, false);
+                @include font-size(caption, false);
 
                 @include media('>mid') {
-                    @include font-size(base, false);
+                    @include font-size(body-s, false);
                 }
             }
 

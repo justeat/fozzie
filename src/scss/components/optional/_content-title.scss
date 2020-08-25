@@ -30,7 +30,7 @@
             margin: 0;
             width: 100%;
             font-weight: $font-weight-base;
-            @include font-size(base--scaleUp, false);
+            @include font-size(body-l, false);
         }
 
         .c-contentTitle-action {

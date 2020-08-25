@@ -12,7 +12,7 @@
  * TBC
  */
 
-$modal-titleFontSize    : base--scaleUp !default;
+$modal-titleFontSize    : body-l !default;
 $modal-borderRadius     : 4px;
 
 @mixin modal() {
@@ -41,7 +41,7 @@ $modal-borderRadius     : 4px;
 
             @include media('>=narrowMid') {
                 .c-modal-title {
-                    @include font-size(large);
+                    @include font-size(heading-m);
                 }
 
                     .c-modal-title--spacing {
@@ -120,7 +120,7 @@ $modal-borderRadius     : 4px;
         padding: 0 spacing(x3);
 
         @include media('>=mid') {
-            @include font-size(large);
+            @include font-size(heading-m);
         }
     }
 
@@ -218,9 +218,8 @@ $modal-borderRadius     : 4px;
     }
 
     .c-modal-textSeparator {
-        font-family: $font-family-headings;
         font-weight: $font-weight-bold;
-        @include font-size(base--scaleUp);
+        @include font-size(body-l);
         margin: spacing(x3) 0 0;
 
         @include media('>=narrow') {

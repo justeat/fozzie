@@ -12,7 +12,7 @@
  */
 
 $menu-headerHeight                      : 57px;
-$menu-fontSize                          : base--scaleUp;
+$menu-fontSize                          : body-l;
 $menu-border-color                      : $color-border;
 $menu-border-color--active              : $grey--dark;
 $menu-border-width                      : 1px;
@@ -23,8 +23,8 @@ $menu-positionTop                       : $menu-headerHeight + spacing(x2);
 $menu--condensed-link-padding           : spacing(x0.5);
 $menu--expandable-bgColor               : $white !default;
 $menu--expandable-borderBottom          : $color-border !default;
-$menu--expandable-linkFontSize          : base !default;
-$menu--expandable-linkActiveFontSize    : base--scaleUp !default;
+$menu--expandable-linkFontSize          : body-s !default;
+$menu--expandable-linkActiveFontSize    : body-l !default;
 
 @mixin menu() {
 
@@ -77,7 +77,7 @@ $menu--expandable-linkActiveFontSize    : base--scaleUp !default;
         }
 
         .c-menu-openBtn {
-            @include font-size(base);
+            @include font-size(body-s);
             align-items: center;
             border-radius: spacing(x3);
             display: flex;
@@ -147,7 +147,6 @@ $menu--expandable-linkActiveFontSize    : base--scaleUp !default;
 
                 .c-menu-link {
                     display: none;
-                    font-family: $font-family-headings;
                     @include font-size($menu--expandable-linkFontSize);
                     margin-left: 0;
                     text-align: center;
