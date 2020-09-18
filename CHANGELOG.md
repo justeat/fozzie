@@ -3,6 +3,16 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v4.0.0
+------------------------------
+*September 18, 2020*
+
+### Changed
+- Moving package out of beta to release typography.
+- Updating teriary button text colour to `$blue`.
+- Minor package update to `danger.js`.
+
+
 v4.0.0-beta.1
 ------------------------------
 *September 15, 2020*
