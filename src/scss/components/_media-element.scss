@@ -14,7 +14,7 @@ $mediaElement-img-width--mid    : 78px;
 $mediaElement-img-width--wide   : 67px;
 $mediaElement-img-borderRadius  : 2px;
 $mediaElement-infoLinkColor     : $blue;
-$mediaElement-fontSize          : base--scaleUp;
+$mediaElement-fontSize          : body-l;
 $mediaElement-spacing           : spacing(x2);
 
 
@@ -144,11 +144,11 @@ $mediaElement-spacing           : spacing(x2);
 
     .c-mediaElement-text {
         margin-top: 0;
-        @include font-size(small, false);
+        @include font-size(caption, false);
     }
 
     .c-mediaElement-text--large {
-        @include font-size(large, false);
+        @include font-size(heading-m, false); // TODO – this should be updated with a more semantic font alias, as it's not a heading
         line-height: 1.2;
     }
 

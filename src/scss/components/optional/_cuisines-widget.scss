@@ -54,7 +54,7 @@ $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0,
             background-image: $cuisinesWidget-gradient;
 
             @include media('>=mid-wide') {
-                @include font-size(large, false);
+                @include font-size(heading-m, false);
                 padding: spacing(x2);
             }
         }

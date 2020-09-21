@@ -14,66 +14,53 @@ $font-size-base-px          : $font-size-base * 1px;
 
 // Type map – these are our global font-sizes and line-heights across the site
 $type: (
-    small: ( // for things like legal copy (unimportant stuff)
+    caption: (
         default: (12, 16)
     ),
-    base: (  // body copy
-        default: (14, 18)
+    body-s: (
+        default: (14, 20)
     ),
-    base--scaleUp: (
+    body-l: (
         default: (16, 24)
     ),
-    mid: (  // h3, h4, h5, h6 sizes (differentiated by font and weight not size)
-        default: (20, 24)
+    subheading-s: (
+        default: (20, 28),
+        narrow: (16, 24)
     ),
-    large: ( // h2
-        default: (24, 28),
-        narrow: (20, 24)
+    subheading-l: (
+        default: (24, 32),
+        narrow: (20, 28)
     ),
-    jumbo: ( // h1
+    heading-s: (
+        default: (20, 28),
+        narrow: (16, 24)
+    ),
+    heading-m: (
+        default: (24, 32),
+        narrow: (20, 28)
+    ),
+    heading-l: (
+        default: (28, 36),
+        narrow: (24, 32)
+    ),
+    heading-xl: (
         default: (32, 40),
-        narrow: (24, 28)
+        narrow: (28, 36)
     ),
-    // scaleUp type for specific pages
-    // E.g. Home / Thematic Pages / City Pages
-    mid--scaleUp: (
-        default: (22, 28),
-        narrow: (16, 20)
-    ),
-    large--scaleDown: (
-        default: (20, 24),
-        narrow: (14, 18)
-    ),
-    jumbo--scaleUp: (
-        default: (44, 48),
-        narrow: (32, 36)
+    heading-xxl: (
+        default: (48, 56),
+        narrow: (32, 40)
     )
 ) !default;
 
-$font-weight-base           : 300;
-$font-weight-bold           : 500;
-$font-weight-headings       : 300; // instead of browser default, bold
-$line-height-headings       : 1.2;
+$font-weight-base           : 400;
+$font-weight-bold           : 600;
+$font-weight-headings       : 600;
 $line-height-base           : line-height();
 
 // Font stacks
-$font-family-base           : 'Hind Vadodara', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-headings       : 'Ubuntu', Arial, sans-serif; // we need to define some fallbacks here!
+$font-family-base           : 'JustEatBasis', Arial, sans-serif;
 $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
-
-// Fonts for preload
-// ==========================================================================
-// base fonts and headings have a preload system font, when the webfonts are loaded we style with JustEat fonts.
-
-$font-family-preload: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-weight-headings-preload: 400;
-
-// Menulog font overrides
-// ==========================================================================
-@if ($theme == 'ml') {
-    $font-family-headings   : 'Aspira', Arial, sans-serif;
-    $font-weight-headings   : 800; // Heading style is Aspira Heavy, which is 800 font-weight
-}
 
 
 //  Global Breakpoints and unit intervals

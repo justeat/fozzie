@@ -14,27 +14,6 @@
  * TBC
  */
 
-// *******
-//
-// @font-face rules (if any)
-//
-// JET fonts are loaded through Google fonts.  Menulog is a custom font.
-//
-// ******
-
-@if ($theme == 'ml') {
-    // Aspira Heavy
-    @font-face {
-        font-family: Aspira;
-        font-style: normal;
-        font-weight: 800;
-        font-display: swap;
-        src: url('#{$font-path}/menulog/aspira-heavy.woff2') format('woff2'),
-             url('#{$font-path}/menulog/aspira-heavy.woff') format('woff'),
-             url('#{$font-path}/menulog/aspira-heavy.ttf') format('truetype');
-    }
-}
-
 
 /**
  * Typography preloading styles
@@ -47,31 +26,22 @@ html {
 
 body {
     font-family: $font-family-base;
-    @include font-size(base);
+    @include font-size(body-s);
     color: $color-text;
     font-weight: $font-weight-base;
 
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-
-    .is-fontsLoading--base & {
-        font-family: $font-family-preload !important;
-    }
 }
 
 /**
  * Paragraphs
  */
 p {
-    font-family: $font-family-base;
-    @include font-size(base);
+    @include font-size(body-s);
     margin-top: $baseline;
     margin-bottom: 0;
-
-    .is-fontsLoading--base & {
-        font-family: $font-family-preload !important;
-    }
 }
 
 /**
@@ -91,16 +61,10 @@ h6,
     color: $color-headings;
     margin: 0;
     margin-bottom: 0;
-    font-family: $font-family-headings;
     font-weight: $font-weight-headings;
 
     small {
         font-weight: normal;
-    }
-
-    .is-fontsLoading--heading & {
-        font-family: $font-family-preload !important;
-        font-weight: $font-weight-headings-preload;
     }
 }
 
@@ -108,12 +72,12 @@ h6,
 // For example: h3.h1 or h3.alpha
 h1,
 .alpha {
-    @include font-size(jumbo, true, narrow);
+    @include font-size(heading-xl, true, narrow);
     margin-top: $baseline * 2;
     margin-bottom: $baseline;
 
     @include media('>mid') {
-        @include font-size(jumbo);
+        @include font-size(heading-xl);
     }
 
     &:first-child {
@@ -123,10 +87,10 @@ h1,
 
 h2,
 .beta {
-    @include font-size(large, true, narrow);
+    @include font-size(heading-m, true, narrow);
 
     @include media('>mid') {
-        @include font-size(large);
+        @include font-size(heading-m);
     }
 }
 
@@ -136,12 +100,12 @@ h4,
 .delta,
 h5,
 .epsilon {
-    @include font-size(mid);
+    @include font-size(heading-s);
 }
 
 h6,
 .zeta {
-    @include font-size(small);
+    @include font-size(caption);
 }
 
 // Only give these headings a margin-top if they are after other elements
@@ -192,7 +156,7 @@ blockquote {
 
     p {
         margin-bottom: 0;
-        @include font-size(base);
+        @include font-size(body-s);
         font-weight: 300;
     }
 
