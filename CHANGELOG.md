@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 
+v4.2.0
+------------------------------
+*October 26, 2020*
+
+### Added
+- `:focus-visible` styles which provide more control over when focus outlines are displayed. See this article for more info - https://matthiasott.com/notes/focus-visible-is-here.
+
+
 v4.1.0
 ------------------------------
 *September 23, 2020*
