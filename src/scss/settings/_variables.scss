@@ -95,6 +95,7 @@ $grid-column-count            : 12 !default; // Total column count
 $grid-gutter-width            : 16 !default; // [in pixels]
 
 $responsive-grid-sizes        : true !default; // Disable this if you don't want grid sizes for each breakpoint
+$responsive-gutters           : true !default; // Disable this if you don't want gutters for each breakpoint
 $use-legacy-grid              : true !default;
 
 

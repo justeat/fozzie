@@ -43,9 +43,7 @@
 // Global typography styles
 @import 'base/typography';
 
-@mixin grid() {
-    @import 'kickoff-grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
-}
+@import 'base/grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
 
 /**
  * Objects

@@ -22,6 +22,7 @@ v5.0.0-beta.0
 ### Removed
 - `/settings/glyphs` moved into badges, as it is the only place it is used.
 - `/images` as not used.
+- `kickoff-grid` dependency brought into fozzie, to remove external dependency (making it easier to change if needed).
 
 
 v4.2.0

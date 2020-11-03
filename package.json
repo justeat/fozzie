@@ -35,11 +35,10 @@
   "dependencies": {
     "@justeat/f-dom": "1.1.0",
     "@justeat/f-logger": "0.8.1",
-    "@justeat/f-utils": "1.0.0-beta.0",
+    "@justeat/f-utils": "1.0.0",
     "@justeat/fozzie-colour-palette": "3.0.0-beta.6",
     "fontfaceobserver": "2.1.0",
     "include-media": "1.4.9",
-    "kickoff-grid.css": "1.2.0",
     "normalize-scss": "7.0.1"
   },
   "devDependencies": {

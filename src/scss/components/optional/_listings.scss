@@ -27,19 +27,6 @@
     //
     // The mixins are used to stop code duplication as each chunk of
     // code needs to be within its own media mixin.
-    @mixin inlineDivider() {
-        span {
-            display: block;
-            font-size: 0;
-        }
-    }
-
-    @mixin blockDivider() {
-        span {
-            display: inline-block;
-            font-size: 1em;
-        }
-    }
 
     $listing-bg                     : $white;
     $listing-borderColor            : $color-border;
@@ -412,4 +399,18 @@
                     height: 32px;
                 }
             }
+}
+
+@mixin inlineDivider() {
+    span {
+        display: block;
+        font-size: 0;
+    }
+}
+
+@mixin blockDivider() {
+    span {
+        display: inline-block;
+        font-size: 1em;
+    }
 }

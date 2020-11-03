@@ -9,7 +9,7 @@
     @include grid();
 
     // base objects
-    @include body();
+    @include bodyStyles();
     @include buttons();
     @include links();
     @include lists();
@@ -44,7 +44,7 @@
     @include grid();
 
     // base objects
-    @include body();
+    @include bodyStyles();
     @include buttons();
     @include links();
     @include lists();

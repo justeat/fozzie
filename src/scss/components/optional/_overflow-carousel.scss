@@ -13,20 +13,6 @@
     * TBC
     */
 
-    @mixin overflowCarouselInner() {
-        overflow-x: scroll;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        width: 100%;
-    }
-
-    @mixin overflowCarouselContent() {
-        display: inline-flex;
-        white-space: nowrap;
-        padding-left: spacing(x2);
-        padding-right: spacing(x2);
-    }
-
     .c-overflowCarousel {
         @include media('<mid') {
             margin: 0 (spacing(x2) * -1);
@@ -96,8 +82,7 @@
 
     .c-overflowCarousel--hideScroll {
         @include media('>=wide') {
-            /* stylelint-disable-next-line property-no-unknown */
-            scrollbar-width: none;
+            scrollbar-width: none; /* stylelint-disable-line property-no-unknown */
         }
     }
 
@@ -107,5 +92,16 @@
     }
 }
 
+@mixin overflowCarouselInner() {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
 
-
+@mixin overflowCarouselContent() {
+    display: inline-flex;
+    white-space: nowrap;
+    padding-left: spacing(x2);
+    padding-right: spacing(x2);
+}

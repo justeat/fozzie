@@ -18,12 +18,12 @@
     /**
     * Define associated Table variables
     */
-    $table-bgColor                : $color-bg--component !default; // Default background color used for all tables.
-    $table-bgColor--accent        : $grey--offWhite !default; // Background color used for `.table-striped`.
-    $table-border--color          : $grey--offWhite !default; // Border color for table and cell borders.
-    $table-border--width          : 2px !default; // Border width for table border.
-    $table-innerBorder--color     : $color-border !default;
-    $table-verticalBorder--color  : $color-border--interactive !default;
+    $table-bgColor                : $color-bg--component !global; // Default background color used for all tables.
+    $table-bgColor--accent        : $grey--offWhite !global; // Background color used for `.table-striped`.
+    $table-border--color          : $grey--offWhite !global; // Border color for table and cell borders.
+    $table-border--width          : 2px !global; // Border width for table border.
+    $table-innerBorder--color     : $color-border !global;
+    $table-verticalBorder--color  : $color-border--interactive !global;
 
 
     /**
