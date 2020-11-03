@@ -33,7 +33,6 @@
 @import 'fozzie-colour-palette';
 
 @import 'settings/variables';
-@import 'settings/glyphs';
 @import 'f-utils/helpers/breakpoints'; // breakpoint helper – https://github.com/justeat/f-utils/blob/96508ae19809c4b8b83cebb55b9d74728d01c1a5/src/scss/helpers/_breakpoints.scss
 
 
@@ -44,7 +43,9 @@
 // Global typography styles
 @import 'base/typography';
 
-@import 'kickoff-grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
+@mixin grid() {
+    @import 'kickoff-grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
+}
 
 /**
  * Objects
@@ -60,7 +61,6 @@
  */
 @import 'objects/body';
 @import 'objects/buttons';
-@import 'objects/images';
 @import 'objects/links';
 @import 'objects/lists';
 @import 'objects/tables';
@@ -127,3 +127,8 @@
  * Print styles
  */
 @import 'base/print';
+
+/**
+ * Templates for including base sets of styles
+ */
+@import 'templates';

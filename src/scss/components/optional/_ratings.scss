@@ -1,24 +1,23 @@
-/**
- * Components > Rating
- * =================================
- * Used for displaying restuarant rating stars
- *
- * The `c-rating` component is an optional mixin within Fozzie
- * If you'd like to use it in your project you can include it by adding `@include rating();` into your SCSS dependencies file.
- *
- * Documentation:
- * https://fozzie.just-eat.com/styleguide/ui-components/custom/star-ratings
- */
-
-$star-count                 : 6;
-$star-size--small           : 12px;
-$star-size--default         : 16px;
-$star-size--default--scaleUp: 22px;
-$star-size--medium          : 28px;
-$star-size--large           : 42px;
-
-
 @mixin rating() {
+    /**
+    * Components > Rating
+    * =================================
+    * Used for displaying restuarant rating stars
+    *
+    * The `c-rating` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include rating();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * https://fozzie.just-eat.com/styleguide/ui-components/custom/star-ratings
+    */
+
+    $star-count                 : 6;
+    $star-size--small           : 12px;
+    $star-size--default         : 16px;
+    $star-size--default--scaleUp: 22px;
+    $star-size--medium          : 28px;
+    $star-size--large           : 42px;
+
 
     .c-rating {
         @extend %c-icon--star--empty !optional;

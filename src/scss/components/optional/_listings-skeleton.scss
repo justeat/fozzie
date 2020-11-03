@@ -1,22 +1,33 @@
-
-@keyframes skeletonGradient {
-    0% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@mixin anim() {
-    border-radius: 2px;
-    background: linear-gradient(-45deg, $grey--offWhite, $grey--offWhite, $grey--lighter, $grey--offWhite, $grey--offWhite);
-    background-size: 2000px 600%;
-    animation: skeletonGradient 2s ease infinite;
-    animation-fill-mode: forwards;
-}
-
 @mixin listingSkeleton() {
+    /**
+    * Components > Listing Skeleton
+    * =================================
+    * Shows a Skeleton listing layout.
+    *
+    * Example: Search listigns
+    *
+    * The `c-listingSkeleton` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include listingSkeleton();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
+    @keyframes skeletonGradient {
+        0% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @mixin anim() {
+        border-radius: 2px;
+        background: linear-gradient(-45deg, $grey--offWhite, $grey--offWhite, $grey--lighter, $grey--offWhite, $grey--offWhite);
+        background-size: 2000px 600%;
+        animation: skeletonGradient 2s ease infinite;
+        animation-fill-mode: forwards;
+    }
 
     .c-listingSkeleton {
         position: relative;

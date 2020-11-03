@@ -1,137 +1,142 @@
-/**
- * Global Layout Definitions & Helpers
- * ===================================
- */
+@mixin layout() {
+    /**
+    * Global Layout Definitions & Helpers
+    * =================================
+    *
+    * This is an optional component within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include layout();` into your SCSS dependencies file.
+    */
 
-body {
-    background-color: $color-bg;
-}
-
-/*
-* By default we want to give focus styling to all elements that are focusable.
-*/
-:focus {
-    @extend %u-elementFocus;
-}
-
-/*
-* Hide focus styles if they're not needed, for example, when an element receives focus via the mouse.
-*/
-:focus:not(:focus-visible) {
-    outline: 0;
-}
-
-/*
-* Show focus styles on keyboard focus.
-*/
-:focus-visible {
-    @extend %u-elementFocus;
-}
-
-/**
- * Default layout container
- */
-.l-container {
-    width: 100%;
-    max-width: #{$layout-max-width}px;
-    margin: 0 auto;
-    padding-left: #{$layout-margin}px;
-    padding-right: #{$layout-margin}px;
-
-    @include media('<mid') {
-        padding-left: #{$layout-margin--mid}px;
-        padding-right: #{$layout-margin--mid}px;
+    body {
+        background-color: $color-bg;
     }
 
-    @include media('<narrow') {
-        padding-left: #{$layout-margin--narrow}px;
-        padding-right: #{$layout-margin--narrow}px;
-    }
-}
-
-/**
- * Layout container for blocks that don't need padding on the sides
- */
-.l-innerContainer {
-    width: 100%;
-    max-width: #{$layout-max-width}px;
-    margin: 0 auto;
-}
-
-.l-innerContainer--verticalSpacing {
-    margin: spacing(x4) 0;
-
-    @include media('>=mid') {
-        margin: spacing(x5) auto spacing(x6);
+    /*
+    * By default we want to give focus styling to all elements that are focusable.
+    */
+    :focus {
+        @extend %u-elementFocus;
     }
 
-    @include media('>=wide') {
-        margin: spacing(x8) auto;
+    /*
+    * Hide focus styles if they're not needed, for example, when an element receives focus via the mouse.
+    */
+    :focus:not(:focus-visible) {
+        outline: 0;
     }
-}
 
-/**
- * Layout class for containers that contain content (such as T&cs and Privacy pages)
- */
-.l-content {
-    padding-top: spacing(x2);
-
-    @include media('>mid') {
-        padding-top: spacing(x4);
+    /*
+    * Show focus styles on keyboard focus.
+    */
+    :focus-visible {
+        @extend %u-elementFocus;
     }
-}
 
-    .l-content-header {
-        margin: 0 0 spacing(x2);
+    /**
+    * Default layout container
+    */
+    .l-container {
+        width: 100%;
+        max-width: #{$layout-max-width}px;
+        margin: 0 auto;
+        padding-left: #{$layout-margin}px;
+        padding-right: #{$layout-margin}px;
+
+        @include media('<mid') {
+            padding-left: #{$layout-margin--mid}px;
+            padding-right: #{$layout-margin--mid}px;
+        }
+
+        @include media('<narrow') {
+            padding-left: #{$layout-margin--narrow}px;
+            padding-right: #{$layout-margin--narrow}px;
+        }
+    }
+
+    /**
+    * Layout container for blocks that don't need padding on the sides
+    */
+    .l-innerContainer {
+        width: 100%;
+        max-width: #{$layout-max-width}px;
+        margin: 0 auto;
+    }
+
+    .l-innerContainer--verticalSpacing {
+        margin: spacing(x4) 0;
+
+        @include media('>=mid') {
+            margin: spacing(x5) auto spacing(x6);
+        }
+
+        @include media('>=wide') {
+            margin: spacing(x8) auto;
+        }
+    }
+
+    /**
+    * Layout class for containers that contain content (such as T&cs and Privacy pages)
+    */
+    .l-content {
+        padding-top: spacing(x2);
 
         @include media('>mid') {
-            margin: spacing(x2) 0 spacing(x4);
+            padding-top: spacing(x4);
         }
+    }
 
-        > h1 {
-            @include font-size(heading-xxl, true, narrow);
+        .l-content-header {
+            margin: 0 0 spacing(x2);
 
             @include media('>mid') {
-                @include font-size(heading-xxl);
+                margin: spacing(x2) 0 spacing(x4);
+            }
+
+            > h1 {
+                @include font-size(heading-xxl, true, narrow);
+
+                @include media('>mid') {
+                    @include font-size(heading-xxl);
+                }
             }
         }
-    }
-        .l-content-header--centred {
-            text-align: center;
+            .l-content-header--centred {
+                text-align: center;
+            }
+            .l-content-header--highlight {
+                color: $color-headings--highlight;
+            }
+
+        .l-content-main {
+            @extend %u-bordered;
         }
-        .l-content-header--highlight {
-            color: $color-headings--highlight;
-        }
 
-    .l-content-main {
-        @extend %u-bordered;
+    // Used for dividing pages or cards horizontally
+    .l-divider {
+        border-bottom: 1px solid $color-border;
     }
 
-// Used for dividing pages or cards horizontally
-.l-divider {
-    border-bottom: 1px solid $color-border;
-}
-
-// utility that lets you align items side by side and vertically centered
-%l-inlined,
-.l-inlined {
-    display: flex;
-    align-items: center;
-
-    .no-flexbox & {
-       display: inline-block;
-    }
-}
-
-    .l-inlined--top {
+    // utility that lets you align items side by side and vertically centered
+    %l-inlined,
+    .l-inlined {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+
+        .no-flexbox & {
+        display: inline-block;
+        }
     }
 
-// uses flexbox to centre align content both vertically and horizontally
-.l-centred, // British or US English spellings..
-.l-centered {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+        .l-inlined--top {
+            display: flex;
+            align-items: flex-start;
+        }
+
+    // uses flexbox to centre align content both vertically and horizontally
+    .l-centred, // British or US English spellings..
+    .l-centered {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
 }
