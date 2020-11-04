@@ -1,21 +1,20 @@
-/**
- * Components > Item Selector
- * =================================
- * Used on menu pages to display a modal to the user.
- *
- * Example: Menu – When selecting an item.
- *
- * The `c-modal` component is an optional mixin within Fozzie.
- * If you'd like to use it in your project you can include it by adding `@include modal();` into your SCSS dependencies file.
- *
- * Documentation:
- * TBC
- */
-
-$modal-titleFontSize    : body-l !default;
-$modal-borderRadius     : 4px;
-
 @mixin modal() {
+    /**
+    * Components > Item Selector
+    * =================================
+    * Used on menu pages to display a modal to the user.
+    *
+    * Example: Menu – When selecting an item.
+    *
+    * The `c-modal` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include modal();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
+
+    $modal-titleFontSize    : body-l !default;
+    $modal-borderRadius     : 4px;
 
     .c-modal {
         z-index: zIndex(high);

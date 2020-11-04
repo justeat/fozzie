@@ -1,57 +1,41 @@
-/**
- * Components > Listing
- * ===================================
- * Component that styles lists of content
- *
- * Example: SERP Page – Restaurant Information Lists
- *
- * The `c-listing` component is an optional mixin within Fozzie.
- * If you'd like to use it in your project you can include it by adding `@include listing();` into your SCSS dependencies file.
- *
- * Documentation:
- * https://fozzie.just-eat.com/styleguide/ui-components/listings
- */
-
-$listing-bg                     : $white;
-$listing-borderColor            : $color-border;
-$listing-border-radius          : 4px;
-$listing-img-border-radius      : 2px;
-$listing-promoIcon-color        : $orange;
-
-$listing--subsequent-bg         : $grey--lighter;
-$listing--inactive-bg           : rgba($listing-bg, 0.5);
-
-/*
-    The mixins below are to help juggle the badge items between stacked and
-    inline and targets viewports inbetween mid and wide (landscape mobiles and very small desktops).
-
-    On narrow, mid and wide you will see:
-
-    item • item
-
-    between mid and wide you will see:
-
-    item
-    item
-
-    The mixins are used to stop code duplication as each chunk of
-    code needs to be within its own media mixin.
-*/
-@mixin inlineDivider() {
-    span {
-        display: block;
-        font-size: 0;
-    }
-}
-
-@mixin blockDivider() {
-    span {
-        display: inline-block;
-        font-size: 1em;
-    }
-}
-
 @mixin listing() {
+    /**
+    * Components > Listing
+    * ===================================
+    * Component that styles lists of content
+    *
+    * Example: SERP Page – Restaurant Information Lists
+    *
+    * The `c-listing` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include listing();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * https://fozzie.just-eat.com/styleguide/ui-components/listings
+    */
+
+    // The mixins below are to help juggle the badge items between stacked and
+    // inline and target viewports in-between mid and wide (landscape mobiles and very small desktops).
+    //
+    // On narrow, mid and wide you will see:
+    //
+    // item • item
+    //
+    // between mid and wide you will see:
+    //
+    // item
+    // item
+    //
+    // The mixins are used to stop code duplication as each chunk of
+    // code needs to be within its own media mixin.
+
+    $listing-bg                     : $white;
+    $listing-borderColor            : $color-border;
+    $listing-border-radius          : 4px;
+    $listing-img-border-radius      : 2px;
+    $listing-promoIcon-color        : $orange;
+
+    $listing--subsequent-bg         : $grey--lighter;
+    $listing--inactive-bg           : rgba($listing-bg, 0.5);
 
     .c-listing {
         border-radius: $listing-border-radius;
@@ -415,4 +399,18 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                     height: 32px;
                 }
             }
+}
+
+@mixin inlineDivider() {
+    span {
+        display: block;
+        font-size: 0;
+    }
+}
+
+@mixin blockDivider() {
+    span {
+        display: inline-block;
+        font-size: 1em;
+    }
 }

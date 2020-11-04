@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "4.5.2",
+  "version": "5.0.0-beta.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -39,7 +39,6 @@
     "@justeat/fozzie-colour-palette": "3.1.0",
     "fontfaceobserver": "2.1.0",
     "include-media": "1.4.9",
-    "kickoff-grid.css": "1.2.0",
     "normalize-scss": "7.0.1"
   },
   "devDependencies": {

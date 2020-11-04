@@ -1,24 +1,23 @@
-/**
- * Components > Fullscreen Popovers
- * =================================
- * Component that styles a full-page popover/takeover on top of the current content
- *
- * Example: Used for the mobile filters fullscreen popover on the Search Page
- *
- * The `c-fullScreenPopOver` component is an optional mixin within Fozzie.
- * If you'd like to use it in your project you can include it by adding `@include fullScreenPopOver();` into your SCSS dependencies file.
- *
- * Documentation:
- * TBC
- */
-
-$fullScreenPopOver-background        : $grey--offWhite;
-$fullScreenPopOver-action-background : $white;
-$fullScreenPopOver-padding           : spacing(x2);
-$fullScreenPopOver-border-color      : $grey--light;
-$fullScreenPopOver-shadow-color      : rgba($black, 0.12);
-
 @mixin fullScreenPopOver() {
+    /**
+    * Components > Fullscreen Popovers
+    * =================================
+    * Component that styles a full-page popover/takeover on top of the current content
+    *
+    * Example: Used for the mobile filters fullscreen popover on the Search Page
+    *
+    * The `c-fullScreenPopOver` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include fullScreenPopOver();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
+
+    $fullScreenPopOver-background        : $grey--offWhite;
+    $fullScreenPopOver-action-background : $white;
+    $fullScreenPopOver-padding           : spacing(x2);
+    $fullScreenPopOver-border-color      : $grey--light;
+    $fullScreenPopOver-shadow-color      : rgba($black, 0.12);
 
     .c-fullScreenPopOver {
         @include media('<mid') {

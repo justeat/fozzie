@@ -1,26 +1,26 @@
-/**
-* Components > Cuisines Widget
-* =================================
-*
-* Example: Homepage – Popular cuisines.
-*
-* The `c-cuisinesWidget` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding `@include cuisinesWidget();` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/cuisines-widget
-*/
-
-//TODO: Improvement of this solution: WH-682 as suggested in https://github.com/justeat/fozzie/pull/188#issuecomment-442138750
-
-
-$cuisinesWidget-titleColour: $white;
-$cuisinesWidget-defaultBackground: $grey--lighter;
-$cuisinesWidget-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-$cuisinesWidget-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04);
-$cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-
 @mixin cuisinesWidget() {
+    /**
+    * Components > Cuisines Widget
+    * =================================
+    *
+    * Example: Homepage – Popular cuisines.
+    *
+    * The `c-cuisinesWidget` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include cuisinesWidget();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * https://fozzie.just-eat.com/styleguide/ui-components/cuisines-widget
+    */
+
+    //TODO: Improvement of this solution: WH-682 as suggested in https://github.com/justeat/fozzie/pull/188#issuecomment-442138750
+
+
+    $cuisinesWidget-titleColour: $white;
+    $cuisinesWidget-defaultBackground: $grey--lighter;
+    $cuisinesWidget-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    $cuisinesWidget-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04);
+    $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+
     @include media-context(('narrow-mid': 570px, 'mid-wide': 1240px)) {
 
        .c-cuisinesWidget {
