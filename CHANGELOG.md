@@ -3,6 +3,27 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v5 Todo List
+------------------------------
+- File Restructure (will do as a separate PR).
+- Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
+
+
+v5.0.0-beta.0
+------------------------------
+*November 3, 2020*
+
+### Added
+- Base template includes for legacy consuming applications (PoC – needs testing).
+
+### Changed
+- Made all styles and components optional (wrapped in a mixin).
+
+### Removed
+- `/settings/glyphs` moved into badges, as it is the only place it is used.
+- `/images` as not used.
+- `kickoff-grid` dependency brought into fozzie, to remove external dependency (making it easier to change if needed).
+
 
 v4.2.0
 ------------------------------
