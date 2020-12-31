@@ -9,6 +9,14 @@ v5 Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v5.0.0-beta.2
+------------------------------
+*December 31, 2020*
+
+### Changed
+- Updated versions of `f-utils` and `fozzie-colour-palette` and other minor deps.
+
+
 v5.0.0-beta.1
 ------------------------------
 *December 31, 2020*

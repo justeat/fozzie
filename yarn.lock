@@ -1008,10 +1008,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@justeat/browserslist-config-fozzie@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@justeat/browserslist-config-fozzie/-/browserslist-config-fozzie-1.1.1.tgz#8f27a7b683f7c40469b6ff4049384370ae6530fc"
-  integrity sha512-Ypr/5NqRlQyWqLqTOA29DawRQJ3EA5wctVvKsqHgLXo47ikW+A9nNeloySTnu6La5QUjXSw/FTJxyfnuTxkqBg==
+"@justeat/browserslist-config-fozzie@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@justeat/browserslist-config-fozzie/-/browserslist-config-fozzie-1.2.0.tgz#52d46d15c2ce8168c803af3135326554c81c27c6"
+  integrity sha512-hChL9H75HzClJJb3+Xbl/EvJLOUV6cXYNciUZN2TNwsGpBUj39l+YbN+d/r4Or+0o7qFshtoTjLL+Wn9HccCqw==
 
 "@justeat/dom-buddy@2.4.3":
   version "2.4.3"
@@ -1057,15 +1057,15 @@
     handlebars-helper-i18n "^0.1.0"
     handlebars-helper-inlinesvg "^1.0.4"
 
-"@justeat/f-utils@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-1.0.0.tgz#d4f38f6c2b2992fefa39789f1ce742dc083798b1"
-  integrity sha512-sxAIxcHrgYYlxTZuadFTvWeB24M3C53eLWLQ3xMm3nnMQN8Ls8qoWM8WSW8YadgJVUZ5/uq3tP4xMihpvxNupw==
+"@justeat/f-utils@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-1.1.0.tgz#7407d0accec0de8c542478f63e0a015ec9098877"
+  integrity sha512-5nR77wCUngMfrBlPsM+nQJiOEh+I/DZWZiqO3cxZaOg9seanKBZnXMwyWnNAfx3ICzhJ3ejkMj2PSrAz2CxNYw==
 
-"@justeat/fozzie-colour-palette@3.0.0-beta.6":
-  version "3.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-3.0.0-beta.6.tgz#3d66dd63b48dacf649f003a3b3c7c39ecf7d94b7"
-  integrity sha512-DbUvzLpVr2Q9/6QTF58/fomb1YOdn8ytGE+PLo9prNlpc24ZaFEDPfHzK63nyAvmmw1VboRNRzOpffArdW4FNQ==
+"@justeat/fozzie-colour-palette@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-3.1.0.tgz#3bbe51404025c5ef8c5e8bf8280a266e51d2a640"
+  integrity sha512-QWkVa0Hv1xQ6nqxY3S1V37fAQUdIaTO1RtAhCKIe5YmNKBKEegW0PbmFIcPk3ojBVnL6Q1hzUhs3wGvOLJAMbg==
 
 "@justeat/gulp-build-fozzie@10.2.1":
   version "10.2.1"
@@ -4562,10 +4562,10 @@ d@1, d@^1.0.1:
     es5-ext "^0.10.50"
     type "^1.0.1"
 
-danger@10.4.0:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/danger/-/danger-10.4.0.tgz#d4824115c9320e4032b2160a804602442252f5ad"
-  integrity sha512-HoJLLwJPQKhgelMRfu+tfyVO946QIxbEZ7kFlS1ZYYkGVwfvC9Zured/PbmGbUmplfFsrVPTF/S/kM1XdieB/w==
+danger@10.5.4:
+  version "10.5.4"
+  resolved "https://registry.yarnpkg.com/danger/-/danger-10.5.4.tgz#e4f3cd7267a2262178aafffb5ba6f379779276ab"
+  integrity sha512-+1OQymly06JlYwkY0CLJzjzRaSV5qx0/FBhM8uRQz+aNh0Zl6SeUzVYLoeyA+h1UZeXhjYwzlzVDATM+p0691w==
   dependencies:
     "@babel/polyfill" "^7.2.5"
     "@octokit/rest" "^16.43.1"
@@ -4591,7 +4591,7 @@ danger@10.4.0:
     memfs-or-file-map-to-github-branch "^1.1.0"
     micromatch "^3.1.10"
     node-cleanup "^2.1.2"
-    node-fetch "^2.3.0"
+    node-fetch "2.6.1"
     override-require "^1.1.1"
     p-limit "^2.1.0"
     parse-diff "^0.7.0"
@@ -11009,6 +11009,11 @@ node-cleanup@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/node-cleanup/-/node-cleanup-2.1.2.tgz#7ac19abd297e09a7f72a71545d951b517e4dde2c"
   integrity sha1-esGavSl+Caf3KnFUXZUbUX5N3iw=
+
+node-fetch@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-fetch@^2.3.0, node-fetch@^2.6.0:
   version "2.6.0"
