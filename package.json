@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "5.0.0-beta.0",
+  "version": "5.0.0-beta.1",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -59,7 +59,7 @@
   "eyeglass": {
     "name": "fozzie",
     "sassDir": "src/scss",
-    "needs": "^1.1.2",
+    "needs": "^3.0.2",
     "exports": false
   },
   "scripts": {

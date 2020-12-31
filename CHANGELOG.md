@@ -9,6 +9,14 @@ v5 Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v5.0.0-beta.1
+------------------------------
+*December 31, 2020*
+
+### Changed
+- Eyeglass version bumped to v3.
+
+
 v5.0.0-beta.0
 ------------------------------
 *November 3, 2020*
