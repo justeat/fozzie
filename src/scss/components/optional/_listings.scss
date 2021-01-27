@@ -99,7 +99,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
 
             @include media('>mid') {
                 min-height: 96px;
-                padding: spacing(x0.5);
+                padding: spacing() * 0.5;
             }
 
             &.is-active {
@@ -117,7 +117,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
         .c-listing-item--withHeader {
             overflow: hidden;
             // Specific padding top % is based on an image size of 288x104 and maintaining an aspect ratio of 36 : 13
-            padding-top: calc(37.69% + #{spacing(x0.5)});
+            padding-top: calc(37.69% + #{spacing() * 0.5});
 
             @include media('>mid') {
                 padding-top: spacing();
@@ -136,9 +136,9 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                     width: 87px;
                     height: 87px;
                     padding-top: 0;
-                    top: spacing(x0.5);
-                    left: spacing(x0.5);
-                    border-radius: spacing(x0.5);
+                    top: spacing() * 0.5;
+                    left: spacing() * 0.5;
+                    border-radius: spacing() * 0.5;
                 }
 
                 @include media('>=wide') {
@@ -282,7 +282,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 @include font-size(body-l, false);
 
                 @include media('>mid') {
-                    margin: spacing(x0.5) 0;
+                    margin: (spacing() * 0.5) 0;
                     padding-right: spacing(x2);
                 }
             }
@@ -291,7 +291,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
                 top: -4px;
                 color: $green;
                 position: relative;
-                margin-right: spacing(x0.5);
+                margin-right: spacing() * 0.5;
             }
 
             .c-listing-item-details {
@@ -312,7 +312,7 @@ $listing--inactive-bg           : rgba($listing-bg, 0.5);
             .c-listing-item-detailsRow {
                 display : flex;
                 align-items : center;
-                margin-bottom: spacing(x0.5);
+                margin-bottom: spacing() * 0.5;
             }
 
             .c-listing-item-detailsRow-icon {

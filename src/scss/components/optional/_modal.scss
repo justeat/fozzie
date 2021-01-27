@@ -88,7 +88,7 @@ $modal-borderRadius     : 4px;
         padding: spacing();
         position: absolute;
         right: spacing(x2);
-        top: spacing(x1.5);
+        top: spacing() * 1.5;
         z-index: zIndex(high);
 
         @include media('>=mid') {

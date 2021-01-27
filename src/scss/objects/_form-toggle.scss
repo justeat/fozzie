@@ -76,7 +76,7 @@ $formToggle-text--checked           : $green;
 @mixin formToggle-focusState() {
     @include formToggle-border();
     &:after {
-        @extend %u-elementFocus;
+        outline: 2px solid $color-focus-outline;
         left: 1px;
         top: 1px;
         width: calc(100% - 2px);
@@ -111,7 +111,7 @@ $formToggle-text--checked           : $green;
         display: inline-block;
         margin-bottom: spacing();
         border-radius: $formToggle-border-radius;
-        padding: ($formToggle-padding / 2) $formToggle-padding;
+        padding: ($formToggle-padding * 0.5) $formToggle-padding;
         border: $formToggle-border-width solid $formToggle-border-color;
 
         @include media('>=mid') {
@@ -137,7 +137,7 @@ $formToggle-text--checked           : $green;
         //Used alongside the default styles but for a larger tap area (min 44px) on narrow screens
         .o-formToggle--largeTouchArea {
             @include media('<mid') {
-                margin: spacing() 0 spacing() spacing(x0.5);
+                margin: spacing() 0 spacing() (spacing() * 0.5);
             }
         }
 

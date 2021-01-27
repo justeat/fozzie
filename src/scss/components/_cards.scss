@@ -157,7 +157,7 @@ $card-section-collapsed-height                  : 40px;
             border-top: none;
             color: $card-section-highlight-color;
             margin-top: spacing(x2);
-            padding: spacing(x0.5) spacing();
+            padding: (spacing() * 0.5) spacing();
 
             + .c-card-section--highlight {
                 margin-top: 1px;

@@ -20,7 +20,7 @@ $menu-border-width--active              : 2px;
 $menu-link-color                        : $color-text;
 $menu-link-padding                      : spacing() spacing(x2);
 $menu-positionTop                       : $menu-headerHeight + spacing(x2);
-$menu--condensed-link-padding           : spacing(x0.5);
+$menu--condensed-link-padding           : spacing() * 0.5;
 $menu--expandable-bgColor               : $white !default;
 $menu--expandable-borderBottom          : $color-border !default;
 $menu--expandable-linkFontSize          : body-s !default;
@@ -104,7 +104,7 @@ $menu--expandable-linkActiveFontSize    : body-l !default;
                     align-items: center;
 
                     .c-menu-link {
-                        padding-right: spacing(x0.5);
+                        padding-right: spacing() * 0.5;
                     }
                 }
             }

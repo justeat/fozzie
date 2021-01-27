@@ -126,7 +126,7 @@ $mediaElement-spacing           : spacing(x2);
 
         .c-mediaElement--fullstack & {
             flex: auto;
-            margin-top: spacing(x0.5);
+            margin-top: spacing() * 0.5;
         }
 
         .c-mediaElement--fullstack--negativeTop & {

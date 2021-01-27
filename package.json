@@ -60,7 +60,7 @@
   "eyeglass": {
     "name": "fozzie",
     "sassDir": "src/scss",
-    "needs": "^1.1.2",
+    "needs": "^3.0.2",
     "exports": false
   },
   "scripts": {
