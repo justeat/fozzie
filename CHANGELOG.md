@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v4.4.1
 ------------------------------
-*Fabruary 11, 2021*
+*February 11, 2021*
 
 ### Changed
 - `.u-showAboveNarrow` class to include 414px in media query
