@@ -87,6 +87,7 @@
 @import 'components/optional/fullscreen-pop-over';
 @import 'components/optional/listings';
 @import 'components/optional/listings-skeleton';
+@import 'components/optional/loading-indicator';
 @import 'components/optional/menu';
 @import 'components/optional/modal';
 @import 'components/optional/order-card';
@@ -121,11 +122,11 @@
 @import 'trumps/rwd';
 
 
-
 /**
  * Print styles
  */
 @import 'base/print';
+
 
 /**
  * Templates for including base sets of styles

@@ -9,6 +9,14 @@ v5 Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v5.0.0-beta.3
+------------------------------
+*February 16, 2021*
+
+### Added
+- Loading indicator which was in version 4 with an optional size
+
+
 v5.0.0-beta.2
 ------------------------------
 *December 31, 2020*
