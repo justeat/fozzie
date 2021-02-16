@@ -12,6 +12,7 @@
 // =================================
 @import 'settings/theme';
 
+
 // =================================
 // Mixins, helpers and functions
 // =================================
@@ -23,6 +24,7 @@
 @import 'f-utils'; // imports Fozzie SCSS helper functions and mixins – https://github.com/justeat/f-utils
 @import 'include-media'; // Cleaner media query declarations – http://include-media.com
 
+
 // =================================
 // Core variables
 // =================================
@@ -32,6 +34,7 @@
 
 @import 'settings/variables';
 @import 'f-utils/helpers/breakpoints'; // breakpoint helper – https://github.com/justeat/f-utils/blob/96508ae19809c4b8b83cebb55b9d74728d01c1a5/src/scss/helpers/_breakpoints.scss
+
 
 // CSS Normalise and then Reset
 @import 'normalize/import-now'; // https://www.npmjs.com/package/normalize-scss
@@ -97,6 +100,7 @@
 // Global layout definitions & helpers
 @import 'base/layout';
 
+
 /**
  * Experiments
  * =================================
@@ -107,6 +111,7 @@
  */
 // @import 'experiments/INTPB-1451-quick-checkout';
 
+
 /**
  * Utility classes
  * =====================================
@@ -115,10 +120,12 @@
 @import 'trumps/utilities';
 @import 'trumps/rwd';
 
+
 /**
  * Print styles
  */
 @import 'base/print';
+
 
 /**
  * Templates for including base sets of styles
