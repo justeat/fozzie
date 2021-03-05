@@ -12,9 +12,9 @@
     */
 
     $toast-radius                           : 8px;
-    $toast-textColor                        : $white;
-    $toast-bgColor--default                 : $grey--darkest;
-    $toast-bgColor--alert                   : $orange--aa;
+    $toast-textColor                        : $color-white;
+    $toast-bgColor--default                 : $color-grey;
+    $toast-bgColor--alert                   : $color-orange-60;
     $toast-animation-duration               : 0.5s;
     $toast-height                           : 95px;
     $toast-translateY                       : -#{$toast-height - 5px};

@@ -28,13 +28,13 @@
     // The mixins are used to stop code duplication as each chunk of
     // code needs to be within its own media mixin.
 
-    $listing-bg                     : $white;
+    $listing-bg                     : $color-white;
     $listing-borderColor            : $color-border;
     $listing-border-radius          : 4px;
     $listing-img-border-radius      : 2px;
-    $listing-promoIcon-color        : $orange;
+    $listing-promoIcon-color        : $color-orange;
 
-    $listing--subsequent-bg         : $grey--lighter;
+    $listing--subsequent-bg         : $color-grey-20;
     $listing--inactive-bg           : rgba($listing-bg, 0.5);
 
     .c-listing {
@@ -78,7 +78,7 @@
 
         .c-listing-item {
             margin-bottom: spacing(x2);
-            box-shadow: 0 2px 4px 0 rgba($black, 0.1);
+            box-shadow: 0 2px 4px 0 rgba($color-black, 0.1);
             padding-bottom: spacing();
 
             @include media('>mid') {
@@ -130,7 +130,7 @@
                 }
 
                 &:not(.c-listing-item-header--noImage) {
-                    background: $grey--lighter;
+                    background: $color-grey-20;
                 }
             }
 
@@ -199,7 +199,7 @@
                 top: spacing(x2);
                 left: spacing(x2);
                 position: absolute;
-                border: 1px solid $grey--lighter;
+                border: 1px solid $color-border-subtle;
                 border-radius: $listing-img-border-radius;
 
                 @include media('>=wide') {
@@ -273,7 +273,7 @@
 
             .c-listing-item-new {
                 top: -4px;
-                color: $green;
+                color: $color-green;
                 position: relative;
                 margin-right: spacing(x0.5);
             }
@@ -302,7 +302,7 @@
             .c-listing-item-detailsRow-icon {
                 width: 20px;
                 height: 20px;
-                fill: $grey--dark;
+                fill: $color-grey-50;
             }
 
             .c-listing-item-detailsRow-text {
@@ -339,7 +339,7 @@
             }
 
             .c-listing-item-promo-text--earned {
-                color: $green;
+                color: $color-green;
             }
 
             .c-listing-item-rating {

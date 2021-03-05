@@ -194,7 +194,7 @@
     }
 
     mark {
-        background: $yellow--offWhite;
+        background: $color-yellow-10;
         padding: 2px 4px;
         border-radius: 3px;
     }
@@ -226,8 +226,7 @@
     hr {
         margin: ($baseline) 0;
         border: 0;
-        border-top: 1px solid $hr-color;
-        border-bottom: 1px solid $white;
+        border-top: 1px solid $color-divider-default;
     }
 
     // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/

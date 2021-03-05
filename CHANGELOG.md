@@ -5,8 +5,42 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v5 Todo List
 ------------------------------
+- Typography variable updates (next PR)
 - File Restructure (will do as a separate PR).
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
+
+
+v5.0.0-beta.4
+------------------------------
+*March 5, 2021*
+
+### Changed
+- Moved from using `fozzie-colour-palette` to `pie-design-tokens`.
+- Colour variables transitioned:
+  - `$black` > `$color-black`
+  - `$white` > `$color-white`
+  - `$grey--light` > `$color-grey-30`
+  - `$brand--orange` > `$color-orange-30`
+  - `$orange` > `$color-orange`
+  - `$orange-dark` > `$color-orange` & darken(4%)
+  - `$orange-darkest` > `$color-orange` & darken(10%)
+  - `$orange--aa` > `$color-orange-60`
+  - `$orange--offWhite` > `$color-orange-10`
+  - `$blue` > `$color-blue`
+  - `$blue--offWhite` > `$color-blue-10`
+  - `$blue--offWhite--dark`> `$color-blue-10` & darken(4%)
+  - `$blue--offWhite--darkest`> `$color-blue-10` & darken(10%)
+  - `$red` > `$color-red`
+  - `$green` > `$color-green`
+  - `$green--offWhite` > `$color-green-10`
+  - `$yellow--offWhite` > `$color-yellow-10`
+  - `$grey--offWhite` > `$color-grey-10`
+  - `$grey--lighter` > `$color-grey-20`
+  - `$grey--mid` > `$color-grey-40`
+  - `$grey--dark` > `$color-grey-50`
+  - `$grey--darkest` > `$color-grey`
+  - `$purple` > `$color-purple`
+  - `$purple--light` > `color-purple-10`
 
 
 v5.0.0-beta.3

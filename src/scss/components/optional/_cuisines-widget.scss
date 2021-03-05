@@ -15,8 +15,8 @@
     //TODO: Improvement of this solution: WH-682 as suggested in https://github.com/justeat/fozzie/pull/188#issuecomment-442138750
 
 
-    $cuisinesWidget-titleColour: $white;
-    $cuisinesWidget-defaultBackground: $grey--lighter;
+    $cuisinesWidget-titleColour: $color-white;
+    $cuisinesWidget-defaultBackground: $color-grey-20;
     $cuisinesWidget-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     $cuisinesWidget-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04);
     $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));

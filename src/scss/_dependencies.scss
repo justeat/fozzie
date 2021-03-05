@@ -30,7 +30,7 @@
 // =================================
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/fozzie-colour-palette
 // If a custom theme is specified, it applies a set of colour overides to the base theme depending on the $theme
-@import 'fozzie-colour-palette';
+@import 'pie-design-tokens';
 
 @import 'settings/variables';
 @import 'f-utils/helpers/breakpoints'; // breakpoint helper – https://github.com/justeat/f-utils/blob/96508ae19809c4b8b83cebb55b9d74728d01c1a5/src/scss/helpers/_breakpoints.scss
