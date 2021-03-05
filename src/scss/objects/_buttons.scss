@@ -10,49 +10,49 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/buttons
     */
 
-    $btn-default-bgColor                : $grey--lighter;
+    $btn-default-bgColor                : $color-grey-20;
     $btn-default-weight                 : 600;
     $btn-default-height                 : 2.6;
     $btn-default-font-size              : 18;
     $btn-default-font-family            : $font-family-base;
-    $btn-default-bgColor--hover         : $grey--light;
+    $btn-default-bgColor--hover         : $color-grey-30;
     $btn-default-borderRadius           : 2px;
     $btn-default-hozPadding             : 1em;
     $btn-default-vertPadding            : 11px;
 
-    $btn-primary-bgColor                : $orange;
-    $btn-primary-bgColor--hover         : $orange--dark;
-    $btn-primary-bgColor--focus         : $orange--darkest;
-    $btn-primary-textColor              : $white;
+    $btn-primary-bgColor                : $color-orange;
+    $btn-primary-bgColor--hover         : darken($color-orange, $color-hover-01);
+    $btn-primary-bgColor--focus         : darken($color-orange, $color-active-01);
+    $btn-primary-textColor              : $color-white;
 
-    $btn-secondary-bgColor              : $blue--offWhite;
-    $btn-secondary-bgColor--hover       : $blue--offWhite--dark;
-    $btn-secondary-bgColor--active      : $blue--offWhite--darkest;
-    $btn-secondary-textColor            : $blue;
-    $btn-secondary-textColor--hover     : $blue;
-    $btn-secondary-textColor--active    : $blue;
+    $btn-secondary-bgColor              : $color-blue-10;
+    $btn-secondary-bgColor--hover       : darken($color-blue-10, $color-hover-01);
+    $btn-secondary-bgColor--active      : darken($color-blue-10, $color-active-01);
+    $btn-secondary-textColor            : $color-blue;
+    $btn-secondary-textColor--hover     : $color-blue;
+    $btn-secondary-textColor--active    : $color-blue;
 
-    $btn-tertiary-bgColor              : $white;
-    $btn-tertiary-bgColor--hover       : $grey--light;
-    $btn-tertiary-bgColor--active      : $grey--mid;
-    $btn-tertiary-textColor            : $blue;
-    $btn-tertiary-textColor--hover     : $blue;
-    $btn-tertiary-textColor--active    : $blue;
+    $btn-tertiary-bgColor              : $color-white;
+    $btn-tertiary-bgColor--hover       : $color-grey-30;
+    $btn-tertiary-bgColor--active      : $color-grey-40;
+    $btn-tertiary-textColor            : $color-blue;
+    $btn-tertiary-textColor--hover     : $color-blue;
+    $btn-tertiary-textColor--active    : $color-blue;
 
     $btn-wide-hozPadding                : 2em;
 
-    $btn-disabled-bgColor               : $grey--light;
+    $btn-disabled-bgColor               : $color-grey-30;
 
-    $btn-transparent-color              : $red;
-    $btn-transparent-color--hover       : $grey--mid;
+    $btn-transparent-color              : $color-red;
+    $btn-transparent-color--hover       : $color-grey-40;
 
-    $btnGroup-outline-textColor         : $grey--dark;
-    $btnGroup-outline-border            : $grey--light;
+    $btnGroup-outline-textColor         : $color-grey-50;
+    $btnGroup-outline-border            : $color-grey-30;
     $btnGroup-outline-active-border     : $color-secondary;
     $btnGroup-outline-active-text-color : $color-secondary;
 
-    $btnToggle-bg                       : $grey--lighter;
-    $btnToggle-bg--active               : $white;
+    $btnToggle-bg                       : $color-grey-20;
+    $btnToggle-bg--active               : $color-white;
     $btnToggle-padding                  : 5px;
 
     $btn-icon-dimension                 : 36px;
@@ -92,7 +92,7 @@
         border: 1px solid transparent;
         user-select: none;
 
-        color: $grey--dark;
+        color: $color-grey-50;
         text-decoration: none;
 
         &:hover,
