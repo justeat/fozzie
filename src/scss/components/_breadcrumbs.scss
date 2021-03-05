@@ -11,8 +11,19 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/breadcrumbs
     */
 
-    $breadcrumb-font-weight: $font-weight-bold;
-    $breadcrumb--compact-background: rgba($black, 0.2);
+    $breadcrumb-text-color                   : $color-grey-50;
+    $breadcrumb-text-weight                  : $font-weight-bold;
+    $breadcrumb-link-color                   : $color-grey;
+    $breadcrumb-link-color--hover            : $color-grey-50;
+    $breadcrumb-icon-fillColor               : $color-black;
+    $breadcrumb--compact-background          : rgba($color-black, 0.2);
+
+    $breadcrumb--transparent-text-color      : $color-white;
+    $breadcrumb--transparent-icon-fillColor  : $color-white;
+    $breadcrumb--transparent-link-color      : $color-white;
+
+    $breadcrumb--pill-text-color             : $color-white;
+    $breadcrumb--pill-link-color--hover      : $color-white;
 
     .c-breadcrumb {
         width: 100%;
@@ -24,9 +35,10 @@
 
     .c-breadcrumb-item {
         float: left;
-        color: $grey--dark;
+        color: $breadcrumb-text-color;
+
         svg {
-            fill: $black;
+            fill: $breadcrumb-icon-fillColor;
         }
     }
 
@@ -36,12 +48,12 @@
 
     .c-breadcrumb-item-link {
         text-decoration: none;
-        color: $grey--darkest;
-        font-weight: $breadcrumb-font-weight;
+        color: $breadcrumb-link-color;
+        font-weight: $breadcrumb-text-weight;
 
         &:hover {
             text-decoration: underline;
-            color: $grey--dark;
+            color: $breadcrumb-link-color--hover;
         }
     }
 
@@ -53,14 +65,15 @@
         background-color: transparent;
 
         .c-breadcrumb-item {
-            color: $white;
+            color: $breadcrumb--transparent-text-color;
+
             svg {
-                fill: $white;
+                fill: $breadcrumb--transparent-icon-fillColor;
             }
         }
 
         .c-breadcrumb-item-link {
-            color: $white;
+            color: $breadcrumb--transparent-link-color;
         }
     }
 
@@ -96,7 +109,7 @@
     */
 
     .c-breadcrumb--pill {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba($color-black, 0.5);
         border-radius: 12px;
         line-height: normal;
         display: inline-block;
@@ -106,7 +119,7 @@
         a {
             &:hover,
             &:focus {
-                color: $white;
+                color: $breadcrumb--pill-link-color--hover;
             }
         }
 
@@ -131,7 +144,7 @@
 
         .c-breadcrumb-item,
         .c-breadcrumb-item-link {
-            color: $white;
+            color: $breadcrumb--pill-text-color;
         }
     }
 }

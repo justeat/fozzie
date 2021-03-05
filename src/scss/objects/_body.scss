@@ -12,14 +12,14 @@
     */
 
     .o-body--bgWhite {
-        background-color: $white;
+        background-color: $color-white;
     }
 
         .o-body--bgWhite--belowMid {
             background-color: $color-bg;
 
             @include media('<mid') {
-                background-color: $white;
+                background-color: $color-white;
             }
         }
 }

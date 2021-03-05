@@ -32,19 +32,19 @@
     *
     */
 
-    $formControl-bgColor            : $white !default;
-    $formControl-bgColor--disabled  : $color-disabled !default;
-    $formControl-borderColor        : $color-border !default;
-    $formControl-borderColor--hover : $orange !default;
-    $formControl-color              : $orange !default;
-    $formControl-color--hover       : $orange--dark !default;
-    $formControl-background-color   : $color-bg !default;
-    $formControl-margin-left        : 0 !default;
-    $formControl-padding-left       : spacing(x4) !default;
-    $formControl-width              : 24px !default;
-    $formControl-width--wide        : 20px !default;
-    $formControl-height             : 24px !default;
-    $formControl-height--wide       : 20px !default;
+    $formControl-bgColor            : $color-white;
+    $formControl-bgColor--disabled  : $color-disabled;
+    $formControl-borderColor        : $color-border;
+    $formControl-borderColor--hover : $color-orange;
+    $formControl-color              : $color-orange;
+    $formControl-color--hover       : darken($color-orange, 4%); // TODO update to include hover alias token
+    $formControl-background-color   : $color-bg;
+    $formControl-margin-left        : 0;
+    $formControl-padding-left       : spacing(x4);
+    $formControl-width              : 24px;
+    $formControl-width--wide        : 20px;
+    $formControl-height             : 24px;
+    $formControl-height--wide       : 20px;
     $formControl-border-width       : 1px;
 
 
@@ -95,7 +95,7 @@
             display: inline-block;
             width: $formControl-width;
             height: $formControl-height;
-            border: $formControl-border-width solid $grey--light;
+            border: $formControl-border-width solid $color-grey-30;
             background-color: $formControl-bgColor;
             vertical-align: middle;
             margin-left: $formControl-margin-left;
@@ -228,7 +228,7 @@
             &:before {
                 content: '';
                 background-color: $formControl-color;
-                border: 3px solid $grey--lighter;
+                border: 3px solid $color-grey-20;
                 border-radius: 50%;
                 width: $formControl-width - 2;
                 height: $formControl-height - 2;

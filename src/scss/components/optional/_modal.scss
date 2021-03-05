@@ -100,13 +100,13 @@
     }
 
         .c-modal-closeBtn--rounded {
-            border: solid 1px $white;
-            background-color: $white;
+            border: solid 1px $color-white;
+            background-color: $color-white;
             border-radius: 50%;
             opacity: 0.9;
 
             &:hover {
-                background-color: $white;
+                background-color: $color-white;
             }
         }
 
@@ -132,7 +132,7 @@
         }
 
     .c-modal-content {
-        background-color: $white;
+        background-color: $color-white;
         border-radius: $modal-borderRadius;
         box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
         display: none;
@@ -208,7 +208,7 @@
     }
 
     .c-modal-actions {
-        background-color: $white;
+        background-color: $color-white;
         box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.12);
         bottom: 0;
         padding: spacing(x3);
