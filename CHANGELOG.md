@@ -5,9 +5,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v5 Todo List
 ------------------------------
-- Typography variable updates (next PR)
 - File Restructure (will do as a separate PR).
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
+
+v5.0.0-beta.5
+------------------------------
+*March 23, 2021*
+
+### Changed
+- Updated type-map with new typography variables for font-size and line-height.
+- `$font-weight-bold` was removed as it now comes straight from pie-design-tokens
+- Typography variables transitioned:
+  - `$font-weight-base` > `$font-weight-regular`
 
 
 v5.0.0-beta.4

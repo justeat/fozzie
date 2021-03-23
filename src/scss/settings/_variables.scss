@@ -9,57 +9,55 @@
 // Set this in pixels (but do not add px),
 // the font-size mixin will convert to REMS
 
-$font-size-base             : 14;
+$font-size-base             : $font-paragraph-02;
 $font-size-base-px          : $font-size-base * 1px;
 
 // Type map – these are our global font-sizes and line-heights across the site
 $type: (
     caption: (
-        default: (12, 16)
+        default: ($font-size-a)
     ),
     body-s: (
-        default: (14, 20)
+        default: ($font-size-b)
     ),
     body-l: (
-        default: (16, 24)
+        default: ($font-size-c)
     ),
     subheading-s: (
-        default: (20, 28),
-        narrow: (16, 24)
+        default: ($font-size-d),
+        narrow: ($font-size-c)
     ),
     subheading-l: (
-        default: (24, 32),
-        narrow: (20, 28)
+        default: ($font-size-e),
+        narrow: ($font-size-d)
     ),
     heading-s: (
-        default: (20, 28),
-        narrow: (16, 24)
+        default: ($font-size-d),
+        narrow: ($font-size-c)
     ),
     heading-m: (
-        default: (24, 32),
-        narrow: (20, 28)
+        default: ($font-size-e),
+        narrow: ($font-size-d)
     ),
     heading-l: (
-        default: (28, 36),
-        narrow: (24, 32)
+        default: ($font-size-f),
+        narrow: ($font-size-e)
     ),
     heading-xl: (
-        default: (32, 40),
-        narrow: (28, 36)
+        default: ($font-size-g),
+        narrow: ($font-size-f)
     ),
     heading-xxl: (
-        default: (48, 56),
-        narrow: (32, 40)
+        default: ($font-size-h),
+        narrow: ($font-size-g)
     )
 ) !default;
 
-$font-weight-base           : 400;
-$font-weight-bold           : 600;
-$font-weight-headings       : 600;
+$font-weight-headings       : $font-weight-bold;
 $line-height-base           : line-height();
 
 // Font stacks
-$font-family-base           : 'JustEatBasis', Arial, sans-serif;
+$font-family-base           : $font-family-primary, Arial, sans-serif;
 $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 
 

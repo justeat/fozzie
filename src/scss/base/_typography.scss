@@ -32,7 +32,7 @@
         font-family: $font-family-base;
         @include font-size(body-s);
         color: $color-text;
-        font-weight: $font-weight-base;
+        font-weight: $font-weight-regular;
 
         text-rendering: optimizelegibility;
         -webkit-font-smoothing: antialiased;

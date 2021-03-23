@@ -60,7 +60,7 @@
             .c-menu-item--active {
                 border-left: none;
                 border-bottom: solid $menu-border-width--active $menu-border-color--active;
-                font-weight: $font-weight-base;
+                font-weight: $font-weight-regular;
                 margin-left: 0;
             }
         }
@@ -156,7 +156,7 @@
                     &:focus,
                     &:hover {
                         border: 0;
-                        font-weight: $font-weight-base;
+                        font-weight: $font-weight-regular;
                     }
                 }
 
