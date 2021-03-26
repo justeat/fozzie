@@ -114,7 +114,7 @@
     .c-orderCard-order {
         @include font-size(body-l, false);
         line-height: line-height(16px, 24px);
-        font-weight: $font-weight-base;
+        font-weight: $font-weight-regular;
         @include font-size(22px);
         color: $color-blue;
         text-align: center;
