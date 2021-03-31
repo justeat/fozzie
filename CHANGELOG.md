@@ -8,6 +8,23 @@ v5 Todo List
 - File Restructure (will do as a separate PR).
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
+
+v5.0.0-beta.6
+------------------------------
+*March 31, 2021*
+
+### Changed
+- Underlined hover and focus state for `.o-link--noDecoration`.
+- More colour variables transitioned:
+  - `$color-bg` > `$color-background-default`
+  - `$color-text` > `$color-content-default`
+  - `$color-headings` > `$color-content-default`
+  - `$color-link-default` > `$color-content-link`
+  - `$color-border` > `$color-border-strong`
+  - `$color-link-hover` > `$color-content-link` & darken(4%)
+  - `$color-link-active` > `$color-content-link` & darken(6%)
+
+
 v5.0.0-beta.5
 ------------------------------
 *March 23, 2021*

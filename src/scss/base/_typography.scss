@@ -31,7 +31,7 @@
     body {
         font-family: $font-family-base;
         @include font-size(body-s);
-        color: $color-text;
+        color: $color-content-default;
         font-weight: $font-weight-regular;
 
         text-rendering: optimizelegibility;
@@ -62,7 +62,7 @@
     .gamma,
     .delta,
     .epsilon {
-        color: $color-headings;
+        color: $color-content-default;
         margin: 0;
         margin-bottom: 0;
         font-family: $font-family-base;

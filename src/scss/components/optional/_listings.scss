@@ -29,7 +29,7 @@
     // code needs to be within its own media mixin.
 
     $listing-bg                     : $color-white;
-    $listing-borderColor            : $color-border;
+    $listing-borderColor            : $color-border-strong;
     $listing-border-radius          : 4px;
     $listing-img-border-radius      : 2px;
     $listing-promoIcon-color        : $color-orange;
@@ -168,7 +168,7 @@
             // make sure it doesn’t underline everything (only the main title)
             .c-listing-item-link {
                 display: block;
-                color: $color-text;
+                color: $color-content-default;
                 text-decoration: none;
 
                 &:hover,
@@ -232,7 +232,7 @@
 
             .c-listing-item-info {
                 position: relative;
-                color: $color-text;
+                color: $color-content-default;
                 padding-left: 70px;
                 min-height: 60px;
 
