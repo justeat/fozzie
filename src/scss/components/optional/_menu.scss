@@ -15,16 +15,16 @@
 
     $menu-headerHeight                      : 57px;
     $menu-fontSize                          : body-l;
-    $menu-border-color                      : $color-border;
+    $menu-border-color                      : $color-border-strong;
     $menu-border-color--active              : $color-grey-50;
     $menu-border-width                      : 1px;
     $menu-border-width--active              : 2px;
-    $menu-link-color                        : $color-text;
+    $menu-link-color                        : $color-content-default;
     $menu-link-padding                      : spacing() spacing(x2);
     $menu-positionTop                       : $menu-headerHeight + spacing(x2);
     $menu--condensed-link-padding           : spacing(x0.5);
     $menu--expandable-bgColor               : $color-white;
-    $menu--expandable-borderBottom          : $color-border;
+    $menu--expandable-borderBottom          : $color-border-strong;
     $menu--expandable-linkFontSize          : body-s;
     $menu--expandable-linkActiveFontSize    : body-l;
 

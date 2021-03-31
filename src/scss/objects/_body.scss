@@ -16,7 +16,7 @@
     }
 
         .o-body--bgWhite--belowMid {
-            background-color: $color-bg;
+            background-color: $color-background-default;
 
             @include media('<mid') {
                 background-color: $color-white;

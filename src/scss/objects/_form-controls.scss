@@ -34,11 +34,11 @@
 
     $formControl-bgColor            : $color-white;
     $formControl-bgColor--disabled  : $color-disabled;
-    $formControl-borderColor        : $color-border;
+    $formControl-borderColor        : $color-border-strong;
     $formControl-borderColor--hover : $color-orange;
     $formControl-color              : $color-orange;
-    $formControl-color--hover       : darken($color-orange, 4%); // TODO update to include hover alias token
-    $formControl-background-color   : $color-bg;
+    $formControl-color--hover       : darken($color-orange, $color-hover-01);
+    $formControl-background-color   : $color-background-default;
     $formControl-margin-left        : 0;
     $formControl-padding-left       : spacing(x4);
     $formControl-width              : 24px;
