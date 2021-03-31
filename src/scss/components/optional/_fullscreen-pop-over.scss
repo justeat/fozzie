@@ -17,7 +17,7 @@
     $fullScreenPopOver-action-background : $color-white;
     $fullScreenPopOver-padding           : spacing(x2);
     $fullScreenPopOver-border-color      : $color-grey-30;
-    $fullScreenPopOver-shadow-color      : rgba(color-black, 0.12);
+    $fullScreenPopOver-shadow-color      : rgba($color-black, 0.12);
 
     .c-fullScreenPopOver {
         @include media('<mid') {

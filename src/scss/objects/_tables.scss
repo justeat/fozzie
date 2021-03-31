@@ -22,8 +22,8 @@
     $table-bgColor--accent        : $color-grey-10 !global; // Background color used for `.table-striped`.
     $table-border--color          : $color-grey-10 !global; // Border color for table and cell borders.
     $table-border--width          : 2px !global; // Border width for table border.
-    $table-innerBorder--color     : $color-border !global;
-    $table-verticalBorder--color  : $color-border--interactive !global;
+    $table-innerBorder--color     : $color-grey-40 !global;
+    $table-verticalBorder--color  : $color-grey-50 !global;
 
 
     /**
