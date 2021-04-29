@@ -9,6 +9,21 @@ v5 Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v5.0.0-beta.7
+------------------------------
+*April 29, 2021*
+
+### Changed
+- More colour variables transitioned:
+  - `$color-secondary` > `$color-blue`
+  - `$color-text--hint` > `$color-grey-40`
+  - `$color-text--success` > `$color-content-positive`
+  - `$color-text--danger` > `$color-content-error`
+  - `$color-text--warning` > `$color-content-brand-strong`
+  - `$color-focus-outline` > `$color-focus`
+- Updated `f-utils` to v2.0.0
+
+
 v5.0.0-beta.6
 ------------------------------
 *March 31, 2021*
