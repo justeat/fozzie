@@ -1057,10 +1057,10 @@
     handlebars-helper-i18n "^0.1.0"
     handlebars-helper-inlinesvg "^1.0.4"
 
-"@justeat/f-utils@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-1.1.0.tgz#7407d0accec0de8c542478f63e0a015ec9098877"
-  integrity sha512-5nR77wCUngMfrBlPsM+nQJiOEh+I/DZWZiqO3cxZaOg9seanKBZnXMwyWnNAfx3ICzhJ3ejkMj2PSrAz2CxNYw==
+"@justeat/f-utils@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-2.0.0.tgz#34e34870f20ec85b5d0aca8a87e2bc2225e2f597"
+  integrity sha512-fFkNH39Qe6sg6e2YZmbh4l4g4qegvpsaEKnj1grCDRspQQvzpmBQBifx6nkHsdaEhetZTJC3LqwOXybmlVJI/g==
 
 "@justeat/gulp-build-fozzie@10.2.1":
   version "10.2.1"

@@ -183,23 +183,23 @@
     }
 
     .u-color-secondary {
-        color: $color-secondary;
+        color: $color-blue;
     }
 
     .u-color-text--hint {
-        color: $color-text--hint;
+        color: $color-grey-40;
     }
 
     .u-color-text--success {
-        color: $color-text--success;
+        color: $color-content-positive;
     }
 
     .u-color-text--danger {
-        color: $color-text--danger;
+        color: $color-content-error;
     }
 
     .u-color-text--warning {
-        color: $color-text--warning;
+        color: $color-content-brand-strong;
     }
 
     //
@@ -363,14 +363,14 @@
     /* Custom outline styling for elements that have a focus state */
     %u-elementFocus,
     .u-elementFocus {
-        outline: 2px solid $color-focus-outline;
+        outline: 2px solid $color-focus;
     }
 
     /* Custom visual outline emulation for better appearance on elements with rounded corners */
     %u-elementFocus--boxShadow,
     .u-elementFocus--boxShadow {
     outline: none;
-    box-shadow: 0 0 0 2px $color-focus-outline;
+    box-shadow: 0 0 0 2px $color-focus;
     }
 
     /*
@@ -384,7 +384,7 @@
     }
     %u-focusShadow-content,
     .u-focusShadow:focus > .u-focusShadow-content {
-        box-shadow: 0 0 2px 2px $color-focus-outline; /* keyboard-only focus styles */
+        box-shadow: 0 0 2px 2px $color-focus; /* keyboard-only focus styles */
     }
 
 
