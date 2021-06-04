@@ -9,6 +9,14 @@ v5 Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v5.0.0-beta.8
+------------------------------
+*June 4, 2021*
+
+### Added
+- Mixin in `loading-indicator` to be able to customise the colours of the spinner.
+
+
 v5.0.0-beta.7
 ------------------------------
 *April 29, 2021*

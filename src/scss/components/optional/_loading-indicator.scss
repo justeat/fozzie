@@ -15,6 +15,14 @@ $loading-indicator-borderSize: 3px;
 $loading-indicator-borderColorOpaque-default: rgba(243, 109, 0, 0.2);
 $loading-indicator-spacing: 20px;
 
+@mixin spinnerColor($loading-indicator-color: $loading-indicator-color-default, $loading-indicator-borderColorOpaque: $loading-indicator-borderColorOpaque-default) {
+  .c-spinner {
+    border: $loading-indicator-borderSize solid $loading-indicator-color;
+    border-top: $loading-indicator-borderSize solid $loading-indicator-borderColorOpaque;
+    border-right: $loading-indicator-borderSize solid $loading-indicator-borderColorOpaque;
+  }
+}
+
 @mixin loadingIndicator($loading-indicator-size: 'medium', $loading-indicator-color: $loading-indicator-color-default, $loading-indicator-borderColorOpaque: $loading-indicator-borderColorOpaque-default) {
   @keyframes spin {
     from {
@@ -33,11 +41,10 @@ $loading-indicator-spacing: 20px;
 
   .c-spinner {
     margin-right: $loading-indicator-spacing;
-    border: $loading-indicator-borderSize solid $loading-indicator-color;
-    border-top: $loading-indicator-borderSize solid $loading-indicator-borderColorOpaque;
-    border-right: $loading-indicator-borderSize solid $loading-indicator-borderColorOpaque;
     border-radius: 50%;
     animation: spin 1s linear 0s infinite;
+
+    @include spinnerColor();
 
     @if $loading-indicator-size=='large' {
       width: $loading-indicator-size-large;
