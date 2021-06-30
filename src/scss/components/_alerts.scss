@@ -38,14 +38,14 @@
     // Generate contextual modifier classes for colorizing the alert.
 
     .c-alert--success {
-        @include alert-variant($color-bg--accept, $color-content-positive);
+        @include alert-variant($color-support-positive-02, $color-content-positive);
     }
 
     .c-alert--warning {
-        @include alert-variant($color-bg--notification, $color-content-brand-strong);
+        @include alert-variant($color-support-warning-02, $color-content-brand-strong);
     }
 
     .c-alert--danger {
-        @include alert-variant($color-bg--error, $color-content-error);
+        @include alert-variant($color-support-error-02, $color-content-error);
     }
 }
