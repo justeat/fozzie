@@ -18,7 +18,7 @@
     /**
     * Define associated Table variables
     */
-    $table-bgColor                : $color-bg--component !global; // Default background color used for all tables.
+    $table-bgColor                : $color-container-default !global; // Default background color used for all tables.
     $table-bgColor--accent        : $color-grey-10 !global; // Background color used for `.table-striped`.
     $table-border--color          : $color-grey-10 !global; // Border color for table and cell borders.
     $table-border--width          : 2px !global; // Border width for table border.
@@ -89,7 +89,7 @@
         // Nesting
         & table,
         & .table {
-            background-color: $color-bg;
+            background-color: $color-background-default;
         }
 
         &:not(.not-striped) {
