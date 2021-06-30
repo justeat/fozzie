@@ -9,6 +9,22 @@ v5 Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v5.0.0-beta.9
+------------------------------
+*June 30, 2021*
+
+### Changed
+
+- More colour variables transitioned:
+  - `$color-headings--highlight` > `$color-content-brand`
+  - `$color-bg--accept` > `$color-support-positive-02`
+  - `$color-bg--notification` > `$color-support-warning-02`
+  - `$color-bg--error` > `$color-support-error-02`
+  - `$color-disabled` > `$color-disabled-01`
+  - `$color-bg--component` > `$color-container-default`
+- Changed some global tokens to aliases
+
+
 v5.0.0-beta.8
 ------------------------------
 *June 4, 2021*
