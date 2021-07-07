@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+v4.5.2
+------------------------------
+*July 7, 2021*
+
+### Fixed
+- fixed the linter error
+
 v4.5.1
 ------------------------------
 *July 5, 2021*
