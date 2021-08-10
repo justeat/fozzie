@@ -58,7 +58,7 @@
     "eyeglass-module"
   ],
   "eyeglass": {
-    "name": "fozzie",
+    "name": "fozzie4",
     "sassDir": "src/scss",
     "needs": "^1.1.2",
     "exports": false
