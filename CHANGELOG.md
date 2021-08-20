@@ -3,6 +3,21 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+
+v6.0.0-beta.0
+------------------------------
+*August 20, 2021*
+
+### Updated
+- pie-design-tokens package to v1.0.0-beta.0 to include new font vars
+
+### Added
+- `$font-family-secondary` as a fallback font (Arial)
+
+### Changed
+- `$font-weight-headings` use `$font-weight-extrabold` font weight (800)
+
+
 v5 Todo List
 ------------------------------
 - File Restructure (will do as a separate PR).

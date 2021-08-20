@@ -53,11 +53,11 @@ $type: (
     )
 ) !default;
 
-$font-weight-headings       : $font-weight-bold;
+$font-weight-headings       : $font-weight-extrabold;
 $line-height-base           : line-height();
 
 // Font stacks
-$font-family-base           : $font-family-primary, Arial, sans-serif;
+$font-family-base           : $font-family-primary, $font-family-secondary, sans-serif;
 $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 
 
