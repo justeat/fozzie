@@ -3,17 +3,41 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
-v5 Todo List
+Future Todo List
 ------------------------------
-- File Restructure (will do as a separate PR).
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
+
+
+v5.0.0
+------------------------------
+*August 23, 2021*
+
+## Main changes:
+- Colour and typography variables updated to use `pie-design-tokens` repo instead of `fozzie-colour-palette`.
+- When importing v5 fozzie, consuming applications only get included variables, functions and mixins (no classes). Component styles for buttons, form-fields etc are being deprecated as we move our components over to versionable packages, but can still be included via optional mixins applications that still need this as part of the transition.
+- Two optional variables can be used to include a base set of styles (similar to v4). These are `$includeBaseFramework` and `$includeMinimalFramework`. Check out the `_templates.scss` file to see what styles are included when these are set to true.
+
+### Changed
+- Eyeglass version bumped to v3.
+- Made all styles and components optional (wrapped in a mixin).
+- Lots of colour variables moved over as part of using the new `pie-design-tokens` repo instead of `fozzie-colour-palette`.
+- Updated type-map with new typography variables for font-size and line-height.
+
+### Removed
+- `/settings/glyphs` moved into badges, as it is the only place it is used.
+- `/images` as not used.
+- `kickoff-grid` dependency brought into fozzie, to remove external dependency (making it easier to change if needed).
+- `$font-weight-bold` was removed as it now comes straight from `pie-design-tokens`.
+
+
+** Full list of changes (including all colour variable changes) can be found below in beta release CHANGELOGs **
 
 
 v5.0.0-beta.10
 ------------------------------
 *July 8, 2021*
 
-### Updated
+### Changed
 - pie-design-tokens package
 
 
