@@ -1,110 +1,32 @@
-/**
- * Objects > Form Toggle
- * =================================
- * Styles a button on top of a checkbox, to toggle inputs to a form
- *
- * Example: Search page filters (sidebat)
- *
- * The `o-formToggle` object is an optional mixin within Fozzie.
- * If you'd like to use it in your project you can include it by adding `@include formToggle();` into your SCSS dependencies file.
- *
- * Documentation:
- * TBC
- */
-
 $formToggle-padding                 : spacing() !default;
-$formToggle-border-color            : $grey--light;
-$formToggle-border-color--interact  : $grey--mid;
-$formToggle-border-color--checked   : $green;
+$formToggle-border-color            : $color-grey-30;
+$formToggle-border-color--interact  : $color-grey-40;
+$formToggle-border-color--checked   : $color-green;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : 8px;
-$formToggle-icon-background         : $green;
-$formToggle-icon-background--hover  : $grey--light;
-$formToggle-background              : $white;
+$formToggle-icon-background         : $color-green;
+$formToggle-icon-background--hover  : $color-grey-30;
+$formToggle-background              : $color-white;
 $formToggle-large-size              : 48px;
-$formToggle-button-color            : $blue;
-$formToggle-button-background       : $blue--offWhite;
-$formToggle-text--disabled          : $grey--light;
-$formToggle-text--checked           : $green;
-
-// associated form toggle mixins
-@mixin formToggle-large() {
-    width: calc(50% - 4px);
-
-    &:nth-child(2n) {
-        margin-left: spacing();
-    }
-}
-
-@mixin formToggle-largeInputSize() {
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-@mixin formToggle-checkedSpacing() {
-    padding-left: 20px;
-    font-weight: $font-weight-bold;
-}
-
-@mixin formToggle-border() {
-    cursor: pointer;
-    //the &:after is to create a border that sits over the top of the parents,
-    // it creates a visual state on the parent without the need for a JS class toggle
-    &:after {
-        content: '';
-        top: -1px;
-        left: -1px;
-        display: block;
-        position: absolute;
-    }
-}
-
-// `formToggle-hoverState` is used only when a formToggle has a user interaction :hover
-@mixin formToggle-hoverState() {
-    @include formToggle-border();
-    &:after {
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        border-radius: $formToggle-border-radius;
-        border: $formToggle-border-width solid $formToggle-border-color--interact;
-    }
-}
-
-// `formToggle-hoverState` is used only when a formToggle has a user interaction: :focus
-@mixin formToggle-focusState() {
-    @include formToggle-border();
-    &:after {
-        @extend %u-elementFocus;
-        left: 1px;
-        top: 1px;
-        width: calc(100% - 2px);
-        height: calc(100% - 2px);
-        border-radius: $formToggle-border-radius;
-        border: $formToggle-border-width solid $formToggle-border-color--interact;
-    }
-}
-
-@mixin formToggle-checkedState() {
-    @include formToggle-border();
-    // for `formToggle-checkedState` we double the size of the element and scale by
-    // 0.5 to make a 0.5px border render for the checked state
-    &:after {
-        width: calc(200% + 4px);
-        height: calc(200% + 4px);
-        border-radius: ($formToggle-border-radius * 2);
-        border: $formToggle-border-width solid $formToggle-border-color--checked;
-        transform: scale(0.5) translate(-50%, -50%);
-    }
-}
-
-@mixin formToggle-iconActive() {
-    opacity: 1;
-    transform: rotate(0) scale(1);
-}
+$formToggle-button-color            : $color-blue;
+$formToggle-button-background       : $color-blue-10;
+$formToggle-text--disabled          : $color-grey-30;
+$formToggle-text--checked           : $color-green;
 
 @mixin formToggle() {
+    /**
+    * Objects > Form Toggle
+    * =================================
+    * Styles a button on top of a checkbox, to toggle inputs to a form
+    *
+    * Example: Search page filters (sidebat)
+    *
+    * The `o-formToggle` object is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include formToggle();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
     .o-formToggle {
         position: relative;
@@ -319,4 +241,81 @@ $formToggle-text--checked           : $green;
             background: none;
             color: $formToggle-text--disabled;
         }
+}
+
+// associated form toggle mixins
+@mixin formToggle-large() {
+    width: calc(50% - 4px);
+
+    &:nth-child(2n) {
+        margin-left: spacing();
+    }
+}
+
+@mixin formToggle-largeInputSize() {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin formToggle-checkedSpacing() {
+    padding-left: 20px;
+    font-weight: $font-weight-bold;
+}
+
+@mixin formToggle-border() {
+    cursor: pointer;
+    //the &:after is to create a border that sits over the top of the parents,
+    // it creates a visual state on the parent without the need for a JS class toggle
+    &:after {
+        content: '';
+        top: -1px;
+        left: -1px;
+        display: block;
+        position: absolute;
+    }
+}
+
+// `formToggle-hoverState` is used only when a formToggle has a user interaction :hover
+@mixin formToggle-hoverState() {
+    @include formToggle-border();
+    &:after {
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        border-radius: $formToggle-border-radius;
+        border: $formToggle-border-width solid $formToggle-border-color--interact;
+    }
+}
+
+// `formToggle-hoverState` is used only when a formToggle has a user interaction: :focus
+@mixin formToggle-focusState() {
+    @include formToggle-border();
+    &:after {
+        @extend %u-elementFocus;
+        left: 1px;
+        top: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: $formToggle-border-radius;
+        border: $formToggle-border-width solid $formToggle-border-color--interact;
+    }
+}
+
+@mixin formToggle-checkedState() {
+    @include formToggle-border();
+    // for `formToggle-checkedState` we double the size of the element and scale by
+    // 0.5 to make a 0.5px border render for the checked state
+    &:after {
+        width: calc(200% + 4px);
+        height: calc(200% + 4px);
+        border-radius: ($formToggle-border-radius * 2);
+        border: $formToggle-border-width solid $formToggle-border-color--checked;
+        transform: scale(0.5) translate(-50%, -50%);
+    }
+}
+
+@mixin formToggle-iconActive() {
+    opacity: 1;
+    transform: rotate(0) scale(1);
 }

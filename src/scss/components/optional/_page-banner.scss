@@ -1,27 +1,27 @@
-/**
-* Components > Page Banner
-* =================================
-* Page Banners stretch to the full width of their container and contain banner images which typically use a `picture` element.
-* Optionally they can display a white or coloured version of the Just Eat rays at the bottom.
-*
-* Example: Menu – Cuisine image at top of page.
-*
-* The `c-pageBanner` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding `@include pageBanner();` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/page-banner
-*/
-
-$pageBanner-bg: $white;
-//Vars to use for IE homepage banner rays positioning fix
-$rays--coloured-spacing: 60px;
-$rays--coloured-spacing--mid: 164px;
-$rays--coloured-spacing--wide: 148px;
-$rays--coloured-spacing--huge: 230px;
-
-
 @mixin pageBanner() {
+    /**
+    * Components > Page Banner
+    * =================================
+    * Page Banners stretch to the full width of their container and contain banner images which typically use a `picture` element.
+    * Optionally they can display a white or coloured version of the Just Eat rays at the bottom.
+    *
+    * Example: Menu – Cuisine image at top of page.
+    *
+    * The `c-pageBanner` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include pageBanner();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * https://fozzie.just-eat.com/styleguide/ui-components/page-banner
+    */
+
+    $pageBanner-bg: $color-white;
+    //Vars to use for IE homepage banner rays positioning fix
+    $rays--coloured-spacing: 60px;
+    $rays--coloured-spacing--mid: 164px;
+    $rays--coloured-spacing--wide: 148px;
+    $rays--coloured-spacing--huge: 230px;
+
+
     .c-pageBanner {
         background-color: $pageBanner-bg;
         max-height: 300px;

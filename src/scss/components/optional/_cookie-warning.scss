@@ -1,6 +1,16 @@
 @mixin cookieWarning() {
+    /**
+    * Components > Cookie Warning
+    * =================================
+    *
+    * The `c-cookieWarning` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include cookieWarning();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
     .c-cookieWarning {
-        background-color: $grey--darkest;
+        background-color: $color-grey;
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -8,7 +18,7 @@
 
         & p {
             @include font-size(caption, false);
-            color: $white;
+            color: $color-white;
             text-align: center;
             margin: 0 auto;
         }
@@ -35,17 +45,17 @@
         &:hover,
         &:active,
         &:focus {
-            background-color: $grey--mid;
+            background-color: $color-grey-40;
             cursor: pointer;
         }
     }
 
     .c-cookieWarning-link {
-        color: $white;
+        color: $color-white;
         &:hover,
         &:active,
         &:focus {
-            color: $white;
+            color: $color-white;
         }
     }
 }

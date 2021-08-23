@@ -3,6 +3,183 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
+Future Todo List
+------------------------------
+- Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
+
+
+v5.0.0
+------------------------------
+*August 23, 2021*
+
+## Main changes:
+- Colour and typography variables updated to use `pie-design-tokens` repo instead of `fozzie-colour-palette`.
+- When importing v5 fozzie, consuming applications only get included variables, functions and mixins (no classes). Component styles for buttons, form-fields etc are being deprecated as we move our components over to versionable packages, but can still be included via optional mixins applications that still need this as part of the transition.
+- Two optional variables can be used to include a base set of styles (similar to v4). These are `$includeBaseFramework` and `$includeMinimalFramework`. Check out the `_templates.scss` file to see what styles are included when these are set to true.
+
+### Changed
+- Eyeglass version bumped to v3.
+- Made all styles and components optional (wrapped in a mixin).
+- Lots of colour variables moved over as part of using the new `pie-design-tokens` repo instead of `fozzie-colour-palette`.
+- Updated type-map with new typography variables for font-size and line-height.
+
+### Removed
+- `/settings/glyphs` moved into badges, as it is the only place it is used.
+- `/images` as not used.
+- `kickoff-grid` dependency brought into fozzie, to remove external dependency (making it easier to change if needed).
+- `$font-weight-bold` was removed as it now comes straight from `pie-design-tokens`.
+
+
+** Full list of changes (including all colour variable changes) can be found below in beta release CHANGELOGs **
+
+
+v5.0.0-beta.10
+------------------------------
+*July 8, 2021*
+
+### Changed
+- pie-design-tokens package
+
+
+v5.0.0-beta.9
+------------------------------
+*June 30, 2021*
+
+### Changed
+
+- More colour variables transitioned:
+  - `$color-headings--highlight` > `$color-content-brand`
+  - `$color-bg--accept` > `$color-support-positive-02`
+  - `$color-bg--notification` > `$color-support-warning-02`
+  - `$color-bg--error` > `$color-support-error-02`
+  - `$color-disabled` > `$color-disabled-01`
+  - `$color-bg--component` > `$color-container-default`
+- Changed some global tokens to aliases
+
+
+v5.0.0-beta.8
+------------------------------
+*June 4, 2021*
+
+### Added
+- Mixin in `loading-indicator` to be able to customise the colours of the spinner.
+
+
+v5.0.0-beta.7
+------------------------------
+*April 29, 2021*
+
+### Changed
+- More colour variables transitioned:
+  - `$color-secondary` > `$color-blue`
+  - `$color-text--hint` > `$color-grey-40`
+  - `$color-text--success` > `$color-content-positive`
+  - `$color-text--danger` > `$color-content-error`
+  - `$color-text--warning` > `$color-content-brand-strong`
+  - `$color-focus-outline` > `$color-focus`
+- Updated `f-utils` to v2.0.0
+
+
+v5.0.0-beta.6
+------------------------------
+*March 31, 2021*
+
+### Changed
+- Underlined hover and focus state for `.o-link--noDecoration`.
+- More colour variables transitioned:
+  - `$color-bg` > `$color-background-default`
+  - `$color-text` > `$color-content-default`
+  - `$color-headings` > `$color-content-default`
+  - `$color-link-default` > `$color-content-link`
+  - `$color-border` > `$color-border-strong`
+  - `$color-link-hover` > `$color-content-link` & darken(4%)
+  - `$color-link-active` > `$color-content-link` & darken(6%)
+
+
+v5.0.0-beta.5
+------------------------------
+*March 23, 2021*
+
+### Changed
+- Updated type-map with new typography variables for font-size and line-height.
+- `$font-weight-bold` was removed as it now comes straight from pie-design-tokens
+- Typography variables transitioned:
+  - `$font-weight-base` > `$font-weight-regular`
+
+
+v5.0.0-beta.4
+------------------------------
+*March 5, 2021*
+
+### Changed
+- Moved from using `fozzie-colour-palette` to `pie-design-tokens`.
+- Colour variables transitioned:
+  - `$black` > `$color-black`
+  - `$white` > `$color-white`
+  - `$grey--light` > `$color-grey-30`
+  - `$brand--orange` > `$color-orange-30`
+  - `$orange` > `$color-orange`
+  - `$orange-dark` > `$color-orange` & darken(4%)
+  - `$orange-darkest` > `$color-orange` & darken(10%)
+  - `$orange--aa` > `$color-orange-60`
+  - `$orange--offWhite` > `$color-orange-10`
+  - `$blue` > `$color-blue`
+  - `$blue--offWhite` > `$color-blue-10`
+  - `$blue--offWhite--dark`> `$color-blue-10` & darken(4%)
+  - `$blue--offWhite--darkest`> `$color-blue-10` & darken(10%)
+  - `$red` > `$color-red`
+  - `$green` > `$color-green`
+  - `$green--offWhite` > `$color-green-10`
+  - `$yellow--offWhite` > `$color-yellow-10`
+  - `$grey--offWhite` > `$color-grey-10`
+  - `$grey--lighter` > `$color-grey-20`
+  - `$grey--mid` > `$color-grey-40`
+  - `$grey--dark` > `$color-grey-50`
+  - `$grey--darkest` > `$color-grey`
+  - `$purple` > `$color-purple`
+  - `$purple--light` > `color-purple-10`
+
+
+v5.0.0-beta.3
+------------------------------
+*February 16, 2021*
+
+### Added
+- Loading indicator which was in version 4 with an optional size
+
+
+v5.0.0-beta.2
+------------------------------
+*December 31, 2020*
+
+### Changed
+- Updated versions of `f-utils` and `fozzie-colour-palette` and other minor deps.
+
+
+v5.0.0-beta.1
+------------------------------
+*December 31, 2020*
+
+### Changed
+- Eyeglass version bumped to v3.
+
+
+v5.0.0-beta.0
+------------------------------
+*November 3, 2020*
+
+### Added
+- Base template includes for legacy consuming applications (PoC – needs testing).
+
+### Changed
+- Made all styles and components optional (wrapped in a mixin).
+
+### Removed
+- `/settings/glyphs` moved into badges, as it is the only place it is used.
+- `/images` as not used.
+- `kickoff-grid` dependency brought into fozzie, to remove external dependency (making it easier to change if needed).
+
+
 v4.5.2
 ------------------------------
 *July 7, 2021*

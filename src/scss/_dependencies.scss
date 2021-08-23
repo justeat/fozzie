@@ -30,10 +30,9 @@
 // =================================
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/fozzie-colour-palette
 // If a custom theme is specified, it applies a set of colour overides to the base theme depending on the $theme
-@import 'fozzie-colour-palette';
+@import 'pie-design-tokens';
 
 @import 'settings/variables';
-@import 'settings/glyphs';
 @import 'f-utils/helpers/breakpoints'; // breakpoint helper – https://github.com/justeat/f-utils/blob/96508ae19809c4b8b83cebb55b9d74728d01c1a5/src/scss/helpers/_breakpoints.scss
 
 
@@ -44,7 +43,7 @@
 // Global typography styles
 @import 'base/typography';
 
-@import 'kickoff-grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
+@import 'base/grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
 
 /**
  * Objects
@@ -60,7 +59,6 @@
  */
 @import 'objects/body';
 @import 'objects/buttons';
-@import 'objects/images';
 @import 'objects/links';
 @import 'objects/lists';
 @import 'objects/tables';
@@ -89,6 +87,7 @@
 @import 'components/optional/fullscreen-pop-over';
 @import 'components/optional/listings';
 @import 'components/optional/listings-skeleton';
+@import 'components/optional/loading-indicator';
 @import 'components/optional/menu';
 @import 'components/optional/modal';
 @import 'components/optional/order-card';
@@ -123,8 +122,13 @@
 @import 'trumps/rwd';
 
 
-
 /**
  * Print styles
  */
 @import 'base/print';
+
+
+/**
+ * Templates for including base sets of styles
+ */
+@import 'templates';

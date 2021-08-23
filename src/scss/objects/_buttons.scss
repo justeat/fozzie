@@ -1,334 +1,333 @@
-/**
- * Objects > Buttons
- * =================================
- *
- * Documentation:
- * https://fozzie.just-eat.com/styleguide/ui-components/buttons
- */
+@mixin buttons() {
+    /**
+    * Objects > Buttons
+    * =================================
+    *
+    * This is an optional component within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include buttons();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * https://fozzie.just-eat.com/styleguide/ui-components/buttons
+    */
 
+    $btn-default-bgColor                : $color-grey-20;
+    $btn-default-weight                 : 600;
+    $btn-default-height                 : 2.6;
+    $btn-default-font-size              : 18;
+    $btn-default-font-family            : $font-family-base;
+    $btn-default-bgColor--hover         : $color-grey-30;
+    $btn-default-borderRadius           : 2px;
+    $btn-default-hozPadding             : 1em;
+    $btn-default-vertPadding            : 11px;
 
-/**
- * Define associated Button variables
- */
+    $btn-primary-bgColor                : $color-orange;
+    $btn-primary-bgColor--hover         : darken($color-orange, $color-hover-01);
+    $btn-primary-bgColor--focus         : darken($color-orange, $color-active-01);
+    $btn-primary-textColor              : $color-white;
 
-$btn-default-bgColor                : $grey--lighter;
-$btn-default-weight                 : 600;
-$btn-default-height                 : 2.6;
-$btn-default-font-size              : 18;
-$btn-default-font-family            : $font-family-base;
-$btn-default-bgColor--hover         : $grey--light;
-$btn-default-borderRadius           : 2px;
-$btn-default-hozPadding             : 1em;
-$btn-default-vertPadding            : 11px;
+    $btn-secondary-bgColor              : $color-blue-10;
+    $btn-secondary-bgColor--hover       : darken($color-blue-10, $color-hover-01);
+    $btn-secondary-bgColor--active      : darken($color-blue-10, $color-active-01);
+    $btn-secondary-textColor            : $color-blue;
+    $btn-secondary-textColor--hover     : $color-blue;
+    $btn-secondary-textColor--active    : $color-blue;
 
-$btn-primary-bgColor                : $orange;
-$btn-primary-bgColor--hover         : $orange--dark;
-$btn-primary-bgColor--focus         : $orange--darkest;
-$btn-primary-textColor              : $white;
+    $btn-tertiary-bgColor              : $color-white;
+    $btn-tertiary-bgColor--hover       : $color-grey-30;
+    $btn-tertiary-bgColor--active      : $color-grey-40;
+    $btn-tertiary-textColor            : $color-blue;
+    $btn-tertiary-textColor--hover     : $color-blue;
+    $btn-tertiary-textColor--active    : $color-blue;
 
-$btn-secondary-bgColor              : $blue--offWhite;
-$btn-secondary-bgColor--hover       : $blue--offWhite--dark;
-$btn-secondary-bgColor--active      : $blue--offWhite--darkest;
-$btn-secondary-textColor            : $blue;
-$btn-secondary-textColor--hover     : $blue;
-$btn-secondary-textColor--active    : $blue;
+    $btn-wide-hozPadding                : 2em;
 
-$btn-tertiary-bgColor              : $white;
-$btn-tertiary-bgColor--hover       : $grey--light;
-$btn-tertiary-bgColor--active      : $grey--mid;
-$btn-tertiary-textColor            : $blue;
-$btn-tertiary-textColor--hover     : $blue;
-$btn-tertiary-textColor--active    : $blue;
+    $btn-disabled-bgColor               : $color-grey-30;
 
-$btn-wide-hozPadding                : 2em;
+    $btn-transparent-color              : $color-red;
+    $btn-transparent-color--hover       : $color-grey-40;
 
-$btn-disabled-bgColor               : $grey--light;
+    $btnGroup-outline-textColor         : $color-grey-50;
+    $btnGroup-outline-border            : $color-grey-30;
+    $btnGroup-outline-active-border     : $color-interactive-primary;
+    $btnGroup-outline-active-text-color : $color-blue;
 
-$btn-transparent-color              : $red;
-$btn-transparent-color--hover       : $grey--mid;
+    $btnToggle-bg                       : $color-grey-20;
+    $btnToggle-bg--active               : $color-white;
+    $btnToggle-padding                  : 5px;
 
-$btnGroup-outline-textColor         : $grey--dark;
-$btnGroup-outline-border            : $grey--light;
-$btnGroup-outline-active-border     : $color-secondary;
-$btnGroup-outline-active-text-color : $color-secondary;
+    $btn-icon-dimension                 : 36px;
+    $btn-icon-dimension--small          : 20px;
+    $btn-rounded-width                  : 38px;
 
-$btnToggle-bg                       : $grey--lighter;
-$btnToggle-bg--active               : $white;
-$btnToggle-padding                  : 5px;
+    /**
+    * Base button styles – Based on csswizardry.com/beautons
+    *
+    * 1. Allow us to better style box model properties.
+    * 2. Line different sized buttons up a little nicer.
+    * 3. Make buttons inherit font styles.
+    * 4. Force all elements using beautons to appear clickable.
+    * 5. Normalise box model styles.
+    * 6. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+    *    there is 1em of space above and below that text. We therefore apply 1em
+    *    of space to the left and right, as padding, to keep consistent spacing.
+    * 7. Fixes odd inner spacing in IE7.
+    */
 
-$btn-icon-dimension                 : 36px;
-$btn-icon-dimension--small          : 20px;
-$btn-rounded-width                  : 38px;
+    .o-btn {
+        display: inline-block;                      /* [1] */
+        vertical-align: middle;                     /* [2] */
+        font-family: $btn-default-font-family;      /* [3] */
+        @include font-size($btn-default-font-size); /* [3] */
+        cursor: pointer;                            /* [4] */
+        margin: 0;                                  /* [5] */
+        padding: $btn-default-vertPadding $btn-default-hozPadding; /* [5, 6] */
+        overflow: visible;                          /* [7] */
+        text-align: center;
+        font-weight: $btn-default-weight;
+        line-height: 1;
 
+        // You may want to change this
+        background-color: $btn-default-bgColor;
+        border-radius: $btn-default-borderRadius;
+        border: 1px solid transparent;
+        user-select: none;
 
-/**
- * Base button styles – Based on csswizardry.com/beautons
- *
- * 1. Allow us to better style box model properties.
- * 2. Line different sized buttons up a little nicer.
- * 3. Make buttons inherit font styles.
- * 4. Force all elements using beautons to appear clickable.
- * 5. Normalise box model styles.
- * 6. If the button’s text is 1em, and the button is (3 * font-size) tall, then
- *    there is 1em of space above and below that text. We therefore apply 1em
- *    of space to the left and right, as padding, to keep consistent spacing.
- * 7. Fixes odd inner spacing in IE7.
- */
+        color: $color-grey-50;
+        text-decoration: none;
 
-.o-btn {
-    display: inline-block;                      /* [1] */
-    vertical-align: middle;                     /* [2] */
-    font-family: $btn-default-font-family;      /* [3] */
-    @include font-size($btn-default-font-size); /* [3] */
-    cursor: pointer;                            /* [4] */
-    margin: 0;                                  /* [5] */
-    padding: $btn-default-vertPadding $btn-default-hozPadding; /* [5, 6] */
-    overflow: visible;                          /* [7] */
-    text-align: center;
-    font-weight: $btn-default-weight;
-    line-height: 1;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $btn-default-bgColor--hover;
 
-    // You may want to change this
-    background-color: $btn-default-bgColor;
-    border-radius: $btn-default-borderRadius;
-    border: 1px solid transparent;
-    user-select: none;
+            &:not(.o-btnLink) {
+                outline: none; // no need as already has a focus/active state
+            }
+        }
 
-    color: $grey--dark;
-    text-decoration: none;
+        &,
+        &:hover,
+        &:active,
+        &:focus,
+        &:visited {
+            text-decoration: none;
+        }
 
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $btn-default-bgColor--hover;
+        // Disabled state
+        &.disabled,
+        &[disabled] {
+            cursor: default;
 
-        &:not(.o-btnLink) {
-            outline: none; // no need as already has a focus/active state
+            &,
+            &:hover {
+                background-color: $btn-disabled-bgColor;
+            }
+        }
+
+        p + & {
+            margin-top: spacing(x2);
+        }
+
+        & .note {
+            display: none;
+
+            @include media('>=mid') {
+                display: block;
+            }
+        }
+        &[type='submit'] {
+            margin-top: spacing(x2);
         }
     }
 
-    &,
-    &:hover,
-    &:active,
-    &:focus,
-    &:visited {
-        text-decoration: none;
+    /**
+    * ==========================================================================
+    * Btn Background Colour modifiers
+    * ==========================================================================
+    */
+
+    /**
+    * Modifier – .o-btn--primary
+    *
+    * Sets the btn colour to site primary colour
+    */
+
+    .o-btn--primary {
+        background-color: $btn-primary-bgColor;
+
+        &,
+        &:link,
+        &:visited {
+            color: $btn-primary-textColor;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $btn-primary-textColor;
+        }
+
+        &:hover {
+            background-color: $btn-primary-bgColor--hover;
+        }
+
+        &:active,
+        &:focus {
+            background-color: $btn-primary-bgColor--focus;
+        }
     }
 
-    // Disabled state
-    &.disabled,
-    &[disabled] {
+    /**
+    * Modifier – .o-btn--secondary
+    *
+    * Accompanying secondary style button (knocked back slightly from the primary button)
+    */
+
+    .o-btn--secondary {
+        background-color: $btn-secondary-bgColor;
+        color: $btn-secondary-textColor;
+
+        &:hover {
+            background-color: $btn-secondary-bgColor--hover;
+            color: $btn-secondary-textColor--hover;
+        }
+
+        &:active,
+        &:focus {
+            background-color: $btn-secondary-bgColor--active;
+            color: $btn-secondary-textColor--active;
+            outline: none;
+        }
+    }
+
+    /**
+    * Modifier – .o-btn--tertiary
+    *
+    * Accompanying button that can be used on solid background colours (such as grey)
+    */
+
+    .o-btn--tertiary {
+        background-color: $btn-tertiary-bgColor;
+        color: $btn-tertiary-textColor;
+
+        &:hover {
+            background-color: $btn-tertiary-bgColor--hover;
+            color: $btn-tertiary-textColor--hover;
+        }
+
+        &:active,
+        &:focus {
+            background-color: $btn-tertiary-bgColor--active;
+            color: $btn-tertiary-textColor--active;
+            outline: none;
+        }
+    }
+
+
+    /**
+    * ==========================================================================
+    * Btn Layout Modifiers
+    * ==========================================================================
+    */
+
+    /**
+    * Modifier – btn-block
+    *
+    * Makes the btn full width
+    */
+
+    .o-btn--block {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+        // Vertically space out multiple block buttons
+        // same as .o-btn--block + .o-btn--block
+        & + & {
+            margin-top: 10px;
+        }
+    }
+
+    .o-btn--wide {
+        padding-left: $btn-wide-hozPadding;
+        padding-right: $btn-wide-hozPadding;
+    }
+
+    //remove uneeded styles (like colours) from a button when only an icon is on it (like a close button)
+    .o-btn--icon {
+        @extend %u-ir;
+        background-color: transparent;
+        padding: 0;
+
+        &:hover { background-color: transparent; }
+    }
+
+
+    // Specificity overrides
+    input[type='submit'],
+    input[type='reset'],
+    input[type='button'] {
+        &.o-btn--block {
+            width: 100%;
+        }
+    }
+
+
+    /**
+    * Disabled button
+    */
+
+    .o-btn--disabled {
         cursor: default;
 
         &,
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             background-color: $btn-disabled-bgColor;
+            color: inherit;
         }
     }
 
-    p + & {
-        margin-top: spacing(x2);
+    /**
+    * Loading state
+    */
+
+    .o-btn.is-loading {
+    background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon_loader_arrow.gif') 50% 50% / 20px 20px no-repeat border-box $btn-disabled-bgColor;
+    color: transparent !important;
+    border-radius: 0; /* Fixes rendering bug in Chrome for Android */
     }
 
-    & .note {
-        display: none;
 
-        @include media('>=mid') {
-            display: block;
+    /**
+    * btnLink
+    *
+    * Make a button visually look like a default link
+    * Useful when we semantically want a button but don’t want all the default styling
+    *
+    * Should only be applied to buttons
+    */
+
+    .o-btnLink {
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        color: $color-content-link;
+        font-weight: 500;
+        text-decoration: underline;
+
+        &:hover {
+            cursor: pointer;
+            color: darken($color-content-link, $color-hover-01);
+            background-color: transparent;
+        }
+        &:active,
+        &:focus {
+            color: darken($color-content-link, $color-active-02);
+            background-color: transparent;
         }
     }
-    &[type='submit'] {
-        margin-top: spacing(x2);
-    }
-}
-
-/**
- * ==========================================================================
- * Btn Background Colour modifiers
- * ==========================================================================
- */
-
-/**
- * Modifier – .o-btn--primary
- *
- * Sets the btn colour to site primary colour
- */
-
-.o-btn--primary {
-    background-color: $btn-primary-bgColor;
-
-    &,
-    &:link,
-    &:visited {
-        color: $btn-primary-textColor;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-        color: $btn-primary-textColor;
-    }
-
-    &:hover {
-        background-color: $btn-primary-bgColor--hover;
-    }
-
-    &:active,
-    &:focus {
-        background-color: $btn-primary-bgColor--focus;
-    }
-}
-
-/**
- * Modifier – .o-btn--secondary
- *
- * Accompanying secondary style button (knocked back slightly from the primary button)
- */
-
-.o-btn--secondary {
-    background-color: $btn-secondary-bgColor;
-    color: $btn-secondary-textColor;
-
-    &:hover {
-        background-color: $btn-secondary-bgColor--hover;
-        color: $btn-secondary-textColor--hover;
-    }
-
-    &:active,
-    &:focus {
-        background-color: $btn-secondary-bgColor--active;
-        color: $btn-secondary-textColor--active;
-        outline: none;
-    }
-}
-
-/**
- * Modifier – .o-btn--tertiary
- *
- * Accompanying button that can be used on solid background colours (such as grey)
- */
-
-.o-btn--tertiary {
-    background-color: $btn-tertiary-bgColor;
-    color: $btn-tertiary-textColor;
-
-    &:hover {
-        background-color: $btn-tertiary-bgColor--hover;
-        color: $btn-tertiary-textColor--hover;
-    }
-
-    &:active,
-    &:focus {
-        background-color: $btn-tertiary-bgColor--active;
-        color: $btn-tertiary-textColor--active;
-        outline: none;
-    }
-}
-
-
-/**
- * ==========================================================================
- * Btn Layout Modifiers
- * ==========================================================================
- */
-
-/**
- * Modifier – btn-block
- *
- * Makes the btn full width
- */
-
-.o-btn--block {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-
-    // Vertically space out multiple block buttons
-    // same as .o-btn--block + .o-btn--block
-    & + & {
-        margin-top: 10px;
-    }
-}
-
-.o-btn--wide {
-    padding-left: $btn-wide-hozPadding;
-    padding-right: $btn-wide-hozPadding;
-}
-
-//remove uneeded styles (like colours) from a button when only an icon is on it (like a close button)
-.o-btn--icon {
-    @extend %u-ir;
-    background-color: transparent;
-    padding: 0;
-
-    &:hover { background-color: transparent; }
-}
-
-
-// Specificity overrides
-input[type='submit'],
-input[type='reset'],
-input[type='button'] {
-    &.o-btn--block {
-        width: 100%;
-    }
-}
-
-
-/**
- * Disabled button
- */
-
-.o-btn--disabled {
-    cursor: default;
-
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $btn-disabled-bgColor;
-        color: inherit;
-    }
-}
-
-/**
- * Loading state
- */
-
-.o-btn.is-loading {
-  background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon_loader_arrow.gif') 50% 50% / 20px 20px no-repeat border-box $btn-disabled-bgColor;
-  color: transparent !important;
-  border-radius: 0; /* Fixes rendering bug in Chrome for Android */
-}
-
-
-/**
- * btnLink
- *
- * Make a button visually look like a default link
- * Useful when we semantically want a button but don’t want all the default styling
- *
- * Should only be applied to buttons
- */
-
-.o-btnLink {
-    border: 0;
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-    color: $color-link-default;
-    font-weight: 500;
-    text-decoration: underline;
-
-    &:hover {
-        cursor: pointer;
-        color: $color-link-hover;
-        background-color: transparent;
-    }
-    &:active,
-    &:focus {
-        color: $color-link-active;
-        background-color: transparent;
-    }
-}
+ }

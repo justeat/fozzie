@@ -1,46 +1,51 @@
-/**
- * Components > Alert
- * =================================
- * Messages that appear on the screen to highlight a state (usually with associated text)
- *
- * Example: Most form pages or wherever a message is fed back to the user
- *
- * Documentation:
- * TBC
- */
+@mixin alerts() {
+    /**
+    * Components > Alert
+    * =================================
+    * Messages that appear on the screen to highlight a state (usually with associated text)
+    *
+    * Example: Most form pages or wherever a message is fed back to the user
+    *
+    * This is an optional component within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include alerts();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
-$alert-border-radius: 2px;
+    $alert-border-radius: 2px;
 
-// Base styles
-// -------------------------
+    // Base styles
+    // -------------------------
 
-.c-alert {
-    padding: spacing();
-    margin-top: spacing(x2);
-    border: 1px solid transparent;
-    border-radius: $alert-border-radius;
-
-    &:first-child {
-        margin-top: 0;
-    }
-
-    & + * {
+    .c-alert {
+        padding: spacing();
         margin-top: spacing(x2);
+        border: 1px solid transparent;
+        border-radius: $alert-border-radius;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        & + * {
+            margin-top: spacing(x2);
+        }
     }
-}
 
-// Alternate styles
-//
-// Generate contextual modifier classes for colorizing the alert.
+    // Alternate styles
+    //
+    // Generate contextual modifier classes for colorizing the alert.
 
-.c-alert--success {
-    @include alert-variant($color-bg--accept, $color-text--success);
-}
+    .c-alert--success {
+        @include alert-variant($color-support-positive-02, $color-content-positive);
+    }
 
-.c-alert--warning {
-    @include alert-variant($color-bg--notification, $color-text--warning);
-}
+    .c-alert--warning {
+        @include alert-variant($color-support-warning-02, $color-content-brand-strong);
+    }
 
-.c-alert--danger {
-    @include alert-variant($color-bg--error, $color-text--danger);
+    .c-alert--danger {
+        @include alert-variant($color-support-error-02, $color-content-error);
+    }
 }

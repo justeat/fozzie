@@ -1,234 +1,238 @@
-/**
- * Typography
- * =================================
- * - Base
- * - Paragraphs
- * - Headings
- * - Type sizes
- * - Misc
- * - Utilities
- *
- * Body font size, leadings etc have been set in _variables.scss
- *
- * Documentation:
- * TBC
- */
+@mixin typography() {
+    /**
+    * Typography
+    * =================================
+    * - Base
+    * - Paragraphs
+    * - Headings
+    * - Type sizes
+    * - Misc
+    * - Utilities
+    *
+    * Body font size, leadings etc have been set in _variables.scss
+    *
+    * This is an optional component within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include typography();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
 
-/**
- * Typography preloading styles
- */
+    /**
+    * Typography preloading styles
+    */
 
-html {
-    font-size: $font-size-base-px;
-    text-size-adjust: 100%;
-}
-
-body {
-    font-family: $font-family-base;
-    @include font-size(body-s);
-    color: $color-text;
-    font-weight: $font-weight-base;
-
-    text-rendering: optimizelegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-}
-
-/**
- * Paragraphs
- */
-p {
-    @include font-size(body-s);
-    margin-top: $baseline;
-    margin-bottom: 0;
-}
-
-/**
- * Headings
- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.alpha,
-.beta,
-.gamma,
-.delta,
-.epsilon {
-    color: $color-headings;
-    margin: 0;
-    margin-bottom: 0;
-    font-family: $font-family-base;
-    font-weight: $font-weight-headings;
-
-    small {
-        font-weight: normal;
-    }
-}
-
-// Use the helper classes to emulate styles for another element
-// For example: h3.h1 or h3.alpha
-h1,
-.alpha {
-    @include font-size(heading-xl, true, narrow);
-    margin-top: $baseline * 2;
-    margin-bottom: $baseline;
-
-    @include media('>mid') {
-        @include font-size(heading-xl);
+    html {
+        font-size: $font-size-base-px;
+        text-size-adjust: 100%;
     }
 
-    &:first-child {
-        margin-top: 0;
-    }
-}
-
-h2,
-.beta {
-    @include font-size(heading-m, true, narrow);
-
-    @include media('>mid') {
-        @include font-size(heading-m);
-    }
-}
-
-h3,
-.gamma,
-h4,
-.delta,
-h5,
-.epsilon {
-    @include font-size(heading-s);
-}
-
-h6,
-.zeta {
-    @include font-size(caption);
-}
-
-// Only give these headings a margin-top if they are after other elements
-* + h2,
-* + .beta {
-    margin-top: $baseline * 2;
-}
-
-* + h3,
-* + .gamma,
-* + h4,
-* + .delta {
-    margin-top: $baseline;
-}
-
-small {
-    font-size: 80%;
-}
-
-/**
- * Miscellaneous
- */
-
-// Emphasis
-strong,
-b {
-    font-weight: $font-weight-bold;
-}
-
-em,
-i {
-    font-style: italic;
-}
-
-// Abbreviations and acronyms
-abbr[title] {
-    border-bottom: 1px dotted #ddd;
-    cursor: help;
-}
-
-/**
- * Blockquotes
- */
-blockquote {
-    padding-left: 10px;
-    margin: $baseline;
-    border-left: 4px solid lighten(#000, 80%);
-
-    p {
-        margin-bottom: 0;
+    body {
+        font-family: $font-family-base;
         @include font-size(body-s);
-        font-weight: 300;
+        color: $color-content-default;
+        font-weight: $font-weight-regular;
+
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
     }
 
-    small {
-        display: block;
-        color: lighten(#000, 70%);
+    /**
+    * Paragraphs
+    */
+    p {
+        @include font-size(body-s);
+        margin-top: $baseline;
+        margin-bottom: 0;
+    }
 
-        &:before {
-            content: '\2014 \00A0';
+    /**
+    * Headings
+    */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .alpha,
+    .beta,
+    .gamma,
+    .delta,
+    .epsilon {
+        color: $color-content-default;
+        margin: 0;
+        margin-bottom: 0;
+        font-family: $font-family-base;
+        font-weight: $font-weight-headings;
+
+        small {
+            font-weight: normal;
         }
     }
-}
 
-// Quotes
-q,
-blockquote {
-    &:before,
-    &:after {
-        content: '';
+    // Use the helper classes to emulate styles for another element
+    // For example: h3.h1 or h3.alpha
+    h1,
+    .alpha {
+        @include font-size(heading-xl, true, narrow);
+        margin-top: $baseline * 2;
+        margin-bottom: $baseline;
+
+        @include media('>mid') {
+            @include font-size(heading-xl);
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
-}
 
-cite {
-    font-style: normal;
-}
+    h2,
+    .beta {
+        @include font-size(heading-m, true, narrow);
 
-// Addresses styling not present in S5, Chrome
-dfn {
-    font-style: italic;
-}
+        @include media('>mid') {
+            @include font-size(heading-m);
+        }
+    }
 
-mark {
-    background: $yellow--offWhite;
-    padding: 2px 4px;
-    border-radius: 3px;
-}
+    h3,
+    .gamma,
+    h4,
+    .delta,
+    h5,
+    .epsilon {
+        @include font-size(heading-s);
+    }
 
-address {
-    font-style: normal;
-    margin-top: $baseline;
-    margin-bottom: 0;
-}
+    h6,
+    .zeta {
+        @include font-size(caption);
+    }
 
-// Prevents sub and sup affecting line-height in all browsers
-// gist.github.com/413930
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
+    // Only give these headings a margin-top if they are after other elements
+    * + h2,
+    * + .beta {
+        margin-top: $baseline * 2;
+    }
 
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-samp { font-family: $font-family-mono; }
+    * + h3,
+    * + .gamma,
+    * + h4,
+    * + .delta {
+        margin-top: $baseline;
+    }
 
-//
-// @include ko-text-selection($color-selection, $color-selection-bg);
+    small {
+        font-size: 80%;
+    }
 
-// Horizontal rules
-hr {
-    margin: ($baseline) 0;
-    border: 0;
-    border-top: 1px solid $hr-color;
-    border-bottom: 1px solid $white;
-}
+    /**
+    * Miscellaneous
+    */
 
-// https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
-.hyphenate {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
+    // Emphasis
+    strong,
+    b {
+        font-weight: $font-weight-bold;
+    }
+
+    em,
+    i {
+        font-style: italic;
+    }
+
+    // Abbreviations and acronyms
+    abbr[title] {
+        border-bottom: 1px dotted #ddd;
+        cursor: help;
+    }
+
+    /**
+    * Blockquotes
+    */
+    blockquote {
+        padding-left: 10px;
+        margin: $baseline;
+        border-left: 4px solid lighten(#000, 80%);
+
+        p {
+            margin-bottom: 0;
+            @include font-size(body-s);
+            font-weight: 300;
+        }
+
+        small {
+            display: block;
+            color: lighten(#000, 70%);
+
+            &:before {
+                content: '\2014 \00A0';
+            }
+        }
+    }
+
+    // Quotes
+    q,
+    blockquote {
+        &:before,
+        &:after {
+            content: '';
+        }
+    }
+
+    cite {
+        font-style: normal;
+    }
+
+    // Addresses styling not present in S5, Chrome
+    dfn {
+        font-style: italic;
+    }
+
+    mark {
+        background: $color-yellow-10;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+
+    address {
+        font-style: normal;
+        margin-top: $baseline;
+        margin-bottom: 0;
+    }
+
+    // Prevents sub and sup affecting line-height in all browsers
+    // gist.github.com/413930
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sup { top: -0.5em; }
+    sub { bottom: -0.25em; }
+    samp { font-family: $font-family-mono; }
+
+    //
+    // @include ko-text-selection($color-selection, $color-selection-bg);
+
+    // Horizontal rules
+    hr {
+        margin: ($baseline) 0;
+        border: 0;
+        border-top: 1px solid $color-divider-default;
+    }
+
+    // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
+    .hyphenate {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
 }

@@ -1,18 +1,17 @@
-/**
- * Components > Content title
- * =================================
- * Used for displaying a title with an associated action next to it
- *
- * Example: Filter titles (Search sidebar)
- *
- * The `c-contentTitle` component is an optional mixin within Fozzie.
- * If you'd like to use it in your project you can include it by adding `@include contentTitle();` into your SCSS dependencies file.
- *
- * Documentation:
- * TBC
- */
-
 @mixin contentTitle() {
+    /**
+    * Components > Content title
+    * =================================
+    * Used for displaying a title with an associated action next to it
+    *
+    * Example: Filter titles (Search sidebar)
+    *
+    * The `c-contentTitle` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include contentTitle();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
     .c-contentTitle {
         width: 100%;
@@ -29,7 +28,7 @@
         .c-contentTitle-text {
             margin: 0;
             width: 100%;
-            font-weight: $font-weight-base;
+            font-weight: $font-weight-regular;
             @include font-size(body-l, false);
         }
 

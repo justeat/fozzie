@@ -1,409 +1,411 @@
-/**
- * Utilities
- * ===================================
- * Non-semantic helper classes
- */
+@mixin trumps-utilities() {
+    /**
+    * Utilities
+    * ===================================
+    * Non-semantic helper classes
+    */
 
-//
-// Clearfix
-// http://www.cssmojo.com/latest_new_clearfix_so_far/
-// See mixins/_utility.scss for a mixin version of this
-// ==========================================================================
-.u-clearfix {
-    &:after {
-        content: ' ';
-        display: table;
-        clear: both;
+    //
+    // Clearfix
+    // http://www.cssmojo.com/latest_new_clearfix_so_far/
+    // See mixins/_utility.scss for a mixin version of this
+    // ==========================================================================
+    .u-clearfix {
+        &:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
     }
-}
 
-//
-// Colour Utilities
-// ==========================================================================
+    //
+    // Colour Utilities
+    // ==========================================================================
 
-.u-lightenBg {
-    background-color: $white;
-}
+    .u-lightenBg {
+        background-color: $color-white;
+    }
 
-.u-bordered,
-%u-bordered {
-    @include bordered();
-}
-
-.u-bordered--mid {
-    @include media('>mid') {
+    .u-bordered,
+    %u-bordered {
         @include bordered();
     }
-}
 
-
-//
-// Display Utilities
-// ==========================================================================
-
-// Hide from both screenreaders and browsers: h5bp.com/u
-.is-hidden,
-.no-js .is-hidden--noJS {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-.is-shown,
-.no-js .is-shown--noJS {
-    display: block !important;
-    visibility: visible !important;
-}
-
-// Hide only visually, but have it available for screenreaders: h5bp.com/v
-.is-visuallyHidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-
-    // Extends the .is-visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
-    &.focusable:active,
-    &.focusable:focus {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
-    }
-}
-
-// Hide visually and from screenreaders, but maintain layout
-.is-invisible { visibility: hidden; }
-
-.u-pointer {
-    cursor: pointer;
-}
-
-//
-// Position Utilities
-// ==========================================================================
-
-.is-sticky {
-    width: 100%;
-    z-index: zIndex(mid);
-    position: fixed;
-    transition: top 0.2s ease;
-}
-
-.u-sticky {
-    position: sticky !important;
-    top: spacing(x2);
-}
-
-.u-absolutelyCentered {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-}
-
-//
-// Typographic Helpers
-// ==========================================================================
-
-// ensures text inside helper never wraps
-.u-noWrap {
-    white-space: nowrap;
-}
-
-.u-uppercase {
-    text-transform: uppercase;
-}
-
-.u-textPad {
-    padding-left: spacing(x4) !important;
-}
-
-.u-text-truncate {
-    @include truncate();
-}
-
-.u-noUnderline {
-    text-decoration: none;
-
-    &:hover,
-    &:active,
-    &:focus {
-        text-decoration: underline;
-    }
-}
-
-.u-text-centre, // British or US English spellings..
-.u-text-center {
-    text-align: center;
-}
-
-.u-text-left {
-    text-align: left;
-}
-
-.u-text-right {
-    text-align: right;
-}
-
-.u-text-highlight {
-    color: $red;
-
-    @at-root em#{&} {
-        font-style: normal;
-    }
-}
-
-.u-text-indent {
-    margin-left: spacing(x2);
-}
-
-//
-// Typographic Colour Helpers
-//
-// Each colour util class is relative to a Fozzie colour within the
-// Fozzie colour pallette.
-//
-// Our current colour pallete can be found here:
-// https://fozzie.just-eat.com/styleguide/design-elements/colours
-// ==========================================================================
-
-.u-color-text {
-    color: $color-text;
-}
-
-.u-color-link {
-    color: $color-link-default;
-}
-
-.u-color-secondary {
-    color: $color-secondary;
-}
-
-.u-color-text--hint {
-    color: $color-text--hint;
-}
-
-.u-color-text--success {
-    color: $color-text--success;
-}
-
-.u-color-text--danger {
-    color: $color-text--danger;
-}
-
-.u-color-text--warning {
-    color: $color-text--warning;
-}
-
-//
-// Spacing Utilities
-// ==========================================================================
-
-.u-noSpacing {
-    margin: 0 !important;
-}
-
-.u-spacingTop {
-    margin-top: spacing() !important;
-}
-
-    .u-spacingTop--small {
-        margin-top: spacing(x0.5) !important;
-    }
-
-    .u-spacingTop--large {
-        margin-top: spacing(x2) !important;
-    }
-
-.u-spacingRight {
-    margin-right: spacing() !important;
-}
-
-.u-spacingBottom {
-    margin-bottom: spacing() !important;
-}
-
-    .u-spacingBottom--large {
-        margin-bottom: spacing(x2) !important;
-    }
-
-    .u-spacingBottom--large--aboveMid {
-        @include media('>=mid') {
-            margin-bottom: spacing(x2);
+    .u-bordered--mid {
+        @include media('>mid') {
+            @include bordered();
         }
     }
 
-.u-spacingLeft {
-    margin-left: spacing() !important;
-}
 
-//
-// Padding Utilities
-// ==========================================================================
+    //
+    // Display Utilities
+    // ==========================================================================
 
-.u-noPad {
-    padding: 0 !important;
-}
-
-.u-padTop {
-    padding-top: spacing() !important;
-}
-
-    .u-padTop--large {
-        padding-top: spacing(x2) !important;
+    // Hide from both screenreaders and browsers: h5bp.com/u
+    .is-hidden,
+    .no-js .is-hidden--noJS {
+        display: none !important;
+        visibility: hidden !important;
     }
 
-    .u-padTop--large--aboveMid {
-        @include media('>=mid') {
+    .is-shown,
+    .no-js .is-shown--noJS {
+        display: block !important;
+        visibility: visible !important;
+    }
+
+    // Hide only visually, but have it available for screenreaders: h5bp.com/v
+    .is-visuallyHidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+
+        // Extends the .is-visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+        &.focusable:active,
+        &.focusable:focus {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+    }
+
+    // Hide visually and from screenreaders, but maintain layout
+    .is-invisible { visibility: hidden; }
+
+    .u-pointer {
+        cursor: pointer;
+    }
+
+    //
+    // Position Utilities
+    // ==========================================================================
+
+    .is-sticky {
+        width: 100%;
+        z-index: zIndex(mid);
+        position: fixed;
+        transition: top 0.2s ease;
+    }
+
+    .u-sticky {
+        position: sticky !important;
+        top: spacing(x2);
+    }
+
+    .u-absolutelyCentered {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    //
+    // Typographic Helpers
+    // ==========================================================================
+
+    // ensures text inside helper never wraps
+    .u-noWrap {
+        white-space: nowrap;
+    }
+
+    .u-uppercase {
+        text-transform: uppercase;
+    }
+
+    .u-textPad {
+        padding-left: spacing(x4) !important;
+    }
+
+    .u-text-truncate {
+        @include truncate();
+    }
+
+    .u-noUnderline {
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    .u-text-centre, // British or US English spellings..
+    .u-text-center {
+        text-align: center;
+    }
+
+    .u-text-left {
+        text-align: left;
+    }
+
+    .u-text-right {
+        text-align: right;
+    }
+
+    .u-text-highlight {
+        color: $color-red;
+
+        @at-root em#{&} {
+            font-style: normal;
+        }
+    }
+
+    .u-text-indent {
+        margin-left: spacing(x2);
+    }
+
+    //
+    // Typographic Colour Helpers
+    //
+    // Each colour util class is relative to a Fozzie colour within the
+    // Fozzie colour pallette.
+    //
+    // Our current colour pallete can be found here:
+    // https://fozzie.just-eat.com/styleguide/design-elements/colours
+    // ==========================================================================
+
+    .u-color-text {
+        color: $color-content-default;
+    }
+
+    .u-color-link {
+        color: $color-content-link;
+    }
+
+    .u-color-secondary {
+        color: $color-blue;
+    }
+
+    .u-color-text--hint {
+        color: $color-content-subdued;
+    }
+
+    .u-color-text--success {
+        color: $color-content-positive;
+    }
+
+    .u-color-text--danger {
+        color: $color-content-error;
+    }
+
+    .u-color-text--warning {
+        color: $color-content-brand-strong;
+    }
+
+    //
+    // Spacing Utilities
+    // ==========================================================================
+
+    .u-noSpacing {
+        margin: 0 !important;
+    }
+
+    .u-spacingTop {
+        margin-top: spacing() !important;
+    }
+
+        .u-spacingTop--small {
+            margin-top: spacing(x0.5) !important;
+        }
+
+        .u-spacingTop--large {
+            margin-top: spacing(x2) !important;
+        }
+
+    .u-spacingRight {
+        margin-right: spacing() !important;
+    }
+
+    .u-spacingBottom {
+        margin-bottom: spacing() !important;
+    }
+
+        .u-spacingBottom--large {
+            margin-bottom: spacing(x2) !important;
+        }
+
+        .u-spacingBottom--large--aboveMid {
+            @include media('>=mid') {
+                margin-bottom: spacing(x2);
+            }
+        }
+
+    .u-spacingLeft {
+        margin-left: spacing() !important;
+    }
+
+    //
+    // Padding Utilities
+    // ==========================================================================
+
+    .u-noPad {
+        padding: 0 !important;
+    }
+
+    .u-padTop {
+        padding-top: spacing() !important;
+    }
+
+        .u-padTop--large {
             padding-top: spacing(x2) !important;
         }
+
+        .u-padTop--large--aboveMid {
+            @include media('>=mid') {
+                padding-top: spacing(x2) !important;
+            }
+        }
+
+
+    //
+    // Overlay Utilities
+    // ==========================================================================
+
+    .u-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 
+        .u-overlay--after {
+            &:after {
+                background-color: rgba(0, 0, 0, 0.5);
+                bottom: 0;
+                content: '';
+                left: 0;
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: zIndex(low);
+            }
+        }
 
-//
-// Overlay Utilities
-// ==========================================================================
+    .u-preventScroll {
+        overflow: hidden;
+    }
 
-.u-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-}
+    //
+    // Image Replacement Techniques
+    // ==========================================================================
 
-    .u-overlay--after {
-        &:after {
-            background-color: rgba(0, 0, 0, 0.5);
-            bottom: 0;
-            content: '';
-            left: 0;
-            position: fixed;
-            right: 0;
-            top: 0;
-            z-index: zIndex(low);
+    [data-lazy-image-src] {
+        display: block;
+
+        .no-js & {
+            display: none;
         }
     }
 
-.u-preventScroll {
-    overflow: hidden;
-}
 
-//
-// Image Replacement Techniques
-// ==========================================================================
+    // For background image replacement
+    %u-ir,
+    .u-ir {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: 0;
+        direction: ltr;
+        display: block;
+        overflow: hidden;
+        text-align: left;
+        text-indent: -999em;
 
-[data-lazy-image-src] {
-    display: block;
-
-    .no-js & {
-        display: none;
-    }
-}
-
-
-// For background image replacement
-%u-ir,
-.u-ir {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: 0;
-    direction: ltr;
-    display: block;
-    overflow: hidden;
-    text-align: left;
-    text-indent: -999em;
-
-    br {
-        display: none;
-    }
-}
-
-// Alternative image replacement technique
-.u-hideText,
-%u-hideText {
-    text-indent: 110%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-//
-// List Helper
-// ==========================================================================
-
-.u-unstyled,
-%u-unstyled {
-    margin-top: 0;
-    margin-left: 0;
-    padding: 0;
-    list-style: none;
-    list-style-image: none;
-
-    & > li {
-        margin-bottom: 0;
-
-        &:before {
-            content: none;
+        br {
+            display: none;
         }
     }
-}
 
-//
-// Helper classes for focus accessibility
-// =================================================================================
+    // Alternative image replacement technique
+    .u-hideText,
+    %u-hideText {
+        text-indent: 110%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 
-/* Custom outline styling for elements that have a focus state */
-%u-elementFocus,
-.u-elementFocus {
-    outline: 2px solid $color-focus-outline;
-}
+    //
+    // List Helper
+    // ==========================================================================
 
-/* Custom visual outline emulation for better appearance on elements with rounded corners */
-%u-elementFocus--boxShadow,
-.u-elementFocus--boxShadow {
-  outline: none;
-  box-shadow: 0 0 0 2px $color-focus-outline;
-}
+    .u-unstyled,
+    %u-unstyled {
+        margin-top: 0;
+        margin-left: 0;
+        padding: 0;
+        list-style: none;
+        list-style-image: none;
 
-/*
- * Clever hack to have focus on an element but only when keyboard focused (not click)
- * https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
- */
-%u-focusShadow,
-.u-focusShadow:focus,
-.u-focusShadow-content:focus {
+        & > li {
+            margin-bottom: 0;
+
+            &:before {
+                content: none;
+            }
+        }
+    }
+
+    //
+    // Helper classes for focus accessibility
+    // =================================================================================
+
+    /* Custom outline styling for elements that have a focus state */
+    %u-elementFocus,
+    .u-elementFocus {
+        outline: 2px solid $color-focus;
+    }
+
+    /* Custom visual outline emulation for better appearance on elements with rounded corners */
+    %u-elementFocus--boxShadow,
+    .u-elementFocus--boxShadow {
     outline: none;
-}
-%u-focusShadow-content,
-.u-focusShadow:focus > .u-focusShadow-content {
-    box-shadow: 0 0 2px 2px $color-focus-outline; /* keyboard-only focus styles */
-}
+    box-shadow: 0 0 0 2px $color-focus;
+    }
+
+    /*
+    * Clever hack to have focus on an element but only when keyboard focused (not click)
+    * https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
+    */
+    %u-focusShadow,
+    .u-focusShadow:focus,
+    .u-focusShadow-content:focus {
+        outline: none;
+    }
+    %u-focusShadow-content,
+    .u-focusShadow:focus > .u-focusShadow-content {
+        box-shadow: 0 0 2px 2px $color-focus; /* keyboard-only focus styles */
+    }
 
 
-//
-// Misc classes
-// ==========================================================================
-.u-shadowBottom--belowMid {
-    padding-bottom: spacing(x7);
+    //
+    // Misc classes
+    // ==========================================================================
+    .u-shadowBottom--belowMid {
+        padding-bottom: spacing(x7);
 
-    @include media('<mid') {
-        &:after {
-            background-color: $grey--lighter;
-            border: 0;
-            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-            content: '';
-            display: block;
-            height: spacing(x7);
-            left: -#{spacing()};
-            position: absolute;
-            width: 100vw;
+        @include media('<mid') {
+            &:after {
+                background-color: $color-grey-20;
+                border: 0;
+                box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+                content: '';
+                display: block;
+                height: spacing(x7);
+                left: -#{spacing()};
+                position: absolute;
+                width: 100vw;
+            }
         }
     }
 }

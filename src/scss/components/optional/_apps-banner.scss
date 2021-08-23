@@ -1,15 +1,16 @@
-/**
- * Apps Banner Component
- * =================================
- * Used to display app promo banner on the page.
- *
- * *The `c-appBaner` component is an optional mixin within Fozzie — if you'd like to use it in your project you can include it by adding `@include appsBanner();` into your SCSS dependencies file.*
- *
- * Documentation:
- * https://fozzie.just-eat.com/styleguide/ui-components/apps-banner
- */
-
 @mixin appsBanner() {
+    /**
+    * Apps Banner Component
+    * =================================
+    * Used to display app promo banner on the page.
+    *
+    * The `c-appsBanner` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include appsBanner();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * https://fozzie.just-eat.com/styleguide/ui-components/apps-banner
+    */
+
     @include media-context(('narrow-mid': 600px)) {
         /* autoprefixer grid: autoplace */
         .c-appsBanner {
