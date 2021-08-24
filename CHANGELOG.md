@@ -21,6 +21,9 @@ v6.0.0-beta.0
 ### Changed
 - `$font-weight-headings` use `$font-weight-extrabold` font weight (800)
 
+### Removed
+- Menulog font files
+
 
 v5.0.0
 ------------------------------
