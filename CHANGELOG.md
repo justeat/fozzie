@@ -10,7 +10,7 @@ Future Todo List
 
 v6.0.0-beta.0
 ------------------------------
-*August 20, 2021*
+*August 24, 2021*
 
 ### Updated
 - pie-design-tokens package to v1.0.0-beta.0 to include new font vars
