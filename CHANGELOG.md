@@ -8,6 +8,30 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.1
+------------------------------
+*September 15, 2021*
+
+- Bump the version to include changes from v5.1.0 to beta version
+
+
+v6.0.0-beta.0
+------------------------------
+*August 24, 2021*
+
+### Updated
+- pie-design-tokens package to v1.0.0-beta.0 to include new font vars
+
+### Added
+- `$font-family-secondary` as a fallback font (Arial)
+
+### Changed
+- `$font-weight-headings` use `$font-weight-extrabold` font weight (800)
+
+### Removed
+- Menulog font files
+
+
 v5.1.0
 ------------------------------
 *September 13, 2021*
