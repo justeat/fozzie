@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.1
+------------------------------
+*September 13, 2021*
+
+### Changed
+- Move normalize styles from base to optional. We had to copy the styles straight into the project to be able to make them optional wrapping them into a mixin.
+
+
 v6.0.0-beta.0
 ------------------------------
 *August 24, 2021*

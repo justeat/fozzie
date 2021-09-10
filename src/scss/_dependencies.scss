@@ -37,7 +37,7 @@
 
 
 // CSS Normalise and then Reset
-@import 'normalize/import-now'; // https://www.npmjs.com/package/normalize-scss
+@import 'base/normalize';
 @import 'base/reset';
 
 // Global typography styles

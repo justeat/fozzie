@@ -3,6 +3,7 @@
  * as part of Fozzie v4 (useful for anyone upgrading that wants to keep things as-is)
 **/
 @if $includeBaseFramework {
+    @include normalize();
     @include reset();
     @include typography();
 
@@ -38,6 +39,7 @@
  * that provides styling for most use-cases (links, lists, buttons, grid)
  **/
 @if $includeMinimalFramework {
+    @include normalize();
     @include reset();
     @include typography();
 
