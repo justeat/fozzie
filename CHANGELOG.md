@@ -8,6 +8,15 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v5.1.0
+------------------------------
+*September 13, 2021*
+
+### Changed
+- Move normalize styles from base to optional. We had to copy the styles straight into the project to be able to make them optional wrapping them into a mixin.
+!!Note: If you don't use `$includeBaseFramework` or `$includeMinimalFramework` vars and want to have normalize styles in you project, you need to `@include normalize()` mixin starting from this version. 
+
+
 v5.0.0
 ------------------------------
 *August 23, 2021*
