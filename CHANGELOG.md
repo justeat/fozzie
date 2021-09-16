@@ -8,10 +8,19 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.2
+------------------------------
+*September 17, 2021*
+
+### Removed
+- SCSS spacing map variables with invalid names — these names throw an error when attempting to use Fozzie with `dart-scss`. If you still need these values in consuming applications you can use the divide or multiply operator inline e.g. `margin-top: spacing() * 1.5;`
+
+
 v6.0.0-beta.1
 ------------------------------
 *September 15, 2021*
 
+### Changed
 - Bump the version to include changes from v5.1.0 to beta version
 
 
@@ -38,7 +47,7 @@ v5.1.0
 
 ### Changed
 - Move normalize styles from base to optional. We had to copy the styles straight into the project to be able to make them optional wrapping them into a mixin.
-!!Note: If you don't use `$includeBaseFramework` or `$includeMinimalFramework` vars and want to have normalize styles in you project, you need to `@include normalize()` mixin starting from this version. 
+!!Note: If you don't use `$includeBaseFramework` or `$includeMinimalFramework` vars and want to have normalize styles in you project, you need to `@include normalize()` mixin starting from this version.
 
 
 v5.0.0
