@@ -8,6 +8,15 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.2
+------------------------------
+*September 17, 2021*
+
+### Changed
+- `$font-size-base` to use `$font-paragraph-01`(16px) instead of  `$font-paragraph-02`(14px).
+- separate font-sizes for mobile and desktop screen sizes for `h3,.gamma,h4,.delta,h5,.epsilon`
+
+
 v6.0.0-beta.1
 ------------------------------
 *September 15, 2021*
