@@ -105,7 +105,11 @@
     .delta,
     h5,
     .epsilon {
-        @include font-size(heading-s);
+        @include font-size(heading-s, true, narrow);
+
+        @include media('>mid') {
+            @include font-size(heading-s);
+        }
     }
 
     h6,
