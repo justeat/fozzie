@@ -41,7 +41,7 @@
         border-spacing: 0;
         background-color: $table-bgColor;
         border: $table-border--width solid $table-border--color;
-        border-radius: $border-radius;
+        border-radius: $radius-rounded-b;
 
         // Cells
         & > thead,
@@ -60,11 +60,11 @@
 
                 &:first-child {
                     border-left: 1px solid $table-innerBorder--color;
-                    border-radius: 4px 0 0;
+                    border-radius: $radius-rounded-b 0 0;
                 }
                 &:last-child {
                     border-right: 1px solid $table-innerBorder--color;
-                    border-radius: 0 4px 0 0;
+                    border-radius: 0 $radius-rounded-b 0 0;
                 }
             }
             td {

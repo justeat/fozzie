@@ -15,8 +15,8 @@
 
     .c-listingSkeleton {
         position: relative;
-        background: $color-white;
-        border-radius: spacing();
+        background: $color-container-default;
+        border-radius: $radius-rounded-c;
         padding: 85px spacing(x2) spacing(x2);
         margin-bottom: spacing(x2);
 

@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "6.0.0-beta.2",
+  "version": "6.0.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -36,7 +36,7 @@
     "@justeat/f-dom": "1.1.0",
     "@justeat/f-logger": "0.8.1",
     "@justeat/f-utils": "2.0.0",
-    "@justeat/pie-design-tokens": "1.0.0-beta.0",
+    "@justeat/pie-design-tokens": "1.1.0",
     "fontfaceobserver": "2.1.0",
     "include-media": "1.4.10"
   },

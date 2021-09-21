@@ -18,9 +18,9 @@
     .c-orderCard {
         display: flex;
         flex-direction: column;
-        border-radius: 1px;
+        border-radius: $radius-rounded-c;
         box-shadow: $previousOrder-boxShadow;
-        background-color: $color-white;
+        background-color: $color-container-default;
         overflow: hidden;
         text-decoration: none;
         width: 280px;
@@ -63,7 +63,7 @@
         }
 
         .c-orderCard-image {
-            background-color: $color-grey-20;
+            background-color: $color-container-subtle;
         }
     }
 
@@ -102,12 +102,12 @@
         width: 64px;
         height: 64px;
         border-radius: 50%;
-        background-color: $color-white;
+        background-color: $color-container-default;
 
         svg {
             width: 40px;
             height: 40px;
-            fill: $color-orange-30;
+            fill: $color-support-brand-01;
         }
     }
 

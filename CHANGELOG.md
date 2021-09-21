@@ -8,13 +8,26 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0
+------------------------------
+*September 21, 2021*
+
+### Changed
+- various border-radius values in line with the latest pie tokens.
+- various global tokens to the alias token equivalent.
+- `$border-radius` from 2px to `$radius-rounded-a`.
+
+### Removed
+- `$btn-transparent-color`, `$btn-transparent-color--hover`, `$btnGroup-outline`, `$btnToggle`, `$btn-icon-dimension` and `$btn-rounded-width` css vars as unused.
+
+
 v6.0.0-beta.2
 ------------------------------
 *September 17, 2021*
 
 ### Changed
 - `$font-size-base` to use `$font-paragraph-01`(16px) instead of  `$font-paragraph-02`(14px).
-- separate font-sizes for mobile and desktop screen sizes for `h3,.gamma,h4,.delta,h5,.epsilon`
+- separate font-sizes for mobile and desktop screen sizes for `h3,.gamma,h4,.delta,h5,.epsilon` headings.
 
 
 v6.0.0-beta.1

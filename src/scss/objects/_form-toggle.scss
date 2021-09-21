@@ -3,7 +3,7 @@ $formToggle-border-color            : $color-grey-30;
 $formToggle-border-color--interact  : $color-grey-40;
 $formToggle-border-color--checked   : $color-green;
 $formToggle-border-width            : 1px;
-$formToggle-border-radius           : 8px;
+$formToggle-border-radius           : $radius-rounded-e;
 $formToggle-icon-background         : $color-green;
 $formToggle-icon-background--hover  : $color-grey-30;
 $formToggle-background              : $color-white;
