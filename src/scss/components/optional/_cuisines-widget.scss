@@ -25,7 +25,7 @@
 
        .c-cuisinesWidget {
             display: block;
-            border-radius: 1px;
+            border-radius: $radius-rounded-c;
             overflow: hidden;
             position: relative;
             background-color: $cuisinesWidget-defaultBackground;

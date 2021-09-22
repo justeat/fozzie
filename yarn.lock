@@ -1178,10 +1178,10 @@
   dependencies:
     "@justeat/dom-buddy" "2.4.3"
 
-"@justeat/pie-design-tokens@1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@justeat/pie-design-tokens/-/pie-design-tokens-1.0.0-beta.0.tgz#272457e7f806ac931800935cd54b10801c45a589"
-  integrity sha512-egiGduhwftk8O9KSnTnK5rN3cP/FY1TurdvFiC12C3mkXEImEZnpLTbf/sZ/StV95m4E69y45jiaPB87FXzSVw==
+"@justeat/pie-design-tokens@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@justeat/pie-design-tokens/-/pie-design-tokens-1.1.0.tgz#d93ad0411cd0457522d8bd466de521382682e05d"
+  integrity sha512-YtiJ7Uq+JZgYAJAFYr0e0an+p8RRk9MimAtqNnk2MFI5au7eNMFt3lTugwfoRgk4jKQfNg2RwTZe0tuuzzc8nw==
   dependencies:
     jsonc-parser "2.2.0"
     lodash.merge "4.6.2"

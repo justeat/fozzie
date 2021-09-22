@@ -11,10 +11,10 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/toast
     */
 
-    $toast-radius                           : 8px;
-    $toast-textColor                        : $color-white;
+    $toast-radius                           : $radius-rounded-c;
+    $toast-textColor                        : $color-content-light;
     $toast-bgColor--default                 : $color-grey;
-    $toast-bgColor--alert                   : $color-orange-60;
+    $toast-bgColor--alert                   : $color-orange-55;
     $toast-animation-duration               : 0.5s;
     $toast-height                           : 95px;
     $toast-translateY                       : -#{$toast-height - 5px};
