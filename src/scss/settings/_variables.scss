@@ -120,7 +120,7 @@ $spacing: (
 
 $baseline: spacing(x2); // default spacing between blocks
 
-$border-radius: 2px;
+$border-radius: $radius-rounded-a; // the smallest of pie border tokens
 
 //  z-indexes
 // ==========================================================================

@@ -13,7 +13,7 @@
     * TBC
     */
 
-    $alert-border-radius: 2px;
+    $alert-border-radius: $radius-rounded-c;
 
     // Base styles
     // -------------------------
@@ -42,7 +42,7 @@
     }
 
     .c-alert--warning {
-        @include alert-variant($color-support-warning-02, $color-content-brand-strong);
+        @include alert-variant($color-support-warning-02, $color-content-default);
     }
 
     .c-alert--danger {

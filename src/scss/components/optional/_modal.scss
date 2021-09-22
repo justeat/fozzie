@@ -14,7 +14,7 @@
     */
 
     $modal-titleFontSize    : body-l !default;
-    $modal-borderRadius     : 4px;
+    $modal-borderRadius     : $radius-rounded-d;
 
     .c-modal {
         z-index: zIndex(high);

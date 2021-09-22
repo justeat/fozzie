@@ -28,11 +28,10 @@
     // The mixins are used to stop code duplication as each chunk of
     // code needs to be within its own media mixin.
 
-    $listing-bg                     : $color-white;
+    $listing-bg                     : $color-container-default;
     $listing-borderColor            : $color-border-strong;
-    $listing-border-radius          : 4px;
-    $listing-img-border-radius      : 2px;
-    $listing-promoIcon-color        : $color-orange;
+    $listing-border-radius          : $radius-rounded-c;
+    $listing-promoIcon-color        : $color-content-brand;
 
     $listing--subsequent-bg         : $color-grey-20;
     $listing--inactive-bg           : rgba($listing-bg, 0.5);
@@ -122,7 +121,7 @@
                     padding-top: 0;
                     top: spacing(x0.5);
                     left: spacing(x0.5);
-                    border-radius: spacing(x0.5);
+                    border-radius: $listing-border-radius;
                 }
 
                 @include media('>=wide') {
@@ -200,7 +199,7 @@
                 left: spacing(x2);
                 position: absolute;
                 border: 1px solid $color-border-subtle;
-                border-radius: $listing-img-border-radius;
+                border-radius: $listing-border-radius;
 
                 @include media('>=wide') {
                     width: 65px;
@@ -227,7 +226,7 @@
             .c-listing-item-imgItem {
                 width: 100%;
                 height: auto;
-                border-radius: $listing-img-border-radius;
+                border-radius: $listing-border-radius;
             }
 
             .c-listing-item-info {
@@ -273,7 +272,7 @@
 
             .c-listing-item-new {
                 top: -4px;
-                color: $color-green;
+                color: $color-content-positive;
                 position: relative;
                 margin-right: spacing(x0.5);
             }
@@ -302,7 +301,7 @@
             .c-listing-item-detailsRow-icon {
                 width: 20px;
                 height: 20px;
-                fill: $color-grey-50;
+                fill: $color-content-subdued;
             }
 
             .c-listing-item-detailsRow-text {
@@ -339,7 +338,7 @@
             }
 
             .c-listing-item-promo-text--earned {
-                color: $color-green;
+                color: $color-content-positive;
             }
 
             .c-listing-item-rating {
