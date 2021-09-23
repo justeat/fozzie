@@ -10,41 +10,51 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/buttons
     */
 
-    $btn-default-bgColor                : $color-interactive-secondary;
-    $btn-default-weight                 : $font-weight-bold;
-    $btn-default-height                 : 2.6;
-    $btn-default-font-size              : 18;
-    $btn-default-font-family            : $font-family-base;
-    $btn-default-bgColor--hover         : darken($color-interactive-secondary, $color-hover-01);
-    $btn-default-bgColor--active        : darken($color-interactive-secondary, $color-active-01);
-    $btn-default-borderRadius           : $radius-rounded-e;
-    $btn-default-hozPadding             : 1em;
-    $btn-default-vertPadding            : 11px;
+    $btn-default-borderRadius              : $radius-rounded-e;
+    $btn-default-font-size                 : 'heading-s';
+    $btn-default-weight                    : $font-weight-bold;
+    $btn-default-padding                   : 10px spacing(x3);
+    $btn-default-outline-color             : $color-focus;
 
-    $btn-primary-bgColor                : $color-interactive-brand;
-    $btn-primary-bgColor--hover         : darken($color-interactive-brand, $color-hover-01);
-    $btn-primary-bgColor--focus         : darken($color-interactive-brand, $color-active-01);
-    $btn-primary-textColor              : $color-content-interactive-light;
+    $btn-default-bgColor                   : $color-interactive-brand;
+    $btn-default-color                     : $color-content-interactive-light;
+    $btn-default-bgColor--hover            : darken($color-interactive-brand, $color-hover-01);
+    $btn-default-bgColor--active           : darken($color-interactive-brand, $color-active-01);
 
-    $btn-secondary-bgColor              : $color-interactive-secondary;
-    $btn-secondary-bgColor--hover       : darken($color-interactive-secondary, $color-hover-01);
-    $btn-secondary-bgColor--active      : darken($color-interactive-secondary, $color-active-01);
-    $btn-secondary-textColor            : $color-content-interactive-secondary;
-    $btn-secondary-textColor--hover     : $color-content-interactive-secondary;
-    $btn-secondary-textColor--active    : $color-content-interactive-secondary;
+    $btn-primary-bgColor                   : $color-interactive-brand;
+    $btn-primary-bgColor--hover            : darken($color-interactive-brand, $color-hover-01);
+    $btn-primary-bgColor--active           : darken($color-interactive-brand, $color-active-01);
+    $btn-primary-textColor                 : $color-content-interactive-light;
 
-    $btn-tertiary-bgColor              : transparent;
-    $btn-tertiary-bgColor--hover       : darken($color-white, $color-hover-01);
-    $btn-tertiary-bgColor--active      : darken($color-white, $color-active-01);
-    $btn-tertiary-textColor            : $color-content-interactive-tertiary;
-    $btn-tertiary-textColor--hover     : $color-content-interactive-tertiary;
-    $btn-tertiary-textColor--active    : $color-content-interactive-tertiary;
-    $btn-tertiary-border-color         : $color-border-default;
+    $btn-secondary-bgColor                 : $color-interactive-secondary;
+    $btn-secondary-bgColor--hover          : darken($color-interactive-secondary, $color-hover-01);
+    $btn-secondary-bgColor--active         : darken($color-interactive-secondary, $color-active-01);
+    $btn-secondary-textColor               : $color-content-interactive-secondary;
 
-    $btn-wide-hozPadding                : 2em;
+    $btn-outline-bgColor                   : transparent;
+    $btn-outline-bgColor--hover            : darken($color-white, $color-hover-01);
+    $btn-outline-bgColor--active           : darken($color-white, $color-active-01);
+    $btn-outline-textColor                 : $color-content-interactive-tertiary;
+    $btn-outline-border-color              : $color-border-default;
 
-    $btn-disabled-bgColor               : $color-disabled-01;
+    $btn-ghost-bgColor                     : transparent;
+    $btn-ghost-bgColor--hover              : darken($color-white, $color-hover-01);
+    $btn-ghost-bgColor--active             : darken($color-white, $color-active-01);
+    $btn-ghost-textColor                   : $color-content-interactive-secondary;
 
+    $btn-disabled-bgColor                  : $color-disabled-01;
+    $btn-disabled-textColor                : $color-content-disabled;
+
+    $btn-sizeLarge-padding                 : 14px spacing(x3);
+    $btn-sizeLarge-loading-color           : $color-content-interactive-light;
+
+    $btn-sizeSmall-font-size               : 'body-l';
+    $btn-sizeSmall-padding                 : spacing() spacing(x2);
+
+    $btn-sizeXSmall-font-size              : 'body-s';
+    $btn-sizeXSmall-padding                : 6px spacing();
+
+    $btn-wide-hozPadding                   : 2em;
 
     /**
     * Base button styles – Based on csswizardry.com/beautons
@@ -54,48 +64,52 @@
     * 3. Make buttons inherit font styles.
     * 4. Force all elements using beautons to appear clickable.
     * 5. Normalise box model styles.
-    * 6. If the button’s text is 1em, and the button is (3 * font-size) tall, then
-    *    there is 1em of space above and below that text. We therefore apply 1em
-    *    of space to the left and right, as padding, to keep consistent spacing.
-    * 7. Fixes odd inner spacing in IE7.
+    * 6. Fixes odd inner spacing in IE7.
     */
 
+    // By deafult the button is Primary medium sized button
     .o-btn {
         display: inline-block;                      /* [1] */
         vertical-align: middle;                     /* [2] */
-        font-family: $btn-default-font-family;      /* [3] */
         @include font-size($btn-default-font-size); /* [3] */
         cursor: pointer;                            /* [4] */
         margin: 0;                                  /* [5] */
-        padding: $btn-default-vertPadding $btn-default-hozPadding; /* [5, 6] */
-        overflow: visible;                          /* [7] */
+        padding: $btn-default-padding;              /* [5] */
+        overflow: visible;                          /* [6] */
         text-align: center;
         font-weight: $btn-default-weight;
-        line-height: 1;
 
-        // You may want to change this
         background-color: $btn-default-bgColor;
         border-radius: $btn-default-borderRadius;
         border: 1px solid transparent;
         user-select: none;
-
-        color: $color-grey-50;
+        color: $btn-default-color;
         text-decoration: none;
 
-        &:hover,
-        &:focus {
-            background-color: $btn-default-bgColor--hover;
+        // Hide focus styles if they're not needed, for example, when an element receives focus via the mouse.
+        &:focus:not(:focus-visible) {
+            outline: 0;
+        }
 
-            &:not(.o-btnLink) {
-                outline: none; // no need as already has a focus/active state
-            }
+        // Show focus styles on keyboard focus.
+        &:focus-visible {
+            outline: 0;
+            box-shadow: 0 0 0 2px $btn-default-outline-color;
+        }
+
+        &:hover {
+            background-color: $btn-default-bgColor--hover;
         }
 
         &:active {
             background-color: $btn-default-bgColor--active;
+        }
 
+
+        &:hover,
+        &:active {
             &:not(.o-btnLink) {
-                outline: none; // no need as already has a focus/active state
+                outline: 0; // no need as already has a focus/active state
             }
         }
 
@@ -105,17 +119,6 @@
         &:focus,
         &:visited {
             text-decoration: none;
-        }
-
-        // Disabled state
-        &.disabled,
-        &[disabled] {
-            cursor: default;
-
-            &,
-            &:hover {
-                background-color: $btn-disabled-bgColor;
-            }
         }
 
         p + & {
@@ -165,11 +168,23 @@
             background-color: $btn-primary-bgColor--hover;
         }
 
-        &:active,
-        &:focus {
-            background-color: $btn-primary-bgColor--focus;
+        &:active {
+            background-color: $btn-primary-bgColor--active;
+        }
+
+        &.o-btn--sizeSmall,
+        &.o-btn--sizeXSmall {
+            background-color: $color-interactive-primary;
+
+            &:hover {
+                background-color: lighten($color-interactive-primary, $color-hover-02);
+            }
+            &:active {
+                background-color: lighten($color-interactive-primary, $color-active-02);
+            }
         }
     }
+
 
     /**
     * Modifier – .o-btn--secondary
@@ -183,39 +198,85 @@
 
         &:hover {
             background-color: $btn-secondary-bgColor--hover;
-            color: $btn-secondary-textColor--hover;
         }
 
-        &:active,
-        &:focus {
+        &:active {
             background-color: $btn-secondary-bgColor--active;
-            color: $btn-secondary-textColor--active;
-            outline: none;
         }
     }
 
+
     /**
-    * Modifier – .o-btn--tertiary
+    * Modifier – .o-btn--outline
+    *
+    * Accompanying button style
+    */
+
+    .o-btn--outline {
+        background-color: $btn-outline-bgColor;
+        color: $btn-outline-textColor;
+        border-color: $btn-outline-border-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $btn-outline-textColor;
+        }
+
+        &:hover {
+            background-color: $btn-outline-bgColor--hover;
+        }
+
+        &:active {
+            background-color: $btn-outline-bgColor--active;
+        }
+    }
+
+
+    /**
+    * Modifier – .o-btn--ghost
     *
     * Accompanying button that can be used on solid background colours (such as grey)
     */
 
-    .o-btn--tertiary {
-        background-color: $btn-tertiary-bgColor;
-        color: $btn-tertiary-textColor;
-        border-color: $btn-tertiary-border-color;
+    .o-btn--ghost {
+        background-color: $btn-ghost-bgColor;
+        color: $btn-ghost-textColor;
 
-        &:hover {
-            background-color: $btn-tertiary-bgColor--hover;
-            color: $btn-tertiary-textColor--hover;
-        }
-
+        &:hover,
         &:active,
         &:focus {
-            background-color: $btn-tertiary-bgColor--active;
-            color: $btn-tertiary-textColor--active;
-            outline: none;
+            color: $btn-ghost-textColor;
         }
+
+        &:hover {
+            background-color: $btn-ghost-bgColor--hover;
+        }
+
+        &:active {
+            background-color: $btn-ghost-bgColor--active;
+        }
+    }
+
+
+    /**
+    * ==========================================================================
+    * Btn Size Modifiers
+    * ==========================================================================
+    */
+
+    .o-btn--sizeLarge {
+        padding: $btn-sizeLarge-padding;
+    }
+
+    .o-btn--sizeSmall {
+        @include font-size($btn-sizeSmall-font-size);
+        padding: $btn-sizeSmall-padding;
+    }
+
+    .o-btn--sizeXSmall {
+        @include font-size($btn-sizeXSmall-font-size);
+        padding: $btn-sizeXSmall-padding;
     }
 
 
@@ -268,22 +329,36 @@
         }
     }
 
+    .o-btn--fullWidth {
+        display: block;
+        width: 100%;
+
+        // Vertically space out multiple fullWidth buttons
+        // same as .o-btn--fullWidth + .o-btn--fullWidth
+        & + & {
+            margin-top: spacing();
+        }
+    }
+
 
     /**
     * Disabled button
     */
 
-    .o-btn--disabled {
-        cursor: default;
+    .o-btn--disabled,
+    .o-btn.disabled,
+    &.is-disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        color: $btn-disabled-textColor;
 
         &,
-        &:hover,
-        &:active,
-        &:focus {
+        &:hover {
             background-color: $btn-disabled-bgColor;
-            color: inherit;
+            color: $btn-disabled-textColor;
         }
     }
+
 
     /**
     * Loading state
@@ -311,7 +386,7 @@
         padding: 0;
         margin: 0;
         color: $color-content-link;
-        font-weight: 500;
+        font-weight: $font-weight-bold;
         text-decoration: underline;
 
         &:hover {

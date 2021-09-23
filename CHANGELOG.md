@@ -8,6 +8,19 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.4
+------------------------------
+*September 23, 2021*
+
+### Changed
+- Button styles in line with icing phase 2.
+Now button modifiers are:
+- Btn Background Colour modifiers: `o-btn--primary`, `o-btn--secondary`, `o-btn--outline`, `o-btn--ghost`.
+- Btn Size Modifiers: `o-btn--sizeLarge`, `o-btn--sizeSmall`, `o-btn--sizeXSmall`.
+- Btn Layout Modifiers: `o-btn--block`, `o-btn--wide`, `o-btn--icon`, `o-btn--fullWidth`, `o-btn--disabled`.
+- Moved font-family declaration from the button component styles to typography styles.
+
+
 v6.0.0-beta.3
 ------------------------------
 *September 22, 2021*
