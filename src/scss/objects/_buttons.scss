@@ -315,8 +315,8 @@
 
     .o-btn--disabled,
     .o-btn.disabled,
-    &.is-disabled,
-    &[disabled] {
+    .o-btn.is-disabled,
+    .o-btn[disabled] {
         cursor: not-allowed;
         color: $btn-disabled-textColor;
 
