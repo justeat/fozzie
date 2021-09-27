@@ -54,8 +54,6 @@
     $btn-sizeXSmall-font-size              : 'body-s';
     $btn-sizeXSmall-padding                : 6px spacing();
 
-    $btn-wide-hozPadding                   : 2em;
-
     /**
     * Base button styles – Based on csswizardry.com/beautons
     *
@@ -96,7 +94,7 @@
 
         &:hover,
         &:active {
-            &:not(.o-btnLink) {
+            &:not(.o-btn--link) {
                 outline: 0; // no need as already has a focus/active state
             }
         }
@@ -280,30 +278,6 @@
     * ==========================================================================
     */
 
-    /**
-    * Modifier – btn-block
-    *
-    * Makes the btn full width
-    */
-
-    .o-btn--block {
-        display: block;
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-
-        // Vertically space out multiple block buttons
-        // same as .o-btn--block + .o-btn--block
-        & + & {
-            margin-top: 10px;
-        }
-    }
-
-    .o-btn--wide {
-        padding-left: $btn-wide-hozPadding;
-        padding-right: $btn-wide-hozPadding;
-    }
-
     //remove uneeded styles (like colours) from a button when only an icon is on it (like a close button)
     .o-btn--icon {
         @extend %u-ir;
@@ -374,7 +348,7 @@
     * Should only be applied to buttons
     */
 
-    .o-btnLink {
+    .o-btn--link {
         border: 0;
         background-color: transparent;
         padding: 0;
