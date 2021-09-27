@@ -61,21 +61,16 @@
     *
     * 1. Allow us to better style box model properties.
     * 2. Line different sized buttons up a little nicer.
-    * 3. Make buttons inherit font styles.
-    * 4. Force all elements using beautons to appear clickable.
-    * 5. Normalise box model styles.
-    * 6. Fixes odd inner spacing in IE7.
     */
 
     // By deafult the button is Primary medium sized button
     .o-btn {
         display: inline-block;                      /* [1] */
         vertical-align: middle;                     /* [2] */
-        @include font-size($btn-default-font-size); /* [3] */
-        cursor: pointer;                            /* [4] */
-        margin: 0;                                  /* [5] */
-        padding: $btn-default-padding;              /* [5] */
-        overflow: visible;                          /* [6] */
+        @include font-size($btn-default-font-size);
+        cursor: pointer;
+        margin: 0;
+        padding: $btn-default-padding;
         text-align: center;
         font-weight: $btn-default-weight;
 
@@ -209,7 +204,7 @@
     /**
     * Modifier – .o-btn--outline
     *
-    * Accompanying button style
+    * Accompanying outline style button
     */
 
     .o-btn--outline {
@@ -236,7 +231,7 @@
     /**
     * Modifier – .o-btn--ghost
     *
-    * Accompanying button that can be used on solid background colours (such as grey)
+    * Accompanying ghost style button
     */
 
     .o-btn--ghost {

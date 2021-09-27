@@ -12,6 +12,13 @@ v6.0.0-beta.4
 ------------------------------
 *September 23, 2021*
 
+### Added
+- `o-btn--outline`, `o-btn--ghost`, `o-btn--fullWidth` modifiers.
+- `o-btn--sizeLarge`, `o-btn--sizeSmall`, `o-btn--sizeXSmall` size modifiers.
+
+### Removed
+- `o-btn--tertiary`. Use `o-btn--outline` instead.
+
 ### Changed
 - Button styles in line with icing phase 2.
 Now button modifiers are:
