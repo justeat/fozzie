@@ -10,7 +10,7 @@ Future Todo List
 
 v6.0.0-beta.4
 ------------------------------
-*September 23, 2021*
+*September 27, 2021*
 
 ### Added
 - `o-btn--outline`, `o-btn--ghost`, `o-btn--fullWidth` modifiers.
@@ -19,7 +19,7 @@ v6.0.0-beta.4
 ### Removed
 - `o-btn--tertiary`. Use `o-btn--outline` instead.
 - `o-btn--block`. Use `o-btn--fullWidth` instead.
-- `o-btn--wide`. 
+- `o-btn--wide`.
 
 ### Changed
 - Button styles in line with icing phase 2.
