@@ -81,15 +81,8 @@
         color: $btn-default-color;
         text-decoration: none;
 
-        // Hide focus styles if they're not needed, for example, when an element receives focus via the mouse.
-        &:focus:not(:focus-visible) {
-            outline: 0;
-        }
-
-        // Show focus styles on keyboard focus.
-        &:focus-visible {
-            outline: 0;
-            box-shadow: 0 0 0 2px $btn-default-outline-color;
+        &:focus {
+            border: 2px solid $btn-default-outline-color;
         }
 
         &:hover {
@@ -190,6 +183,12 @@
     .o-btn--secondary {
         background-color: $btn-secondary-bgColor;
         color: $btn-secondary-textColor;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $btn-secondary-textColor;
+        }
 
         &:hover {
             background-color: $btn-secondary-bgColor--hover;
