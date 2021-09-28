@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.5
+------------------------------
+*September 28, 2021*
+
+### Changed
+- body font size from 14px/0.875rem to 16px/1rem
+
+
 v6.0.0-beta.4
 ------------------------------
 *September 27, 2021*
