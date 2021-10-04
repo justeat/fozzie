@@ -130,6 +130,7 @@ $border-radius: $radius-rounded-a; // the smallest of pie border tokens
 $zIndex: (
     lowest      : -1,
     low         : 1,
+    belowMid    : 99,
     mid         : 100,
     belowHighest: 8999,
     high        : 9000,
