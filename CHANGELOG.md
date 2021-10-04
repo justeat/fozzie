@@ -8,6 +8,17 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.6
+------------------------------
+*October 4, 2021*
+
+### Added
+- `belowMid` z-index value.
+
+### Changed
+- Breadcrumb "pill" modifier styles to ensure alignment and colours are correct.
+
+
 v6.0.0-beta.5
 ------------------------------
 *September 28, 2021*

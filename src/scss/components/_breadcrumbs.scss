@@ -26,11 +26,13 @@
 
     $breadcrumb--pill-text-color             : $color-content-light;
     $breadcrumb--pill-link-color--hover      : $color-content-link-light;
+    $breadcrumb--pill-icon-fillColor         : $color-content-light;
 
 
     .c-breadcrumb {
         width: 100%;
         line-height: 2.5;
+
         @include media('>=mid') {
             @include font-size(body-l, false);
         }
@@ -87,6 +89,7 @@
             .c-breadcrumb-item {
                 display: none;
             }
+
             // only show previous page's link
             .c-breadcrumb-item:nth-last-child(2) {
                 display: list-item;
@@ -133,16 +136,26 @@
         }
 
         .c-breadcrumb-item {
-            @include media('<=mid') {
-                display: flex;
-                align-items: center;
+            display: flex;
+            align-items: center;
 
-                a {
+            a {
+                @include media('<=mid') {
                     order: 2;
                 }
+            }
 
-                svg {
+            svg {
+                height: 8px;
+                transform: rotate(-90deg);
+                width: 12px;
+
+                @include media('<=mid') {
                     transform: rotate(90deg);
+                }
+
+                * {
+                    fill: $breadcrumb--pill-icon-fillColor;
                 }
             }
         }
