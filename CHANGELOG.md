@@ -8,6 +8,25 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.7
+------------------------------
+*October 4, 2021*
+
+### Added
+- `c-card--info` component modifier.
+- `c-rating-description` component modifier.
+
+### Changed
+- Set default paragraph size to match base font-size.
+- Card border colour matches PIE designs.
+- `c-mediaElement--fullstack--negativeTop` modifier top margin updated.
+- Badge component font-size explicitly set.
+- `c-badge--indicator` modifier colours updated.
+
+### Fixed
+- Breadcrumb icon size.
+
+
 v6.0.0-beta.6
 ------------------------------
 *October 4, 2021*

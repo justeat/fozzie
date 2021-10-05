@@ -43,7 +43,7 @@
     * Paragraphs
     */
     p {
-        @include font-size(body-s);
+        @include font-size(body-l);
         margin-top: $baseline;
         margin-bottom: 0;
     }

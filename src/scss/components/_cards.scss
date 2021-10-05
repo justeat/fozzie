@@ -17,7 +17,8 @@
     $card-arrow-bottom-position                     : 0;
     $card-padding                                   : spacing(x2);
     $card-radius                                    : $radius-rounded-c;
-    $card-borderColor                               : $color-border-strong;
+    $card-borderColor                               : $color-border-default;
+    $card-info-bgColor--active                      : $color-support-warning-02;
     $card-section-margin                            : spacing(x4);
     $card-section-margin--large                     : spacing(x8);
     $card-section-highlight-backgroundColor         : $color-support-brand-02;
@@ -36,6 +37,10 @@
         @include media('>=mid') {
             margin-bottom: 0;
         }
+    }
+
+    .c-card--info {
+        background-color: $card-info-bgColor--active;
     }
 
         //
