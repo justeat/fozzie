@@ -41,6 +41,10 @@
         }
     }
 
+    .c-rating-description {
+        @include font-size(body-s);
+    }
+
     .c-rating--small {
 
         height: $star-size--small;

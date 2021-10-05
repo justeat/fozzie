@@ -22,14 +22,14 @@
     $badge-successAlt-bgColor       : $color-support-positive;
     $badge-warning-color            : $color-content-brand;
     $badge-alert-color              : $color-content-error;
-    $badge-important-color          : $color-content-subdued;
+    $badge-important-color          : $color-content-default;
     $badge-important-bgColor        : $color-support-brand-02;
     $badge-award-color              : $color-external-bta-text;
     $badge-award-bgColor            : $color-external-bta-background;
     $badge-dark-color               : $color-content-inverse;
     $badge-dark-bgColor             : $color-grey;
-    $badge-indicator-color          : $color-support-info;
-    $badge-indicator-bgColor        : $color-white;
+    $badge-indicator-color          : $color-content-interactive-brand;
+    $badge-indicator-bgColor        : $color-interactive-light;
     $badge-padding                  : 1px 5px;
     $badge-rounded-radius           : $radius-rounded-d;
     $badge-rounded-padding          : spacing(x0.5) spacing(x2);
@@ -40,6 +40,7 @@
 
     .c-badge {
         background-color: $badge-bgColor;
+        @include font-size(body-s);
         padding: $badge-padding;
         position: relative;
         white-space: nowrap;
