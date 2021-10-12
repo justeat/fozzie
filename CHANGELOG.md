@@ -8,6 +8,27 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.9
+------------------------------
+*October 12, 2021*
+
+### Changed
+- link hover and active styles to lighten instead of darkening.
+
+### Added
+- `o-link--distinct` class to make links blue instead of default text colour if needed.
+
+### Removed
+- `.o-btn.is-loading` styles. Use `o-btn--loading` instead. Now button styles utilize `loadingIndicator` and `spinnerColor` mixins to make sure that the spinner looks right and changes colour depending on what the type of the button is in use. If you need to check the markup for the button please see fozzie-components f-button component as an example.
+
+
+v6.0.0-beta.8
+------------------------------
+*October 4, 2021*
+
+Republish to fix some build issues.
+
+
 v6.0.0-beta.7
 ------------------------------
 *October 4, 2021*

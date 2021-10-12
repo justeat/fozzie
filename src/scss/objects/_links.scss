@@ -18,17 +18,12 @@
 
         &:hover,
         &:focus {
-            color: darken($color-content-link, $color-hover-01);
+            color: lighten($color-content-link, $color-hover-02);
         }
 
         &:active {
-            color: darken($color-content-link, $color-active-02);
+            color: lighten($color-content-link, $color-active-02);
         }
-        // have left in in case we want to use eventually
-        // &:visited {
-        //     color: $color-link-visited;
-        //     text-decoration: none;
-        // }
     }
 
     .o-link--full {
@@ -49,5 +44,17 @@
 
     .o-link--bold {
         font-weight: $font-weight-bold;
+    }
+
+    .o-link--distinct {
+        color: $color-content-link-distinct;
+
+        &:hover,
+        &:focus {
+            color: darken($color-content-link-distinct, $color-hover-01);
+        }
+        &:active {
+            color: darken($color-content-link-distinct, $color-active-01);
+        }
     }
 }

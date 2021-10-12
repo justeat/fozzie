@@ -21,26 +21,39 @@
     $btn-default-bgColor--hover            : darken($color-interactive-brand, $color-hover-01);
     $btn-default-bgColor--active           : darken($color-interactive-brand, $color-active-01);
 
+    $btn-default-loading-opacity           : 0.35;
+
     $btn-primary-bgColor                   : $color-interactive-brand;
     $btn-primary-bgColor--hover            : darken($color-interactive-brand, $color-hover-01);
     $btn-primary-bgColor--active           : darken($color-interactive-brand, $color-active-01);
     $btn-primary-textColor                 : $color-content-interactive-light;
+    $btn-primary-loading-color             : $btn-primary-textColor;
+    $btn-primary-loading-colorOpaque       : rgba($btn-primary-loading-color, $btn-default-loading-opacity);
 
     $btn-secondary-bgColor                 : $color-interactive-secondary;
     $btn-secondary-bgColor--hover          : darken($color-interactive-secondary, $color-hover-01);
     $btn-secondary-bgColor--active         : darken($color-interactive-secondary, $color-active-01);
     $btn-secondary-textColor               : $color-content-interactive-secondary;
+    $btn-secondary-loading-color           : $btn-secondary-textColor;
+    $btn-secondary-loading-colorOpaque     : rgba($btn-secondary-loading-color, $btn-default-loading-opacity);
 
     $btn-outline-bgColor                   : transparent;
     $btn-outline-bgColor--hover            : darken($color-white, $color-hover-01);
     $btn-outline-bgColor--active           : darken($color-white, $color-active-01);
     $btn-outline-textColor                 : $color-content-interactive-tertiary;
     $btn-outline-border-color              : $color-border-default;
+    $btn-outline-loading-color             : $btn-outline-textColor;
+    $btn-outline-loading-colorOpaque       : rgba($btn-outline-loading-color, $btn-default-loading-opacity);
 
     $btn-ghost-bgColor                     : transparent;
     $btn-ghost-bgColor--hover              : darken($color-white, $color-hover-01);
     $btn-ghost-bgColor--active             : darken($color-white, $color-active-01);
     $btn-ghost-textColor                   : $color-content-interactive-secondary;
+    $btn-ghost-loading-color               : $btn-ghost-textColor;
+    $btn-ghost-loading-colorOpaque         : rgba($btn-ghost-loading-color, $btn-default-loading-opacity);
+
+    $btn-link-loading-color                : $color-content-link;
+    $btn-link-loading-colorOpaque          : rgba($btn-link-loading-color, $btn-default-loading-opacity);
 
     $btn-disabled-bgColor                  : $color-disabled-01;
     $btn-disabled-textColor                : $color-content-disabled;
@@ -53,6 +66,15 @@
 
     $btn-sizeXSmall-font-size              : 'body-s';
     $btn-sizeXSmall-padding                : 6px spacing();
+
+    @include loadingIndicator('medium');
+
+    .c-spinner {
+        margin: 0 auto;
+        position: absolute;
+        left: calc(50% - 10px); // Substract half of the size of the spinner.
+        top: calc(50% - 10px); // Substract half of the size of the spinner.
+    }
 
     /**
     * Base button styles – Based on csswizardry.com/beautons
@@ -154,9 +176,12 @@
             background-color: $btn-primary-bgColor--hover;
         }
 
-        &:active {
+        &:active,
+        &.o-btn--loading {
             background-color: $btn-primary-bgColor--active;
         }
+
+        @include spinnerColor($btn-primary-loading-color, $btn-primary-loading-colorOpaque);
 
         &.o-btn--sizeSmall,
         &.o-btn--sizeXSmall {
@@ -165,7 +190,8 @@
             &:hover {
                 background-color: lighten($color-interactive-primary, $color-hover-02);
             }
-            &:active {
+            &:active,
+            &.o-btn--loading {
                 background-color: lighten($color-interactive-primary, $color-active-02);
             }
         }
@@ -192,9 +218,12 @@
             background-color: $btn-secondary-bgColor--hover;
         }
 
-        &:active {
+        &:active,
+        &.o-btn--loading {
             background-color: $btn-secondary-bgColor--active;
         }
+
+        @include spinnerColor($btn-secondary-loading-color, $btn-secondary-loading-colorOpaque);
     }
 
 
@@ -219,9 +248,12 @@
             background-color: $btn-outline-bgColor--hover;
         }
 
-        &:active {
+        &:active,
+        &.o-btn--loading {
             background-color: $btn-outline-bgColor--active;
         }
+
+        @include spinnerColor($btn-outline-loading-color, $btn-outline-loading-colorOpaque);
     }
 
 
@@ -245,9 +277,12 @@
             background-color: $btn-ghost-bgColor--hover;
         }
 
-        &:active {
+        &:active,
+        &.o-btn--loading {
             background-color: $btn-ghost-bgColor--active;
         }
+
+        @include spinnerColor($btn-ghost-loading-color, $btn-ghost-loading-colorOpaque);
     }
 
 
@@ -325,22 +360,15 @@
             background-color: $btn-disabled-bgColor;
             color: $btn-disabled-textColor;
         }
+
+        &.o-btn--link {
+            background-color: transparent;
+        }
     }
 
 
     /**
-    * Loading state
-    */
-
-    .o-btn.is-loading {
-    background: url('//dy3erx8o0a6nh.cloudfront.net/images/icon_loader_arrow.gif') 50% 50% / 20px 20px no-repeat border-box $btn-disabled-bgColor;
-    color: transparent !important;
-    border-radius: 0; /* Fixes rendering bug in Chrome for Android */
-    }
-
-
-    /**
-    * btnLink
+    * Link button
     *
     * Make a button visually look like a default link
     * Useful when we semantically want a button but don’t want all the default styling
@@ -367,5 +395,7 @@
             color: darken($color-content-link, $color-active-01);
             background-color: transparent;
         }
+
+        @include spinnerColor($btn-link-loading-color, $btn-link-loading-colorOpaque);
     }
  }
