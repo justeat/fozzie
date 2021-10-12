@@ -17,6 +17,7 @@ v6.0.0-beta.9
 
 ### Added
 - `o-link--distinct` class to make links blue instead of default text colour if needed.
+- `g--alignSpaceAround` and `g--alignSpaceBetween` classes for the grid mixin.
 
 ### Removed
 - `.o-btn.is-loading` styles. Use `o-btn--loading` instead. Now button styles utilize `loadingIndicator` and `spinnerColor` mixins to make sure that the spinner looks right and changes colour depending on what the type of the button is in use. If you need to check the markup for the button please see fozzie-components f-button component as an example.
