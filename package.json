@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -32,21 +32,29 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@babel/cli": "7.15.7",
+    "@babel/core": "7.15.8",
+    "@babel/eslint-parser": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@justeat/browserslist-config-fozzie": "1.2.0",
+    "@justeat/eslint-config-fozzie": "4.0.0",
     "@justeat/f-dom": "1.1.0",
     "@justeat/f-logger": "0.8.1",
     "@justeat/f-utils": "2.0.0",
-    "@justeat/pie-design-tokens": "0.19.0",
-    "fontfaceobserver": "2.1.0",
-    "include-media": "1.4.10"
-  },
-  "devDependencies": {
-    "@justeat/browserslist-config-fozzie": "1.2.0",
-    "@justeat/gulp-build-fozzie": "10.2.1",
     "@justeat/js-test-buddy": "0.4.1",
-    "concurrently": "6.2.1",
+    "@justeat/pie-design-tokens": "0.19.0",
+    "@justeat/stylelint-config-fozzie": "2.2.0",
+    "concurrently": "6.3.0",
     "coveralls": "3.1.1",
-    "danger": "10.6.6"
+    "danger": "10.7.0",
+    "eslint": "7.21.0",
+    "eslint-plugin-import": "2.25.2",
+    "fontfaceobserver": "2.1.0",
+    "include-media": "1.4.10",
+    "jest": "27.3.0",
+    "stylelint": "13.13.1",
+    "stylelint-scss": "3.21.0"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
@@ -64,11 +72,11 @@
   "scripts": {
     "compile": "babel -d dist src --ignore \"src/**/*.test.js\"",
     "lint": "yarn run lint:css && yarn run lint:js",
-    "lint:css": "gulp scss:lint --prod",
-    "lint:js": "gulp scripts:lint --prod",
+    "lint:css": "stylelint src/scss/**/*.scss",
+    "lint:js": "eslint --ext .js .",
     "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
-    "test": "gulp scripts:test",
-    "test:cover": "gulp scripts:test:coverage",
+    "test": "jest",
+    "test:cover": "jest --collect-coverage",
     "test:cover:CI": "cat coverage/lcov.info | coveralls"
   },
   "stylelint": {
