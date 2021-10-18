@@ -8,7 +8,7 @@ if (!isTrivial) {
     const versionRegex = /^(v[0-9]+\.[0-9]+\.[0-9]+)/;
     const isPRTitleVersioned = (danger.github.pr.title).match(versionRegex);
     if (!isPRTitleVersioned) {
-        fail(`:exclamation: PR title should start with the package version in the format v(x.x.x) (such as v1.4.0)`);
+        fail(':exclamation: PR title should start with the package version in the format v(x.x.x) (such as v1.4.0)');
     }
 
     // Fail if there isn’t a CHANGELOG entry – should update for every PR
