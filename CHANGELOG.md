@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v5.2.1
+------------------------------
+*October 20, 2021*
+
+### Changed
+- Moved some devDependencies to dependencies
+
+
 v5.2.0
 ------------------------------
 *October 19, 2021*
