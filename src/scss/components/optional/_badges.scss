@@ -13,6 +13,8 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/badges
     */
 
+    @warn 'The badge component will be deprecated in the future, please use the tag component instead.';
+
     $badge-bgColor                  : $color-grey-10;
     $badge-light-bgColor            : $color-white;
     $badge-info-color               : $color-content-positive;

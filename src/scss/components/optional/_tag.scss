@@ -1,0 +1,80 @@
+@mixin tag() {
+    /**
+    * Components > Tag
+    * =================================
+    * Used for styling small pieces of information.
+    *
+    * Examples: Menu - Restaurant delivery information and Search - listing labels
+    *
+    * The `c-tag` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include tag();` into your SCSS dependencies file.
+    */
+
+    .c-tag {
+        align-items: center;
+        background-color: $color-container-subtle;
+        border-radius: $radius-rounded-b;
+        color: $color-content-default;
+        display: flex;
+        @include font-size(body-s);
+        justify-content: center;
+        padding: 2px 4px;
+
+        &.is-strong {
+            background-color: $color-container-inverse;
+            color: $color-content-inverse;
+        }
+    }
+
+        .c-tag--small {
+            border-radius: $radius-rounded-a;
+            @include font-size(caption);
+            padding: 0 4px;
+        }
+
+        .c-tag--positive {
+            background-color: $color-support-positive-02;
+            color: $color-content-positive;
+
+            &.is-strong {
+                background-color: $color-support-positive;
+                color: $color-content-light;
+            }
+        }
+
+        .c-tag--error {
+            background-color: $color-support-error-02;
+            color: $color-content-error;
+
+            &.is-strong {
+                background-color: $color-support-error;
+                color: $color-content-light;
+            }
+        }
+
+        .c-tag--outline {
+            background-color: transparent;
+            border: solid 1px $color-border-default;
+            color: $color-content-default;
+        }
+
+        .c-tag--ghost {
+            background-color: transparent;
+            color: $color-content-default;
+        }
+
+        .c-tag--info {
+            background-color: $color-support-info-02;
+            color: $color-content-default;
+        }
+
+        .c-tag--warning {
+            background-color: $color-support-warning-02;
+            color: $color-content-default;
+        }
+
+        .c-tag--brand {
+            background-color: $color-support-brand-02;
+            color: $color-content-default;
+        }
+}

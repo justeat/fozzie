@@ -8,6 +8,15 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.12
+------------------------------
+*October 21, 2021*
+
+### Added
+- `c-tag` optional component styles.
+- Deprecation warning to the `c-badge` component.
+
+
 v6.0.0-beta.11
 ------------------------------
 *October 21, 2021*
