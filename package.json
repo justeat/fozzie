@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -32,6 +32,11 @@
   "engines": {
     "node": ">=10.0.0"
   },
+  "dependencies": {
+    "@justeat/f-utils": "2.0.0",
+    "@justeat/pie-design-tokens": "0.19.0",
+    "include-media": "1.4.10"
+  },
   "devDependencies": {
     "@babel/cli": "7.15.7",
     "@babel/core": "7.15.8",
@@ -41,9 +46,7 @@
     "@justeat/eslint-config-fozzie": "4.0.0",
     "@justeat/f-dom": "1.1.0",
     "@justeat/f-logger": "0.8.1",
-    "@justeat/f-utils": "2.0.0",
     "@justeat/js-test-buddy": "0.4.1",
-    "@justeat/pie-design-tokens": "0.19.0",
     "@justeat/stylelint-config-fozzie": "2.2.0",
     "concurrently": "6.3.0",
     "coveralls": "3.1.1",
@@ -51,7 +54,6 @@
     "eslint": "7.21.0",
     "eslint-plugin-import": "2.25.2",
     "fontfaceobserver": "2.1.0",
-    "include-media": "1.4.10",
     "jest": "27.3.0",
     "stylelint": "13.13.1",
     "stylelint-scss": "3.21.0"
