@@ -1,7 +1,7 @@
 module.exports = api => {
     const isTest = api.env('test');
-    const presets = [];
     const plugins = [];
+    const presets = [];
 
     if (!isTest) {
         api.cache(true);
@@ -12,7 +12,7 @@ module.exports = api => {
     }
 
     return {
-        presets,
-        plugins
+        plugins,
+        presets
     };
 };

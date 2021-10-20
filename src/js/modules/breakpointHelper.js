@@ -98,11 +98,11 @@ export const isWithinBreakpoint = breakpointString => {
     }
 
     const mediaQuery = {
-        '>': currentScreenWidth > breakpointInPX,
         '<': currentScreenWidth < breakpointInPX,
+        '<=': currentScreenWidth <= breakpointInPX,
         '=': currentScreenWidth === breakpointInPX,
-        '>=': currentScreenWidth >= breakpointInPX,
-        '<=': currentScreenWidth <= breakpointInPX
+        '>': currentScreenWidth > breakpointInPX,
+        '>=': currentScreenWidth >= breakpointInPX
     };
 
     const result = mediaQuery[operator];
@@ -113,4 +113,3 @@ export const isWithinBreakpoint = breakpointString => {
 
     return result;
 };
-
