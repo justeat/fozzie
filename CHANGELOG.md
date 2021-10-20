@@ -8,6 +8,15 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.10
+------------------------------
+*October 20, 2021*
+
+### Changed
+- Fixed linting error in _grid.scss (missed semicolons).
+- Rebased master to include v5.2.0 (removed gulp).
+
+
 v6.0.0-beta.9
 ------------------------------
 *October 12, 2021*
