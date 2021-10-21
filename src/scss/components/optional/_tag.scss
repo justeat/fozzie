@@ -16,9 +16,10 @@
         border-radius: $radius-rounded-b;
         color: $color-content-default;
         display: flex;
-        @include font-size(body-s);
+        @include font-size(body-s, false);
+        line-height: 1;
         justify-content: center;
-        padding: 2px 4px;
+        padding: 4px 6px;
 
         &.is-strong {
             background-color: $color-container-inverse;
@@ -28,8 +29,8 @@
 
         .c-tag--small {
             border-radius: $radius-rounded-a;
-            @include font-size(caption);
-            padding: 0 4px;
+            @include font-size(caption, false);
+            padding: 4px;
         }
 
         .c-tag--positive {
