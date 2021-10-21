@@ -30,7 +30,7 @@
         .c-tag--small {
             border-radius: $radius-rounded-a;
             @include font-size(caption, false);
-            padding: 4px;
+            padding: 2px 4px;
         }
 
         .c-tag--positive {
