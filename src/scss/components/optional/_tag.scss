@@ -17,6 +17,7 @@
         color: $color-content-default;
         display: flex;
         @include font-size(body-s, false);
+        font-weight: $font-weight-regular;
         line-height: 1;
         justify-content: center;
         padding: 4px 6px;
