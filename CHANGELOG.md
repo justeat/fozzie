@@ -7,6 +7,27 @@ Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
+v6.0.0
+------------------------------
+*October 27, 2021*
+
+## Main changes:
+- New font and colour theme from `pie-design-tokens` package.
+- New border radius values for different components styles.
+- Button styles now are in line with icing phase 2. Note that there are a lot of changes in css class names. Full list can be found below in beta release CHANGELOGs.
+- Set default paragraph size to match base font-size which now is 16px instead of 14px.
+
+### Added
+- `c-tag` optional component styles and a deprecation warning to the `c-badge` component.
+
+### Changed
+- `pie-design-tokens` package updated to v1.0.0-beta.2.
+
+### Removed
+- Menulog font files.
+
+** Full list of changes (including all css class names changes) can be found below in beta release CHANGELOGs **
+
 
 v6.0.0-beta.13
 ------------------------------
