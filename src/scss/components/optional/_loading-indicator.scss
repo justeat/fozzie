@@ -5,7 +5,8 @@
 * Example: f-searchbox -  Loqate feature enabled (Full address capture)
 *
 * If you'd like to use it in your project you can include it by adding `@include loadingIndicator();` into your SCSS dependencies file.
-*
+* Then add `<span class=“c-spinner” />` to your html;
+* If you’d like to change spinner colour add `@include spinnerColor(mainColourVar, opaqueColourVar);` to the parent element of the spinner styles.
 */
 
 $loading-indicator-size-medium: 20px;
@@ -23,7 +24,7 @@ $loading-indicator-spacing: 20px;
   }
 }
 
-@mixin loadingIndicator($loading-indicator-size: 'medium', $loading-indicator-color: $loading-indicator-color-default, $loading-indicator-borderColorOpaque: $loading-indicator-borderColorOpaque-default) {
+@mixin loadingIndicator($loading-indicator-size: 'medium') {
   @keyframes spin {
     from {
       transform: rotate(0);
@@ -39,12 +40,14 @@ $loading-indicator-spacing: 20px;
     right: 0;
   }
 
+
+  @include spinnerColor();
+
   .c-spinner {
     margin-right: $loading-indicator-spacing;
     border-radius: 50%;
     animation: spin 1s linear 0s infinite;
 
-    @include spinnerColor();
 
     @if $loading-indicator-size=='large' {
       width: $loading-indicator-size-large;

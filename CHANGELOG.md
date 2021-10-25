@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0-beta.13
+------------------------------
+*October 25, 2021*
+
+### Fixed
+- `spinnerColor` mixin in `loading-indicator` to allow default colours to be displayed.
+
+
 v6.0.0-beta.12
 ------------------------------
 *October 21, 2021*
