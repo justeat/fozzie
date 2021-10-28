@@ -79,7 +79,7 @@
         .c-menu-openBtn {
             @include font-size(body-s);
             align-items: center;
-            border-radius: spacing(x3);
+            border-radius: $radius-rounded-d;
             display: flex;
             padding: spacing() spacing(x2);
         }

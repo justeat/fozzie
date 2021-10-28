@@ -8,6 +8,191 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.0.0
+------------------------------
+*October 27, 2021*
+
+## Main changes:
+- New font and colour theme from `pie-design-tokens` package.
+- New border radius values for different components styles.
+- Button styles now are in line with icing phase 2. Note that there are a lot of changes in css class names. Full list can be found below in beta release CHANGELOGs.
+- Set default paragraph size to match base font-size which now is 16px instead of 14px.
+
+### Added
+- `c-tag` optional component styles and a deprecation warning to the `c-badge` component.
+
+### Changed
+- `pie-design-tokens` package updated to v1.0.0-beta.2.
+
+### Removed
+- Menulog font files.
+
+** Full list of changes (including all css class names changes) can be found below in beta release CHANGELOGs **
+
+
+v6.0.0-beta.13
+------------------------------
+*October 25, 2021*
+
+### Fixed
+- `spinnerColor` mixin in `loading-indicator` to allow default colours to be displayed.
+
+
+v6.0.0-beta.12
+------------------------------
+*October 21, 2021*
+
+### Added
+- `c-tag` optional component styles.
+- Deprecation warning to the `c-badge` component.
+
+
+v6.0.0-beta.11
+------------------------------
+*October 21, 2021*
+
+### Changed
+- Rebased master to include v5.2.1 (moved some dependencies from outside dev dependencies).
+
+
+v6.0.0-beta.10
+------------------------------
+*October 20, 2021*
+
+### Changed
+- Fixed linting error in _grid.scss (missed semicolons).
+- Rebased master to include v5.2.0 (removed gulp).
+
+
+v6.0.0-beta.9
+------------------------------
+*October 12, 2021*
+
+### Changed
+- link hover and active styles to lighten instead of darkening.
+
+### Added
+- `o-link--distinct` class to make links blue instead of default text colour if needed.
+- `g--alignSpaceAround` and `g--alignSpaceBetween` classes for the grid mixin.
+
+### Removed
+- `.o-btn.is-loading` styles. Use `o-btn--loading` instead. Now button styles utilize `loadingIndicator` and `spinnerColor` mixins to make sure that the spinner looks right and changes colour depending on what the type of the button is in use. If you need to check the markup for the button please see fozzie-components f-button component as an example.
+
+
+v6.0.0-beta.8
+------------------------------
+*October 4, 2021*
+
+Republish to fix some build issues.
+
+
+v6.0.0-beta.7
+------------------------------
+*October 4, 2021*
+
+### Added
+- `c-card--info` component modifier.
+- `c-rating-description` component modifier.
+
+### Changed
+- Set default paragraph size to match base font-size.
+- Card border colour matches PIE designs.
+- `c-mediaElement--fullstack--negativeTop` modifier top margin updated.
+- Badge component font-size explicitly set.
+- `c-badge--indicator` modifier colours updated.
+
+### Fixed
+- Breadcrumb icon size.
+
+
+v6.0.0-beta.6
+------------------------------
+*October 4, 2021*
+
+### Added
+- `belowMid` z-index value.
+
+### Changed
+- Breadcrumb "pill" modifier styles to ensure alignment and colours are correct.
+
+
+v6.0.0-beta.5
+------------------------------
+*September 28, 2021*
+
+### Changed
+- body font size from 14px/0.875rem to 16px/1rem
+
+
+v6.0.0-beta.4
+------------------------------
+*September 27, 2021*
+
+### Added
+- `o-btn--outline`, `o-btn--ghost`, `o-btn--fullWidth` modifiers.
+- `o-btn--sizeLarge`, `o-btn--sizeSmall`, `o-btn--sizeXSmall` size modifiers.
+
+### Removed
+- `o-btn--tertiary`. Use `o-btn--outline` instead.
+- `o-btn--block`. Use `o-btn--fullWidth` instead.
+- `o-btn--wide`.
+
+### Changed
+- Button styles in line with icing phase 2.
+- renamed `o-btnLink` to `o-btn--link`.
+Now button modifiers are:
+- Btn Background Colour modifiers: `o-btn--primary`, `o-btn--secondary`, `o-btn--outline`, `o-btn--ghost`.
+- Btn Size Modifiers: `o-btn--sizeLarge`, `o-btn--sizeSmall`, `o-btn--sizeXSmall`.
+- Btn Layout Modifiers: `o-btn--icon`, `o-btn--fullWidth`, `o-btn--disabled`, `o-btn--link`.
+- Moved font-family declaration from the button component styles to typography styles.
+
+
+v6.0.0-beta.3
+------------------------------
+*September 22, 2021*
+
+### Changed
+- Various border-radius values in line with the latest pie tokens.
+- Various global tokens to the alias token equivalent.
+- `$border-radius` from 2px to `$radius-rounded-a`.
+
+### Removed
+- `$btn-transparent-color`, `$btn-transparent-color--hover`, `$btnGroup-outline`, `$btnToggle`, `$btn-icon-dimension` and `$btn-rounded-width` css vars as unused.
+
+
+v6.0.0-beta.2
+------------------------------
+*September 17, 2021*
+
+### Changed
+- `$font-size-base` to use `$font-paragraph-01`(16px) instead of  `$font-paragraph-02`(14px).
+- Separate font-sizes for mobile and desktop screen sizes for `h3, .gamma, h4, .delta, h5, .epsilon` headings.
+
+
+v6.0.0-beta.1
+------------------------------
+*September 15, 2021*
+
+- Bump the version to include changes from v5.1.0 to beta version
+
+
+v6.0.0-beta.0
+------------------------------
+*August 24, 2021*
+
+### Updated
+- pie-design-tokens package to v1.0.0-beta.0 to include new font vars
+
+### Added
+- `$font-family-secondary` as a fallback font (Arial)
+
+### Changed
+- `$font-weight-headings` use `$font-weight-extrabold` font weight (800)
+
+### Removed
+- Menulog font files
+
+
 v5.2.1
 ------------------------------
 *October 20, 2021*

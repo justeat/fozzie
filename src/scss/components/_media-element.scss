@@ -15,8 +15,8 @@
     $mediaElement-img-width         : 50px;
     $mediaElement-img-width--mid    : 78px;
     $mediaElement-img-width--wide   : 67px;
-    $mediaElement-img-borderRadius  : 2px;
-    $mediaElement-infoLinkColor     : $color-blue;
+    $mediaElement-img-borderRadius  : $radius-rounded-c;
+    $mediaElement-infoLinkColor     : $color-content-link-distinct;
     $mediaElement-fontSize          : body-l;
     $mediaElement-spacing           : spacing(x2);
 
@@ -70,7 +70,7 @@
             // make sure we cut off the corners of the image and the container
             &,
             & > img {
-                border-radius: 3px;
+                border-radius: $mediaElement-img-borderRadius;
             }
 
             // center the img when stacked
@@ -134,7 +134,7 @@
 
             .c-mediaElement--fullstack--negativeTop & {
                 flex: auto;
-                margin-top: -#{spacing(x2)};
+                margin-top: spacing(x4);
             }
 
             // some content uses br for content shaping – get rid of it on mobile devices

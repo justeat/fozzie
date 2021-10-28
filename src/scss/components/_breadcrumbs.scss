@@ -11,23 +11,28 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/breadcrumbs
     */
 
-    $breadcrumb-text-color                   : $color-grey-50;
-    $breadcrumb-text-weight                  : $font-weight-bold;
-    $breadcrumb-link-color                   : $color-grey;
-    $breadcrumb-link-color--hover            : $color-grey-50;
-    $breadcrumb-icon-fillColor               : $color-black;
+    $breadcrumb-text-color                   : $color-content-subdued;
+    $breadcrumb-text-weight                  : $font-weight-regular;
+    $breadcrumb-link-color                   : $color-content-interactive-tertiary;
+    $breadcrumb-link-color--hover            : darken($color-content-interactive-tertiary, $color-hover-01);
+    $breadcrumb-link-weight                  : $font-weight-bold;
+    $breadcrumb-icon-fillColor               : $color-content-default;
+    $breadcrumb-border-radius                : $radius-rounded-d;
     $breadcrumb--compact-background          : rgba($color-black, 0.2);
 
-    $breadcrumb--transparent-text-color      : $color-white;
-    $breadcrumb--transparent-icon-fillColor  : $color-white;
-    $breadcrumb--transparent-link-color      : $color-white;
+    $breadcrumb--transparent-text-color      : $color-content-light;
+    $breadcrumb--transparent-icon-fillColor  : $color-content-light;
+    $breadcrumb--transparent-link-color      : $color-content-link-light;
 
-    $breadcrumb--pill-text-color             : $color-white;
-    $breadcrumb--pill-link-color--hover      : $color-white;
+    $breadcrumb--pill-text-color             : $color-content-light;
+    $breadcrumb--pill-link-color--hover      : $color-content-link-light;
+    $breadcrumb--pill-icon-fillColor         : $color-content-light;
+
 
     .c-breadcrumb {
         width: 100%;
         line-height: 2.5;
+
         @include media('>=mid') {
             @include font-size(body-l, false);
         }
@@ -36,8 +41,10 @@
     .c-breadcrumb-item {
         float: left;
         color: $breadcrumb-text-color;
+        font-weight: $breadcrumb-text-weight;
 
-        svg {
+        svg,
+        svg path {
             fill: $breadcrumb-icon-fillColor;
         }
     }
@@ -49,7 +56,7 @@
     .c-breadcrumb-item-link {
         text-decoration: none;
         color: $breadcrumb-link-color;
-        font-weight: $breadcrumb-text-weight;
+        font-weight: $breadcrumb-link-weight;
 
         &:hover {
             text-decoration: underline;
@@ -82,11 +89,12 @@
             .c-breadcrumb-item {
                 display: none;
             }
+
             // only show previous page's link
             .c-breadcrumb-item:nth-last-child(2) {
                 display: list-item;
                 background-color: $breadcrumb--compact-background;
-                border-radius: $baseline;
+                border-radius: $breadcrumb-border-radius;
                 line-height: 2;
                 padding-right: $baseline;
 
@@ -110,7 +118,7 @@
 
     .c-breadcrumb--pill {
         background-color: rgba($color-black, 0.5);
-        border-radius: 12px;
+        border-radius: $breadcrumb-border-radius;
         line-height: normal;
         display: inline-block;
         width: auto;
@@ -128,16 +136,26 @@
         }
 
         .c-breadcrumb-item {
-            @include media('<=mid') {
-                display: flex;
-                align-items: center;
+            display: flex;
+            align-items: center;
 
-                a {
+            a {
+                @include media('<=mid') {
                     order: 2;
                 }
+            }
 
-                svg {
+            svg {
+                height: 6px;
+                transform: rotate(-90deg);
+                width: 12px;
+
+                @include media('<=mid') {
                     transform: rotate(90deg);
+                }
+
+                * {
+                    fill: $breadcrumb--pill-icon-fillColor;
                 }
             }
         }

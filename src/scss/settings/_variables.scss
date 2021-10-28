@@ -9,7 +9,7 @@
 // Set this in pixels (but do not add px),
 // the font-size mixin will convert to REMS
 
-$font-size-base             : $font-paragraph-02;
+$font-size-base             : $font-paragraph-01;
 $font-size-base-px          : $font-size-base * 1px;
 
 // Type map – these are our global font-sizes and line-heights across the site
@@ -53,11 +53,11 @@ $type: (
     )
 ) !default;
 
-$font-weight-headings       : $font-weight-bold;
+$font-weight-headings       : $font-weight-extrabold;
 $line-height-base           : line-height();
 
 // Font stacks
-$font-family-base           : $font-family-primary, Arial, sans-serif;
+$font-family-base           : $font-family-primary, $font-family-secondary, sans-serif;
 $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 
 
@@ -120,7 +120,7 @@ $spacing: (
 
 $baseline: spacing(x2); // default spacing between blocks
 
-$border-radius: 2px;
+$border-radius: $radius-rounded-a; // the smallest of pie border tokens
 
 //  z-indexes
 // ==========================================================================
@@ -130,6 +130,7 @@ $border-radius: 2px;
 $zIndex: (
     lowest      : -1,
     low         : 1,
+    belowMid    : 99,
     mid         : 100,
     belowHighest: 8999,
     high        : 9000,

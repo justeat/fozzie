@@ -24,13 +24,13 @@
     */
 
     html {
-        font-size: $font-size-base-px;
+        font-size: $font-size-base-px; //default font size in px (16px)
         text-size-adjust: 100%;
     }
 
     body {
         font-family: $font-family-base;
-        @include font-size(body-s);
+        @include font-size(body-l); // default body font size == 1rem/16px
         color: $color-content-default;
         font-weight: $font-weight-regular;
 
@@ -43,7 +43,7 @@
     * Paragraphs
     */
     p {
-        @include font-size(body-s);
+        @include font-size(body-l);
         margin-top: $baseline;
         margin-bottom: 0;
     }
@@ -105,7 +105,11 @@
     .delta,
     h5,
     .epsilon {
-        @include font-size(heading-s);
+        @include font-size(heading-s, true, narrow);
+
+        @include media('>mid') {
+            @include font-size(heading-s);
+        }
     }
 
     h6,
@@ -175,6 +179,13 @@
         }
     }
 
+    /**
+    * Buttons
+    */
+    button {
+        font-family: $font-family-base;
+    }
+
     // Quotes
     q,
     blockquote {
@@ -196,7 +207,7 @@
     mark {
         background: $color-yellow-10;
         padding: 2px 4px;
-        border-radius: 3px;
+        border-radius: $radius-rounded-a;
     }
 
     address {
