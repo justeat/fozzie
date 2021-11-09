@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.1.0
+------------------------------
+*November 9, 2021*
+
+### Added
+- `c-tag` white modifier as per PIE designs.
+
+
 v6.0.0
 ------------------------------
 *October 27, 2021*
