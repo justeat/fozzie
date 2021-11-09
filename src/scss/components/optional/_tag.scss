@@ -54,6 +54,11 @@
             }
         }
 
+        .c-tag--white {
+            background-color: $color-container-default;
+            color: $color-content-default;
+        }
+
         .c-tag--outline {
             background-color: transparent;
             border: solid 1px $color-border-default;
