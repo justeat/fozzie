@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v6.2.0
+------------------------------
+*December 20, 2021*
+
+### Removed
+- `$theme` variable (`_theme.scss` file) as there are no more theme overrides (like typography or specific styles for ml).
+
+
 v6.1.0
 ------------------------------
 *November 9, 2021*
