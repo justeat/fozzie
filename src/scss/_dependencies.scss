@@ -8,12 +8,6 @@
 // =================================
 
 // =================================
-// Fozzie Theme declaration
-// =================================
-@import 'settings/theme';
-
-
-// =================================
 // Mixins, helpers and functions
 // =================================
 // Most CSS3 vendor prefixed items have a mixin,
@@ -28,8 +22,7 @@
 // =================================
 // Core variables
 // =================================
-// The colour variables are imported from https://www.npmjs.com/package/@justeat/fozzie-colour-palette
-// If a custom theme is specified, it applies a set of colour overides to the base theme depending on the $theme
+// The colour variables are imported from https://www.npmjs.com/package/@justeat/pie-design-tokens
 @import 'pie-design-tokens';
 
 @import 'settings/variables';
