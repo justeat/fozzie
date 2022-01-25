@@ -14,9 +14,10 @@ v7.0.0
 ### Changed
 - **Breaking** Type map for $spacing to reference pie design tokens.
   - If you are using the below mapping values please note they have changed or been removed:
-    $spacing x 6 = spacing(h) instead of spacing(x6) - Note the size change has gone from 48px > 56px in the new mapping.
+    $spacing x 6 = spacing(h) instead of spacing(x6) - Note the size change has gone from 48px > 56px.
     $spacing x 9 - Has been removed.
 
+- `pie-design-tokens` package.json version to bring in new elevation changes.
 
 v6.2.0
 ------------------------------
