@@ -15,7 +15,7 @@
 
     .c-overflowCarousel {
         @include media('<mid') {
-            margin: 0 (spacing(x2) * -1);
+            margin: 0 (spacing(d) * -1);
         }
     }
 
@@ -56,18 +56,18 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: spacing() spacing(x2);
+        padding: spacing() spacing(d);
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
 
         //add spacing after the last element
         &:after {
             content: '';
-            flex: 0 0 spacing(x2);
+            flex: 0 0 spacing(d);
         }
 
         @include media('>mid') {
-            padding: spacing(x2) spacing(x4) spacing();
+            padding: spacing(d) spacing(f) spacing();
         }
 
         .c-overflowCarousel-item {
@@ -75,7 +75,7 @@
             margin-right: spacing();
 
             @include media('>=mid') {
-                margin-right: spacing(x2);
+                margin-right: spacing(d);
             }
         }
     }
@@ -102,6 +102,6 @@
 @mixin overflowCarouselContent() {
     display: inline-flex;
     white-space: nowrap;
-    padding-left: spacing(x2);
-    padding-right: spacing(x2);
+    padding-left: spacing(d);
+    padding-right: spacing(d);
 }

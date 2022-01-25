@@ -98,7 +98,7 @@
 
     .u-sticky {
         position: sticky !important;
-        top: spacing(x2);
+        top: spacing(d);
     }
 
     .u-absolutelyCentered {
@@ -122,7 +122,7 @@
     }
 
     .u-textPad {
-        padding-left: spacing(x4) !important;
+        padding-left: spacing(f) !important;
     }
 
     .u-text-truncate {
@@ -161,7 +161,7 @@
     }
 
     .u-text-indent {
-        margin-left: spacing(x2);
+        margin-left: spacing(d);
     }
 
     //
@@ -215,11 +215,11 @@
     }
 
         .u-spacingTop--small {
-            margin-top: spacing(x0.5) !important;
+            margin-top: spacing(a) !important;
         }
 
         .u-spacingTop--large {
-            margin-top: spacing(x2) !important;
+            margin-top: spacing(d) !important;
         }
 
     .u-spacingRight {
@@ -231,12 +231,12 @@
     }
 
         .u-spacingBottom--large {
-            margin-bottom: spacing(x2) !important;
+            margin-bottom: spacing(d) !important;
         }
 
         .u-spacingBottom--large--aboveMid {
             @include media('>=mid') {
-                margin-bottom: spacing(x2);
+                margin-bottom: spacing(d);
             }
         }
 
@@ -257,12 +257,12 @@
     }
 
         .u-padTop--large {
-            padding-top: spacing(x2) !important;
+            padding-top: spacing(d) !important;
         }
 
         .u-padTop--large--aboveMid {
             @include media('>=mid') {
-                padding-top: spacing(x2) !important;
+                padding-top: spacing(d) !important;
             }
         }
 
@@ -392,7 +392,7 @@
     // Misc classes
     // ==========================================================================
     .u-shadowBottom--belowMid {
-        padding-bottom: spacing(x7);
+        padding-bottom: spacing(h);
 
         @include media('<mid') {
             &:after {
@@ -401,7 +401,7 @@
                 box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
                 content: '';
                 display: block;
-                height: spacing(x7);
+                height: spacing(h);
                 left: -#{spacing()};
                 position: absolute;
                 width: 100vw;

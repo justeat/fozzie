@@ -13,7 +13,7 @@
     $btn-default-borderRadius              : $radius-rounded-e;
     $btn-default-font-size                 : 'heading-s';
     $btn-default-weight                    : $font-weight-bold;
-    $btn-default-padding                   : 10px spacing(x3);
+    $btn-default-padding                   : 10px spacing(e);
     $btn-default-outline-color             : $color-focus;
 
     $btn-default-bgColor                   : $color-interactive-brand;
@@ -58,11 +58,11 @@
     $btn-disabled-bgColor                  : $color-disabled-01;
     $btn-disabled-textColor                : $color-content-disabled;
 
-    $btn-sizeLarge-padding                 : 14px spacing(x3);
+    $btn-sizeLarge-padding                 : 14px spacing(e);
     $btn-sizeLarge-loading-color           : $color-content-interactive-light;
 
     $btn-sizeSmall-font-size               : 'body-l';
-    $btn-sizeSmall-padding                 : spacing() spacing(x2);
+    $btn-sizeSmall-padding                 : spacing() spacing(d);
 
     $btn-sizeXSmall-font-size              : 'body-s';
     $btn-sizeXSmall-padding                : 6px spacing();
@@ -130,7 +130,7 @@
         }
 
         p + & {
-            margin-top: spacing(x2);
+            margin-top: spacing(d);
         }
 
         & .note {
@@ -141,7 +141,7 @@
             }
         }
         &[type='submit'] {
-            margin-top: spacing(x2);
+            margin-top: spacing(d);
         }
     }
 

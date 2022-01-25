@@ -20,9 +20,9 @@
     $menu-border-width                      : 1px;
     $menu-border-width--active              : 2px;
     $menu-link-color                        : $color-content-default;
-    $menu-link-padding                      : spacing() spacing(x2);
-    $menu-positionTop                       : $menu-headerHeight + spacing(x2);
-    $menu--condensed-link-padding           : spacing(x0.5);
+    $menu-link-padding                      : spacing() spacing(d);
+    $menu-positionTop                       : $menu-headerHeight + spacing(d);
+    $menu--condensed-link-padding           : spacing(a);
     $menu--expandable-bgColor               : $color-white;
     $menu--expandable-borderBottom          : $color-border-strong;
     $menu--expandable-linkFontSize          : body-s;
@@ -68,8 +68,8 @@
         .c-menu-openBtnWrapper {
             display: flex;
             justify-content: center;
-            margin-bottom: spacing(x4);
-            margin-top: -#{spacing(x3)};
+            margin-bottom: spacing(f);
+            margin-top: -#{spacing(e)};
             position: sticky;
             top: $menu-positionTop;
             transition: 100ms top ease-in-out;
@@ -81,11 +81,11 @@
             align-items: center;
             border-radius: $radius-rounded-d;
             display: flex;
-            padding: spacing() spacing(x2);
+            padding: spacing() spacing(d);
         }
 
         .c-menu-closeBtn {
-            padding: spacing(x2);
+            padding: spacing(d);
             position: absolute;
             right: 0;
             top: 0;
@@ -104,7 +104,7 @@
                     align-items: center;
 
                     .c-menu-link {
-                        padding-right: spacing(x0.5);
+                        padding-right: spacing(a);
                     }
                 }
             }
@@ -172,7 +172,7 @@
                 @include media('<mid') {
                     max-height: 70vh;
                     overflow-y: scroll;
-                    padding-top: spacing(x2);
+                    padding-top: spacing(d);
 
                     .c-menu-link {
                         display: block;

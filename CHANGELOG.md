@@ -7,6 +7,16 @@ Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
+v7.0.0
+------------------------------
+*January 25, 2022*
+
+### Changed
+- **Breaking** Type map for $spacing to reference pie design tokens.
+  - If you are using the below mapping values please note they have changed or been removed:
+    $spacing x 6 = spacing(h) instead of spacing(x6) - Note the size change has gone from 48px > 56px in the new mapping.
+    $spacing x 9 - Has been removed.
+
 
 v6.2.0
 ------------------------------

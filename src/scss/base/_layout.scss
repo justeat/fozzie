@@ -63,14 +63,14 @@
     }
 
     .l-innerContainer--verticalSpacing {
-        margin: spacing(x4) 0;
+        margin: spacing(f) 0;
 
         @include media('>=mid') {
-            margin: spacing(x5) auto spacing(x6);
+            margin: spacing(g) auto spacing(h);
         }
 
         @include media('>=wide') {
-            margin: spacing(x8) auto;
+            margin: spacing(i) auto;
         }
     }
 
@@ -78,18 +78,18 @@
     * Layout class for containers that contain content (such as T&cs and Privacy pages)
     */
     .l-content {
-        padding-top: spacing(x2);
+        padding-top: spacing(d);
 
         @include media('>mid') {
-            padding-top: spacing(x4);
+            padding-top: spacing(f);
         }
     }
 
         .l-content-header {
-            margin: 0 0 spacing(x2);
+            margin: 0 0 spacing(d);
 
             @include media('>mid') {
-                margin: spacing(x2) 0 spacing(x4);
+                margin: spacing(d) 0 spacing(f);
             }
 
             > h1 {
