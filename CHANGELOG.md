@@ -15,7 +15,22 @@ v7.0.0
 - **Breaking** Type map for $spacing to reference pie design tokens.
   - If you are using the below mapping values please note they have changed or been removed:
     $spacing x 6 = spacing(h) instead of spacing(x6) - Note the size change has gone from 48px > 56px.
-    $spacing x 9 - Has been removed.
+    $spacing x 9 - Has been removed - Please map to the next value up or down e.g spacing(j) or spacing(i).
+
+| Old map usage | New map usage |
+| ----- | ----- |
+| spacing(x0.5) | $spacing(a) |
+| spacing(base) | $spacing(b) |
+| spacing(x1.5) | $spacing(c) |
+| spacing(x2) | $spacing(d) |
+| spacing(x3) | $spacing(e) |
+| spacing(x4) | $spacing(f) |
+| spacing(x5) | $spacing(g) |
+| spacing(x6) | $spacing(h) |
+| spacing(x7) | $spacing(h) |
+| spacing(x8) | $spacing(i) |
+| spacing(x9) | Removed, replace with closet size up or down |
+| spacing(x10) | $spacing(j) |
 
 - `pie-design-tokens` package.json version to bring in new elevation changes.
 

@@ -96,7 +96,7 @@
                 background-color: $breadcrumb--compact-background;
                 border-radius: $breadcrumb-border-radius;
                 line-height: 2;
-                padding-right: $baseline;
+                padding-right: spacing(d);
 
                 .c-breadcrumb-item-icon {
                     float: left;

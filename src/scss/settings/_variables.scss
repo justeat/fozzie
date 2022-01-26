@@ -100,19 +100,17 @@ $use-legacy-grid              : true !default;
 // spacing map
 // Can access levels by using the spacing function > spacing() or spacing(a) for example
 $spacing: (
-    a    : $spacing-a,
-    b    : $spacing-b,
-    c    : $spacing-c,
-    d    : $spacing-d,
-    e    : $spacing-e,
-    f    : $spacing-f,
-    g    : $spacing-g,
-    h    : $spacing-h,
-    i    : $spacing-i,
-    j    : $spacing-j
+    a    : $spacing-a, // 4px
+    b    : $spacing-b, // 8px
+    c    : $spacing-c, // 12px
+    d    : $spacing-d, // 16px
+    e    : $spacing-e, // 24px
+    f    : $spacing-f, // 32px
+    g    : $spacing-g, // 40px
+    h    : $spacing-h, // 56px
+    i    : $spacing-i, // 64px
+    j    : $spacing-j  // 80px
 );
-
-$baseline: spacing(d); // default spacing between blocks
 
 $border-radius: $radius-rounded-a; // the smallest of pie border tokens
 
