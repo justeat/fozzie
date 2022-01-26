@@ -78,7 +78,7 @@
     h1,
     .alpha {
         @include font-size(heading-xl, true, narrow);
-        margin-top: spacing(d) * 2;
+        margin-top: spacing(f);
         margin-bottom: spacing(d);
 
         @include media('>mid') {
@@ -120,7 +120,7 @@
     // Only give these headings a margin-top if they are after other elements
     * + h2,
     * + .beta {
-        margin-top: spacing(d) * 2;
+        margin-top: spacing(f);
     }
 
     * + h3,
