@@ -17,7 +17,7 @@
     ul,
     ol {
         padding: 0;
-        margin: spacing(x2) 0 0 spacing(x2);
+        margin: spacing(d) 0 0 spacing(d);
 
         li {
             margin-bottom: spacing();
@@ -56,7 +56,7 @@
         > li {
             font-weight: $font-weight-bold;
             @include font-size(heading-s); // TODO – this should be updated with a more semantic font alias specific to lists
-            margin-bottom: spacing(x4);
+            margin-bottom: spacing(f);
 
             > div {
                 font-weight: $font-weight-regular;

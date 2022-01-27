@@ -15,12 +15,12 @@
     $card-bgColor--disabled                         : $color-container-subtle;
     $card-tooltip-width                             : 10px;
     $card-arrow-bottom-position                     : 0;
-    $card-padding                                   : spacing(x2);
+    $card-padding                                   : spacing(d);
     $card-radius                                    : $radius-rounded-c;
     $card-borderColor                               : $color-border-default;
     $card-info-bgColor--active                      : $color-support-warning-02;
-    $card-section-margin                            : spacing(x4);
-    $card-section-margin--large                     : spacing(x8);
+    $card-section-margin                            : spacing(f);
+    $card-section-margin--large                     : spacing(i);
     $card-section-highlight-backgroundColor         : $color-support-brand-02;
     $card-section-highlight-color                   : $color-content-default;
     $card-section-collapsible-paddingRight          : 60px;
@@ -68,22 +68,22 @@
 
             .c-card--padBottom--belowMid {
                 @include media('<mid') {
-                    padding-bottom: spacing(x4);
+                    padding-bottom: spacing(f);
                 }
             }
 
         // stretches the card contents outside of their container
         .c-card--negativeSpacing {
-            margin-left: -#{spacing(x2)};
-            margin-right: -#{spacing(x2)};
-            padding-left: spacing(x2);
-            padding-right: spacing(x2);
+            margin-left: -#{spacing(d)};
+            margin-right: -#{spacing(d)};
+            padding-left: spacing(d);
+            padding-right: spacing(d);
         }
 
             .c-card--negativeSpacing--belowMid {
                 @include media('<mid') {
-                    margin-left: -#{spacing(x2)};
-                    margin-right: -#{spacing(x2)};
+                    margin-left: -#{spacing(d)};
+                    margin-right: -#{spacing(d)};
                 }
             }
 
@@ -149,14 +149,14 @@
 
         // creates a section which is separated off by a border on larger screens
         .c-card-section {
-            margin-left: -#{spacing(x2)};
-            padding-left: spacing(x2);
+            margin-left: -#{spacing(d)};
+            padding-left: spacing(d);
             width: calc(100% + #{$card-section-margin});
 
             @include media('>=mid') {
                 border-top: solid 1px $card-borderColor;
-                margin-left: -#{spacing(x2)};
-                padding-left: spacing(x3);
+                margin-left: -#{spacing(d)};
+                padding-left: spacing(e);
             }
         }
 
@@ -165,8 +165,8 @@
                 background-color: $card-section-highlight-backgroundColor;
                 border-top: none;
                 color: $card-section-highlight-color;
-                margin-top: spacing(x2);
-                padding: spacing(x0.5) spacing();
+                margin-top: spacing(d);
+                padding: spacing(a) spacing();
 
                 + .c-card-section--highlight {
                     margin-top: 1px;
@@ -185,7 +185,7 @@
 
             .c-card-section--collapsible {
                 overflow: hidden;
-                padding-bottom: spacing(x2);
+                padding-bottom: spacing(d);
                 padding-right: $card-section-collapsible-paddingRight;
                 position: relative;
                 user-select: none;
@@ -195,7 +195,7 @@
                     padding-right: $card-section-collapsible-paddingRight;
 
                     &.c-card-section {
-                        margin-bottom: spacing(x2);
+                        margin-bottom: spacing(d);
 
                         &.has-noSpacing {
                             margin-bottom: 0;
@@ -209,13 +209,13 @@
             }
 
             .c-card-section--collapsible--noPad {
-                margin-left: -#{spacing(x4)};
-                padding: 0 $card-section-collapsible-paddingRight 0 spacing(x2);
+                margin-left: -#{spacing(f)};
+                padding: 0 $card-section-collapsible-paddingRight 0 spacing(d);
                 width: calc(100% + #{$card-section-margin--large});
 
                 @include media('>=mid') {
-                    margin-left: -#{spacing(x2)};
-                    padding: 0 $card-section-collapsible-paddingRight 0 spacing(x3);
+                    margin-left: -#{spacing(d)};
+                    padding: 0 $card-section-collapsible-paddingRight 0 spacing(e);
                     width: calc(100% + #{$card-section-margin});
                 }
             }
@@ -238,7 +238,7 @@
                 height: 6px;
                 display: none;
                 position: absolute;
-                right: spacing(x2);
+                right: spacing(d);
                 top: 22px;
                 transform: rotate(180deg);
                 transition: transform 0.4s;
@@ -246,7 +246,7 @@
 
                 @include media('>=mid') {
                     height: 8px;
-                    right: spacing(x3);
+                    right: spacing(e);
                     width: 14px;
                 }
 
@@ -262,7 +262,7 @@
                     right: 21px;
 
                     @include media('>=mid') {
-                        right: spacing(x3);
+                        right: spacing(e);
                     }
                 }
             }

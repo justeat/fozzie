@@ -45,7 +45,7 @@
             .c-appsBanner-image {
                 overflow: hidden;
                 max-width: 120px;
-                margin-top: spacing(x2);
+                margin-top: spacing(d);
                 grid-column: 1;
                 grid-row: 2;
 
@@ -62,7 +62,7 @@
             }
 
             .c-appsBanner-content {
-                margin-left: spacing(x2);
+                margin-left: spacing(d);
                 grid-column: 2;
                 grid-row: 2;
 
@@ -75,7 +75,7 @@
                 }
 
                 p {
-                    margin-top: spacing(x2);
+                    margin-top: spacing(d);
 
                     @include media('>=mid') {
                         margin-top: spacing();
@@ -85,7 +85,7 @@
         }
 
         .c-appsBanner-buttons {
-            margin-top: spacing(x3);
+            margin-top: spacing(e);
         }
 
         .c-appsBanner-appBtn {

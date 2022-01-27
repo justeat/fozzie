@@ -44,7 +44,7 @@
     */
     p {
         @include font-size(body-l);
-        margin-top: $baseline;
+        margin-top: spacing(d);
         margin-bottom: 0;
     }
 
@@ -78,8 +78,8 @@
     h1,
     .alpha {
         @include font-size(heading-xl, true, narrow);
-        margin-top: $baseline * 2;
-        margin-bottom: $baseline;
+        margin-top: spacing(f);
+        margin-bottom: spacing(d);
 
         @include media('>mid') {
             @include font-size(heading-xl);
@@ -120,14 +120,14 @@
     // Only give these headings a margin-top if they are after other elements
     * + h2,
     * + .beta {
-        margin-top: $baseline * 2;
+        margin-top: spacing(f);
     }
 
     * + h3,
     * + .gamma,
     * + h4,
     * + .delta {
-        margin-top: $baseline;
+        margin-top: spacing(d);
     }
 
     small {
@@ -160,7 +160,7 @@
     */
     blockquote {
         padding-left: 10px;
-        margin: $baseline;
+        margin: spacing(d);
         border-left: 4px solid lighten(#000, 80%);
 
         p {
@@ -212,7 +212,7 @@
 
     address {
         font-style: normal;
-        margin-top: $baseline;
+        margin-top: spacing(d);
         margin-bottom: 0;
     }
 
@@ -235,7 +235,7 @@
 
     // Horizontal rules
     hr {
-        margin: ($baseline) 0;
+        margin: spacing(d) 0;
         border: 0;
         border-top: 1px solid $color-divider-default;
     }

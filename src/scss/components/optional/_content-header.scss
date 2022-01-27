@@ -14,14 +14,14 @@
     */
 
     .c-contentHeader {
-        padding-top: spacing(x2);
+        padding-top: spacing(d);
         padding-bottom: spacing();
     }
 
         .c-contentHeader-title {
             padding: 0;
             display: inline-block;
-            margin: 0 spacing(x2) 0 0;
+            margin: 0 spacing(d) 0 0;
             font-weight: $font-weight-regular;
             @include font-size(body-l, false); // TODO – this should be updated with a more semantic font alias when it's ported to fozzie-components repo
         }

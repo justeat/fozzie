@@ -40,7 +40,7 @@
     $formControl-color--hover       : darken($color-orange, $color-hover-01);
     $formControl-background-color   : $color-background-default;
     $formControl-margin-left        : 0;
-    $formControl-padding-left       : spacing(x4);
+    $formControl-padding-left       : spacing(f);
     $formControl-width              : 24px;
     $formControl-width--wide        : 20px;
     $formControl-height             : 24px;
@@ -147,7 +147,7 @@
         .o-formControl-icon {
             background-position: center 0;
             left: spacing();
-            min-width: spacing(x1.5);
+            min-width: spacing(c);
             position: absolute;
         }
 

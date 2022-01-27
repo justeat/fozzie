@@ -20,7 +20,7 @@
 
     .c-alert {
         padding: spacing();
-        margin-top: spacing(x2);
+        margin-top: spacing(d);
         border: 1px solid transparent;
         border-radius: $alert-border-radius;
 
@@ -29,7 +29,7 @@
         }
 
         & + * {
-            margin-top: spacing(x2);
+            margin-top: spacing(d);
         }
     }
 

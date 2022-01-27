@@ -17,8 +17,8 @@
         position: relative;
         background: $color-container-default;
         border-radius: $radius-rounded-c;
-        padding: 85px spacing(x2) spacing(x2);
-        margin-bottom: spacing(x2);
+        padding: 85px spacing(d) spacing(d);
+        margin-bottom: spacing(d);
 
         @include media('>mid') {
             padding-top: 73px;
@@ -30,13 +30,13 @@
         &:after {
             content: '';
             position: absolute;
-            top: spacing(x2);
+            top: spacing(d);
             @include anim();
         }
 
         //Skeleton image
         &:before {
-            left: spacing(x2);
+            left: spacing(d);
             height: 55px;
             width: 55px;
         }
@@ -154,8 +154,8 @@
         @include media('>mid') {
             width: 360px;
             position: absolute;
-            top: spacing(x2);
-            right: spacing(x2);
+            top: spacing(d);
+            right: spacing(d);
         }
     }
 }

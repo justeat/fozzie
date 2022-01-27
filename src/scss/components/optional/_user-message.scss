@@ -12,13 +12,13 @@
         color: $color-white;
         background-color: $color-orange;
         max-width: 100%;
-        margin-top: spacing(x2);
+        margin-top: spacing(d);
     }
 
     .c-userMessageContainer {
         max-width: 350px;
         margin: 0 auto;
-        padding: spacing(x2) 0;
+        padding: spacing(d) 0;
         display: flex;
 
         @include media('>=narrow') {
@@ -42,7 +42,7 @@
     }
 
     .c-userMessageText {
-        margin-left: spacing(x2);
+        margin-left: spacing(d);
         margin-top: 0;
 
         @include media('>=mid') {

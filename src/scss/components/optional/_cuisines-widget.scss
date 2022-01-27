@@ -48,14 +48,14 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: spacing(x2) spacing(x2) spacing();
+            padding: spacing(d) spacing(d) spacing();
             color: $cuisinesWidget-titleColour;
             text-align: center;
             background-image: $cuisinesWidget-gradient;
 
             @include media('>=mid-wide') {
                 @include font-size(heading-m, false);
-                padding: spacing(x2);
+                padding: spacing(d);
             }
         }
 

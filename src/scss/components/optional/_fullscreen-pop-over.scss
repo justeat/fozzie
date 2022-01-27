@@ -15,7 +15,7 @@
 
     $fullScreenPopOver-background        : $color-grey-10;
     $fullScreenPopOver-action-background : $color-white;
-    $fullScreenPopOver-padding           : spacing(x2);
+    $fullScreenPopOver-padding           : spacing(d);
     $fullScreenPopOver-border-color      : $color-grey-30;
     $fullScreenPopOver-shadow-color      : rgba($color-black, 0.12);
 
@@ -117,7 +117,7 @@
                 height: 100%;
                 overflow-x: hidden;
                 overflow-y: scroll;
-                padding: spacing(x2) 0;
+                padding: spacing(d) 0;
                 -webkit-overflow-scrolling: touch;
             }
         }

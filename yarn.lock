@@ -1166,10 +1166,10 @@
   dependencies:
     window-or-global "^1.0.1"
 
-"@justeat/f-utils@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-2.0.0.tgz#34e34870f20ec85b5d0aca8a87e2bc2225e2f597"
-  integrity sha512-fFkNH39Qe6sg6e2YZmbh4l4g4qegvpsaEKnj1grCDRspQQvzpmBQBifx6nkHsdaEhetZTJC3LqwOXybmlVJI/g==
+"@justeat/f-utils@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-3.1.0.tgz#6f2607171d6d957b038617174f0c922258e2864f"
+  integrity sha512-DmkHElVkfBaocFEaqtge0AbbNs0+EzCRpPHYfSzSw6K8N88Git/e/O281Ye1ToqqIzKsdynrG1zAYBIrpaS5OQ==
 
 "@justeat/js-test-buddy@0.4.1":
   version "0.4.1"
@@ -1178,10 +1178,10 @@
   dependencies:
     "@justeat/dom-buddy" "2.4.3"
 
-"@justeat/pie-design-tokens@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@justeat/pie-design-tokens/-/pie-design-tokens-1.2.0.tgz#379b9f25b481405c501afc1960b459fd06459b40"
-  integrity sha512-uMVpHVWM3RORK8DzdXWi2Rey9jPCq4sWt64JL9pqN+f+l4ck61b/rpRRf060WvWCcU0Cy/zihbSrJy1hNG1SQg==
+"@justeat/pie-design-tokens@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@justeat/pie-design-tokens/-/pie-design-tokens-1.4.0.tgz#adb4b3b7f5ed9ac9691e67e02b02264acd6dcfbf"
+  integrity sha512-V+lBWi4Q7WjYRYYTAm2rJfDqjePArhHrgC4pB8vsQXp4uPmEUG/6cJa4K8DArADxLA924QESE3Akmtn8nAe5dw==
   dependencies:
     jsonc-parser "2.2.0"
     lodash.merge "4.6.2"

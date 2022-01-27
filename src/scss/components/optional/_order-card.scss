@@ -119,7 +119,7 @@
         color: $color-blue;
         text-align: center;
         margin-top: spacing();
-        padding: 2px spacing(x1.5) spacing(x1.5);
+        padding: 2px spacing(c) spacing(c);
         border-top: 1px solid $color-grey-10;
     }
 
@@ -152,12 +152,12 @@
 
     .c-orderCard-orderTotal {
         margin-right: spacing();
-        margin-left: spacing(x3);
+        margin-left: spacing(e);
         align-self: flex-end;
     }
 
     .c-orderCard-content {
-        padding: spacing() spacing(x2) 0;
+        padding: spacing() spacing(d) 0;
         color: $color-grey;
         flex: 1 0 auto;
         display: flex;
@@ -165,11 +165,11 @@
     }
 
     .c-orderCard-yourFavourites-content {
-        padding: spacing() spacing(x2);
+        padding: spacing() spacing(d);
     }
 
     .c-orderCard-content--defaultMessage {
-        padding: 0 spacing(x2);
+        padding: 0 spacing(d);
         @include font-size(body-l, false);
     }
 
@@ -186,22 +186,22 @@
     }
 
     .c-orderCard--inactive {
-        margin-left: spacing(x4);
+        margin-left: spacing(f);
     }
 
     .c-orderCard-header {
         flex-direction: row;
         align-items: baseline;
         display: flex;
-        margin-left: spacing(x2);
+        margin-left: spacing(d);
 
         @include media('>mid') {
-            margin-left: spacing(x4);
+            margin-left: spacing(f);
         }
     }
 
     .c-orderCard-seeAllText {
         width: fit-content;
-        margin-left: spacing(x2);
+        margin-left: spacing(d);
     }
 }

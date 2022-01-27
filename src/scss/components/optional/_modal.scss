@@ -44,7 +44,7 @@
                 }
 
                     .c-modal-title--spacing {
-                        padding: spacing(x5) spacing(x7) spacing(x2);
+                        padding: spacing(g) spacing(h) spacing(d);
                     }
 
                 .c-modal-content {
@@ -86,8 +86,8 @@
     .c-modal-closeBtn {
         padding: spacing();
         position: absolute;
-        right: spacing(x2);
-        top: spacing(x1.5);
+        right: spacing(d);
+        top: spacing(c);
         z-index: zIndex(high);
 
         @include media('>=mid') {
@@ -116,7 +116,7 @@
 
     .c-modal-title {
         @include font-size($modal-titleFontSize);
-        padding: 0 spacing(x3);
+        padding: 0 spacing(e);
 
         @include media('>=mid') {
             @include font-size(heading-m);
@@ -124,10 +124,10 @@
     }
 
         .c-modal-title--spacing {
-            padding: spacing(x3) spacing(x7);
+            padding: spacing(e) spacing(h);
 
             @include media('>=mid') {
-                padding: spacing(x5) spacing(x7) spacing(x2);
+                padding: spacing(g) spacing(h) spacing(d);
             }
         }
 
@@ -136,7 +136,7 @@
         border-radius: $modal-borderRadius;
         box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
         display: none;
-        padding: spacing(x3);
+        padding: spacing(e);
         position: fixed;
         right: 50%;
         text-align: center;
@@ -161,7 +161,7 @@
             max-height: 90vh;
             max-width: 600px;
             overflow: hidden;
-            padding: spacing(x5);
+            padding: spacing(g);
         }
     }
 
@@ -211,7 +211,7 @@
         background-color: $color-white;
         box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.12);
         bottom: 0;
-        padding: spacing(x3);
+        padding: spacing(e);
         position: sticky;
         width: 100%;
     }
@@ -219,7 +219,7 @@
     .c-modal-textSeparator {
         font-weight: $font-weight-bold;
         @include font-size(body-l);
-        margin: spacing(x3) 0 0;
+        margin: spacing(e) 0 0;
 
         @include media('>=narrow') {
             margin: 0;
@@ -227,6 +227,6 @@
     }
 
         .c-modal-textSeparator--spaceAround {
-            margin: spacing(x3) 0 spacing(x2);
+            margin: spacing(e) 0 spacing(d);
         }
 }

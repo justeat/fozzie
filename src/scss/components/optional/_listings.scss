@@ -54,12 +54,12 @@
     // Inactive listing is styling used for searchWeb offline
     .c-listing--subsequent,
     .c-listing--inactive {
-        margin-top: spacing(x3);
+        margin-top: spacing(e);
     }
 
     .c-listing--subsequent {
         overflow: hidden;
-        padding: 0 spacing(x2) spacing(x2);
+        padding: 0 spacing(d) spacing(d);
         background: $listing--subsequent-bg;
     }
 
@@ -76,13 +76,13 @@
         }
 
         .c-listing-item {
-            margin-bottom: spacing(x2);
+            margin-bottom: spacing(d);
             box-shadow: 0 2px 4px 0 rgba($color-black, 0.1);
             padding-bottom: spacing();
 
             @include media('>mid') {
                 min-height: 96px;
-                padding: spacing(x0.5);
+                padding: spacing(a);
             }
 
             &.is-active {
@@ -100,7 +100,7 @@
         .c-listing-item--withHeader {
             overflow: hidden;
             // Specific padding top % is based on an image size of 288x104 and maintaining an aspect ratio of 36 : 13
-            padding-top: calc(37.69% + #{spacing(x0.5)});
+            padding-top: calc(37.69% + #{spacing(a)});
 
             @include media('>mid') {
                 padding-top: spacing();
@@ -119,8 +119,8 @@
                     width: 87px;
                     height: 87px;
                     padding-top: 0;
-                    top: spacing(x0.5);
-                    left: spacing(x0.5);
+                    top: spacing(a);
+                    left: spacing(a);
                     border-radius: $listing-border-radius;
                 }
 
@@ -195,8 +195,8 @@
             .c-listing-item-img {
                 width: 55px;
                 height: 55px;
-                top: spacing(x2);
-                left: spacing(x2);
+                top: spacing(d);
+                left: spacing(d);
                 position: absolute;
                 border: 1px solid $color-border-subtle;
                 border-radius: $listing-border-radius;
@@ -217,7 +217,7 @@
                         transform: none;
                     }
                     @include media('>=wide') {
-                        top: spacing(x2);
+                        top: spacing(d);
                         left: calc(17.5% - 33px);
                     }
                 }
@@ -265,8 +265,8 @@
                 @include font-size(body-l, false);
 
                 @include media('>mid') {
-                    margin: spacing(x0.5) 0;
-                    padding-right: spacing(x2);
+                    margin: spacing(a) 0;
+                    padding-right: spacing(d);
                 }
             }
 
@@ -274,7 +274,7 @@
                 top: -4px;
                 color: $color-content-positive;
                 position: relative;
-                margin-right: spacing(x0.5);
+                margin-right: spacing(a);
             }
 
             .c-listing-item-details {
@@ -284,7 +284,7 @@
                 @include media('>mid') {
                     width: 45%;
                     margin-top: auto;
-                    padding: spacing() spacing() 0 spacing(x2);
+                    padding: spacing() spacing() 0 spacing(d);
                 }
 
                 @include media('>=wide') {
@@ -295,7 +295,7 @@
             .c-listing-item-detailsRow {
                 display : flex;
                 align-items : center;
-                margin-bottom: spacing(x0.5);
+                margin-bottom: spacing(a);
             }
 
             .c-listing-item-detailsRow-icon {

@@ -42,7 +42,7 @@ $formToggle-text--checked           : $color-green;
     }
 
         .o-formToggle--button {
-            padding-left: spacing(x4);
+            padding-left: spacing(f);
             color: $formToggle-button-color;
             background: $formToggle-button-background;
             border-color: $formToggle-button-background;
@@ -59,7 +59,7 @@ $formToggle-text--checked           : $color-green;
         //Used alongside the default styles but for a larger tap area (min 44px) on narrow screens
         .o-formToggle--largeTouchArea {
             @include media('<mid') {
-                margin: spacing() 0 spacing() spacing(x0.5);
+                margin: spacing() 0 spacing() spacing(a);
             }
         }
 
