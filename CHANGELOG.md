@@ -19,18 +19,18 @@ v7.0.0
 
 | Old map usage | New map usage |
 | ----- | ----- |
-| spacing(x0.5) | $spacing(a) |
-| spacing(base) | $spacing(b) |
-| spacing(x1.5) | $spacing(c) |
-| spacing(x2) | $spacing(d) |
-| spacing(x3) | $spacing(e) |
-| spacing(x4) | $spacing(f) |
-| spacing(x5) | $spacing(g) |
-| spacing(x6) | $spacing(h) |
-| spacing(x7) | $spacing(h) |
-| spacing(x8) | $spacing(i) |
+| spacing(x0.5) | spacing(a) |
+| spacing(base) | spacing(b) |
+| spacing(x1.5) | spacing(c) |
+| spacing(x2) | spacing(d) |
+| spacing(x3) | spacing(e) |
+| spacing(x4) | spacing(f) |
+| spacing(x5) | spacing(g) |
+| spacing(x6) | spacing(h) |
+| spacing(x7) | spacing(h) |
+| spacing(x8) | spacing(i) |
 | spacing(x9) | Removed, replace with closet size up or down |
-| spacing(x10) | $spacing(j) |
+| spacing(x10) | spacing(j) |
 
 - `pie-design-tokens` package.json version to bring in new elevation changes.
 
