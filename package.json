@@ -33,7 +33,7 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "@justeat/f-utils": "3.1.0",
+    "@justeat/f-utils": "3.2.0",
     "@justeat/pie-design-tokens": "1.4.0",
     "include-media": "1.4.10"
   },
