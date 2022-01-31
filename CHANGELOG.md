@@ -7,6 +7,14 @@ Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
+v7.3.0
+------------------------------
+*January 31, 2022*
+
+### Changed
+- f-utils version to fix `map.merge` lint error.
+
+
 v7.2.0
 ------------------------------
 *January 31, 2022*
