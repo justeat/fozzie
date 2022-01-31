@@ -7,6 +7,14 @@ Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
+v7.1.0
+------------------------------
+*January 28, 2022*
+
+### Changed
+- f-utils version to fix scss lint error.
+
+
 v7.0.0
 ------------------------------
 *January 25, 2022*
