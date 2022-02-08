@@ -1166,10 +1166,10 @@
   dependencies:
     window-or-global "^1.0.1"
 
-"@justeat/f-utils@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-3.4.0.tgz#7c6b49ea0db15cf8ebada530d1485cf53fec507d"
-  integrity sha512-VWKLJ37x3hZdyjqs37dtYGDmDNXhBe99Ny6Tll4guj9g4m132GBpNOwfSpYgMCHnz81rZozKoIVZ83czyMliIA==
+"@justeat/f-utils@3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-3.5.0.tgz#7534c48dfdad30b25b76449a556fd023ab32f64b"
+  integrity sha512-f1bFB8K/yAWGlNJRfODykWt7omkesMAiz8CqwSmHnLA04FyS8BpGZedVdxKbAxZ6n8rrITAjwWBG076uzBe2+w==
 
 "@justeat/js-test-buddy@0.4.1":
   version "0.4.1"
