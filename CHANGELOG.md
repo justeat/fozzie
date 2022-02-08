@@ -7,6 +7,14 @@ Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
+v7.4.0
+------------------------------
+*Feburary 8, 2022*
+
+### Changed
+- f-utils version to fix `dart-sass` warnings whilst switching from `node-sass` to `sass`.
+
+
 v7.3.0
 ------------------------------
 *January 31, 2022*
