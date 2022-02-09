@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "7.5.0",
+  "version": "8.0.0",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -46,7 +46,6 @@
     "@justeat/eslint-config-fozzie": "4.0.0",
     "@justeat/f-dom": "1.1.0",
     "@justeat/f-logger": "0.8.1",
-    "fontfaceobserver": "2.1.0",
     "@justeat/js-test-buddy": "0.4.1",
     "@justeat/stylelint-config-fozzie": "2.2.0",
     "concurrently": "6.3.0",
@@ -54,7 +53,9 @@
     "danger": "10.7.0",
     "eslint": "7.21.0",
     "eslint-plugin-import": "2.25.2",
+    "fontfaceobserver": "2.1.0",
     "jest": "27.3.0",
+    "sass": "1.49.7",
     "stylelint": "13.13.1",
     "stylelint-scss": "3.21.0"
   },
@@ -62,15 +63,8 @@
     "babel-core": "7.0.0-bridge.0"
   },
   "keywords": [
-    "fozzie",
-    "eyeglass-module"
+    "fozzie"
   ],
-  "eyeglass": {
-    "name": "fozzie",
-    "sassDir": "src/scss",
-    "needs": "^3.0.2",
-    "exports": false
-  },
   "scripts": {
     "compile": "babel -d dist src --ignore \"src/**/*.test.js\"",
     "lint": "yarn run lint:css && yarn run lint:js",
@@ -78,6 +72,7 @@
     "lint:js": "eslint --ext .js .",
     "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
     "test": "jest",
+    "test:build": "sass --no-source-map --load-path=node_modules --style=compressed src/scss:dist/css",
     "test:cover": "jest --collect-coverage",
     "test:cover:CI": "cat coverage/lcov.info | coveralls"
   },

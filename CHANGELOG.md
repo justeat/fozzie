@@ -9,6 +9,15 @@ Future Todo List
 - Deprecate modal and orderCard component styles in next major version as unused.
 
 
+v8.0.0
+------------------------------
+*Feburary 15, 2022*
+
+### Changed
+- Removing reliance on eyeglass in favour of using sass-loader `includePaths` option to resolve imports to node_modules.
+  Downside to this will be we are tied to using either webpack or a tool that allows similar functionality through it's resolver options.
+
+
 v7.5.0
 ------------------------------
 *February 9, 2022*
