@@ -77,7 +77,7 @@
         .c-fullScreenPopOver-header {
             top: 0;
             z-index: zIndex(high);
-            box-shadow: 0 3px 4px 0 $color-grey-30;
+            box-shadow: $elevation-03; // token value for sticky headers
         }
 
         .c-fullScreenPopOver-header-actionFirst,
@@ -109,7 +109,7 @@
 
         .c-fullScreenPopOver-footer {
             bottom: 0;
-            box-shadow: 0 -2px 2px 0 $color-grey-30;
+            box-shadow: $elevation-05; // token value for 'above elevation'
         }
 
         .c-fullScreenPopOver-content {

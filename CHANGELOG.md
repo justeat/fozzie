@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
+- Deprecate modal and orderCard component styles in next major version as unused.
+
+
+v7.5.0
+------------------------------
+*February 9, 2022*
+
+### Changed
+- box-shadow values now use pie-design-tokens `$elevation` tokens.
+- Deprecation warning to the `c-modal` and `orderCard` components.
+
+### Removed
+- box-shadow from hover state of cuisinesWidget component styles.
+- `.c-menu--expandable` and `.c-menu--expandable--expanded` classes from menu component styles.
+
 
 v7.4.0
 ------------------------------

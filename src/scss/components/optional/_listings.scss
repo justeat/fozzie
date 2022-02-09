@@ -77,7 +77,7 @@
 
         .c-listing-item {
             margin-bottom: spacing(d);
-            box-shadow: 0 2px 4px 0 rgba($color-black, 0.1);
+            box-shadow: $elevation-01; // token value for card default state
             padding-bottom: spacing();
 
             @include media('>mid') {
