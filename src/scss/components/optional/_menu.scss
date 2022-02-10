@@ -23,10 +23,6 @@
     $menu-link-padding                      : spacing() spacing(d);
     $menu-positionTop                       : $menu-headerHeight + spacing(d);
     $menu--condensed-link-padding           : spacing(a);
-    $menu--expandable-bgColor               : $color-white;
-    $menu--expandable-borderBottom          : $color-border-strong;
-    $menu--expandable-linkFontSize          : body-s;
-    $menu--expandable-linkActiveFontSize    : body-l;
 
     .c-menu {
         @extend %u-unstyled;
@@ -137,46 +133,4 @@
         .c-menu-icon {
             flex-shrink: 0;
         }
-
-        .c-menu--expandable {
-            @include media('<mid') {
-                background-color: $menu--expandable-bgColor;
-                border-bottom: solid 1px $menu--expandable-borderBottom;
-                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
-                height: auto;
-
-                .c-menu-link {
-                    display: none;
-                    @include font-size($menu--expandable-linkFontSize);
-                    margin-left: 0;
-                    text-align: center;
-
-                    &,
-                    &:active,
-                    &:focus,
-                    &:hover {
-                        border: 0;
-                        font-weight: $font-weight-regular;
-                    }
-                }
-
-                .c-menu-link--active {
-                    @include font-size($menu--expandable-linkActiveFontSize);
-                    text-decoration: underline;
-                    width: 100vw;
-                }
-            }
-        }
-
-            .c-menu--expandable--expanded {
-                @include media('<mid') {
-                    max-height: 70vh;
-                    overflow-y: scroll;
-                    padding-top: spacing(d);
-
-                    .c-menu-link {
-                        display: block;
-                    }
-                }
-            }
 }

@@ -56,7 +56,7 @@
         background-color: $toast-bgColor--default;
         border-top-left-radius: $toast-radius;
         border-top-right-radius: $toast-radius;
-        box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: $elevation-05; // token value for 'above elevation'
         color: $toast-textColor;
         height: $toast-height;
         opacity: 0.9;

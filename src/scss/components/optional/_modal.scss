@@ -1,4 +1,5 @@
 @mixin modal() {
+    @warn 'The modal component styles will be deprecated in version 8 as unused, please contact Web Core team if you are still using them';
     /**
     * Components > Item Selector
     * =================================
