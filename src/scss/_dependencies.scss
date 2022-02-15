@@ -15,18 +15,18 @@
 // See mixins/css3.scss for the full list
 
 // Including helper modules
-@import 'f-utils'; // imports Fozzie SCSS helper functions and mixins – https://github.com/justeat/f-utils
-@import 'include-media'; // Cleaner media query declarations – http://include-media.com
+@import '@justeat/f-utils/src/scss/'; // imports Fozzie SCSS helper functions and mixins – https://github.com/justeat/f-utils
+@import 'include-media/dist/_include-media'; // Cleaner media query declarations – http://include-media.com
 
 
 // =================================
 // Core variables
 // =================================
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/pie-design-tokens
-@import 'pie-design-tokens';
+@import '@justeat/pie-design-tokens/dist/jet';
 
 @import 'settings/variables';
-@import 'f-utils/helpers/breakpoints'; // breakpoint helper – https://github.com/justeat/f-utils/blob/96508ae19809c4b8b83cebb55b9d74728d01c1a5/src/scss/helpers/_breakpoints.scss
+@import '@justeat/f-utils/src/scss/helpers/breakpoints'; // breakpoint helper – https://github.com/justeat/f-utils/blob/96508ae19809c4b8b83cebb55b9d74728d01c1a5/src/scss/helpers/_breakpoints.scss
 
 
 // CSS Normalise and then Reset
