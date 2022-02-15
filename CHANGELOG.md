@@ -11,7 +11,7 @@ Future Todo List
 
 v8.0.0
 ------------------------------
-*Feburary 15, 2022*
+*February 15, 2022*
 
 ### Changed
 - Removing reliance on eyeglass in favour of using sass-loader `includePaths` option to resolve imports to node_modules.
