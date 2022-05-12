@@ -15,6 +15,9 @@ v8.1.0
 ### Added
 - f-utils `functions`, `helpers` & `mixins` in order to depreciate `f-utils` in favour of `fozzie`.
 
+### Removed
+- f-utils dependency.
+
 
 v8.0.0
 ------------------------------
