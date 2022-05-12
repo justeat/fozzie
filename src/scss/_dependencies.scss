@@ -15,7 +15,7 @@
 // See mixins/css3.scss for the full list
 
 // Including helper modules
-@import '@justeat/f-utils/src/scss/'; // imports Fozzie SCSS helper functions and mixins – https://github.com/justeat/f-utils
+@import 'tools/index'; // imports Fozzie SCSS helper functions and mixins
 @import 'include-media/dist/_include-media'; // Cleaner media query declarations – http://include-media.com
 
 
@@ -26,7 +26,7 @@
 @import '@justeat/pie-design-tokens/dist/jet';
 
 @import 'settings/variables';
-@import '@justeat/f-utils/src/scss/helpers/breakpoints'; // breakpoint helper – https://github.com/justeat/f-utils/blob/96508ae19809c4b8b83cebb55b9d74728d01c1a5/src/scss/helpers/_breakpoints.scss
+@import 'tools/helpers/breakpoints'; // breakpoint helper
 
 
 // CSS Normalise and then Reset
