@@ -1,12 +1,12 @@
 // =================================
 // Tools
 // =================================
+// Sass utility functions and mixins for the Fozzie framework
 //
-// Fozzie utilities such as mixins and functions are defined
-// in the f-utils module.
+// Importing the base module using eyeglass will import all mixins and functions
 //
-// Repo: https://github.com/justeat/f-utils
-// NPM Module: https://www.npmjs.com/package/@justeat/f-utils
-//
-// Any project specific mixins and functions should be created in a folder
-// called 'tools' like this file.
+// In addition you can import optional helpers such as breakpoints and code-highlighting such as:
+// @import '/helpers/breakpoints'
+
+@import 'mixins';
+@import 'functions';

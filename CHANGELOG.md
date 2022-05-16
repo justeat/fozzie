@@ -8,6 +8,16 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Deprecate modal and orderCard component styles in next major version as unused.
 
+v8.1.0
+------------------------------
+*May 12, 2022*
+
+### Added
+- f-utils `functions`, `helpers` & `mixins` in order to depreciate `f-utils` in favour of `fozzie`.
+
+### Removed
+- f-utils dependency.
+
 
 v8.0.0
 ------------------------------
