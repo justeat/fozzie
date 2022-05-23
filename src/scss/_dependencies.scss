@@ -16,27 +16,27 @@
 
 // Including helper modules
 @import 'tools/index'; // imports Fozzie SCSS helper functions and mixins
-@import 'include-media/dist/_include-media'; // Cleaner media query declarations – http://include-media.com
+// // @import 'include-media/dist/_include-media'; // Cleaner media query declarations – http://include-media.com
 
 
 // =================================
 // Core variables
 // =================================
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/pie-design-tokens
-@import '@justeat/pie-design-tokens/dist/jet';
+// // @import '@justeat/pie-design-tokens/dist/jet';
 
-@import 'settings/variables';
-@import 'tools/helpers/breakpoints'; // breakpoint helper - @TODO move to the `templates.scss` file as part of the next major version bump.
+// // @import 'settings/variables';
+// // @import 'tools/helpers/breakpoints'; // breakpoint helper - @TODO move to the `templates.scss` file as part of the next major version bump.
 
 
 // CSS Normalise and then Reset
-@import 'base/normalize';
-@import 'base/reset';
+// // @import 'base/normalize';
+// // @import 'base/reset';
 
 // Global typography styles
-@import 'base/typography';
+// // @import 'base/typography';
 
-@import 'base/grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
+// // @import 'base/grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
 
 /**
  * Objects
@@ -50,13 +50,13 @@
  *
  * Object styles should be prefixed with `.o-`
  */
-@import 'objects/body';
-@import 'objects/buttons';
-@import 'objects/links';
-@import 'objects/lists';
-@import 'objects/tables';
-@import 'objects/form-controls';
-@import 'objects/form-toggle';
+// // @import 'objects/body';
+// // @import 'objects/buttons';
+// // @import 'objects/links';
+// // @import 'objects/lists';
+// // @import 'objects/tables';
+// // @import 'objects/form-controls';
+// // @import 'objects/form-toggle';
 
 /**
  * Components:
@@ -65,35 +65,35 @@
  *
  * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with `.c-`
  */
-@import 'components/alerts';
-@import 'components/breadcrumbs';
-@import 'components/cards';
-@import 'components/media-element';
+// // @import 'components/alerts';
+// // @import 'components/breadcrumbs';
+// // @import 'components/cards';
+// // @import 'components/media-element';
 
 // Optional components – need to be included with the associated mixin in your project dependencies
-@import 'components/optional/apps-banner';
-@import 'components/optional/badges';
-@import 'components/optional/tag';
-@import 'components/optional/content-header';
-@import 'components/optional/content-title';
-@import 'components/optional/cookie-warning';
-@import 'components/optional/cuisines-widget';
-@import 'components/optional/fullscreen-pop-over';
-@import 'components/optional/listings';
-@import 'components/optional/listings-skeleton';
-@import 'components/optional/loading-indicator';
-@import 'components/optional/menu';
-@import 'components/optional/modal';
-@import 'components/optional/order-card';
-@import 'components/optional/overflow-carousel';
-@import 'components/optional/page-banner';
-@import 'components/optional/ratings';
-@import 'components/optional/toast';
-@import 'components/optional/user-message';
-@import 'components/optional/loading-indicator';
+// // @import 'components/optional/apps-banner';
+// // @import 'components/optional/badges';
+// // @import 'components/optional/tag';
+// // @import 'components/optional/content-header';
+// // @import 'components/optional/content-title';
+// // @import 'components/optional/cookie-warning';
+// // @import 'components/optional/cuisines-widget';
+// // @import 'components/optional/fullscreen-pop-over';
+// // @import 'components/optional/listings';
+// // @import 'components/optional/listings-skeleton';
+// // @import 'components/optional/loading-indicator';
+// // @import 'components/optional/menu';
+// // @import 'components/optional/modal';
+// // @import 'components/optional/order-card';
+// // @import 'components/optional/overflow-carousel';
+// // @import 'components/optional/page-banner';
+// // @import 'components/optional/ratings';
+// // @import 'components/optional/toast';
+// // @import 'components/optional/user-message';
+// // @import 'components/optional/loading-indicator';
 
 // Global layout definitions & helpers
-@import 'base/layout';
+// // @import 'base/layout';
 
 
 /**
@@ -112,17 +112,17 @@
  * =====================================
  * These should always come last as they should 'trump' other properties
  */
-@import 'trumps/utilities';
-@import 'trumps/rwd';
+// // @import 'trumps/utilities';
+// // @import 'trumps/rwd';
 
 
 /**
  * Print styles
  */
-@import 'base/print';
+// // @import 'base/print';
 
 
 /**
  * Templates for including base sets of styles
  */
-@import 'templates';
+// // @import 'templates';
