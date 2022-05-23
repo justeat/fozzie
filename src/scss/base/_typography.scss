@@ -1,3 +1,8 @@
+@use '../settings/variables' as v;
+@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '../tools/mixins/type' as mixins;
+@use '../settings/include-media' as *;
+
 @mixin typography() {
     /**
     * Typography
@@ -24,15 +29,15 @@
     */
 
     html {
-        font-size: $font-size-base-px; //default font size in px (16px)
+        font-size: v.$font-size-base-px; //default font size in px (16px)
         text-size-adjust: 100%;
     }
 
     body {
-        font-family: $font-family-base;
-        @include font-size(body-l); // default body font size == 1rem/16px
-        color: $color-content-default;
-        font-weight: $font-weight-regular;
+        font-family: v.$font-family-base;
+        @include mixins.font-size(body-l); // default body font size == 1rem/16px
+        color: dt.$color-content-default;
+        font-weight: dt.$font-weight-regular;
 
         text-rendering: optimizelegibility;
         -webkit-font-smoothing: antialiased;
@@ -43,7 +48,7 @@
     * Paragraphs
     */
     p {
-        @include font-size(body-l);
+        @include mixins.font-size(body-l);
         margin-top: spacing(d);
         margin-bottom: 0;
     }
@@ -62,11 +67,11 @@
     .gamma,
     .delta,
     .epsilon {
-        color: $color-content-default;
+        color: dt.$color-content-default;
         margin: 0;
         margin-bottom: 0;
-        font-family: $font-family-base;
-        font-weight: $font-weight-headings;
+        font-family: v.$font-family-base;
+        font-weight: v.$font-weight-headings;
 
         small {
             font-weight: normal;
@@ -77,12 +82,12 @@
     // For example: h3.h1 or h3.alpha
     h1,
     .alpha {
-        @include font-size(heading-xl, true, narrow);
+        @include mixins.font-size(heading-xl, true, narrow);
         margin-top: spacing(f);
         margin-bottom: spacing(d);
 
         @include media('>mid') {
-            @include font-size(heading-xl);
+            @include mixins.font-size(heading-xl);
         }
 
         &:first-child {
@@ -92,10 +97,10 @@
 
     h2,
     .beta {
-        @include font-size(heading-m, true, narrow);
+        @include mixins.font-size(heading-m, true, narrow);
 
         @include media('>mid') {
-            @include font-size(heading-m);
+            @include mixins.font-size(heading-m);
         }
     }
 
@@ -105,16 +110,16 @@
     .delta,
     h5,
     .epsilon {
-        @include font-size(heading-s, true, narrow);
+        @include mixins.font-size(heading-s, true, narrow);
 
         @include media('>mid') {
-            @include font-size(heading-s);
+            @include mixins.font-size(heading-s);
         }
     }
 
     h6,
     .zeta {
-        @include font-size(caption);
+        @include mixins.font-size(caption);
     }
 
     // Only give these headings a margin-top if they are after other elements
@@ -141,7 +146,7 @@
     // Emphasis
     strong,
     b {
-        font-weight: $font-weight-bold;
+        font-weight: dt.$font-weight-bold;
     }
 
     em,
@@ -165,7 +170,7 @@
 
         p {
             margin-bottom: 0;
-            @include font-size(body-s);
+            @include mixins.font-size(body-s);
             font-weight: 300;
         }
 
@@ -183,7 +188,7 @@
     * Buttons
     */
     button {
-        font-family: $font-family-base;
+        font-family: v.$font-family-base;
     }
 
     // Quotes
@@ -205,9 +210,9 @@
     }
 
     mark {
-        background: $color-yellow-10;
+        background: dt.$color-yellow-10;
         padding: 2px 4px;
-        border-radius: $radius-rounded-a;
+        border-radius: dt.$radius-rounded-a;
     }
 
     address {
@@ -228,7 +233,7 @@
 
     sup { top: -0.5em; }
     sub { bottom: -0.25em; }
-    samp { font-family: $font-family-mono; }
+    samp { font-family: v.$font-family-mono; }
 
     //
     // @include ko-text-selection($color-selection, $color-selection-bg);
@@ -237,7 +242,7 @@
     hr {
         margin: spacing(d) 0;
         border: 0;
-        border-top: 1px solid $color-divider-default;
+        border-top: 1px solid dt.$color-divider-default;
     }
 
     // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/

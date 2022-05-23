@@ -6,6 +6,7 @@
     @include normalize();
     @include reset();
     @include typography();
+    @include breakpoints();
 
     @include grid();
 

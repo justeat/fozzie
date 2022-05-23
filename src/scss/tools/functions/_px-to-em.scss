@@ -1,3 +1,5 @@
+@use 'strip-units' as functions;
+
 /**
  * px to em converter
  * =================================
@@ -32,7 +34,7 @@
     $newBreakpoints: ();
 
     @each $name, $pxValue in $breakpoints {
-        $emValue: em(strip-units($pxValue), $base);
+        $emValue: em(functions.strip-units($pxValue), $base);
         $newBreakpoints: map-merge($newBreakpoints, ($name: $emValue));
     }
 

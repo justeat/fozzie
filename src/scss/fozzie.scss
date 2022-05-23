@@ -15,4 +15,4 @@ $includeBaseFramework: false !default;
 $includeMinimalFramework: false !default;
 
 //import our scss file dependencies
-@import 'dependencies';
+@forward 'dependencies';

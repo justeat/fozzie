@@ -1,3 +1,6 @@
+@use '../../settings/variables' as v;
+@use '../functions/strip-units' as functions;
+
 // ==========================================================================
 // Typography mixins
 // ==========================================================================
@@ -6,9 +9,9 @@
 // @include rem(margin, $font-size-base);
 @use 'sass:math';
 
-@mixin rem($property, $sizeValue: $font-size-base) {
-    $unitlessSizeValue: strip-units($sizeValue);
-    $remValue: math.div($unitlessSizeValue, $font-size-base);
+@mixin rem($property, $sizeValue: v.$font-size-base) {
+    $unitlessSizeValue: functions.strip-units($sizeValue);
+    $remValue: math.div($unitlessSizeValue, v.$font-size-base);
 
     #{$property}: ceil($unitlessSizeValue) + px;
     #{$property}: $remValue + rem;
@@ -16,8 +19,8 @@
 
 // EM
 // @include em(margin, $font-size-base);
-@mixin em($property, $sizeValue: $font-size-base) {
-    #{$property}: math.div(strip-units($sizeValue), $font-size-base) + em;
+@mixin em($property, $sizeValue: v.$font-size-base) {
+    #{$property}: math.div(functions.strip-units($sizeValue), v.$font-size-base) + em;
 }
 
 @mixin font-size($key: 'body-s', $line-height: true, $scale: 'default', $relativeToParent: false) {
@@ -29,8 +32,8 @@
         } @else {
             @include rem(font-size, $key);
         }
-    } @else if map-has-key($type, $key) { // else try and find the value in our type map
-        $key-map: map-get($type, $key);
+    } @else if map-has-key(v.$type, $key) { // else try and find the value in our type map
+        $key-map: map-get(v.$type, $key);
         $font-list: map-get($key-map, $scale);
 
         // If $size-map is a list, include

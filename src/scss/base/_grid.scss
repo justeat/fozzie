@@ -1,3 +1,6 @@
+@use '../settings/variables' as v;
+@use '../tools/functions/strip-units' as functions;
+
 /**
  * The Kickoff Flexbox Grid
  * =================================
@@ -23,7 +26,7 @@
         $suffix: --#{$breakpoint};
     }
 
-    @for $i from 1 to $grid-column-count + 1 {
+    @for $i from 1 to v.$grid-column-count + 1 {
         $col-width: ko-gridColumnWidthCalc($i, true);
         $col-width-guttered: ko-gridColumnWidthCalc($i, true, true);
 
@@ -49,7 +52,7 @@
                 // see this for more detail – https://github.com/philipwalton/flexbugs/issues/3
                 max-width: $col-width-guttered;
 
-                @if $i < $grid-column-count {
+                @if $i < v.$grid-column-count {
                     margin-left: ko-gutterCalc();
                 }
                 @else {
@@ -57,7 +60,7 @@
                 }
             }
 
-            @if $use-legacy-grid {
+            @if v.$use-legacy-grid {
 
                 // used in combination with modernizr or another detection mechanism
                 .no-flexbox & {
@@ -93,7 +96,7 @@
             max-width: 100% !important;
             margin-left: 0; // get rid of any grid margins if there are any
 
-            @if $use-legacy-grid {
+            @if v.$use-legacy-grid {
                 .no-flexbox & {
                     width: 100% !important;
                 }
@@ -110,9 +113,9 @@
 */
 @function ko-gutterCalc($show-unit: true) {
     @if $show-unit == true {
-        @return percentage(strip-units($grid-gutter-width) / strip-units($layout-max-width));
+        @return percentage(functions.strip-units(v.$grid-gutter-width) / functions.strip-units(v.$layout-max-width));
     } @else {
-        @return $grid-gutter-width / $layout-max-width;
+        @return v.$grid-gutter-width / v.$layout-max-width;
     }
 }
 
@@ -128,7 +131,7 @@
 * $legacy-calc: if we are working out a legacy column width calculation, or not. Default = false
 */
 @function ko-gridColumnWidthCalc($column-span: 1, $show-unit: true, $include-gutters: false) {
-    $number-of-blocks-in-container : $grid-column-count / $column-span;
+    $number-of-blocks-in-container : v.$grid-column-count / $column-span;
     $total-width-of-all-blocks     : 1;
 
     // when including gutters, we need to adjust our % width or flex-basis appropriately
@@ -140,7 +143,7 @@
     $width-of-a-single-block       : $total-width-of-all-blocks / $number-of-blocks-in-container;
 
     @if $show-unit == true {
-        @return percentage(strip-units($width-of-a-single-block));
+        @return percentage(functions.strip-units($width-of-a-single-block));
     } @else {
         @return $width-of-a-single-block;
     }
@@ -148,10 +151,10 @@
 
 @mixin ko-pixelMinWidth($column-span: 1, $minusGutter: false) {
     @if $minusGutter == true {
-        min-width: ($layout-max-width * ko-gridColumnWidthCalc($column-span, false)) - ($layout-max-width * ko-gutterCalc(false)) + px;
+        min-width: (v.$layout-max-width * ko-gridColumnWidthCalc($column-span, false)) - (v.$layout-max-width * ko-gutterCalc(false)) + px;
     }
     @else {
-        min-width: ($layout-max-width * ko-gridColumnWidthCalc($column-span, false)) + px;
+        min-width: (v.$layout-max-width * ko-gridColumnWidthCalc($column-span, false)) + px;
     }
 }
 
@@ -209,7 +212,7 @@
     // Pros = Margins will be equal to your $grid-gutter-width (even at larger/smaller container sizes), if that’s what you require
     // Cons = Can’t set a border directly to grid containers, as uses negative margins.  Need extra element to get the desired effect
 
-    $g-gutter-half: ($grid-gutter-width / 2) + px;
+    $g-gutter-half: (v.$grid-gutter-width / 2) + px;
 
     .g--gutter {
         margin-left: -$g-gutter-half;
@@ -225,7 +228,7 @@
     // Generates gutter settings for each defined breakpoint for better gutter control in responsive designs
     // Only generated if $responsive-gutters == true
 
-    @if $responsive-gutters {
+    @if v.$responsive-gutters {
         @each $name, $value in $breakpoints {
             .g--gutter--#{$name} {
                 @include media('>=#{$name}') {

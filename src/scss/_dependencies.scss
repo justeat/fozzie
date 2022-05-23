@@ -15,28 +15,27 @@
 // See mixins/css3.scss for the full list
 
 // Including helper modules
-@import 'tools/index'; // imports Fozzie SCSS helper functions and mixins
-// // @import 'include-media/dist/_include-media'; // Cleaner media query declarations – http://include-media.com
-
+// @use 'tools/index'; // imports Fozzie SCSS helper functions and mixins
+@forward "settings/include-media";
 
 // =================================
 // Core variables
 // =================================
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/pie-design-tokens
-// // @import '@justeat/pie-design-tokens/dist/jet';
+@forward '../../../pie-design-tokens/dist/jet';
 
-// // @import 'settings/variables';
-// // @import 'tools/helpers/breakpoints'; // breakpoint helper - @TODO move to the `templates.scss` file as part of the next major version bump.
+@forward 'settings/variables';
+@forward 'tools/helpers/breakpoints'; // breakpoint helper
 
 
 // CSS Normalise and then Reset
-// // @import 'base/normalize';
-// // @import 'base/reset';
+@forward 'base/normalize';
+@forward 'base/reset';
 
 // Global typography styles
-// // @import 'base/typography';
+@forward 'base/typography';
 
-// // @import 'base/grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
+@forward 'base/grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
 
 /**
  * Objects
@@ -119,7 +118,7 @@
 /**
  * Print styles
  */
-// // @import 'base/print';
+@forward 'base/print';
 
 
 /**

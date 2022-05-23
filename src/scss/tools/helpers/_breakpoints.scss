@@ -1,6 +1,9 @@
+@use '../../settings/variables' as v;
+@use '../functions/units' as functions;
+
 @function populate-breakpoints() {
     $breakpointString: '';
-    $breakpointsPx: map-to-px($breakpoints, 16);
+    $breakpointsPx: functions.map-to-px(v.$fozzie-breakpoints, 16);
 
     @each $name, $value in $breakpointsPx {
         $breakpointString: $breakpointString + '#{$name}:#{$value},';
@@ -9,7 +12,9 @@
     @return str-slice($breakpointString, 0, str-length($breakpointString) - 1);
 }
 
-.c-screen-sizer {
+@mixin breakpoints() {
+  .c-screen-sizer {
     display: none;
     content: populate-breakpoints();
+  }
 }

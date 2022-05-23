@@ -1,3 +1,6 @@
+@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '../tools/functions/px-to-em' as functions;
+
 /* stylelint-disable indentation */
 // =================================
 // Variables
@@ -9,69 +12,69 @@
 // Set this in pixels (but do not add px),
 // the font-size mixin will convert to REMS
 
-$font-size-base             : $font-paragraph-01;
+$font-size-base             : dt.$font-paragraph-01;
 $font-size-base-px          : $font-size-base * 1px;
 
 // Type map – these are our global font-sizes and line-heights across the site
 $type: (
     caption: (
-        default: ($font-size-a)
+        default: (dt.$font-size-a)
     ),
     body-s: (
-        default: ($font-size-b)
+        default: (dt.$font-size-b)
     ),
     body-l: (
-        default: ($font-size-c)
+        default: (dt.$font-size-c)
     ),
     subheading-s: (
-        default: ($font-size-d),
-        narrow: ($font-size-c)
+        default: (dt.$font-size-d),
+        narrow: (dt.$font-size-c)
     ),
     subheading-l: (
-        default: ($font-size-e),
-        narrow: ($font-size-d)
+        default: (dt.$font-size-e),
+        narrow: (dt.$font-size-d)
     ),
     heading-s: (
-        default: ($font-size-d),
-        narrow: ($font-size-c)
+        default: (dt.$font-size-d),
+        narrow: (dt.$font-size-c)
     ),
     heading-m: (
-        default: ($font-size-e),
-        narrow: ($font-size-d)
+        default: (dt.$font-size-e),
+        narrow: (dt.$font-size-d)
     ),
     heading-l: (
-        default: ($font-size-f),
-        narrow: ($font-size-e)
+        default: (dt.$font-size-f),
+        narrow: (dt.$font-size-e)
     ),
     heading-xl: (
-        default: ($font-size-g),
-        narrow: ($font-size-f)
+        default: (dt.$font-size-g),
+        narrow: (dt.$font-size-f)
     ),
     heading-xxl: (
-        default: ($font-size-h),
-        narrow: ($font-size-g)
+        default: (dt.$font-size-h),
+        narrow: (dt.$font-size-g)
     )
 ) !default;
 
-$font-weight-headings       : $font-weight-extrabold;
+$font-weight-headings       : dt.$font-weight-extrabold;
 $line-height-base           : line-height();
 
 // Font stacks
-$font-family-base           : $font-family-primary, $font-family-secondary, sans-serif;
+$font-family-base           : dt.$font-family-primary, dt.$font-family-secondary, sans-serif;
 $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 
 
 //  Global Breakpoints and unit intervals
 // ==========================================================================
 
-$unit-intervals: (
+$fozzie-unit-intervals: (
   'px': 1,
   'em': 0.001, // We need more sensitivity, some browsers are very specific with breakpoints
   'rem': 0.1,
   '': 0
 );
 
-$breakpoints: map-to-em((
+$fozzie-breakpoints: functions.map-to-em((
     tiny       : 375px,
     narrow     : 414px,    // narrow devices
     narrowMid  : 600px,    // narrow-mid tweakpoint
@@ -100,19 +103,19 @@ $use-legacy-grid              : true !default;
 // spacing map
 // Can access levels by using the spacing function > spacing() or spacing(a) for example
 $spacing: (
-    a    : $spacing-a, // 4px
-    b    : $spacing-b, // 8px
-    c    : $spacing-c, // 12px
-    d    : $spacing-d, // 16px
-    e    : $spacing-e, // 24px
-    f    : $spacing-f, // 32px
-    g    : $spacing-g, // 40px
-    h    : $spacing-h, // 56px
-    i    : $spacing-i, // 64px
-    j    : $spacing-j  // 80px
+    a    : dt.$spacing-a, // 4px
+    b    : dt.$spacing-b, // 8px
+    c    : dt.$spacing-c, // 12px
+    d    : dt.$spacing-d, // 16px
+    e    : dt.$spacing-e, // 24px
+    f    : dt.$spacing-f, // 32px
+    g    : dt.$spacing-g, // 40px
+    h    : dt.$spacing-h, // 56px
+    i    : dt.$spacing-i, // 64px
+    j    : dt.$spacing-j  // 80px
 );
 
-$border-radius: $radius-rounded-a; // the smallest of pie border tokens
+$border-radius: dt.$radius-rounded-a; // the smallest of pie border tokens
 
 //  z-indexes
 // ==========================================================================
