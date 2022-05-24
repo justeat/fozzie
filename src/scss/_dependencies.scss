@@ -49,13 +49,13 @@
  *
  * Object styles should be prefixed with `.o-`
  */
-// // @import 'objects/body';
-// // @import 'objects/buttons';
-// // @import 'objects/links';
-// // @import 'objects/lists';
-// // @import 'objects/tables';
-// // @import 'objects/form-controls';
-// // @import 'objects/form-toggle';
+@forward 'objects/body';
+// // @forward 'objects/buttons'; - ***issue with extend***
+@forward 'objects/links';
+@forward 'objects/lists';
+@forward 'objects/tables';
+// // @forward 'objects/form-controls'; ***issue with extend***
+// // @forward 'objects/form-toggle'; ***mostly all migrated apart from an issue with extend***
 
 /**
  * Components:
@@ -64,13 +64,13 @@
  *
  * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with `.c-`
  */
-// // @import 'components/alerts';
-// // @import 'components/breadcrumbs';
-// // @import 'components/cards';
-// // @import 'components/media-element';
+@forward 'components/alerts';
+@forward 'components/breadcrumbs';
+@forward 'components/cards';
+@forward 'components/media-element';
 
 // Optional components – need to be included with the associated mixin in your project dependencies
-// // @import 'components/optional/apps-banner';
+@forward 'components/optional/apps-banner';
 // // @import 'components/optional/badges';
 // // @import 'components/optional/tag';
 // // @import 'components/optional/content-header';

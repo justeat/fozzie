@@ -1,3 +1,5 @@
+@use '../../../../pie-design-tokens/dist/jet' as dt;
+
 @mixin links() {
     /**
     * Objects > Links
@@ -13,16 +15,16 @@
 
     a {
         & {
-            color: $color-content-link;
+            color: dt.$color-content-link;
         }
 
         &:hover,
         &:focus {
-            color: lighten($color-content-link, $color-hover-02);
+            color: lighten(dt.$color-content-link, dt.$color-hover-02);
         }
 
         &:active {
-            color: lighten($color-content-link, $color-active-02);
+            color: lighten(dt.$color-content-link, dt.$color-active-02);
         }
     }
 
@@ -43,18 +45,18 @@
     }
 
     .o-link--bold {
-        font-weight: $font-weight-bold;
+        font-weight: dt.$font-weight-bold;
     }
 
     .o-link--distinct {
-        color: $color-content-link-distinct;
+        color: dt.$color-content-link-distinct;
 
         &:hover,
         &:focus {
-            color: darken($color-content-link-distinct, $color-hover-01);
+            color: darken(dt.$color-content-link-distinct, dt.$color-hover-01);
         }
         &:active {
-            color: darken($color-content-link-distinct, $color-active-01);
+            color: darken(dt.$color-content-link-distinct, dt.$color-active-01);
         }
     }
 }

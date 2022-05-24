@@ -1,3 +1,5 @@
+@use '../../../../../pie-design-tokens/dist/jet' as dt;
+
 /**
 * Components > Spinner Indicator
 * =================================
@@ -11,7 +13,7 @@
 
 $loading-indicator-size-medium: 20px;
 $loading-indicator-size-large: 48px;
-$loading-indicator-color-default: $color-orange;
+$loading-indicator-color-default: dt.$color-orange;
 $loading-indicator-borderSize: 3px;
 $loading-indicator-borderColorOpaque-default: rgba(243, 109, 0, 0.2);
 $loading-indicator-spacing: 20px;

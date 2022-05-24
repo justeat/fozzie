@@ -1,102 +1,105 @@
- @mixin tables() {
-    /**
-    * Objects > Tables
-    * =================================
-    * Default Table styles
-    *
-    * This is an optional component within Fozzie.
-    * If you'd like to use it in your project you can include it by adding `@include tables();` into your SCSS dependencies file.
-    *
-    * File Index:
-    * - Table specific variables
-    * - Default table styles
-    *
-    * Documentation:
-    * TBC
-    */
+@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '../settings/variables' as v;
 
-    /**
-    * Define associated Table variables
-    */
-    $table-bgColor                : $color-container-default !global; // Default background color used for all tables.
-    $table-bgColor--accent        : $color-grey-10 !global; // Background color used for `.table-striped`.
-    $table-border--color          : $color-grey-10 !global; // Border color for table and cell borders.
-    $table-border--width          : 2px !global; // Border width for table border.
-    $table-innerBorder--color     : $color-grey-40 !global;
-    $table-verticalBorder--color  : $color-grey-50 !global;
+@mixin tables() {
+  /**
+  * Objects > Tables
+  * =================================
+  * Default Table styles
+  *
+  * This is an optional component within Fozzie.
+  * If you'd like to use it in your project you can include it by adding `@include tables();` into your SCSS dependencies file.
+  *
+  * File Index:
+  * - Table specific variables
+  * - Default table styles
+  *
+  * Documentation:
+  * TBC
+  */
+
+  /**
+  * Define associated Table variables
+  */
+  $table-bgColor                : dt.$color-container-default !global; // Default background color used for all tables.
+  $table-bgColor--accent        : dt.$color-grey-10 !global; // Background color used for `.table-striped`.
+  $table-border--color          : dt.$color-grey-10 !global; // Border color for table and cell borders.
+  $table-border--width          : 2px !global; // Border width for table border.
+  $table-innerBorder--color     : dt.$color-grey-40 !global;
+  $table-verticalBorder--color  : dt.$color-grey-50 !global;
 
 
-    /**
-    * Customizes the `.table` component with basic values, each used across all table variations.
-    */
-    $table-cell-padding           : 14px !default; // Padding for `<th>`s and `<td>`s.
+  /**
+  * Customizes the `.table` component with basic values, each used across all table variations.
+  */
+  $table-cell-padding           : 14px !default; // Padding for `<th>`s and `<td>`s.
 
-    // Baseline styles
-    table,
-    .table {
-        width: 100%;
-        max-width: 100%;
-        margin-top: spacing(f);
-        margin-bottom: spacing(f);
-        border-spacing: 0;
-        background-color: $table-bgColor;
-        border: $table-border--width solid $table-border--color;
-        border-radius: $radius-rounded-b;
+  // Baseline styles
+  table,
+  .table {
+      width: 100%;
+      max-width: 100%;
+      margin-top: spacing(f);
+      margin-bottom: spacing(f);
+      border-spacing: 0;
+      background-color: $table-bgColor;
+      border: $table-border--width solid $table-border--color;
+      border-radius: dt.$radius-rounded-b;
 
-        // Cells
-        & > thead,
-        & > tbody,
-        & > tfoot {
-            th,
-            td {
-                padding: $table-cell-padding;
-                line-height: $line-height-base;
-                vertical-align: top;
-                border-right: 1px solid $table-verticalBorder--color;
-            }
-            th {
-                text-align: left;
-                border-top: 1px solid $table-innerBorder--color;
+      // Cells
+      & > thead,
+      & > tbody,
+      & > tfoot {
+          th,
+          td {
+              padding: $table-cell-padding;
+              line-height: v.$line-height-base;
+              vertical-align: top;
+              border-right: 1px solid $table-verticalBorder--color;
+          }
+          th {
+              text-align: left;
+              border-top: 1px solid $table-innerBorder--color;
 
-                &:first-child {
-                    border-left: 1px solid $table-innerBorder--color;
-                    border-radius: $radius-rounded-b 0 0;
-                }
-                &:last-child {
-                    border-right: 1px solid $table-innerBorder--color;
-                    border-radius: 0 $radius-rounded-b 0 0;
-                }
-            }
-            td {
-                &:last-child {
-                    border-right: none;
-                }
-            }
-        }
+              &:first-child {
+                  border-left: 1px solid $table-innerBorder--color;
+                  border-radius: dt.$radius-rounded-b 0 0;
+              }
+              &:last-child {
+                  border-right: 1px solid $table-innerBorder--color;
+                  border-radius: 0 dt.$radius-rounded-b 0 0;
+              }
+          }
+          td {
+              &:last-child {
+                  border-right: none;
+              }
+          }
+      }
 
-        // Bottom align for column headings
-        & > thead th,
-        & > thead td {
-            vertical-align: bottom;
-            border-bottom: 1px solid $table-innerBorder--color;
-        }
+      // Bottom align for column headings
+      & > thead th,
+      & > thead td {
+          vertical-align: bottom;
+          border-bottom: 1px solid $table-innerBorder--color;
+      }
 
-        // Account for multiple tbody instances
-        > tbody + tbody {
-            border-top: 1px solid $table-innerBorder--color;
-        }
+      // Account for multiple tbody instances
+      > tbody + tbody {
+          border-top: 1px solid $table-innerBorder--color;
+      }
 
-        // Nesting
-        & table,
-        & .table {
-            background-color: $color-background-default;
-        }
+      // Nesting
+      & table,
+      & .table {
+          background-color: dt.$color-background-default;
+      }
 
-        &:not(.not-striped) {
-        tbody :nth-child(odd) th,
-        tbody :nth-child(odd) td {
-            background-color: $table-bgColor--accent;
-        }
-        }
-    }
- }
+      &:not(.not-striped) {
+      tbody :nth-child(odd) th,
+      tbody :nth-child(odd) td {
+          background-color: $table-bgColor--accent;
+      }
+      }
+  }
+}

@@ -1,3 +1,10 @@
+@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '../components/optional/loading-indicator' as optional;
+@use '../tools/mixins/type' as mixins;
+@use '../settings/include-media' as *;
+@use '../trumps/utilities' as *;
+
+
 @mixin buttons() {
     /**
     * Objects > Buttons
@@ -10,56 +17,56 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/buttons
     */
 
-    $btn-default-borderRadius              : $radius-rounded-e;
+    $btn-default-borderRadius              : dt.$radius-rounded-e;
     $btn-default-font-size                 : 'heading-s';
-    $btn-default-weight                    : $font-weight-bold;
+    $btn-default-weight                    : dt.$font-weight-bold;
     $btn-default-padding                   : 10px spacing(e);
-    $btn-default-outline-color             : $color-focus;
+    $btn-default-outline-color             : dt.$color-focus;
 
-    $btn-default-bgColor                   : $color-interactive-brand;
-    $btn-default-color                     : $color-content-interactive-light;
-    $btn-default-bgColor--hover            : darken($color-interactive-brand, $color-hover-01);
-    $btn-default-bgColor--active           : darken($color-interactive-brand, $color-active-01);
+    $btn-default-bgColor                   : dt.$color-interactive-brand;
+    $btn-default-color                     : dt.$color-content-interactive-light;
+    $btn-default-bgColor--hover            : darken(dt.$color-interactive-brand, dt.$color-hover-01);
+    $btn-default-bgColor--active           : darken(dt.$color-interactive-brand, dt.$color-active-01);
 
     $btn-default-loading-opacity           : 0.35;
 
-    $btn-primary-bgColor                   : $color-interactive-brand;
-    $btn-primary-bgColor--hover            : darken($color-interactive-brand, $color-hover-01);
-    $btn-primary-bgColor--active           : darken($color-interactive-brand, $color-active-01);
-    $btn-primary-textColor                 : $color-content-interactive-light;
+    $btn-primary-bgColor                   : dt.$color-interactive-brand;
+    $btn-primary-bgColor--hover            : darken(dt.$color-interactive-brand, dt.$color-hover-01);
+    $btn-primary-bgColor--active           : darken(dt.$color-interactive-brand, dt.$color-active-01);
+    $btn-primary-textColor                 : dt.$color-content-interactive-light;
     $btn-primary-loading-color             : $btn-primary-textColor;
     $btn-primary-loading-colorOpaque       : rgba($btn-primary-loading-color, $btn-default-loading-opacity);
 
-    $btn-secondary-bgColor                 : $color-interactive-secondary;
-    $btn-secondary-bgColor--hover          : darken($color-interactive-secondary, $color-hover-01);
-    $btn-secondary-bgColor--active         : darken($color-interactive-secondary, $color-active-01);
-    $btn-secondary-textColor               : $color-content-interactive-secondary;
+    $btn-secondary-bgColor                 : dt.$color-interactive-secondary;
+    $btn-secondary-bgColor--hover          : darken(dt.$color-interactive-secondary, dt.$color-hover-01);
+    $btn-secondary-bgColor--active         : darken(dt.$color-interactive-secondary, dt.$color-active-01);
+    $btn-secondary-textColor               : dt.$color-content-interactive-secondary;
     $btn-secondary-loading-color           : $btn-secondary-textColor;
     $btn-secondary-loading-colorOpaque     : rgba($btn-secondary-loading-color, $btn-default-loading-opacity);
 
     $btn-outline-bgColor                   : transparent;
-    $btn-outline-bgColor--hover            : darken($color-white, $color-hover-01);
-    $btn-outline-bgColor--active           : darken($color-white, $color-active-01);
-    $btn-outline-textColor                 : $color-content-interactive-tertiary;
-    $btn-outline-border-color              : $color-border-default;
+    $btn-outline-bgColor--hover            : darken(dt.$color-white, dt.$color-hover-01);
+    $btn-outline-bgColor--active           : darken(dt.$color-white, dt.$color-active-01);
+    $btn-outline-textColor                 : dt.$color-content-interactive-tertiary;
+    $btn-outline-border-color              : dt.$color-border-default;
     $btn-outline-loading-color             : $btn-outline-textColor;
     $btn-outline-loading-colorOpaque       : rgba($btn-outline-loading-color, $btn-default-loading-opacity);
 
     $btn-ghost-bgColor                     : transparent;
-    $btn-ghost-bgColor--hover              : darken($color-white, $color-hover-01);
-    $btn-ghost-bgColor--active             : darken($color-white, $color-active-01);
-    $btn-ghost-textColor                   : $color-content-interactive-secondary;
+    $btn-ghost-bgColor--hover              : darken(dt.$color-white, dt.$color-hover-01);
+    $btn-ghost-bgColor--active             : darken(dt.$color-white, dt.$color-active-01);
+    $btn-ghost-textColor                   : dt.$color-content-interactive-secondary;
     $btn-ghost-loading-color               : $btn-ghost-textColor;
     $btn-ghost-loading-colorOpaque         : rgba($btn-ghost-loading-color, $btn-default-loading-opacity);
 
-    $btn-link-loading-color                : $color-content-link;
+    $btn-link-loading-color                : dt.$color-content-link;
     $btn-link-loading-colorOpaque          : rgba($btn-link-loading-color, $btn-default-loading-opacity);
 
-    $btn-disabled-bgColor                  : $color-disabled-01;
-    $btn-disabled-textColor                : $color-content-disabled;
+    $btn-disabled-bgColor                  : dt.$color-disabled-01;
+    $btn-disabled-textColor                : dt.$color-content-disabled;
 
     $btn-sizeLarge-padding                 : 14px spacing(e);
-    $btn-sizeLarge-loading-color           : $color-content-interactive-light;
+    $btn-sizeLarge-loading-color           : dt.$color-content-interactive-light;
 
     $btn-sizeSmall-font-size               : 'body-l';
     $btn-sizeSmall-padding                 : spacing() spacing(d);
@@ -67,7 +74,7 @@
     $btn-sizeXSmall-font-size              : 'body-s';
     $btn-sizeXSmall-padding                : 6px spacing();
 
-    @include loadingIndicator('medium');
+    @include optional.loadingIndicator('medium');
 
     .c-spinner {
         margin: 0 auto;
@@ -87,7 +94,7 @@
     .o-btn {
         display: inline-block;                      /* [1] */
         vertical-align: middle;                     /* [2] */
-        @include font-size($btn-default-font-size);
+        @include mixins.font-size($btn-default-font-size);
         cursor: pointer;
         margin: 0;
         padding: $btn-default-padding;
@@ -181,18 +188,18 @@
             background-color: $btn-primary-bgColor--active;
         }
 
-        @include spinnerColor($btn-primary-loading-color, $btn-primary-loading-colorOpaque);
+        @include optional.spinnerColor($btn-primary-loading-color, $btn-primary-loading-colorOpaque);
 
         &.o-btn--sizeSmall,
         &.o-btn--sizeXSmall {
-            background-color: $color-interactive-primary;
+            background-color: dt.$color-interactive-primary;
 
             &:hover {
-                background-color: lighten($color-interactive-primary, $color-hover-02);
+                background-color: lighten(dt.$color-interactive-primary, dt.$color-hover-02);
             }
             &:active,
             &.o-btn--loading {
-                background-color: lighten($color-interactive-primary, $color-active-02);
+                background-color: lighten(dt.$color-interactive-primary, dt.$color-active-02);
             }
         }
     }
@@ -223,7 +230,7 @@
             background-color: $btn-secondary-bgColor--active;
         }
 
-        @include spinnerColor($btn-secondary-loading-color, $btn-secondary-loading-colorOpaque);
+        @include optional.spinnerColor($btn-secondary-loading-color, $btn-secondary-loading-colorOpaque);
     }
 
 
@@ -253,7 +260,7 @@
             background-color: $btn-outline-bgColor--active;
         }
 
-        @include spinnerColor($btn-outline-loading-color, $btn-outline-loading-colorOpaque);
+        @include optional.spinnerColor($btn-outline-loading-color, $btn-outline-loading-colorOpaque);
     }
 
 
@@ -282,7 +289,7 @@
             background-color: $btn-ghost-bgColor--active;
         }
 
-        @include spinnerColor($btn-ghost-loading-color, $btn-ghost-loading-colorOpaque);
+        @include optional.spinnerColor($btn-ghost-loading-color, $btn-ghost-loading-colorOpaque);
     }
 
 
@@ -297,12 +304,12 @@
     }
 
     .o-btn--sizeSmall {
-        @include font-size($btn-sizeSmall-font-size);
+        @include mixins.font-size($btn-sizeSmall-font-size);
         padding: $btn-sizeSmall-padding;
     }
 
     .o-btn--sizeXSmall {
-        @include font-size($btn-sizeXSmall-font-size);
+        @include mixins.font-size($btn-sizeXSmall-font-size);
         padding: $btn-sizeXSmall-padding;
     }
 
@@ -381,21 +388,21 @@
         background-color: transparent;
         padding: 0;
         margin: 0;
-        color: $color-content-link;
-        font-weight: $font-weight-bold;
+        color: dt.$color-content-link;
+        font-weight: dt.$font-weight-bold;
         text-decoration: underline;
 
         &:hover {
             cursor: pointer;
-            color: darken($color-content-link, $color-hover-01);
+            color: darken(dt.$color-content-link, dt.$color-hover-01);
             background-color: transparent;
         }
         &:active,
         &:focus {
-            color: darken($color-content-link, $color-active-01);
+            color: darken(dt.$color-content-link, dt.$color-active-01);
             background-color: transparent;
         }
 
-        @include spinnerColor($btn-link-loading-color, $btn-link-loading-colorOpaque);
+        @include optional.spinnerColor($btn-link-loading-color, $btn-link-loading-colorOpaque);
     }
  }

@@ -1,3 +1,7 @@
+@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '../tools/mixins/type' as mixins;
+@use '../settings/include-media' as *;
+
 @mixin mediaElement() {
     /**
     * Components > Media element
@@ -15,8 +19,8 @@
     $mediaElement-img-width         : 50px;
     $mediaElement-img-width--mid    : 78px;
     $mediaElement-img-width--wide   : 67px;
-    $mediaElement-img-borderRadius  : $radius-rounded-c;
-    $mediaElement-infoLinkColor     : $color-content-link-distinct;
+    $mediaElement-img-borderRadius  : dt.$radius-rounded-c;
+    $mediaElement-infoLinkColor     : dt.$color-content-link-distinct;
     $mediaElement-fontSize          : body-l;
     $mediaElement-spacing           : spacing(d);
 
@@ -99,7 +103,7 @@
 
         // apply an outline to the mediaElement img
         .c-mediaElement-img--outlined {
-            border: solid 1px $color-border-strong;
+            border: solid 1px dt.$color-border-strong;
             border-radius: $mediaElement-img-borderRadius;
         }
 
@@ -147,16 +151,16 @@
 
         .c-mediaElement-text {
             margin-top: 0;
-            @include font-size(caption, false);
+            @include mixins.font-size(caption, false);
         }
 
         .c-mediaElement-text--large {
-            @include font-size(heading-m, false); // TODO – this should be updated with a more semantic font alias, as it's not a heading
+            @include mixins.font-size(heading-m, false); // TODO – this should be updated with a more semantic font alias, as it's not a heading
             line-height: 1.2;
         }
 
         .c-mediaElement-infoLink {
-            @include font-size($mediaElement-fontSize);
+            @include mixins.font-size($mediaElement-fontSize);
             align-items: center;
             color: $mediaElement-infoLinkColor;
             display: flex;
