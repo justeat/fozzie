@@ -13,6 +13,14 @@
 [![Coverage Status](https://coveralls.io/repos/github/justeat/fozzie/badge.svg)](https://coveralls.io/github/justeat/fozzie)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/justeat/fozzie.svg)](https://lgtm.com/projects/g/justeat/fozzie/alerts/)
 
+## Caveat
+
+Fozzie now contains new syntax (@use & @forward in favour of @import statements) this now requires you to use dart-sass.
+
+### Reason for change
+
+`@import` will be removed from dart-sass "No later than October 2022", so we needed to move our SCSS libraries and components away from @import to use the new syntax.
+
 ## Usage
 
 1. The easiest way to use fozzie modules in your Sass setup is to use [Eyeglass](https://www.npmjs.com/package/eyeglass).
@@ -31,7 +39,11 @@ If you are using the [fozzie gulp build tasks](https://www.npmjs.com/package/@ju
 3.  Then within your Sass files, you will need to import this module.
 
     ```scss
-    @import 'fozzie';
+    @use 'fozzie' as f;
+
+    .c-breadcrumbs {
+        @include f.breadcrumbs();
+    }
     ```
 
-You can then use the base styles that `fozzie` has available in this module (and that will be documented shortly).
+

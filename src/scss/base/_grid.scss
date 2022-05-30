@@ -1,5 +1,7 @@
 @use '../settings/variables' as v;
 @use '../tools/functions/strip-units' as functions;
+@use '../settings/include-media' as *;
+@use 'sass:math';
 
 /**
  * The Kickoff Flexbox Grid
@@ -113,9 +115,9 @@
 */
 @function ko-gutterCalc($show-unit: true) {
     @if $show-unit == true {
-        @return percentage(functions.strip-units(v.$grid-gutter-width) / functions.strip-units(v.$layout-max-width));
+        @return percentage(math.div(functions.strip-units(v.$grid-gutter-width), functions.strip-units(v.$layout-max-width)));
     } @else {
-        @return v.$grid-gutter-width / v.$layout-max-width;
+        @return math.div(v.$grid-gutter-width, v.$layout-max-width);
     }
 }
 
@@ -131,7 +133,7 @@
 * $legacy-calc: if we are working out a legacy column width calculation, or not. Default = false
 */
 @function ko-gridColumnWidthCalc($column-span: 1, $show-unit: true, $include-gutters: false) {
-    $number-of-blocks-in-container : v.$grid-column-count / $column-span;
+    $number-of-blocks-in-container : math.div(v.$grid-column-count, $column-span);
     $total-width-of-all-blocks     : 1;
 
     // when including gutters, we need to adjust our % width or flex-basis appropriately
@@ -140,7 +142,7 @@
         $total-width-of-all-blocks     : 1 - $total-width-of-all-gutters;
     }
 
-    $width-of-a-single-block       : $total-width-of-all-blocks / $number-of-blocks-in-container;
+    $width-of-a-single-block       : math.div($total-width-of-all-blocks, $number-of-blocks-in-container);
 
     @if $show-unit == true {
         @return percentage(functions.strip-units($width-of-a-single-block));
@@ -212,7 +214,7 @@
     // Pros = Margins will be equal to your $grid-gutter-width (even at larger/smaller container sizes), if that’s what you require
     // Cons = Can’t set a border directly to grid containers, as uses negative margins.  Need extra element to get the desired effect
 
-    $g-gutter-half: (v.$grid-gutter-width / 2) + px;
+    $g-gutter-half: math.div(v.$grid-gutter-width, 2) + px;
 
     .g--gutter {
         margin-left: -$g-gutter-half;
@@ -229,7 +231,7 @@
     // Only generated if $responsive-gutters == true
 
     @if v.$responsive-gutters {
-        @each $name, $value in $breakpoints {
+        @each $name, $value in v.$fozzie-breakpoints {
             .g--gutter--#{$name} {
                 @include media('>=#{$name}') {
                     margin-left: -$g-gutter-half;
@@ -321,7 +323,7 @@
     /**
     * Add fallbacks for non-flexbox supporting browsers (for example, IE8/9)
     */
-    @if $use-legacy-grid {
+    @if v.$use-legacy-grid {
         .no-flexbox {
             .g {
                 display: block !important; // need this for old Safari, as it thinks it understands flexbox but doesn’t really
@@ -365,16 +367,16 @@
     @include ko-gridSpanHelper; // Default sizes
 
     // Responsive sizes only generated if $responsive-grid-sizes == true
-    @if $responsive-grid-sizes {
+    @if v.$responsive-grid-sizes {
         //loop through our breakpoints
-        @each $name, $value in $breakpoints {
+        @each $name, $value in v.$fozzie-breakpoints {
             @include media('>=#{$value}') {
                 @include ko-gridSpanHelper($name);
             }
         }
     }
 
-    @each $name, $value in $breakpoints {
+    @each $name, $value in v.$fozzie-breakpoints {
         .g--stack--#{$name} {
             @include ko-grid-stack($name);
         }

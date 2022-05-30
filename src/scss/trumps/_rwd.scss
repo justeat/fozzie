@@ -1,3 +1,5 @@
+@use '../settings/include-media' as *;
+
 @mixin trumps-rwd() {
     /**
     * Responsive Trumps

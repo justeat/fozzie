@@ -1,3 +1,71 @@
+@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '../settings/include-media' as *;
+@use '../tools/mixins/border' as b;
+@use '../tools/mixins/truncate' as t;
+
+// ====================
+// @TODO - MOVE TO DIFFERENT FILE.
+
+%u-ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+
+    br {
+      display: none;
+    }
+}
+
+%u-elementFocus {
+    outline: 2px solid dt.$color-focus;
+}
+
+%u-unstyled {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+
+    & > li {
+        margin-bottom: 0;
+
+      &:before {
+          content: none;
+      }
+    }
+}
+
+%u-hideText {
+    text-indent: 110%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+%u-bordered {
+    @include b.bordered();
+}
+
+%u-elementFocus--boxShadow {
+    outline: none;
+    box-shadow: 0 0 0 2px dt.$color-focus;
+}
+
+%u-focusShadow {
+    outline: none;
+}
+
+%u-focusShadow-content {
+    box-shadow: 0 0 2px 2px dt.$color-focus; /* keyboard-only focus styles */
+}
+
+// ====================
+
 @mixin trumps-utilities() {
     /**
     * Utilities
@@ -23,17 +91,16 @@
     // ==========================================================================
 
     .u-lightenBg {
-        background-color: $color-white;
+        background-color: dt.$color-white;
     }
 
-    .u-bordered,
-    %u-bordered {
-        @include bordered();
+    .u-bordered {
+        @extend %u-bordered;
     }
 
     .u-bordered--mid {
         @include media('>mid') {
-            @include bordered();
+            @include b.bordered();
         }
     }
 
@@ -126,7 +193,7 @@
     }
 
     .u-text-truncate {
-        @include truncate();
+        @include t.truncate();
     }
 
     .u-noUnderline {
@@ -153,7 +220,7 @@
     }
 
     .u-text-highlight {
-        color: $color-red;
+        color: dt.$color-red;
 
         @at-root em#{&} {
             font-style: normal;
@@ -175,31 +242,31 @@
     // ==========================================================================
 
     .u-color-text {
-        color: $color-content-default;
+        color: dt.$color-content-default;
     }
 
     .u-color-link {
-        color: $color-content-link;
+        color: dt.$color-content-link;
     }
 
     .u-color-secondary {
-        color: $color-blue;
+        color: dt.$color-blue;
     }
 
     .u-color-text--hint {
-        color: $color-content-subdued;
+        color: dt.$color-content-subdued;
     }
 
     .u-color-text--success {
-        color: $color-content-positive;
+        color: dt.$color-content-positive;
     }
 
     .u-color-text--danger {
-        color: $color-content-error;
+        color: dt.$color-content-error;
     }
 
     .u-color-text--warning {
-        color: $color-content-default;
+        color: dt.$color-content-default;
     }
 
     //
@@ -311,49 +378,22 @@
 
 
     // For background image replacement
-    %u-ir,
-    .u-ir {
-        background-color: transparent;
-        background-repeat: no-repeat;
-        border: 0;
-        direction: ltr;
-        display: block;
-        overflow: hidden;
-        text-align: left;
-        text-indent: -999em;
 
-        br {
-            display: none;
-        }
+    .u-ir {
+        @extend %u-ir;
     }
 
     // Alternative image replacement technique
-    .u-hideText,
-    %u-hideText {
-        text-indent: 110%;
-        white-space: nowrap;
-        overflow: hidden;
+    .u-hideText {
+        @extend %u-hideText;
     }
 
     //
     // List Helper
     // ==========================================================================
 
-    .u-unstyled,
-    %u-unstyled {
-        margin-top: 0;
-        margin-left: 0;
-        padding: 0;
-        list-style: none;
-        list-style-image: none;
-
-        & > li {
-            margin-bottom: 0;
-
-            &:before {
-                content: none;
-            }
-        }
+    .u-unstyled {
+        @extend %u-unstyled;
     }
 
     //
@@ -361,30 +401,26 @@
     // =================================================================================
 
     /* Custom outline styling for elements that have a focus state */
-    %u-elementFocus,
     .u-elementFocus {
-        outline: 2px solid $color-focus;
+        @extend %u-elementFocus;
     }
 
     /* Custom visual outline emulation for better appearance on elements with rounded corners */
-    %u-elementFocus--boxShadow,
     .u-elementFocus--boxShadow {
-    outline: none;
-    box-shadow: 0 0 0 2px $color-focus;
+        @extend %u-elementFocus--boxShadow;
     }
 
     /*
     * Clever hack to have focus on an element but only when keyboard focused (not click)
     * https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
     */
-    %u-focusShadow,
     .u-focusShadow:focus,
     .u-focusShadow-content:focus {
-        outline: none;
+        @extend %u-focusShadow;
     }
-    %u-focusShadow-content,
+
     .u-focusShadow:focus > .u-focusShadow-content {
-        box-shadow: 0 0 2px 2px $color-focus; /* keyboard-only focus styles */
+        @extend %u-focusShadow-content;
     }
 
 
@@ -396,9 +432,9 @@
 
         @include media('<mid') {
             &:after {
-                background-color: $color-grey-20;
+                background-color: dt.$color-grey-20;
                 border: 0;
-                box-shadow: $elevation-01;
+                box-shadow: dt.$elevation-01;
                 content: '';
                 display: block;
                 height: spacing(h);

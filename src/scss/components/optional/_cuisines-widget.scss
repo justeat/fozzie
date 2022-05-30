@@ -1,3 +1,7 @@
+@use '../../../../../pie-design-tokens/dist/jet' as dt;
+@use '../../tools/mixins/type' as mixins;
+@use '../../settings/include-media' as *;
+
 @mixin cuisinesWidget() {
     /**
     * Components > Cuisines Widget
@@ -10,18 +14,18 @@
     *
     */
 
-    $cuisinesWidget-defaultBackground: $color-grey-20;
+    $cuisinesWidget-defaultBackground: dt.$color-grey-20;
     $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 
     @include media-context(('narrow-mid': 570px, 'mid-wide': 1240px)) {
 
        .c-cuisinesWidget {
             display: block;
-            border-radius: $radius-rounded-c;
+            border-radius: dt.$radius-rounded-c;
             overflow: hidden;
             position: relative;
             background-color: $cuisinesWidget-defaultBackground;
-            box-shadow: $elevation-01; // token values for cards
+            box-shadow: dt.$elevation-01; // token values for cards
             margin-top: spacing();
             margin-bottom: spacing();
 
@@ -39,12 +43,12 @@
             left: 0;
             width: 100%;
             padding: spacing(d) spacing(d) spacing();
-            color: $color-container-default;
+            color: dt.$color-container-default;
             text-align: center;
             background-image: $cuisinesWidget-gradient;
 
             @include media('>=mid-wide') {
-                @include font-size(heading-m, false);
+                @include mixins.font-size(heading-m, false);
                 padding: spacing(d);
             }
         }

@@ -1,3 +1,8 @@
+@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '../settings/variables' as v;
+@use '../settings/include-media' as *;
+@use '../tools/mixins/type' as mixins;
+
 @mixin layout() {
     /**
     * Global Layout Definitions & Helpers
@@ -8,7 +13,7 @@
     */
 
     body {
-        background-color: $color-background-default;
+        background-color: dt.$color-background-default;
     }
 
     /*
@@ -37,19 +42,19 @@
     */
     .l-container {
         width: 100%;
-        max-width: #{$layout-max-width}px;
+        max-width: #{v.$layout-max-width}px;
         margin: 0 auto;
-        padding-left: #{$layout-margin}px;
-        padding-right: #{$layout-margin}px;
+        padding-left: #{v.$layout-margin}px;
+        padding-right: #{v.$layout-margin}px;
 
         @include media('<mid') {
-            padding-left: #{$layout-margin--mid}px;
-            padding-right: #{$layout-margin--mid}px;
+            padding-left: #{v.$layout-margin--mid}px;
+            padding-right: #{v.$layout-margin--mid}px;
         }
 
         @include media('<narrow') {
-            padding-left: #{$layout-margin--narrow}px;
-            padding-right: #{$layout-margin--narrow}px;
+            padding-left: #{v.$layout-margin--narrow}px;
+            padding-right: #{v.$layout-margin--narrow}px;
         }
     }
 
@@ -58,7 +63,7 @@
     */
     .l-innerContainer {
         width: 100%;
-        max-width: #{$layout-max-width}px;
+        max-width: #{v.$layout-max-width}px;
         margin: 0 auto;
     }
 
@@ -93,10 +98,10 @@
             }
 
             > h1 {
-                @include font-size(heading-xxl, true, narrow);
+                @include mixins.font-size(heading-xxl, true, narrow);
 
                 @include media('>mid') {
-                    @include font-size(heading-xxl);
+                    @include mixins.font-size(heading-xxl);
                 }
             }
         }
@@ -104,7 +109,7 @@
                 text-align: center;
             }
             .l-content-header--highlight {
-                color: $color-content-brand;
+                color: dt.$color-content-brand;
             }
 
         .l-content-main {
@@ -113,7 +118,7 @@
 
     // Used for dividing pages or cards horizontally
     .l-divider {
-        border-bottom: 1px solid $color-border-strong;
+        border-bottom: 1px solid dt.$color-border-strong;
     }
 
     // utility that lets you align items side by side and vertically centered

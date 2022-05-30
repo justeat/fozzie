@@ -297,7 +297,7 @@ $formToggle-text--checked           : dt.$color-green;
 @mixin formToggle-focusState() {
     @include formToggle-border();
     &:after {
-        @extend %u-elementFocus;
+        outline: 2px solid dt.$color-focus;
         left: 1px;
         top: 1px;
         width: calc(100% - 2px);

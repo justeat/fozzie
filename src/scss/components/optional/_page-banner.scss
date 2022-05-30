@@ -1,3 +1,7 @@
+@use '../../../../../pie-design-tokens/dist/jet' as dt;
+@use '../../settings/variables' as v;
+@use '../../settings/include-media' as *;
+
 @mixin pageBanner() {
     /**
     * Components > Page Banner
@@ -14,7 +18,7 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/page-banner
     */
 
-    $pageBanner-bg: $color-white;
+    $pageBanner-bg: dt.$color-white;
     //Vars to use for IE homepage banner rays positioning fix
     $rays--coloured-spacing: 60px;
     $rays--coloured-spacing--mid: 164px;
@@ -92,7 +96,7 @@
         // Prevents IE from applying these styles as IE11 doesn't support the @supports rule
         @supports (position: absolute) {
             &:after {
-                background: url('#{$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
+                background: url('#{v.$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
                 content: '';
                 height: 100%;
                 position: absolute;
@@ -102,7 +106,7 @@
                 z-index: zIndex(low);
 
                 @include media('>=mid') {
-                    background: url('#{$img-path-url}/decoration/rays--white--wide.svg') no-repeat bottom left;
+                    background: url('#{v.$img-path-url}/decoration/rays--white--wide.svg') no-repeat bottom left;
                 }
             }
         }
@@ -110,7 +114,7 @@
 
     .c-pageBanner--withRays--coloured {
         &:after {
-            background: url('#{$img-path-url}/decoration/rays--coloured--narrow.svg') no-repeat bottom left;
+            background: url('#{v.$img-path-url}/decoration/rays--coloured--narrow.svg') no-repeat bottom left;
             content: '';
             height: 100%;
             position: absolute;
@@ -125,7 +129,7 @@
             }
 
             @include media('>=wide') {
-                background: url('#{$img-path-url}/decoration/rays--coloured--wide.svg') no-repeat bottom left;
+                background: url('#{v.$img-path-url}/decoration/rays--coloured--wide.svg') no-repeat bottom left;
                 bottom: -$rays--coloured-spacing--wide;
             }
 
@@ -139,7 +143,7 @@
 
                 @include media('>=mid', '<wide') {
                     // removed this image call from IE because of the svg wrong scaling bug. SVG for smaller screens looks much better in IE
-                    background: url('#{$img-path-url}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
+                    background: url('#{v.$img-path-url}/decoration/rays--coloured--mid.svg') no-repeat bottom left;
                 }
             }
         }

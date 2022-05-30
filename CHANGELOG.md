@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Deprecate modal and orderCard component styles in next major version as unused.
 
+v9.0.0-beta.0
+------------------------------
+*May 30, 2022*
+
+### Changed
+- **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation.
+  - Documentation to be added next on how to migrate, for a basic overview see readme for now.
+
 v8.2.0
 ------------------------------
 *May 23, 2022*
