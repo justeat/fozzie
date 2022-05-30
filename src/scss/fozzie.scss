@@ -20,7 +20,8 @@ $includeMinimalFramework: false !default;
 /**
  * Templates for including base sets of styles
  */
-//@forward 'templates' with (
-//  $includeBaseFramework: $includeBaseFramework,
-//  $includeMinimalFramework: $includeMinimalFramework
-//);
+
+@forward 'templates' with (
+  $includeBaseFramework: $includeBaseFramework,
+  $includeMinimalFramework: $includeMinimalFramework
+);
