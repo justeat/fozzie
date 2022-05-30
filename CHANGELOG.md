@@ -13,8 +13,9 @@ v9.0.0-beta.0
 *May 30, 2022*
 
 ### Changed
-- **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation.
-  - Documentation to be added next on how to migrate, for a basic overview see readme for now.
+- **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation in `dart-sass`.
+  - README updated with new usage info. Documentation on fozzie.just-eat.com to be updated with full info on migration and usage.
+
 
 v8.2.0
 ------------------------------
@@ -22,6 +23,7 @@ v8.2.0
 
 ### Added
 - Node 16 to the `engines` property in `package.json`.
+
 
 v8.1.0
 ------------------------------

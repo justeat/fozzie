@@ -3,7 +3,7 @@
 
 <img width="125" alt="Fozzie Bear" src="bear.png" />
 
-<p>Base Front-End Library for Just Eat Global Platform.  Designed to be reusable across any site that want to share those base styles.</p>
+<p>SCSS Helper Library for Front-End projects that are implementing PIE across JET.</p>
 </div>
 
 ---
@@ -13,37 +13,57 @@
 [![Coverage Status](https://coveralls.io/repos/github/justeat/fozzie/badge.svg)](https://coveralls.io/github/justeat/fozzie)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/justeat/fozzie.svg)](https://lgtm.com/projects/g/justeat/fozzie/alerts/)
 
-## Caveat
+## What is Fozzie?
 
-Fozzie now contains new syntax (@use & @forward in favour of @import statements) this now requires you to use dart-sass.
+Fozzie is an SCSS Helper Library that's used to help ensure web projects across JET have access to a set of baseline SCSS variables, mixins and functions.
 
-### Reason for change
-
-`@import` will be removed from dart-sass "No later than October 2022", so we needed to move our SCSS libraries and components away from @import to use the new syntax.
+By including this helper library, the consuming web application will have access to our shared PIE Design tokens, as well as common SCSS helper mixins and functions for things like font-size, spacing and setting media queries.
 
 ## Usage
 
-1. The easiest way to use fozzie modules in your Sass setup is to use [Eyeglass](https://www.npmjs.com/package/eyeglass).
+### Pre-requisites
 
-If you are using the [fozzie gulp build tasks](https://www.npmjs.com/package/@justeat/gulp-build-fozzie), then Eyeglass is automatically setup ready to use.  If not, you can use it in one of the following ways:
+To use the fozzie SCSS helper library, you'll need to ensure a couple of things:
 
-- [Gulp](https://github.com/sass-eyeglass/eyeglass/blob/master/site-src/docs/integrations/gulp.md)
-- [WebPack](https://github.com/sass-eyeglass/eyeglass/issues/153#issuecomment-300895607)
+1. That you use `dart-sass` to compile your Sass. The [sass](https://www.npmjs.com/package/sass) module uses dart-sass by default now, so if you use the latest version of this module, you'll be good-to-go.
 
-2.  Install the fozzie module using NPM or Yarn:
+   `node-sass` support in Sass has been officially deprecated and as this library uses up-to-date Sass syntax (namely `@use` and `@forward`, rather than `@import`), it won't work when compiling with `node-sass`.
+
+2. Your build tool supports importing via the `node_modules` folder.
+
+   Both Webpack and Parcel support this by setting `includePaths` to point to the `node_modules` folder. More info on setting this up in your project can be found in the FAQ's (TODO: Add Link to docs).
+
+### Installation
+
+1.  Install the fozzie module using NPM or Yarn:
 
     ```bash
     yarn add @justeat/fozzie
     ```
 
-3.  Then within your Sass files, you will need to import this module.
+2.  Then within your Sass files, you will need to import this module.
 
     ```scss
     @use 'fozzie' as f;
-
-    .c-breadcrumbs {
-        @include f.breadcrumbs();
-    }
     ```
 
+Once you have imported fozzie into your Sass, you'll have access to the fozzie variables, mixins and functions, which can be used as in the following example:
 
+  ```scss
+    .myCoolComponent {
+      // Using PIE Variables
+      background: f.$color-background-default;
+      border-radius: f.$radius-rounded-b;
+
+      // Using helper mixins
+      @include font-size('body-l');
+
+      // Using helper functions
+      padding: spacing('b');
+
+      // Using media query helper
+      @include media('>mid') {
+        padding: spacing('c');
+      }
+    ]
+  ```
