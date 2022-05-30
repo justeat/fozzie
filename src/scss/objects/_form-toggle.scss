@@ -1,4 +1,4 @@
-@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '@justeat/pie-design-tokens/dist/jet'; as dt;
 @use '../settings/include-media' as *;
 @use '../tools/functions/spacing' as functions;
 @use 'sass:math';

@@ -1,4 +1,4 @@
-@use '../../../../pie-design-tokens/dist/jet' as dt;
+@use '@justeat/pie-design-tokens/dist/jet'; as dt;
 @use '../components/optional/loading-indicator' as optional;
 @use '../tools/mixins/type' as mixins;
 @use '../settings/include-media' as *;
