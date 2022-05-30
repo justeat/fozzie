@@ -1,5 +1,5 @@
 @use '../settings/variables' as v;
-@use '@justeat/pie-design-tokens/dist/jet'; as dt;
+@use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../tools/mixins/type' as mixins;
 @use '../settings/include-media' as *;
 

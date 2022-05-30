@@ -21,7 +21,7 @@
 // Core variables
 // =================================
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/pie-design-tokens
-@forward '../../../pie-design-tokens/dist/jet';
+@forward '~@justeat/pie-design-tokens/dist/jet';
 @forward 'settings/variables';
 @forward "settings/include-media";
 @forward 'tools/helpers/breakpoints'; // breakpoint helper
