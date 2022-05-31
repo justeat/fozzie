@@ -46,9 +46,6 @@
  *
  * Object styles should be prefixed with `.o-`
  */
-@forward 'trumps/utilities';
-@forward 'components/optional/loading-indicator';
-
 
 @forward 'objects/body';
 @forward 'objects/buttons';
@@ -89,6 +86,7 @@
 @forward 'components/optional/ratings';
 @forward 'components/optional/toast';
 @forward 'components/optional/user-message';
+@forward 'components/optional/loading-indicator';
 
 // Global layout definitions & helpers
 @forward 'base/layout';
@@ -100,7 +98,7 @@
  * These should always come last as they should 'trump' other properties
  */
 @forward 'trumps/rwd';
-
+@forward 'trumps/utilities';
 
 /**
  * Print styles
