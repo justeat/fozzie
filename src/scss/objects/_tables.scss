@@ -96,10 +96,12 @@
       }
 
       &:not(.not-striped) {
-      tbody :nth-child(odd) th,
-      tbody :nth-child(odd) td {
-          background-color: $table-bgColor--accent;
-      }
+          tbody :nth-child(odd) {
+              th,
+              td {
+                  background-color: $table-bgColor--accent;
+              }
+          }
       }
   }
 }
