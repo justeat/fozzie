@@ -1,5 +1,5 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 @use '../../settings/include-media' as *;
 
 @mixin cuisinesWidget() {
@@ -48,7 +48,7 @@
             background-image: $cuisinesWidget-gradient;
 
             @include media('>=mid-wide') {
-                @include mixins.font-size(heading-m, false);
+                @include type.font-size(heading-m, false);
                 padding: spacing(d);
             }
         }

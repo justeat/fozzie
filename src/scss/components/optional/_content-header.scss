@@ -1,5 +1,5 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 @use '../../settings/include-media' as *;
 
 @mixin contentHeader() {
@@ -27,13 +27,13 @@
             display: inline-block;
             margin: 0 spacing(d) 0 0;
             font-weight: dt.$font-weight-regular;
-            @include mixins.font-size(body-l, false); // TODO – this should be updated with a more semantic font alias when it's ported to fozzie-components repo
+            @include type.font-size(body-l, false); // TODO – this should be updated with a more semantic font alias when it's ported to fozzie-components repo
         }
 
         .c-contentHeader-subTitle {
             display: block;
             margin-top: 4px;
-            @include mixins.font-size(body-s, false); // TODO – this should be updated with a more semantic font alias when it's ported to fozzie-components repo
+            @include type.font-size(body-s, false); // TODO – this should be updated with a more semantic font alias when it's ported to fozzie-components repo
 
             @include media('>mid') {
                 display: inline-block;
@@ -43,7 +43,7 @@
         .c-contentHeader-title,
         .c-contentHeader-subTitle {
             @include media('>=mid') {
-                @include mixins.font-size(heading-xl, false);
+                @include type.font-size(heading-xl, false);
             }
         }
 

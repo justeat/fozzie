@@ -1,5 +1,5 @@
-@use '../../tools/mixins/type' as mixins;
-@use '../../tools/mixins/ratings' as r;
+@use '../../tools/mixins/type';
+@use '../../tools/mixins/ratings';
 
 @mixin rating() {
     /**
@@ -47,7 +47,7 @@
     }
 
     .c-rating-description {
-        @include mixins.font-size(body-s);
+        @include type.font-size(body-s);
     }
 
     .c-rating--small {
@@ -134,7 +134,7 @@
         display: inline-block;
         height: 100%;
         width: 100%;
-        @include r.rating-fill($star-count);
+        @include ratings.rating-fill($star-count);
     }
 
     /*

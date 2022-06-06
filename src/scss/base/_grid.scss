@@ -1,5 +1,5 @@
 @use '../settings/variables' as v;
-@use '../tools/functions/strip-units' as functions;
+@use '../tools/functions/strip-units';
 @use '../settings/include-media' as *;
 @use 'sass:math';
 
@@ -115,7 +115,7 @@
 */
 @function ko-gutterCalc($show-unit: true) {
     @if $show-unit == true {
-        @return percentage(math.div(functions.strip-units(v.$grid-gutter-width), functions.strip-units(v.$layout-max-width)));
+        @return percentage(math.div(strip-units.strip-units(v.$grid-gutter-width), strip-units.strip-units(v.$layout-max-width)));
     } @else {
         @return math.div(v.$grid-gutter-width, v.$layout-max-width);
     }
@@ -145,7 +145,7 @@
     $width-of-a-single-block       : math.div($total-width-of-all-blocks, $number-of-blocks-in-container);
 
     @if $show-unit == true {
-        @return percentage(functions.strip-units($width-of-a-single-block));
+        @return percentage(strip-units.strip-units($width-of-a-single-block));
     } @else {
         @return $width-of-a-single-block;
     }

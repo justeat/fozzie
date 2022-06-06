@@ -1,5 +1,5 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../components/optional/loading-indicator' as optional;
+@use '../components/optional/loading-indicator';
 @use '../tools/mixins/type' as mixins;
 @use '../settings/include-media' as *;
 @use '../trumps/utilities' as *;
@@ -73,7 +73,7 @@
     $btn-sizeXSmall-font-size              : 'body-s';
     $btn-sizeXSmall-padding                : 6px spacing();
 
-    @include optional.loadingIndicator('medium');
+    @include loading-indicator.loadingIndicator('medium');
 
     .c-spinner {
         margin: 0 auto;
@@ -187,7 +187,7 @@
             background-color: $btn-primary-bgColor--active;
         }
 
-        @include optional.spinnerColor($btn-primary-loading-color, $btn-primary-loading-colorOpaque);
+        @include loading-indicator.spinnerColor($btn-primary-loading-color, $btn-primary-loading-colorOpaque);
 
         &.o-btn--sizeSmall,
         &.o-btn--sizeXSmall {
@@ -229,7 +229,7 @@
             background-color: $btn-secondary-bgColor--active;
         }
 
-        @include optional.spinnerColor($btn-secondary-loading-color, $btn-secondary-loading-colorOpaque);
+        @include loading-indicator.spinnerColor($btn-secondary-loading-color, $btn-secondary-loading-colorOpaque);
     }
 
 
@@ -259,7 +259,7 @@
             background-color: $btn-outline-bgColor--active;
         }
 
-        @include optional.spinnerColor($btn-outline-loading-color, $btn-outline-loading-colorOpaque);
+        @include loading-indicator.spinnerColor($btn-outline-loading-color, $btn-outline-loading-colorOpaque);
     }
 
 
@@ -288,7 +288,7 @@
             background-color: $btn-ghost-bgColor--active;
         }
 
-        @include optional.spinnerColor($btn-ghost-loading-color, $btn-ghost-loading-colorOpaque);
+        @include loading-indicator.spinnerColor($btn-ghost-loading-color, $btn-ghost-loading-colorOpaque);
     }
 
 
@@ -402,6 +402,6 @@
             background-color: transparent;
         }
 
-        @include optional.spinnerColor($btn-link-loading-color, $btn-link-loading-colorOpaque);
+        @include loading-indicator.spinnerColor($btn-link-loading-color, $btn-link-loading-colorOpaque);
     }
  }

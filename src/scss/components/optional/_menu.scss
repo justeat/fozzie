@@ -1,7 +1,7 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 @use '../../settings/include-media' as *;
-@use '../../tools/mixins/truncate' as mixin;
+@use '../../tools/mixins/truncate';
 
 @mixin menu() {
     /**
@@ -31,7 +31,7 @@
 
     .c-menu {
         @extend %u-unstyled;
-        @include mixins.font-size($menu-fontSize);
+        @include type.font-size($menu-fontSize);
     }
 
         // Reduces the spacing between menu items
@@ -78,7 +78,7 @@
         }
 
         .c-menu-openBtn {
-            @include mixins.font-size(body-s);
+            @include type.font-size(body-s);
             align-items: center;
             border-radius: dt.$radius-rounded-d;
             display: flex;
@@ -112,7 +112,7 @@
         }
 
         .c-menu-link {
-            @include mixin.truncate();
+            @include truncate.truncate();
             border-left: solid $menu-border-width $menu-border-color;
             display: block;
             padding: $menu-link-padding;

@@ -56,14 +56,14 @@ Once you have imported fozzie into your Sass, you'll have access to the fozzie v
       border-radius: f.$radius-rounded-b;
 
       // Using helper mixins
-      @include font-size('body-l');
+      @include f.font-size('body-l');
 
       // Using helper functions
-      padding: spacing('b');
+      padding: f.spacing('b');
 
       // Using media query helper
       @include media('>mid') {
-        padding: spacing('c');
+        padding: f.spacing('c');
       }
     ]
   ```

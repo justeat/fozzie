@@ -1,5 +1,5 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../tools/mixins/type' as mixins;
+@use '../tools/mixins/type';
 @use '../settings/include-media' as *;
 
 @mixin mediaElement() {
@@ -151,16 +151,16 @@
 
         .c-mediaElement-text {
             margin-top: 0;
-            @include mixins.font-size(caption, false);
+            @include type.font-size(caption, false);
         }
 
         .c-mediaElement-text--large {
-            @include mixins.font-size(heading-m, false); // TODO – this should be updated with a more semantic font alias, as it's not a heading
+            @include type.font-size(heading-m, false); // TODO – this should be updated with a more semantic font alias, as it's not a heading
             line-height: 1.2;
         }
 
         .c-mediaElement-infoLink {
-            @include mixins.font-size($mediaElement-fontSize);
+            @include type.font-size($mediaElement-fontSize);
             align-items: center;
             color: $mediaElement-infoLinkColor;
             display: flex;

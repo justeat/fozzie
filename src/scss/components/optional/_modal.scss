@@ -1,6 +1,6 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 
 @mixin modal() {
     @warn 'The modal component styles will be deprecated in version 8 as unused, please contact Web Core team if you are still using them';
@@ -45,7 +45,7 @@
 
             @include media('>=narrowMid') {
                 .c-modal-title {
-                    @include mixins.font-size(heading-m);
+                    @include type.font-size(heading-m);
                 }
 
                     .c-modal-title--spacing {
@@ -120,11 +120,11 @@
         }
 
     .c-modal-title {
-        @include mixins.font-size($modal-titleFontSize);
+        @include type.font-size($modal-titleFontSize);
         padding: 0 spacing(e);
 
         @include media('>=mid') {
-            @include mixins.font-size(heading-m);
+            @include type.font-size(heading-m);
         }
     }
 
@@ -223,7 +223,7 @@
 
     .c-modal-textSeparator {
         font-weight: dt.$font-weight-bold;
-        @include mixins.font-size(body-l);
+        @include type.font-size(body-l);
         margin: spacing(e) 0 0;
 
         @include media('>=narrow') {

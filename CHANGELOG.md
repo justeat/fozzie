@@ -14,7 +14,7 @@ v9.0.0-beta.0
 
 ### Changed
 - **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation in `dart-sass`.
-  - README updated with new usage info. Documentation on fozzie.just-eat.com to be updated with full info on migration and usage.
+  - README updated with new usage info. Documentation on vue.pie.design to be updated with full info on migration and usage.
 
 
 v8.2.0

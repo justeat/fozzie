@@ -1,5 +1,5 @@
 @use '../../settings/include-media' as *;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 
 @mixin appsBanner() {
     /**
@@ -41,7 +41,7 @@
 
                 @include media('>=mid') {
                     max-width: 570px;
-                    @include mixins.font-size(heading-xl, false);
+                    @include type.font-size(heading-xl, false);
                 }
             }
 

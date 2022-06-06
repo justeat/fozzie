@@ -1,9 +1,9 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/include-media' as *;
-@use '../tools/functions/spacing' as functions;
+@use '../tools/functions/spacing';
 @use 'sass:math';
 
-$formToggle-padding                 : functions.spacing() !default;
+$formToggle-padding                 : spacing.spacing() !default;
 $formToggle-border-color            : dt.$color-grey-30;
 $formToggle-border-color--interact  : dt.$color-grey-40;
 $formToggle-border-color--checked   : dt.$color-green;

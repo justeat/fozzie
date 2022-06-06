@@ -1,9 +1,9 @@
 @use '../../settings/variables' as v;
-@use '../functions/units' as functions;
+@use '../functions/units';
 
 @function populate-breakpoints() {
     $breakpointString: '';
-    $breakpointsPx: functions.map-to-px(v.$fozzie-breakpoints, 16);
+    $breakpointsPx: units.map-to-px(v.$fozzie-breakpoints, 16);
 
     @each $name, $value in $breakpointsPx {
         $breakpointString: $breakpointString + '#{$name}:#{$value},';

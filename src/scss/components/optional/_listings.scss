@@ -1,6 +1,6 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 
 @mixin listing() {
     /**
@@ -266,7 +266,7 @@
             .c-listing-item-title {
                 word-break: break-word;
                 padding-right: spacing();
-                @include mixins.font-size(body-l, false);
+                @include type.font-size(body-l, false);
 
                 @include media('>mid') {
                     margin: spacing(a) 0;
@@ -352,7 +352,7 @@
             .c-listing-item-ratingText {
                 top: -4px;
                 position: relative;
-                @include mixins.font-size(caption, true);
+                @include type.font-size(caption, true);
             }
 
             .c-listing-item-text {
@@ -375,10 +375,10 @@
             .c-listing-item-label {
                 padding: 1px 4px;
                 margin-bottom: spacing();
-                @include mixins.font-size(caption, false);
+                @include type.font-size(caption, false);
 
                 @include media('>mid') {
-                    @include mixins.font-size(body-s, false);
+                    @include type.font-size(body-s, false);
                 }
             }
 

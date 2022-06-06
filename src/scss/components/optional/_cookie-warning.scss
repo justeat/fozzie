@@ -1,5 +1,5 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 
 @mixin cookieWarning() {
     /**
@@ -20,7 +20,7 @@
         z-index: zIndex(high);
 
         & p {
-            @include mixins.font-size(caption, false);
+            @include type.font-size(caption, false);
             color: dt.$color-white;
             text-align: center;
             margin: 0 auto;

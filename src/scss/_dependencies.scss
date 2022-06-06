@@ -23,7 +23,7 @@
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/pie-design-tokens
 @forward '~@justeat/pie-design-tokens/dist/jet';
 @forward 'settings/variables';
-@forward "settings/include-media";
+@forward 'settings/include-media';
 @forward 'tools/helpers/breakpoints'; // breakpoint helper
 
 // CSS Normalise and then Reset
@@ -78,6 +78,7 @@
 @forward 'components/optional/fullscreen-pop-over';
 @forward 'components/optional/listings';
 @forward 'components/optional/listings-skeleton';
+@forward 'components/optional/loading-indicator';
 @forward 'components/optional/menu';
 @forward 'components/optional/modal';
 @forward 'components/optional/order-card';
@@ -86,7 +87,6 @@
 @forward 'components/optional/ratings';
 @forward 'components/optional/toast';
 @forward 'components/optional/user-message';
-@forward 'components/optional/loading-indicator';
 
 // Global layout definitions & helpers
 @forward 'base/layout';

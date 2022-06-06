@@ -1,5 +1,5 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../tools/mixins/alerts' as mixins;
+@use '../tools/mixins/alerts';
 
 @mixin alerts() {
     /**
@@ -41,14 +41,14 @@
     // Generate contextual modifier classes for colorizing the alert.
 
     .c-alert--success {
-        @include mixins.alert-variant(dt.$color-support-positive-02, dt.$color-content-positive);
+        @include alerts.alert-variant(dt.$color-support-positive-02, dt.$color-content-positive);
     }
 
     .c-alert--warning {
-        @include mixins.alert-variant(dt.$color-support-warning-02, dt.$color-content-default);
+        @include alerts.alert-variant(dt.$color-support-warning-02, dt.$color-content-default);
     }
 
     .c-alert--danger {
-        @include mixins.alert-variant(dt.$color-support-error-02, dt.$color-content-error);
+        @include alerts.alert-variant(dt.$color-support-error-02, dt.$color-content-error);
     }
 }

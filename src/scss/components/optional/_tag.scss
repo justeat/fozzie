@@ -1,5 +1,5 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 
 @mixin tag() {
     /**
@@ -19,7 +19,7 @@
         border-radius: dt.$radius-rounded-b;
         color: dt.$color-content-default;
         display: flex;
-        @include mixins.font-size(body-s, false);
+        @include type.font-size(body-s, false);
         font-weight: dt.$font-weight-regular;
         line-height: 1;
         justify-content: center;
@@ -33,7 +33,7 @@
 
         .c-tag--small {
             border-radius: dt.$radius-rounded-a;
-            @include mixins.font-size(caption, false);
+            @include type.font-size(caption, false);
             padding: 2px 4px;
         }
 

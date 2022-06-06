@@ -1,6 +1,6 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/variables' as v;
-@use '../../tools/mixins/type' as mixins;
+@use '../../tools/mixins/type';
 
 @mixin contentTitle() {
     /**
@@ -33,7 +33,7 @@
             margin: 0;
             width: 100%;
             font-weight: dt.$font-weight-regular;
-            @include mixins.font-size(body-l, false);
+            @include type.font-size(body-l, false);
         }
 
         .c-contentTitle-action {

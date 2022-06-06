@@ -1,5 +1,5 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../tools/functions/px-to-em' as functions;
+@use '../tools/functions/px-to-em';
 
 /* stylelint-disable indentation */
 // =================================
@@ -74,7 +74,7 @@ $fozzie-unit-intervals: (
   '': 0
 );
 
-$fozzie-breakpoints: functions.map-to-em((
+$fozzie-breakpoints: px-to-em.map-to-em((
     tiny       : 375px,
     narrow     : 414px,    // narrow devices
     narrowMid  : 600px,    // narrow-mid tweakpoint

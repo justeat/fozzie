@@ -1,6 +1,6 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/include-media' as *;
-@use '../tools/mixins/truncate' as mixins;
+@use '../tools/mixins/truncate';
 
 @mixin cards() {
     /**
@@ -230,7 +230,7 @@
                 }
 
                 p {
-                    @include mixins.truncate();
+                    @include truncate.truncate();
 
                     &:not(:first-of-type) {
                         display: none;
