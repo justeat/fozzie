@@ -25,6 +25,7 @@
   @warn 'To use the rating component you will need to add references to the SVGs in f-icons';
 
     .c-rating {
+        // Leaving this @extend in so people can port over from the old icon repo easily.
         // @extend %c-icon--star--empty !optional;
         background-repeat: repeat-x;
         display: inline-block;
@@ -128,6 +129,7 @@
     }
 
     .c-rating--fill {
+        // Leaving this @extend in so people can port over from the old icon repo easily.
         // @extend %c-icon--star--fill !optional;
         vertical-align: top;
         background-repeat: repeat-x;
@@ -168,11 +170,13 @@
     .c-icon--star {
         display: block;
         cursor: pointer;
+        // Leaving this @extend in so people can port over from the old icon repo easily.
         // @extend %c-icon--star--empty !optional;
         @extend %u-hideText;
 
         &:hover,
         &:hover ~ label {
+            // Leaving this @extend in so people can port over from the old icon repo easily.
             // @extend %c-icon--star--fill !optional;
         }
     }
