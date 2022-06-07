@@ -12,7 +12,7 @@ v9.0.0-beta.1
 ------------------------------
 *June 07, 2022*
 
-### Changed
+### Removed
 - Removed namespace.
 
 
