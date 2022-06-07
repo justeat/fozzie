@@ -1,7 +1,7 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/include-media' as *;
-@use '../tools/mixins/border' as b;
-@use '../tools/mixins/truncate' as t;
+@use '../tools/mixins/border';
+@use '../tools/mixins/truncate';
 
 // ====================
 // @TODO - MOVE TO DIFFERENT FILE.
@@ -48,7 +48,7 @@
 }
 
 %u-bordered {
-    @include b.bordered();
+    @include border.bordered();
 }
 
 %u-elementFocus--boxShadow {
@@ -100,7 +100,7 @@
 
     .u-bordered--mid {
         @include media('>mid') {
-            @include b.bordered();
+            @include border.bordered();
         }
     }
 
@@ -193,7 +193,7 @@
     }
 
     .u-text-truncate {
-        @include t.truncate();
+        @include truncate.truncate();
     }
 
     .u-noUnderline {
