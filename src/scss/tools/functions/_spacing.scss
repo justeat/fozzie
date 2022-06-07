@@ -1,3 +1,5 @@
+@use '../../settings/variables' as v;
+
 // ==========================================================================
 // _spacing.scss
 //
@@ -17,9 +19,9 @@
 // Key can be passed in as = a, b, c, d, e, f, g, h, i, j
 // ==========================================================================
 @function spacing($key: 'b') {
-    @if type-of($spacing) == 'map' {
-        @if map-has-key($spacing, $key) {
-            @return map-get($spacing, $key);
+    @if type-of(v.$spacing) == 'map' {
+        @if map-has-key(v.$spacing, $key) {
+            @return map-get(v.$spacing, $key);
         }
     }
 

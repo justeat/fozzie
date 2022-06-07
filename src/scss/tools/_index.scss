@@ -8,5 +8,5 @@
 // In addition you can import optional helpers such as breakpoints and code-highlighting such as:
 // @import '/helpers/breakpoints'
 
-@import 'mixins';
-@import 'functions';
+@forward 'mixins';
+@forward 'functions';

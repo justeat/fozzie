@@ -1,3 +1,7 @@
+@use '~@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../settings/include-media' as *;
+@use '../../tools/mixins/type';
+
 @mixin modal() {
     @warn 'The modal component styles will be deprecated in version 8 as unused, please contact Web Core team if you are still using them';
     /**
@@ -15,7 +19,7 @@
     */
 
     $modal-titleFontSize    : body-l !default;
-    $modal-borderRadius     : $radius-rounded-d;
+    $modal-borderRadius     : dt.$radius-rounded-d;
 
     .c-modal {
         z-index: zIndex(high);
@@ -41,7 +45,7 @@
 
             @include media('>=narrowMid') {
                 .c-modal-title {
-                    @include font-size(heading-m);
+                    @include type.font-size(heading-m);
                 }
 
                     .c-modal-title--spacing {
@@ -101,13 +105,13 @@
     }
 
         .c-modal-closeBtn--rounded {
-            border: solid 1px $color-white;
-            background-color: $color-white;
+            border: solid 1px dt.$color-white;
+            background-color: dt.$color-white;
             border-radius: 50%;
             opacity: 0.9;
 
             &:hover {
-                background-color: $color-white;
+                background-color: dt.$color-white;
             }
         }
 
@@ -116,11 +120,11 @@
         }
 
     .c-modal-title {
-        @include font-size($modal-titleFontSize);
+        @include type.font-size($modal-titleFontSize);
         padding: 0 spacing(e);
 
         @include media('>=mid') {
-            @include font-size(heading-m);
+            @include type.font-size(heading-m);
         }
     }
 
@@ -133,7 +137,7 @@
         }
 
     .c-modal-content {
-        background-color: $color-white;
+        background-color: dt.$color-white;
         border-radius: $modal-borderRadius;
         box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
         display: none;
@@ -209,7 +213,7 @@
     }
 
     .c-modal-actions {
-        background-color: $color-white;
+        background-color: dt.$color-white;
         box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.12);
         bottom: 0;
         padding: spacing(e);
@@ -218,8 +222,8 @@
     }
 
     .c-modal-textSeparator {
-        font-weight: $font-weight-bold;
-        @include font-size(body-l);
+        font-weight: dt.$font-weight-bold;
+        @include type.font-size(body-l);
         margin: spacing(e) 0 0;
 
         @include media('>=narrow') {

@@ -1,3 +1,8 @@
+@use '~@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../tools/mixins/type';
+@use '../../settings/include-media' as *;
+@use '../../tools/mixins/truncate';
+
 @mixin menu() {
     /**
     * Components > Menu
@@ -15,18 +20,18 @@
 
     $menu-headerHeight                      : 57px;
     $menu-fontSize                          : body-l;
-    $menu-border-color                      : $color-border-strong;
-    $menu-border-color--active              : $color-grey-50;
+    $menu-border-color                      : dt.$color-border-strong;
+    $menu-border-color--active              : dt.$color-grey-50;
     $menu-border-width                      : 1px;
     $menu-border-width--active              : 2px;
-    $menu-link-color                        : $color-content-default;
+    $menu-link-color                        : dt.$color-content-default;
     $menu-link-padding                      : spacing() spacing(d);
     $menu-positionTop                       : $menu-headerHeight + spacing(d);
     $menu--condensed-link-padding           : spacing(a);
 
     .c-menu {
         @extend %u-unstyled;
-        @include font-size($menu-fontSize);
+        @include type.font-size($menu-fontSize);
     }
 
         // Reduces the spacing between menu items
@@ -56,7 +61,7 @@
             .c-menu-item--active {
                 border-left: none;
                 border-bottom: solid $menu-border-width--active $menu-border-color--active;
-                font-weight: $font-weight-regular;
+                font-weight: dt.$font-weight-regular;
                 margin-left: 0;
             }
         }
@@ -73,9 +78,9 @@
         }
 
         .c-menu-openBtn {
-            @include font-size(body-s);
+            @include type.font-size(body-s);
             align-items: center;
-            border-radius: $radius-rounded-d;
+            border-radius: dt.$radius-rounded-d;
             display: flex;
             padding: spacing() spacing(d);
         }
@@ -107,7 +112,7 @@
         }
 
         .c-menu-link {
-            @include truncate();
+            @include truncate.truncate();
             border-left: solid $menu-border-width $menu-border-color;
             display: block;
             padding: $menu-link-padding;
@@ -125,7 +130,7 @@
             &:focus,
             &.c-menu-link--active {
                 border-left: solid $menu-border-width--active $menu-border-color--active;
-                font-weight: $font-weight-bold;
+                font-weight: dt.$font-weight-bold;
                 margin-left: -1px;
             }
         }

@@ -1,3 +1,5 @@
+@use 'strip-units';
+
 // ==========================================================================
 // _units.scss
 //
@@ -70,7 +72,7 @@
     $newBreakpoints: ();
 
     @each $name, $emValue in $breakpoints {
-        $pxValue: em-to-px(strip-units($emValue), $base);
+        $pxValue: em-to-px(strip-units.strip-units($emValue), $base);
         $newBreakpoints: map-merge($newBreakpoints, ($name: $pxValue));
     }
 

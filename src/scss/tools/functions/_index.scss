@@ -5,8 +5,8 @@
 // don’t get compiled into CSS (as mixins aren’t compiled directly)
 // ==========================================================================
 
-@import 'px-to-em';
-@import 'spacing';
-@import 'strip-units';
-@import 'units';
-@import 'zIndex';
+@forward 'px-to-em';
+@forward 'spacing';
+@forward 'strip-units';
+@forward 'units';
+@forward 'zIndex';

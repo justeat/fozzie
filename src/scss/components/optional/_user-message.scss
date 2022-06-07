@@ -1,3 +1,6 @@
+@use '~@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../settings/include-media' as *;
+
 @mixin userMessage() {
     /**
     * User Message Component
@@ -9,8 +12,8 @@
     */
 
     .c-userMessage {
-        color: $color-white;
-        background-color: $color-orange;
+        color: dt.$color-white;
+        background-color: dt.$color-orange;
         max-width: 100%;
         margin-top: spacing(d);
     }

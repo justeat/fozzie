@@ -8,12 +8,22 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Deprecate modal and orderCard component styles in next major version as unused.
 
+v9.0.0-beta.0
+------------------------------
+*May 30, 2022*
+
+### Changed
+- **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation in `dart-sass`.
+  - README updated with new usage info. Documentation on vue.pie.design to be updated with full info on migration and usage.
+
+
 v8.2.0
 ------------------------------
 *May 23, 2022*
 
 ### Added
 - Node 16 to the `engines` property in `package.json`.
+
 
 v8.1.0
 ------------------------------

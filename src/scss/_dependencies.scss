@@ -15,29 +15,25 @@
 // See mixins/css3.scss for the full list
 
 // Including helper modules
-@import 'tools/index'; // imports Fozzie SCSS helper functions and mixins
-@import 'include-media/dist/_include-media'; // Cleaner media query declarations – http://include-media.com
-
+@forward 'tools/index'; // imports Fozzie SCSS helper functions and mixins
 
 // =================================
 // Core variables
 // =================================
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/pie-design-tokens
-@import '@justeat/pie-design-tokens/dist/jet';
-
-@import 'settings/variables';
-@import 'tools/helpers/breakpoints'; // breakpoint helper - @TODO move to the `templates.scss` file as part of the next major version bump.
-
+@forward '~@justeat/pie-design-tokens/dist/jet';
+@forward 'settings/variables';
+@forward 'settings/include-media';
+@forward 'tools/helpers/breakpoints'; // breakpoint helper
 
 // CSS Normalise and then Reset
-@import 'base/normalize';
-@import 'base/reset';
+@forward 'base/normalize';
+@forward 'base/reset';
 
 // Global typography styles
-@import 'base/typography';
+@forward 'base/typography';
 
-@import 'base/grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
-
+@forward 'base/grid'; // Grid system based on flexbox w float fallbacks – https://github.com/TryKickoff/kickoff-grid.css
 /**
  * Objects
  * =================================
@@ -50,13 +46,14 @@
  *
  * Object styles should be prefixed with `.o-`
  */
-@import 'objects/body';
-@import 'objects/buttons';
-@import 'objects/links';
-@import 'objects/lists';
-@import 'objects/tables';
-@import 'objects/form-controls';
-@import 'objects/form-toggle';
+
+@forward 'objects/body';
+@forward 'objects/buttons';
+@forward 'objects/links';
+@forward 'objects/lists';
+@forward 'objects/tables';
+@forward 'objects/form-controls';
+@forward 'objects/form-toggle';
 
 /**
  * Components:
@@ -65,46 +62,34 @@
  *
  * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with `.c-`
  */
-@import 'components/alerts';
-@import 'components/breadcrumbs';
-@import 'components/cards';
-@import 'components/media-element';
+@forward 'components/alerts';
+@forward 'components/breadcrumbs';
+@forward 'components/cards';
+@forward 'components/media-element';
 
 // Optional components – need to be included with the associated mixin in your project dependencies
-@import 'components/optional/apps-banner';
-@import 'components/optional/badges';
-@import 'components/optional/tag';
-@import 'components/optional/content-header';
-@import 'components/optional/content-title';
-@import 'components/optional/cookie-warning';
-@import 'components/optional/cuisines-widget';
-@import 'components/optional/fullscreen-pop-over';
-@import 'components/optional/listings';
-@import 'components/optional/listings-skeleton';
-@import 'components/optional/loading-indicator';
-@import 'components/optional/menu';
-@import 'components/optional/modal';
-@import 'components/optional/order-card';
-@import 'components/optional/overflow-carousel';
-@import 'components/optional/page-banner';
-@import 'components/optional/ratings';
-@import 'components/optional/toast';
-@import 'components/optional/user-message';
-@import 'components/optional/loading-indicator';
+@forward 'components/optional/apps-banner';
+@forward 'components/optional/badges';
+@forward 'components/optional/tag';
+@forward 'components/optional/content-header';
+@forward 'components/optional/content-title';
+@forward 'components/optional/cookie-warning';
+@forward 'components/optional/cuisines-widget';
+@forward 'components/optional/fullscreen-pop-over';
+@forward 'components/optional/listings';
+@forward 'components/optional/listings-skeleton';
+@forward 'components/optional/loading-indicator';
+@forward 'components/optional/menu';
+@forward 'components/optional/modal';
+@forward 'components/optional/order-card';
+@forward 'components/optional/overflow-carousel';
+@forward 'components/optional/page-banner';
+@forward 'components/optional/ratings';
+@forward 'components/optional/toast';
+@forward 'components/optional/user-message';
 
 // Global layout definitions & helpers
-@import 'base/layout';
-
-
-/**
- * Experiments
- * =================================
- *
- * These styles relate to experiments running on the platform.
- *
- * The filename should _always include the JIRA number so that its status can be checked
- */
-// @import 'experiments/INTPB-1451-quick-checkout';
+@forward 'base/layout';
 
 
 /**
@@ -112,17 +97,11 @@
  * =====================================
  * These should always come last as they should 'trump' other properties
  */
-@import 'trumps/utilities';
-@import 'trumps/rwd';
-
+@forward 'trumps/utilities';
+@forward 'trumps/rwd';
 
 /**
  * Print styles
  */
-@import 'base/print';
+@forward 'base/print';
 
-
-/**
- * Templates for including base sets of styles
- */
-@import 'templates';

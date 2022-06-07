@@ -1,3 +1,8 @@
+@use '~@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../settings/include-media' as *;
+@use '../../tools/mixins/type';
+@use '../../settings/variables' as v;
+
 @mixin orderCard() {
     @warn 'The orderCard component styles will be deprecated in version 8 as unused, please contact Web Core team if you are still using them';
     /**
@@ -19,9 +24,9 @@
     .c-orderCard {
         display: flex;
         flex-direction: column;
-        border-radius: $radius-rounded-c;
+        border-radius: dt.$radius-rounded-c;
         box-shadow: $previousOrder-boxShadow;
-        background-color: $color-container-default;
+        background-color: dt.$color-container-default;
         overflow: hidden;
         text-decoration: none;
         width: 280px;
@@ -38,7 +43,7 @@
         &:focus {
             box-shadow: $previousOrder-hoverBoxShadow;
             text-decoration: none;
-            color: $color-grey-40;
+            color: dt.$color-grey-40;
         }
     }
 
@@ -64,7 +69,7 @@
         }
 
         .c-orderCard-image {
-            background-color: $color-container-subtle;
+            background-color: dt.$color-container-subtle;
         }
     }
 
@@ -87,7 +92,7 @@
             content: '';
             width: 100%;
             height: 36px;
-            background: url('#{$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
+            background: url('#{v.$img-path-url}/decoration/rays--white--narrow.svg') no-repeat bottom left;
             position: absolute;
             bottom: -1px;
             left: 0;
@@ -103,25 +108,25 @@
         width: 64px;
         height: 64px;
         border-radius: 50%;
-        background-color: $color-container-default;
+        background-color: dt.$color-container-default;
 
         svg {
             width: 40px;
             height: 40px;
-            fill: $color-support-brand-01;
+            fill: dt.$color-support-brand-01;
         }
     }
 
     .c-orderCard-order {
-        @include font-size(body-l, false);
+        @include type.font-size(body-l, false);
         line-height: line-height(16px, 24px);
-        font-weight: $font-weight-regular;
-        @include font-size(22px);
-        color: $color-blue;
+        font-weight: dt.$font-weight-regular;
+        @include type.font-size(22px);
+        color: dt.$color-blue;
         text-align: center;
         margin-top: spacing();
         padding: 2px spacing(c) spacing(c);
-        border-top: 1px solid $color-grey-10;
+        border-top: 1px solid dt.$color-grey-10;
     }
 
     .c-orderCard-title {
@@ -129,13 +134,13 @@
     }
 
     .c-orderCard-showMore {
-        font-weight: $font-weight-bold;
+        font-weight: dt.$font-weight-bold;
     }
 
     .c-orderCard-date {
         margin-top: 0;
         margin-bottom: spacing();
-        color: $color-grey-40;
+        color: dt.$color-grey-40;
         display: block;
     }
 
@@ -159,7 +164,7 @@
 
     .c-orderCard-content {
         padding: spacing() spacing(d) 0;
-        color: $color-grey;
+        color: dt.$color-grey;
         flex: 1 0 auto;
         display: flex;
         flex-direction: column;
@@ -171,15 +176,15 @@
 
     .c-orderCard-content--defaultMessage {
         padding: 0 spacing(d);
-        @include font-size(body-l, false);
+        @include type.font-size(body-l, false);
     }
 
     .c-orderCard-cuisines {
-        color: $color-grey-40;
+        color: dt.$color-grey-40;
         margin-top: 0;
         text-transform: capitalize;
-        @include font-size(body-l, false);
-        font-family: $font-family-base;
+        @include type.font-size(body-l, false);
+        font-family: v.$font-family-base;
     }
 
     .c-orderCard-image:after {

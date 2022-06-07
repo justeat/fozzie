@@ -1,3 +1,6 @@
+@use '~@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../settings/include-media' as *;
+
 @mixin formControls() {
     /**
     * Objects > Checkboxes and radios
@@ -32,13 +35,13 @@
     *
     */
 
-    $formControl-bgColor            : $color-white;
-    $formControl-bgColor--disabled  : $color-disabled-01;
-    $formControl-borderColor        : $color-border-strong;
-    $formControl-borderColor--hover : $color-orange;
-    $formControl-color              : $color-orange;
-    $formControl-color--hover       : darken($color-orange, $color-hover-01);
-    $formControl-background-color   : $color-background-default;
+    $formControl-bgColor            : dt.$color-white;
+    $formControl-bgColor--disabled  : dt.$color-disabled-01;
+    $formControl-borderColor        : dt.$color-border-strong;
+    $formControl-borderColor--hover : dt.$color-orange;
+    $formControl-color              : dt.$color-orange;
+    $formControl-color--hover       : darken(dt.$color-orange, dt.$color-hover-01);
+    $formControl-background-color   : dt.$color-background-default;
     $formControl-margin-left        : 0;
     $formControl-padding-left       : spacing(f);
     $formControl-width              : 24px;
@@ -95,7 +98,7 @@
             display: inline-block;
             width: $formControl-width;
             height: $formControl-height;
-            border: $formControl-border-width solid $color-grey-30;
+            border: $formControl-border-width solid dt.$color-grey-30;
             background-color: $formControl-bgColor;
             vertical-align: middle;
             margin-left: $formControl-margin-left;
@@ -228,7 +231,7 @@
             &:before {
                 content: '';
                 background-color: $formControl-color;
-                border: 3px solid $color-grey-20;
+                border: 3px solid dt.$color-grey-20;
                 border-radius: 50%;
                 width: $formControl-width - 2;
                 height: $formControl-height - 2;

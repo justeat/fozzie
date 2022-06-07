@@ -1,3 +1,6 @@
+@use '~@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../settings/include-media' as *;
+
 @mixin listingSkeleton() {
     /**
     * Components > Listing Skeleton
@@ -15,8 +18,8 @@
 
     .c-listingSkeleton {
         position: relative;
-        background: $color-container-default;
-        border-radius: $radius-rounded-c;
+        background: dt.$color-container-default;
+        border-radius: dt.$radius-rounded-c;
         padding: 85px spacing(d) spacing(d);
         margin-bottom: spacing(d);
 
@@ -171,7 +174,7 @@
 
 @mixin anim() {
     border-radius: 2px;
-    background: linear-gradient(-45deg, $color-grey-10, $color-grey-10, $color-grey-20, $color-grey-10, $color-grey-10);
+    background: linear-gradient(-45deg, dt.$color-grey-10, dt.$color-grey-10, dt.$color-grey-20, dt.$color-grey-10, dt.$color-grey-10);
     background-size: 2000px 600%;
     animation: skeletonGradient 2s ease infinite;
     animation-fill-mode: forwards;
