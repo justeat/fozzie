@@ -1,7 +1,7 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/variables' as v;
 @use '../settings/include-media' as *;
-@use '../tools/mixins/type' as mixins;
+@use '../tools/mixins/type';
 
 @mixin layout() {
     /**
@@ -98,10 +98,10 @@
             }
 
             > h1 {
-                @include mixins.font-size(heading-xxl, true, narrow);
+                @include type.font-size(heading-xxl, true, narrow);
 
                 @include media('>mid') {
-                    @include mixins.font-size(heading-xxl);
+                    @include type.font-size(heading-xxl);
                 }
             }
         }

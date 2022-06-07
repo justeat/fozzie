@@ -1,6 +1,6 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../components/optional/loading-indicator';
-@use '../tools/mixins/type' as mixins;
+@use '../tools/mixins/type';
 @use '../settings/include-media' as *;
 @use '../trumps/utilities' as *;
 
@@ -93,7 +93,7 @@
     .o-btn {
         display: inline-block;                      /* [1] */
         vertical-align: middle;                     /* [2] */
-        @include mixins.font-size($btn-default-font-size);
+        @include type.font-size($btn-default-font-size);
         cursor: pointer;
         margin: 0;
         padding: $btn-default-padding;
@@ -303,12 +303,12 @@
     }
 
     .o-btn--sizeSmall {
-        @include mixins.font-size($btn-sizeSmall-font-size);
+        @include type.font-size($btn-sizeSmall-font-size);
         padding: $btn-sizeSmall-padding;
     }
 
     .o-btn--sizeXSmall {
-        @include mixins.font-size($btn-sizeXSmall-font-size);
+        @include type.font-size($btn-sizeXSmall-font-size);
         padding: $btn-sizeXSmall-padding;
     }
 
