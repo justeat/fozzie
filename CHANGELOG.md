@@ -8,6 +8,15 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Deprecate modal and orderCard component styles in next major version as unused.
 
+v9.0.0-beta.2
+------------------------------
+*June 15, 2022*
+
+### Changed
+- Use a `@use` rule for `line-height` function in `_type.scss`
+- Remove namespace aliases from `@use` rules in `_type.scss`
+
+
 v9.0.0-beta.1
 ------------------------------
 *June 07, 2022*
