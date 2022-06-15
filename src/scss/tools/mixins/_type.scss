@@ -1,5 +1,6 @@
 @use '../../settings/variables' as v;
 @use '../functions/strip-units' as functions;
+@use '../functions/units' as units;
 
 // ==========================================================================
 // Typography mixins
@@ -50,7 +51,7 @@
             @if length($font-list) > 1 and $line-height == true {
                 $line-height: nth($font-list, 2);
 
-                line-height: line-height($font-size, $line-height);
+                line-height: units.line-height($font-size, $line-height);
             }
         } @else {
             @if $relativeToParent == true {
