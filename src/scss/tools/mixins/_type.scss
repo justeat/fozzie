@@ -1,6 +1,6 @@
 @use '../../settings/variables' as v;
-@use '../functions/strip-units' as functions;
-@use '../functions/units' as units;
+@use '../functions/strip-units' as *;
+@use '../functions/units' as *;
 
 // ==========================================================================
 // Typography mixins
@@ -11,7 +11,7 @@
 @use 'sass:math';
 
 @mixin rem($property, $sizeValue: v.$font-size-base) {
-    $unitlessSizeValue: functions.strip-units($sizeValue);
+    $unitlessSizeValue: strip-units($sizeValue);
     $remValue: math.div($unitlessSizeValue, v.$font-size-base);
 
     #{$property}: ceil($unitlessSizeValue) + px;
@@ -21,7 +21,7 @@
 // EM
 // @include em(margin, $font-size-base);
 @mixin em($property, $sizeValue: v.$font-size-base) {
-    #{$property}: math.div(functions.strip-units($sizeValue), v.$font-size-base) + em;
+    #{$property}: math.div(strip-units($sizeValue), v.$font-size-base) + em;
 }
 
 @mixin font-size($key: 'body-s', $line-height: true, $scale: 'default', $relativeToParent: false) {
@@ -51,7 +51,7 @@
             @if length($font-list) > 1 and $line-height == true {
                 $line-height: nth($font-list, 2);
 
-                line-height: units.line-height($font-size, $line-height);
+                line-height: line-height($font-size, $line-height);
             }
         } @else {
             @if $relativeToParent == true {
