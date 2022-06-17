@@ -10,13 +10,14 @@
 // Returns a unitless line-height value
 //
 @use 'sass:math';
+@use 'sass:map';
 
 @function line-height($font-size: 'body-s', $line-height: '20', $scale: 'default') {
     @if type-of($font-size) == 'number' {
         @return decimal-round(math.div($line-height, $font-size), 2);
     } @else if map-has-key($type, $font-size) { // else try and find the value in our type map
-        $key-map: map-get($type, $font-size);
-        $font-list: map-get($key-map, $scale);
+        $key-map: map.get($type, $font-size);
+        $font-list: map.get($key-map, $scale);
 
         @if type-of($font-list) == 'list' {
             @return line-height(nth($font-list, 1), nth($font-list, 2));
