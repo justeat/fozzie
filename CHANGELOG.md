@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Deprecate modal and orderCard component styles in next major version as unused.
 
+v8.3.0
+------------------------------
+*June 17, 2022*
+
+### Added
+- `sass:map` to resolve `map-get` error when using `sass` in consuming apps.
+
+
 v8.2.0
 ------------------------------
 *May 23, 2022*
