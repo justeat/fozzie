@@ -13,7 +13,7 @@ v8.3.0
 *June 17, 2022*
 
 ### Added
-- `sass:map` to resolve `map-get` error when using `sass` in comsuming apps.
+- `sass:map` to resolve `map-get` error when using `sass` in consuming apps.
 
 
 v8.2.0
