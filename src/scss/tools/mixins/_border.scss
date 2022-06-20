@@ -1,5 +1,6 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/variables' as v;
+@use '../functions/spacing';
 
 //
 // ==========================================================================
@@ -14,7 +15,7 @@
 // Override default values
 // @include bordered(10px, 30px, green);
 
-@mixin bordered($bordered-radius: v.$border-radius, $bordered-spacing : spacing(e), $bordered-colour: dt.$color-border-strong) { // stylelint-disable-line max-line-length
+@mixin bordered($bordered-radius: v.$border-radius, $bordered-spacing : spacing.spacing(e), $bordered-colour: dt.$color-border-strong) { // stylelint-disable-line max-line-length
     border: 1px solid $bordered-colour;
     padding: $bordered-spacing;
     border-radius: $bordered-radius;

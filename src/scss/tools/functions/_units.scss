@@ -1,4 +1,5 @@
 @use 'strip-units';
+@use '../../settings/variables' as v;
 
 // ==========================================================================
 // _units.scss
@@ -64,11 +65,11 @@
     }
 }
 
-@function em-to-px($emVal, $base: $font-size-base) {
+@function em-to-px($emVal, $base: v.$font-size-base) {
     @return ($emVal * $base) * 1px;
 }
 
-@function map-to-px($breakpoints, $base: $font-size-base) {
+@function map-to-px($breakpoints, $base: v.$font-size-base) {
     $newBreakpoints: ();
 
     @each $name, $emValue in $breakpoints {

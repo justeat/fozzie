@@ -9,6 +9,14 @@ Future Todo List
 - Deprecate modal and orderCard component styles in next major version as unused.
 
 
+v9.0.0-beta.4
+------------------------------
+*June 20, 2022*
+
+### Changed
+- import variables into various function and mixin files using `@use` to prevent build errors in consumining clients
+
+
 v9.0.0-beta.3
 ------------------------------
 *June 17, 2022*
