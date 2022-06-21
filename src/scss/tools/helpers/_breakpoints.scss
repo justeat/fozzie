@@ -1,14 +1,15 @@
 @use '../../settings/variables' as v;
 @use '../functions/units';
+@use '../functions/px-to-em';
 
-$fozzie-breakpoints: (
-    tiny       : 1em,
-    narrow     : 10em,    // narrow devices
-    narrowMid  : 20em,    // narrow-mid tweakpoint
-    mid        : 30em,    // mid bp
-    wide       : 40em,   // wide bp
-    huge       : 50em    // huge bp
-); // set to 16 as this is default browser size
+$fozzie-breakpoints: px-to-em.map-to-em((
+    tiny       : 375px,
+    narrow     : 414px,    // narrow devices
+    narrowMid  : 600px,    // narrow-mid tweakpoint
+    mid        : 768px,    // mid bp
+    wide       : 1025px,   // wide bp
+    huge       : 1280px    // huge bp
+), 16); // set to 16 as this is default browser size
 
 @function populate-breakpoints() {
     $breakpointString: '';
