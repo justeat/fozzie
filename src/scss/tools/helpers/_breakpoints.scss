@@ -1,9 +1,18 @@
 @use '../../settings/variables' as v;
 @use '../functions/units';
 
+$fozzie-breakpoints: (
+    tiny       : 1em,
+    narrow     : 10em,    // narrow devices
+    narrowMid  : 20em,    // narrow-mid tweakpoint
+    mid        : 30em,    // mid bp
+    wide       : 40em,   // wide bp
+    huge       : 50em    // huge bp
+); // set to 16 as this is default browser size
+
 @function populate-breakpoints() {
     $breakpointString: '';
-    $breakpointsPx: units.map-to-px(v.$fozzie-breakpoints, 16);
+    $breakpointsPx: units.map-to-px($fozzie-breakpoints, 16);
 
     @each $name, $value in $breakpointsPx {
         $breakpointString: $breakpointString + '#{$name}:#{$value},';
