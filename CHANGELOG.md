@@ -9,6 +9,15 @@ Future Todo List
 - Deprecate modal and orderCard component styles in next major version as unused.
 
 
+v9.0.0-beta.5
+------------------------------
+*June 21, 2022*
+
+### Changed
+- moved `$fozzie-breakpoints` out of variables file and into the breakpoints helper file to remove circular reference
+- hardcoded the value of `$line-height-base` to be the default output of the `line-height` function it was previously calling (also to remove a circular reference)
+
+
 v9.0.0-beta.4
 ------------------------------
 *June 20, 2022*
