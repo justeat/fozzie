@@ -2,6 +2,7 @@
 @use '../functions/units';
 @use '../functions/px-to-em';
 
+// Lifted out of the variables file to fix circular reference issues
 $fozzie-breakpoints: px-to-em.map-to-em((
     tiny       : 375px,
     narrow     : 414px,    // narrow devices

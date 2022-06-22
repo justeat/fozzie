@@ -56,7 +56,6 @@ $type: (
 ) !default;
 
 $font-weight-headings       : dt.$font-weight-extrabold;
-$line-height-base           : 1.43; // temporary workaround. This is the default output of units.line-height()
 
 // Font stacks
 $font-family-base           : dt.$font-family-primary, dt.$font-family-secondary, sans-serif;

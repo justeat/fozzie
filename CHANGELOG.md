@@ -15,7 +15,7 @@ v9.0.0-beta.5
 
 ### Changed
 - moved `$fozzie-breakpoints` out of variables file and into the breakpoints helper file to remove circular reference
-- hardcoded the value of `$line-height-base` to be the default output of the `line-height` function it was previously calling (also to remove a circular reference)
+- moved `$line-height-base` out of variables file and into the units function file to remove circular reference
 
 
 v9.0.0-beta.4
