@@ -1,5 +1,4 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
-@use '../tools/functions/px-to-em';
 
 /* stylelint-disable indentation */
 // =================================
@@ -57,7 +56,6 @@ $type: (
 ) !default;
 
 $font-weight-headings       : dt.$font-weight-extrabold;
-$line-height-base           : line-height();
 
 // Font stacks
 $font-family-base           : dt.$font-family-primary, dt.$font-family-secondary, sans-serif;
@@ -73,15 +71,6 @@ $fozzie-unit-intervals: (
   'rem': 0.1,
   '': 0
 );
-
-$fozzie-breakpoints: px-to-em.map-to-em((
-    tiny       : 375px,
-    narrow     : 414px,    // narrow devices
-    narrowMid  : 600px,    // narrow-mid tweakpoint
-    mid        : 768px,    // mid bp
-    wide       : 1025px,   // wide bp
-    huge       : 1280px    // huge bp
-), 16); // set to 16 as this is default browser size
 
 // Layout setup
 // ==========================================================================

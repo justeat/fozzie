@@ -14,11 +14,13 @@
 //
 @use 'sass:math';
 
+$line-height-base : line-height(); // Lifted out of the variables file to fix circular reference issues
+
 @function line-height($font-size: 'body-s', $line-height: '20', $scale: 'default') {
     @if type-of($font-size) == 'number' {
         @return decimal-round(math.div($line-height, $font-size), 2);
-    } @else if map-has-key($type, $font-size) { // else try and find the value in our type map
-        $key-map: map-get($type, $font-size);
+    } @else if map-has-key(v.$type, $font-size) { // else try and find the value in our type map
+        $key-map: map-get(v.$type, $font-size);
         $font-list: map-get($key-map, $scale);
 
         @if type-of($font-list) == 'list' {

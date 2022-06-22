@@ -1,5 +1,6 @@
 @use '~@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/variables' as v;
+@use '../tools/functions/units';
 
 @mixin tables() {
   /**
@@ -53,7 +54,7 @@
           th,
           td {
               padding: $table-cell-padding;
-              line-height: v.$line-height-base;
+              line-height: units.$line-height-base;
               vertical-align: top;
               border-right: 1px solid $table-verticalBorder--color;
           }
