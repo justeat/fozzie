@@ -72,7 +72,8 @@
     "lint:css": "stylelint src/scss/**/*.scss",
     "lint:js": "eslint --ext .js .",
     "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
-    "test": "jest",
+    "test": "jest --config=jest.config.js",
+    "test:scss": "jest --config=src/test/scss/jest.config.js",
     "test:build": "sass --no-source-map --load-path=node_modules --style=compressed src/scss:dist/css",
     "test:cover": "jest --collect-coverage",
     "test:cover:CI": "cat coverage/lcov.info | coveralls"
