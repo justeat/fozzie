@@ -55,6 +55,7 @@
     "fontfaceobserver": "2.1.0",
     "jest": "27.3.0",
     "sass": "1.49.7",
+    "sass-true": "6.1.0",
     "stylelint": "13.13.1",
     "stylelint-scss": "3.21.0"
   },
