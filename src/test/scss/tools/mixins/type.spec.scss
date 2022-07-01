@@ -1,0 +1,39 @@
+@use 'true' as *;
+@use '../../../../scss/tools/mixins/type' as systemUnderTest;
+
+@include describe('rem [mixin]') {
+    @include it('outputs the expected CSS') {
+        // arrange
+        $property: padding;
+        $sizeValue: 10.5;
+
+        // act & assert
+        @include assert {
+            @include output {
+                @include systemUnderTest.rem($property, $sizeValue);
+            }
+
+            @include expect {
+                padding: 11px;
+                padding: 0.65625rem
+            }
+        }
+    }
+
+    @include it('outputs the expected CSS when no $sizeValue argument is provided') {
+        // arrange
+        $property: padding;
+
+        // act & assert
+        @include assert {
+            @include output {
+                @include systemUnderTest.rem($property);
+            }
+
+            @include expect {
+                padding: 16px;
+                padding: 1rem
+            }
+        }
+    }
+}
