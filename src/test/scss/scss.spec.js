@@ -28,7 +28,7 @@ function importer (filePath) {
 
 
 describe('Sass', () => {
-    // All Scss unit tests should follow this namining convention
+    // All Scss unit tests should follow this naming convention
     const testFileGlob = '**/*.spec.scss';
     const testFilePathGlob = path.resolve(process.cwd(), testFileGlob);
 
