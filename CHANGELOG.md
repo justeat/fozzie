@@ -16,6 +16,7 @@ v9.0.0-beta.6
 ### Added
 - SCSS unit testing capabilities using `sass-true`
 - New unit testing directory (to avoid packaging tests with npm)
+
 ### Changed
 - yarn test command specifies which `jest.config.js` file to use
 
