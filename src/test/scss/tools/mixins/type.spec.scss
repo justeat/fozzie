@@ -20,7 +20,7 @@
         }
     }
 
-    @include it('outputs the expected CSS by rounding the default `$sizeValue` when no `$sizeValue` argument is provided') {
+    @include it('outputs the expected CSS using the default `$sizeValue` when no `$sizeValue` argument is provided') {
         // arrange
         $property: padding;
 
