@@ -2,7 +2,7 @@
 @use 'src/scss/tools/mixins/type' as systemUnderTest;
 
 @include describe('rem [mixin]') {
-    @include it('outputs the expected CSS') {
+    @include it('outputs the expected CSS by rounding `$sizeValue`') {
         // arrange
         $property: padding;
         $sizeValue: 10.5;
@@ -20,7 +20,7 @@
         }
     }
 
-    @include it('outputs the expected CSS when no `$sizeValue` argument is provided') {
+    @include it('outputs the expected CSS by rounding the default `$sizeValue` when no `$sizeValue` argument is provided') {
         // arrange
         $property: padding;
 
