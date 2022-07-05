@@ -4,24 +4,24 @@
 @include describe('em [function]') {
     @include it('returns the expected em value') {
         // arrange
-        $pxValue: 32;
-        $expectedEmValue: 2em;
-
-        // act
-        $result: systemUnderTest.em($pxValue);
-
-        // assert
-        @include assert-equal($result, $expectedEmValue);
-    }
-
-    @include it('returns the expected em value when a "$base" argument is provided') {
-        // arrange
         $pxValue: 20;
         $baseFontSize: 10;
         $expectedEmValue: 2em;
 
         // act
         $result: systemUnderTest.em($pxValue, $baseFontSize);
+
+        // assert
+        @include assert-equal($result, $expectedEmValue);
+    }
+
+    @include it('returns the expected em value when no `$base` argument is provided') {
+        // arrange
+        $pxValue: 32;
+        $expectedEmValue: 2em;
+
+        // act
+        $result: systemUnderTest.em($pxValue);
 
         // assert
         @include assert-equal($result, $expectedEmValue);
@@ -66,7 +66,7 @@
         @include assert-equal($result, $expectedBreakpoints);
     }
 
-    @include it('returns the expected breakpoints map when no "$base" argument is provided') {
+    @include it('returns the expected breakpoints map when no `$base` argument is provided') {
         // arrange
         $breakpoints: (
             narrow : 400px,
