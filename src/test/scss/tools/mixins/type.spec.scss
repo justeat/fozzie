@@ -1,5 +1,5 @@
 @use 'true' as *;
-@use '../../../../scss/tools/mixins/type' as systemUnderTest;
+@use 'src/scss/tools/mixins/type' as systemUnderTest;
 
 @include describe('rem [mixin]') {
     @include it('outputs the expected CSS') {

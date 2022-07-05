@@ -1,5 +1,5 @@
 @use 'true' as *;
-@use '../../../../scss/tools/functions/px-to-em' as systemUnderTest;
+@use 'src/scss/tools/functions/px-to-em' as systemUnderTest;
 
 @include describe('em [function]') {
     @include it('returns the expected em value') {
