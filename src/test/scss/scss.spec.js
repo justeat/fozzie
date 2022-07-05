@@ -1,5 +1,5 @@
 /**
- * This is a test setup file that enables Jest to run Scss unit tests using the sass-true libary
+ * This is a test setup file that enables Jest to run Scss unit tests using the sass-true library
  * The single describe block bootstraps the test runner by finding all scss unit test files and running
  * sass-true against them.
  *
