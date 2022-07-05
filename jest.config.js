@@ -17,7 +17,8 @@ module.exports = {
     ],
 
     testPathIgnorePatterns: [
-        '/.yalc/'
+        '/.yalc/',
+        'scss'
     ],
 
     testURL: 'http://localhost/',

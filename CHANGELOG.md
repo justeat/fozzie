@@ -9,6 +9,18 @@ Future Todo List
 - Deprecate modal and orderCard component styles in next major version as unused.
 
 
+v9.0.0-beta.6
+------------------------------
+*July 01, 2022*
+
+### Added
+- SCSS unit testing capabilities using `sass-true`
+- New unit testing directory (to avoid packaging tests with npm)
+
+### Changed
+- yarn test command specifies which `jest.config.js` file to use
+
+
 v9.0.0-beta.5
 ------------------------------
 *June 21, 2022*
