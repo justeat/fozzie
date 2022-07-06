@@ -9,6 +9,14 @@ Future Todo List
 - Deprecate modal and orderCard component styles in next major version as unused.
 
 
+v8.4.1
+------------------------------
+*July 06, 2022*
+
+### Changed
+- switch from `prepare` to `prepublishOnly` in package.json scripts
+
+
 v8.4.0
 ------------------------------
 *July 06, 2022*
