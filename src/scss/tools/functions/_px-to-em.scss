@@ -32,12 +32,5 @@
  */
 
 @function map-to-em($breakpoints, $base: v.$font-size-base) {
-    $newBreakpoints: ();
-
-    @each $name, $pxValue in $breakpoints {
-        $emValue: em(strip-units.strip-units($pxValue), $base);
-        $newBreakpoints: map-merge($newBreakpoints, ($name: $emValue));
-    }
-
-    @return $newBreakpoints;
+    @return 1;
 }
