@@ -9,6 +9,14 @@ Future Todo List
 - Deprecate modal and orderCard component styles in next major version as unused.
 
 
+v9.0.0-beta.7
+------------------------------
+*July 06, 2022*
+
+### Changed
+- `yarn test` command now tests js and scss together with `test:js` and `test:scss` individually being called
+
+
 v9.0.0-beta.6
 ------------------------------
 *July 01, 2022*
@@ -70,6 +78,25 @@ v9.0.0-beta.0
 ### Changed
 - **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation in `dart-sass`.
   - README updated with new usage info. Documentation on vue.pie.design to be updated with full info on migration and usage.
+
+
+v8.4.0
+------------------------------
+*July 06, 2022*
+
+### Added
+- circleci config file
+
+### Removed
+- unused travis config
+
+
+v8.3.0
+------------------------------
+*June 17, 2022*
+
+### Added
+- `sass:map` to resolve `map-get` error when using `sass` in consuming apps.
 
 
 v8.2.0
