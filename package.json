@@ -2,7 +2,7 @@
   "name": "@justeat/fozzie",
   "title": "Fozzie – Just Eat UI Web Framework",
   "description": "UI Web Framework for the Just Eat Global Platform",
-  "version": "8.4.0",
+  "version": "8.4.1",
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
@@ -69,7 +69,7 @@
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "stylelint src/scss/**/*.scss",
     "lint:js": "eslint --ext .js .",
-    "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
+    "prepublishOnly": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
     "test": "jest",
     "test:build": "sass --no-source-map --load-path=node_modules --style=compressed src/scss:dist/css",
     "test:cover": "jest --collect-coverage",
