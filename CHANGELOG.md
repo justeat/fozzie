@@ -16,6 +16,8 @@ v8.4.0
 ### Added
 - circleci config file
 
+### Removed
+- unused travis config
 
 v8.3.0
 ------------------------------
