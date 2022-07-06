@@ -13,6 +13,7 @@
 // Returns a unitless line-height value
 //
 @use 'sass:math';
+@use 'sass:map';
 
 $line-height-base : line-height(); // Lifted out of the variables file to fix circular reference issues
 

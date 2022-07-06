@@ -80,6 +80,25 @@ v9.0.0-beta.0
   - README updated with new usage info. Documentation on vue.pie.design to be updated with full info on migration and usage.
 
 
+v8.4.0
+------------------------------
+*July 06, 2022*
+
+### Added
+- circleci config file
+
+### Removed
+- unused travis config
+
+
+v8.3.0
+------------------------------
+*June 17, 2022*
+
+### Added
+- `sass:map` to resolve `map-get` error when using `sass` in consuming apps.
+
+
 v8.2.0
 ------------------------------
 *May 23, 2022*
