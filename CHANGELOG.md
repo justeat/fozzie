@@ -9,6 +9,14 @@ Future Todo List
 - Deprecate modal and orderCard component styles in next major version as unused.
 
 
+v9.0.0-beta.7
+------------------------------
+*July 06, 2022*
+
+### Changed
+- `yarn test` command now tests js and scss together with `test:js` and `test:scss` individually being called
+
+
 v9.0.0-beta.6
 ------------------------------
 *July 01, 2022*
