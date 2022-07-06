@@ -8,6 +8,15 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Deprecate modal and orderCard component styles in next major version as unused.
 
+
+v8.4.0
+------------------------------
+*July 06, 2022*
+
+### Added
+- circleci config file
+
+
 v8.3.0
 ------------------------------
 *June 17, 2022*
