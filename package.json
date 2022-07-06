@@ -72,7 +72,7 @@
     "lint:css": "stylelint src/scss/**/*.scss",
     "lint:js": "eslint --ext .js .",
     "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
-    "test": "yarn run test:js && yarn run test:scss",
+    "test": "concurrently -n \"test:js,test:scss\" -c \"cyan,magenta\" \"yarn test:js\" \"yarn test:scss\"",
     "test:js": "jest --config=jest.config.js",
     "test:scss": "jest --config=src/test/scss/jest.config.js",
     "test:build": "sass --no-source-map --load-path=node_modules --style=compressed src/scss:dist/css",
