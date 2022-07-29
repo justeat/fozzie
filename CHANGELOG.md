@@ -14,7 +14,7 @@ v9.0.0-beta.9
 *July 29, 2022*
 
 ### Removed
-- **Breaking** `listingSkeleton` mixin.
+- `listingSkeleton` mixin.
 
 
 v9.0.0-beta.8
