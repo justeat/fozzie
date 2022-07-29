@@ -8,6 +8,15 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Deprecate modal and orderCard component styles in next major version as unused.
 
+
+v9.0.0-beta.9
+------------------------------
+*July 29, 2022*
+
+### Removed
+- `listingSkeleton` mixin.
+
+
 v9.0.0-beta.8
 ------------------------------
 *July 27, 2022*
