@@ -4,7 +4,6 @@
 @use '../../settings/variables' as v;
 
 @mixin orderCard() {
-    @warn 'The orderCard component styles will be deprecated in version 8 as unused, please contact Web Core team if you are still using them';
     /**
     * Components > Order Card
     * =================================

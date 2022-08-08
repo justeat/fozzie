@@ -34,13 +34,13 @@
             @include rem(font-size, $key);
         }
     } @else if map-has-key(v.$type, $key) { // else try and find the value in our type map
-        $key-map: map-get(v.$type, $key);
-        $font-list: map-get($key-map, $scale);
+        $key-map: map-get(v.$type, $key); // get the defined key from the type map
+        $font-list: map-get($key-map, $scale); // get the value for the scale of that type key (e.g. default or narrow)
 
-        // If $size-map is a list, include
-        // both font-size and line-height
+        // If $font-list is a list – i.e. (12, 16) – then include
+        // both the font-size and line-height (if $line-height == true)
         @if type-of($font-list) == 'list' {
-            $font-size: nth($font-list, 1);
+            $font-size: nth($font-list, 1); // get the first part of the font definition list
 
             @if $relativeToParent == true {
                 @include em(font-size, $font-size);
@@ -49,7 +49,7 @@
             }
 
             @if length($font-list) > 1 and $line-height == true {
-                $line-height: nth($font-list, 2);
+                $line-height: nth($font-list, 2); // get the second part of the font definition list
 
                 line-height: units.line-height($font-size, $line-height);
             }

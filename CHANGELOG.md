@@ -6,7 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
-- Deprecate modal and orderCard component styles in next major version as unused.
+- Update to use latest v2 PIE design tokens
+
+
+v9.0.0-beta.10
+------------------------------
+*August 8, 2022*
+
+### Fixed
+- `$font-size-base` was pointing incorrectly at the `font-paragraph-01` design token (which is used for paragraph spacing). Have fixed this to now point at the correct font-size token.
+
+### Changed
+- Updated to the latest non-breaking version of `pie-design-tokens`. Will update to `v2+` of the design tokens as a separate fozzie release, so that any applications updating to `dart-sass` don't also potentially have to make a bunch of token name updates as part of this v9 release.
+
+### Removed
+- Deprecation warnings for `modal` and `orderCard` components. These styles are currently being used on the Order pages.
 
 
 v9.0.0-beta.9
