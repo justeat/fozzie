@@ -11,6 +11,10 @@ module.exports = {
 
     testEnvironment: 'jsdom',
 
+    testEnvironmentOptions: {
+        url: 'http://localhost/'
+    },
+
     testMatch: [
         '**/*.{spec,test}.(js|jsx|ts|tsx)',
         '**/__tests__/*.(js|jsx|ts|tsx)'
@@ -20,8 +24,6 @@ module.exports = {
         '/.yalc/',
         'scss'
     ],
-
-    testURL: 'http://localhost/',
 
     transform: {
         '^.+\\.js$': 'babel-jest'

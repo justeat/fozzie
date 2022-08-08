@@ -1,3 +1,4 @@
+@use 'throw';
 @use '../../settings/variables' as v;
 @use '../functions/strip-units';
 @use '../functions/units';
@@ -24,7 +25,7 @@
     #{$property}: math.div(strip-units.strip-units($sizeValue), v.$font-size-base) + em;
 }
 
-@mixin font-size($key: 'body-s', $line-height: true, $scale: 'default', $relativeToParent: false) {
+@mixin font-size($key: 'body-l', $line-height: true, $scale: 'default', $relativeToParent: false) {
     // if the $key passed in is actually just a font-size
     // then output it (may want to instead force a sass error saying to use the type map?)
     @if type-of($key) == 'number' {
@@ -37,28 +38,38 @@
         $key-map: map-get(v.$type, $key); // get the defined key from the type map
         $font-list: map-get($key-map, $scale); // get the value for the scale of that type key (e.g. default or narrow)
 
-        // If $font-list is a list – i.e. (12, 16) – then include
-        // both the font-size and line-height (if $line-height == true)
-        @if type-of($font-list) == 'list' {
-            $font-size: nth($font-list, 1); // get the first part of the font definition list
+        // if font-list was found in the map, then carry on, otherwise, report no key value found
+        @if $font-list {
+            // If $font-list is a list – i.e. (12, 16) – then include
+            // both the font-size and line-height (if $line-height == true)
+            @if type-of($font-list) == 'list' {
+                $font-size: nth($font-list, 1); // get the first part of the font definition list
 
-            @if $relativeToParent == true {
-                @include em(font-size, $font-size);
+                @if $relativeToParent == true {
+                    @include em(font-size, $font-size);
+                } @else {
+                    @include rem(font-size, $font-size);
+                }
+
+                @if length($font-list) > 1 and $line-height == true {
+                    $line-height: nth($font-list, 2); // get the second part of the font definition list
+
+                    line-height: units.line-height($font-size, $line-height);
+                }
             } @else {
-                @include rem(font-size, $font-size);
-            }
-
-            @if length($font-list) > 1 and $line-height == true {
-                $line-height: nth($font-list, 2); // get the second part of the font definition list
-
-                line-height: units.line-height($font-size, $line-height);
+                @if $relativeToParent == true {
+                    @include em(font-size, $font-list);
+                } @else {
+                    @include rem(font-size, $font-list);
+                }
             }
         } @else {
-            @if $relativeToParent == true {
-                @include em(font-size, $font-list);
-            } @else {
-                @include rem(font-size, $font-list);
-            }
+            @warn 'Unknown scale `#{$scale}` for type key `#{$key}.';
+            @include throw.error(
+                $message: 'Unknown scale `#{$scale}` for type key `#{$key}.',
+                $source: 'font-size',
+                $catch: true
+            );
         }
     } @else {
         @warn 'Unknown `#{$key}` in $type.';

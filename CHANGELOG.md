@@ -9,6 +9,22 @@ Future Todo List
 - Update to use latest v2 PIE design tokens
 
 
+v9.0.0-beta.11
+------------------------------
+*August 8, 2022*
+
+### Added
+- Some basic unit tests for the `font-size` mixin. Should provide a bit more reliability if any key font-size base values change accidentally.
+
+### Fixed
+- Default font-size key in `font-size` mixin changed from `body-s` to `body-l` (`14px` to `16px`).
+
+### Changed
+- Updated a number of package versions to latest; Babel, ESLint, and our Browserslist, ESLint and Stylelint configs.
+- CanIUse DB updated to latest.
+- Jest config updated due to version update (`testURL` moved to `testEnvironmentOptions`).
+
+
 v9.0.0-beta.10
 ------------------------------
 *August 8, 2022*
