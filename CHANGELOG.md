@@ -146,6 +146,33 @@ v8.3.0
 - `sass:map` to resolve `map-get` error when using `sass` in consuming apps.
 
 
+
+v8.4.1
+------------------------------
+*July 06, 2022*
+
+### Changed
+- switch from `prepare` to `prepublishOnly` in package.json scripts
+
+
+v8.4.0
+------------------------------
+*July 06, 2022*
+
+### Added
+- circleci config file
+
+### Removed
+- unused travis config
+
+v8.3.0
+------------------------------
+*June 17, 2022*
+
+### Added
+- `sass:map` to resolve `map-get` error when using `sass` in consuming apps.
+
+
 v8.2.0
 ------------------------------
 *May 23, 2022*
