@@ -1,3 +1,5 @@
+@use '../../settings/variables' as v;
+
 // ==========================================================================
 // _zIndex.scss
 //
@@ -16,9 +18,9 @@
 // Key can be passed in as = lowest, low, medium, high
 // ==========================================================================
 @function zIndex($key: 'lowest') {
-    @if type-of($zIndex) == 'map' {
-        @if map-has-key($zIndex, $key) {
-            @return map-get($zIndex, $key);
+    @if type-of(v.$zIndex) == 'map' {
+        @if map-has-key(v.$zIndex, $key) {
+            @return map-get(v.$zIndex, $key);
         }
     }
 

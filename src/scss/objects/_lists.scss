@@ -1,3 +1,6 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../tools/mixins/type';
+
 @mixin lists() {
     /**
     * Objects > Lists
@@ -11,7 +14,7 @@
     * TBC
     */
 
-    $list-bullet-color: $color-orange;
+    $list-bullet-color: dt.$color-orange;
 
 
     ul,
@@ -54,13 +57,13 @@
 
     .c-list-ordered {
         > li {
-            font-weight: $font-weight-bold;
-            @include font-size(heading-s); // TODO – this should be updated with a more semantic font alias specific to lists
+            font-weight: dt.$font-weight-bold;
+            @include type.font-size(heading-s); // TODO – this should be updated with a more semantic font alias specific to lists
             margin-bottom: spacing(f);
 
             > div {
-                font-weight: $font-weight-regular;
-                @include font-size(body-s);
+                font-weight: dt.$font-weight-regular;
+                @include type.font-size(body-s);
             }
         }
     }

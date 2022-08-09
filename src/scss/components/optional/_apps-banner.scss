@@ -1,3 +1,6 @@
+@use '../../settings/include-media' as *;
+@use '../../tools/mixins/type';
+
 @mixin appsBanner() {
     /**
     * Apps Banner Component
@@ -38,7 +41,7 @@
 
                 @include media('>=mid') {
                     max-width: 570px;
-                    @include font-size(heading-xl, false);
+                    @include type.font-size(heading-xl, false);
                 }
             }
 

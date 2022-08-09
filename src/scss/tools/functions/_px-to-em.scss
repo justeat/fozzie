@@ -1,3 +1,6 @@
+@use 'strip-units';
+@use '../../settings/variables' as v;
+
 /**
  * px to em converter
  * =================================
@@ -10,7 +13,7 @@
 
 @use 'sass:math';
 
-@function em($pxval, $base: $font-size-base) {
+@function em($pxval, $base: v.$font-size-base) {
     @return math.div($pxval, $base) * 1em;
 }
 
@@ -28,11 +31,11 @@
  ), 16);
  */
 
-@function map-to-em($breakpoints, $base: $font-size-base) {
+@function map-to-em($breakpoints, $base: v.$font-size-base) {
     $newBreakpoints: ();
 
     @each $name, $pxValue in $breakpoints {
-        $emValue: em(strip-units($pxValue), $base);
+        $emValue: em(strip-units.strip-units($pxValue), $base);
         $newBreakpoints: map-merge($newBreakpoints, ($name: $emValue));
     }
 

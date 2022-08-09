@@ -6,7 +6,169 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
-- Deprecate modal and orderCard component styles in next major version as unused.
+- Update to use latest v2 PIE design tokens
+
+v9.0.0
+------------------------------
+- **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation in `dart-sass`.
+- v9 Migration [Guide can be found here](https://vue.pie.design/?path=/story/documentation-guides-fozzie-fozzie-migration-guide--page).
+- README updated with new usage info. Documentation on vue.pie.design updated with full info on migration and usage.
+- SCSS unit testing capabilities using `sass-true`
+
+### Changed
+- `yarn test` command now tests js and scss together with `test:js` and `test:scss` individually being called
+- Updated to the latest non-breaking version of `pie-design-tokens`. Will update to `v2+` of the design tokens as a separate fozzie release, so that any applications updating to `dart-sass` don't also potentially have to make a bunch of token name updates as part of this v9 release.
+- CanIUse DB updated to latest.
+- Jest config updated due to version update (`testURL` moved to `testEnvironmentOptions`).
+
+### Fixed
+- `$font-size-base` was pointing incorrectly at the `font-paragraph-01` design token (which is used for paragraph spacing). Have fixed this to now point at the correct font-size token.
+- Default font-size key in `font-size` mixin changed from `body-s` to `body-l` (`14px` to `16px`).
+
+v9.0.0-beta.12
+------------------------------
+*August 8, 2022*
+
+### Added
+- `listingSkeleton` mixin back in as it is currently being used by another application.
+
+
+v9.0.0-beta.11
+------------------------------
+*August 8, 2022*
+
+### Added
+- Some basic unit tests for the `font-size` mixin. Should provide a bit more reliability if any key font-size base values change accidentally.
+
+### Fixed
+- Default font-size key in `font-size` mixin changed from `body-s` to `body-l` (`14px` to `16px`).
+
+### Changed
+- Updated a number of package versions to latest; Babel, ESLint, and our Browserslist, ESLint and Stylelint configs.
+- CanIUse DB updated to latest.
+- Jest config updated due to version update (`testURL` moved to `testEnvironmentOptions`).
+
+
+v9.0.0-beta.10
+------------------------------
+*August 8, 2022*
+
+### Fixed
+- `$font-size-base` was pointing incorrectly at the `font-paragraph-01` design token (which is used for paragraph spacing). Have fixed this to now point at the correct font-size token.
+
+### Changed
+- Updated to the latest non-breaking version of `pie-design-tokens`. Will update to `v2+` of the design tokens as a separate fozzie release, so that any applications updating to `dart-sass` don't also potentially have to make a bunch of token name updates as part of this v9 release.
+
+### Removed
+- Deprecation warnings for `modal` and `orderCard` components. These styles are currently being used on the Order pages.
+
+
+v9.0.0-beta.9
+------------------------------
+*July 29, 2022*
+
+### Removed
+- `listingSkeleton` mixin.
+
+
+v9.0.0-beta.8
+------------------------------
+*July 27, 2022*
+
+### Removed
+- `~` Tilde from imports.
+- `importer` method from `scss-setup.spec.js` file.
+
+
+v9.0.0-beta.7
+------------------------------
+*July 06, 2022*
+
+### Changed
+- `yarn test` command now tests js and scss together with `test:js` and `test:scss` individually being called
+
+
+v9.0.0-beta.6
+------------------------------
+*July 01, 2022*
+
+### Added
+- SCSS unit testing capabilities using `sass-true`
+- New unit testing directory (to avoid packaging tests with npm)
+
+### Changed
+- yarn test command specifies which `jest.config.js` file to use
+
+
+v9.0.0-beta.5
+------------------------------
+*June 21, 2022*
+
+### Changed
+- moved `$fozzie-breakpoints` out of variables file and into the breakpoints helper file to remove circular reference
+- moved `$line-height-base` out of variables file and into the units function file to remove circular reference
+
+
+v9.0.0-beta.4
+------------------------------
+*June 20, 2022*
+
+### Changed
+- import variables into various function and mixin files using `@use` to prevent build errors in consumining clients
+
+
+v9.0.0-beta.3
+------------------------------
+*June 17, 2022*
+
+### Changed
+- import variables into `zIndex` scss function file
+
+
+v9.0.0-beta.2
+------------------------------
+*June 15, 2022*
+
+### Changed
+- Use a `@use` rule for `line-height` function in `_type.scss`
+- Remove namespace aliases from `@use` rules in `_type.scss`
+
+
+v9.0.0-beta.1
+------------------------------
+*June 07, 2022*
+
+### Removed
+- Removed namespace.
+
+
+v9.0.0-beta.0
+------------------------------
+*May 30, 2022*
+
+### Changed
+- **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation in `dart-sass`.
+  - README updated with new usage info. Documentation on vue.pie.design to be updated with full info on migration and usage.
+
+
+v8.4.0
+------------------------------
+*July 06, 2022*
+
+### Added
+- circleci config file
+
+### Removed
+- unused travis config
+
+
+v8.3.0
+------------------------------
+*June 17, 2022*
+
+### Added
+- `sass:map` to resolve `map-get` error when using `sass` in consuming apps.
+
 
 
 v8.4.1
@@ -41,6 +203,7 @@ v8.2.0
 
 ### Added
 - Node 16 to the `engines` property in `package.json`.
+
 
 v8.1.0
 ------------------------------

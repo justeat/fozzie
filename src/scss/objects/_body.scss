@@ -1,3 +1,6 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../settings/include-media' as *;
+
 @mixin bodyStyles() {
     /**
     * Objects > Body styles
@@ -12,14 +15,14 @@
     */
 
     .o-body--bgWhite {
-        background-color: $color-white;
+        background-color: dt.$color-white;
     }
 
         .o-body--bgWhite--belowMid {
-            background-color: $color-background-default;
+            background-color: dt.$color-background-default;
 
             @include media('<mid') {
-                background-color: $color-white;
+                background-color: dt.$color-white;
             }
         }
 }

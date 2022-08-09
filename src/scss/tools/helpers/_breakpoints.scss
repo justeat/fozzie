@@ -1,6 +1,20 @@
+@use '../../settings/variables' as v;
+@use '../functions/units';
+@use '../functions/px-to-em';
+
+// Lifted out of the variables file to fix circular reference issues
+$fozzie-breakpoints: px-to-em.map-to-em((
+    tiny       : 375px,
+    narrow     : 414px,    // narrow devices
+    narrowMid  : 600px,    // narrow-mid tweakpoint
+    mid        : 768px,    // mid bp
+    wide       : 1025px,   // wide bp
+    huge       : 1280px    // huge bp
+), 16); // set to 16 as this is default browser size
+
 @function populate-breakpoints() {
     $breakpointString: '';
-    $breakpointsPx: map-to-px($breakpoints, 16);
+    $breakpointsPx: units.map-to-px($fozzie-breakpoints, 16);
 
     @each $name, $value in $breakpointsPx {
         $breakpointString: $breakpointString + '#{$name}:#{$value},';
@@ -9,7 +23,9 @@
     @return str-slice($breakpointString, 0, str-length($breakpointString) - 1);
 }
 
-.c-screen-sizer {
+@mixin breakpoints() {
+  .c-screen-sizer {
     display: none;
     content: populate-breakpoints();
+  }
 }

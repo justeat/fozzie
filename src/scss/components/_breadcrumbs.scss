@@ -1,3 +1,7 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../settings/include-media' as *;
+@use '../tools/mixins/type';
+
 @mixin breadcrumbs() {
     /**
     * Components > Breadcrumb
@@ -11,22 +15,22 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/breadcrumbs
     */
 
-    $breadcrumb-text-color                   : $color-content-subdued;
-    $breadcrumb-text-weight                  : $font-weight-regular;
-    $breadcrumb-link-color                   : $color-content-interactive-tertiary;
-    $breadcrumb-link-color--hover            : darken($color-content-interactive-tertiary, $color-hover-01);
-    $breadcrumb-link-weight                  : $font-weight-bold;
-    $breadcrumb-icon-fillColor               : $color-content-default;
-    $breadcrumb-border-radius                : $radius-rounded-d;
-    $breadcrumb--compact-background          : rgba($color-black, 0.2);
+    $breadcrumb-text-color                   : dt.$color-content-subdued;
+    $breadcrumb-text-weight                  : dt.$font-weight-regular;
+    $breadcrumb-link-color                   : dt.$color-content-interactive-tertiary;
+    $breadcrumb-link-color--hover            : darken(dt.$color-content-interactive-tertiary, dt.$color-hover-01);
+    $breadcrumb-link-weight                  : dt.$font-weight-bold;
+    $breadcrumb-icon-fillColor               : dt.$color-content-default;
+    $breadcrumb-border-radius                : dt.$radius-rounded-d;
+    $breadcrumb--compact-background          : rgba(dt.$color-black, 0.2);
 
-    $breadcrumb--transparent-text-color      : $color-content-light;
-    $breadcrumb--transparent-icon-fillColor  : $color-content-light;
-    $breadcrumb--transparent-link-color      : $color-content-link-light;
+    $breadcrumb--transparent-text-color      : dt.$color-content-light;
+    $breadcrumb--transparent-icon-fillColor  : dt.$color-content-light;
+    $breadcrumb--transparent-link-color      : dt.$color-content-link-light;
 
-    $breadcrumb--pill-text-color             : $color-content-light;
-    $breadcrumb--pill-link-color--hover      : $color-content-link-light;
-    $breadcrumb--pill-icon-fillColor         : $color-content-light;
+    $breadcrumb--pill-text-color             : dt.$color-content-light;
+    $breadcrumb--pill-link-color--hover      : dt.$color-content-link-light;
+    $breadcrumb--pill-icon-fillColor         : dt.$color-content-light;
 
 
     .c-breadcrumb {
@@ -34,7 +38,7 @@
         line-height: 2.5;
 
         @include media('>=mid') {
-            @include font-size(body-l, false);
+            @include type.font-size(body-l, false);
         }
     }
 
@@ -117,7 +121,7 @@
     */
 
     .c-breadcrumb--pill {
-        background-color: rgba($color-black, 0.5);
+        background-color: rgba(dt.$color-black, 0.5);
         border-radius: $breadcrumb-border-radius;
         line-height: normal;
         display: inline-block;

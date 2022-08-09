@@ -1,3 +1,6 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../tools/mixins/type';
+
 @mixin cookieWarning() {
     /**
     * Components > Cookie Warning
@@ -10,15 +13,15 @@
     * TBC
     */
     .c-cookieWarning {
-        background-color: $color-grey;
+        background-color: dt.$color-grey;
         position: fixed;
         bottom: 0;
         width: 100%;
         z-index: zIndex(high);
 
         & p {
-            @include font-size(caption, false);
-            color: $color-white;
+            @include type.font-size(caption, false);
+            color: dt.$color-white;
             text-align: center;
             margin: 0 auto;
         }
@@ -45,17 +48,17 @@
         &:hover,
         &:active,
         &:focus {
-            background-color: $color-grey-40;
+            background-color: dt.$color-grey-40;
             cursor: pointer;
         }
     }
 
     .c-cookieWarning-link {
-        color: $color-white;
+        color: dt.$color-white;
         &:hover,
         &:active,
         &:focus {
-            color: $color-white;
+            color: dt.$color-white;
         }
     }
 }

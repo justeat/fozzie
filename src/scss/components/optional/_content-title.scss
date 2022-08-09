@@ -1,3 +1,7 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../settings/variables' as v;
+@use '../../tools/mixins/type';
+
 @mixin contentTitle() {
     /**
     * Components > Content title
@@ -28,14 +32,14 @@
         .c-contentTitle-text {
             margin: 0;
             width: 100%;
-            font-weight: $font-weight-regular;
-            @include font-size(body-l, false);
+            font-weight: dt.$font-weight-regular;
+            @include type.font-size(body-l, false);
         }
 
         .c-contentTitle-action {
             text-decoration: none;
-            font-weight: $font-weight-bold;
-            font-family: $font-family-base;
+            font-weight: dt.$font-weight-bold;
+            font-family: v.$font-family-base;
 
             &:hover,
             &:focus {

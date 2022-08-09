@@ -1,3 +1,7 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../settings/include-media' as *;
+@use '../tools/mixins/truncate';
+
 @mixin cards() {
     /**
     * Components > Card
@@ -11,18 +15,18 @@
     * https://fozzie.just-eat.com/styleguide/ui-components/cards
     */
 
-    $card-bgColor--active                           : $color-container-default;
-    $card-bgColor--disabled                         : $color-container-subtle;
+    $card-bgColor--active                           : dt.$color-container-default;
+    $card-bgColor--disabled                         : dt.$color-container-subtle;
     $card-tooltip-width                             : 10px;
     $card-arrow-bottom-position                     : 0;
     $card-padding                                   : spacing(d);
-    $card-radius                                    : $radius-rounded-c;
-    $card-borderColor                               : $color-border-default;
-    $card-info-bgColor--active                      : $color-support-warning-02;
+    $card-radius                                    : dt.$radius-rounded-c;
+    $card-borderColor                               : dt.$color-border-default;
+    $card-info-bgColor--active                      : dt.$color-support-warning-02;
     $card-section-margin                            : spacing(f);
     $card-section-margin--large                     : spacing(i);
-    $card-section-highlight-backgroundColor         : $color-support-brand-02;
-    $card-section-highlight-color                   : $color-content-default;
+    $card-section-highlight-backgroundColor         : dt.$color-support-brand-02;
+    $card-section-highlight-color                   : dt.$color-content-default;
     $card-section-collapsible-paddingRight          : 60px;
     $card-section-collapsed-height                  : 40px;
 
@@ -226,7 +230,7 @@
                 }
 
                 p {
-                    @include truncate();
+                    @include truncate.truncate();
 
                     &:not(:first-of-type) {
                         display: none;

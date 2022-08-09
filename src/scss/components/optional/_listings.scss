@@ -1,3 +1,7 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../settings/include-media' as *;
+@use '../../tools/mixins/type';
+
 @mixin listing() {
     /**
     * Components > Listing
@@ -28,12 +32,12 @@
     // The mixins are used to stop code duplication as each chunk of
     // code needs to be within its own media mixin.
 
-    $listing-bg                     : $color-container-default;
-    $listing-borderColor            : $color-border-strong;
-    $listing-border-radius          : $radius-rounded-c;
-    $listing-promoIcon-color        : $color-content-brand;
+    $listing-bg                     : dt.$color-container-default;
+    $listing-borderColor            : dt.$color-border-strong;
+    $listing-border-radius          : dt.$radius-rounded-c;
+    $listing-promoIcon-color        : dt.$color-content-brand;
 
-    $listing--subsequent-bg         : $color-grey-20;
+    $listing--subsequent-bg         : dt.$color-grey-20;
     $listing--inactive-bg           : rgba($listing-bg, 0.5);
 
     .c-listing {
@@ -77,7 +81,7 @@
 
         .c-listing-item {
             margin-bottom: spacing(d);
-            box-shadow: $elevation-01; // token value for card default state
+            box-shadow: dt.$elevation-01; // token value for card default state
             padding-bottom: spacing();
 
             @include media('>mid') {
@@ -129,7 +133,7 @@
                 }
 
                 &:not(.c-listing-item-header--noImage) {
-                    background: $color-grey-20;
+                    background: dt.$color-grey-20;
                 }
             }
 
@@ -167,7 +171,7 @@
             // make sure it doesn’t underline everything (only the main title)
             .c-listing-item-link {
                 display: block;
-                color: $color-content-default;
+                color: dt.$color-content-default;
                 text-decoration: none;
 
                 &:hover,
@@ -198,7 +202,7 @@
                 top: spacing(d);
                 left: spacing(d);
                 position: absolute;
-                border: 1px solid $color-border-subtle;
+                border: 1px solid dt.$color-border-subtle;
                 border-radius: $listing-border-radius;
 
                 @include media('>=wide') {
@@ -231,7 +235,7 @@
 
             .c-listing-item-info {
                 position: relative;
-                color: $color-content-default;
+                color: dt.$color-content-default;
                 padding-left: 70px;
                 min-height: 60px;
 
@@ -262,7 +266,7 @@
             .c-listing-item-title {
                 word-break: break-word;
                 padding-right: spacing();
-                @include font-size(body-l, false);
+                @include type.font-size(body-l, false);
 
                 @include media('>mid') {
                     margin: spacing(a) 0;
@@ -272,7 +276,7 @@
 
             .c-listing-item-new {
                 top: -4px;
-                color: $color-content-positive;
+                color: dt.$color-content-positive;
                 position: relative;
                 margin-right: spacing(a);
             }
@@ -301,7 +305,7 @@
             .c-listing-item-detailsRow-icon {
                 width: 20px;
                 height: 20px;
-                fill: $color-content-subdued;
+                fill: dt.$color-content-subdued;
             }
 
             .c-listing-item-detailsRow-text {
@@ -338,7 +342,7 @@
             }
 
             .c-listing-item-promo-text--earned {
-                color: $color-content-positive;
+                color: dt.$color-content-positive;
             }
 
             .c-listing-item-rating {
@@ -348,7 +352,7 @@
             .c-listing-item-ratingText {
                 top: -4px;
                 position: relative;
-                @include font-size(caption, true);
+                @include type.font-size(caption, true);
             }
 
             .c-listing-item-text {
@@ -371,10 +375,10 @@
             .c-listing-item-label {
                 padding: 1px 4px;
                 margin-bottom: spacing();
-                @include font-size(caption, false);
+                @include type.font-size(caption, false);
 
                 @include media('>mid') {
-                    @include font-size(body-s, false);
+                    @include type.font-size(body-s, false);
                 }
             }
 

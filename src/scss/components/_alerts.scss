@@ -1,3 +1,6 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../tools/mixins/alerts';
+
 @mixin alerts() {
     /**
     * Components > Alert
@@ -13,7 +16,7 @@
     * TBC
     */
 
-    $alert-border-radius: $radius-rounded-c;
+    $alert-border-radius: dt.$radius-rounded-c;
 
     // Base styles
     // -------------------------
@@ -38,14 +41,14 @@
     // Generate contextual modifier classes for colorizing the alert.
 
     .c-alert--success {
-        @include alert-variant($color-support-positive-02, $color-content-positive);
+        @include alerts.alert-variant(dt.$color-support-positive-02, dt.$color-content-positive);
     }
 
     .c-alert--warning {
-        @include alert-variant($color-support-warning-02, $color-content-default);
+        @include alerts.alert-variant(dt.$color-support-warning-02, dt.$color-content-default);
     }
 
     .c-alert--danger {
-        @include alert-variant($color-support-error-02, $color-content-error);
+        @include alerts.alert-variant(dt.$color-support-error-02, dt.$color-content-error);
     }
 }

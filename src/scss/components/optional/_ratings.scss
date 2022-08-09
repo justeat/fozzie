@@ -1,3 +1,6 @@
+@use '../../tools/mixins/type';
+@use '../../tools/mixins/ratings';
+
 @mixin rating() {
     /**
     * Components > Rating
@@ -18,9 +21,12 @@
     $star-size--medium          : 28px;
     $star-size--large           : 42px;
 
+  // https://github.com/justeat/f-icons/blob/master/icons/star-filled.svg
+  @warn 'To use the rating component you will need to add references to the SVGs in f-icons';
 
     .c-rating {
-        @extend %c-icon--star--empty !optional;
+        // Leaving this @extend in so people can port over from the old icon repo easily.
+        // @extend %c-icon--star--empty !optional;
         background-repeat: repeat-x;
         display: inline-block;
         height: $star-size--default;
@@ -42,7 +48,7 @@
     }
 
     .c-rating-description {
-        @include font-size(body-s);
+        @include type.font-size(body-s);
     }
 
     .c-rating--small {
@@ -123,13 +129,14 @@
     }
 
     .c-rating--fill {
-        @extend %c-icon--star--fill !optional;
+        // Leaving this @extend in so people can port over from the old icon repo easily.
+        // @extend %c-icon--star--fill !optional;
         vertical-align: top;
         background-repeat: repeat-x;
         display: inline-block;
         height: 100%;
         width: 100%;
-        @include rating-fill($star-count);
+        @include ratings.rating-fill($star-count);
     }
 
     /*
@@ -147,7 +154,7 @@
         &:checked {
             & + label,
             & ~ input + label {
-                @extend %c-icon--star--fill !optional;
+                // @extend %c-icon--star--fill !optional;
             }
        }
     }
@@ -163,12 +170,14 @@
     .c-icon--star {
         display: block;
         cursor: pointer;
-        @extend %c-icon--star--empty !optional;
+        // Leaving this @extend in so people can port over from the old icon repo easily.
+        // @extend %c-icon--star--empty !optional;
         @extend %u-hideText;
 
         &:hover,
         &:hover ~ label {
-            @extend %c-icon--star--fill !optional;
+            // Leaving this @extend in so people can port over from the old icon repo easily.
+            // @extend %c-icon--star--fill !optional;
         }
     }
 

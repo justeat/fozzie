@@ -1,3 +1,6 @@
+@use 'strip-units';
+@use '../../settings/variables' as v;
+
 // ==========================================================================
 // _units.scss
 //
@@ -12,12 +15,14 @@
 @use 'sass:math';
 @use 'sass:map';
 
+$line-height-base : line-height(); // Lifted out of the variables file to fix circular reference issues
+
 @function line-height($font-size: 'body-s', $line-height: '20', $scale: 'default') {
     @if type-of($font-size) == 'number' {
         @return decimal-round(math.div($line-height, $font-size), 2);
-    } @else if map-has-key($type, $font-size) { // else try and find the value in our type map
-        $key-map: map.get($type, $font-size);
-        $font-list: map.get($key-map, $scale);
+    } @else if map-has-key(v.$type, $font-size) { // else try and find the value in our type map
+        $key-map: map-get(v.$type, $font-size);
+        $font-list: map-get($key-map, $scale);
 
         @if type-of($font-list) == 'list' {
             @return line-height(nth($font-list, 1), nth($font-list, 2));
@@ -63,15 +68,15 @@
     }
 }
 
-@function em-to-px($emVal, $base: $font-size-base) {
+@function em-to-px($emVal, $base: v.$font-size-base) {
     @return ($emVal * $base) * 1px;
 }
 
-@function map-to-px($breakpoints, $base: $font-size-base) {
+@function map-to-px($breakpoints, $base: v.$font-size-base) {
     $newBreakpoints: ();
 
     @each $name, $emValue in $breakpoints {
-        $pxValue: em-to-px(strip-units($emValue), $base);
+        $pxValue: em-to-px(strip-units.strip-units($emValue), $base);
         $newBreakpoints: map-merge($newBreakpoints, ($name: $pxValue));
     }
 

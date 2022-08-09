@@ -1,178 +1,181 @@
+@use '@justeat/pie-design-tokens/dist/jet' as dt;
+@use '../../settings/include-media' as *;
+
 @mixin listingSkeleton() {
-    /**
-    * Components > Listing Skeleton
-    * =================================
-    * Shows a Skeleton listing layout.
-    *
-    * Example: Search listigns
-    *
-    * The `c-listingSkeleton` component is an optional mixin within Fozzie.
-    * If you'd like to use it in your project you can include it by adding `@include listingSkeleton();` into your SCSS dependencies file.
-    *
-    * Documentation:
-    * TBC
-    */
+  /**
+  * Components > Listing Skeleton
+  * =================================
+  * Shows a Skeleton listing layout.
+  *
+  * Example: Search listings.
+  *
+  * The `c-listingSkeleton` component is an optional mixin within Fozzie.
+  * If you'd like to use it in your project you can include it by adding `@include listingSkeleton();` into your SCSS dependencies file.
+  *
+  * Documentation:
+  * TBC
+  */
 
-    .c-listingSkeleton {
-        position: relative;
-        background: $color-container-default;
-        border-radius: $radius-rounded-c;
-        padding: 85px spacing(d) spacing(d);
-        margin-bottom: spacing(d);
+  .c-listingSkeleton {
+    position: relative;
+    background: dt.$color-container-default;
+    border-radius: dt.$radius-rounded-c;
+    padding: 85px spacing(d) spacing(d);
+    margin-bottom: spacing(d);
 
-        @include media('>mid') {
-            padding-top: 73px;
-        }
+    @include media('>mid') {
+      padding-top: 73px;
+    }
+  }
+
+  .c-listingSkeleton-info {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: spacing(d);
+      @include anim();
     }
 
-    .c-listingSkeleton-info {
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            top: spacing(d);
-            @include anim();
-        }
-
-        //Skeleton image
-        &:before {
-            left: spacing(d);
-            height: 55px;
-            width: 55px;
-        }
-
-        //Skeleton title
-        &:after {
-            left: 87px;
-            height: 16px;
-            width: 180px;
-
-            @include media('>mid') {
-                width: 300px;
-            }
-        }
+    //Skeleton image
+    &:before {
+      left: spacing(d);
+      height: 55px;
+      width: 55px;
     }
 
-    .c-listingSkeleton-review {
-        position: absolute;
-        top: 57px;
-        left: 87px;
+    //Skeleton title
+    &:after {
+      left: 87px;
+      height: 16px;
+      width: 180px;
 
-        &:before,
-        &:after {
-            content: '';
-            height: 12px;
-            @include anim();
-            display: inline-block;
-        }
+      @include media('>mid') {
+        width: 300px;
+      }
+    }
+  }
 
-        //Review stars
-        &:before {
-            width: 70px;
-            margin-right: spacing();
+  .c-listingSkeleton-review {
+    position: absolute;
+    top: 57px;
+    left: 87px;
 
-            @include media('>mid') {
-                width: 80px;
-            }
-        }
-
-        //Review count
-        &:after {
-            width: 25px;
-
-            @include media('>mid') {
-                width: 30px;
-            }
-        }
+    &:before,
+    &:after {
+      content: '';
+      height: 12px;
+      @include anim();
+      display: inline-block;
     }
 
-    .c-listingSkeleton-cuisines {
-        top: 38px;
-        left: 87px;
-        position: absolute;
+    //Review stars
+    &:before {
+      width: 70px;
+      margin-right: spacing();
 
-        &:before,
-        &:after {
-            content: '';
-            height: 12px;
-            @include anim();
-            display: inline-block;
-        }
-
-        &:before {
-            width: 50px;
-            margin-right: spacing();
-
-            @include media('>mid') {
-                width: 70px;
-            }
-        }
-
-        &:after {
-            width: 35px;
-
-            @include media('>mid') {
-                width: 60px;
-            }
-        }
+      @include media('>mid') {
+        width: 80px;
+      }
     }
 
-    .c-listingSkeleton-meta {
-        width: 100%;
-        position: relative;
-        margin-bottom: 40px;
+    //Review count
+    &:after {
+      width: 25px;
 
-        &,
-        &:before,
-        &:after {
-            height: 15px;
-            display: block;
-            @include anim();
-
-            @include media('>mid') {
-                height: 13px;
-            }
-        }
-
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            margin-bottom: spacing();
-        }
-
-        &:before {
-            width: 60%;
-            top: calc(100% + 8px);
-        }
-
-        &:after {
-            width: 25%;
-            top: calc(200% + 16px);
-        }
-
-        @include media('>mid') {
-            width: 360px;
-            position: absolute;
-            top: spacing(d);
-            right: spacing(d);
-        }
+      @include media('>mid') {
+        width: 30px;
+      }
     }
+  }
+
+  .c-listingSkeleton-cuisines {
+    top: 38px;
+    left: 87px;
+    position: absolute;
+
+    &:before,
+    &:after {
+      content: '';
+      height: 12px;
+      @include anim();
+      display: inline-block;
+    }
+
+    &:before {
+      width: 50px;
+      margin-right: spacing();
+
+      @include media('>mid') {
+        width: 70px;
+      }
+    }
+
+    &:after {
+      width: 35px;
+
+      @include media('>mid') {
+        width: 60px;
+      }
+    }
+  }
+
+  .c-listingSkeleton-meta {
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+
+    &,
+    &:before,
+    &:after {
+      height: 15px;
+      display: block;
+      @include anim();
+
+      @include media('>mid') {
+        height: 13px;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      margin-bottom: spacing();
+    }
+
+    &:before {
+      width: 60%;
+      top: calc(100% + 8px);
+    }
+
+    &:after {
+      width: 25%;
+      top: calc(200% + 16px);
+    }
+
+    @include media('>mid') {
+      width: 360px;
+      position: absolute;
+      top: spacing(d);
+      right: spacing(d);
+    }
+  }
 }
 
 @keyframes skeletonGradient {
-    0% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @mixin anim() {
-    border-radius: 2px;
-    background: linear-gradient(-45deg, $color-grey-10, $color-grey-10, $color-grey-20, $color-grey-10, $color-grey-10);
-    background-size: 2000px 600%;
-    animation: skeletonGradient 2s ease infinite;
-    animation-fill-mode: forwards;
+  border-radius: 2px;
+  background: linear-gradient(-45deg, dt.$color-grey-10, dt.$color-grey-10, dt.$color-grey-20, dt.$color-grey-10, dt.$color-grey-10);
+  background-size: 2000px 600%;
+  animation: skeletonGradient 2s ease infinite;
+  animation-fill-mode: forwards;
 }
