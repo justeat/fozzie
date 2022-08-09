@@ -8,14 +8,6 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Update to use latest v2 PIE design tokens
 
-v9.0.0-beta.12
-------------------------------
-*August 8, 2022*
-
-### Added
-- `listingSkeleton` mixin back in as it is currently being used by another application.
-
-
 v9.0.0
 ------------------------------
 - **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation in `dart-sass`.
