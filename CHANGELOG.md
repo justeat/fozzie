@@ -15,6 +15,9 @@ v9.0.1
 ### Removed
 - `throw` usage and updated tests accordingly.
 
+### Fixed
+- `$fozzie-breakpoints` reference.
+
 
 v9.0.0
 ------------------------------
