@@ -1,5 +1,6 @@
 @use '../settings/variables' as v;
 @use '../tools/functions/strip-units';
+@use '../tools/helpers/breakpoints';
 @use '../settings/include-media' as *;
 @use 'sass:math';
 
@@ -231,7 +232,7 @@
     // Only generated if $responsive-gutters == true
 
     @if v.$responsive-gutters {
-        @each $name, $value in v.$fozzie-breakpoints {
+        @each $name, $value in breakpoints.$fozzie-breakpoints {
             .g--gutter--#{$name} {
                 @include media('>=#{$name}') {
                     margin-left: -$g-gutter-half;
@@ -369,14 +370,14 @@
     // Responsive sizes only generated if $responsive-grid-sizes == true
     @if v.$responsive-grid-sizes {
         //loop through our breakpoints
-        @each $name, $value in v.$fozzie-breakpoints {
+        @each $name, $value in breakpoints.$fozzie-breakpoints {
             @include media('>=#{$value}') {
                 @include ko-gridSpanHelper($name);
             }
         }
     }
 
-    @each $name, $value in v.$fozzie-breakpoints {
+    @each $name, $value in breakpoints.$fozzie-breakpoints {
         .g--stack--#{$name} {
             @include ko-grid-stack($name);
         }

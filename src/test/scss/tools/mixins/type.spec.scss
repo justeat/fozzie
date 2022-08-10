@@ -113,24 +113,6 @@
                 }
             }
         }
-        @include it('font size mixin throws an error when the scale param is set to a key tht doesn‘t exist`') {
-            // arrange
-            $sizeKey: 'body-l';
-            $shouldIncludeLineHeight: true;
-            $scaleValue: 'narrow';
-
-            // act & assert
-            @include assert {
-                @include output {
-                    @include systemUnderTest.font-size($sizeKey, $shouldIncludeLineHeight, $scaleValue);
-                }
-
-                @include expect {
-                    /* ERROR [font-size]: */
-                    /*   Unknown scale `narrow` for type key `body-l. */
-                }
-            }
-        }
     }
 }
 
