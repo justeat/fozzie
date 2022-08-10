@@ -1,4 +1,3 @@
-@use 'throw';
 @use '../../settings/variables' as v;
 @use '../functions/strip-units';
 @use '../functions/units';
@@ -65,11 +64,6 @@
             }
         } @else {
             @warn 'Unknown scale `#{$scale}` for type key `#{$key}.';
-            @include throw.error(
-                $message: 'Unknown scale `#{$scale}` for type key `#{$key}.',
-                $source: 'font-size',
-                $catch: true
-            );
         }
     } @else {
         @warn 'Unknown `#{$key}` in $type.';

@@ -8,8 +8,18 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Update to use latest v2 PIE design tokens
 
+v9.0.1
+------------------------------
+*August 10, 2022*
+
+### Removed
+- `throw` usage and updated tests accordingly.
+
+
 v9.0.0
 ------------------------------
+*August 9, 2022*
+
 - **Breaking** Implement `@use` & `@forward` syntax in preference to `import` statements due to deprecation in `dart-sass`.
 - v9 Migration [Guide can be found here](https://vue.pie.design/?path=/story/documentation-guides-fozzie-fozzie-migration-guide--page).
 - README updated with new usage info. Documentation on vue.pie.design updated with full info on migration and usage.
