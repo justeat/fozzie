@@ -1,0 +1,73 @@
+@use '../tools/mixins/utilities';
+
+
+@mixin trumps-spacing() {
+    //
+    // Margin Utilities
+    // ==========================================================================
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'spacing') using ($spacingValue) {
+        margin: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'spacing', 'top') using ($spacingValue) {
+        margin-top: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'spacing', 'bottom') using ($spacingValue) {
+        margin-bottom: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'spacing', 'left') using ($spacingValue) {
+        margin-left: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'spacing', 'right') using ($spacingValue) {
+        margin-right: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'spacing', 'horizontal') using ($spacingValue) {
+        margin-left: spacing(#{$spacingValue}) !important;
+        margin-right: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'spacing', 'vertical') using ($spacingValue) {
+        margin-bottom: spacing(#{$spacingValue}) !important;
+        margin-top: spacing(#{$spacingValue}) !important;
+    }
+
+
+    //
+    // Padding Utilities
+    // ==========================================================================
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'pad') using ($spacingValue) {
+        padding: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'pad', 'top') using ($spacingValue) {
+        padding-top: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'pad', 'bottom') using ($spacingValue) {
+        padding-bottom: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'pad', 'left') using ($spacingValue) {
+        padding-left: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'pad', 'right') using ($spacingValue) {
+        padding-right: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'pad', 'horizontal') using ($spacingValue) {
+        padding-left: spacing(#{$spacingValue}) !important;
+        padding-right: spacing(#{$spacingValue}) !important;
+    }
+
+    @include utilities.spacing-classes(utilities.$spacing-map, 'pad', 'vertical') using ($spacingValue) {
+        padding-bottom: spacing(#{$spacingValue}) !important;
+        padding-top: spacing(#{$spacingValue}) !important;
+    }
+}

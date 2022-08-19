@@ -1,0 +1,29 @@
+@use '../../settings/variables' as v;
+@use 'sass:map';
+
+// ==========================================================================
+// Utilities Mixins
+// ==========================================================================
+
+/**
+ * Extends default $spacing map with an empty entry at the start
+ */
+$spacing-map: map.merge((
+    '': 0
+), v.$spacing);
+
+
+/**
+ * Generates spacing utility classes
+ */
+@mixin spacing-classes($spacings, $prefix, $modifier: '') {
+    @each $spacing-value, $value in $spacings {
+        $spacing-value-str: if($spacing-value == '', '', '-');
+        $modifier-str: if($modifier == '', '', '--#{$modifier}');
+        $suffix: #{$spacing-value-str}#{$spacing-value}#{$modifier-str};
+
+        .u-#{$prefix}#{$suffix} {
+            @content($spacing-value);
+        }
+    }
+}
