@@ -94,6 +94,14 @@
         background-color: dt.$color-white;
     }
 
+    //
+    // Border Utilities
+    // ==========================================================================
+
+    .u-noBorder {
+        border: none;
+    }
+
     .u-bordered {
         @extend %u-bordered;
     }
@@ -441,6 +449,34 @@
                 left: -#{spacing()};
                 position: absolute;
                 width: 100vw;
+            }
+        }
+    }
+
+    .u-noBackground {
+        background: none;
+    }
+
+    .u-hover--cursor {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .u-visuallyDisabled {
+        cursor: default;
+
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $color-disabled-01;
+            border-color: $color-disabled-01;
+            color: $color-content-disabled;
+            cursor: pointer;
+
+            &.is-readable {
+                color: inherit;
             }
         }
     }

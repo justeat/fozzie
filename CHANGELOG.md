@@ -16,6 +16,7 @@ v9.1.0
 ### Added
 - Utilities mixin module containing a new `spacing-map` variable and `spacing-classes` mixin which can be used to generate utility classes for each spacing variable.
 - Optional spacing trump module which generates margin & padding utility classes.
+- `u-noBorder`, `u-noBackground`, `u-hover--cursor`, and `u-visuallyDisabled` utility classes.
 
 
 v9.0.2
