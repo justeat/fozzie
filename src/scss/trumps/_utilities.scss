@@ -462,22 +462,4 @@
             cursor: pointer;
         }
     }
-
-    .u-visuallyDisabled {
-        cursor: default;
-
-        &,
-        &:hover,
-        &:active,
-        &:focus {
-            background-color: $color-disabled-01;
-            border-color: $color-disabled-01;
-            color: $color-content-disabled;
-            cursor: pointer;
-
-            &.is-readable {
-                color: inherit;
-            }
-        }
-    }
 }
