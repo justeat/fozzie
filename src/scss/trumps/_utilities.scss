@@ -99,7 +99,7 @@
     // ==========================================================================
 
     .u-noBorder {
-        border: none;
+        border: none !important;
     }
 
     .u-bordered {
@@ -454,12 +454,12 @@
     }
 
     .u-noBackground {
-        background: none;
+        background: none !important;
     }
 
     .u-hover--cursor {
         &:hover {
-            cursor: pointer;
+            cursor: pointer !important;
         }
     }
 }
