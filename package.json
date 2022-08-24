@@ -33,7 +33,6 @@
     "node": "^14 || ^16"
   },
   "dependencies": {
-    "@justeat/fozzie": "file:.yalc/@justeat/fozzie",
     "@justeat/pie-design-tokens": "1.6.0",
     "include-media": "eduardoboucas/include-media#2.0-release"
   },
