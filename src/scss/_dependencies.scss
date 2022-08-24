@@ -15,7 +15,6 @@
 // See mixins/css3.scss for the full list
 
 // Including helper modules
-@forward 'tools/index'; // imports Fozzie SCSS helper functions and mixins
 
 // =================================
 // Core variables
@@ -23,6 +22,7 @@
 // The colour variables are imported from https://www.npmjs.com/package/@justeat/pie-design-tokens
 @forward '@justeat/pie-design-tokens/dist/jet';
 @forward 'settings/variables';
+@forward 'tools/index'; // imports Fozzie SCSS helper functions and mixins
 @forward 'settings/include-media';
 @forward 'tools/helpers/breakpoints'; // breakpoint helper
 
