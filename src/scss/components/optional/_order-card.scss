@@ -1,6 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
 @use '../../tools/mixins/type';
+@use '../../tools/functions/zIndex' as zIndex;
 @use '../../settings/variables' as v;
 
 @mixin orderCard() {
@@ -95,7 +96,7 @@
             position: absolute;
             bottom: -1px;
             left: 0;
-            z-index: zIndex(low);
+            z-index: zIndex.zIndex(low);
         }
     }
 

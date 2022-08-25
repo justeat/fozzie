@@ -1,5 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
+@use '../../tools/functions/spacing' as spacing;
+@use '../../tools/functions/zIndex' as zIndex;
 
 @mixin fullScreenPopOver() {
     /**
@@ -18,7 +20,7 @@
 
     $fullScreenPopOver-background        : dt.$color-grey-10;
     $fullScreenPopOver-action-background : dt.$color-white;
-    $fullScreenPopOver-padding           : spacing(d);
+    $fullScreenPopOver-padding           : spacing.spacing(d);
     $fullScreenPopOver-border-color      : dt.$color-grey-30;
     $fullScreenPopOver-shadow-color      : rgba(dt.$color-black, 0.12);
 
@@ -31,7 +33,7 @@
             width: 100vw;
             position: fixed;
             overflow: hidden;
-            z-index: zIndex(high);
+            z-index: zIndex.zIndex(high);
             background: $fullScreenPopOver-background;
             transition: top 200ms ease, opacity 150ms ease;
 
@@ -79,7 +81,7 @@
 
         .c-fullScreenPopOver-header {
             top: 0;
-            z-index: zIndex(high);
+            z-index: zIndex.zIndex(high);
             box-shadow: dt.$elevation-03; // token value for sticky headers
         }
 
@@ -120,7 +122,7 @@
                 height: 100%;
                 overflow-x: hidden;
                 overflow-y: scroll;
-                padding: spacing(d) 0;
+                padding: spacing.spacing(d) 0;
                 -webkit-overflow-scrolling: touch;
             }
         }

@@ -1,6 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/variables' as v;
 @use '../tools/functions/units';
+@use '../tools/functions/spacing' as spacing;
 
 @mixin tables() {
   /**
@@ -40,8 +41,8 @@
   .table {
       width: 100%;
       max-width: 100%;
-      margin-top: spacing(f);
-      margin-bottom: spacing(f);
+      margin-top: spacing.spacing(f);
+      margin-bottom: spacing.spacing(f);
       border-spacing: 0;
       background-color: $table-bgColor;
       border: $table-border--width solid $table-border--color;

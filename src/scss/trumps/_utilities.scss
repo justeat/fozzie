@@ -2,6 +2,8 @@
 @use '../settings/include-media' as *;
 @use '../tools/mixins/border';
 @use '../tools/mixins/truncate';
+@use '../tools/functions/spacing' as spacing;
+@use '../tools/functions/zIndex' as zIndex;
 
 // ====================
 // @TODO - MOVE TO DIFFERENT FILE.
@@ -166,14 +168,14 @@
 
     .is-sticky {
         width: 100%;
-        z-index: zIndex(mid);
+        z-index: zIndex.zIndex(mid);
         position: fixed;
         transition: top 0.2s ease;
     }
 
     .u-sticky {
         position: sticky !important;
-        top: spacing(d);
+        top: spacing.spacing(d);
     }
 
     .u-absolutelyCentered {
@@ -197,7 +199,7 @@
     }
 
     .u-textPad {
-        padding-left: spacing(f) !important;
+        padding-left: spacing.spacing(f) !important;
     }
 
     .u-text-truncate {
@@ -236,7 +238,7 @@
     }
 
     .u-text-indent {
-        margin-left: spacing(d);
+        margin-left: spacing.spacing(d);
     }
 
     //
@@ -286,37 +288,37 @@
     }
 
     .u-spacingTop {
-        margin-top: spacing() !important;
+        margin-top: spacing.spacing() !important;
     }
 
         .u-spacingTop--small {
-            margin-top: spacing(a) !important;
+            margin-top: spacing.spacing(a) !important;
         }
 
         .u-spacingTop--large {
-            margin-top: spacing(d) !important;
+            margin-top: spacing.spacing(d) !important;
         }
 
     .u-spacingRight {
-        margin-right: spacing() !important;
+        margin-right: spacing.spacing() !important;
     }
 
     .u-spacingBottom {
-        margin-bottom: spacing() !important;
+        margin-bottom: spacing.spacing() !important;
     }
 
         .u-spacingBottom--large {
-            margin-bottom: spacing(d) !important;
+            margin-bottom: spacing.spacing(d) !important;
         }
 
         .u-spacingBottom--large--aboveMid {
             @include media('>=mid') {
-                margin-bottom: spacing(d);
+                margin-bottom: spacing.spacing(d);
             }
         }
 
     .u-spacingLeft {
-        margin-left: spacing() !important;
+        margin-left: spacing.spacing() !important;
     }
 
     //
@@ -328,16 +330,16 @@
     }
 
     .u-padTop {
-        padding-top: spacing() !important;
+        padding-top: spacing.spacing() !important;
     }
 
         .u-padTop--large {
-            padding-top: spacing(d) !important;
+            padding-top: spacing.spacing(d) !important;
         }
 
         .u-padTop--large--aboveMid {
             @include media('>=mid') {
-                padding-top: spacing(d) !important;
+                padding-top: spacing.spacing(d) !important;
             }
         }
 
@@ -364,7 +366,7 @@
                 position: fixed;
                 right: 0;
                 top: 0;
-                z-index: zIndex(low);
+                z-index: zIndex.zIndex(low);
             }
         }
 
@@ -436,7 +438,7 @@
     // Misc classes
     // ==========================================================================
     .u-shadowBottom--belowMid {
-        padding-bottom: spacing(h);
+        padding-bottom: spacing.spacing(h);
 
         @include media('<mid') {
             &:after {
@@ -445,8 +447,8 @@
                 box-shadow: dt.$elevation-01;
                 content: '';
                 display: block;
-                height: spacing(h);
-                left: -#{spacing()};
+                height: spacing.spacing(h);
+                left: -#{spacing.spacing()};
                 position: absolute;
                 width: 100vw;
             }

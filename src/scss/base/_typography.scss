@@ -1,6 +1,7 @@
 @use '../settings/variables' as v;
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../tools/mixins/type';
+@use '../tools/functions/spacing' as spacing;
 @use '../settings/include-media' as *;
 
 @mixin typography() {
@@ -49,7 +50,7 @@
     */
     p {
         @include type.font-size(body-l);
-        margin-top: spacing(d);
+        margin-top: spacing.spacing(d);
         margin-bottom: 0;
     }
 
@@ -83,8 +84,8 @@
     h1,
     .alpha {
         @include type.font-size(heading-xl, true, narrow);
-        margin-top: spacing(f);
-        margin-bottom: spacing(d);
+        margin-top: spacing.spacing(f);
+        margin-bottom: spacing.spacing(d);
 
         @include media('>mid') {
             @include type.font-size(heading-xl);
@@ -125,14 +126,14 @@
     // Only give these headings a margin-top if they are after other elements
     * + h2,
     * + .beta {
-        margin-top: spacing(f);
+        margin-top: spacing.spacing(f);
     }
 
     * + h3,
     * + .gamma,
     * + h4,
     * + .delta {
-        margin-top: spacing(d);
+        margin-top: spacing.spacing(d);
     }
 
     small {
@@ -165,7 +166,7 @@
     */
     blockquote {
         padding-left: 10px;
-        margin: spacing(d);
+        margin: spacing.spacing(d);
         border-left: 4px solid lighten(#000, 80%);
 
         p {
@@ -217,7 +218,7 @@
 
     address {
         font-style: normal;
-        margin-top: spacing(d);
+        margin-top: spacing.spacing(d);
         margin-bottom: 0;
     }
 
@@ -240,7 +241,7 @@
 
     // Horizontal rules
     hr {
-        margin: spacing(d) 0;
+        margin: spacing.spacing(d) 0;
         border: 0;
         border-top: 1px solid dt.$color-divider-default;
     }
