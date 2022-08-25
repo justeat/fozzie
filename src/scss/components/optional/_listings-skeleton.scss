@@ -1,5 +1,6 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
+@use '../../tools/functions/spacing' as spacing;
 
 @mixin listingSkeleton() {
   /**
@@ -20,8 +21,8 @@
     position: relative;
     background: dt.$color-container-default;
     border-radius: dt.$radius-rounded-c;
-    padding: 85px spacing(d) spacing(d);
-    margin-bottom: spacing(d);
+    padding: 85px spacing.spacing(d) spacing.spacing(d);
+    margin-bottom: spacing.spacing(d);
 
     @include media('>mid') {
       padding-top: 73px;
@@ -33,13 +34,13 @@
     &:after {
       content: '';
       position: absolute;
-      top: spacing(d);
+      top: spacing.spacing(d);
       @include anim();
     }
 
     //Skeleton image
     &:before {
-      left: spacing(d);
+      left: spacing.spacing(d);
       height: 55px;
       width: 55px;
     }
@@ -72,7 +73,7 @@
     //Review stars
     &:before {
       width: 70px;
-      margin-right: spacing();
+      margin-right: spacing.spacing();
 
       @include media('>mid') {
         width: 80px;
@@ -104,7 +105,7 @@
 
     &:before {
       width: 50px;
-      margin-right: spacing();
+      margin-right: spacing.spacing();
 
       @include media('>mid') {
         width: 70px;
@@ -141,7 +142,7 @@
     &:after {
       content: '';
       position: absolute;
-      margin-bottom: spacing();
+      margin-bottom: spacing.spacing();
     }
 
     &:before {
@@ -157,8 +158,8 @@
     @include media('>mid') {
       width: 360px;
       position: absolute;
-      top: spacing(d);
-      right: spacing(d);
+      top: spacing.spacing(d);
+      right: spacing.spacing(d);
     }
   }
 }
