@@ -1,6 +1,8 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
 @use '../../tools/mixins/type';
+@use '../../tools/functions/zIndex' as zIndex;
+@use '../../tools/functions/spacing' as spacing;
 @use '../../settings/variables' as v;
 
 @mixin orderCard() {
@@ -95,7 +97,7 @@
             position: absolute;
             bottom: -1px;
             left: 0;
-            z-index: zIndex(low);
+            z-index: zIndex.zIndex(low);
         }
     }
 
@@ -123,8 +125,8 @@
         @include type.font-size(22px);
         color: dt.$color-blue;
         text-align: center;
-        margin-top: spacing();
-        padding: 2px spacing(c) spacing(c);
+        margin-top: spacing.spacing();
+        padding: 2px spacing.spacing(c) spacing.spacing(c);
         border-top: 1px solid dt.$color-grey-10;
     }
 
@@ -138,7 +140,7 @@
 
     .c-orderCard-date {
         margin-top: 0;
-        margin-bottom: spacing();
+        margin-bottom: spacing.spacing();
         color: dt.$color-grey-40;
         display: block;
     }
@@ -156,13 +158,13 @@
     }
 
     .c-orderCard-orderTotal {
-        margin-right: spacing();
-        margin-left: spacing(e);
+        margin-right: spacing.spacing();
+        margin-left: spacing.spacing(e);
         align-self: flex-end;
     }
 
     .c-orderCard-content {
-        padding: spacing() spacing(d) 0;
+        padding: spacing.spacing() spacing.spacing(d) 0;
         color: dt.$color-grey;
         flex: 1 0 auto;
         display: flex;
@@ -170,11 +172,11 @@
     }
 
     .c-orderCard-yourFavourites-content {
-        padding: spacing() spacing(d);
+        padding: spacing.spacing() spacing.spacing(d);
     }
 
     .c-orderCard-content--defaultMessage {
-        padding: 0 spacing(d);
+        padding: 0 spacing.spacing(d);
         @include type.font-size(body-l, false);
     }
 
@@ -191,22 +193,22 @@
     }
 
     .c-orderCard--inactive {
-        margin-left: spacing(f);
+        margin-left: spacing.spacing(f);
     }
 
     .c-orderCard-header {
         flex-direction: row;
         align-items: baseline;
         display: flex;
-        margin-left: spacing(d);
+        margin-left: spacing.spacing(d);
 
         @include media('>mid') {
-            margin-left: spacing(f);
+            margin-left: spacing.spacing(f);
         }
     }
 
     .c-orderCard-seeAllText {
         width: fit-content;
-        margin-left: spacing(d);
+        margin-left: spacing.spacing(d);
     }
 }

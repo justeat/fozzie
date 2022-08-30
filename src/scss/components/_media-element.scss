@@ -1,6 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../tools/mixins/type';
 @use '../settings/include-media' as *;
+@use '../tools/functions/spacing' as spacing;
 
 @mixin mediaElement() {
     /**
@@ -22,7 +23,7 @@
     $mediaElement-img-borderRadius  : dt.$radius-rounded-c;
     $mediaElement-infoLinkColor     : dt.$color-content-link-distinct;
     $mediaElement-fontSize          : body-l;
-    $mediaElement-spacing           : spacing(d);
+    $mediaElement-spacing           : spacing.spacing(d);
 
 
     // mediaElement module
@@ -34,7 +35,7 @@
 
         & > :not(:last-child) {
             @include media('>=mid') {
-                margin-right: spacing(b);
+                margin-right: spacing.spacing(b);
             }
         }
     }
@@ -92,7 +93,7 @@
                 }
 
                 @include media('>=mid') {
-                    margin-top: spacing(b) / 4;
+                    margin-top: spacing.spacing(b) / 4;
                 }
 
                 @include media('>=wide') {
@@ -124,7 +125,7 @@
         }
 
         .c-mediaElement-heading {
-            margin: spacing(h) 0 spacing(d);
+            margin: spacing.spacing(h) 0 spacing.spacing(d);
         }
 
         .c-mediaElement-content {
@@ -133,12 +134,12 @@
 
             .c-mediaElement--fullstack & {
                 flex: auto;
-                margin-top: spacing(a);
+                margin-top: spacing.spacing(a);
             }
 
             .c-mediaElement--fullstack--negativeTop & {
                 flex: auto;
-                margin-top: spacing(f);
+                margin-top: spacing.spacing(f);
             }
 
             // some content uses br for content shaping – get rid of it on mobile devices
@@ -170,11 +171,12 @@
             top: $mediaElement-spacing;
 
             @include media('<mid') {
-                right: spacing(d);
-                top: spacing(d);
+                right: spacing.spacing(d);
+                top: spacing.spacing(d);
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
                 text-decoration: underline;
             }
         }

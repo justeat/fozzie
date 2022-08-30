@@ -1,7 +1,9 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../tools/mixins/type';
-@use '../../settings/include-media' as *;
 @use '../../tools/mixins/truncate';
+@use '../../tools/functions/spacing' as spacing;
+@use '../../tools/functions/zIndex' as zIndex;
+@use '../../settings/include-media' as *;
 
 @mixin menu() {
     /**
@@ -25,9 +27,9 @@
     $menu-border-width                      : 1px;
     $menu-border-width--active              : 2px;
     $menu-link-color                        : dt.$color-content-default;
-    $menu-link-padding                      : spacing() spacing(d);
-    $menu-positionTop                       : $menu-headerHeight + spacing(d);
-    $menu--condensed-link-padding           : spacing(a);
+    $menu-link-padding                      : spacing.spacing() spacing.spacing(d);
+    $menu-positionTop                       : $menu-headerHeight + spacing.spacing(d);
+    $menu--condensed-link-padding           : spacing.spacing(a);
 
     .c-menu {
         @extend %u-unstyled;
@@ -52,7 +54,7 @@
             }
 
             .c-menu-link {
-                padding: spacing();
+                padding: spacing.spacing();
             }
 
             .c-menu-item:active,
@@ -69,12 +71,12 @@
         .c-menu-openBtnWrapper {
             display: flex;
             justify-content: center;
-            margin-bottom: spacing(f);
-            margin-top: -#{spacing(e)};
+            margin-bottom: spacing.spacing(f);
+            margin-top: -#{spacing.spacing(e)};
             position: sticky;
             top: $menu-positionTop;
             transition: 100ms top ease-in-out;
-            z-index: zIndex(low);
+            z-index: zIndex.zIndex(low);
         }
 
         .c-menu-openBtn {
@@ -82,11 +84,11 @@
             align-items: center;
             border-radius: dt.$radius-rounded-d;
             display: flex;
-            padding: spacing() spacing(d);
+            padding: spacing.spacing() spacing.spacing(d);
         }
 
         .c-menu-closeBtn {
-            padding: spacing(d);
+            padding: spacing.spacing(d);
             position: absolute;
             right: 0;
             top: 0;
@@ -105,7 +107,7 @@
                     align-items: center;
 
                     .c-menu-link {
-                        padding-right: spacing(a);
+                        padding-right: spacing.spacing(a);
                     }
                 }
             }

@@ -1,4 +1,5 @@
 @use '../../settings/include-media' as *;
+@use '../../tools/functions/spacing' as spacing;
 
 @mixin overflowCarousel() {
     /**
@@ -17,7 +18,7 @@
 
     .c-overflowCarousel {
         @include media('<mid') {
-            margin: 0 -#{spacing(d)};
+            margin: 0 -#{spacing.spacing(d)};
         }
     }
 
@@ -58,26 +59,26 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: spacing() spacing(d);
+        padding: spacing.spacing() spacing.spacing(d);
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
 
         //add spacing after the last element
         &:after {
             content: '';
-            flex: 0 0 spacing(d);
+            flex: 0 0 spacing.spacing(d);
         }
 
         @include media('>mid') {
-            padding: spacing(d) spacing(f) spacing();
+            padding: spacing.spacing(d) spacing.spacing(f) spacing.spacing();
         }
 
         .c-overflowCarousel-item {
             flex: 1 0 auto;
-            margin-right: spacing();
+            margin-right: spacing.spacing();
 
             @include media('>=mid') {
-                margin-right: spacing(d);
+                margin-right: spacing.spacing(d);
             }
         }
     }
@@ -104,6 +105,6 @@
 @mixin overflowCarouselContent() {
     display: inline-flex;
     white-space: nowrap;
-    padding-left: spacing(d);
-    padding-right: spacing(d);
+    padding-left: spacing.spacing(d);
+    padding-right: spacing.spacing(d);
 }

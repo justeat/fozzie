@@ -1,5 +1,6 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../tools/mixins/alerts';
+@use '../tools/functions/spacing' as spacing;
 
 @mixin alerts() {
     /**
@@ -22,8 +23,8 @@
     // -------------------------
 
     .c-alert {
-        padding: spacing();
-        margin-top: spacing(d);
+        padding: spacing.spacing();
+        margin-top: spacing.spacing(d);
         border: 1px solid transparent;
         border-radius: $alert-border-radius;
 
@@ -32,7 +33,7 @@
         }
 
         & + * {
-            margin-top: spacing(d);
+            margin-top: spacing.spacing(d);
         }
     }
 

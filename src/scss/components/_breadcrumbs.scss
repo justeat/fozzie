@@ -1,6 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/include-media' as *;
 @use '../tools/mixins/type';
+@use '../tools/functions/spacing' as spacing;
 
 @mixin breadcrumbs() {
     /**
@@ -69,7 +70,7 @@
     }
 
     .c-breadcrumb-item-icon {
-        margin: 0 spacing(b);
+        margin: 0 spacing.spacing(b);
     }
 
     .c-breadcrumb--transparent {
@@ -100,7 +101,7 @@
                 background-color: $breadcrumb--compact-background;
                 border-radius: $breadcrumb-border-radius;
                 line-height: 2;
-                padding-right: spacing(d);
+                padding-right: spacing.spacing(d);
 
                 .c-breadcrumb-item-icon {
                     float: left;

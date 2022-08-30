@@ -1,5 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../tools/mixins/type';
+@use '../../tools/functions/spacing';
+@use '../../tools/functions/zIndex';
 
 @mixin cookieWarning() {
     /**
@@ -17,7 +19,7 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        z-index: zIndex(high);
+        z-index: zIndex.zIndex(high);
 
         & p {
             @include type.font-size(caption, false);
@@ -29,8 +31,8 @@
 
     .c-cookieWarning-inner {
         margin: 0 auto;
-        padding: spacing();
-        padding-right: spacing(e);
+        padding: spacing.spacing();
+        padding-right: spacing.spacing(e);
         overflow: hidden;
     }
 

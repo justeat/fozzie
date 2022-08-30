@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Update to use latest v2 PIE design tokens
 
+v9.3.0
+------------------------------
+*August 25, 2022*
+
+### Fixed
+- `spacing` & `zIndex` references.
+
+
 v9.2.0
 ------------------------------
 *August 24, 2022*

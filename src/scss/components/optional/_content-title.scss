@@ -1,6 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/variables' as v;
 @use '../../tools/mixins/type';
+@use '../../tools/functions/spacing' as spacing;
 
 @mixin contentTitle() {
     /**
@@ -21,12 +22,12 @@
         width: 100%;
         display: flex;
         align-items: center;
-        margin: spacing(d) 0;
+        margin: spacing.spacing(d) 0;
     }
 
         .c-contentTitle-icon {
             width: 24px;
-            margin-right: spacing();
+            margin-right: spacing.spacing();
         }
 
         .c-contentTitle-text {

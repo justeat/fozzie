@@ -20,8 +20,8 @@ $spacing-map: map.merge((
 // ==========================================================================
 //
 // Usage:
-// @include utilities.spacing-classes(utilities.$spacing-map, 'pad', 'top') using ($spacingValue) {
-//     padding-top: spacing(#{$spacingValue});
+// @include utilities.spacing-classes(utilities.$spacing-map, 'pad', 'top') using ($spacing-value) {
+//     padding-top: spacing(#{$spacing-value});
 // }
 //
 // eg. the output of the above would generate the following
@@ -39,10 +39,11 @@ $spacing-map: map.merge((
 // .u-pad-j--top { padding-top: spacing(j); }
 //
 @mixin spacing-classes($spacings, $name, $modifier: '') {
-    @each $spacing-value, $value in $spacings {
-        $separator: if($spacing-value == '', '', '-');
+    @each $spacing, $value in $spacings {
+        $separator: if($spacing == '', '', '-');
         $modifier-str: if($modifier == '', '', '--#{$modifier}');
-        $suffix: #{$separator}#{$spacing-value}#{$modifier-str};
+        $suffix: #{$separator}#{$spacing}#{$modifier-str};
+        $spacing-value: if($spacing == '', 'b', $spacing);
 
         .u-#{$name}#{$suffix} {
             @content($spacing-value);

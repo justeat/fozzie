@@ -1,5 +1,6 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../tools/mixins/type';
+@use '../tools/functions/spacing' as spacing;
 
 @mixin lists() {
     /**
@@ -20,15 +21,15 @@
     ul,
     ol {
         padding: 0;
-        margin: spacing(d) 0 0 spacing(d);
+        margin: spacing.spacing(d) 0 0 spacing.spacing(d);
 
         li {
-            margin-bottom: spacing();
+            margin-bottom: spacing.spacing();
         }
 
         ul,
         ol {
-            margin-top: spacing();
+            margin-top: spacing.spacing();
         }
     }
 
@@ -42,7 +43,7 @@
             color: $list-bullet-color;
             content: '\2022'; /* Unicode for circle character */
             font-size: 1.8em;
-            padding-right: spacing();
+            padding-right: spacing.spacing();
             position: relative;
             top: 0.15em;
             margin-left: -1.5rem;
@@ -51,7 +52,7 @@
 
     ol {
         > li {
-            padding-left: spacing();
+            padding-left: spacing.spacing();
         }
     }
 
@@ -59,7 +60,7 @@
         > li {
             font-weight: dt.$font-weight-bold;
             @include type.font-size(heading-s); // TODO – this should be updated with a more semantic font alias specific to lists
-            margin-bottom: spacing(f);
+            margin-bottom: spacing.spacing(f);
 
             > div {
                 font-weight: dt.$font-weight-regular;

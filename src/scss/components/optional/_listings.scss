@@ -1,6 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
 @use '../../tools/mixins/type';
+@use '../../tools/functions/spacing' as spacing;
 
 @mixin listing() {
     /**
@@ -58,12 +59,12 @@
     // Inactive listing is styling used for searchWeb offline
     .c-listing--subsequent,
     .c-listing--inactive {
-        margin-top: spacing(e);
+        margin-top: spacing.spacing(e);
     }
 
     .c-listing--subsequent {
         overflow: hidden;
-        padding: 0 spacing(d) spacing(d);
+        padding: 0 spacing.spacing(d) spacing.spacing(d);
         background: $listing--subsequent-bg;
     }
 
@@ -80,13 +81,13 @@
         }
 
         .c-listing-item {
-            margin-bottom: spacing(d);
+            margin-bottom: spacing.spacing(d);
             box-shadow: dt.$elevation-01; // token value for card default state
-            padding-bottom: spacing();
+            padding-bottom: spacing.spacing();
 
             @include media('>mid') {
                 min-height: 96px;
-                padding: spacing(a);
+                padding: spacing.spacing(a);
             }
 
             &.is-active {
@@ -104,10 +105,10 @@
         .c-listing-item--withHeader {
             overflow: hidden;
             // Specific padding top % is based on an image size of 288x104 and maintaining an aspect ratio of 36 : 13
-            padding-top: calc(37.69% + #{spacing(a)});
+            padding-top: calc(37.69% + #{spacing.spacing(a)});
 
             @include media('>mid') {
-                padding-top: spacing();
+                padding-top: spacing.spacing();
             }
         }
 
@@ -123,8 +124,8 @@
                     width: 87px;
                     height: 87px;
                     padding-top: 0;
-                    top: spacing(a);
-                    left: spacing(a);
+                    top: spacing.spacing(a);
+                    left: spacing.spacing(a);
                     border-radius: $listing-border-radius;
                 }
 
@@ -199,8 +200,8 @@
             .c-listing-item-img {
                 width: 55px;
                 height: 55px;
-                top: spacing(d);
-                left: spacing(d);
+                top: spacing.spacing(d);
+                left: spacing.spacing(d);
                 position: absolute;
                 border: 1px solid dt.$color-border-subtle;
                 border-radius: $listing-border-radius;
@@ -221,7 +222,7 @@
                         transform: none;
                     }
                     @include media('>=wide') {
-                        top: spacing(d);
+                        top: spacing.spacing(d);
                         left: calc(17.5% - 33px);
                     }
                 }
@@ -241,7 +242,7 @@
 
                 @include media('>mid') {
                     width: 55%;
-                    padding-top: spacing();
+                    padding-top: spacing.spacing();
                 }
                 @include media('>=wide') {
                     padding-left: 92px;
@@ -265,12 +266,12 @@
 
             .c-listing-item-title {
                 word-break: break-word;
-                padding-right: spacing();
+                padding-right: spacing.spacing();
                 @include type.font-size(body-l, false);
 
                 @include media('>mid') {
-                    margin: spacing(a) 0;
-                    padding-right: spacing(d);
+                    margin: spacing.spacing(a) 0;
+                    padding-right: spacing.spacing(d);
                 }
             }
 
@@ -278,7 +279,7 @@
                 top: -4px;
                 color: dt.$color-content-positive;
                 position: relative;
-                margin-right: spacing(a);
+                margin-right: spacing.spacing(a);
             }
 
             .c-listing-item-details {
@@ -288,7 +289,7 @@
                 @include media('>mid') {
                     width: 45%;
                     margin-top: auto;
-                    padding: spacing() spacing() 0 spacing(d);
+                    padding: spacing.spacing() spacing.spacing() 0 spacing.spacing(d);
                 }
 
                 @include media('>=wide') {
@@ -299,7 +300,7 @@
             .c-listing-item-detailsRow {
                 display : flex;
                 align-items : center;
-                margin-bottom: spacing(a);
+                margin-bottom: spacing.spacing(a);
             }
 
             .c-listing-item-detailsRow-icon {
@@ -310,7 +311,7 @@
 
             .c-listing-item-detailsRow-text {
                 white-space: initial;
-                margin-left: spacing();
+                margin-left: spacing.spacing();
             }
 
             .c-listing-item-badge {
@@ -374,7 +375,7 @@
 
             .c-listing-item-label {
                 padding: 1px 4px;
-                margin-bottom: spacing();
+                margin-bottom: spacing.spacing();
                 @include type.font-size(caption, false);
 
                 @include media('>mid') {
@@ -388,7 +389,7 @@
 
                 @include media('>=mid') {
                     top: 0;
-                    right: spacing();
+                    right: spacing.spacing();
                     position: absolute;
                 }
 

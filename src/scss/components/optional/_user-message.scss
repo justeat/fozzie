@@ -1,5 +1,6 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
+@use '../../tools/functions/spacing' as spacing;
 
 @mixin userMessage() {
     /**
@@ -15,13 +16,13 @@
         color: dt.$color-white;
         background-color: dt.$color-orange;
         max-width: 100%;
-        margin-top: spacing(d);
+        margin-top: spacing.spacing(d);
     }
 
     .c-userMessageContainer {
         max-width: 350px;
         margin: 0 auto;
-        padding: spacing(d) 0;
+        padding: spacing.spacing(d) 0;
         display: flex;
 
         @include media('>=narrow') {
@@ -45,7 +46,7 @@
     }
 
     .c-userMessageText {
-        margin-left: spacing(d);
+        margin-left: spacing.spacing(d);
         margin-top: 0;
 
         @include media('>=mid') {
