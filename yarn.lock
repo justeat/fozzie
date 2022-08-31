@@ -1289,8 +1289,10 @@
     lodash.merge "4.6.2"
     mkdirp "1.0.3"
 
-"@justeat/stylelint-config-fozzie@file:.yalc/@justeat/stylelint-config-fozzie":
+"@justeat/stylelint-config-fozzie@3.0.1":
   version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@justeat/stylelint-config-fozzie/-/stylelint-config-fozzie-3.0.1.tgz#3c567e9e1f13d26126be83d7ecdaf796cb5a4c04"
+  integrity sha512-lz23a86yrwxChQgZEHhbCi7I75mKKuV5Gq6M3p/CV1fvq61NoX4FUAnwVcY5VYg+XEHnmAkn5erir4Ju10Y/Tw==
 
 "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3":
   version "2.1.8-no-fsevents.3"

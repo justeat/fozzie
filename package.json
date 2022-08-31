@@ -46,7 +46,7 @@
     "@justeat/f-dom": "1.1.0",
     "@justeat/f-logger": "0.8.1",
     "@justeat/js-test-buddy": "0.4.1",
-    "@justeat/stylelint-config-fozzie": "file:.yalc/@justeat/stylelint-config-fozzie",
+    "@justeat/stylelint-config-fozzie": "3.0.1",
     "caniuse-lite": "1.0.30001374",
     "concurrently": "7.3.0",
     "coveralls": "3.1.1",
