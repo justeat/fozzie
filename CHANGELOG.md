@@ -9,6 +9,14 @@ Future Todo List
 - Update to use latest v2 PIE design tokens
 
 
+v9.3.2
+------------------------------
+*September 1, 2022*
+
+### Fixed
+- SCSS math division warning.
+
+
 v9.3.1
 ------------------------------
 *August 31, 2022*
