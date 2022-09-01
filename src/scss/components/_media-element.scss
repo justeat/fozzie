@@ -2,6 +2,7 @@
 @use '../tools/mixins/type';
 @use '../settings/include-media' as *;
 @use '../tools/functions/spacing' as spacing;
+@use 'sass:math';
 
 @mixin mediaElement() {
     /**
@@ -93,7 +94,7 @@
                 }
 
                 @include media('>=mid') {
-                    margin-top: spacing.spacing(b) / 4;
+                    margin-top: math.div(spacing.spacing(b), 4);
                 }
 
                 @include media('>=wide') {
