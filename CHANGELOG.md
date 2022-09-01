@@ -9,6 +9,14 @@ Future Todo List
 - Update to use latest v2 PIE design tokens
 
 
+v9.3.3
+------------------------------
+*September 1, 2022*
+
+### Added
+- A basic integration test to catch SCSS errors
+
+
 v9.3.2
 ------------------------------
 *September 1, 2022*
