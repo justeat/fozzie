@@ -100,7 +100,7 @@
             display: inline-block;
             width: $formControl-width;
             height: $formControl-height;
-            border: $formControl-border-width solid dt.$color-grey-30;
+            border: $formControl-border-width solid dt.$color-border-default;
             background-color: $formControl-bgColor;
             vertical-align: middle;
             margin-left: $formControl-margin-left;
@@ -233,7 +233,7 @@
             &:before {
                 content: '';
                 background-color: $formControl-color;
-                border: 3px solid dt.$color-grey-20;
+                border: 3px solid dt.$color-border-subtle;
                 border-radius: 50%;
                 width: $formControl-width - 2;
                 height: $formControl-height - 2;

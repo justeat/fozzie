@@ -15,7 +15,7 @@
     * TBC
     */
     .c-cookieWarning {
-        background-color: dt.$color-grey;
+        background-color: dt.$color-content-interactive-tertiary;
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -50,7 +50,7 @@
         &:hover,
         &:active,
         &:focus {
-            background-color: dt.$color-grey-40;
+            background-color: dt.$color-border-strong;
             cursor: pointer;
         }
     }

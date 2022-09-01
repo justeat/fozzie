@@ -9,6 +9,15 @@ Future Todo List
 - Update to use latest v2 PIE design tokens
 
 
+v10.0.0
+------------------------------
+*September 1, 2022*
+
+### Changed
+- **Breaking** Upgraded `@justeat/pie-design-tokens` to `v2.0.0`
+- **Breaking** Replaced `$color-grey` variants with new aliases
+
+
 v9.3.3
 ------------------------------
 *September 1, 2022*

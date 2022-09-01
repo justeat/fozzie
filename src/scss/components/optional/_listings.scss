@@ -38,7 +38,7 @@
     $listing-border-radius          : dt.$radius-rounded-c;
     $listing-promoIcon-color        : dt.$color-content-brand;
 
-    $listing--subsequent-bg         : dt.$color-grey-20;
+    $listing--subsequent-bg         : dt.$color-background-subtle;
     $listing--inactive-bg           : rgba($listing-bg, 0.5);
 
     .c-listing {
@@ -134,7 +134,7 @@
                 }
 
                 &:not(.c-listing-item-header--noImage) {
-                    background: dt.$color-grey-20;
+                    background: dt.$color-background-subtle;
                 }
             }
 

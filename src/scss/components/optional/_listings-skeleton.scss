@@ -175,7 +175,7 @@
 
 @mixin anim() {
   border-radius: 2px;
-  background: linear-gradient(-45deg, dt.$color-grey-10, dt.$color-grey-10, dt.$color-grey-20, dt.$color-grey-10, dt.$color-grey-10);
+  background: linear-gradient(-45deg, dt.$color-background-default, dt.$color-background-default, dt.$color-background-subtle, dt.$color-background-default, dt.$color-background-default);
   background-size: 2000px 600%;
   animation: skeletonGradient 2s ease infinite;
   animation-fill-mode: forwards;

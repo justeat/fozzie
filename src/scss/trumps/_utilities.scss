@@ -442,7 +442,7 @@
 
         @include media('<mid') {
             &:after {
-                background-color: dt.$color-grey-20;
+                background-color: dt.$color-background-subtle;
                 border: 0;
                 box-shadow: dt.$elevation-01;
                 content: '';
