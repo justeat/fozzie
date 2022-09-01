@@ -2,8 +2,7 @@
 @use 'src/scss/fozzie' as systemUnderTest;
 
 @include describe('Fozzie') {
-    @include it('does not throw any errors') {
-        // base
+    @include it('base - does not throw any errors') {
         @include systemUnderTest.grid();
         @include systemUnderTest.layout();
         @include systemUnderTest.normalize();
@@ -11,7 +10,10 @@
         @include systemUnderTest.reset();
         @include systemUnderTest.typography();
 
-        // components
+        @include assert-true ('No errors were thrown from base');
+    }
+
+    @include it('components - does not throw any errors') {
         @include systemUnderTest.appsBanner();
         @include systemUnderTest.badge();
         @include systemUnderTest.contentHeader();
@@ -36,7 +38,10 @@
         @include systemUnderTest.cards();
         @include systemUnderTest.mediaElement();
 
-        // objects
+        @include assert-true ('No errors were thrown from components');
+    }
+
+    @include it('objects - does not throw any errors') {
         @include systemUnderTest.bodyStyles();
         @include systemUnderTest.buttons();
         @include systemUnderTest.formControls();
@@ -45,15 +50,24 @@
         @include systemUnderTest.lists();
         @include systemUnderTest.tables();
 
-        // trumps
+        @include assert-true ('No errors were thrown from objects');
+    }
+
+    @include it('trumps - does not throw any errors') {
         @include systemUnderTest.trumps-rwd();
         @include systemUnderTest.trumps-spacing();
         @include systemUnderTest.trumps-utilities();
 
-        // helpers
+        @include assert-true ('No errors were thrown from trumps');
+    }
+
+    @include it('helpers - does not throw any errors') {
         @include systemUnderTest.breakpoints();
 
-        // functions
+        @include assert-true ('No errors were thrown from helpers');
+    }
+
+    @include it('functions - does not throw any errors') {
         $em: systemUnderTest.em(32);
         $emArg: systemUnderTest.em(32, 16);
 
@@ -107,7 +121,10 @@
         $zIndex: systemUnderTest.zIndex();
         $zIndexArg: systemUnderTest.zIndex('lowest');
 
-        // mixins
+        @include assert-true ('No errors were thrown from functions');
+    }
+
+    @include it('mixins - does not throw any errors') {
         .test-output {
             @include systemUnderTest.alert-variant(red, white);
             @include systemUnderTest.bordered();
@@ -133,7 +150,6 @@
             }
         }
 
-        // We can assert anything here. Any errors when calling the above will break the test.
-        @include assert-true ('No errors were thrown');
+        @include assert-true ('No errors were thrown from mixins');
     }
 }
