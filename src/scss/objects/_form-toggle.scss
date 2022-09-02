@@ -4,18 +4,18 @@
 @use 'sass:math';
 
 $formToggle-padding                 : spacing.spacing() !default;
-$formToggle-border-color            : dt.$color-grey-30;
-$formToggle-border-color--interact  : dt.$color-grey-40;
+$formToggle-border-color            : dt.$color-border-default;
+$formToggle-border-color--interact  : dt.$color-border-strong;
 $formToggle-border-color--checked   : dt.$color-green;
 $formToggle-border-width            : 1px;
 $formToggle-border-radius           : dt.$radius-rounded-e;
 $formToggle-icon-background         : dt.$color-green;
-$formToggle-icon-background--hover  : dt.$color-grey-30;
+$formToggle-icon-background--hover  : dt.$color-support-neutral;
 $formToggle-background              : dt.$color-white;
 $formToggle-large-size              : 48px;
 $formToggle-button-color            : dt.$color-blue;
 $formToggle-button-background       : dt.$color-blue-10;
-$formToggle-text--disabled          : dt.$color-grey-30;
+$formToggle-text--disabled          : dt.$color-disabled-01;
 $formToggle-text--checked           : dt.$color-green;
 
 @mixin formToggle() {

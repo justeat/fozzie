@@ -44,7 +44,7 @@
         &:focus {
             box-shadow: $previousOrder-hoverBoxShadow;
             text-decoration: none;
-            color: dt.$color-grey-40;
+            color: dt.$color-support-neutral;
         }
     }
 
@@ -127,7 +127,7 @@
         text-align: center;
         margin-top: spacing.spacing();
         padding: 2px spacing.spacing(c) spacing.spacing(c);
-        border-top: 1px solid dt.$color-grey-10;
+        border-top: 1px solid dt.$color-border-subtle;
     }
 
     .c-orderCard-title {
@@ -141,7 +141,7 @@
     .c-orderCard-date {
         margin-top: 0;
         margin-bottom: spacing.spacing();
-        color: dt.$color-grey-40;
+        color: dt.$color-support-neutral;
         display: block;
     }
 
@@ -165,7 +165,7 @@
 
     .c-orderCard-content {
         padding: spacing.spacing() spacing.spacing(d) 0;
-        color: dt.$color-grey;
+        color: dt.$color-content-interactive-tertiary;
         flex: 1 0 auto;
         display: flex;
         flex-direction: column;
@@ -181,7 +181,7 @@
     }
 
     .c-orderCard-cuisines {
-        color: dt.$color-grey-40;
+        color: dt.$color-support-neutral;
         margin-top: 0;
         text-transform: capitalize;
         @include type.font-size(body-l, false);

@@ -18,10 +18,10 @@
     * TBC
     */
 
-    $fullScreenPopOver-background        : dt.$color-grey-10;
+    $fullScreenPopOver-background        : dt.$color-background-default;
     $fullScreenPopOver-action-background : dt.$color-white;
     $fullScreenPopOver-padding           : spacing.spacing(d);
-    $fullScreenPopOver-border-color      : dt.$color-grey-30;
+    $fullScreenPopOver-border-color      : dt.$color-border-default;
     $fullScreenPopOver-shadow-color      : rgba(dt.$color-black, 0.12);
 
     .c-fullScreenPopOver {
