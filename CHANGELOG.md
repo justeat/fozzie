@@ -14,7 +14,7 @@ v10.0.0
 *September 1, 2022*
 
 ### Changed
-- **Breaking** Upgraded `@justeat/pie-design-tokens` to `v2.0.0`
+- **Breaking** Upgraded `@justeat/pie-design-tokens` to `v2.0.0`. [Link to changelog](https://github.com/justeat/pie-design-tokens/blob/master/CHANGELOG.md#v200)
 - **Breaking** Replaced `$color-grey` variants with new aliases
 
 
