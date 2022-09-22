@@ -8,6 +8,18 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Update to use latest v2 PIE design tokens
 
+
+v10.2.0
+------------------------------
+*September 22, 2022*
+
+### Changed
+- Updated a bunch of dependencies. None of these should be breaking.
+- `pie-design-tokens` has been updated to v3, which has a name change in the [global tokens for paragraph spacing](https://github.com/justeat/pie-design-tokens/blob/master/CHANGELOG.md#v300).
+
+  As these are global token updates, it's expected that they shouldn't be referenced in consuming applications/components directly, but if they are, refer to the `pie-design-token` changelog above to update this to the new variable names.
+
+
 v10.1.0
 ------------------------------
 *September 15, 2022*
