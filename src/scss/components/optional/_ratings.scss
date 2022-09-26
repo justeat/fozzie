@@ -24,7 +24,6 @@
 
     .c-rating {
         background-image: inline(#{v.$star-icon-path--empty});
-        padding: 100px;
         background-repeat: repeat-x;
         display: inline-block;
         height: $star-size--default;
