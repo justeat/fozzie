@@ -128,8 +128,8 @@ $img-path-url              : '/assets/img' !default; // Usage: background: url('
 $icon-path                 : '#{$img-path}/icons' !default;
 $font-path                 : 'dist/fonts' !default;
 
-$star-icon-path--filled    : '' !default;
-$star-icon-path--empty     : '' !default;
+$star-icon-path--filled    : '#{$icon-path}/stars/star--filled.svg' !default;
+$star-icon-path--empty     : '#{$icon-path}/stars/star--empty.svg' !default;
 
 // App-specific variables
 // ==========================================================================
