@@ -2,7 +2,7 @@
 @use '../settings/variables' as v;
 @use '../settings/include-media' as *;
 @use '../tools/mixins/type';
-@use '../tools/functions/spacing' as spacing;
+@use '../tools/functions/index' as functions;
 
 @mixin layout() {
     /**
@@ -69,14 +69,14 @@
     }
 
     .l-innerContainer--verticalSpacing {
-        margin: spacing.spacing(f) 0;
+        margin: functions.spacing(f) 0;
 
         @include media('>=mid') {
-            margin: spacing.spacing(g) auto spacing.spacing(h);
+            margin: functions.spacing(g) auto functions.spacing(h);
         }
 
         @include media('>=wide') {
-            margin: spacing.spacing(i) auto;
+            margin: functions.spacing(i) auto;
         }
     }
 
@@ -84,18 +84,18 @@
     * Layout class for containers that contain content (such as T&cs and Privacy pages)
     */
     .l-content {
-        padding-top: spacing.spacing(d);
+        padding-top: functions.spacing(d);
 
         @include media('>mid') {
-            padding-top: spacing.spacing(f);
+            padding-top: functions.spacing(f);
         }
     }
 
         .l-content-header {
-            margin: 0 0 spacing.spacing(d);
+            margin: 0 0 functions.spacing(d);
 
             @include media('>mid') {
-                margin: spacing.spacing(d) 0 spacing.spacing(f);
+                margin: functions.spacing(d) 0 functions.spacing(f);
             }
 
             > h1 {

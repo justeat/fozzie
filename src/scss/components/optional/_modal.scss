@@ -1,8 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
 @use '../../tools/mixins/type';
-@use '../../tools/functions/zIndex' as zIndex;
-@use '../../tools/functions/spacing' as spacing;
+@use '../../tools/functions/index' as functions;
 
 @mixin modal() {
     /**
@@ -23,7 +22,7 @@
     $modal-borderRadius     : dt.$radius-rounded-d;
 
     .c-modal {
-        z-index: zIndex.zIndex(high);
+        z-index: functions.zIndex(high);
     }
 
         .c-modal--popUp {
@@ -50,7 +49,7 @@
                 }
 
                     .c-modal-title--spacing {
-                        padding: spacing.spacing(g) spacing.spacing(h) spacing.spacing(d);
+                        padding: functions.spacing(g) functions.spacing(h) functions.spacing(d);
                     }
 
                 .c-modal-content {
@@ -73,7 +72,7 @@
                 }
 
                 .c-modal-closeBtn {
-                    z-index: zIndex.zIndex(high);
+                    z-index: functions.zIndex(high);
                     position: fixed;
                 }
 
@@ -90,11 +89,11 @@
         }
 
     .c-modal-closeBtn {
-        padding: spacing.spacing();
+        padding: functions.spacing();
         position: absolute;
-        right: spacing.spacing(d);
-        top: spacing.spacing(c);
-        z-index: zIndex.zIndex(high);
+        right: functions.spacing(d);
+        top: functions.spacing(c);
+        z-index: functions.zIndex(high);
 
         @include media('>=mid') {
             position: fixed;
@@ -122,7 +121,7 @@
 
     .c-modal-title {
         @include type.font-size($modal-titleFontSize);
-        padding: 0 spacing.spacing(e);
+        padding: 0 functions.spacing(e);
 
         @include media('>=mid') {
             @include type.font-size(heading-m);
@@ -130,10 +129,10 @@
     }
 
         .c-modal-title--spacing {
-            padding: spacing.spacing(e) spacing.spacing(h);
+            padding: functions.spacing(e) functions.spacing(h);
 
             @include media('>=mid') {
-                padding: spacing.spacing(g) spacing.spacing(h) spacing.spacing(d);
+                padding: functions.spacing(g) functions.spacing(h) functions.spacing(d);
             }
         }
 
@@ -142,7 +141,7 @@
         border-radius: $modal-borderRadius;
         box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
         display: none;
-        padding: spacing.spacing(e);
+        padding: functions.spacing(e);
         position: fixed;
         right: 50%;
         text-align: center;
@@ -167,7 +166,7 @@
             max-height: 90vh;
             max-width: 600px;
             overflow: hidden;
-            padding: spacing.spacing(g);
+            padding: functions.spacing(g);
         }
     }
 
@@ -217,7 +216,7 @@
         background-color: dt.$color-white;
         box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.12);
         bottom: 0;
-        padding: spacing.spacing(e);
+        padding: functions.spacing(e);
         position: sticky;
         width: 100%;
     }
@@ -225,7 +224,7 @@
     .c-modal-textSeparator {
         font-weight: dt.$font-weight-bold;
         @include type.font-size(body-l);
-        margin: spacing.spacing(e) 0 0;
+        margin: functions.spacing(e) 0 0;
 
         @include media('>=narrow') {
             margin: 0;
@@ -233,6 +232,6 @@
     }
 
         .c-modal-textSeparator--spaceAround {
-            margin: spacing.spacing(e) 0 spacing.spacing(d);
+            margin: functions.spacing(e) 0 functions.spacing(d);
         }
 }

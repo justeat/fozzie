@@ -1,7 +1,6 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/include-media' as *;
-@use '../tools/functions/spacing' as spacing;
-@use '../tools/functions/zIndex' as zIndex;
+@use '../tools/functions/index' as functions;
 
 @mixin formControls() {
     /**
@@ -45,7 +44,7 @@
     $formControl-color--hover       : darken(dt.$color-orange, dt.$color-hover-01);
     $formControl-background-color   : dt.$color-background-default;
     $formControl-margin-left        : 0;
-    $formControl-padding-left       : spacing.spacing(f);
+    $formControl-padding-left       : functions.spacing(f);
     $formControl-width              : 24px;
     $formControl-width--wide        : 20px;
     $formControl-height             : 24px;
@@ -58,7 +57,7 @@
         display: block;
         cursor: pointer;
         user-select: none;
-        padding: spacing.spacing();
+        padding: functions.spacing();
         padding-left: $formControl-padding-left;
 
         &:hover .o-formControl-indicator {
@@ -85,7 +84,7 @@
         .o-formControl-input {
             position: absolute;
             opacity: 0;
-            z-index: zIndex.zIndex(lowest); // Put the input behind the label so it doesn't overlay text
+            z-index: functions.zIndex(lowest); // Put the input behind the label so it doesn't overlay text
 
             &:focus {
                 & + .o-formControl-indicator { @extend %u-elementFocus; }
@@ -151,8 +150,8 @@
 
         .o-formControl-icon {
             background-position: center 0;
-            left: spacing.spacing();
-            min-width: spacing.spacing(c);
+            left: functions.spacing();
+            min-width: functions.spacing(c);
             position: absolute;
         }
 

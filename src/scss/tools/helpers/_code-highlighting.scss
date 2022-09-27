@@ -1,7 +1,7 @@
 @use '../../settings/variables' as v;
 @use '../../settings/include-media' as *;
 @use '../../tools/mixins/type';
-@use '../../tools/functions/spacing' as spacing;
+@use '../../tools/functions/index' as functions;
 
 /**
  * Code Highlighting
@@ -49,7 +49,7 @@ code[class*='language-'] ::selection {
 /* Code blocks */
 pre[class*='language-'] {
     padding: 1em;
-    margin: spacing.spacing(d) 0;
+    margin: functions.spacing(d) 0;
     overflow: auto;
 }
 
@@ -169,7 +169,7 @@ code {
 pre {
     display: block;
     padding: floor(v.$spacing(d) / 2);
-    margin: spacing.spacing(d) 0;
+    margin: functions.spacing(d) 0;
     color: $pre-textColor;
     background-color: $pre-bgColor;
     white-space: pre;

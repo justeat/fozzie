@@ -1,6 +1,6 @@
 @use '../../settings/include-media' as *;
 @use '../../tools/mixins/type';
-@use '../../tools/functions/spacing' as spacing;
+@use '../../tools/functions/index' as functions;
 
 @mixin appsBanner() {
     /**
@@ -49,7 +49,7 @@
             .c-appsBanner-image {
                 overflow: hidden;
                 max-width: 120px;
-                margin-top: spacing.spacing(d);
+                margin-top: functions.spacing(d);
                 grid-column: 1;
                 grid-row: 2;
 
@@ -66,7 +66,7 @@
             }
 
             .c-appsBanner-content {
-                margin-left: spacing.spacing(d);
+                margin-left: functions.spacing(d);
                 grid-column: 2;
                 grid-row: 2;
 
@@ -79,17 +79,17 @@
                 }
 
                 p {
-                    margin-top: spacing.spacing(d);
+                    margin-top: functions.spacing(d);
 
                     @include media('>=mid') {
-                        margin-top: spacing.spacing();
+                        margin-top: functions.spacing();
                     }
                 }
             }
         }
 
         .c-appsBanner-buttons {
-            margin-top: spacing.spacing(e);
+            margin-top: functions.spacing(e);
         }
 
         .c-appsBanner-appBtn {

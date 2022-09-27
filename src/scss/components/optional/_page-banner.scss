@@ -1,7 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/variables' as v;
 @use '../../settings/include-media' as *;
-@use '../../tools/functions/zIndex' as zIndex;
+@use '../../tools/functions/index' as functions;
 
 @mixin pageBanner() {
     /**
@@ -104,7 +104,7 @@
                 bottom: -1px;
                 left: 0;
                 width: 100%;
-                z-index: zIndex.zIndex(low);
+                z-index: functions.zIndex(low);
 
                 @include media('>=mid') {
                     background: url('#{v.$img-path-url}/decoration/rays--white--wide.svg') no-repeat bottom left;
@@ -122,7 +122,7 @@
             left: 0;
             right: 0;
             width: 100.1%;
-            z-index: zIndex.zIndex(low);
+            z-index: functions.zIndex(low);
             bottom: -$rays--coloured-spacing;
 
             @include media('>=mid') {

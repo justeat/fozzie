@@ -1,5 +1,5 @@
 @use '../../settings/include-media' as *;
-@use '../../tools/functions/spacing' as spacing;
+@use '../../tools/functions/index' as functions;
 
 @mixin overflowCarousel() {
     /**
@@ -18,7 +18,7 @@
 
     .c-overflowCarousel {
         @include media('<mid') {
-            margin: 0 -#{spacing.spacing(d)};
+            margin: 0 -#{functions.spacing(d)};
         }
     }
 
@@ -59,26 +59,26 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: spacing.spacing() spacing.spacing(d);
+        padding: functions.spacing() functions.spacing(d);
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
 
         //add spacing after the last element
         &:after {
             content: '';
-            flex: 0 0 spacing.spacing(d);
+            flex: 0 0 functions.spacing(d);
         }
 
         @include media('>mid') {
-            padding: spacing.spacing(d) spacing.spacing(f) spacing.spacing();
+            padding: functions.spacing(d) functions.spacing(f) functions.spacing();
         }
 
         .c-overflowCarousel-item {
             flex: 1 0 auto;
-            margin-right: spacing.spacing();
+            margin-right: functions.spacing();
 
             @include media('>=mid') {
-                margin-right: spacing.spacing(d);
+                margin-right: functions.spacing(d);
             }
         }
     }
@@ -105,6 +105,6 @@
 @mixin overflowCarouselContent() {
     display: inline-flex;
     white-space: nowrap;
-    padding-left: spacing.spacing(d);
-    padding-right: spacing.spacing(d);
+    padding-left: functions.spacing(d);
+    padding-right: functions.spacing(d);
 }
