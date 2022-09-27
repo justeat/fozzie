@@ -8,6 +8,16 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Update to use latest v2 PIE design tokens
 
+v10.3.0
+------------------------------
+*September 26, 2022*
+
+### Added
+- Variables `$star-icon-path--filled` & `$star-icon-path--empty`.
+
+### Changed
+- `ratings` optional component to read from variables file for consuming applications to set custom paths for svg star icons.
+
 
 v10.2.0
 ------------------------------

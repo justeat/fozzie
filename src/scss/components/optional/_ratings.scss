@@ -1,5 +1,6 @@
 @use '../../tools/mixins/type';
 @use '../../tools/mixins/ratings';
+@use '../../settings/variables' as v;
 
 @mixin rating() {
     /**
@@ -22,7 +23,7 @@
     $star-size--large           : 42px;
 
     .c-rating {
-        @extend %c-icon--star--empty !optional;
+        background-image: inline(#{v.$star-icon-path--empty});
         background-repeat: repeat-x;
         display: inline-block;
         height: $star-size--default;
@@ -125,7 +126,7 @@
     }
 
     .c-rating--fill {
-        @extend %c-icon--star--fill !optional;
+        background-image: inline(#{v.$star-icon-path--filled});
         vertical-align: top;
         background-repeat: repeat-x;
         display: inline-block;
@@ -149,7 +150,7 @@
         &:checked {
             & + label,
             & ~ input + label {
-                @extend %c-icon--star--fill !optional;
+                background-image: inline(#{v.$star-icon-path--filled});
             }
        }
     }
@@ -165,12 +166,12 @@
     .c-icon--star {
         display: block;
         cursor: pointer;
-        @extend %c-icon--star--empty !optional;
+        background-image: inline(#{v.$star-icon-path--empty});
         @extend %u-hideText;
 
         &:hover,
         &:hover ~ label {
-            @extend %c-icon--star--fill !optional;
+            background-image: inline(#{v.$star-icon-path--filled});
         }
     }
 
