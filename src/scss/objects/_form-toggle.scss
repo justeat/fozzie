@@ -1,9 +1,9 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/include-media' as *;
-@use '../tools/functions/spacing';
+@use '../tools/functions/index' as functions;
 @use 'sass:math';
 
-$formToggle-padding                 : spacing.spacing() !default;
+$formToggle-padding                 : functions.spacing() !default;
 $formToggle-border-color            : dt.$color-border-default;
 $formToggle-border-color--interact  : dt.$color-border-strong;
 $formToggle-border-color--checked   : dt.$color-green;
@@ -36,7 +36,7 @@ $formToggle-text--checked           : dt.$color-green;
     .o-formToggle {
         position: relative;
         display: inline-block;
-        margin-bottom: spacing.spacing();
+        margin-bottom: functions.spacing();
         border-radius: $formToggle-border-radius;
         padding: math.div($formToggle-padding, 2) $formToggle-padding;
         border: $formToggle-border-width solid $formToggle-border-color;
@@ -47,7 +47,7 @@ $formToggle-text--checked           : dt.$color-green;
     }
 
         .o-formToggle--button {
-            padding-left: spacing.spacing(f);
+            padding-left: functions.spacing(f);
             color: $formToggle-button-color;
             background: $formToggle-button-background;
             border-color: $formToggle-button-background;
@@ -64,7 +64,7 @@ $formToggle-text--checked           : dt.$color-green;
         //Used alongside the default styles but for a larger tap area (min 44px) on narrow screens
         .o-formToggle--largeTouchArea {
             @include media('<mid') {
-                margin: spacing.spacing() 0 spacing.spacing() spacing.spacing(a);
+                margin: functions.spacing() 0 functions.spacing() functions.spacing(a);
             }
         }
 
@@ -105,7 +105,7 @@ $formToggle-text--checked           : dt.$color-green;
         .o-formToggle--largeAboveMid {
             @include media('>=mid') {
                 float: left;
-                margin: 0 0 spacing.spacing();
+                margin: 0 0 functions.spacing();
                 @include formToggle-large();
             }
         }
@@ -191,7 +191,7 @@ $formToggle-text--checked           : dt.$color-green;
                 height: 10px;
                 position: absolute;
                 margin-top: -4px;
-                left: spacing.spacing();
+                left: functions.spacing();
                 display: inline-block;
                 transform: rotate(-45deg) scale(0.5);
                 transition: transform 200ms ease, opacity 250ms ease;
@@ -231,12 +231,12 @@ $formToggle-text--checked           : dt.$color-green;
 
         .o-formToggle-count {
             pointer-events: none;
-            padding-left: spacing.spacing();
+            padding-left: functions.spacing();
 
             @include media('>mid') {
                 top: 50%;
                 padding-left: 0;
-                right: spacing.spacing();
+                right: functions.spacing();
                 position: absolute;
                 transform: translateY(-50%);
             }
@@ -253,7 +253,7 @@ $formToggle-text--checked           : dt.$color-green;
     width: calc(50% - 4px);
 
     &:nth-child(2n) {
-        margin-left: spacing.spacing();
+        margin-left: functions.spacing();
     }
 }
 

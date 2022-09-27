@@ -1,8 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
 @use '../../tools/mixins/type';
-@use '../../tools/functions/zIndex';
-@use '../../tools/functions/spacing';
+@use '../../tools/functions/index' as functions;
 @use '../../settings/variables' as v;
 
 @mixin orderCard() {
@@ -97,7 +96,7 @@
             position: absolute;
             bottom: -1px;
             left: 0;
-            z-index: zIndex.zIndex(low);
+            z-index: functions.zIndex(low);
         }
     }
 
@@ -125,8 +124,8 @@
         @include type.font-size(22px);
         color: dt.$color-blue;
         text-align: center;
-        margin-top: spacing.spacing();
-        padding: 2px spacing.spacing(c) spacing.spacing(c);
+        margin-top: functions.spacing();
+        padding: 2px functions.spacing(c) functions.spacing(c);
         border-top: 1px solid dt.$color-border-subtle;
     }
 
@@ -140,7 +139,7 @@
 
     .c-orderCard-date {
         margin-top: 0;
-        margin-bottom: spacing.spacing();
+        margin-bottom: functions.spacing();
         color: dt.$color-support-neutral;
         display: block;
     }
@@ -158,13 +157,13 @@
     }
 
     .c-orderCard-orderTotal {
-        margin-right: spacing.spacing();
-        margin-left: spacing.spacing(e);
+        margin-right: functions.spacing();
+        margin-left: functions.spacing(e);
         align-self: flex-end;
     }
 
     .c-orderCard-content {
-        padding: spacing.spacing() spacing.spacing(d) 0;
+        padding: functions.spacing() functions.spacing(d) 0;
         color: dt.$color-content-interactive-tertiary;
         flex: 1 0 auto;
         display: flex;
@@ -172,11 +171,11 @@
     }
 
     .c-orderCard-yourFavourites-content {
-        padding: spacing.spacing() spacing.spacing(d);
+        padding: functions.spacing() functions.spacing(d);
     }
 
     .c-orderCard-content--defaultMessage {
-        padding: 0 spacing.spacing(d);
+        padding: 0 functions.spacing(d);
         @include type.font-size(body-l, false);
     }
 
@@ -193,22 +192,22 @@
     }
 
     .c-orderCard--inactive {
-        margin-left: spacing.spacing(f);
+        margin-left: functions.spacing(f);
     }
 
     .c-orderCard-header {
         flex-direction: row;
         align-items: baseline;
         display: flex;
-        margin-left: spacing.spacing(d);
+        margin-left: functions.spacing(d);
 
         @include media('>mid') {
-            margin-left: spacing.spacing(f);
+            margin-left: functions.spacing(f);
         }
     }
 
     .c-orderCard-seeAllText {
         width: fit-content;
-        margin-left: spacing.spacing(d);
+        margin-left: functions.spacing(d);
     }
 }

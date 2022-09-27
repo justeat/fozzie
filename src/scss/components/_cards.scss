@@ -1,7 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/include-media' as *;
 @use '../tools/mixins/truncate';
-@use '../tools/functions/spacing';
+@use '../tools/functions/index' as functions;
 
 @mixin cards() {
     /**
@@ -20,12 +20,12 @@
     $card-bgColor--disabled                         : dt.$color-container-subtle;
     $card-tooltip-width                             : 10px;
     $card-arrow-bottom-position                     : 0;
-    $card-padding                                   : spacing.spacing(d);
+    $card-padding                                   : functions.spacing(d);
     $card-radius                                    : dt.$radius-rounded-c;
     $card-borderColor                               : dt.$color-border-default;
     $card-info-bgColor--active                      : dt.$color-support-warning-02;
-    $card-section-margin                            : spacing.spacing(f);
-    $card-section-margin--large                     : spacing.spacing(i);
+    $card-section-margin                            : functions.spacing(f);
+    $card-section-margin--large                     : functions.spacing(i);
     $card-section-highlight-backgroundColor         : dt.$color-support-brand-02;
     $card-section-highlight-color                   : dt.$color-content-default;
     $card-section-collapsible-paddingRight          : 60px;
@@ -35,7 +35,7 @@
     .c-card {
         background-color: $card-bgColor--active;
         display: block;
-        margin-bottom: spacing.spacing();
+        margin-bottom: functions.spacing();
         padding: $card-padding;
         position: relative;
 
@@ -73,29 +73,29 @@
 
             .c-card--padBottom--belowMid {
                 @include media('<mid') {
-                    padding-bottom: spacing.spacing(f);
+                    padding-bottom: functions.spacing(f);
                 }
             }
 
         // stretches the card contents outside of their container
         .c-card--negativeSpacing {
-            margin-left: -#{spacing.spacing(d)};
-            margin-right: -#{spacing.spacing(d)};
-            padding-left: spacing.spacing(d);
-            padding-right: spacing.spacing(d);
+            margin-left: -#{functions.spacing(d)};
+            margin-right: -#{functions.spacing(d)};
+            padding-left: functions.spacing(d);
+            padding-right: functions.spacing(d);
         }
 
             .c-card--negativeSpacing--belowMid {
                 @include media('<mid') {
-                    margin-left: -#{spacing.spacing(d)};
-                    margin-right: -#{spacing.spacing(d)};
+                    margin-left: -#{functions.spacing(d)};
+                    margin-right: -#{functions.spacing(d)};
                 }
             }
 
             .c-card--negativeSpacing--belowMid--small {
                 @include media('<mid') {
-                    margin-left: -#{spacing.spacing()};
-                    margin-right: -#{spacing.spacing()};
+                    margin-left: -#{functions.spacing()};
+                    margin-right: -#{functions.spacing()};
                 }
             }
 
@@ -154,14 +154,14 @@
 
         // creates a section which is separated off by a border on larger screens
         .c-card-section {
-            margin-left: -#{spacing.spacing(d)};
-            padding-left: spacing.spacing(d);
+            margin-left: -#{functions.spacing(d)};
+            padding-left: functions.spacing(d);
             width: calc(100% + #{$card-section-margin});
 
             @include media('>=mid') {
                 border-top: solid 1px $card-borderColor;
-                margin-left: -#{spacing.spacing(d)};
-                padding-left: spacing.spacing(e);
+                margin-left: -#{functions.spacing(d)};
+                padding-left: functions.spacing(e);
             }
         }
 
@@ -170,8 +170,8 @@
                 background-color: $card-section-highlight-backgroundColor;
                 border-top: none;
                 color: $card-section-highlight-color;
-                margin-top: spacing.spacing(d);
-                padding: spacing.spacing(a) spacing.spacing();
+                margin-top: functions.spacing(d);
+                padding: functions.spacing(a) functions.spacing();
 
                 + .c-card-section--highlight {
                     margin-top: 1px;
@@ -190,7 +190,7 @@
 
             .c-card-section--collapsible {
                 overflow: hidden;
-                padding-bottom: spacing.spacing(d);
+                padding-bottom: functions.spacing(d);
                 padding-right: $card-section-collapsible-paddingRight;
                 position: relative;
                 user-select: none;
@@ -200,7 +200,7 @@
                     padding-right: $card-section-collapsible-paddingRight;
 
                     &.c-card-section {
-                        margin-bottom: spacing.spacing(d);
+                        margin-bottom: functions.spacing(d);
 
                         &.has-noSpacing {
                             margin-bottom: 0;
@@ -214,13 +214,13 @@
             }
 
             .c-card-section--collapsible--noPad {
-                margin-left: -#{spacing.spacing(f)};
-                padding: 0 $card-section-collapsible-paddingRight 0 spacing.spacing(d);
+                margin-left: -#{functions.spacing(f)};
+                padding: 0 $card-section-collapsible-paddingRight 0 functions.spacing(d);
                 width: calc(100% + #{$card-section-margin--large});
 
                 @include media('>=mid') {
-                    margin-left: -#{spacing.spacing(d)};
-                    padding: 0 $card-section-collapsible-paddingRight 0 spacing.spacing(e);
+                    margin-left: -#{functions.spacing(d)};
+                    padding: 0 $card-section-collapsible-paddingRight 0 functions.spacing(e);
                     width: calc(100% + #{$card-section-margin});
                 }
             }
@@ -243,7 +243,7 @@
                 height: 6px;
                 display: none;
                 position: absolute;
-                right: spacing.spacing(d);
+                right: functions.spacing(d);
                 top: 22px;
                 transform: rotate(180deg);
                 transition: transform 0.4s;
@@ -251,7 +251,7 @@
 
                 @include media('>=mid') {
                     height: 8px;
-                    right: spacing.spacing(e);
+                    right: functions.spacing(e);
                     width: 14px;
                 }
 
@@ -267,7 +267,7 @@
                     right: 21px;
 
                     @include media('>=mid') {
-                        right: spacing.spacing(e);
+                        right: functions.spacing(e);
                     }
                 }
             }

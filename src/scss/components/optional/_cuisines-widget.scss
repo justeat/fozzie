@@ -1,7 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../tools/mixins/type';
 @use '../../settings/include-media' as *;
-@use '../../tools/functions/spacing';
+@use '../../tools/functions/index' as functions;
 
 @mixin cuisinesWidget() {
     /**
@@ -27,8 +27,8 @@
             position: relative;
             background-color: $cuisinesWidget-defaultBackground;
             box-shadow: dt.$elevation-01; // token values for cards
-            margin-top: spacing.spacing();
-            margin-bottom: spacing.spacing();
+            margin-top: functions.spacing();
+            margin-bottom: functions.spacing();
 
             &:hover,
             &:focus {
@@ -43,14 +43,14 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: spacing.spacing(d) spacing.spacing(d) spacing.spacing();
+            padding: functions.spacing(d) functions.spacing(d) functions.spacing();
             color: dt.$color-container-default;
             text-align: center;
             background-image: $cuisinesWidget-gradient;
 
             @include media('>=mid-wide') {
                 @include type.font-size(heading-m, false);
-                padding: spacing.spacing(d);
+                padding: functions.spacing(d);
             }
         }
 

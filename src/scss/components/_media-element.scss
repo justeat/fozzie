@@ -1,7 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../tools/mixins/type';
 @use '../settings/include-media' as *;
-@use '../tools/functions/spacing';
+@use '../tools/functions/index' as functions;
 @use 'sass:math';
 
 @mixin mediaElement() {
@@ -24,7 +24,7 @@
     $mediaElement-img-borderRadius  : dt.$radius-rounded-c;
     $mediaElement-infoLinkColor     : dt.$color-content-link-distinct;
     $mediaElement-fontSize          : body-l;
-    $mediaElement-spacing           : spacing.spacing(d);
+    $mediaElement-spacing           : functions.spacing(d);
 
 
     // mediaElement module
@@ -36,7 +36,7 @@
 
         & > :not(:last-child) {
             @include media('>=mid') {
-                margin-right: spacing.spacing(b);
+                margin-right: functions.spacing(b);
             }
         }
     }
@@ -94,7 +94,7 @@
                 }
 
                 @include media('>=mid') {
-                    margin-top: math.div(spacing.spacing(b), 4);
+                    margin-top: math.div(functions.spacing(b), 4);
                 }
 
                 @include media('>=wide') {
@@ -126,7 +126,7 @@
         }
 
         .c-mediaElement-heading {
-            margin: spacing.spacing(h) 0 spacing.spacing(d);
+            margin: functions.spacing(h) 0 functions.spacing(d);
         }
 
         .c-mediaElement-content {
@@ -135,12 +135,12 @@
 
             .c-mediaElement--fullstack & {
                 flex: auto;
-                margin-top: spacing.spacing(a);
+                margin-top: functions.spacing(a);
             }
 
             .c-mediaElement--fullstack--negativeTop & {
                 flex: auto;
-                margin-top: spacing.spacing(f);
+                margin-top: functions.spacing(f);
             }
 
             // some content uses br for content shaping – get rid of it on mobile devices
@@ -172,8 +172,8 @@
             top: $mediaElement-spacing;
 
             @include media('<mid') {
-                right: spacing.spacing(d);
-                top: spacing.spacing(d);
+                right: functions.spacing(d);
+                top: functions.spacing(d);
             }
 
             &:hover,

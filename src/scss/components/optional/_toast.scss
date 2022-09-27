@@ -1,7 +1,6 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
-@use '../../tools/functions/spacing';
-@use '../../tools/functions/zIndex';
+@use '../../tools/functions/index' as functions;
 
 @mixin toast() {
     /**
@@ -65,12 +64,12 @@
         color: $toast-textColor;
         height: $toast-height;
         opacity: 0.9;
-        padding: spacing.spacing();
+        padding: functions.spacing();
         position: absolute;
         text-align: center;
         transform: translateY($toast-translateY);
         width: calc(100% - 16px);
-        z-index: zIndex.zIndex(low);
+        z-index: functions.zIndex(low);
 
         @include media('>=narrow') {
             animation: toastSlideUp--aboveNarrow $toast-animation-duration;

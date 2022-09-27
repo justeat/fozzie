@@ -1,9 +1,8 @@
 @use '../../settings/variables' as v;
-@use '../functions/units';
-@use '../functions/px-to-em';
+@use '../functions/index' as functions;
 
 // Lifted out of the variables file to fix circular reference issues
-$fozzie-breakpoints: px-to-em.map-to-em((
+$fozzie-breakpoints: functions.map-to-em((
     tiny       : 375px,
     narrow     : 414px,    // narrow devices
     narrowMid  : 600px,    // narrow-mid tweakpoint
@@ -14,7 +13,7 @@ $fozzie-breakpoints: px-to-em.map-to-em((
 
 @function populate-breakpoints() {
     $breakpointString: '';
-    $breakpointsPx: units.map-to-px($fozzie-breakpoints, 16);
+    $breakpointsPx: functions.map-to-px($fozzie-breakpoints, 16);
 
     @each $name, $value in $breakpointsPx {
         $breakpointString: $breakpointString + '#{$name}:#{$value},';

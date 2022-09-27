@@ -1,7 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../components/optional/loading-indicator';
 @use '../tools/mixins/type';
-@use '../tools/functions/spacing';
+@use '../tools/functions/index' as functions;
 @use '../settings/include-media' as *;
 @use '../trumps/utilities' as *;
 
@@ -20,7 +20,7 @@
     $btn-default-borderRadius              : dt.$radius-rounded-e;
     $btn-default-font-size                 : 'heading-s';
     $btn-default-weight                    : dt.$font-weight-bold;
-    $btn-default-padding                   : 10px spacing.spacing(e);
+    $btn-default-padding                   : 10px functions.spacing(e);
     $btn-default-outline-color             : dt.$color-focus;
 
     $btn-default-bgColor                   : dt.$color-interactive-brand;
@@ -65,14 +65,14 @@
     $btn-disabled-bgColor                  : dt.$color-disabled-01;
     $btn-disabled-textColor                : dt.$color-content-disabled;
 
-    $btn-sizeLarge-padding                 : 14px spacing.spacing(e);
+    $btn-sizeLarge-padding                 : 14px functions.spacing(e);
     $btn-sizeLarge-loading-color           : dt.$color-content-interactive-light;
 
     $btn-sizeSmall-font-size               : 'body-l';
-    $btn-sizeSmall-padding                 : spacing.spacing() spacing.spacing(d);
+    $btn-sizeSmall-padding                 : functions.spacing() functions.spacing(d);
 
     $btn-sizeXSmall-font-size              : 'body-s';
-    $btn-sizeXSmall-padding                : 6px spacing.spacing();
+    $btn-sizeXSmall-padding                : 6px functions.spacing();
 
     @include loading-indicator.loadingIndicator('medium');
 
@@ -137,7 +137,7 @@
         }
 
         p + & {
-            margin-top: spacing.spacing(d);
+            margin-top: functions.spacing(d);
         }
 
         & .note {
@@ -148,7 +148,7 @@
             }
         }
         &[type='submit'] {
-            margin-top: spacing.spacing(d);
+            margin-top: functions.spacing(d);
         }
     }
 
@@ -346,7 +346,7 @@
         // Vertically space out multiple fullWidth buttons
         // same as .o-btn--fullWidth + .o-btn--fullWidth
         & + & {
-            margin-top: spacing.spacing();
+            margin-top: functions.spacing();
         }
     }
 
