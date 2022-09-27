@@ -1,7 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../settings/variables' as v;
 @use '../tools/functions/units';
-@use '../tools/functions/spacing' as spacing;
+@use '../tools/functions/spacing';
 
 @mixin tables() {
   /**

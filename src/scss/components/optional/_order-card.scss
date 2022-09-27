@@ -1,8 +1,8 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/include-media' as *;
 @use '../../tools/mixins/type';
-@use '../../tools/functions/zIndex' as zIndex;
-@use '../../tools/functions/spacing' as spacing;
+@use '../../tools/functions/zIndex';
+@use '../../tools/functions/spacing';
 @use '../../settings/variables' as v;
 
 @mixin orderCard() {

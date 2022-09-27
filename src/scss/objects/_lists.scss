@@ -1,6 +1,6 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../tools/mixins/type';
-@use '../tools/functions/spacing' as spacing;
+@use '../tools/functions/spacing';
 
 @mixin lists() {
     /**

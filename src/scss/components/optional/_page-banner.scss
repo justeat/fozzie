@@ -1,7 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../settings/variables' as v;
 @use '../../settings/include-media' as *;
-@use '../../tools/functions/zIndex' as zIndex;
+@use '../../tools/functions/zIndex';
 
 @mixin pageBanner() {
     /**

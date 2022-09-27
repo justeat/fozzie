@@ -1,7 +1,7 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../tools/mixins/type';
 @use '../../settings/include-media' as *;
-@use '../../tools/functions/spacing' as spacing;
+@use '../../tools/functions/spacing';
 
 @mixin contentHeader() {
     /**

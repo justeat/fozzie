@@ -1,7 +1,7 @@
 @use '../settings/variables' as v;
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../tools/mixins/type';
-@use '../tools/functions/spacing' as spacing;
+@use '../tools/functions/spacing';
 @use '../settings/include-media' as *;
 
 @mixin typography() {

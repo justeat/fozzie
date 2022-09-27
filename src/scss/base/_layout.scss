@@ -2,7 +2,7 @@
 @use '../settings/variables' as v;
 @use '../settings/include-media' as *;
 @use '../tools/mixins/type';
-@use '../tools/functions/spacing' as spacing;
+@use '../tools/functions/spacing';
 
 @mixin layout() {
     /**

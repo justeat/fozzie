@@ -1,8 +1,8 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 @use '../../tools/mixins/type';
 @use '../../tools/mixins/truncate';
-@use '../../tools/functions/spacing' as spacing;
-@use '../../tools/functions/zIndex' as zIndex;
+@use '../../tools/functions/spacing';
+@use '../../tools/functions/zIndex';
 @use '../../settings/include-media' as *;
 
 @mixin menu() {
