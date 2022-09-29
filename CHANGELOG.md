@@ -8,6 +8,14 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 - Update to use latest v2 PIE design tokens
 
+v10.5.0
+------------------------------
+*September 29, 2022*
+
+### Changed
+- Reverted box-shadow to custom value.
+
+
 v10.4.0
 ------------------------------
 *September 27, 2022*
