@@ -16,7 +16,7 @@ $includeMinimalFramework: false !default;
 
 //import our scss file dependencies
 @forward 'dependencies';
-@use 'dependencies' as d;
+
 /**
 * Templates for including base sets of styles
 */
