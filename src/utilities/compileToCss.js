@@ -1,8 +1,5 @@
 const sass = require('sass');
 const getSubdirectories = require('./getSubdirectories');
-// const path = require('path');
-
-// const scssAbsolutePath = path.join(path.resolve(__dirname), '..', 'test', 'scss', 'data', 'fozzie-snapshot.scss');
 
 /**
  * Compiles an SCSS file or string into to a string of CSS
@@ -60,11 +57,6 @@ const compileToCSS = ({
 
     return result.css;
 };
-
-// const cssResult = compileToCSS({ scssPath: scssAbsolutePath, useLegacyRenderer: false });
-// console.log(cssResult);
-// const cssResult2 = compileToCSS({ scssPath: scssAbsolutePath, scssString: "@use 'fozzie' as f;", useLegacyRenderer: false });
-// console.log(cssResult2);
 
 module.exports = {
     compileToCSS
