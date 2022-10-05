@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Compiled CSS output compiles and matches snapshot 1`] = `
+exports[`Compiled CSS output compiles the expected CSS 1`] = `
 "@charset "UTF-8";
 /* stylelint-disable indentation */
 /* stylelint-enable */
@@ -211,61 +211,6 @@ exports[`Compiled CSS output compiles and matches snapshot 1`] = `
 /**
 * Templates for including base sets of styles
 */
-/**
-* Components > Cookie Warning
-* =================================
-*
-* The \`c-cookieWarning\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include cookieWarning();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
-.c-cookieWarning {
-  background-color: #303d3f;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 9000;
-}
-.c-cookieWarning p {
-  font-size: 12px;
-  font-size: 0.75rem;
-  color: #fff;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.c-cookieWarning-inner {
-  margin: 0 auto;
-  padding: 8px;
-  padding-right: 24px;
-  overflow: hidden;
-}
-
-.c-cookieWarning-btn {
-  display: block;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 10px;
-  height: 10px;
-  background: url("//dy3erx8o0a6nh.cloudfront.net/images/icon-close-banner.png") no-repeat center center;
-  background-size: 10px 10px;
-  border: none;
-}
-.c-cookieWarning-btn:hover, .c-cookieWarning-btn:active, .c-cookieWarning-btn:focus {
-  background-color: #dbd9d7;
-  cursor: pointer;
-}
-
-.c-cookieWarning-link {
-  color: #fff;
-}
-.c-cookieWarning-link:hover, .c-cookieWarning-link:active, .c-cookieWarning-link:focus {
-  color: #fff;
-}
-
 /**
 * Basic Usage:
 * =================================
@@ -8733,4 +8678,159 @@ em.u-text-highlight {
 .test-output .u-pad-j--top {
   padding-top: 80px;
 }"
+`;
+
+exports[`Compiled CSS output does not render any CSS if nothing is called 1`] = `
+"@charset "UTF-8";
+/* stylelint-disable indentation */
+/* stylelint-enable */
+/**
+ * Strip units
+ * =================================
+ * Remove the unit of a measurement
+ *
+ * Usage:
+ * strip-units(400px)  > 400
+ */
+/**
+ * px to em converter
+ * =================================
+ * Convert pixels to ems
+ *
+ * Usage:
+ * font-size : em(12);
+ * font-size : em(12, 24); // If the parent is another value say 24px
+ */
+/**
+ * Convert a map of breakpoints to ems
+ * =================================
+ * Takes a map of breakpoints (in px) and a base-font-size
+ *
+ * Usage:
+ $breakpoints: map-to-em((
+ 	narrow : 400px,
+ 	mid    : 750px,
+ 	wide   : 1000px,
+ 	huge   : 1250px
+ ), 16);
+ */
+/**
+ * @param {String} $key – The type key you would like to reference. These are mapped to the PIE type definitions.
+ * @param {Boolean} $line-height – Specifies whether the relevant \`line-height\` is output alongside the \`font-size\` declaration.
+ * @param {String} $scale – Defines which sub-type scale definition to output from the Sass type-map.
+ * @param {Boolean} $relativeToParent – When set to true, the mixin will output the \`font-size\` as \`em\`s rather than \`rem\`s. By default, the \`font-size\` is defined relative to the root element.
+ */
+/**
+ * Extends default $spacing map with an empty entry at the start
+ */
+/**
+ * The Kickoff Flexbox Grid
+ * =================================
+ * Default grid classes
+ * Grid gutter options
+ * Modifier Classes (column height and cell alignment)
+ * Legacy fallbacks for flexbox
+ * Grid span classes
+ * Breakpoint stacking
+ */
+/* Import Grid helpers and mixins */
+/**
+ * Kickoff grid helpers
+ */
+/**
+* Grid stacking
+* Stack grids based on a given breakpoint
+*
+* Usage:
+* .g--stack--narrow
+* .g--stack--wide
+*/
+/**
+* Gutter Calculations
+* Default: percent
+* Usage: ko-gutterCalc() or ko-gutterCalc(false)
+* When show-unit is true, returns the percentage, otherwise return a decimal
+*/
+/**
+* Grid columns width calculations
+* This is where the magic of working out the column widths happens
+*
+* $column-span: define the width for the number of columns required
+* $show-unit: Switch return value between percentage (default) and decimal
+* $include-gutters: if gutters should be included in the calculations. Default = false
+* $legacy-calc: if we are working out a legacy column width calculation, or not. Default = false
+*/
+/**
+* Column width mixin
+* Usage:
+* @include column(2);
+*/
+/**
+* Components > Spinner Indicator
+* =================================
+*
+* Example: f-searchbox -  Loqate feature enabled (Full address capture)
+*
+* If you'd like to use it in your project you can include it by adding \`@include loadingIndicator();\` into your SCSS dependencies file.
+* Then add \`<span class=“c-spinner” />\` to your html;
+* If you’d like to change spinner colour add \`@include spinnerColor(mainColourVar, opaqueColourVar);\` to the parent element of the spinner styles.
+*/
+@keyframes skeletonGradient {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/**
+ * Just Eat Styleguide
+ * =================================
+ */
+/**
+ * Objects
+ * =================================
+ * Styles apply to an object if they are directly associated to a HTML element.
+ * If not, the styles should be defined as a component.
+ *
+ * For example, it would be expected to have:
+ * 	links.scss > styles relating to links (<a> tag)
+ * 	tables.scss > styles relating to tables
+ *
+ * Object styles should be prefixed with \`.o-\`
+ */
+/**
+ * Components:
+ * =================================
+ * Components are our resuable chunks of styling that aren’t directly associated to a base tag
+ *
+ * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with \`.c-\`
+ */
+/**
+ * Utility classes
+ * =====================================
+ * These should always come last as they should 'trump' other properties
+ */
+/**
+ * Print styles
+ */
+/**
+ * Setting $includeBaseFramework to \`true\` includes the base styles that were included
+ * as part of Fozzie v4 (useful for anyone upgrading that wants to keep things as-is)
+**/
+/**
+ * Setting $includeMinimalFramework to \`true\` includes a recommended base set of styles
+ * that provides styling for most use-cases (links, lists, buttons, grid)
+ **/
+/**
+ * Setting $includeBaseFramework to \`true\` includes the base styles that were included
+ * as part of Fozzie v4 (useful for anyone upgrading that wants to keep things as-is)
+ **/
+/**
+ * Setting $includeMinimalFramework to \`true\` includes a recommended base set of styles
+ * that provides styling for most use-cases (links, lists, buttons, grid)
+ **/
+/**
+* Templates for including base sets of styles
+*/"
 `;

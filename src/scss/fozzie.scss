@@ -25,5 +25,3 @@ $includeMinimalFramework: false !default;
   $includeBaseFramework: $includeBaseFramework,
   $includeMinimalFramework: $includeMinimalFramework
   );
-
-  @include d.cookieWarning();
