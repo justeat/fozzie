@@ -22,6 +22,7 @@ v10.6.0
 - Fixed a number of `line-height()` calls in `_order-card.scss` to be called with the `functions` namespace
 - Removed an invalid `solid` used as part of a `box-shadow` declaration in `_buttons.scss` (invalid CSS)
 - Moved `sass` and `glob` from dev dependencies to regular dependencies to remove `extraneous-dependencies` lint errors from files using them
+- Changed declaration orders of `$line-height-base` and `line-height` function in `_units.scss` to fix compiled CSS output
 
 
 v10.5.0
