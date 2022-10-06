@@ -24,4 +24,4 @@ $includeMinimalFramework: false !default;
 @forward 'templates' with (
   $includeBaseFramework: $includeBaseFramework,
   $includeMinimalFramework: $includeMinimalFramework
-  );
+);
