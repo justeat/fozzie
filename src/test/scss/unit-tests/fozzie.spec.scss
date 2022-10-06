@@ -146,7 +146,7 @@
             @include systemUnderTest.font-size('body-l', true, 'default', false);
 
             @include systemUnderTest.spacing-classes(systemUnderTest.$spacing-map, 'pad', 'top') using ($spacing-value) {
-                padding-top: spacing(#{$spacing-value});
+                padding-top: systemUnderTest.spacing(#{$spacing-value});
             }
         }
 

@@ -109,7 +109,7 @@
         text-decoration: none;
 
         &:focus {
-            box-shadow: 0 0 0 2px solid $btn-default-outline-color;
+            box-shadow: 0 0 0 2px $btn-default-outline-color;
         }
 
         &:hover {

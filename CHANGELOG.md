@@ -6,7 +6,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 Future Todo List
 ------------------------------
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
-- Update to use latest v2 PIE design tokens
+
+
+v10.6.0
+------------------------------
+*October 6, 2022*
+
+### Added
+- SCSS compilation utilities
+- Snapshot test of compiled Fozzie CSS
+- A (disabled) validity test of compiled Fozzie CSS using StyleLint (to be enabled in a future piece of work)
+- Disable `eslint` extraneous-dependencies rule for project
+
+### Changed
+- Fixed an `em()` call in `_modal.scss` to be called with the `functions` namespace
+- Fixed a number of `line-height()` calls in `_order-card.scss` to be called with the `functions` namespace
+- Removed an invalid `solid` used as part of a `box-shadow` declaration in `_buttons.scss` (invalid CSS)
+- Changed declaration orders of `$line-height-base` and `line-height` function in `_units.scss` to fix compiled CSS output
+
 
 v10.5.0
 ------------------------------
