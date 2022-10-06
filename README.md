@@ -80,4 +80,6 @@ We use a library called `sass-true` to enable writing unit tests for sass functi
 
 ### Snapshot Testing
 
-We use `Jest` to write snapshot tests of the compiled CSS for parts of Fozzie. These live in `src/test/scss/snapshot-tests`. Snapshot tests provide a means of ensuring that no unexpected styles will be introduced for consumers of the library. They can also be used to ensure that the compiled CSS is 100% valid, or to make sure there's simply nothing unexpected being rendered. To write these tests, we can either import an SCSS file, or write a line of SCSS we'd like to test and compile it using the `compileToCss.js` module. We can then use Jest to snapshot test the outputted string.
+We use `Jest` to write snapshot tests of the compiled CSS for parts of Fozzie. These live in `src/test/scss/snapshot-tests`. Snapshot tests provide a means of ensuring that no unexpected styles will be introduced for consumers of the library. They can also be used to ensure that the compiled CSS is 100% valid, or to make sure there's simply nothing unexpected being rendered.
+
+To write these tests, we can either import an SCSS file or write a line of SCSS we'd like to test and compile it using the `compileToCss.js` module. We can then use Jest to snapshot test the outputted string.
