@@ -18,8 +18,8 @@ $includeMinimalFramework: false !default;
 @forward 'dependencies';
 
 /**
-* Templates for including base sets of styles
-*/
+ * Templates for including base sets of styles
+ */
 
 @forward 'templates' with (
   $includeBaseFramework: $includeBaseFramework,
