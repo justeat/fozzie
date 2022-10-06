@@ -209,8 +209,8 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
  * that provides styling for most use-cases (links, lists, buttons, grid)
  **/
 /**
-* Templates for including base sets of styles
-*/
+ * Templates for including base sets of styles
+ */
 /**
 * Basic Usage:
 * =================================
