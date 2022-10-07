@@ -5,7 +5,7 @@ const cssCompiler = require('../../../utilities/compileToCss');
 describe('Compiled CSS output', () => {
     it('compiles the expected CSS', () => {
         // arrange
-        const scssAbsolutePath = path.join(path.resolve(__dirname), '..', 'data', 'fozzie-snapshot.scss');
+        const scssAbsolutePath = path.join(process.cwd(), 'src', 'test', 'scss', 'data', 'fozzie-snapshot.scss');
 
         // act
         const cssResult = cssCompiler.compileToCSS({ scssPath: scssAbsolutePath, useLegacyRenderer: true });
