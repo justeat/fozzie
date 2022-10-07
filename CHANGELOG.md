@@ -8,6 +8,18 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v10.7.0
+------------------------------
+*October 7, 2022*
+
+### Added
+- CSS outputted files for typography, utilities and reset
+- Snapshot tests for outputted files
+
+### Changed
+- Path updates in snapshot test
+
+
 v10.6.0
 ------------------------------
 *October 6, 2022*
