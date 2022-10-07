@@ -1,5 +1,5 @@
 const path = require('path');
-const cssCompiler = require('../../../../utilities/compileToCss');
+const cssCompiler = require('../../../../utilities/cssCompiler');
 
 describe('fozzie-reset.scss', () => {
     it('compiles the expected CSS', () => {
@@ -7,7 +7,7 @@ describe('fozzie-reset.scss', () => {
         const scssAbsolutePath = path.join(process.cwd(), 'src', 'scss', 'fozzie-reset.scss');
 
         // act
-        const cssResult = cssCompiler.compileToCSS({ scssPath: scssAbsolutePath, useLegacyRenderer: true });
+        const cssResult = cssCompiler.compile({ scssPath: scssAbsolutePath, useLegacyRenderer: true });
 
         // assert
         expect(cssResult).toMatchSnapshot();

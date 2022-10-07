@@ -17,6 +17,8 @@ v10.7.0
 - Snapshot tests for outputted files
 
 ### Changed
+- Rename `compileToCss.js` to `cssCompiler.js`
+- Rename `compileToCss` function to `compile`
 - Path updates in snapshot test
 
 

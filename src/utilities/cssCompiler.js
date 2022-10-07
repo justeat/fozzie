@@ -11,7 +11,7 @@ const getSubdirectories = require('./getSubdirectories');
  *
  * @returns string - The compiled CSS
  */
-const compileToCSS = ({
+const compile = ({
     scssPath,
     scssString,
     useLegacyRenderer,
@@ -61,5 +61,5 @@ const compileToCSS = ({
 };
 
 module.exports = {
-    compileToCSS
+    compile
 };
