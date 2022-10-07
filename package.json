@@ -77,7 +77,7 @@
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "stylelint src/scss/**/*.scss",
     "lint:js": "eslint --ext .js .",
-    "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
+    "prepare": "concurrently -n \"lint,compile,test, prepare:css\" -c \"blue,yellow,green,purple\" \"yarn lint\" \"yarn compile\" \"yarn test\" \"yarn prepare:css\" --kill-others-on-fail",
     "test": "concurrently -n \"test:js,test:scss\" -c \"cyan,magenta\" \"yarn test:js\" \"yarn test:scss\"",
     "test:js": "jest --config=jest.config.js",
     "test:scss": "jest --config=src/test/scss/jest.config.js",
