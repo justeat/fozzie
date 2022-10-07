@@ -35,27 +35,29 @@ const compileToCSS = ({
     // Unfortunately the newer .compile function does not appear to work with Jest.
     // This appears to be the approach taken by other libraries such as IBM's Carbon Design System.
     if (useLegacyRenderer) {
-        result = sass.renderSync({
+        const cssResult = sass.renderSync({
             ...(scssPath) && { file: scssPath },
             ...(scssString) && { data: scssString },
             includePaths: loadPaths,
             ...sassCompilationOptions
         });
 
-        return result.css.toString();
+        result = cssResult.css.toString();
+    } else {
+        const cssResult = scssPath
+            ? sass.compile(scssPath, {
+                loadPaths,
+                ...sassCompilationOptions
+            })
+            : sass.compileString(scssString, {
+                loadPaths,
+                ...sassCompilationOptions
+            });
+
+        result = cssResult.css;
     }
 
-    result = scssPath
-        ? sass.compile(scssPath, {
-            loadPaths,
-            ...sassCompilationOptions
-        })
-        : sass.compileString(scssString, {
-            loadPaths,
-            ...sassCompilationOptions
-        });
-
-    return result.css;
+    return result;
 };
 
 module.exports = {
