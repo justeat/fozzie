@@ -20,12 +20,12 @@
     // **
 
     // Define associated Table variables
-    $table-bgColor : dt.$color-container-default  !global; // Default background color used for all tables.
-    $table-bgColor--accent : dt.$color-background-default  !global; // Background color used for `.table-striped`.
-    $table-border--color : dt.$color-border-subtle  !global; // Border color for table and cell borders.
+    $table-bgColor : dt.$color-container-default !global; // Default background color used for all tables.
+    $table-bgColor--accent : dt.$color-background-default !global; // Background color used for `.table-striped`.
+    $table-border--color : dt.$color-border-subtle !global; // Border color for table and cell borders.
     $table-border--width : 2px !global; // Border width for table border.
-    $table-innerBorder--color : dt.$color-border-strong  !global;
-    $table-verticalBorder--color : dt.$color-border-inverse  !global;
+    $table-innerBorder--color : dt.$color-border-strong !global;
+    $table-verticalBorder--color : dt.$color-border-inverse !global;
 
 
     // Customizes the `.table` component with basic values, each used across all table variations.
@@ -44,9 +44,9 @@
         border-radius: dt.$radius-rounded-b;
 
         // Cells
-        &>thead,
-        &>tbody,
-        &>tfoot {
+        & > thead,
+        & > tbody,
+        & > tfoot {
 
             th,
             td {
@@ -79,14 +79,14 @@
         }
 
         // Bottom align for column headings
-        &>thead th,
-        &>thead td {
+        & > thead th,
+        & > thead td {
             vertical-align: bottom;
             border-bottom: 1px solid $table-innerBorder--color;
         }
 
         // Account for multiple tbody instances
-        >tbody+tbody {
+        > tbody + tbody {
             border-top: 1px solid $table-innerBorder--color;
         }
 
