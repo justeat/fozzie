@@ -164,16 +164,16 @@
   }
 }
 
-@mixin anim() {
-  @keyframes skeletonGradient {
-    0% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+@keyframes skeletonGradient {
+  0% {
+    background-position: 100% 50%;
   }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+@mixin anim() {
   border-radius: 2px;
   background: linear-gradient(-45deg, dt.$color-background-default, dt.$color-background-default, dt.$color-background-subtle, dt.$color-background-default, dt.$color-background-default);
   background-size: 2000px 600%;

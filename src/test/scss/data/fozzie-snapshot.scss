@@ -19,7 +19,6 @@
 @include f.cuisinesWidget();
 @include f.fullScreenPopOver();
 @include f.listingSkeleton();
-@include f.anim();
 @include f.listing();
 @include f.loadingIndicator();
 @include f.menu();
@@ -104,6 +103,8 @@ $zIndex: f.zIndex();
 $zIndexArg: f.zIndex('lowest');
 
 .test-output {
+    @include f.anim();
+
     @include f.alert-variant(red, white);
     @include f.bordered();
     @include f.bordered(10px, 30px, green);

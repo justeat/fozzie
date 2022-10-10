@@ -7242,6 +7242,11 @@ em.u-text-highlight {
 }
 
 .test-output {
+  border-radius: 2px;
+  background: linear-gradient(-45deg, #fcfcfc, #fcfcfc, #f5f3f1, #fcfcfc, #fcfcfc);
+  background-size: 2000px 600%;
+  animation: skeletonGradient 2s ease infinite;
+  animation-fill-mode: forwards;
   background-color: red;
   border-color: #cc0000;
   color: white;
