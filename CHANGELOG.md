@@ -21,6 +21,7 @@ v10.7.0
 - Rename `compileToCss` function to `compile`
 - Path updates in snapshot test
 - Replace multiline comments with single line so that they are removed by Sass without minification/compression
+- Replace `prepare` with `prepack` as yarn lifecycle script to prepare `dist`
 
 
 v10.6.0
