@@ -2,7 +2,7 @@
 @use '../settings/include-media' as *;
 
 @mixin bodyStyles() {
-    //
+    // **
     // Objects > Body styles
     // ===================================
     // Body styles to control the background-color of a page
@@ -12,7 +12,7 @@
     //
     // Documentation:
     // TBC
-    //
+    // **
 
     .o-body--bgWhite {
         background-color: dt.$color-white;

@@ -4,7 +4,7 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin modal() {
-    //
+    // **
     // Components > Item Selector
     // =================================
     // Used on menu pages to display a modal to the user.
@@ -16,7 +16,7 @@
     //
     // Documentation:
     // TBC
-    //
+    // **
 
     $modal-titleFontSize    : body-l !default;
     $modal-borderRadius     : dt.$radius-rounded-d;

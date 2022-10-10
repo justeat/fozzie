@@ -1,5 +1,5 @@
 @mixin reset() {
-    //
+    // **
     // Fozzie Reset Styles
     // =================================
     // We use normalize.css for the bulk of our 'reset'
@@ -7,7 +7,7 @@
     //
     // This is an optional component within Fozzie.
     // If you'd like to use it in your project you can include it by adding `@include reset();` into your SCSS dependencies file.
-    //
+    // **
 
     html {
         box-sizing: border-box;

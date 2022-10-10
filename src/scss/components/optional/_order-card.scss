@@ -5,7 +5,7 @@
 @use '../../settings/variables' as v;
 
 @mixin orderCard() {
-    //
+    // **
     // Components > Order Card
     // =================================
     //
@@ -16,7 +16,7 @@
     //
     // Documentation:
     // https://fozzie.just-eat.com/styleguide/ui-components/order-card
-    //
+    // **
 
     $previousOrder-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     $previousOrder-hoverBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), -2px -2px 4px 0 rgba(0, 0, 0, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.12);

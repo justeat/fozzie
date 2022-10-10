@@ -5,7 +5,7 @@
 @use '../../settings/include-media' as *;
 
 @mixin menu() {
-    //
+    // **
     // Components > Menu
     // =================================
     // Used for styling small pieces of information.
@@ -17,7 +17,7 @@
     //
     // Documentation:
     // https://fozzie.just-eat.com/styleguide/ui-components/menus
-    //
+    // **
 
     $menu-headerHeight                      : 57px;
     $menu-fontSize                          : body-l;

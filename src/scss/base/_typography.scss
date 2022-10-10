@@ -5,7 +5,7 @@
 @use '../settings/include-media' as *;
 
 @mixin typography() {
-    //
+    // **
     // Typography
     // =================================
     // - Base
@@ -22,13 +22,9 @@
     //
     // Documentation:
     // TBC
-    //
+    // **
 
-
-    //
     // Typography preloading styles
-    //
-
     html {
         font-size: v.$font-size-base-px; //default font size in px (16px)
         text-size-adjust: 100%;
@@ -45,18 +41,14 @@
         -moz-font-smoothing: antialiased;
     }
 
-    //
     // Paragraphs
-    //
     p {
         @include type.font-size(body-l);
         margin-top: functions.spacing(d);
         margin-bottom: 0;
     }
 
-    //
     // Headings
-    //
     h1,
     h2,
     h3,
@@ -140,9 +132,7 @@
         font-size: 80%;
     }
 
-    //
     // Miscellaneous
-    //
 
     // Emphasis
     strong,
@@ -161,9 +151,7 @@
         cursor: help;
     }
 
-    //
     // Blockquotes
-    //
     blockquote {
         padding-left: 10px;
         margin: functions.spacing(d);
@@ -185,9 +173,7 @@
         }
     }
 
-    //
     // Buttons
-    //
     button {
         font-family: v.$font-family-base;
     }
@@ -235,9 +221,6 @@
     sup { top: -0.5em; }
     sub { bottom: -0.25em; }
     samp { font-family: v.$font-family-mono; }
-
-    //
-    // @include ko-text-selection($color-selection, $color-selection-bg);
 
     // Horizontal rules
     hr {

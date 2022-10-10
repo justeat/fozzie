@@ -2,7 +2,7 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin overflowCarousel() {
-    //
+    // **
     // Components > Overflow Carousel
     // --------------------------------
     // Allows a list of content to be scrolled horizontally
@@ -14,7 +14,7 @@
     //
     // Documentation:
     // TBC
-    //
+    // **
 
     .c-overflowCarousel {
         @include media('<mid') {

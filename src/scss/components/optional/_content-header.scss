@@ -4,7 +4,7 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin contentHeader() {
-    //
+    // **
     // Components > Content Header
     // =================================
     // Used to display important contextual info at the top of a page
@@ -16,7 +16,7 @@
     //
     // Documentation:
     // TBC
-    //
+    // **
 
     .c-contentHeader {
         padding-top: functions.spacing(d);

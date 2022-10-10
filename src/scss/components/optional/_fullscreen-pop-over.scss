@@ -3,7 +3,7 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin fullScreenPopOver() {
-    //
+    // **
     // Components > Fullscreen Popovers
     // =================================
     // Component that styles a full-page popover/takeover on top of the current content
@@ -15,7 +15,7 @@
     //
     // Documentation:
     // TBC
-    //
+    // **
 
     $fullScreenPopOver-background        : dt.$color-background-default;
     $fullScreenPopOver-action-background : dt.$color-white;

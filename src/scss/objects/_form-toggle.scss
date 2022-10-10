@@ -19,7 +19,7 @@ $formToggle-text--disabled          : dt.$color-disabled-01;
 $formToggle-text--checked           : dt.$color-green;
 
 @mixin formToggle() {
-    //
+    // **
     // Objects > Form Toggle
     // =================================
     // Styles a button on top of a checkbox, to toggle inputs to a form
@@ -31,7 +31,7 @@ $formToggle-text--checked           : dt.$color-green;
     //
     // Documentation:
     // TBC
-    //
+    // **
 
     .o-formToggle {
         position: relative;

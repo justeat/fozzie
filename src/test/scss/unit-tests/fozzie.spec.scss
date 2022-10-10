@@ -22,6 +22,7 @@
         @include systemUnderTest.cuisinesWidget();
         @include systemUnderTest.fullScreenPopOver();
         @include systemUnderTest.listingSkeleton();
+        @include systemUnderTest.anim();
         @include systemUnderTest.listing();
         @include systemUnderTest.loadingIndicator();
         @include systemUnderTest.menu();

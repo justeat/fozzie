@@ -3,7 +3,7 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin cookieWarning() {
-    //
+    // **
     // Components > Cookie Warning
     // =================================
     //
@@ -12,7 +12,7 @@
     //
     // Documentation:
     // TBC
-    //
+    // **
     .c-cookieWarning {
         background-color: dt.$color-content-interactive-tertiary;
         position: fixed;

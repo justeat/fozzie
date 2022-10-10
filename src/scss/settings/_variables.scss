@@ -66,10 +66,10 @@ $font-family-mono           : Menlo, Monaco, 'Courier New', monospace;
 // ==========================================================================
 
 $fozzie-unit-intervals: (
-  'px': 1,
-  'em': 0.001, // We need more sensitivity, some browsers are very specific with breakpoints
-  'rem': 0.1,
-  '': 0
+    'px': 1,
+    'em': 0.001, // We need more sensitivity, some browsers are very specific with breakpoints
+    'rem': 0.1,
+    '': 0
 );
 
 // Layout setup

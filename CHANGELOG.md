@@ -8,7 +8,7 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
-v10.7.0
+v11.0.0
 ------------------------------
 *October 10, 2022*
 
@@ -17,6 +17,7 @@ v10.7.0
 - Snapshot tests for outputted files
 
 ### Changed
+- **Breaking** Moved the keyframe `skeletonGradient` into the `anim()` mixin
 - Rename `compileToCss.js` to `cssCompiler.js`
 - Rename `compileToCss` function to `compile`
 - Path updates in snapshot test

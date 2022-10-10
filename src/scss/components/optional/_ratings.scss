@@ -3,7 +3,7 @@
 @use '../../settings/variables' as v;
 
 @mixin rating() {
-    //
+    // **
     // Components > Rating
     // =================================
     // Used for displaying restuarant rating stars
@@ -13,7 +13,7 @@
     //
     // Documentation:
     // https://fozzie.just-eat.com/styleguide/ui-components/custom/star-ratings
-    //
+    // **
 
     $star-count                 : 6;
     $star-size--small           : 12px;
@@ -135,9 +135,7 @@
         @include ratings.rating-fill($star-count);
     }
 
-    //
     // Selectable stars rating component
-    //
     .c-ratingSelectable {
         display: flex;
         flex-direction: row-reverse;
@@ -152,7 +150,7 @@
             & ~ input + label {
                 background-image: inline(#{v.$star-icon-path--filled});
             }
-       }
+        }
     }
 
     .c-ratingSelectable-input:disabled,
@@ -174,5 +172,4 @@
             background-image: inline(#{v.$star-icon-path--filled});
         }
     }
-
 }

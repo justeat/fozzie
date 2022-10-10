@@ -3,7 +3,7 @@
 @use '../tools/functions/index' as functions;
 
 @mixin lists() {
-    //
+    // **
     // Objects > Lists
     // =================================
     // Default list styles (for unordered and ordered lists)
@@ -13,7 +13,7 @@
     //
     // Documentation:
     // TBC
-    //
+    // **
 
     $list-bullet-color: dt.$color-orange;
 

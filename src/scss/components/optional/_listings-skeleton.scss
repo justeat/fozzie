@@ -3,7 +3,7 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin listingSkeleton() {
-  //
+  // **
   // Components > Listing Skeleton
   // =================================
   // Shows a Skeleton listing layout.
@@ -15,7 +15,7 @@
   //
   // Documentation:
   // TBC
-  //
+  // **
 
   .c-listingSkeleton {
     position: relative;
@@ -164,16 +164,16 @@
   }
 }
 
-@keyframes skeletonGradient {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @mixin anim() {
+  @keyframes skeletonGradient {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   border-radius: 2px;
   background: linear-gradient(-45deg, dt.$color-background-default, dt.$color-background-default, dt.$color-background-subtle, dt.$color-background-default, dt.$color-background-default);
   background-size: 2000px 600%;

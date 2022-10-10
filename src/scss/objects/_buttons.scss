@@ -6,7 +6,7 @@
 @use '../trumps/utilities' as *;
 
 @mixin buttons() {
-    //
+    // **
     // Objects > Buttons
     // =================================
     //
@@ -15,7 +15,7 @@
     //
     // Documentation:
     // https://fozzie.just-eat.com/styleguide/ui-components/buttons
-    //
+    // **
 
     $btn-default-borderRadius              : dt.$radius-rounded-e;
     $btn-default-font-size                 : 'heading-s';
@@ -83,12 +83,10 @@
         top: calc(50% - 10px); // Substract half of the size of the spinner.
     }
 
-    //
     // Base button styles – Based on csswizardry.com/beautons
     //
     // 1. Allow us to better style box model properties.
     // 2. Line different sized buttons up a little nicer.
-    //
 
     // By deafult the button is Primary medium sized button
     .o-btn {
@@ -152,17 +150,15 @@
         }
     }
 
-    //
+    // **
     // ==========================================================================
     // Btn Background Colour modifiers
     // ==========================================================================
-    //
+    // **
 
-    //
     // Modifier – .o-btn--primary
     //
     // Sets the btn colour to site primary colour
-    //
 
     .o-btn--primary {
         background-color: $btn-primary-bgColor;
@@ -204,12 +200,9 @@
         }
     }
 
-
-    //
     // Modifier – .o-btn--secondary
     //
     // Accompanying secondary style button (knocked back slightly from the primary button)
-    //
 
     .o-btn--secondary {
         background-color: $btn-secondary-bgColor;
@@ -233,12 +226,9 @@
         @include loading-indicator.spinnerColor($btn-secondary-loading-color, $btn-secondary-loading-colorOpaque);
     }
 
-
-    //
     // Modifier – .o-btn--outline
     //
     // Accompanying outline style button
-    //
 
     .o-btn--outline {
         background-color: $btn-outline-bgColor;
@@ -263,12 +253,9 @@
         @include loading-indicator.spinnerColor($btn-outline-loading-color, $btn-outline-loading-colorOpaque);
     }
 
-
-    //
     // Modifier – .o-btn--ghost
     //
     // Accompanying ghost style button
-    //
 
     .o-btn--ghost {
         background-color: $btn-ghost-bgColor;
@@ -292,12 +279,11 @@
         @include loading-indicator.spinnerColor($btn-ghost-loading-color, $btn-ghost-loading-colorOpaque);
     }
 
-
-    //
+    // **
     // ==========================================================================
     // Btn Size Modifiers
     // ==========================================================================
-    //
+    // **
 
     .o-btn--sizeLarge {
         padding: $btn-sizeLarge-padding;
@@ -313,12 +299,11 @@
         padding: $btn-sizeXSmall-padding;
     }
 
-
-    //
+    // **
     // ==========================================================================
     // Btn Layout Modifiers
     // ==========================================================================
-    //
+    // **
 
     //remove uneeded styles (like colours) from a button when only an icon is on it (like a close button)
     .o-btn--icon {
@@ -350,10 +335,7 @@
         }
     }
 
-
-    //
     // Disabled button
-    //
 
     .o-btn--disabled,
     .o-btn.disabled,
@@ -373,15 +355,14 @@
         }
     }
 
-
-    //
+    // **
     // Link button
     //
     // Make a button visually look like a default link
     // Useful when we semantically want a button but don’t want all the default styling
     //
     // Should only be applied to buttons
-    //
+    // **
 
     .o-btn--link {
         border: 0;
@@ -405,4 +386,4 @@
 
         @include loading-indicator.spinnerColor($btn-link-loading-color, $btn-link-loading-colorOpaque);
     }
- }
+}

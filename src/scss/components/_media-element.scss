@@ -5,7 +5,7 @@
 @use 'sass:math';
 
 @mixin mediaElement() {
-    //
+    // **
     // Components > Media element
     // ===================================
     // A common pattern that sees an image followed by a block of information.
@@ -16,7 +16,7 @@
     //
     // Documentation:
     // https://fozzie.just-eat.com/styleguide/ui-components/mediaElement
-    //
+    // **
 
     $mediaElement-img-width         : 50px;
     $mediaElement-img-width--mid    : 78px;
