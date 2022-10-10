@@ -3,19 +3,19 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin listingSkeleton() {
-  // **
-  // Components > Listing Skeleton
-  // =================================
-  // Shows a Skeleton listing layout.
-  //
-  // Example: Search listings.
-  //
-  // The `c-listingSkeleton` component is an optional mixin within Fozzie.
-  // If you'd like to use it in your project you can include it by adding `@include listingSkeleton();` into your SCSS dependencies file.
-  //
-  // Documentation:
-  // TBC
-  // **
+  /**
+  * Components > Listing Skeleton
+  * =================================
+  * Shows a Skeleton listing layout.
+  *
+  * Example: Search listings.
+  *
+  * The `c-listingSkeleton` component is an optional mixin within Fozzie.
+  * If you'd like to use it in your project you can include it by adding `@include listingSkeleton();` into your SCSS dependencies file.
+  *
+  * Documentation:
+  * TBC
+  */
 
   .c-listingSkeleton {
     position: relative;

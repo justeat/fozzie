@@ -3,17 +3,17 @@
 @use '../../settings/variables' as v;
 
 @mixin rating() {
-    // **
-    // Components > Rating
-    // =================================
-    // Used for displaying restuarant rating stars
-    //
-    // The `c-rating` component is an optional mixin within Fozzie.
-    // If you'd like to use it in your project you can include it by adding `@include rating();` into your SCSS dependencies file.
-    //
-    // Documentation:
-    // https://fozzie.just-eat.com/styleguide/ui-components/custom/star-ratings
-    // **
+    /**
+    * Components > Rating
+    * =================================
+    * Used for displaying restuarant rating stars
+    *
+    * The `c-rating` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include rating();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * https://fozzie.just-eat.com/styleguide/ui-components/custom/star-ratings
+    */
 
     $star-count                 : 6;
     $star-size--small           : 12px;
@@ -135,7 +135,9 @@
         @include ratings.rating-fill($star-count);
     }
 
-    // Selectable stars rating component
+    /*
+    Selectable stars rating component
+    */
     .c-ratingSelectable {
         display: flex;
         flex-direction: row-reverse;
@@ -150,7 +152,7 @@
             & ~ input + label {
                 background-image: inline(#{v.$star-icon-path--filled});
             }
-        }
+       }
     }
 
     .c-ratingSelectable-input:disabled,
@@ -172,4 +174,5 @@
             background-image: inline(#{v.$star-icon-path--filled});
         }
     }
+
 }

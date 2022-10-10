@@ -1,15 +1,15 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 
-// **
-// Components > Spinner Indicator
-// =================================
-//
-// Example: f-searchbox -  Loqate feature enabled (Full address capture)
-//
-// If you'd like to use it in your project you can include it by adding `@include loadingIndicator();` into your SCSS dependencies file.
-// Then add `<span class=“c-spinner” />` to your html;
-// If you’d like to change spinner colour add `@include spinnerColor(mainColourVar, opaqueColourVar);` to the parent element of the spinner styles.
-// **
+/**
+* Components > Spinner Indicator
+* =================================
+*
+* Example: f-searchbox -  Loqate feature enabled (Full address capture)
+*
+* If you'd like to use it in your project you can include it by adding `@include loadingIndicator();` into your SCSS dependencies file.
+* Then add `<span class=“c-spinner” />` to your html;
+* If you’d like to change spinner colour add `@include spinnerColor(mainColourVar, opaqueColourVar);` to the parent element of the spinner styles.
+*/
 
 $loading-indicator-size-medium: 20px;
 $loading-indicator-size-large: 48px;

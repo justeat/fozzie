@@ -3,19 +3,19 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin fullScreenPopOver() {
-    // **
-    // Components > Fullscreen Popovers
-    // =================================
-    // Component that styles a full-page popover/takeover on top of the current content
-    //
-    // Example: Used for the mobile filters fullscreen popover on the Search Page
-    //
-    // The `c-fullScreenPopOver` component is an optional mixin within Fozzie.
-    // If you'd like to use it in your project you can include it by adding `@include fullScreenPopOver();` into your SCSS dependencies file.
-    //
-    // Documentation:
-    // TBC
-    // **
+    /**
+    * Components > Fullscreen Popovers
+    * =================================
+    * Component that styles a full-page popover/takeover on top of the current content
+    *
+    * Example: Used for the mobile filters fullscreen popover on the Search Page
+    *
+    * The `c-fullScreenPopOver` component is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include fullScreenPopOver();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
     $fullScreenPopOver-background        : dt.$color-background-default;
     $fullScreenPopOver-action-background : dt.$color-white;
