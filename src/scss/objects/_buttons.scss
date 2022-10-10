@@ -6,16 +6,14 @@
 @use '../trumps/utilities' as *;
 
 @mixin buttons() {
-    /**
-    * Objects > Buttons
-    * =================================
-    *
-    * This is an optional component within Fozzie.
-    * If you'd like to use it in your project you can include it by adding `@include buttons();` into your SCSS dependencies file.
-    *
-    * Documentation:
-    * https://fozzie.just-eat.com/styleguide/ui-components/buttons
-    */
+    // Objects > Buttons
+    // =================================
+    //
+    // This is an optional component within Fozzie.
+    // If you'd like to use it in your project you can include it by adding `@include buttons();` into your SCSS dependencies file.
+    //
+    // Documentation:
+    // https://fozzie.just-eat.com/styleguide/ui-components/buttons
 
     $btn-default-borderRadius              : dt.$radius-rounded-e;
     $btn-default-font-size                 : 'heading-s';
@@ -83,17 +81,15 @@
         top: calc(50% - 10px); // Substract half of the size of the spinner.
     }
 
-    /**
-    * Base button styles – Based on csswizardry.com/beautons
-    *
-    * 1. Allow us to better style box model properties.
-    * 2. Line different sized buttons up a little nicer.
-    */
+    // Base button styles – Based on csswizardry.com/beautons
+    //
+    // 1. Allow us to better style box model properties.
+    // 2. Line different sized buttons up a little nicer.
 
     // By deafult the button is Primary medium sized button
     .o-btn {
-        display: inline-block;                      /* [1] */
-        vertical-align: middle;                     /* [2] */
+        display: inline-block;                      // [1]
+        vertical-align: middle;                     // [2]
         @include type.font-size($btn-default-font-size);
         cursor: pointer;
         margin: 0;
@@ -152,11 +148,10 @@
         }
     }
 
-    /**
-    * ==========================================================================
-    * Btn Background Colour modifiers
-    * ==========================================================================
-    */
+
+    // ==========================================================================
+    // Btn Background Colour modifiers
+    // ==========================================================================
 
     /**
     * Modifier – .o-btn--primary
@@ -293,11 +288,9 @@
     }
 
 
-    /**
-    * ==========================================================================
-    * Btn Size Modifiers
-    * ==========================================================================
-    */
+    // ==========================================================================
+    // Btn Size Modifiers
+    // ==========================================================================
 
     .o-btn--sizeLarge {
         padding: $btn-sizeLarge-padding;
@@ -314,11 +307,9 @@
     }
 
 
-    /**
-    * ==========================================================================
-    * Btn Layout Modifiers
-    * ==========================================================================
-    */
+    // ==========================================================================
+    // Btn Layout Modifiers
+    // ==========================================================================
 
     //remove uneeded styles (like colours) from a button when only an icon is on it (like a close button)
     .o-btn--icon {
