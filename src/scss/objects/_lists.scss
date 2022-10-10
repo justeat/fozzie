@@ -3,17 +3,17 @@
 @use '../tools/functions/index' as functions;
 
 @mixin lists() {
-    // **
-    // Objects > Lists
-    // =================================
-    // Default list styles (for unordered and ordered lists)
-    //
-    // This is an optional component within Fozzie.
-    // If you'd like to use it in your project you can include it by adding `@include lists();` into your SCSS dependencies file.
-    //
-    // Documentation:
-    // TBC
-    // **
+    /**
+    * Objects > Lists
+    * =================================
+    * Default list styles (for unordered and ordered lists)
+    *
+    * This is an optional component within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include lists();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
     $list-bullet-color: dt.$color-orange;
 
@@ -41,7 +41,7 @@
         > li:before,
         > li ul > li:before {
             color: $list-bullet-color;
-            content: '\2022'; // Unicode for circle character
+            content: '\2022'; /* Unicode for circle character */
             font-size: 1.8em;
             padding-right: functions.spacing();
             position: relative;

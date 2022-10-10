@@ -2,17 +2,17 @@
 @use '../settings/include-media' as *;
 
 @mixin bodyStyles() {
-    // **
-    // Objects > Body styles
-    // ===================================
-    // Body styles to control the background-color of a page
-    //
-    // This is an optional component within Fozzie.
-    // If you'd like to use it in your project you can include it by adding `@include bodyStyles();` into your SCSS dependencies file.
-    //
-    // Documentation:
-    // TBC
-    // **
+    /**
+    * Objects > Body styles
+    * ===================================
+    * Body styles to control the background-color of a page
+    *
+    * This is an optional component within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include bodyStyles();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
     .o-body--bgWhite {
         background-color: dt.$color-white;
