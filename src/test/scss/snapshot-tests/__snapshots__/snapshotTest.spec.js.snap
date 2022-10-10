@@ -174,6 +174,9 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   margin-left: 0;
 }
 
+/**
+* .g--equalHeight – Equal Height Child Elements
+*/
 .g--equalHeight > .g-col {
   display: flex;
 }
@@ -213,14 +216,27 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   align-items: center;
 }
 
+/**
+* Centering
+* Centers an individual column, rather than the entire grid
+*/
 .g-col--centered {
   margin: 0 auto;
 }
 
+/**
+* Shrinking Content
+* Shrink a .g-col down to only the space it needs (flexbox only)
+*
+* Effectively just changes it’s values back to the default flex properties
+*/
 .g-col--shrink {
   flex: 0 1 auto;
 }
 
+/**
+* Add fallbacks for non-flexbox supporting browsers (for example, IE8/9)
+*/
 .no-flexbox .g {
   display: block !important;
 }
@@ -2484,7 +2500,7 @@ template {
 *:after,
 *:first-letter {
     background: transparent !important;
-    color: #000 !important;
+    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -2497,6 +2513,9 @@ template {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
+  /*
+  * Don't show links for images, or javascript/internal links
+  */
   .ir a:after,
 a[href^="javascript:"]:after,
 a[href^="#"]:after {
@@ -2508,7 +2527,7 @@ blockquote {
     page-break-inside: avoid;
   }
   thead {
-    display: table-header-group;
+    display: table-header-group; /* h5bp.com/t */
   }
   tr,
 img {
@@ -5474,6 +5493,11 @@ p + .o-btn {
   margin-top: 16px;
 }
 
+/**
+* Modifier – .o-btn--primary
+*
+* Sets the btn colour to site primary colour
+*/
 .o-btn--primary {
   background-color: #fb6100;
 }
@@ -5504,6 +5528,11 @@ p + .o-btn {
   background-color: #595959;
 }
 
+/**
+* Modifier – .o-btn--secondary
+*
+* Accompanying secondary style button (knocked back slightly from the primary button)
+*/
 .o-btn--secondary {
   background-color: #f5f3f1;
   color: #242e30;
@@ -5523,6 +5552,11 @@ p + .o-btn {
   border-right: 3px solid rgba(36, 46, 48, 0.35);
 }
 
+/**
+* Modifier – .o-btn--outline
+*
+* Accompanying outline style button
+*/
 .o-btn--outline {
   background-color: transparent;
   color: #303d3f;
@@ -5543,6 +5577,11 @@ p + .o-btn {
   border-right: 3px solid rgba(48, 61, 63, 0.35);
 }
 
+/**
+* Modifier – .o-btn--ghost
+*
+* Accompanying ghost style button
+*/
 .o-btn--ghost {
   background-color: transparent;
   color: #242e30;
@@ -5602,6 +5641,9 @@ input[type=button].o-btn--block {
   margin-top: 8px;
 }
 
+/**
+* Disabled button
+*/
 .o-btn--disabled,
 .o-btn.disabled,
 .o-btn.is-disabled,
@@ -5626,6 +5668,14 @@ input[type=button].o-btn--block {
   background-color: transparent;
 }
 
+/**
+* Link button
+*
+* Make a button visually look like a default link
+* Useful when we semantically want a button but don’t want all the default styling
+*
+* Should only be applied to buttons
+*/
 .o-btn--link {
   border: 0;
   background-color: transparent;
@@ -6151,7 +6201,7 @@ ul {
 ul > li:before,
 ul > li ul > li:before {
   color: #fb6100;
-  content: "•";
+  content: "•"; /* Unicode for circle character */
   font-size: 1.8em;
   padding-right: 8px;
   position: relative;

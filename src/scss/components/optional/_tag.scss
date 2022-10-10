@@ -2,16 +2,14 @@
 @use '../../tools/mixins/type';
 
 @mixin tag() {
-    /**
-    * Components > Tag
-    * =================================
-    * Used for styling small pieces of information.
-    *
-    * Examples: Menu - Restaurant delivery information and Search - listing labels
-    *
-    * The `c-tag` component is an optional mixin within Fozzie.
-    * If you'd like to use it in your project you can include it by adding `@include tag();` into your SCSS dependencies file.
-    */
+    // Components > Tag
+    // =================================
+    // Used for styling small pieces of information.
+    //
+    // Examples: Menu - Restaurant delivery information and Search - listing labels
+    //
+    // The `c-tag` component is an optional mixin within Fozzie.
+    // If you'd like to use it in your project you can include it by adding `@include tag();` into your SCSS dependencies file.
 
     .c-tag {
         align-items: center;

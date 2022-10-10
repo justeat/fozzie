@@ -4,19 +4,17 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin contentHeader() {
-    /**
-    * Components > Content Header
-    * =================================
-    * Used to display important contextual info at the top of a page
-    *
-    * Example: Restaurant count and location on search page
-    *
-    * The `c-contentHeader` component is an optional mixin within Fozzie.
-    * If you'd like to use it in your project you can include it by adding `@include contentHeader();` into your SCSS dependencies file.
-    *
-    * Documentation:
-    * TBC
-    */
+    // Components > Content Header
+    // =================================
+    // Used to display important contextual info at the top of a page
+    //
+    // Example: Restaurant count and location on search page
+    //
+    // The `c-contentHeader` component is an optional mixin within Fozzie.
+    // If you'd like to use it in your project you can include it by adding `@include contentHeader();` into your SCSS dependencies file.
+    //
+    // Documentation:
+    // TBC
 
     .c-contentHeader {
         padding-top: functions.spacing(d);
