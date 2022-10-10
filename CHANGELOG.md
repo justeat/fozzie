@@ -20,6 +20,7 @@ v10.7.0
 - Rename `compileToCss.js` to `cssCompiler.js`
 - Rename `compileToCss` function to `compile`
 - Path updates in snapshot test
+- Replace multiline comments with single line so that they are removed by Sass without minification/compression
 
 
 v10.6.0
