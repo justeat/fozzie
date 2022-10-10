@@ -6,6 +6,7 @@
   "main": "dist/js/index.js",
   "files": [
     "dist/js",
+    "dist/css",
     "src/scss",
     "src/fonts"
   ],
