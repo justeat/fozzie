@@ -62,17 +62,17 @@
 }
 
 %u-focusShadow-content {
-    box-shadow: 0 0 2px 2px dt.$color-focus; /* keyboard-only focus styles */
+    box-shadow: 0 0 2px 2px dt.$color-focus; // keyboard-only focus styles
 }
 
 // ====================
 
 @mixin trumps-utilities() {
-    /**
-    * Utilities
-    * ===================================
-    * Non-semantic helper classes
-    */
+    //
+    // Utilities
+    // ===================================
+    // Non-semantic helper classes
+    //
 
     //
     // Clearfix
@@ -409,20 +409,20 @@
     // Helper classes for focus accessibility
     // =================================================================================
 
-    /* Custom outline styling for elements that have a focus state */
+    // Custom outline styling for elements that have a focus state
     .u-elementFocus {
         @extend %u-elementFocus;
     }
 
-    /* Custom visual outline emulation for better appearance on elements with rounded corners */
+    // Custom visual outline emulation for better appearance on elements with rounded corners
     .u-elementFocus--boxShadow {
         @extend %u-elementFocus--boxShadow;
     }
 
-    /*
-    * Clever hack to have focus on an element but only when keyboard focused (not click)
-    * https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
-    */
+    //
+    // Clever hack to have focus on an element but only when keyboard focused (not click)
+    // https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
+    //
     .u-focusShadow:focus,
     .u-focusShadow-content:focus {
         @extend %u-focusShadow;

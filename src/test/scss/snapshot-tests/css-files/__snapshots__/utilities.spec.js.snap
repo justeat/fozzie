@@ -1,39 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fozzie-utilities.scss compiles the expected CSS 1`] = `
-"/* stylelint-disable indentation */
-/* stylelint-enable */
-/**
- * Strip units
- * =================================
- * Remove the unit of a measurement
- *
- * Usage:
- * strip-units(400px)  > 400
- */
-/**
- * px to em converter
- * =================================
- * Convert pixels to ems
- *
- * Usage:
- * font-size : em(12);
- * font-size : em(12, 24); // If the parent is another value say 24px
- */
-/**
- * Convert a map of breakpoints to ems
- * =================================
- * Takes a map of breakpoints (in px) and a base-font-size
- *
- * Usage:
- $breakpoints: map-to-em((
- 	narrow : 400px,
- 	mid    : 750px,
- 	wide   : 1000px,
- 	huge   : 1250px
- ), 16);
- */
-.u-ir {
+".u-ir {
   background-color: transparent;
   background-repeat: no-repeat;
   border: 0;
@@ -88,17 +56,9 @@ exports[`fozzie-utilities.scss compiles the expected CSS 1`] = `
 }
 
 .u-focusShadow:focus > .u-focusShadow-content {
-  box-shadow: 0 0 2px 2px #4996fd; /* keyboard-only focus styles */
+  box-shadow: 0 0 2px 2px #4996fd;
 }
 
-/**
- * Extends default $spacing map with an empty entry at the start
- */
-/**
-* Utilities
-* ===================================
-* Non-semantic helper classes
-*/
 .u-clearfix:after {
   content: " ";
   display: table;
@@ -343,12 +303,6 @@ em.u-text-highlight {
   display: none;
 }
 
-/* Custom outline styling for elements that have a focus state */
-/* Custom visual outline emulation for better appearance on elements with rounded corners */
-/*
-* Clever hack to have focus on an element but only when keyboard focused (not click)
-* https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
-*/
 .u-shadowBottom--belowMid {
   padding-bottom: 56px;
 }
@@ -374,30 +328,6 @@ em.u-text-highlight {
   cursor: pointer !important;
 }
 
-/**
-* Spacing Trumps
-* ===================================
-*
-* These can be helpful in situations where you need to apply some spacing and do not wish to create a new class name for an element.
-* The classes generated include spacing for each of our spacing variables in all directions (left.right, top, bottom), including horizontal & vertical, for both padding & margin.
-*
-* The format of the generated classes is \`.u-{name}--{modifier}\`, modifier is an optional parameter.
-*
-* eg. a subset of the generated classes
-*
-* .u-spacing { margin: 8px; }
-* .u-spacing--top { margin-top: 8px; }
-* .u-spacing-a--top { margin-top: 4px; }
-* .u-spacing-b--top { margin-top: 8px; }
-*
-* .u-pad { padding: 8px; }
-* .u-pad--top { padding-top: 8px; }
-* .u-pad-a--top { padding-top: 4px; }
-* .u-pad-b--top { padding-top: 8px; }
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include trumps-spacing();\` into your SCSS dependencies file.
-*/
 .u-spacing {
   margin: 8px !important;
 }
@@ -1058,10 +988,6 @@ em.u-text-highlight {
   padding-top: 80px !important;
 }
 
-/**
-* Responsive Trumps
-* ===================================
-*/
 @media (min-width: 25.875em) {
   .u-showBelowNarrow {
     display: none !important;

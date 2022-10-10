@@ -2,99 +2,6 @@
 
 exports[`Compiled CSS output compiles the expected CSS 1`] = `
 "@charset "UTF-8";
-/* stylelint-disable indentation */
-/* stylelint-enable */
-/**
- * Strip units
- * =================================
- * Remove the unit of a measurement
- *
- * Usage:
- * strip-units(400px)  > 400
- */
-/**
- * px to em converter
- * =================================
- * Convert pixels to ems
- *
- * Usage:
- * font-size : em(12);
- * font-size : em(12, 24); // If the parent is another value say 24px
- */
-/**
- * Convert a map of breakpoints to ems
- * =================================
- * Takes a map of breakpoints (in px) and a base-font-size
- *
- * Usage:
- $breakpoints: map-to-em((
- 	narrow : 400px,
- 	mid    : 750px,
- 	wide   : 1000px,
- 	huge   : 1250px
- ), 16);
- */
-/**
- * @param {String} $key – The type key you would like to reference. These are mapped to the PIE type definitions.
- * @param {Boolean} $line-height – Specifies whether the relevant \`line-height\` is output alongside the \`font-size\` declaration.
- * @param {String} $scale – Defines which sub-type scale definition to output from the Sass type-map.
- * @param {Boolean} $relativeToParent – When set to true, the mixin will output the \`font-size\` as \`em\`s rather than \`rem\`s. By default, the \`font-size\` is defined relative to the root element.
- */
-/**
- * Extends default $spacing map with an empty entry at the start
- */
-/**
- * The Kickoff Flexbox Grid
- * =================================
- * Default grid classes
- * Grid gutter options
- * Modifier Classes (column height and cell alignment)
- * Legacy fallbacks for flexbox
- * Grid span classes
- * Breakpoint stacking
- */
-/* Import Grid helpers and mixins */
-/**
- * Kickoff grid helpers
- */
-/**
-* Grid stacking
-* Stack grids based on a given breakpoint
-*
-* Usage:
-* .g--stack--narrow
-* .g--stack--wide
-*/
-/**
-* Gutter Calculations
-* Default: percent
-* Usage: ko-gutterCalc() or ko-gutterCalc(false)
-* When show-unit is true, returns the percentage, otherwise return a decimal
-*/
-/**
-* Grid columns width calculations
-* This is where the magic of working out the column widths happens
-*
-* $column-span: define the width for the number of columns required
-* $show-unit: Switch return value between percentage (default) and decimal
-* $include-gutters: if gutters should be included in the calculations. Default = false
-* $legacy-calc: if we are working out a legacy column width calculation, or not. Default = false
-*/
-/**
-* Column width mixin
-* Usage:
-* @include column(2);
-*/
-/**
-* Components > Spinner Indicator
-* =================================
-*
-* Example: f-searchbox -  Loqate feature enabled (Full address capture)
-*
-* If you'd like to use it in your project you can include it by adding \`@include loadingIndicator();\` into your SCSS dependencies file.
-* Then add \`<span class=“c-spinner” />\` to your html;
-* If you’d like to change spinner colour add \`@include spinnerColor(mainColourVar, opaqueColourVar);\` to the parent element of the spinner styles.
-*/
 .o-btn--icon, .u-ir {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -150,7 +57,7 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
 }
 
 .u-focusShadow:focus > .u-focusShadow-content {
-  box-shadow: 0 0 2px 2px #4996fd; /* keyboard-only focus styles */
+  box-shadow: 0 0 2px 2px #4996fd;
 }
 
 @keyframes skeletonGradient {
@@ -161,64 +68,6 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
     background-position: 0% 50%;
   }
 }
-/**
- * Just Eat Styleguide
- * =================================
- */
-/**
- * Objects
- * =================================
- * Styles apply to an object if they are directly associated to a HTML element.
- * If not, the styles should be defined as a component.
- *
- * For example, it would be expected to have:
- * 	links.scss > styles relating to links (<a> tag)
- * 	tables.scss > styles relating to tables
- *
- * Object styles should be prefixed with \`.o-\`
- */
-/**
- * Components:
- * =================================
- * Components are our resuable chunks of styling that aren’t directly associated to a base tag
- *
- * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with \`.c-\`
- */
-/**
- * Utility classes
- * =====================================
- * These should always come last as they should 'trump' other properties
- */
-/**
- * Print styles
- */
-/**
- * Setting $includeBaseFramework to \`true\` includes the base styles that were included
- * as part of Fozzie v4 (useful for anyone upgrading that wants to keep things as-is)
-**/
-/**
- * Setting $includeMinimalFramework to \`true\` includes a recommended base set of styles
- * that provides styling for most use-cases (links, lists, buttons, grid)
- **/
-/**
- * Setting $includeBaseFramework to \`true\` includes the base styles that were included
- * as part of Fozzie v4 (useful for anyone upgrading that wants to keep things as-is)
- **/
-/**
- * Setting $includeMinimalFramework to \`true\` includes a recommended base set of styles
- * that provides styling for most use-cases (links, lists, buttons, grid)
- **/
-/**
- * Templates for including base sets of styles
- */
-/**
-* Basic Usage:
-* =================================
-    <div class="g">
-        <div class="g-col g-span4 g-span6--mid"></div>
-        <div class="g-col g-span8 g-span6--mid"></div>
-    </div>
-*/
 .g {
   display: flex !important;
   flex-flow: row wrap;
@@ -234,11 +83,6 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   min-width: 0;
 }
 
-/**
-* Gutter calcs – applied to grid columns in our grid (direct descendants only)
-* Default: pixels (can look at changing to percentage)
-* Usage: gutterCalc() or gutterCalc(false)
-*/
 .g--gutter {
   margin-left: -8px;
   margin-right: -8px;
@@ -330,9 +174,6 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   margin-left: 0;
 }
 
-/**
-* .g--equalHeight – Equal Height Child Elements
-*/
 .g--equalHeight > .g-col {
   display: flex;
 }
@@ -340,10 +181,6 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   flex-basis: 100%;
 }
 
-/**
-* Alignment
-* Modifier classes to move our grid elements around
-*/
 .g--alignTop {
   align-items: flex-start;
 }
@@ -376,27 +213,14 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   align-items: center;
 }
 
-/**
-* Centering
-* Centers an individual column, rather than the entire grid
-*/
 .g-col--centered {
   margin: 0 auto;
 }
 
-/**
-* Shrinking Content
-* Shrink a .g-col down to only the space it needs (flexbox only)
-*
-* Effectively just changes it’s values back to the default flex properties
-*/
 .g-col--shrink {
   flex: 0 1 auto;
 }
 
-/**
-* Add fallbacks for non-flexbox supporting browsers (for example, IE8/9)
-*/
 .no-flexbox .g {
   display: block !important;
 }
@@ -418,11 +242,6 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   display: block;
 }
 
-/**
-* Grid Span classes (for different breakpoints)
-*
-* Applied by using .g-spanx to .g-col elements, where x is the number of columns
-*/
 .g-span1 {
   flex-basis: 8.3333333333% !important;
   flex-grow: 0;
@@ -2369,33 +2188,14 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   }
 }
 
-/**
-* Global Layout Definitions & Helpers
-* =================================
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include layout();\` into your SCSS dependencies file.
-*/
 body {
   background-color: #fcfcfc;
 }
 
-/*
-* By default we want to give focus styling to all elements that are focusable.
-*/
-/*
-* Hide focus styles if they're not needed, for example, when an element receives focus via the mouse.
-*/
 :focus:not(:focus-visible) {
   outline: 0;
 }
 
-/*
-* Show focus styles on keyboard focus.
-*/
-/**
-* Default layout container
-*/
 .l-container {
   width: 100%;
   max-width: 1272px;
@@ -2416,9 +2216,6 @@ body {
   }
 }
 
-/**
-* Layout container for blocks that don't need padding on the sides
-*/
 .l-innerContainer {
   width: 100%;
   max-width: 1272px;
@@ -2439,9 +2236,6 @@ body {
   }
 }
 
-/**
-* Layout class for containers that contain content (such as T&cs and Privacy pages)
-*/
 .l-content {
   padding-top: 16px;
 }
@@ -2504,113 +2298,61 @@ body {
   justify-content: center;
 }
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
   margin: 0;
 }
 
-/**
- * Render the \`main\` element consistently in IE.
- */
 main {
   display: block;
 }
 
-/**
- * Correct the font size and margin on \`h1\` elements within \`section\` and
- * \`article\` contexts in Chrome, Firefox, and Safari.
- */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd \`em\` font sizing in all browsers.
- */
 pre {
-  font-family: monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace;
+  font-size: 1em;
 }
 
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
 a {
   background-color: transparent;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
 b,
 strong {
   font-weight: bolder;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd \`em\` font sizing in all browsers.
- */
 code,
 kbd,
 samp {
-  font-family: monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace;
+  font-size: 1em;
 }
 
-/**
- * Add the correct font size in all browsers.
- */
 small {
   font-size: 80%;
 }
 
-/**
- * Prevent \`sub\` and \`sup\` elements from affecting the line height in
- * all browsers.
- */
 sub,
 sup {
   font-size: 75%;
@@ -2627,53 +2369,31 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
 img {
   border-style: none;
 }
 
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
 button,
-input { /* 1 */
+input {
   overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
 button,
-select { /* 1 */
+select {
   text-transform: none;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
 button,
 [type=button],
 [type=reset],
@@ -2681,9 +2401,6 @@ button,
   -webkit-appearance: button;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
 button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -2692,9 +2409,6 @@ button::-moz-focus-inner,
   padding: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
 button:-moz-focusring,
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
@@ -2702,131 +2416,75 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-/**
- * Correct the padding in Firefox.
- */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from \`fieldset\` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    \`fieldset\` elements in all browsers.
- */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
 progress {
   vertical-align: baseline;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
 textarea {
   overflow: auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  padding: 0;
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to \`inherit\` in Safari.
- */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  font: inherit;
 }
 
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 details {
   display: block;
 }
 
-/*
- * Add the correct display in all browsers.
- */
 summary {
   display: list-item;
 }
 
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
 template {
   display: none;
 }
 
-/**
- * Add the correct display in IE 10.
- */
 [hidden] {
   display: none;
 }
 
-/**
-* Print styles
-* =================================
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include print();\` into your SCSS dependencies file.
-*/
 @media print {
   *,
 *:before,
 *:after,
 *:first-letter {
     background: transparent !important;
-    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -2839,9 +2497,6 @@ template {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  /*
-  * Don't show links for images, or javascript/internal links
-  */
   .ir a:after,
 a[href^="javascript:"]:after,
 a[href^="#"]:after {
@@ -2853,7 +2508,7 @@ blockquote {
     page-break-inside: avoid;
   }
   thead {
-    display: table-header-group; /* h5bp.com/t */
+    display: table-header-group;
   }
   tr,
 img {
@@ -2873,15 +2528,6 @@ img {
     page-break-after: avoid;
   }
 }
-/**
-* Fozzie Reset Styles
-* =================================
-* We use normalize.css for the bulk of our 'reset'
-* but anything else 'reset-y' lives in here
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include reset();\` into your SCSS dependencies file.
-*/
 html {
   box-sizing: border-box;
 }
@@ -2892,27 +2538,6 @@ html {
   box-sizing: inherit;
 }
 
-/**
-* Typography
-* =================================
-* - Base
-* - Paragraphs
-* - Headings
-* - Type sizes
-* - Misc
-* - Utilities
-*
-* Body font size, leadings etc have been set in _variables.scss
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include typography();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
-/**
-* Typography preloading styles
-*/
 html {
   font-size: 16px;
   text-size-adjust: 100%;
@@ -2930,9 +2555,6 @@ body {
   -moz-font-smoothing: antialiased;
 }
 
-/**
-* Paragraphs
-*/
 p {
   font-size: 16px;
   font-size: 1rem;
@@ -2941,9 +2563,6 @@ p {
   margin-bottom: 0;
 }
 
-/**
-* Headings
-*/
 h1,
 h2,
 h3,
@@ -3057,9 +2676,6 @@ small {
   font-size: 80%;
 }
 
-/**
-* Miscellaneous
-*/
 strong,
 b {
   font-weight: 700;
@@ -3075,9 +2691,6 @@ abbr[title] {
   cursor: help;
 }
 
-/**
-* Blockquotes
-*/
 blockquote {
   padding-left: 10px;
   margin: 16px;
@@ -3098,9 +2711,6 @@ blockquote small:before {
   content: "— ";
 }
 
-/**
-* Buttons
-*/
 button {
   font-family: "JetSansDigital", "Arial", sans-serif;
 }
@@ -3163,18 +2773,6 @@ hr {
   hyphens: auto;
 }
 
-/**
-* Apps Banner Component
-* =================================
-* Used to display app promo banner on the page.
-*
-* The \`c-appsBanner\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include appsBanner();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/apps-banner
-*/
-/* autoprefixer grid: autoplace */
 .c-appsBanner {
   text-align: left;
   position: relative;
@@ -3261,19 +2859,6 @@ hr {
   }
 }
 
-/**
-* Components > Content Header
-* =================================
-* Used to display important contextual info at the top of a page
-*
-* Example: Restaurant count and location on search page
-*
-* The \`c-contentHeader\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include contentHeader();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 .c-contentHeader {
   padding-top: 16px;
   padding-bottom: 8px;
@@ -3322,19 +2907,6 @@ hr {
   }
 }
 
-/**
-* Components > Content title
-* =================================
-* Used for displaying a title with an associated action next to it
-*
-* Example: Filter titles (Search sidebar)
-*
-* The \`c-contentTitle\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include contentTitle();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 .c-contentTitle {
   width: 100%;
   display: flex;
@@ -3364,16 +2936,6 @@ hr {
   text-decoration: underline;
 }
 
-/**
-* Components > Cookie Warning
-* =================================
-*
-* The \`c-cookieWarning\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include cookieWarning();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 .c-cookieWarning {
   background-color: #303d3f;
   position: fixed;
@@ -3419,16 +2981,6 @@ hr {
   color: #fff;
 }
 
-/**
-* Components > Cuisines Widget
-* =================================
-*
-* Example: Homepage – Popular cuisines image tiles.
-*
-* The \`c-cuisinesWidget\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include cuisinesWidget();\` into your SCSS dependencies file.
-*
-*/
 .c-cuisinesWidget {
   display: block;
   border-radius: 12px;
@@ -3466,19 +3018,6 @@ hr {
   width: 100%;
 }
 
-/**
-* Components > Fullscreen Popovers
-* =================================
-* Component that styles a full-page popover/takeover on top of the current content
-*
-* Example: Used for the mobile filters fullscreen popover on the Search Page
-*
-* The \`c-fullScreenPopOver\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include fullScreenPopOver();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 @media (max-width: 47.999em) {
   .c-fullScreenPopOver {
     left: 0;
@@ -3576,19 +3115,6 @@ hr {
   }
 }
 
-/**
-* Components > Listing Skeleton
-* =================================
-* Shows a Skeleton listing layout.
-*
-* Example: Search listings.
-*
-* The \`c-listingSkeleton\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include listingSkeleton();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 .c-listingSkeleton {
   position: relative;
   background: #fff;
@@ -3735,19 +3261,6 @@ hr {
   }
 }
 
-/**
-* Components > Listing
-* ===================================
-* Component that styles lists of content
-*
-* Example: SERP Page – Restaurant Information Lists
-*
-* The \`c-listing\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include listing();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/listings
-*/
 .c-listing {
   border-radius: 12px;
 }
@@ -4148,19 +3661,6 @@ hr {
   height: 20px;
 }
 
-/**
-* Components > Menu
-* =================================
-* Used for styling small pieces of information.
-*
-* Example: Menu – Categories list.
-*
-* The \`c-menu\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include menu();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/menus
-*/
 .c-menu {
   font-size: 16px;
   font-size: 1rem;
@@ -4258,19 +3758,6 @@ hr {
   flex-shrink: 0;
 }
 
-/**
-* Components > Item Selector
-* =================================
-* Used on menu pages to display a modal to the user.
-*
-* Example: Menu – When selecting an item.
-*
-* The \`c-modal\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include modal();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 .c-modal {
   z-index: 9000;
 }
@@ -4485,18 +3972,6 @@ hr {
   margin: 24px 0 16px;
 }
 
-/**
-* Components > Order Card
-* =================================
-*
-* Example: Homepage – "Order it Again" block.
-*
-* The \`c-orderCard\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include orderCard();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/order-card
-*/
 .c-orderCard {
   display: flex;
   flex-direction: column;
@@ -4688,19 +4163,6 @@ hr {
   margin-left: 16px;
 }
 
-/**
-* Components > Overflow Carousel
-* --------------------------------
-* Allows a list of content to be scrolled horizontally
-*
-* Example: Used for mobile filter carousel on the Search Page
-*
-* The \`c-overflowCarousel\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include overflowCarousel();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 @media (max-width: 47.999em) {
   .c-overflowCarousel {
     margin: 0 -16px;
@@ -4776,7 +4238,7 @@ hr {
 
 @media (min-width: 64.0625em) {
   .c-overflowCarousel--hideScroll {
-    scrollbar-width: none; /* stylelint-disable-line property-no-unknown */
+    scrollbar-width: none;
   }
 }
 
@@ -4785,20 +4247,6 @@ hr {
   display: none;
 }
 
-/**
-* Components > Page Banner
-* =================================
-* Page Banners stretch to the full width of their container and contain banner images which typically use a \`picture\` element.
-* Optionally they can display a white or coloured version of the Just Eat rays at the bottom.
-*
-* Example: Menu – Cuisine image at top of page.
-*
-* The \`c-pageBanner\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include pageBanner();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/page-banner
-*/
 .c-pageBanner {
   background-color: #fff;
   max-height: 300px;
@@ -4939,17 +4387,6 @@ hr {
   width: 100%;
 }
 
-/**
-* Components > Rating
-* =================================
-* Used for displaying restuarant rating stars
-*
-* The \`c-rating\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include rating();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/custom/star-ratings
-*/
 .c-rating {
   background-image: inline(dist/img/icons/stars/star--empty.svg);
   background-repeat: repeat-x;
@@ -5046,126 +4483,6 @@ hr {
   display: inline-block;
   height: 100%;
   width: 100%;
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
 }
 .c-rating--fill.c-ratings--fill-00 {
   width: 0;
@@ -5351,9 +4668,6 @@ hr {
   width: 100%;
 }
 
-/*
-Selectable stars rating component
-*/
 .c-ratingSelectable {
   display: flex;
   flex-direction: row-reverse;
@@ -5382,16 +4696,6 @@ Selectable stars rating component
   background-image: inline(dist/img/icons/stars/star--filled.svg);
 }
 
-/**
-* Components > Tag
-* =================================
-* Used for styling small pieces of information.
-*
-* Examples: Menu - Restaurant delivery information and Search - listing labels
-*
-* The \`c-tag\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include tag();\` into your SCSS dependencies file.
-*/
 .c-tag {
   align-items: center;
   background-color: #f5f3f1;
@@ -5466,17 +4770,6 @@ Selectable stars rating component
   color: #242e30;
 }
 
-/**
-* Toast Component
-* =================================
-* Used to display text in a pop-up style notification.
-*
-* The \`c-toast\` component is an optional mixin within Fozzie.
-If you'd like to use it in your project you can include it by adding \`@include toast();\` into your SCSS dependencies file.*
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/toast
-*/
 @keyframes toastSlideUp {
   0% {
     transform: translateY(0);
@@ -5539,14 +4832,6 @@ If you'd like to use it in your project you can include it by adding \`@include 
   background-color: #f75e28;
 }
 
-/**
-* User Message Component
-* =================================
-* Used to display the user message banner on the page.
-*
-* The \`c-userMessage\` component is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include userMessage();\` into your SCSS dependencies file.
-*/
 .c-userMessage {
   color: #fff;
   background-color: #fb6100;
@@ -5591,19 +4876,6 @@ If you'd like to use it in your project you can include it by adding \`@include 
   }
 }
 
-/**
-* Components > Alert
-* =================================
-* Messages that appear on the screen to highlight a state (usually with associated text)
-*
-* Example: Most form pages or wherever a message is fed back to the user
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include alerts();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 .c-alert {
   padding: 8px;
   margin-top: 16px;
@@ -5635,17 +4907,6 @@ If you'd like to use it in your project you can include it by adding \`@include 
   color: #d50525;
 }
 
-/**
-* Components > Breadcrumb
-* =================================
-* Used for website navigation breadcrumbs
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include breadcrumbs();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/breadcrumbs
-*/
 .c-breadcrumb {
   width: 100%;
   line-height: 2.5;
@@ -5717,12 +4978,6 @@ If you'd like to use it in your project you can include it by adding \`@include 
   }
 }
 
-/**
-* c-breadcrumb--pill
-* =================================
-* Adds a black transparent background with rounded corners to the breadcrumb list.
-* On smaller screens the icon and text are re-ordered.
-*/
 .c-breadcrumb--pill {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 16px;
@@ -5766,17 +5021,6 @@ If you'd like to use it in your project you can include it by adding \`@include 
   color: #fff;
 }
 
-/**
-* Components > Card
-* =================================
-* Used for content listing cards.
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include cards();\` into your SCSS dependencies file.
-
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/cards
-*/
 .c-card {
   background-color: #fff;
   display: block;
@@ -5990,18 +5234,6 @@ If you'd like to use it in your project you can include it by adding \`@include 
   }
 }
 
-/**
-* Components > Media element
-* ===================================
-* A common pattern that sees an image followed by a block of information.
-*
-* Example: SERP – Restaurant logos
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include mediaElement();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/mediaElement
-*/
 .c-mediaElement {
   display: flex;
   align-items: flex-start;
@@ -6147,17 +5379,6 @@ If you'd like to use it in your project you can include it by adding \`@include 
   text-decoration: underline;
 }
 
-/**
-* Objects > Body styles
-* ===================================
-* Body styles to control the background-color of a page
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include bodyStyles();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 .o-body--bgWhite {
   background-color: #fff;
 }
@@ -6171,16 +5392,6 @@ If you'd like to use it in your project you can include it by adding \`@include 
   }
 }
 
-/**
-* Objects > Buttons
-* =================================
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include buttons();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/buttons
-*/
 @keyframes spin {
   from {
     transform: rotate(0);
@@ -6215,15 +5426,9 @@ If you'd like to use it in your project you can include it by adding \`@include 
   top: calc(50% - 10px);
 }
 
-/**
-* Base button styles – Based on csswizardry.com/beautons
-*
-* 1. Allow us to better style box model properties.
-* 2. Line different sized buttons up a little nicer.
-*/
 .o-btn {
-  display: inline-block; /* [1] */
-  vertical-align: middle; /* [2] */
+  display: inline-block;
+  vertical-align: middle;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.4;
@@ -6269,16 +5474,6 @@ p + .o-btn {
   margin-top: 16px;
 }
 
-/**
-* ==========================================================================
-* Btn Background Colour modifiers
-* ==========================================================================
-*/
-/**
-* Modifier – .o-btn--primary
-*
-* Sets the btn colour to site primary colour
-*/
 .o-btn--primary {
   background-color: #fb6100;
 }
@@ -6309,11 +5504,6 @@ p + .o-btn {
   background-color: #595959;
 }
 
-/**
-* Modifier – .o-btn--secondary
-*
-* Accompanying secondary style button (knocked back slightly from the primary button)
-*/
 .o-btn--secondary {
   background-color: #f5f3f1;
   color: #242e30;
@@ -6333,11 +5523,6 @@ p + .o-btn {
   border-right: 3px solid rgba(36, 46, 48, 0.35);
 }
 
-/**
-* Modifier – .o-btn--outline
-*
-* Accompanying outline style button
-*/
 .o-btn--outline {
   background-color: transparent;
   color: #303d3f;
@@ -6358,11 +5543,6 @@ p + .o-btn {
   border-right: 3px solid rgba(48, 61, 63, 0.35);
 }
 
-/**
-* Modifier – .o-btn--ghost
-*
-* Accompanying ghost style button
-*/
 .o-btn--ghost {
   background-color: transparent;
   color: #242e30;
@@ -6382,11 +5562,6 @@ p + .o-btn {
   border-right: 3px solid rgba(36, 46, 48, 0.35);
 }
 
-/**
-* ==========================================================================
-* Btn Size Modifiers
-* ==========================================================================
-*/
 .o-btn--sizeLarge {
   padding: 14px 24px;
 }
@@ -6405,11 +5580,6 @@ p + .o-btn {
   padding: 6px 8px;
 }
 
-/**
-* ==========================================================================
-* Btn Layout Modifiers
-* ==========================================================================
-*/
 .o-btn--icon {
   background-color: transparent;
   padding: 0;
@@ -6432,9 +5602,6 @@ input[type=button].o-btn--block {
   margin-top: 8px;
 }
 
-/**
-* Disabled button
-*/
 .o-btn--disabled,
 .o-btn.disabled,
 .o-btn.is-disabled,
@@ -6459,14 +5626,6 @@ input[type=button].o-btn--block {
   background-color: transparent;
 }
 
-/**
-* Link button
-*
-* Make a button visually look like a default link
-* Useful when we semantically want a button but don’t want all the default styling
-*
-* Should only be applied to buttons
-*/
 .o-btn--link {
   border: 0;
   background-color: transparent;
@@ -6491,38 +5650,6 @@ input[type=button].o-btn--block {
   border-right: 3px solid rgba(36, 46, 48, 0.35);
 }
 
-/**
-* Objects > Checkboxes and radios
-* =================================
-* Custom Checkbox and Radio button styling
-*
-* This is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include formControls();\` into your SCSS dependencies file.
-*
-* Documentation:
-* https://fozzie.just-eat.com/styleguide/ui-components/forms/checkboxes
-* https://fozzie.just-eat.com/styleguide/ui-components/forms/radio-buttons
-* --------------------------------
-*
-* Checkbox button example HTML
-*
-*    <label class="o-formControl-label" for="checkbox1">
-*        <input class="o-formControl-input" type="checkbox" id="checkbox1" name="myCheckbox" value="A value"/>
-*        <span class="o-formControl-indicator o-formControl-indicator--checkbox"></span>
-*        My Checkbox Label Text
-*    </label>
-*
-* -------------------------------
-*
-* Radio button example HTML
-*
-*    <label class="o-formControl-label" for="radio1">
-*        <input class="o-formControl-input" type="radio" id="radio1" name="myRadioBtn" value="A value"/>
-*        <span class="o-formControl-indicator o-formControl-indicator--radio"></span>
-*        My Radio Button Label Text
-*     </label>
-*
-*/
 .o-formControl-label {
   position: relative;
   display: block;
@@ -6688,19 +5815,6 @@ label:hover .o-formControl-input:checked ~ .o-formControl-indicator--radio {
   }
 }
 
-/**
-* Objects > Form Toggle
-* =================================
-* Styles a button on top of a checkbox, to toggle inputs to a form
-*
-* Example: Search page filters (sidebat)
-*
-* The \`o-formToggle\` object is an optional mixin within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include formToggle();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 .o-formToggle {
   position: relative;
   display: inline-block;
@@ -6978,17 +6092,6 @@ label:hover .o-formControl-input:checked ~ .o-formControl-indicator--radio {
   color: #efedea;
 }
 
-/**
-* Objects > Links
-* =================================
-* Default Link Styling
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include links();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 a {
   color: #242e30;
 }
@@ -7025,17 +6128,6 @@ a:active {
   color: #0d4592;
 }
 
-/**
-* Objects > Lists
-* =================================
-* Default list styles (for unordered and ordered lists)
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include lists();\` into your SCSS dependencies file.
-*
-* Documentation:
-* TBC
-*/
 ul,
 ol {
   padding: 0;
@@ -7059,7 +6151,7 @@ ul {
 ul > li:before,
 ul > li ul > li:before {
   color: #fb6100;
-  content: "•"; /* Unicode for circle character */
+  content: "•";
   font-size: 1.8em;
   padding-right: 8px;
   position: relative;
@@ -7085,27 +6177,6 @@ ol > li {
   line-height: 1.43;
 }
 
-/**
-* Objects > Tables
-* =================================
-* Default Table styles
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include tables();\` into your SCSS dependencies file.
-*
-* File Index:
-* - Table specific variables
-* - Default table styles
-*
-* Documentation:
-* TBC
-*/
-/**
-* Define associated Table variables
-*/
-/**
-* Customizes the \`.table\` component with basic values, each used across all table variations.
-*/
 table,
 .table {
   width: 100%;
@@ -7181,10 +6252,6 @@ table:not(.not-striped) tbody :nth-child(odd) td,
   background-color: #fcfcfc;
 }
 
-/**
-* Responsive Trumps
-* ===================================
-*/
 @media (min-width: 25.875em) {
   .u-showBelowNarrow {
     display: none !important;
@@ -7240,30 +6307,6 @@ table:not(.not-striped) tbody :nth-child(odd) td,
   }
 }
 
-/**
-* Spacing Trumps
-* ===================================
-*
-* These can be helpful in situations where you need to apply some spacing and do not wish to create a new class name for an element.
-* The classes generated include spacing for each of our spacing variables in all directions (left.right, top, bottom), including horizontal & vertical, for both padding & margin.
-*
-* The format of the generated classes is \`.u-{name}--{modifier}\`, modifier is an optional parameter.
-*
-* eg. a subset of the generated classes
-*
-* .u-spacing { margin: 8px; }
-* .u-spacing--top { margin-top: 8px; }
-* .u-spacing-a--top { margin-top: 4px; }
-* .u-spacing-b--top { margin-top: 8px; }
-*
-* .u-pad { padding: 8px; }
-* .u-pad--top { padding-top: 8px; }
-* .u-pad-a--top { padding-top: 4px; }
-* .u-pad-b--top { padding-top: 8px; }
-*
-* This is an optional component within Fozzie.
-* If you'd like to use it in your project you can include it by adding \`@include trumps-spacing();\` into your SCSS dependencies file.
-*/
 .u-spacing {
   margin: 8px !important;
 }
@@ -7924,11 +6967,6 @@ table:not(.not-striped) tbody :nth-child(odd) td,
   padding-top: 80px !important;
 }
 
-/**
-* Utilities
-* ===================================
-* Non-semantic helper classes
-*/
 .u-clearfix:after {
   content: " ";
   display: table;
@@ -8173,12 +7211,6 @@ em.u-text-highlight {
   display: none;
 }
 
-/* Custom outline styling for elements that have a focus state */
-/* Custom visual outline emulation for better appearance on elements with rounded corners */
-/*
-* Clever hack to have focus on an element but only when keyboard focused (not click)
-* https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
-*/
 .u-shadowBottom--belowMid {
   padding-bottom: 56px;
 }
@@ -8219,166 +7251,6 @@ em.u-text-highlight {
   border: 1px solid green;
   padding: 30px;
   border-radius: 10px;
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

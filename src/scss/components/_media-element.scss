@@ -5,18 +5,18 @@
 @use 'sass:math';
 
 @mixin mediaElement() {
-    /**
-    * Components > Media element
-    * ===================================
-    * A common pattern that sees an image followed by a block of information.
-    *
-    * Example: SERP – Restaurant logos
-    * This is an optional component within Fozzie.
-    * If you'd like to use it in your project you can include it by adding `@include mediaElement();` into your SCSS dependencies file.
-    *
-    * Documentation:
-    * https://fozzie.just-eat.com/styleguide/ui-components/mediaElement
-    */
+    //
+    // Components > Media element
+    // ===================================
+    // A common pattern that sees an image followed by a block of information.
+    //
+    // Example: SERP – Restaurant logos
+    // This is an optional component within Fozzie.
+    // If you'd like to use it in your project you can include it by adding `@include mediaElement();` into your SCSS dependencies file.
+    //
+    // Documentation:
+    // https://fozzie.just-eat.com/styleguide/ui-components/mediaElement
+    //
 
     $mediaElement-img-width         : 50px;
     $mediaElement-img-width--mid    : 78px;

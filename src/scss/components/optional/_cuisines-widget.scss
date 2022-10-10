@@ -4,16 +4,16 @@
 @use '../../tools/functions/index' as functions;
 
 @mixin cuisinesWidget() {
-    /**
-    * Components > Cuisines Widget
-    * =================================
-    *
-    * Example: Homepage – Popular cuisines image tiles.
-    *
-    * The `c-cuisinesWidget` component is an optional mixin within Fozzie.
-    * If you'd like to use it in your project you can include it by adding `@include cuisinesWidget();` into your SCSS dependencies file.
-    *
-    */
+    //
+    // Components > Cuisines Widget
+    // =================================
+    //
+    // Example: Homepage – Popular cuisines image tiles.
+    //
+    // The `c-cuisinesWidget` component is an optional mixin within Fozzie.
+    // If you'd like to use it in your project you can include it by adding `@include cuisinesWidget();` into your SCSS dependencies file.
+    //
+    //
 
     $cuisinesWidget-defaultBackground: dt.$color-background-subtle;
     $cuisinesWidget-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
