@@ -1,11 +1,9 @@
 @mixin print() {
-    /**
-    * Print styles
-    * =================================
-    *
-    * This is an optional component within Fozzie.
-    * If you'd like to use it in your project you can include it by adding `@include print();` into your SCSS dependencies file.
-    */
+    // Print styles
+    // =================================
+    //
+    // This is an optional component within Fozzie.
+    // If you'd like to use it in your project you can include it by adding `@include print();` into your SCSS dependencies file.
 
     @media print {
         *,

@@ -4,25 +4,20 @@
 @use '../settings/include-media' as *;
 @use 'sass:math';
 
-/**
- * The Kickoff Flexbox Grid
- * =================================
- * Default grid classes
- * Grid gutter options
- * Modifier Classes (column height and cell alignment)
- * Legacy fallbacks for flexbox
- * Grid span classes
- * Breakpoint stacking
- */
+ // The Kickoff Flexbox Grid
+ // =================================
+ // Default grid classes
+ // Grid gutter options
+ // Modifier Classes (column height and cell alignment)
+ // Legacy fallbacks for flexbox
+ // Grid span classes
+ // Breakpoint stacking
 
 
-/* Import Grid helpers and mixins */
+// Import Grid helpers and mixins
 
-/**
- * Kickoff grid helpers
- */
-
- @mixin ko-gridSpanHelper($breakpoint: null) {
+// Kickoff grid helpers
+@mixin ko-gridSpanHelper($breakpoint: null) {
     $suffix: null;
 
     @if $breakpoint {
@@ -174,14 +169,12 @@
 
 @mixin grid() {
 
-    /**
-    * Basic Usage:
-    * =================================
-        <div class="g">
-            <div class="g-col g-span4 g-span6--mid"></div>
-            <div class="g-col g-span8 g-span6--mid"></div>
-        </div>
-    */
+    // Basic Usage:
+    // =================================
+    //   <div class="g">
+    //     <div class="g-col g-span4 g-span6--mid"></div>
+    //     <div class="g-col g-span8 g-span6--mid"></div>
+    //   </div>
     .g {
         display: flex !important; // force display: flex, as otherwise may clash with other components display properties (and the grid won’t work)
         flex-flow: row wrap;
@@ -202,11 +195,9 @@
             min-width: 0; // this is to make sure that long words don’t get cut off, but wrap as expected
         }
 
-    /**
-    * Gutter calcs – applied to grid columns in our grid (direct descendants only)
-    * Default: pixels (can look at changing to percentage)
-    * Usage: gutterCalc() or gutterCalc(false)
-    */
+    // Gutter calcs – applied to grid columns in our grid (direct descendants only)
+    // Default: pixels (can look at changing to percentage)
+    // Usage: gutterCalc() or gutterCalc(false)
 
     // Three types of gutter
     // -------------------
@@ -288,10 +279,9 @@
     }
 
 
-    /**
-    * Alignment
-    * Modifier classes to move our grid elements around
-    */
+    // Alignment
+    // Modifier classes to move our grid elements around
+
     .g--alignTop          { align-items: flex-start; }
     .g--alignBottom       { align-items: flex-end; }
     .g--alignSelfBottom   { align-self: flex-end; }
@@ -359,11 +349,9 @@
 
 
 
-    /**
-    * Grid Span classes (for different breakpoints)
-    *
-    * Applied by using .g-spanx to .g-col elements, where x is the number of columns
-    */
+    // Grid Span classes (for different breakpoints)
+    //
+    // Applied by using .g-spanx to .g-col elements, where x is the number of columns
 
     @include ko-gridSpanHelper; // Default sizes
 
