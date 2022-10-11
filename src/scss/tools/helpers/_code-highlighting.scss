@@ -3,18 +3,18 @@
 @use '../../tools/mixins/type';
 @use '../../tools/functions/index' as functions;
 
-// **
-// Code Highlighting
-// ===================================
-//
+/**
+ * Code Highlighting
+ * ===================================
+ */
 
-// http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+scss
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+scss */
 
-//
-// prism.js default theme for JavaScript, CSS and HTML
-// Based on dabblet (http://dabblet.com)
-// @author Lea Verou
-// **
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
 
 code[class*='language-'],
 pre[class*='language-'] {
@@ -46,7 +46,7 @@ code[class*='language-'] ::selection {
     }
 }
 
-// Code blocks
+/* Code blocks */
 pre[class*='language-'] {
     padding: 1em;
     margin: functions.spacing(d) 0;
@@ -58,7 +58,7 @@ pre[class*='language-'] {
     background: #f5f2f0;
 }
 
-// Inline code
+/* Inline code */
 :not(pre) > code[class*='language-'] {
     padding: 0.1em;
     border-radius: 0.3em;

@@ -5,24 +5,29 @@
 @use '../settings/include-media' as *;
 
 @mixin typography() {
-    // Typography
-    // =================================
-    // - Base
-    // - Paragraphs
-    // - Headings
-    // - Type sizes
-    // - Misc
-    // - Utilities
-    //
-    // Body font size, leadings etc have been set in _variables.scss
-    //
-    // This is an optional component within Fozzie.
-    // If you'd like to use it in your project you can include it by adding `@include typography();` into your SCSS dependencies file.
-    //
-    // Documentation:
-    // TBC
+    /**
+    * Typography
+    * =================================
+    * - Base
+    * - Paragraphs
+    * - Headings
+    * - Type sizes
+    * - Misc
+    * - Utilities
+    *
+    * Body font size, leadings etc have been set in _variables.scss
+    *
+    * This is an optional component within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include typography();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
-    // Typography preloading styles
+
+    /**
+    * Typography preloading styles
+    */
 
     html {
         font-size: v.$font-size-base-px; //default font size in px (16px)
@@ -40,7 +45,9 @@
         -moz-font-smoothing: antialiased;
     }
 
-    // Paragraphs
+    /**
+    * Paragraphs
+    */
 
     p {
         @include type.font-size(body-l);
@@ -48,7 +55,9 @@
         margin-bottom: 0;
     }
 
-    // Headings
+    /**
+    * Headings
+    */
 
     h1,
     h2,
@@ -133,7 +142,9 @@
         font-size: 80%;
     }
 
-    // Miscellaneous
+    /**
+    * Miscellaneous
+    */
 
     // Emphasis
     strong,
@@ -152,8 +163,9 @@
         cursor: help;
     }
 
-    // Blockquotes
-
+    /**
+    * Blockquotes
+    */
     blockquote {
         padding-left: 10px;
         margin: functions.spacing(d);
@@ -175,7 +187,9 @@
         }
     }
 
-    // Buttons
+    /**
+    * Buttons
+    */
 
     button {
         font-family: v.$font-family-base;

@@ -2,6 +2,27 @@
 
 exports[`fozzie-reset.scss compiles the expected CSS 1`] = `
 "@charset "UTF-8";
+/**
+* Typography
+* =================================
+* - Base
+* - Paragraphs
+* - Headings
+* - Type sizes
+* - Misc
+* - Utilities
+*
+* Body font size, leadings etc have been set in _variables.scss
+*
+* This is an optional component within Fozzie.
+* If you'd like to use it in your project you can include it by adding \`@include typography();\` into your SCSS dependencies file.
+*
+* Documentation:
+* TBC
+*/
+/**
+* Typography preloading styles
+*/
 html {
   font-size: 16px;
   text-size-adjust: 100%;
@@ -19,6 +40,9 @@ body {
   -moz-font-smoothing: antialiased;
 }
 
+/**
+* Paragraphs
+*/
 p {
   font-size: 16px;
   font-size: 1rem;
@@ -27,6 +51,9 @@ p {
   margin-bottom: 0;
 }
 
+/**
+* Headings
+*/
 h1,
 h2,
 h3,
@@ -140,6 +167,9 @@ small {
   font-size: 80%;
 }
 
+/**
+* Miscellaneous
+*/
 strong,
 b {
   font-weight: 700;
@@ -155,6 +185,9 @@ abbr[title] {
   cursor: help;
 }
 
+/**
+* Blockquotes
+*/
 blockquote {
   padding-left: 10px;
   margin: 16px;
@@ -175,6 +208,9 @@ blockquote small:before {
   content: "— ";
 }
 
+/**
+* Buttons
+*/
 button {
   font-family: "JetSansDigital", "Arial", sans-serif;
 }

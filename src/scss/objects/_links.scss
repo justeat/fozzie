@@ -1,15 +1,17 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 
 @mixin links() {
-    // Objects > Links
-    // =================================
-    // Default Link Styling
-    //
-    // This is an optional component within Fozzie.
-    // If you'd like to use it in your project you can include it by adding `@include links();` into your SCSS dependencies file.
-    //
-    // Documentation:
-    // TBC
+    /**
+    * Objects > Links
+    * =================================
+    * Default Link Styling
+    *
+    * This is an optional component within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include links();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
     a {
         & {

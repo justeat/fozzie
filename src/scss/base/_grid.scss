@@ -271,8 +271,10 @@
     }
 
 
-    // Alignment
-    // Modifier classes to move our grid elements around
+    /**
+    * Alignment
+    * Modifier classes to move our grid elements around
+    */
 
     .g--alignTop          { align-items: flex-start; }
     .g--alignBottom       { align-items: flex-end; }
@@ -341,9 +343,11 @@
 
 
 
-    // Grid Span classes (for different breakpoints)
-    //
-    // Applied by using .g-spanx to .g-col elements, where x is the number of columns
+    /**
+    * Grid Span classes (for different breakpoints)
+    *
+    * Applied by using .g-spanx to .g-col elements, where x is the number of columns
+    */
 
     @include ko-gridSpanHelper; // Default sizes
 

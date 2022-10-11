@@ -19,17 +19,19 @@ $formToggle-text--disabled          : dt.$color-disabled-01;
 $formToggle-text--checked           : dt.$color-green;
 
 @mixin formToggle() {
-    // Objects > Form Toggle
-    // =================================
-    // Styles a button on top of a checkbox, to toggle inputs to a form
-    //
-    // Example: Search page filters (sidebat)
-    //
-    // The `o-formToggle` object is an optional mixin within Fozzie.
-    // If you'd like to use it in your project you can include it by adding `@include formToggle();` into your SCSS dependencies file.
-    //
-    // Documentation:
-    // TBC
+    /**
+    * Objects > Form Toggle
+    * =================================
+    * Styles a button on top of a checkbox, to toggle inputs to a form
+    *
+    * Example: Search page filters (sidebat)
+    *
+    * The `o-formToggle` object is an optional mixin within Fozzie.
+    * If you'd like to use it in your project you can include it by adding `@include formToggle();` into your SCSS dependencies file.
+    *
+    * Documentation:
+    * TBC
+    */
 
     .o-formToggle {
         position: relative;

@@ -66,11 +66,11 @@
 }
 
 @mixin trumps-utilities() {
-    // **
-    // Utilities
-    // ===================================
-    // Non-semantic helper classes
-    // **
+    /**
+    * Utilities
+    * ===================================
+    * Non-semantic helper classes
+    */
 
     // Clearfix
     // http://www.cssmojo.com/latest_new_clearfix_so_far/
@@ -231,7 +231,7 @@
         margin-left: functions.spacing(d);
     }
 
-    // **
+
     // Typographic Colour Helpers
     //
     // Each colour util class is relative to a Fozzie colour within the
@@ -392,18 +392,20 @@
     // Helper classes for focus accessibility
     // =================================================================================
 
-    // Custom outline styling for elements that have a focus state
+    /* Custom outline styling for elements that have a focus state */
     .u-elementFocus {
         @extend %u-elementFocus;
     }
 
-    // Custom visual outline emulation for better appearance on elements with rounded corners
+    /* Custom visual outline emulation for better appearance on elements with rounded corners */
     .u-elementFocus--boxShadow {
         @extend %u-elementFocus--boxShadow;
     }
 
-    // Clever hack to have focus on an element but only when keyboard focused (not click)
-    // https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
+    /*
+    * Clever hack to have focus on an element but only when keyboard focused (not click)
+    * https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
+    */
     .u-focusShadow:focus,
     .u-focusShadow-content:focus {
         @extend %u-focusShadow;

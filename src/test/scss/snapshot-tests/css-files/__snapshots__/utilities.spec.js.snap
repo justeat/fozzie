@@ -59,6 +59,11 @@ exports[`fozzie-utilities.scss compiles the expected CSS 1`] = `
   box-shadow: 0 0 2px 2px #4996fd;
 }
 
+/**
+* Utilities
+* ===================================
+* Non-semantic helper classes
+*/
 .u-clearfix:after {
   content: " ";
   display: table;
@@ -303,6 +308,12 @@ em.u-text-highlight {
   display: none;
 }
 
+/* Custom outline styling for elements that have a focus state */
+/* Custom visual outline emulation for better appearance on elements with rounded corners */
+/*
+* Clever hack to have focus on an element but only when keyboard focused (not click)
+* https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press
+*/
 .u-shadowBottom--belowMid {
   padding-bottom: 56px;
 }
@@ -328,6 +339,30 @@ em.u-text-highlight {
   cursor: pointer !important;
 }
 
+/**
+* Spacing Trumps
+* ===================================
+*
+* These can be helpful in situations where you need to apply some spacing and do not wish to create a new class name for an element.
+* The classes generated include spacing for each of our spacing variables in all directions (left.right, top, bottom), including horizontal & vertical, for both padding & margin.
+*
+* The format of the generated classes is \`.u-{name}--{modifier}\`, modifier is an optional parameter.
+*
+* eg. a subset of the generated classes
+*
+* .u-spacing { margin: 8px; }
+* .u-spacing--top { margin-top: 8px; }
+* .u-spacing-a--top { margin-top: 4px; }
+* .u-spacing-b--top { margin-top: 8px; }
+*
+* .u-pad { padding: 8px; }
+* .u-pad--top { padding-top: 8px; }
+* .u-pad-a--top { padding-top: 4px; }
+* .u-pad-b--top { padding-top: 8px; }
+*
+* This is an optional component within Fozzie.
+* If you'd like to use it in your project you can include it by adding \`@include trumps-spacing();\` into your SCSS dependencies file.
+*/
 .u-spacing {
   margin: 8px !important;
 }
@@ -988,6 +1023,10 @@ em.u-text-highlight {
   padding-top: 80px !important;
 }
 
+/**
+* Responsive Trumps
+* ===================================
+*/
 @media (min-width: 25.875em) {
   .u-showBelowNarrow {
     display: none !important;
