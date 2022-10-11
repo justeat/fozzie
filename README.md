@@ -89,9 +89,9 @@ Example of using them in a project (note: you can also pull these from `dist/css
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>A JustEat Marketing Site</title>
         <!-- use fozzie CSS files to provide base styles and utilities classes used by the cookie banner   -->
-        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie/dist/css/fozzie-reset.css" />
-        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie/dist/css/fozzie-typography.css" />
-        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie/dist/css/fozzie-utilities.css" />
+        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie@10.7.0/dist/css/fozzie-reset.css" />
+        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie@10.7.0/dist/css/fozzie-typography.css" />
+        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie@10.7.0/dist/css/fozzie-utilities.css" />
     </head>
 
     <body>
