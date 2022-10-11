@@ -19,9 +19,11 @@ Fozzie is an SCSS Helper Library that's used to help ensure web projects across 
 
 By including this helper library, the consuming web application will have access to our shared PIE Design tokens, as well as common SCSS helper mixins and functions for things like font-size, spacing and setting media queries.
 
+Additionally, some parts of Fozzie are available as compiled CSS to use directly in a web application that may not be using SCSS.
+
 ## Usage
 
-### Pre-requisites
+### Pre-requisites for using the SCSS
 
 To use the fozzie SCSS helper library, you'll need to ensure a couple of things:
 
@@ -66,6 +68,37 @@ Once you have imported fozzie into your Sass, you'll have access to the fozzie v
         padding: f.spacing('c');
       }
     ]
+  ```
+
+### Using the compiled CSS directly
+Fozzie offers a few pre-compiled CSS files for web applications not using SCSS. These are:
+1. `fozzie-reset.css` - our normalize and reset styles
+2. `fozzie-typography.css` - our typographic styles
+3. `fozzie-utilities.css` - trumps and utility classes to use
+
+All of the CSS files come as regular or minified CSS and include sourcemaps.
+
+Example of using them in a project (note: you can also pull these from `dist/css` if you have installed Fozzie in the project):
+  ```html
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A JustEat Marketing Site</title>
+        <!-- use fozzie CSS files to provide base styles and utilities classes used by the cookie banner   -->
+        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie@10.7.0/dist/css/fozzie-reset.css" />
+        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie@10.7.0/dist/css/fozzie-typography.css" />
+        <link rel="stylesheet" href="https://unpkg.com/@justeat/fozzie@10.7.0/dist/css/fozzie-utilities.css" />
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+
+    </html>
   ```
 
 ## Testing
