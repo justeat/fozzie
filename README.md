@@ -70,7 +70,7 @@ Once you have imported fozzie into your Sass, you'll have access to the fozzie v
     ]
   ```
 
-### Using the Compiled CSS directly
+### Using the compiled CSS directly
 Fozzie offers a few pre-compiled CSS files for web applications not using SCSS. These are:
 1. `fozzie-reset.css` - our normalize and reset styles
 2. `fozzie-typography.css` - our typographic styles
