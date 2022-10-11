@@ -1,6 +1,6 @@
 @use '@justeat/pie-design-tokens/dist/jet' as dt;
 
-/* stylelint-disable indentation */
+// stylelint-disable indentation
 // =================================
 // Variables
 // =================================
@@ -159,4 +159,4 @@ $default-transition: all 150ms ease-in-out;
     @debug 'Server is set to `#{$server}`';
 }
 
-/* stylelint-enable */
+// stylelint-enable

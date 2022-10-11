@@ -2,99 +2,6 @@
 
 exports[`Compiled CSS output compiles the expected CSS 1`] = `
 "@charset "UTF-8";
-/* stylelint-disable indentation */
-/* stylelint-enable */
-/**
- * Strip units
- * =================================
- * Remove the unit of a measurement
- *
- * Usage:
- * strip-units(400px)  > 400
- */
-/**
- * px to em converter
- * =================================
- * Convert pixels to ems
- *
- * Usage:
- * font-size : em(12);
- * font-size : em(12, 24); // If the parent is another value say 24px
- */
-/**
- * Convert a map of breakpoints to ems
- * =================================
- * Takes a map of breakpoints (in px) and a base-font-size
- *
- * Usage:
- $breakpoints: map-to-em((
- 	narrow : 400px,
- 	mid    : 750px,
- 	wide   : 1000px,
- 	huge   : 1250px
- ), 16);
- */
-/**
- * @param {String} $key – The type key you would like to reference. These are mapped to the PIE type definitions.
- * @param {Boolean} $line-height – Specifies whether the relevant \`line-height\` is output alongside the \`font-size\` declaration.
- * @param {String} $scale – Defines which sub-type scale definition to output from the Sass type-map.
- * @param {Boolean} $relativeToParent – When set to true, the mixin will output the \`font-size\` as \`em\`s rather than \`rem\`s. By default, the \`font-size\` is defined relative to the root element.
- */
-/**
- * Extends default $spacing map with an empty entry at the start
- */
-/**
- * The Kickoff Flexbox Grid
- * =================================
- * Default grid classes
- * Grid gutter options
- * Modifier Classes (column height and cell alignment)
- * Legacy fallbacks for flexbox
- * Grid span classes
- * Breakpoint stacking
- */
-/* Import Grid helpers and mixins */
-/**
- * Kickoff grid helpers
- */
-/**
-* Grid stacking
-* Stack grids based on a given breakpoint
-*
-* Usage:
-* .g--stack--narrow
-* .g--stack--wide
-*/
-/**
-* Gutter Calculations
-* Default: percent
-* Usage: ko-gutterCalc() or ko-gutterCalc(false)
-* When show-unit is true, returns the percentage, otherwise return a decimal
-*/
-/**
-* Grid columns width calculations
-* This is where the magic of working out the column widths happens
-*
-* $column-span: define the width for the number of columns required
-* $show-unit: Switch return value between percentage (default) and decimal
-* $include-gutters: if gutters should be included in the calculations. Default = false
-* $legacy-calc: if we are working out a legacy column width calculation, or not. Default = false
-*/
-/**
-* Column width mixin
-* Usage:
-* @include column(2);
-*/
-/**
-* Components > Spinner Indicator
-* =================================
-*
-* Example: f-searchbox -  Loqate feature enabled (Full address capture)
-*
-* If you'd like to use it in your project you can include it by adding \`@include loadingIndicator();\` into your SCSS dependencies file.
-* Then add \`<span class=“c-spinner” />\` to your html;
-* If you’d like to change spinner colour add \`@include spinnerColor(mainColourVar, opaqueColourVar);\` to the parent element of the spinner styles.
-*/
 .o-btn--icon, .u-ir {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -150,7 +57,7 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
 }
 
 .u-focusShadow:focus > .u-focusShadow-content {
-  box-shadow: 0 0 2px 2px #4996fd; /* keyboard-only focus styles */
+  box-shadow: 0 0 2px 2px #4996fd;
 }
 
 @keyframes skeletonGradient {
@@ -161,64 +68,6 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
     background-position: 0% 50%;
   }
 }
-/**
- * Just Eat Styleguide
- * =================================
- */
-/**
- * Objects
- * =================================
- * Styles apply to an object if they are directly associated to a HTML element.
- * If not, the styles should be defined as a component.
- *
- * For example, it would be expected to have:
- * 	links.scss > styles relating to links (<a> tag)
- * 	tables.scss > styles relating to tables
- *
- * Object styles should be prefixed with \`.o-\`
- */
-/**
- * Components:
- * =================================
- * Components are our resuable chunks of styling that aren’t directly associated to a base tag
- *
- * This is where the majority of our day-to-day styling will take place.  Component styles should be prefixed with \`.c-\`
- */
-/**
- * Utility classes
- * =====================================
- * These should always come last as they should 'trump' other properties
- */
-/**
- * Print styles
- */
-/**
- * Setting $includeBaseFramework to \`true\` includes the base styles that were included
- * as part of Fozzie v4 (useful for anyone upgrading that wants to keep things as-is)
-**/
-/**
- * Setting $includeMinimalFramework to \`true\` includes a recommended base set of styles
- * that provides styling for most use-cases (links, lists, buttons, grid)
- **/
-/**
- * Setting $includeBaseFramework to \`true\` includes the base styles that were included
- * as part of Fozzie v4 (useful for anyone upgrading that wants to keep things as-is)
- **/
-/**
- * Setting $includeMinimalFramework to \`true\` includes a recommended base set of styles
- * that provides styling for most use-cases (links, lists, buttons, grid)
- **/
-/**
- * Templates for including base sets of styles
- */
-/**
-* Basic Usage:
-* =================================
-    <div class="g">
-        <div class="g-col g-span4 g-span6--mid"></div>
-        <div class="g-col g-span8 g-span6--mid"></div>
-    </div>
-*/
 .g {
   display: flex !important;
   flex-flow: row wrap;
@@ -234,11 +83,6 @@ exports[`Compiled CSS output compiles the expected CSS 1`] = `
   min-width: 0;
 }
 
-/**
-* Gutter calcs – applied to grid columns in our grid (direct descendants only)
-* Default: pixels (can look at changing to percentage)
-* Usage: gutterCalc() or gutterCalc(false)
-*/
 .g--gutter {
   margin-left: -8px;
   margin-right: -8px;
@@ -2390,9 +2234,6 @@ body {
   outline: 0;
 }
 
-/*
-* Show focus styles on keyboard focus.
-*/
 /**
 * Default layout container
 */
@@ -2506,18 +2347,18 @@ body {
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
-   ========================================================================== */
+========================================================================== */
 /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
+* 1. Correct the line height in all browsers.
+* 2. Prevent adjustments of font size after orientation changes in iOS.
+*/
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
-   ========================================================================== */
+========================================================================== */
 /**
  * Remove the margin in all browsers.
  */
@@ -2565,7 +2406,7 @@ pre {
 /* Text-level semantics
    ========================================================================== */
 /**
- * Remove the gray background on active links in IE 10.
+ * Remove the grey background on active links in IE 10.
  */
 a {
   background-color: transparent;
@@ -4121,6 +3962,16 @@ hr {
   height: 32px;
 }
 
+/**
+* Components > Spinner Indicator
+* =================================
+*
+* Example: f-searchbox -  Loqate feature enabled (Full address capture)
+*
+* If you'd like to use it in your project you can include it by adding \`@include loadingIndicator();\` into your SCSS dependencies file.
+* Then add \`<span class=“c-spinner” />\` to your html;
+* If you’d like to change spinner colour add \`@include spinnerColor(mainColourVar, opaqueColourVar);\` to the parent element of the spinner styles.
+*/
 @keyframes spin {
   from {
     transform: rotate(0);
@@ -4776,7 +4627,7 @@ hr {
 
 @media (min-width: 64.0625em) {
   .c-overflowCarousel--hideScroll {
-    scrollbar-width: none; /* stylelint-disable-line property-no-unknown */
+    scrollbar-width: none;
   }
 }
 
@@ -5046,126 +4897,6 @@ hr {
   display: inline-block;
   height: 100%;
   width: 100%;
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
 }
 .c-rating--fill.c-ratings--fill-00 {
   width: 0;
@@ -5352,8 +5083,8 @@ hr {
 }
 
 /*
-Selectable stars rating component
-*/
+ * Selectable stars rating component
+ */
 .c-ratingSelectable {
   display: flex;
   flex-direction: row-reverse;
@@ -5773,7 +5504,7 @@ If you'd like to use it in your project you can include it by adding \`@include 
 *
 * This is an optional component within Fozzie.
 * If you'd like to use it in your project you can include it by adding \`@include cards();\` into your SCSS dependencies file.
-
+*
 * Documentation:
 * https://fozzie.just-eat.com/styleguide/ui-components/cards
 */
@@ -6181,6 +5912,16 @@ If you'd like to use it in your project you can include it by adding \`@include 
 * Documentation:
 * https://fozzie.just-eat.com/styleguide/ui-components/buttons
 */
+/**
+* Components > Spinner Indicator
+* =================================
+*
+* Example: f-searchbox -  Loqate feature enabled (Full address capture)
+*
+* If you'd like to use it in your project you can include it by adding \`@include loadingIndicator();\` into your SCSS dependencies file.
+* Then add \`<span class=“c-spinner” />\` to your html;
+* If you’d like to change spinner colour add \`@include spinnerColor(mainColourVar, opaqueColourVar);\` to the parent element of the spinner styles.
+*/
 @keyframes spin {
   from {
     transform: rotate(0);
@@ -6222,8 +5963,8 @@ If you'd like to use it in your project you can include it by adding \`@include 
 * 2. Line different sized buttons up a little nicer.
 */
 .o-btn {
-  display: inline-block; /* [1] */
-  vertical-align: middle; /* [2] */
+  display: inline-block;
+  vertical-align: middle;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.4;
@@ -7099,12 +6840,6 @@ ol > li {
 *
 * Documentation:
 * TBC
-*/
-/**
-* Define associated Table variables
-*/
-/**
-* Customizes the \`.table\` component with basic values, each used across all table variations.
 */
 table,
 .table {
@@ -8210,6 +7945,11 @@ em.u-text-highlight {
 }
 
 .test-output {
+  border-radius: 2px;
+  background: linear-gradient(-45deg, #fcfcfc, #fcfcfc, #f5f3f1, #fcfcfc, #fcfcfc);
+  background-size: 2000px 600%;
+  animation: skeletonGradient 2s ease infinite;
+  animation-fill-mode: forwards;
   background-color: red;
   border-color: #cc0000;
   color: white;
@@ -8219,166 +7959,6 @@ em.u-text-highlight {
   border: 1px solid green;
   padding: 30px;
   border-radius: 10px;
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
-  /* stylelint-disable max-nesting-depth */
-  /* stylelint-enable max-nesting-depth */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

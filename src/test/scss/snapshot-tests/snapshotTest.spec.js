@@ -1,14 +1,14 @@
 const path = require('path');
-const cssCompiler = require('../../../utilities/compileToCss');
+const cssCompiler = require('../../../utilities/cssCompiler');
 // const cssLinter = require('../../../utilities/cssLinter');
 
 describe('Compiled CSS output', () => {
     it('compiles the expected CSS', () => {
         // arrange
-        const scssAbsolutePath = path.join(path.resolve(__dirname), '..', 'data', 'fozzie-snapshot.scss');
+        const scssAbsolutePath = path.join(process.cwd(), 'src', 'test', 'scss', 'data', 'fozzie-snapshot.scss');
 
         // act
-        const cssResult = cssCompiler.compileToCSS({ scssPath: scssAbsolutePath, useLegacyRenderer: true });
+        const cssResult = cssCompiler.compile({ scssPath: scssAbsolutePath, useLegacyRenderer: true });
 
         // assert
         expect(cssResult).toMatchSnapshot();
@@ -22,7 +22,7 @@ describe('Compiled CSS output', () => {
     //     const scssAbsolutePath = path.join(path.resolve(__dirname), '..', 'data', 'fozzie-snapshot.scss');
 
     //     // act
-    //     const cssResult = cssCompiler.compileToCSS({ scssPath: scssAbsolutePath, useLegacyRenderer: true });
+    //     const cssResult = cssCompiler.compile({ scssPath: scssAbsolutePath, useLegacyRenderer: true });
 
     //     // assert
     //     const lintResult = await cssLinter.lintCSS(cssResult);

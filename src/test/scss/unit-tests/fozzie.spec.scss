@@ -126,6 +126,8 @@
 
     @include it('mixins - does not throw any errors') {
         .test-output {
+            @include systemUnderTest.anim();
+
             @include systemUnderTest.alert-variant(red, white);
             @include systemUnderTest.bordered();
             @include systemUnderTest.bordered(10px, 30px, green);

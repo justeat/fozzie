@@ -8,6 +8,22 @@ Future Todo List
 - Make typography and utility classes silent extenders (so that they can be extended by components without importing all utility classes).
 
 
+v10.7.0
+------------------------------
+*October 10, 2022*
+
+### Added
+- CSS outputted files for typography, utilities and reset
+- Snapshot tests for outputted files
+
+### Changed
+- Rename `compileToCss.js` to `cssCompiler.js`
+- Rename `compileToCss` function to `compile`
+- Path updates in snapshot test
+- Replace multiline comments with single line so that they are removed by Sass without minification/compression
+- Replace `prepare` with `prepack` as yarn lifecycle script to prepare `dist`
+
+
 v10.6.0
 ------------------------------
 *October 6, 2022*
