@@ -87,7 +87,7 @@
     "build:typography:minified": "postcss dist/css/fozzie-typography.css -o dist/css/fozzie-typography.min.css --use cssnano --no-map",
     "build:utilities": "sass --load-path=node_modules/ src/scss/fozzie-utilities.scss:dist/css/fozzie-utilities.css",
     "build:utilities:minified": "postcss dist/css/fozzie-utilities.css -o dist/css/fozzie-utilities.min.css --use cssnano --no-map",
-    "compile": "babel -d dist src/js --ignore \"src/js/**/*.test.js\"",
+    "compile": "babel -d dist src --ignore \"src/**/*.test.js\"",
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "stylelint src/scss/**/*.scss",
     "lint:js": "eslint --ext .js .",
