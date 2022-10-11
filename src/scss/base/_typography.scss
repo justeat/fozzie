@@ -48,7 +48,6 @@
     /**
     * Paragraphs
     */
-
     p {
         @include type.font-size(body-l);
         margin-top: functions.spacing(d);
@@ -58,7 +57,6 @@
     /**
     * Headings
     */
-
     h1,
     h2,
     h3,
@@ -190,7 +188,6 @@
     /**
     * Buttons
     */
-
     button {
         font-family: v.$font-family-base;
     }

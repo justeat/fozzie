@@ -2353,12 +2353,12 @@ body {
 * 2. Prevent adjustments of font size after orientation changes in iOS.
 */
 html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
- ========================================================================== */
+========================================================================== */
 /**
  * Remove the margin in all browsers.
  */
@@ -2389,9 +2389,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -2399,8 +2399,8 @@ hr {
  * 2. Correct the odd \`em\` font sizing in all browsers.
  */
 pre {
-  font-family: monospace;
-  font-size: 1em;
+  font-family: monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -2419,7 +2419,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 3 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -2488,10 +2488,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -2598,9 +2598,9 @@ textarea {
 }
 
 /**
-* 1. Correct the odd appearance in Chrome and Safari.
-* 2. Correct the outline style in Safari.
-*/
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
 [type=search] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
@@ -5504,6 +5504,7 @@ If you'd like to use it in your project you can include it by adding \`@include 
 *
 * This is an optional component within Fozzie.
 * If you'd like to use it in your project you can include it by adding \`@include cards();\` into your SCSS dependencies file.
+*
 * Documentation:
 * https://fozzie.just-eat.com/styleguide/ui-components/cards
 */

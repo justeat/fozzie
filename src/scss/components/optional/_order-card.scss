@@ -50,7 +50,7 @@
     .c-orderCard-yourFavourites {
         min-height: 200px;
 
-    @include media('>=mid') {
+        @include media('>=mid') {
             min-height: 240px;
         }
     }

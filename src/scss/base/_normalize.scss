@@ -9,12 +9,12 @@
   * 2. Prevent adjustments of font size after orientation changes in iOS.
   */
   html {
-    line-height: 1.15; // 1
-    -webkit-text-size-adjust: 100%; // 2
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
   }
 
   /* Sections
-   ========================================================================== */
+  ========================================================================== */
 
   /**
    * Remove the margin in all browsers.
@@ -47,9 +47,9 @@
    * 2. Show the overflow in Edge and IE.
    */
   hr {
-    box-sizing: content-box; // 1
-    height: 0; // 1
-    overflow: visible; // 2
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
   }
 
   /**
@@ -57,8 +57,8 @@
    * 2. Correct the odd `em` font sizing in all browsers.
    */
   pre {
-    font-family: monospace; // 1
-    font-size: 1em; // 2
+    font-family: monospace; /* 1 */
+    font-size: 1em; /* 2 */
   }
 
   /* Text-level semantics
@@ -78,7 +78,7 @@
   abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 3 */
+    text-decoration: underline dotted; /* 2 */
   }
 
   /**
@@ -149,10 +149,10 @@
   optgroup,
   select,
   textarea {
-    font-family: inherit; // 1
-    font-size: 100%; // 1
-    line-height: 1.15; // 1
-    margin: 0; // 2
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
   }
 
   /**
@@ -258,7 +258,7 @@
     height: auto;
   }
 
-   /**
+  /**
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
