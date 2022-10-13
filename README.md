@@ -1,5 +1,7 @@
 <div align="center">
-<h1>This repo has been moved to: https://github.com/justeat/fozzie-components/tree/fozzie-migrate/packages/tools/fozzie</h1>
+<h1>Fozzie</h1>
+
+[This repo has been moved to fozzie-components](https://github.com/justeat/fozzie-components/tree/fozzie-migrate/packages/tools/fozzie)
 
 <img width="125" alt="Fozzie Bear" src="bear.png" />
 
